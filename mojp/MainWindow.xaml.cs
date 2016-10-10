@@ -190,7 +190,14 @@ namespace Mojp
 
 		private void OnCopyCardName(object sender, RoutedEventArgs e)
 		{
-			Clipboard.SetText(ViewModel?.CurrentCard?.JapaneseName);
+			var card = ViewModel?.CurrentCard;
+			string name = card?.JapaneseName;
+
+			if (string.IsNullOrEmpty(name))
+				name = card?.Name;
+
+			if (name != null)
+				Clipboard.SetText(name);
 		}
 
 		private void OnVoice(object sender, RoutedEventArgs e)
