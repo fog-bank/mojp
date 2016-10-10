@@ -57,6 +57,9 @@ namespace Mojp
 				DragMove();
 		}
 
+		/// <summary>
+		/// MO のプレビューウィンドウを探し、UI テキストの変化イベントが発生するようにします。
+		/// </summary>
 		private void OnCapture(object sender, RoutedEventArgs e)
 		{
 			Automation.RemoveAllEventHandlers();
@@ -119,7 +122,6 @@ namespace Mojp
 				Card card;
 				if (name != null && App.Cards.TryGetValue(name, out card))
 				{
-					// 分割カードや両面カードなどは最初の情報のみを表示し、残りはツールチップにする
 					if (!set)
 					{
 						// AutomationPropertyChangedEventHandler は UI スレッドとは別スレッド
@@ -130,13 +132,18 @@ namespace Mojp
 				}
 			}
 
+			// カード名が見つからなかった
 			if (!set)
 				Dispatcher.Invoke(() => ViewModel.CurrentCard = null);
 
+			// 分割カードや両面カードなどは最初の情報のみを表示し、残りはツールチップにする
 			if (annotations.Count > 1)
 				Dispatcher.Invoke(() => ViewModel.CardToolTip = string.Join(Environment.NewLine + "--------" + Environment.NewLine, annotations));
 		}
 
+		/// <summary>
+		/// UI テキストからカード名の候補となる文字列を取得します。
+		/// </summary>
 		private static string GetNamePropertyValue(AutomationElement src)
 		{
 			string name = null;
