@@ -1,0 +1,141 @@
+﻿<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:local="clr-namespace:Mojp"
+		x:Class="Mojp.MainWindow"
+		Title="MO 日本語テキストプレビュー" MinWidth="200" MinHeight="40" Topmost="True"
+		Width="{Binding WindowWidth, Mode=TwoWay}" Height="{Binding WindowHeight, Mode=TwoWay}" Left="{Binding WindowLeft, Mode=TwoWay}" Top="{Binding WindowTop, Mode=TwoWay}"
+		FontFamily="Meiryo" Icon="1468678499_contents.ico" SnapsToDevicePixels="True" Initialized="OnInitialized">
+	<!-- WindowStyle="None" AllowsTransparency="True" Background="Transparent" -->
+	<!--<WindowChrome.WindowChrome>
+		<WindowChrome CaptionHeight="{x:Static SystemParameters.WindowCaptionHeight}"
+					  ResizeBorderThickness="{x:Static SystemParameters.WindowResizeBorderThickness}" UseAeroCaptionButtons="False" />
+	</WindowChrome.WindowChrome>-->
+	<Window.DataContext>
+		<local:MainViewModel />
+	</Window.DataContext>
+	<Border Name="clientArea">
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="{x:Static SystemParameters.WindowCaptionHeight}" />
+				<RowDefinition />
+			</Grid.RowDefinitions>
+			<TabControl Grid.RowSpan="2"> <!--Background="#ccffffff"-->
+				<!--<TabControl.Resources>
+					<ResourceDictionary>
+						<Color x:Key="ContentAreaColorLight">#ffc5cbf9</Color>
+						<Color x:Key="ContentAreaColorDark">#ff7381f9</Color>
+						<Color x:Key="BorderMediumColor">#ff888888</Color>
+						<Color x:Key="DisabledBorderLightColor">#ffaaaaaa</Color>
+						<Color x:Key="ControlLightColor">White</Color>
+						<Color x:Key="ControlMediumColor">#ff7381f9</Color>
+						<Color x:Key="ControlPressedColor">#ff211aa9</Color>
+						<Color x:Key="DisabledControlDarkColor">#ffc5cbf9</Color>
+					</ResourceDictionary>
+				</TabControl.Resources>-->
+				<TabItem>
+					<TabItem.Header>
+						<TextBlock Margin="2" FontFamily="{Binding FontFamily}" FontSize="{Binding FontSize}" Text="{Binding CurrentCard.JapaneseName}" />
+					</TabItem.Header>
+					<Grid Margin="2" ToolTip="{Binding CardToolTip}">
+						<Grid.RowDefinitions>
+							<RowDefinition Height="Auto" />
+							<RowDefinition />
+							<RowDefinition Height="Auto" />
+						</Grid.RowDefinitions>
+						<TextBlock Margin="2" FontFamily="{Binding FontFamily}" FontSize="{Binding FontSize}" Text="{Binding CurrentCard.Type}" 
+								   TextTrimming="CharacterEllipsis">
+							<TextBlock.Style>
+								<Style TargetType="TextBlock">
+									<Style.Triggers>
+										<DataTrigger Binding="{Binding CurrentCard.Type}" Value="{x:Null}">
+											<Setter Property="Visibility" Value="Collapsed" />
+										</DataTrigger>
+									</Style.Triggers>
+								</Style>
+							</TextBlock.Style>
+						</TextBlock>
+						<TextBlock Grid.Row="1" Margin="2" FontFamily="{Binding FontFamily}" FontSize="{Binding FontSize}" Text="{Binding CurrentCard.Text}"
+								   TextWrapping="Wrap" TextTrimming="CharacterEllipsis" />
+						<TextBlock Grid.Row="2" Margin="2" FontFamily="{Binding FontFamily}" FontSize="{Binding FontSize}" Text="{Binding CurrentCard.PT}" 
+								   TextTrimming="CharacterEllipsis">
+							<TextBlock.Style>
+								<Style TargetType="TextBlock">
+									<Style.Triggers>
+										<DataTrigger Binding="{Binding CurrentCard.PT}" Value="{x:Null}">
+											<Setter Property="Visibility" Value="Collapsed" />
+										</DataTrigger>
+									</Style.Triggers>
+								</Style>
+							</TextBlock.Style>
+						</TextBlock>
+					</Grid>
+				</TabItem>
+			</TabControl>
+			<ToolBar Margin="0,2,2,0" HorizontalAlignment="Right" VerticalAlignment="Center" WindowChrome.IsHitTestVisibleInChrome="True">
+				<ToolBar.Template>
+					<ControlTemplate TargetType="ToolBar">
+						<ItemsPresenter />
+					</ControlTemplate>
+				</ToolBar.Template>
+				<ToolBar.ItemsPanel>
+					<ItemsPanelTemplate>
+						<StackPanel Orientation="Horizontal" />
+					</ItemsPanelTemplate>
+				</ToolBar.ItemsPanel>
+				<Button FontFamily="Segoe MDL2 Assets" Content="&#xe114;" ToolTip="MO をキャプチャ" Click="OnCapture" />
+				<!--<Button FontFamily="Segoe MDL2 Assets" Content="&#xe8bd;" ToolTip="ゆっくり" Click="OnVoice" />
+				<Button FontFamily="Segoe MDL2 Assets" Content="&#xe295;" ToolTip="5 秒間隠す" Click="OnHide" />-->
+				<Button FontFamily="Segoe MDL2 Assets" Content="&#xe713;" ToolTip="設定" Click="OnOption" />
+				<!--<Button FontFamily="Marlett" Content="q" ToolTip="最小化" Click="OnWindowMinimize" />
+				<Button FontFamily="Marlett" Content="r" ToolTip="閉じる" Click="OnWindowClose" />-->
+			</ToolBar>
+			<Grid Name="imgLoading" Grid.RowSpan="2" Background="#7Fffffff" Visibility="Collapsed">
+				<Path Stroke="#7f505096" HorizontalAlignment="Center" VerticalAlignment="Center">
+					<!-- http://blogs.microsoft.co.il/blogs/maxim/archive/2008/03/08/wpf-daily-tip-simple-wait-progress-control-continuous-animation.aspx -->
+					<Path.Data>
+						<GeometryGroup>
+							<EllipseGeometry Center="34,34" RadiusX="32" RadiusY="32" />
+							<EllipseGeometry Center="34,34" RadiusX="20" RadiusY="20" />
+						</GeometryGroup>
+					</Path.Data>
+					<Path.Fill>
+						<LinearGradientBrush EndPoint="0,1">
+							<GradientStop Color="#ff4dd5ce" />
+							<GradientStop Offset="1" Color="#ff499692" />
+						</LinearGradientBrush>
+					</Path.Fill>
+					<Path.RenderTransform>
+						<RotateTransform CenterX="34" CenterY="34" />
+					</Path.RenderTransform>
+					<Path.Style>
+						<Style TargetType="Path">
+							<Style.Triggers>
+								<DataTrigger Binding="{Binding Visibility, ElementName=imgLoading}" Value="Visible">
+									<DataTrigger.EnterActions>
+										<BeginStoryboard Name="startWaitRing">
+											<Storyboard RepeatBehavior="Forever">
+												<DoubleAnimation Storyboard.TargetProperty="RenderTransform.Angle" Duration="0:0:1" From="0" To="360" />
+											</Storyboard>
+										</BeginStoryboard>
+									</DataTrigger.EnterActions>
+									<DataTrigger.ExitActions>
+										<StopStoryboard BeginStoryboardName="startWaitRing" />
+									</DataTrigger.ExitActions>
+								</DataTrigger>
+							</Style.Triggers>
+						</Style>
+					</Path.Style>
+				</Path>
+			</Grid>
+		</Grid>
+	</Border>
+	<Window.ContextMenu>
+		<ContextMenu>
+			<MenuItem Header="カード名をコピー" Click="OnCopyCardName" />
+			<Separator />
+			<MenuItem Header="5 秒間隠す" Click="OnHide" />
+			<MenuItem Header="最小化" Click="OnWindowMinimize" />
+			<MenuItem Header="閉じる" Click="OnWindowClose" />
+		</ContextMenu>
+	</Window.ContextMenu>
+</Window>
