@@ -7,6 +7,9 @@ using Microsoft.Win32;
 
 namespace Mojp
 {
+	/// <summary>
+	/// このアプリケーションの設定ダイアログを表します。
+	/// </summary>
 	public partial class OptionDialog : Window
 	{
 		public OptionDialog(object vm)
@@ -25,6 +28,9 @@ namespace Mojp
 			this.DataContext = vm;
 		}
 
+		/// <summary>
+		/// WHISPER の検索結果を格納したテキストファイルからカードテキストデータを構築します。必要なら永続化します。
+		/// </summary>
 		private void OnBrowseSearchTxt(object sender, RoutedEventArgs e)
 		{
 			var dlg = new OpenFileDialog();

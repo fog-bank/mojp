@@ -5,6 +5,9 @@ using System.Xml.Linq;
 
 namespace Mojp
 {
+	/// <summary>
+	/// WPF アプリケーションをカプセル化し、カードテキストデータを管理します。
+	/// </summary>
 	public partial class App : Application
 	{
 		private static readonly Dictionary<string, Card> cards = new Dictionary<string, Card>();
@@ -17,6 +20,9 @@ namespace Mojp
 			get { return cards; }
 		}
 
+		/// <summary>
+		/// カードテキストデータを XML に保存します。
+		/// </summary>
 		public static void SaveAsXml(string path)
 		{
 			var cardsElem = new XElement("cards");
@@ -28,6 +34,9 @@ namespace Mojp
 			doc.Save(path);
 		}
 
+		/// <summary>
+		/// WHISPER の検索結果を格納したテキストファイルからカードテキストデータを構築します。
+		/// </summary>
 		public static void SetCardInfosFromWhisper(StreamReader sr)
 		{
 			cards.Clear();
@@ -36,6 +45,9 @@ namespace Mojp
 				cards.Add(card.Name, card);
 		}
 
+		/// <summary>
+		/// XML オブジェクトからカードテキストデータを構築します。
+		/// </summary>
 		public static void SetCardInfosFromXml(XDocument doc)
 		{
 			cards.Clear();
@@ -48,6 +60,9 @@ namespace Mojp
 			}
 		}
 
+		/// <summary>
+		/// XML ファイルからカードテキストデータを構築します。
+		/// </summary>
 		public static void SetCardInfosFromXml(string file)
 		{
 			SetCardInfosFromXml(XDocument.Load(file));

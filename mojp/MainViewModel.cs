@@ -3,6 +3,9 @@ using System.Runtime.CompilerServices;
 
 namespace Mojp
 {
+	/// <summary>
+	/// <see cref="MainWindow"/> のビュー モデルを提供します。
+	/// </summary>
 	public class MainViewModel : INotifyPropertyChanged
 	{
 		private string fontFamily = Settings.Default.CardTextFontFamily;
@@ -18,6 +21,9 @@ namespace Mojp
 		{
 		}
 
+		/// <summary>
+		/// このアプリケーションで使用する表示フォントを取得または設定します。
+		/// </summary>
 		public string FontFamily
 		{
 			get { return fontFamily; }
@@ -29,6 +35,9 @@ namespace Mojp
 			}
 		}
 
+		/// <summary>
+		/// このアプリケーションで使用するフォントサイズを取得または設定します。
+		/// </summary>
 		public int FontSize
 		{
 			get { return fontSize; }
@@ -40,6 +49,9 @@ namespace Mojp
 			}
 		}
 
+		/// <summary>
+		/// このアプリケーションのウィンドウの幅を取得または設定します。
+		/// </summary>
 		public double WindowWidth
 		{
 			get { return width; }
@@ -51,6 +63,9 @@ namespace Mojp
 			}
 		}
 
+		/// <summary>
+		/// このアプリケーションのウィンドウの高さを取得または設定します。
+		/// </summary>
 		public double WindowHeight
 		{
 			get { return height; }
@@ -62,6 +77,9 @@ namespace Mojp
 			}
 		}
 
+		/// <summary>
+		/// このアプリケーションのウィンドウの左の表示位置を取得または設定します。
+		/// </summary>
 		public double WindowLeft
 		{
 			get { return left; }
@@ -73,6 +91,9 @@ namespace Mojp
 			}
 		}
 
+		/// <summary>
+		/// このアプリケーションのウィンドウの上の表示位置を取得または設定します。
+		/// </summary>
 		public double WindowTop
 		{
 			get { return top; }
@@ -84,6 +105,9 @@ namespace Mojp
 			}
 		}
 
+		/// <summary>
+		/// 現在表示しているカードを取得または設定します。<see cref="CardToolTip"/> も自動で変更します。
+		/// </summary>
 		public Card CurrentCard
 		{
 			get { return card; }
@@ -95,6 +119,9 @@ namespace Mojp
 			}
 		}
 
+		/// <summary>
+		/// ツールチップに表示するカードの追加情報を取得または設定します。
+		/// </summary>
 		public string CardToolTip
 		{
 			get { return tooltip; }
@@ -105,6 +132,9 @@ namespace Mojp
 			}
 		}
 
+		/// <summary>
+		/// カードテキストの代わりにメッセージを表示します。
+		/// </summary>
 		public void SetMessage(string text)
 		{
 			CurrentCard = new Card() { Text = text };

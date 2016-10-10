@@ -6,42 +6,63 @@ using System.Xml.Linq;
 
 namespace Mojp
 {
+	/// <summary>
+	/// MTG のカードを表します。
+	/// </summary>
 	public class Card
 	{
 		public Card()
 		{
 		}
 
+		/// <summary>
+		/// カードの英語名を取得または設定します。
+		/// </summary>
 		public string Name
 		{
 			get;
 			set;
 		}
 
+		/// <summary>
+		/// カードの日本語名を取得または設定します。
+		/// </summary>
 		public string JapaneseName
 		{
 			get;
 			set;
 		}
 
+		/// <summary>
+		/// カード・タイプを取得または設定します。
+		/// </summary>
 		public string Type
 		{
 			get;
 			set;
 		}
 
+		/// <summary>
+		/// カードのテキストを取得または設定します。
+		/// </summary>
 		public string Text
 		{
 			get;
 			set;
 		}
 
+		/// <summary>
+		/// カードの P/T を取得または設定します。
+		/// </summary>
 		public string PT
 		{
 			get;
 			set;
 		}
 
+		/// <summary>
+		/// カードの各情報をまとめた文字列を生成します。
+		/// </summary>
 		public string Summary
 		{
 			get
@@ -50,6 +71,7 @@ namespace Mojp
 
 				if (Name != null || JapaneseName != null)
 				{
+					// 日本語名がない場合は英語名だけを使用
 					if (string.IsNullOrEmpty(JapaneseName) || Name == JapaneseName)
 						sb.AppendLine(Name);
 					else
@@ -77,6 +99,10 @@ namespace Mojp
 			return Name;
 		}
 
+		/// <summary>
+		/// 後で復元できるように XML ノードに変換します。
+		/// </summary>
+		/// <returns></returns>
 		public XElement ToXml()
 		{
 			var xml = new XElement("card");
@@ -97,6 +123,9 @@ namespace Mojp
 			return xml;
 		}
 
+		/// <summary>
+		/// XML ノードからカード情報を復元します。
+		/// </summary>
 		public static Card FromXml(XElement cardElement)
 		{
 			var card = new Card();
@@ -111,8 +140,23 @@ namespace Mojp
 		}
 
 		/// <summary>
-		/// WHISPER の検索結果テキストを XML に変換します。
+		/// WHISPER の検索結果テキストを解析し、カード情報を列挙します。
 		/// </summary>
+		/// <remarks>
+		/// WHISPER の検索結果の例
+		/// 
+		/// 　英語名：Fog Bank
+		/// 日本語名：濃霧の層（のうむのそう）
+		/// 　コスト：(１)(青)
+		/// 　タイプ：クリーチャー --- 壁(Wall)
+		/// 防衛、飛行
+		/// 濃霧の層が与える戦闘ダメージと濃霧の層に与えられるすべての戦闘ダメージを軽減する。
+		/// 　Ｐ／Ｔ：0/2
+		/// イラスト：Howard Lyon
+		/// 　セット：Magic 2013
+		/// 　稀少度：アンコモン
+		/// 
+		/// </remarks>
 		public static IEnumerable<Card> ParseWhisper(StreamReader sr)
 		{
 			var card = new Card();
@@ -120,6 +164,7 @@ namespace Mojp
 
 			while (!sr.EndOfStream)
 			{
+				// 各行をコロンで区切り、各項目を探す
 				string line = sr.ReadLine();
 				var tokens = line.Split('：');
 
@@ -177,6 +222,7 @@ namespace Mojp
 										break;
 
 									default:
+										// 読みがついているなら、取り除く
 										if (!parenthesis)
 											sb.Append(c);
 										break;
