@@ -14,7 +14,7 @@ namespace Mojp
 		private double height = Settings.Default.WindowHeight;
 		private double left = Settings.Default.WindowLeft;
 		private double top = Settings.Default.WindowTop;
-		private Card card = new Card() { JapaneseName = "島", Text = "(T): あなたのマナ・プールに(青)を加える。" };
+		private Card card = new Card() { JapaneseName = string.Empty, Text = "MO の Preview Pane を表示させた状態で、右上のカメラアイコンのボタンを押してください" };
 		private string tooltip = null;
 
 		public MainViewModel()
