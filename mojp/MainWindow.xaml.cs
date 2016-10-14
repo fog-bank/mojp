@@ -89,12 +89,16 @@ namespace Mojp
 			Automation.AddAutomationPropertyChangedEventHandler(prevWnd, TreeScope.Descendants, OnAutomaionNamePropertyChanged, AutomationElement.NameProperty);
 		}
 
+		/// <remarks>
+		/// AutomationPropertyChangedEventHandler は UI スレッドとは別スレッドで動いている
+		/// </remarks>
 		private void OnAutomaionNamePropertyChanged(object sender, AutomationPropertyChangedEventArgs e)
 		{
 			// 新しいテキストがカード名かどうかを調べ、そうでないなら不必要な検索をしないようにする
 			string srcName = GetNamePropertyValue(sender as AutomationElement);
+			Debug.WriteLineIf(!string.IsNullOrWhiteSpace(srcName), srcName);
 
-			if (!App.Cards.ContainsKey(srcName))
+			if (!App.Cards.ContainsKey(srcName) && !srcName.StartsWith("Token"))
 			{
 				// 紋章やヴァンガードの場合は空にする
 				if (srcName.StartsWith("Emblem") || srcName == "Vanguard")
@@ -110,7 +114,7 @@ namespace Mojp
 					new NotCondition(new PropertyCondition(AutomationElement.NameProperty, string.Empty)),
 					new PropertyCondition(AutomationElement.AutomationIdProperty, string.Empty)));
 
-			// 一連のテキストからカード名を探す
+			// 一連のテキストからカード名を探す (両面カードなど複数のカード名にヒットする場合があるので一通り探し直す必要がある)
 			bool set = false;
 			var annotations = new List<string>();
 
@@ -124,7 +128,6 @@ namespace Mojp
 				{
 					if (!set)
 					{
-						// AutomationPropertyChangedEventHandler は UI スレッドとは別スレッド
 						Dispatcher.Invoke(() => ViewModel.CurrentCard = card);
 						set = true;
 					}
@@ -153,38 +156,39 @@ namespace Mojp
 			}
 			catch { }
 
-			if (name != null)
+			if (name == null)
+				return string.Empty;
+
+			// 特殊文字を置き換える
+			var sb = new StringBuilder(name.Length + 1);
+			bool replaced = false;
+
+			foreach (char c in name)
 			{
-				// 特殊文字を置き換える
-				var sb = new StringBuilder(name.Length + 1);
-				bool replaced = false;
-
-				foreach (char c in name)
+				switch (c)
 				{
-					switch (c)
-					{
-						// Æther Vial など
-						case 'Æ':
-							sb.Append("AE");
-							replaced = true;
-							break;
+					// Æther Vial など
+					case 'Æ':
+						sb.Append("AE");
+						replaced = true;
+						break;
 
-						// Márton Stromgald や Dandân など
-						case 'á':
-						case 'â':
-							sb.Append("a");
-							replaced = true;
-							break;
+					// Márton Stromgald や Dandân など
+					case 'á':
+					case 'â':
+						sb.Append("a");
+						replaced = true;
+						break;
 
-						default:
-							sb.Append(c);
-							break;
-					}
+					default:
+						sb.Append(c);
+						break;
 				}
-
-				if (replaced)
-					name = sb.ToString();
 			}
+
+			if (replaced)
+				name = sb.ToString();
+			
 			return name;
 		}
 

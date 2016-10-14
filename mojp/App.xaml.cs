@@ -15,10 +15,7 @@ namespace Mojp
 		/// <summary>
 		/// カードの英語名から、英語カード名・日本語カード名・日本語カードテキストを検索します。
 		/// </summary>
-		public static Dictionary<string, Card> Cards
-		{
-			get { return cards; }
-		}
+		public static Dictionary<string, Card> Cards => cards;
 
 		/// <summary>
 		/// カードテキストデータを XML に保存します。
@@ -66,6 +63,13 @@ namespace Mojp
 		public static void SetCardInfosFromXml(string file)
 		{
 			SetCardInfosFromXml(XDocument.Load(file));
+		}
+
+		protected override void OnStartup(StartupEventArgs e)
+		{
+			base.OnStartup(e);
+
+			Settings.Default.Upgrade();
 		}
 	}
 }
