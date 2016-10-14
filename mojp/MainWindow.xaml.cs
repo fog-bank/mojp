@@ -96,8 +96,8 @@ namespace Mojp
 
 			if (!App.Cards.ContainsKey(srcName))
 			{
-				// カード情報がない場合は空にする
-				if (srcName.StartsWith("Token") || srcName.StartsWith("Emblem") || srcName == "Vanguard")
+				// 紋章やヴァンガードの場合は空にする
+				if (srcName.StartsWith("Emblem") || srcName == "Vanguard")
 					Dispatcher.Invoke(() => ViewModel.CurrentCard = null);
 
 				return;
