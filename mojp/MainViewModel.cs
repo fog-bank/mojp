@@ -205,12 +205,15 @@ namespace Mojp
 		}
 
 		/// <summary>
-		/// Preview Pane を自動的に探索するためのタイマーを設定します。
+		/// Preview Pane を自動的に探索するためのタイマーを必要なら設定します。
 		/// </summary>
 		public void SetRefreshTimer(Dispatcher dispatcher)
 		{
 			if (timer == null)
-				timer = new DispatcherTimer(RefreshInterval, DispatcherPriority.Normal, OnCapture, dispatcher);
+			{
+				if (AutoRefresh)
+					timer = new DispatcherTimer(RefreshInterval, DispatcherPriority.Normal, OnCapture, dispatcher);
+			}
 			else
 			{
 				timer.IsEnabled = AutoRefresh;
@@ -291,19 +294,29 @@ namespace Mojp
 		/// </remarks>
 		private void OnAutomaionNamePropertyChanged(object sender, AutomationPropertyChangedEventArgs e)
 		{
+			if (prevWnd == null)
+				return;
+			
 			// 新しいテキストがカード名かどうかを調べ、そうでないなら不必要な検索をしないようにする
 			string srcName = GetNamePropertyValue(sender as AutomationElement);
 			Debug.WriteLineIf(!string.IsNullOrWhiteSpace(srcName), srcName);
 
 			if (!App.Cards.ContainsKey(srcName) && !srcName.StartsWith("Token"))
 			{
-				// 紋章やヴァンガードの場合は空にする
-				if (srcName.StartsWith("Emblem") || srcName == "Vanguard")
-					App.Current.Dispatcher.Invoke(() => CurrentCard = null);
+				string cardType = null;
+
+				// 紋章やヴァンガードの場合は空表示にする
+				if (srcName.StartsWith("Emblem"))
+					cardType = "紋章";
+				else if (srcName == "Vanguard")
+					cardType = "ヴァンガード";
+
+				if (cardType != null)
+					App.Current.Dispatcher.Invoke(() => SetMessage(cardType));
 
 				return;
 			}
-
+			
 			// テキストが空でなく、特定の UI 要素でない TextBlock をすべて拾う
 			var texts = prevWnd.FindAll(TreeScope.Descendants,
 				new AndCondition(
@@ -351,7 +364,7 @@ namespace Mojp
 			{
 				name = src?.GetCurrentPropertyValue(AutomationElement.NameProperty)?.ToString();
 			}
-			catch { }
+			catch { Debug.WriteLine("Exception in calling GetCurrentPropertyValue method."); }
 
 			if (name == null)
 				return string.Empty;

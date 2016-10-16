@@ -50,8 +50,7 @@ namespace Mojp
 				imgLoading.Visibility = Visibility.Hidden;
 			}
 
-			if (ViewModel.AutoRefresh)
-				ViewModel.SetRefreshTimer(this.Dispatcher);
+			ViewModel.SetRefreshTimer(Dispatcher);
 		}
 
 		private void OnCopyCardName(object sender, RoutedEventArgs e)
@@ -95,7 +94,7 @@ namespace Mojp
 			Topmost = ViewModel.TopMost;
 
 			// Preview Pane の自動探索の設定を反映
-			ViewModel.SetRefreshTimer(this.Dispatcher);
+			ViewModel.SetRefreshTimer(Dispatcher);
 		}
 
 		private void OnWindowMinimize(object sender, RoutedEventArgs e)
