@@ -1,5 +1,11 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using System.Text;
+using System.Windows.Automation;
+using System.Windows.Threading;
 
 namespace Mojp
 {
@@ -10,12 +16,19 @@ namespace Mojp
 	{
 		private string fontFamily = Settings.Default.CardTextFontFamily;
 		private int fontSize = Settings.Default.CardTextFontSize;
+		private bool topMost = Settings.Default.TopMost;
 		private double width = Settings.Default.WindowWidth;
 		private double height = Settings.Default.WindowHeight;
 		private double left = Settings.Default.WindowLeft;
 		private double top = Settings.Default.WindowTop;
+		private bool autoRefresh = Settings.Default.AutoRefresh;
+		private TimeSpan refreshInterval = Settings.Default.RefreshInterval;
+
 		private Card card = new Card() { JapaneseName = string.Empty, Text = "MO の Preview Pane を表示させた状態で、右上のカメラアイコンのボタンを押してください" };
 		private string tooltip = null;
+
+		private AutomationElement prevWnd;
+		private DispatcherTimer timer;
 
 		public MainViewModel()
 		{
@@ -46,6 +59,20 @@ namespace Mojp
 				fontSize = value;
 				OnPropertyChanged();
 				Settings.Default.CardTextFontSize = value;
+			}
+		}
+
+		/// <summary>
+		/// このアプリケーションを常に手前に表示するかどうかを示す値を取得または設定します。
+		/// </summary>
+		public bool TopMost
+		{
+			get { return topMost; }
+			set
+			{
+				topMost = value;
+				OnPropertyChanged();
+				Settings.Default.TopMost = value;
 			}
 		}
 
@@ -106,6 +133,42 @@ namespace Mojp
 		}
 
 		/// <summary>
+		/// Preview Page の探索を自動化するかどうかの値を取得または設定します。
+		/// </summary>
+		public bool AutoRefresh
+		{
+			get { return autoRefresh; }
+			set
+			{
+				autoRefresh = value;
+				OnPropertyChanged();
+				Settings.Default.AutoRefresh = value;
+			}
+		}
+
+		/// <summary>
+		/// Preview Page の探索を行う間隔を取得します。
+		/// </summary>
+		public TimeSpan RefreshInterval => refreshInterval;
+
+		/// <summary>
+		/// Preview Page の探索を行う間隔をミリ秒単位で取得または設定します。
+		/// </summary>
+		public int RefreshIntervalMilliseconds
+		{
+			get { return (int)refreshInterval.TotalMilliseconds; }
+			set
+			{
+				if (value <= 0)
+					value = 1;
+
+				refreshInterval = TimeSpan.FromMilliseconds(value);
+				OnPropertyChanged();
+				Settings.Default.RefreshInterval = refreshInterval;
+			}
+		}
+
+		/// <summary>
 		/// 現在表示しているカードを取得または設定します。<see cref="CardToolTip"/> も自動で変更します。
 		/// </summary>
 		public Card CurrentCard
@@ -141,9 +204,189 @@ namespace Mojp
 			CardToolTip = null;
 		}
 
+		/// <summary>
+		/// Preview Pane を自動的に探索するためのタイマーを設定します。
+		/// </summary>
+		public void SetRefreshTimer(Dispatcher dispatcher)
+		{
+			if (timer == null)
+				timer = new DispatcherTimer(RefreshInterval, DispatcherPriority.Normal, OnCapture, dispatcher);
+			else
+			{
+				timer.IsEnabled = AutoRefresh;
+				timer.Interval = RefreshInterval;
+			}
+		}
+
+		/// <summary>
+		/// MO のプレビューウィンドウを探します。
+		/// </summary>
+		public void CapturePreviewPane()
+		{
+			OnCapture(null, EventArgs.Empty);
+		}
+
+		/// <summary>
+		/// 各リソースを解放します。
+		/// </summary>
+		public void Release()
+		{
+			Automation.RemoveAllEventHandlers();
+			prevWnd = null;
+
+			if (timer != null)
+			{
+				timer.Stop();
+				timer.Tick -= OnCapture;
+				timer = null;
+			}
+		}
+
 		protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
 		{
 			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+		}
+
+		/// <summary>
+		/// MO のプレビューウィンドウを探し、UI テキストの変化イベントが発生するようにします。
+		/// </summary>
+		private void OnCapture(object sender, EventArgs e)
+		{
+			Debug.WriteLine(nameof(OnCapture) + " " + DateTime.Now);
+
+			// 念のため、MO が起動していることを確認
+			if (Process.GetProcessesByName("mtgo").Length == 0)
+			{
+				SetMessage("起動中のプロセスの中に MO が見つかりません。");
+				return;
+			}
+
+			// "Preview" という名前のウィンドウを探す (なぜかルートの子で見つかる)
+			var currentPrevWnd = AutomationElement.RootElement.FindFirst(TreeScope.Children,
+				new AndCondition(
+					new PropertyCondition(AutomationElement.ClassNameProperty, "Window"),
+					new PropertyCondition(AutomationElement.NameProperty, "Preview")));
+
+			if (currentPrevWnd == null)
+			{
+				SetMessage("MO の Preview Pane が見つかりません。");
+				return;
+			}
+
+			if (currentPrevWnd != prevWnd)
+			{
+				// 新しい Preview Pane が見つかった
+				prevWnd = currentPrevWnd;
+
+				// UI テキストの変化を追う
+				Automation.RemoveAllEventHandlers();
+				Automation.AddAutomationPropertyChangedEventHandler(prevWnd, TreeScope.Descendants, OnAutomaionNamePropertyChanged, AutomationElement.NameProperty);
+
+				SetMessage("準備完了");
+			}
+		}
+
+		/// <remarks>
+		/// AutomationPropertyChangedEventHandler は UI スレッドとは別スレッドで動いている
+		/// </remarks>
+		private void OnAutomaionNamePropertyChanged(object sender, AutomationPropertyChangedEventArgs e)
+		{
+			// 新しいテキストがカード名かどうかを調べ、そうでないなら不必要な検索をしないようにする
+			string srcName = GetNamePropertyValue(sender as AutomationElement);
+			Debug.WriteLineIf(!string.IsNullOrWhiteSpace(srcName), srcName);
+
+			if (!App.Cards.ContainsKey(srcName) && !srcName.StartsWith("Token"))
+			{
+				// 紋章やヴァンガードの場合は空にする
+				if (srcName.StartsWith("Emblem") || srcName == "Vanguard")
+					App.Current.Dispatcher.Invoke(() => CurrentCard = null);
+
+				return;
+			}
+
+			// テキストが空でなく、特定の UI 要素でない TextBlock をすべて拾う
+			var texts = prevWnd.FindAll(TreeScope.Descendants,
+				new AndCondition(
+					new PropertyCondition(AutomationElement.ClassNameProperty, "TextBlock"),
+					new NotCondition(new PropertyCondition(AutomationElement.NameProperty, string.Empty)),
+					new PropertyCondition(AutomationElement.AutomationIdProperty, string.Empty)));
+
+			// 一連のテキストからカード名を探す (両面カードなど複数のカード名にヒットする場合があるので一通り探し直す必要がある)
+			bool set = false;
+			var annotations = new List<string>();
+
+			foreach (AutomationElement text in texts)
+			{
+				string name = GetNamePropertyValue(text);
+
+				// WHISPER データベースからカード情報を取得
+				Card card;
+				if (name != null && App.Cards.TryGetValue(name, out card))
+				{
+					if (!set)
+					{
+						App.Current.Dispatcher.Invoke(() => CurrentCard = card);
+						set = true;
+					}
+					annotations.Add(card.Summary);
+				}
+			}
+
+			// カード名が見つからなかった
+			if (!set)
+				App.Current.Dispatcher.Invoke(() => CurrentCard = null);
+
+			// 分割カードや両面カードなどは最初の情報のみを表示し、残りはツールチップにする
+			if (annotations.Count > 1)
+				App.Current.Dispatcher.Invoke(() => CardToolTip = string.Join(Environment.NewLine + "--------" + Environment.NewLine, annotations));
+		}
+
+		/// <summary>
+		/// UI テキストからカード名の候補となる文字列を取得します。
+		/// </summary>
+		private static string GetNamePropertyValue(AutomationElement src)
+		{
+			string name = null;
+			try
+			{
+				name = src?.GetCurrentPropertyValue(AutomationElement.NameProperty)?.ToString();
+			}
+			catch { }
+
+			if (name == null)
+				return string.Empty;
+
+			// 特殊文字を置き換える
+			var sb = new StringBuilder(name.Length + 1);
+			bool replaced = false;
+
+			foreach (char c in name)
+			{
+				switch (c)
+				{
+					// Æther Vial など
+					//case 'Æ':
+					//	sb.Append("AE");
+					//	replaced = true;
+					//	break;
+
+					// Márton Stromgald や Dandân など
+					case 'á':
+					case 'â':
+						sb.Append("a");
+						replaced = true;
+						break;
+
+					default:
+						sb.Append(c);
+						break;
+				}
+			}
+
+			if (replaced)
+				name = sb.ToString();
+
+			return name;
 		}
 
 		public event PropertyChangedEventHandler PropertyChanged;

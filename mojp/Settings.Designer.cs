@@ -49,7 +49,7 @@ namespace Mojp {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("MS PGothic")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Meiryo")]
         public string CardTextFontFamily {
             get {
                 return ((string)(this["CardTextFontFamily"]));
@@ -92,6 +92,42 @@ namespace Mojp {
             }
             set {
                 this["WindowTop"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool AutoRefresh {
+            get {
+                return ((bool)(this["AutoRefresh"]));
+            }
+            set {
+                this["AutoRefresh"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("00:00:01")]
+        public global::System.TimeSpan RefreshInterval {
+            get {
+                return ((global::System.TimeSpan)(this["RefreshInterval"]));
+            }
+            set {
+                this["RefreshInterval"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool TopMost {
+            get {
+                return ((bool)(this["TopMost"]));
+            }
+            set {
+                this["TopMost"] = value;
             }
         }
     }
