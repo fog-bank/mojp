@@ -9,7 +9,7 @@
       <Value Profile="(Default)">200</Value>
     </Setting>
     <Setting Name="CardTextFontFamily" Type="System.String" Scope="User">
-      <Value Profile="(Default)">MS PGothic</Value>
+      <Value Profile="(Default)">Meiryo</Value>
     </Setting>
     <Setting Name="CardTextFontSize" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">12</Value>
@@ -19,6 +19,18 @@
     </Setting>
     <Setting Name="WindowTop" Type="System.Double" Scope="User">
       <Value Profile="(Default)">100</Value>
+    </Setting>
+    <Setting Name="AutoRefresh" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="RefreshInterval" Type="System.TimeSpan" Scope="User">
+      <Value Profile="(Default)">00:00:04</Value>
+    </Setting>
+    <Setting Name="TopMost" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="UpgradeRequired" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
     </Setting>
   </Settings>
 </SettingsFile>

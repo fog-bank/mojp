@@ -96,9 +96,12 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Information.png" />
     <Resource Include="1468678499_contents.ico" />
     <Content Include="cards.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
