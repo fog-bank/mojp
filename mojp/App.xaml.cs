@@ -69,7 +69,11 @@ namespace Mojp
 		{
 			base.OnStartup(e);
 
-			Settings.Default.Upgrade();
+			if (Settings.Default.UpgradeRequired)
+			{
+				Settings.Default.Upgrade();
+				Settings.Default.UpgradeRequired = false;
+			}
 		}
 	}
 }
