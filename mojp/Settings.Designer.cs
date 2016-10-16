@@ -109,7 +109,7 @@ namespace Mojp {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("00:00:01")]
+        [global::System.Configuration.DefaultSettingValueAttribute("00:00:04")]
         public global::System.TimeSpan RefreshInterval {
             get {
                 return ((global::System.TimeSpan)(this["RefreshInterval"]));

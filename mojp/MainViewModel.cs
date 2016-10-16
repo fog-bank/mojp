@@ -28,10 +28,14 @@ namespace Mojp
 		private string tooltip = null;
 
 		private AutomationElement prevWnd;
+		private CacheRequest cacheReq = new CacheRequest();
 		private DispatcherTimer timer;
 
 		public MainViewModel()
 		{
+			cacheReq.TreeScope = TreeScope.Element;
+			cacheReq.Add(AutomationElement.NameProperty);
+			cacheReq.AutomationElementMode = AutomationElementMode.None;
 		}
 
 		/// <summary>
@@ -234,8 +238,12 @@ namespace Mojp
 		/// </summary>
 		public void Release()
 		{
-			Automation.RemoveAllEventHandlers();
-			prevWnd = null;
+			if (prevWnd != null)
+			{
+				Automation.RemoveAllEventHandlers();
+				prevWnd = null;
+			}
+			cacheReq = null;
 
 			if (timer != null)
 			{
@@ -286,7 +294,9 @@ namespace Mojp
 
 				// UI テキストの変化を追う
 				Automation.RemoveAllEventHandlers();
-				Automation.AddAutomationPropertyChangedEventHandler(prevWnd, TreeScope.Descendants, OnAutomaionNamePropertyChanged, AutomationElement.NameProperty);
+
+				using (cacheReq.Activate())
+					Automation.AddAutomationPropertyChangedEventHandler(prevWnd, TreeScope.Descendants, OnAutomaionNamePropertyChanged, AutomationElement.NameProperty);
 
 				SetMessage("準備完了");
 			}
@@ -319,13 +329,17 @@ namespace Mojp
 
 				return;
 			}
-			
+
 			// テキストが空でなく、特定の UI 要素でない TextBlock をすべて拾う
-			var texts = prevWnd.FindAll(TreeScope.Descendants,
-				new AndCondition(
-					new PropertyCondition(AutomationElement.ClassNameProperty, "TextBlock"),
-					new NotCondition(new PropertyCondition(AutomationElement.NameProperty, string.Empty)),
-					new PropertyCondition(AutomationElement.AutomationIdProperty, string.Empty)));
+			AutomationElementCollection texts;
+			using (cacheReq.Activate())
+			{
+				texts = prevWnd.FindAll(TreeScope.Descendants,
+					new AndCondition(
+						new PropertyCondition(AutomationElement.ClassNameProperty, "TextBlock"),
+						new NotCondition(new PropertyCondition(AutomationElement.NameProperty, string.Empty)),
+						new PropertyCondition(AutomationElement.AutomationIdProperty, string.Empty)));
+			}
 
 			// 一連のテキストからカード名を探す (両面カードなど複数のカード名にヒットする場合があるので一通り探し直す必要がある)
 			bool set = false;
@@ -365,7 +379,7 @@ namespace Mojp
 			string name = null;
 			try
 			{
-				name = src?.GetCurrentPropertyValue(AutomationElement.NameProperty)?.ToString();
+				name = src?.Cached.Name;
 			}
 			catch { Debug.WriteLine("Exception in calling GetCurrentPropertyValue method."); }
 
