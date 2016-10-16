@@ -258,7 +258,9 @@ namespace Mojp
 			Debug.WriteLine(nameof(OnCapture) + " " + DateTime.Now);
 
 			// 念のため、MO が起動していることを確認
-			if (Process.GetProcessesByName("mtgo").Length == 0)
+			var proc = Process.GetProcessesByName("mtgo");
+
+			if (proc.Length == 0)
 			{
 				SetMessage("起動中のプロセスの中に MO が見つかりません。");
 				return;
@@ -267,6 +269,7 @@ namespace Mojp
 			// "Preview" という名前のウィンドウを探す (なぜかルートの子で見つかる)
 			var currentPrevWnd = AutomationElement.RootElement.FindFirst(TreeScope.Children,
 				new AndCondition(
+					new PropertyCondition(AutomationElement.ProcessIdProperty, proc[0].Id),
 					new PropertyCondition(AutomationElement.ClassNameProperty, "Window"),
 					new PropertyCondition(AutomationElement.NameProperty, "Preview")));
 
