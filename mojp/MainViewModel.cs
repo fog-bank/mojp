@@ -238,11 +238,7 @@ namespace Mojp
 		/// </summary>
 		public void Release()
 		{
-			if (prevWnd != null)
-			{
-				Automation.RemoveAllEventHandlers();
-				prevWnd = null;
-			}
+			ReleaseAutomationElement();
 			cacheReq = null;
 
 			if (timer != null)
@@ -250,6 +246,18 @@ namespace Mojp
 				timer.Stop();
 				timer.Tick -= OnCapture;
 				timer = null;
+			}
+		}
+
+		/// <summary>
+		/// UI Automation イベントハンドラーを削除し、<see cref="AutomationElement"/> への参照を解放します。
+		/// </summary>
+		public void ReleaseAutomationElement()
+		{
+			if (prevWnd != null)
+			{
+				Automation.RemoveAllEventHandlers();
+				prevWnd = null;
 			}
 		}
 
@@ -270,6 +278,7 @@ namespace Mojp
 
 			if (proc.Length == 0)
 			{
+				ReleaseAutomationElement();
 				SetMessage("起動中のプロセスの中に MO が見つかりません。");
 				return;
 			}
@@ -283,6 +292,7 @@ namespace Mojp
 
 			if (currentPrevWnd == null)
 			{
+				ReleaseAutomationElement();
 				SetMessage("MO の Preview Pane が見つかりません。");
 				return;
 			}
@@ -290,11 +300,10 @@ namespace Mojp
 			if (currentPrevWnd != prevWnd)
 			{
 				// 新しい Preview Pane が見つかった
+				ReleaseAutomationElement();
 				prevWnd = currentPrevWnd;
 
 				// UI テキストの変化を追う
-				Automation.RemoveAllEventHandlers();
-
 				using (cacheReq.Activate())
 					Automation.AddAutomationPropertyChangedEventHandler(prevWnd, TreeScope.Descendants, OnAutomaionNamePropertyChanged, AutomationElement.NameProperty);
 
