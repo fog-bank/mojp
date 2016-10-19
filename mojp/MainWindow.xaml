@@ -6,36 +6,20 @@
 		Width="{Binding WindowWidth, Mode=TwoWay}" Height="{Binding WindowHeight, Mode=TwoWay}" 
 		Left="{Binding WindowLeft, Mode=TwoWay}" Top="{Binding WindowTop, Mode=TwoWay}"
 		Icon="1468678499_contents.ico" SnapsToDevicePixels="True" Initialized="OnInitialized">
-	<!-- WindowStyle="None" AllowsTransparency="True" Background="Transparent" -->
-	<!--<WindowChrome.WindowChrome>
-		<WindowChrome CaptionHeight="{x:Static SystemParameters.WindowCaptionHeight}"
-					  ResizeBorderThickness="{x:Static SystemParameters.WindowResizeBorderThickness}" UseAeroCaptionButtons="False" />
-	</WindowChrome.WindowChrome>-->
+		<!-- WindowStyle="None" AllowsTransparency="True" Background="Transparent" -->
 	<Window.DataContext>
 		<local:MainViewModel />
 	</Window.DataContext>
-	<Border Name="clientArea">
+	<Border>
 		<Grid>
 			<Grid.RowDefinitions>
-				<RowDefinition Height="{x:Static SystemParameters.WindowCaptionHeight}" />
+				<RowDefinition Height="Auto" />
 				<RowDefinition />
 			</Grid.RowDefinitions>
-			<TabControl Grid.RowSpan="2"> <!--Background="#ccffffff"-->
-				<!--<TabControl.Resources>
-					<ResourceDictionary>
-						<Color x:Key="ContentAreaColorLight">#ffc5cbf9</Color>
-						<Color x:Key="ContentAreaColorDark">#ff7381f9</Color>
-						<Color x:Key="BorderMediumColor">#ff888888</Color>
-						<Color x:Key="DisabledBorderLightColor">#ffaaaaaa</Color>
-						<Color x:Key="ControlLightColor">White</Color>
-						<Color x:Key="ControlMediumColor">#ff7381f9</Color>
-						<Color x:Key="ControlPressedColor">#ff211aa9</Color>
-						<Color x:Key="DisabledControlDarkColor">#ffc5cbf9</Color>
-					</ResourceDictionary>
-				</TabControl.Resources>-->
+			<TabControl Grid.RowSpan="2"> <!-- Background="#ccffffff" -->
 				<TabItem>
 					<TabItem.Header>
-						<TextBlock Margin="2" MinHeight="14px"
+						<TextBlock Margin="2" MinHeight="14"
 								   FontFamily="{Binding FontFamily}" FontSize="{Binding FontSize}" Text="{Binding CurrentCard.JapaneseName}" />
 					</TabItem.Header>
 					<Grid Margin="2" ToolTip="{Binding CardToolTip}">
@@ -73,7 +57,7 @@
 					</Grid>
 				</TabItem>
 			</TabControl>
-			<ToolBar Margin="0,2,2,0" HorizontalAlignment="Right" VerticalAlignment="Center" WindowChrome.IsHitTestVisibleInChrome="True">
+			<ToolBar Margin="0,2,2,0" HorizontalAlignment="Right" VerticalAlignment="Center">
 				<ToolBar.Template>
 					<ControlTemplate TargetType="ToolBar">
 						<ItemsPresenter />
@@ -85,11 +69,9 @@
 					</ItemsPanelTemplate>
 				</ToolBar.ItemsPanel>
 				<Button FontFamily="Segoe MDL2 Assets" Content="&#xe114;" FontSize="14" ToolTip="MO をキャプチャ" Click="OnCapture" />
-				<!--<Button FontFamily="Segoe MDL2 Assets" Content="&#xe8bd;" FontSize="14" ToolTip="ゆっくり" Click="OnVoice" />
-				<Button FontFamily="Segoe MDL2 Assets" Content="&#xe295;" FontSize="14" ToolTip="5 秒間隠す" Click="OnHide" />-->
 				<Button FontFamily="Segoe MDL2 Assets" Content="&#xe713;" FontSize="14" ToolTip="設定" Click="OnOption" />
-				<!--<Button FontFamily="Marlett" Content="q" FontSize="14" ToolTip="最小化" Click="OnWindowMinimize" />
-				<Button FontFamily="Marlett" Content="r" FontSize="14" ToolTip="閉じる" Click="OnWindowClose" />-->
+				<!--<Button FontFamily="Marlett" Content="q" FontSize="14" ToolTip="最小化" Click="OnWindowMinimize" />-->
+				<!--<Button FontFamily="Marlett" Content="r" FontSize="14" ToolTip="閉じる" Click="OnWindowClose" />-->
 			</ToolBar>
 			<Grid Name="imgLoading" Grid.RowSpan="2" Background="#7Fffffff" Visibility="Collapsed">
 				<Path Stroke="#7f505096" HorizontalAlignment="Center" VerticalAlignment="Center">
