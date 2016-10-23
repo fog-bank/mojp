@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
@@ -24,8 +25,8 @@ namespace Mojp
 		private bool autoRefresh = Settings.Default.AutoRefresh;
 		private TimeSpan refreshInterval = Settings.Default.RefreshInterval;
 
-		private Card card = new Card() { JapaneseName = string.Empty, Text = "MO の Preview Pane を表示させた状態で、右上のカメラアイコンのボタンを押してください" };
-		private string tooltip = null;
+		private ObservableCollection<Card> cards = new ObservableCollection<Card>();
+		private int selectedIndex = -1;
 
 		private AutomationElement prevWnd;
 		private CacheRequest cacheReq = new CacheRequest();
@@ -36,6 +37,8 @@ namespace Mojp
 			cacheReq.TreeScope = TreeScope.Element;
 			cacheReq.Add(AutomationElement.NameProperty);
 			cacheReq.AutomationElementMode = AutomationElementMode.None;
+
+			SetMessage("MO の Preview Pane を表示させた状態で、右上のカメラアイコンのボタンを押してください");
 		}
 
 		/// <summary>
@@ -172,29 +175,17 @@ namespace Mojp
 			}
 		}
 
-		/// <summary>
-		/// 現在表示しているカードを取得または設定します。<see cref="CardToolTip"/> も自動で変更します。
-		/// </summary>
-		public Card CurrentCard
+		public ObservableCollection<Card> Cards
 		{
-			get { return card; }
-			set
-			{
-				card = value;
-				OnPropertyChanged();
-				CardToolTip = card?.Summary;
-			}
+			get { return cards; }
 		}
 
-		/// <summary>
-		/// ツールチップに表示するカードの追加情報を取得または設定します。
-		/// </summary>
-		public string CardToolTip
+		public int SelectedIndex
 		{
-			get { return tooltip; }
+			get { return selectedIndex; }
 			set
 			{
-				tooltip = value;
+				selectedIndex = value;
 				OnPropertyChanged();
 			}
 		}
@@ -204,8 +195,9 @@ namespace Mojp
 		/// </summary>
 		public void SetMessage(string text)
 		{
-			CurrentCard = new Card() { Text = text };
-			CardToolTip = null;
+			Cards.Clear();
+			Cards.Add(new Card { Text = text });
+			SelectedIndex = 0;
 		}
 
 		/// <summary>
@@ -351,8 +343,7 @@ namespace Mojp
 			}
 
 			// 一連のテキストからカード名を探す (両面カードなど複数のカード名にヒットする場合があるので一通り探し直す必要がある)
-			bool set = false;
-			var annotations = new List<string>();
+			var foundCards = new List<Card>();
 
 			foreach (AutomationElement text in texts)
 			{
@@ -360,24 +351,22 @@ namespace Mojp
 
 				// WHISPER データベースからカード情報を取得
 				Card card;
-				if (name != null && App.Cards.TryGetValue(name, out card))
+				if (name != null && App.Cards.TryGetValue(name, out card) && !foundCards.Contains(card))
 				{
-					if (!set)
-					{
-						App.Current.Dispatcher.Invoke(() => CurrentCard = card);
-						set = true;
-					}
-					annotations.Add(card.Summary);
+					foundCards.Add(card);
 				}
 			}
 
 			// カード名が見つからなかった
-			if (!set)
-				App.Current.Dispatcher.Invoke(() => CurrentCard = null);
+			App.Current.Dispatcher.Invoke(() =>
+			{
+				Cards.Clear();
 
-			// 分割カードや両面カードなどは最初の情報のみを表示し、残りはツールチップにする
-			if (annotations.Count > 1)
-				App.Current.Dispatcher.Invoke(() => CardToolTip = string.Join(Environment.NewLine + "--------" + Environment.NewLine, annotations));
+				foreach (var card in foundCards)
+					Cards.Add(card);
+
+				SelectedIndex = 0;
+			});
 		}
 
 		/// <summary>

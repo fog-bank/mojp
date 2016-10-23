@@ -9,7 +9,7 @@ namespace Mojp
 	/// <summary>
 	/// MTG のカードを表します。
 	/// </summary>
-	public class Card
+	public class Card : IEquatable<Card>
 	{
 		public Card()
 		{
@@ -92,6 +92,21 @@ namespace Mojp
 
 				return sb.ToString();
 			}
+		}
+
+		public bool Equals(Card other)
+		{
+			return !string.IsNullOrWhiteSpace(Name) && string.Equals(Name, other?.Name);
+		}
+
+		public override bool Equals(object obj)
+		{
+			return Equals(obj as Card);
+		}
+
+		public override int GetHashCode()
+		{
+			return Name == null ? 0 : Name.GetHashCode();
 		}
 
 		public override string ToString()

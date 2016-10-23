@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.IO;
 using System.Threading.Tasks;
 using System.Windows;
@@ -55,7 +56,11 @@ namespace Mojp
 
 		private void OnCopyCardName(object sender, RoutedEventArgs e)
 		{
-			var card = ViewModel?.CurrentCard;
+			if (ViewModel == null || ViewModel.Cards == null 
+				|| ViewModel.SelectedIndex < 0 || ViewModel.SelectedIndex >= ViewModel.Cards.Count)
+				return;
+
+			var card = ViewModel.Cards[ViewModel.SelectedIndex];
 			string name = card?.JapaneseName;
 
 			if (string.IsNullOrEmpty(name))
@@ -63,6 +68,19 @@ namespace Mojp
 
 			if (name != null)
 				Clipboard.SetText(name);
+		}
+
+		private void OnGoToWiki(object sender, RoutedEventArgs e)
+		{
+			if (ViewModel == null || ViewModel.Cards == null
+				|| ViewModel.SelectedIndex < 0 || ViewModel.SelectedIndex >= ViewModel.Cards.Count)
+				return;
+
+			var card = ViewModel.Cards[ViewModel.SelectedIndex];
+			string jaName = card?.JapaneseName;
+
+			if (!string.IsNullOrEmpty(jaName))
+				Process.Start("http://mtgwiki.com/wiki/" + jaName + "/" + card.Name.Replace(' ', '_'));
 		}
 
 		private void OnVoice(object sender, RoutedEventArgs e)

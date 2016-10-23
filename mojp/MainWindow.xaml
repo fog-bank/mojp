@@ -5,8 +5,8 @@
 		Title="MO 日本語テキストプレビュー" MinWidth="200" MinHeight="40" Topmost="{Binding TopMost, Mode=OneTime}"
 		Width="{Binding WindowWidth, Mode=TwoWay}" Height="{Binding WindowHeight, Mode=TwoWay}" 
 		Left="{Binding WindowLeft, Mode=TwoWay}" Top="{Binding WindowTop, Mode=TwoWay}"
-		Icon="1468678499_contents.ico" SnapsToDevicePixels="True" Initialized="OnInitialized">
-		<!-- WindowStyle="None" AllowsTransparency="True" Background="Transparent" -->
+		Icon="Resources/dictionary.ico" SnapsToDevicePixels="True" Initialized="OnInitialized">
+	<!-- WindowStyle="None" AllowsTransparency="True" Background="Transparent" -->
 	<Window.DataContext>
 		<local:MainViewModel />
 	</Window.DataContext>
@@ -16,46 +16,63 @@
 				<RowDefinition Height="Auto" />
 				<RowDefinition />
 			</Grid.RowDefinitions>
-			<TabControl Grid.RowSpan="2"> <!-- Background="#ccffffff" -->
-				<TabItem>
-					<TabItem.Header>
-						<TextBlock Margin="2" MinHeight="14"
-								   FontFamily="{Binding FontFamily}" FontSize="{Binding FontSize}" Text="{Binding CurrentCard.JapaneseName}" />
-					</TabItem.Header>
-					<Grid Margin="2" ToolTip="{Binding CardToolTip}">
-						<Grid.RowDefinitions>
-							<RowDefinition Height="Auto" />
-							<RowDefinition />
-							<RowDefinition Height="Auto" />
-						</Grid.RowDefinitions>
-						<TextBlock Margin="2" FontFamily="{Binding FontFamily}" FontSize="{Binding FontSize}" Text="{Binding CurrentCard.Type}" 
-								   TextTrimming="CharacterEllipsis">
+			<TabControl Grid.RowSpan="2" FontFamily="{Binding FontFamily}" FontSize="{Binding FontSize}" 
+						ItemsSource="{Binding Cards}" SelectedIndex="{Binding SelectedIndex}">
+				<TabControl.ItemTemplate>
+					<DataTemplate DataType="local:Card">
+						<TextBlock Margin="2" MinHeight="14" Text="{Binding JapaneseName}">
+							<TextBlock.ToolTip>
+								<TextBlock><Run Text="{Binding JapaneseName}" /> / <Run Text="{Binding Name}" /></TextBlock>
+							</TextBlock.ToolTip>
 							<TextBlock.Style>
 								<Style TargetType="TextBlock">
 									<Style.Triggers>
-										<DataTrigger Binding="{Binding CurrentCard.Type}" Value="{x:Null}">
-											<Setter Property="Visibility" Value="Collapsed" />
+										<DataTrigger Binding="{Binding Name}" Value="{x:Null}">
+											<Setter Property="Width" Value="40" />
+											<Setter Property="Visibility" Value="Hidden" />
 										</DataTrigger>
 									</Style.Triggers>
 								</Style>
 							</TextBlock.Style>
 						</TextBlock>
-						<TextBlock Grid.Row="1" Margin="2" FontFamily="{Binding FontFamily}" FontSize="{Binding FontSize}" Text="{Binding CurrentCard.Text}"
-								   TextWrapping="Wrap" TextTrimming="CharacterEllipsis" />
-						<TextBlock Grid.Row="2" Margin="2" FontFamily="{Binding FontFamily}" FontSize="{Binding FontSize}" Text="{Binding CurrentCard.PT}" 
-								   TextTrimming="CharacterEllipsis">
-							<TextBlock.Style>
-								<Style TargetType="TextBlock">
-									<Style.Triggers>
-										<DataTrigger Binding="{Binding CurrentCard.PT}" Value="{x:Null}">
-											<Setter Property="Visibility" Value="Collapsed" />
-										</DataTrigger>
-									</Style.Triggers>
-								</Style>
-							</TextBlock.Style>
-						</TextBlock>
-					</Grid>
-				</TabItem>
+					</DataTemplate>
+				</TabControl.ItemTemplate>
+				<TabControl.ContentTemplate>
+					<DataTemplate DataType="local:Card">
+						<Grid Margin="2">
+							<Grid.RowDefinitions>
+								<RowDefinition Height="Auto" />
+								<RowDefinition />
+								<RowDefinition Height="Auto" />
+							</Grid.RowDefinitions>
+							<TextBlock Margin="2" Text="{Binding Type}" ToolTip="{Binding Type}" TextTrimming="CharacterEllipsis">
+								<TextBlock.Style>
+									<Style TargetType="TextBlock">
+										<Style.Triggers>
+											<DataTrigger Binding="{Binding Type}" Value="{x:Null}">
+												<Setter Property="Visibility" Value="Collapsed" />
+											</DataTrigger>
+										</Style.Triggers>
+									</Style>
+								</TextBlock.Style>
+							</TextBlock>
+							<ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+								<TextBlock Margin="2" Text="{Binding Text}" TextWrapping="Wrap" />
+							</ScrollViewer>
+							<TextBlock Grid.Row="2" Margin="2" Text="{Binding PT}" TextTrimming="CharacterEllipsis">
+								<TextBlock.Style>
+									<Style TargetType="TextBlock">
+										<Style.Triggers>
+											<DataTrigger Binding="{Binding PT}" Value="{x:Null}">
+												<Setter Property="Visibility" Value="Collapsed" />
+											</DataTrigger>
+										</Style.Triggers>
+									</Style>
+								</TextBlock.Style>
+							</TextBlock>
+						</Grid>
+					</DataTemplate>
+				</TabControl.ContentTemplate>
 			</TabControl>
 			<ToolBar Margin="0,2,2,0" HorizontalAlignment="Right" VerticalAlignment="Center">
 				<ToolBar.Template>
@@ -116,7 +133,16 @@
 	<Window.ContextMenu>
 		<ContextMenu>
 			<MenuItem Header="MO をキャプチャ" Click="OnCapture" />
-			<MenuItem Header="カード名をコピー" Click="OnCopyCardName" />
+			<MenuItem Header="カード名をコピー" Click="OnCopyCardName">
+				<MenuItem.Icon>
+					<Image Source="Resources\Copy.png" />
+				</MenuItem.Icon>
+			</MenuItem>
+			<MenuItem Header="カードを MTG Wiki で調べる" Click="OnGoToWiki">
+				<MenuItem.Icon>
+					<Image Source="Resources\Web.png" />
+				</MenuItem.Icon>
+			</MenuItem>
 			<Separator />
 			<MenuItem Header="5 秒間隠す" Click="OnHide" />
 			<MenuItem Header="設定" Click="OnOption" />
