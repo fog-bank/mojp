@@ -5,49 +5,64 @@
 		Title="MO 日本語テキストプレビュー" MinWidth="200" MinHeight="40" Topmost="{Binding TopMost, Mode=OneTime}"
 		Width="{Binding WindowWidth, Mode=TwoWay}" Height="{Binding WindowHeight, Mode=TwoWay}" 
 		Left="{Binding WindowLeft, Mode=TwoWay}" Top="{Binding WindowTop, Mode=TwoWay}"
-		Icon="1468678499_contents.ico" SnapsToDevicePixels="True" Initialized="OnInitialized">
+		Icon="Resources/dictionary.ico" SnapsToDevicePixels="True" Initialized="OnInitialized">
 		<!-- WindowStyle="None" AllowsTransparency="True" Background="Transparent" -->
 	<Window.DataContext>
 		<local:MainViewModel />
 	</Window.DataContext>
-	<Border>
-		<Grid>
-			<Grid.RowDefinitions>
-				<RowDefinition Height="Auto" />
-				<RowDefinition />
-			</Grid.RowDefinitions>
-			<TabControl Grid.RowSpan="2"> <!-- Background="#ccffffff" -->
-				<TabItem>
-					<TabItem.Header>
-						<TextBlock Margin="2" MinHeight="14"
-								   FontFamily="{Binding FontFamily}" FontSize="{Binding FontSize}" Text="{Binding CurrentCard.JapaneseName}" />
-					</TabItem.Header>
-					<Grid Margin="2" ToolTip="{Binding CardToolTip}">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto" />
+			<RowDefinition />
+		</Grid.RowDefinitions>
+		<TabControl Grid.RowSpan="2" FontFamily="{Binding FontFamily}" FontSize="{Binding FontSize}" 
+					ItemsSource="{Binding Cards}" SelectedIndex="{Binding SelectedIndex}">
+			<TabControl.Resources>
+				<Style TargetType="TabItem">
+					<Style.Triggers>
+						<DataTrigger Binding="{Binding Name}" Value="{x:Null}">
+							<Setter Property="Width" Value="42" />
+							<Setter Property="Visibility" Value="Hidden" />
+						</DataTrigger>
+					</Style.Triggers>
+				</Style>
+			</TabControl.Resources>
+			<TabControl.ItemTemplate>
+				<DataTemplate DataType="local:Card">
+					<TextBlock Margin="2" MinHeight="15" Text="{Binding JapaneseName}">
+						<TextBlock.ToolTip>
+							<TextBlock><Run Text="{Binding JapaneseName}" /> / <Run Text="{Binding Name}" /></TextBlock>
+						</TextBlock.ToolTip>
+					</TextBlock>
+				</DataTemplate>
+			</TabControl.ItemTemplate>
+			<TabControl.ContentTemplate>
+				<DataTemplate DataType="local:Card">
+					<Grid Margin="2">
 						<Grid.RowDefinitions>
 							<RowDefinition Height="Auto" />
 							<RowDefinition />
 							<RowDefinition Height="Auto" />
 						</Grid.RowDefinitions>
-						<TextBlock Margin="2" FontFamily="{Binding FontFamily}" FontSize="{Binding FontSize}" Text="{Binding CurrentCard.Type}" 
-								   TextTrimming="CharacterEllipsis">
+						<TextBlock Margin="2" Text="{Binding Type}" ToolTip="{Binding Type}" TextTrimming="CharacterEllipsis">
 							<TextBlock.Style>
 								<Style TargetType="TextBlock">
 									<Style.Triggers>
-										<DataTrigger Binding="{Binding CurrentCard.Type}" Value="{x:Null}">
+										<DataTrigger Binding="{Binding Type}" Value="{x:Null}">
 											<Setter Property="Visibility" Value="Collapsed" />
 										</DataTrigger>
 									</Style.Triggers>
 								</Style>
 							</TextBlock.Style>
 						</TextBlock>
-						<TextBlock Grid.Row="1" Margin="2" FontFamily="{Binding FontFamily}" FontSize="{Binding FontSize}" Text="{Binding CurrentCard.Text}"
-								   TextWrapping="Wrap" TextTrimming="CharacterEllipsis" />
-						<TextBlock Grid.Row="2" Margin="2" FontFamily="{Binding FontFamily}" FontSize="{Binding FontSize}" Text="{Binding CurrentCard.PT}" 
-								   TextTrimming="CharacterEllipsis">
+						<ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+							<TextBlock Margin="2" Text="{Binding Text}" TextWrapping="Wrap" />
+						</ScrollViewer>
+						<TextBlock Grid.Row="2" Margin="2" Text="{Binding PT}" TextTrimming="CharacterEllipsis">
 							<TextBlock.Style>
 								<Style TargetType="TextBlock">
 									<Style.Triggers>
-										<DataTrigger Binding="{Binding CurrentCard.PT}" Value="{x:Null}">
+										<DataTrigger Binding="{Binding PT}" Value="{x:Null}">
 											<Setter Property="Visibility" Value="Collapsed" />
 										</DataTrigger>
 									</Style.Triggers>
@@ -55,68 +70,77 @@
 							</TextBlock.Style>
 						</TextBlock>
 					</Grid>
-				</TabItem>
-			</TabControl>
-			<ToolBar Margin="0,2,2,0" HorizontalAlignment="Right" VerticalAlignment="Center">
-				<ToolBar.Template>
-					<ControlTemplate TargetType="ToolBar">
-						<ItemsPresenter />
-					</ControlTemplate>
-				</ToolBar.Template>
-				<ToolBar.ItemsPanel>
-					<ItemsPanelTemplate>
-						<StackPanel Orientation="Horizontal" />
-					</ItemsPanelTemplate>
-				</ToolBar.ItemsPanel>
-				<Button FontFamily="Segoe MDL2 Assets" Content="&#xe114;" FontSize="14" ToolTip="MO をキャプチャ" Click="OnCapture" />
-				<Button FontFamily="Segoe MDL2 Assets" Content="&#xe713;" FontSize="14" ToolTip="設定" Click="OnOption" />
-				<!--<Button FontFamily="Marlett" Content="q" FontSize="14" ToolTip="最小化" Click="OnWindowMinimize" />-->
-				<!--<Button FontFamily="Marlett" Content="r" FontSize="14" ToolTip="閉じる" Click="OnWindowClose" />-->
-			</ToolBar>
-			<Grid Name="imgLoading" Grid.RowSpan="2" Background="#7Fffffff" Visibility="Collapsed">
-				<Path Stroke="#7f505096" HorizontalAlignment="Center" VerticalAlignment="Center">
-					<!-- http://blogs.microsoft.co.il/blogs/maxim/archive/2008/03/08/wpf-daily-tip-simple-wait-progress-control-continuous-animation.aspx -->
-					<Path.Data>
-						<GeometryGroup>
-							<EllipseGeometry Center="34,34" RadiusX="32" RadiusY="32" />
-							<EllipseGeometry Center="34,34" RadiusX="20" RadiusY="20" />
-						</GeometryGroup>
-					</Path.Data>
-					<Path.Fill>
-						<LinearGradientBrush EndPoint="0,1">
-							<GradientStop Color="#ff4dd5ce" />
-							<GradientStop Offset="1" Color="#ff499692" />
-						</LinearGradientBrush>
-					</Path.Fill>
-					<Path.RenderTransform>
-						<RotateTransform CenterX="34" CenterY="34" />
-					</Path.RenderTransform>
-					<Path.Style>
-						<Style TargetType="Path">
-							<Style.Triggers>
-								<DataTrigger Binding="{Binding Visibility, ElementName=imgLoading}" Value="Visible">
-									<DataTrigger.EnterActions>
-										<BeginStoryboard Name="startWaitRing">
-											<Storyboard RepeatBehavior="Forever">
-												<DoubleAnimation Storyboard.TargetProperty="RenderTransform.Angle" Duration="0:0:1" From="0" To="360" />
-											</Storyboard>
-										</BeginStoryboard>
-									</DataTrigger.EnterActions>
-									<DataTrigger.ExitActions>
-										<StopStoryboard BeginStoryboardName="startWaitRing" />
-									</DataTrigger.ExitActions>
-								</DataTrigger>
-							</Style.Triggers>
-						</Style>
-					</Path.Style>
-				</Path>
-			</Grid>
+				</DataTemplate>
+			</TabControl.ContentTemplate>
+		</TabControl>
+		<ToolBar Margin="0,2,2,0" HorizontalAlignment="Right">
+			<ToolBar.Template>
+				<ControlTemplate TargetType="ToolBar">
+					<ItemsPresenter />
+				</ControlTemplate>
+			</ToolBar.Template>
+			<ToolBar.ItemsPanel>
+				<ItemsPanelTemplate>
+					<StackPanel Orientation="Horizontal" />
+				</ItemsPanelTemplate>
+			</ToolBar.ItemsPanel>
+			<Button FontFamily="Segoe MDL2 Assets" Content="&#xe114;" FontSize="14" ToolTip="MO をキャプチャ" Click="OnCapture" />
+			<Button FontFamily="Segoe MDL2 Assets" Content="&#xe713;" FontSize="14" ToolTip="設定" Click="OnOption" />
+			<!--<Button FontFamily="Marlett" Content="q" FontSize="14" ToolTip="最小化" Click="OnWindowMinimize" />-->
+			<!--<Button FontFamily="Marlett" Content="r" FontSize="14" ToolTip="閉じる" Click="OnWindowClose" />-->
+		</ToolBar>
+		<Grid Name="imgLoading" Grid.RowSpan="2" Background="#7Fffffff" Visibility="Collapsed">
+			<Path Stroke="#7f505096" HorizontalAlignment="Center" VerticalAlignment="Center">
+				<!-- http://blogs.microsoft.co.il/blogs/maxim/archive/2008/03/08/wpf-daily-tip-simple-wait-progress-control-continuous-animation.aspx -->
+				<Path.Data>
+					<GeometryGroup>
+						<EllipseGeometry Center="34,34" RadiusX="32" RadiusY="32" />
+						<EllipseGeometry Center="34,34" RadiusX="20" RadiusY="20" />
+					</GeometryGroup>
+				</Path.Data>
+				<Path.Fill>
+					<LinearGradientBrush EndPoint="0,1">
+						<GradientStop Color="#ff4dd5ce" />
+						<GradientStop Offset="1" Color="#ff499692" />
+					</LinearGradientBrush>
+				</Path.Fill>
+				<Path.RenderTransform>
+					<RotateTransform CenterX="34" CenterY="34" />
+				</Path.RenderTransform>
+				<Path.Style>
+					<Style TargetType="Path">
+						<Style.Triggers>
+							<DataTrigger Binding="{Binding Visibility, ElementName=imgLoading}" Value="Visible">
+								<DataTrigger.EnterActions>
+									<BeginStoryboard Name="startWaitRing">
+										<Storyboard RepeatBehavior="Forever">
+											<DoubleAnimation Storyboard.TargetProperty="RenderTransform.Angle" Duration="0:0:1" From="0" To="360" />
+										</Storyboard>
+									</BeginStoryboard>
+								</DataTrigger.EnterActions>
+								<DataTrigger.ExitActions>
+									<StopStoryboard BeginStoryboardName="startWaitRing" />
+								</DataTrigger.ExitActions>
+							</DataTrigger>
+						</Style.Triggers>
+					</Style>
+				</Path.Style>
+			</Path>
 		</Grid>
-	</Border>
+	</Grid>
 	<Window.ContextMenu>
 		<ContextMenu>
 			<MenuItem Header="MO をキャプチャ" Click="OnCapture" />
-			<MenuItem Header="カード名をコピー" Click="OnCopyCardName" />
+			<MenuItem Header="カード名をコピー" Click="OnCopyCardName">
+				<MenuItem.Icon>
+					<Image Source="Resources\Copy.png" />
+				</MenuItem.Icon>
+			</MenuItem>
+			<MenuItem Header="カードを MTG Wiki で調べる" Click="OnGoToWiki">
+				<MenuItem.Icon>
+					<Image Source="Resources\Web.png" />
+				</MenuItem.Icon>
+			</MenuItem>
 			<Separator />
 			<MenuItem Header="5 秒間隠す" Click="OnHide" />
 			<MenuItem Header="設定" Click="OnOption" />

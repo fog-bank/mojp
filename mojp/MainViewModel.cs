@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
@@ -24,11 +25,12 @@ namespace Mojp
 		private bool autoRefresh = Settings.Default.AutoRefresh;
 		private TimeSpan refreshInterval = Settings.Default.RefreshInterval;
 
-		private Card card = new Card() { JapaneseName = string.Empty, Text = "MO の Preview Pane を表示させた状態で、右上のカメラアイコンのボタンを押してください" };
-		private string tooltip = null;
+		private ObservableCollection<Card> cards = new ObservableCollection<Card>();
+		private int selectedIndex = -1;
 
 		private AutomationElement prevWnd;
 		private CacheRequest cacheReq = new CacheRequest();
+		private Condition condition;
 		private DispatcherTimer timer;
 
 		public MainViewModel()
@@ -36,6 +38,13 @@ namespace Mojp
 			cacheReq.TreeScope = TreeScope.Element;
 			cacheReq.Add(AutomationElement.NameProperty);
 			cacheReq.AutomationElementMode = AutomationElementMode.None;
+
+			condition = new AndCondition(
+						new PropertyCondition(AutomationElement.ClassNameProperty, "TextBlock"),
+						new NotCondition(new PropertyCondition(AutomationElement.NameProperty, string.Empty)),
+						new PropertyCondition(AutomationElement.AutomationIdProperty, string.Empty));
+
+			SetMessage("MO の Preview Pane を表示させた状態で、右上のカメラアイコンのボタンを押してください");
 		}
 
 		/// <summary>
@@ -173,29 +182,38 @@ namespace Mojp
 		}
 
 		/// <summary>
-		/// 現在表示しているカードを取得または設定します。<see cref="CardToolTip"/> も自動で変更します。
+		/// 表示中のカードのコレクションを取得します。
 		/// </summary>
-		public Card CurrentCard
+		public ObservableCollection<Card> Cards => cards;
+
+		/// <summary>
+		/// <see cref="System.Windows.Controls.TabControl"/> で手前に表示しているカードのインデックス番号を取得または設定します。
+		/// </summary>
+		public int SelectedIndex
 		{
-			get { return card; }
+			get { return selectedIndex; }
 			set
 			{
-				card = value;
+				selectedIndex = value;
 				OnPropertyChanged();
-				CardToolTip = card?.Summary;
 			}
 		}
 
 		/// <summary>
-		/// ツールチップに表示するカードの追加情報を取得または設定します。
+		/// <see cref="System.Windows.Controls.TabControl"/> で手前に表示しているカードを取得します。
 		/// </summary>
-		public string CardToolTip
+		public Card SelectedCard
 		{
-			get { return tooltip; }
-			set
+			get
 			{
-				tooltip = value;
-				OnPropertyChanged();
+				if (SelectedIndex >= 0 && SelectedIndex < Cards.Count)
+				{
+					var card = Cards[SelectedIndex];
+
+					if (card != null && !string.IsNullOrEmpty(card.Name))
+						return card;
+				}
+				return null;
 			}
 		}
 
@@ -204,8 +222,9 @@ namespace Mojp
 		/// </summary>
 		public void SetMessage(string text)
 		{
-			CurrentCard = new Card() { Text = text };
-			CardToolTip = null;
+			Cards.Clear();
+			Cards.Add(new Card { Text = text });
+			SelectedIndex = 0;
 		}
 
 		/// <summary>
@@ -228,10 +247,7 @@ namespace Mojp
 		/// <summary>
 		/// MO のプレビューウィンドウを探します。
 		/// </summary>
-		public void CapturePreviewPane()
-		{
-			OnCapture(null, EventArgs.Empty);
-		}
+		public void CapturePreviewPane() => OnCapture(null, EventArgs.Empty);
 
 		/// <summary>
 		/// 各リソースを解放します。
@@ -240,6 +256,7 @@ namespace Mojp
 		{
 			ReleaseAutomationElement();
 			cacheReq = null;
+			condition = null;
 
 			if (timer != null)
 			{
@@ -273,7 +290,6 @@ namespace Mojp
 		{
 			Debug.WriteLine(nameof(OnCapture) + " " + DateTime.Now);
 
-			// 念のため、MO が起動していることを確認
 			var proc = Process.GetProcessesByName("mtgo");
 
 			if (proc.Length == 0)
@@ -319,15 +335,16 @@ namespace Mojp
 			if (prevWnd == null)
 				return;
 			
-			// 新しいテキストがカード名かどうかを調べ、そうでないなら不必要な検索をしないようにする
 			string srcName = GetNamePropertyValue(sender as AutomationElement);
 			Debug.WriteLineIf(!string.IsNullOrWhiteSpace(srcName), srcName);
 
+			// 新しいテキストがカード名かどうかを調べ、そうでないなら不必要な検索をしないようにする
+			// トークンの場合は、カード名を含むとき (= コピートークン) と含まないとき (→ 空表示にする) とがあるので検索を続行する
 			if (!App.Cards.ContainsKey(srcName) && !srcName.StartsWith("Token"))
 			{
 				string cardType = null;
 
-				// 紋章やヴァンガードの場合は空表示にする
+				// 紋章やヴァンガードの場合は確定で空表示にする
 				if (srcName.StartsWith("Emblem"))
 					cardType = "紋章";
 				else if (srcName == "Vanguard")
@@ -342,17 +359,10 @@ namespace Mojp
 			// テキストが空でなく、特定の UI 要素でない TextBlock をすべて拾う
 			AutomationElementCollection texts;
 			using (cacheReq.Activate())
-			{
-				texts = prevWnd.FindAll(TreeScope.Descendants,
-					new AndCondition(
-						new PropertyCondition(AutomationElement.ClassNameProperty, "TextBlock"),
-						new NotCondition(new PropertyCondition(AutomationElement.NameProperty, string.Empty)),
-						new PropertyCondition(AutomationElement.AutomationIdProperty, string.Empty)));
-			}
+				texts = prevWnd.FindAll(TreeScope.Descendants, condition);
 
 			// 一連のテキストからカード名を探す (両面カードなど複数のカード名にヒットする場合があるので一通り探し直す必要がある)
-			bool set = false;
-			var annotations = new List<string>();
+			var foundCards = new List<Card>();
 
 			foreach (AutomationElement text in texts)
 			{
@@ -360,24 +370,23 @@ namespace Mojp
 
 				// WHISPER データベースからカード情報を取得
 				Card card;
-				if (name != null && App.Cards.TryGetValue(name, out card))
+				if (name != null && App.Cards.TryGetValue(name, out card) && !foundCards.Contains(card))
 				{
-					if (!set)
-					{
-						App.Current.Dispatcher.Invoke(() => CurrentCard = card);
-						set = true;
-					}
-					annotations.Add(card.Summary);
+					foundCards.Add(card);
 				}
 			}
 
-			// カード名が見つからなかった
-			if (!set)
-				App.Current.Dispatcher.Invoke(() => CurrentCard = null);
+			App.Current.Dispatcher.Invoke(() =>
+			{
+				Cards.Clear();
 
-			// 分割カードや両面カードなどは最初の情報のみを表示し、残りはツールチップにする
-			if (annotations.Count > 1)
-				App.Current.Dispatcher.Invoke(() => CardToolTip = string.Join(Environment.NewLine + "--------" + Environment.NewLine, annotations));
+				foreach (var card in foundCards)
+					Cards.Add(card);
+
+				// ツールバーと重ならないようにするためのダミー項目
+				Cards.Add(new Card());
+				SelectedIndex = 0;
+			});
 		}
 
 		/// <summary>
