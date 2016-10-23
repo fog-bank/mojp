@@ -50,17 +50,17 @@ namespace Mojp
 
 				imgLoading.Visibility = Visibility.Hidden;
 			}
-
 			ViewModel.SetRefreshTimer(Dispatcher);
+		}
+
+		private void OnCapture(object sender, RoutedEventArgs e)
+		{
+			ViewModel.CapturePreviewPane();
 		}
 
 		private void OnCopyCardName(object sender, RoutedEventArgs e)
 		{
-			if (ViewModel == null || ViewModel.Cards == null 
-				|| ViewModel.SelectedIndex < 0 || ViewModel.SelectedIndex >= ViewModel.Cards.Count)
-				return;
-
-			var card = ViewModel.Cards[ViewModel.SelectedIndex];
+			var card = ViewModel.SelectedCard;
 			string name = card?.JapaneseName;
 
 			if (string.IsNullOrEmpty(name))
@@ -72,33 +72,11 @@ namespace Mojp
 
 		private void OnGoToWiki(object sender, RoutedEventArgs e)
 		{
-			if (ViewModel == null || ViewModel.Cards == null
-				|| ViewModel.SelectedIndex < 0 || ViewModel.SelectedIndex >= ViewModel.Cards.Count)
-				return;
-
-			var card = ViewModel.Cards[ViewModel.SelectedIndex];
+			var card = ViewModel.SelectedCard;
 			string jaName = card?.JapaneseName;
 
 			if (!string.IsNullOrEmpty(jaName))
-				Process.Start("http://mtgwiki.com/wiki/" + jaName + "/" + card.Name.Replace(' ', '_'));
-		}
-
-		private void OnVoice(object sender, RoutedEventArgs e)
-		{
-		}
-
-		private async void OnHide(object sender, RoutedEventArgs e)
-		{
-			Visibility = Visibility.Hidden;
-
-			await Task.Delay(5000);
-
-			Visibility = Visibility.Visible;
-		}
-
-		private void OnCapture(object sender, RoutedEventArgs e)
-		{
-			ViewModel.CapturePreviewPane();
+				Process.Start("http://mtgwiki.com/wiki/" + Uri.EscapeDataString(jaName) + "/" + card.Name.Replace(' ', '_'));
 		}
 
 		private void OnOption(object sender, RoutedEventArgs e)
@@ -113,6 +91,15 @@ namespace Mojp
 
 			// Preview Pane の自動探索の設定を反映
 			ViewModel.SetRefreshTimer(Dispatcher);
+		}
+
+		private async void OnHide(object sender, RoutedEventArgs e)
+		{
+			Visibility = Visibility.Hidden;
+
+			await Task.Delay(5000);
+
+			Visibility = Visibility.Visible;
 		}
 
 		private void OnWindowMinimize(object sender, RoutedEventArgs e)

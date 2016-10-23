@@ -30,6 +30,7 @@ namespace Mojp
 
 		private AutomationElement prevWnd;
 		private CacheRequest cacheReq = new CacheRequest();
+		private Condition condition;
 		private DispatcherTimer timer;
 
 		public MainViewModel()
@@ -37,6 +38,11 @@ namespace Mojp
 			cacheReq.TreeScope = TreeScope.Element;
 			cacheReq.Add(AutomationElement.NameProperty);
 			cacheReq.AutomationElementMode = AutomationElementMode.None;
+
+			condition = new AndCondition(
+						new PropertyCondition(AutomationElement.ClassNameProperty, "TextBlock"),
+						new NotCondition(new PropertyCondition(AutomationElement.NameProperty, string.Empty)),
+						new PropertyCondition(AutomationElement.AutomationIdProperty, string.Empty));
 
 			SetMessage("MO の Preview Pane を表示させた状態で、右上のカメラアイコンのボタンを押してください");
 		}
@@ -175,11 +181,14 @@ namespace Mojp
 			}
 		}
 
-		public ObservableCollection<Card> Cards
-		{
-			get { return cards; }
-		}
+		/// <summary>
+		/// 表示中のカードのコレクションを取得します。
+		/// </summary>
+		public ObservableCollection<Card> Cards => cards;
 
+		/// <summary>
+		/// <see cref="System.Windows.Controls.TabControl"/> で手前に表示しているカードのインデックス番号を取得または設定します。
+		/// </summary>
 		public int SelectedIndex
 		{
 			get { return selectedIndex; }
@@ -187,6 +196,24 @@ namespace Mojp
 			{
 				selectedIndex = value;
 				OnPropertyChanged();
+			}
+		}
+
+		/// <summary>
+		/// <see cref="System.Windows.Controls.TabControl"/> で手前に表示しているカードを取得します。
+		/// </summary>
+		public Card SelectedCard
+		{
+			get
+			{
+				if (SelectedIndex >= 0 && SelectedIndex < Cards.Count)
+				{
+					var card = Cards[SelectedIndex];
+
+					if (card != null && !string.IsNullOrEmpty(card.Name))
+						return card;
+				}
+				return null;
 			}
 		}
 
@@ -220,10 +247,7 @@ namespace Mojp
 		/// <summary>
 		/// MO のプレビューウィンドウを探します。
 		/// </summary>
-		public void CapturePreviewPane()
-		{
-			OnCapture(null, EventArgs.Empty);
-		}
+		public void CapturePreviewPane() => OnCapture(null, EventArgs.Empty);
 
 		/// <summary>
 		/// 各リソースを解放します。
@@ -232,6 +256,7 @@ namespace Mojp
 		{
 			ReleaseAutomationElement();
 			cacheReq = null;
+			condition = null;
 
 			if (timer != null)
 			{
@@ -334,13 +359,7 @@ namespace Mojp
 			// テキストが空でなく、特定の UI 要素でない TextBlock をすべて拾う
 			AutomationElementCollection texts;
 			using (cacheReq.Activate())
-			{
-				texts = prevWnd.FindAll(TreeScope.Descendants,
-					new AndCondition(
-						new PropertyCondition(AutomationElement.ClassNameProperty, "TextBlock"),
-						new NotCondition(new PropertyCondition(AutomationElement.NameProperty, string.Empty)),
-						new PropertyCondition(AutomationElement.AutomationIdProperty, string.Empty)));
-			}
+				texts = prevWnd.FindAll(TreeScope.Descendants, condition);
 
 			// 一連のテキストからカード名を探す (両面カードなど複数のカード名にヒットする場合があるので一通り探し直す必要がある)
 			var foundCards = new List<Card>();
@@ -365,6 +384,8 @@ namespace Mojp
 				foreach (var card in foundCards)
 					Cards.Add(card);
 
+				// ツールバーと重ならないようにするためのダミー項目
+				Cards.Add(new Card());
 				SelectedIndex = 0;
 			});
 		}
