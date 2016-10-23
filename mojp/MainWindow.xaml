@@ -6,7 +6,7 @@
 		Width="{Binding WindowWidth, Mode=TwoWay}" Height="{Binding WindowHeight, Mode=TwoWay}" 
 		Left="{Binding WindowLeft, Mode=TwoWay}" Top="{Binding WindowTop, Mode=TwoWay}"
 		Icon="Resources/dictionary.ico" SnapsToDevicePixels="True" Initialized="OnInitialized">
-	<!-- WindowStyle="None" AllowsTransparency="True" Background="Transparent" -->
+		<!-- WindowStyle="None" AllowsTransparency="True" Background="Transparent" -->
 	<Window.DataContext>
 		<local:MainViewModel />
 	</Window.DataContext>

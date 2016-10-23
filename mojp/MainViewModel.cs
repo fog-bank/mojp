@@ -290,7 +290,6 @@ namespace Mojp
 		{
 			Debug.WriteLine(nameof(OnCapture) + " " + DateTime.Now);
 
-			// 念のため、MO が起動していることを確認
 			var proc = Process.GetProcessesByName("mtgo");
 
 			if (proc.Length == 0)
@@ -336,15 +335,16 @@ namespace Mojp
 			if (prevWnd == null)
 				return;
 			
-			// 新しいテキストがカード名かどうかを調べ、そうでないなら不必要な検索をしないようにする
 			string srcName = GetNamePropertyValue(sender as AutomationElement);
 			Debug.WriteLineIf(!string.IsNullOrWhiteSpace(srcName), srcName);
 
+			// 新しいテキストがカード名かどうかを調べ、そうでないなら不必要な検索をしないようにする
+			// トークンの場合は、カード名を含むとき (= コピートークン) と含まないとき (→ 空表示にする) とがあるので検索を続行する
 			if (!App.Cards.ContainsKey(srcName) && !srcName.StartsWith("Token"))
 			{
 				string cardType = null;
 
-				// 紋章やヴァンガードの場合は空表示にする
+				// 紋章やヴァンガードの場合は確定で空表示にする
 				if (srcName.StartsWith("Emblem"))
 					cardType = "紋章";
 				else if (srcName == "Vanguard")
@@ -376,7 +376,6 @@ namespace Mojp
 				}
 			}
 
-			// カード名が見つからなかった
 			App.Current.Dispatcher.Invoke(() =>
 			{
 				Cards.Clear();
