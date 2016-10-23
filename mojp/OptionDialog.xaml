@@ -2,7 +2,7 @@
 		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 		x:Class="Mojp.OptionDialog"
 		Title="設定" SizeToContent="WidthAndHeight" ResizeMode="NoResize" ShowInTaskbar="False"
-		Icon="1468678499_contents.ico" SnapsToDevicePixels="True">
+		Icon="Resources/dictionary.ico" SnapsToDevicePixels="True">
     <Grid Margin="4">
 		<Grid.Resources>
 			<Style TargetType="TextBlock">
@@ -81,7 +81,7 @@
 				<CheckBox Name="chbAutoRefresh" VerticalContentAlignment="Center" IsChecked="{Binding AutoRefresh}">
 					<StackPanel Orientation="Horizontal">
 						<TextBlock>MO の Preview Pane を自動的に見つける</TextBlock>
-						<Image Source="Information.png" Height="16" Margin="5,0,0,0" 
+						<Image Source="Resources/Information.png" Height="16" Margin="5,0,0,0" 
 							   ToolTip="指定された時間ごとに Preview Pane を探します。動作が重くなる場合は手動更新にしてください。" />
 					</StackPanel>
 				</CheckBox>
@@ -119,7 +119,7 @@
 				<CheckBox Name="cbxSaveDb" Grid.Row="1" VerticalContentAlignment="Center">
 					<StackPanel Orientation="Horizontal">
 						<TextBlock>置換したデータベースをそのまま保存する</TextBlock>
-						<Image Source="Information.png" Height="16" Margin="5,0,0,0" 
+						<Image Source="Resources/Information.png" Height="16" Margin="5,0,0,0" 
 							   ToolTip="アプリケーション フォルダの cards.xml も置換し、既定のデータベースを置換します。" />
 					</StackPanel>
 				</CheckBox>
