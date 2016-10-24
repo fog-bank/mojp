@@ -123,7 +123,10 @@
 							   ToolTip="アプリケーション フォルダの cards.xml も置換し、既定のデータベースを置換します。" />
 					</StackPanel>
 				</CheckBox>
-				<Button Grid.Row="3" HorizontalAlignment="Right" Click="OnBrowseSearchTxt">Whisper 検索結果テキストの読み込み..</Button>
+				<StackPanel Grid.Row="3" HorizontalAlignment="Right" Orientation="Horizontal">
+					<Button Click="OnBrowseSearchTxt">Whisper 検索結果テキストの読み込み..</Button>
+					<Image Name="imgLoaded" Source="Resources/Checkmark.png" Height="20" Margin="5,0,5,0" Visibility="Collapsed" />
+				</StackPanel>
 			</Grid>
 		</Grid>
 		<StackPanel Grid.Row="1" Margin="0,20,0,0">

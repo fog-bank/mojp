@@ -52,7 +52,6 @@ namespace Mojp
 			foreach (var xml in doc.Descendants("card"))
 			{
 				var card = Card.FromXml(xml);
-
 				cards.Add(card.Name, card);
 			}
 		}
@@ -63,6 +62,29 @@ namespace Mojp
 		public static void SetCardInfosFromXml(string file)
 		{
 			SetCardInfosFromXml(XDocument.Load(file));
+		}
+
+		/// <summary>
+		/// カードテキストデータを指定した XML ファイルで修正します。
+		/// </summary>
+		public static void FixCardInfo(string file)
+		{
+			var doc = XDocument.Load(file);
+
+			foreach (var node in doc.Root.Element("add").Elements("card"))
+			{
+				var card = Card.FromXml(node);
+				cards.Add(card.Name, card);
+			}
+
+			foreach (var node in doc.Root.Elements("remove").Elements("card"))
+				cards.Remove((string)node.Attribute("name"));
+
+			foreach (var node in doc.Root.Element("replace").Elements("card"))
+			{
+				var card = Card.FromXml(node);
+				cards[card.Name] = card;
+			}
 		}
 
 		protected override void OnStartup(StartupEventArgs e)

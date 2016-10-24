@@ -18,47 +18,27 @@ namespace Mojp
 		/// <summary>
 		/// カードの英語名を取得または設定します。
 		/// </summary>
-		public string Name
-		{
-			get;
-			set;
-		}
+		public string Name { get; set; }
 
 		/// <summary>
 		/// カードの日本語名を取得または設定します。
 		/// </summary>
-		public string JapaneseName
-		{
-			get;
-			set;
-		}
+		public string JapaneseName { get; set; }
 
 		/// <summary>
 		/// カード・タイプを取得または設定します。
 		/// </summary>
-		public string Type
-		{
-			get;
-			set;
-		}
+		public string Type { get; set; }
 
 		/// <summary>
 		/// カードのテキストを取得または設定します。
 		/// </summary>
-		public string Text
-		{
-			get;
-			set;
-		}
+		public string Text { get; set; }
 
 		/// <summary>
 		/// カードの P/T を取得または設定します。
 		/// </summary>
-		public string PT
-		{
-			get;
-			set;
-		}
+		public string PT { get; set; }
 
 		/// <summary>
 		/// カードの各情報をまとめた文字列を生成します。
@@ -243,6 +223,7 @@ namespace Mojp
 										break;
 								}
 							}
+							sb.Replace("---", "—");
 							card.Type = sb.ToString();
 							break;
 
