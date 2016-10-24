@@ -33,6 +33,8 @@ namespace Mojp
 		/// </summary>
 		private void OnBrowseSearchTxt(object sender, RoutedEventArgs e)
 		{
+			imgLoaded.Visibility = Visibility.Collapsed;
+
 			var dlg = new OpenFileDialog();
 			dlg.FileName = "search.txt";
 			dlg.CheckFileExists = true;
@@ -45,8 +47,13 @@ namespace Mojp
 				{
 					App.SetCardInfosFromWhisper(sr);
 
+					if (File.Exists("appendix.xml"))
+						App.FixCardInfo("appendix.xml");
+
 					if (cbxSaveDb.IsChecked == true)
 						App.SaveAsXml("cards.xml");
+
+					imgLoaded.Visibility = Visibility.Visible;
 				}
 			}
 		}
