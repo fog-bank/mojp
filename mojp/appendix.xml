@@ -2,32 +2,32 @@
 <mojp>
   <add>
     <!-- クリーチャーでないトークン -->
+    <card name="Clue" jaName="手掛かり" type="トークン・アーティファクト ― 手掛かり">(２),このアーティファクトを生け贄に捧げる：カードを1枚引く。</card>
     <card name="Gold" jaName="金" type="トークン・アーティファクト">このアーティファクトを生け贄に捧げる：あなたのマナ・プールに好きな色１色のマナ１点を加える。</card>
     <card name="Land Mine" jaName="地雷" type="トークン・アーティファクト">(赤),このアーティファクトを生け贄に捧げる：飛行を持たない攻撃クリーチャー１体を対象とする。このアーティファクトはそれに２点のダメージを与える。</card>
     <card name="Stoneforged Blade" jaName="石鍛冶製の剣" type="トークン・アーティファクト ― 装備品">破壊不能
 装備しているクリーチャーは+5/+5の修整を受けるとともに二段攻撃を持つ。
 装備(０)</card>
-    <card name="Clue" jaName="手掛かり" type="トークン・アーティファクト ― 手掛かり">(２),このアーティファクトを生け贄に捧げる：カードを1枚引く。</card>
     <!-- 特定の名前を持つトークン -->
-    <card name="Wasp" jaName="ワスプ" type="トークン・アーティファクト・クリーチャー ― 昆虫" pt="1 / 1">飛行（それは飛行や到達を持たないクリーチャーによってはブロックされない。）</card>
-    <card name="Minor Demon" jaName="マイナー・デーモン" type="トークン・クリーチャー ― デーモン" pt="1 / 1"></card>
-    <card name="Wolves of the Hunt" jaName="狩人狼" type="トークン・クリーチャー ― 狼" pt="1 / 1">他の《狩人狼》という名前のクリーチャーとのバンド</card>
-    <card name="Stangg Twin" jaName="スタングの双子" type="トークン・伝説のクリーチャー ― 人間・戦士" pt="3 / 4"></card>
-    <card name="Kelp" jaName="ケルプ" type="トークン・クリーチャー ― 植物・壁" pt="0 / 1">防衛</card>
-    <card name="Tombspawn" jaName="屍鬼" type="トークン・クリーチャー ― ゾンビ" pt="2 / 2">速攻</card>
+    <card name="Ashaya, the Awoken World" jaName="目覚めし世界、アシャヤ" type="トークン・伝説のクリーチャー ― エレメンタル" pt="4 / 4"></card>
     <card name="Butterfly" jaName="蝶" type="トークン・クリーチャー ― 昆虫" pt="1 / 1">飛行</card>
     <card name="Carnivore" jaName="肉食動物" type="トークン・クリーチャー ― ビースト" pt="3 / 1"></card>
     <card name="Hornet" jaName="スズメバチ" type="トークン・アーティファクト・クリーチャー ― 昆虫" pt="1 / 1">飛行、速攻</card>
-    <card name="Twin" jaName="双子" type="トークン・アーティファクト・クリーチャー ― 構築物" pt="* / *"></card>
-    <card name="Wirefly" jaName="針金バエ" type="トークン・アーティファクト・クリーチャー ― 昆虫" pt="2 / 2">飛行</card>
     <card name="Kaldra" jaName="カルドラ" type="トークン・伝説のクリーチャー ― アバター" pt="4 / 4"></card>
-    <card name="Urami" jaName="烏羅未" type="トークン・伝説のクリーチャー ― デーモン・スピリット" pt="5 / 5">飛行</card>
-    <card name="Voja" jaName="ヴォジャ" type="トークン・伝説のクリーチャー ― 狼" pt="2 / 2"></card>
-    <card name="Marit Lage" jaName="マリット・レイジ" type="トークン・伝説のクリーチャー — アバター" pt="20 / 20"></card>
-    <card name="Tuktuk the Returned" jaName="復活のタクタク" type="トークン・伝説のアーティファクト・クリーチャー ― ゴブリン・ゴーレム" pt="5 / 5"></card>
-    <card name="Ashaya, the Awoken World" jaName="目覚めし世界、アシャヤ" type="トークン・伝説のクリーチャー ― エレメンタル" pt="4 / 4"></card>
+    <card name="Kelp" jaName="ケルプ" type="トークン・クリーチャー ― 植物・壁" pt="0 / 1">防衛</card>
     <card name="Lightning Rager" jaName="稲妻の憤怒獣" type="トークン・クリーチャー ― エレメンタル" pt="5 / 1">トランプル、速攻
 終了ステップの開始時に、このクリーチャーを生け贄に捧げる。</card>
+    <card name="Marit Lage" jaName="マリット・レイジ" type="トークン・伝説のクリーチャー — アバター" pt="20 / 20"></card>
+    <card name="Minor Demon" jaName="マイナー・デーモン" type="トークン・クリーチャー ― デーモン" pt="1 / 1"></card>
+    <card name="Stangg Twin" jaName="スタングの双子" type="トークン・伝説のクリーチャー ― 人間・戦士" pt="3 / 4"></card>
+    <card name="Tombspawn" jaName="屍鬼" type="トークン・クリーチャー ― ゾンビ" pt="2 / 2">速攻</card>
+    <card name="Tuktuk the Returned" jaName="復活のタクタク" type="トークン・伝説のアーティファクト・クリーチャー ― ゴブリン・ゴーレム" pt="5 / 5"></card>
+    <card name="Twin" jaName="双子" type="トークン・アーティファクト・クリーチャー ― 構築物" pt="* / *"></card>
+    <card name="Urami" jaName="烏羅未" type="トークン・伝説のクリーチャー ― デーモン・スピリット" pt="5 / 5">飛行</card>
+    <card name="Voja" jaName="ヴォジャ" type="トークン・伝説のクリーチャー ― 狼" pt="2 / 2"></card>
+    <card name="Wasp" jaName="ワスプ" type="トークン・アーティファクト・クリーチャー ― 昆虫" pt="1 / 1">飛行（それは飛行や到達を持たないクリーチャーによってはブロックされない。）</card>
+    <card name="Wirefly" jaName="針金バエ" type="トークン・アーティファクト・クリーチャー ― 昆虫" pt="2 / 2">飛行</card>
+    <card name="Wolves of the Hunt" jaName="狩人狼" type="トークン・クリーチャー ― 狼" pt="1 / 1">他の《狩人狼》という名前のクリーチャーとのバンド</card>
     <!-- 単一の特性しかないトークン -->
     <card name="Eldrazi Spawn" jaName="エルドラージ・落とし子" type="トークン・クリーチャー ― エルドラージ・落とし子" pt="0 / 1">このクリーチャーを生け贄に捧げる：あなたのマナ・プールに(◇)を加える。</card>
     <card name="Eldrazi Scion" jaName="エルドラージ・末裔" type="トークン・クリーチャー ― エルドラージ・末裔" pt="1 / 1">このクリーチャーを生け贄に捧げる：あなたのマナ・プールに(◇)を加える。</card>
@@ -73,8 +73,199 @@
 搭乗１（あなたがコントロールする望む数のクリーチャーを、パワーの合計が１以上になるように選んでタップする：ターン終了時まで、この機体(Vehicle)はアーティファクト・クリーチャーになる。）</card>
   </replace>
   <remove>
-    <!-- アンヒンジド -->
+    <!-- ジョーク・エキスパンション -->
     <card name="_____" />
     <card name="&quot;Ach! Hans, Run!&quot;" />
+    <card name="Aesthetic Consultation" />
+    <card name="Ambiguity" />
+    <card name="Artful Looter" />
+    <card name="Ashnod's Coupon" />
+    <card name="Ass Whuppin'" />
+    <card name="Assquatch" />
+    <card name="Avatar of Me" />
+    <card name="AWOL" />
+    <card name="B-I-N-G-O" />
+    <card name="Bad Ass" />
+    <card name="Blacker Lotus" />
+    <card name="Blast from the Past" />
+    <card name="Bloodletter" />
+    <card name="Booster Tutor" />
+    <card name="Bosom Buddy" />
+    <card name="Bronze Calendar" />
+    <card name="Brushstroke Paintermage" />
+    <card name="Bureaucracy" />
+    <card name="Burning Cinder Fury of Crimson Chaos Fire" />
+    <card name="Bursting Beebles" />
+    <card name="Cardboard Carapace" />
+    <card name="Cardpecker" />
+    <card name="Carnivorous Death-Parrot" />
+    <card name="Censorship" />
+    <card name="Chaos Confetti" />
+    <card name="Cheap Ass" />
+    <card name="Cheatyface" />
+    <card name="Checks and Balances" />
+    <card name="Circle of Protection: Art" />
+    <card name="City of Ass" />
+    <card name="Clay Pigeon" />
+    <card name="Collector Protector" />
+    <card name="Common Courtesy" />
+    <card name="Creature Guy" />
+    <card name="Curse of the Fire Penguin" />
+    <card name="Deal Damage" />
+    <card name="Double Cross" />
+    <card name="Double Deal" />
+    <card name="Double Dip" />
+    <card name="Double Header" />
+    <card name="Double Play" />
+    <card name="Double Take" />
+    <card name="Drawn Together" />
+    <card name="Duh" />
+    <card name="Dumb Ass" />
+    <card name="Elvish House Party" />
+    <card name="Emcee" />
+    <card name="Enter the Dungeon" />
+    <card name="Erase (Not the Urza's Legacy One)" />
+    <card name="Eye to Eye" />
+    <card name="Face to Face" />
+    <card name="Farewell to Arms" />
+    <card name="Fascist Art Director" />
+    <card name="Fat Ass" />
+    <card name="First Come, First Served" />
+    <card name="Flaccify" />
+    <card name="Flock of Rabid Sheep" />
+    <card name="Form of the Squirrel" />
+    <card name="Fowl Play" />
+    <card name="Fraction Jackson" />
+    <card name="Framed!" />
+    <card name="Frankie Peanuts" />
+    <card name="Frazzled Editor" />
+    <card name="Free-for-All" />
+    <card name="Gerrymandering" />
+    <card name="Get a Life" />
+    <card name="Giant Fan" />
+    <card name="Gleemax" />
+    <card name="Gluetius Maximus" />
+    <card name="Goblin" />
+    <card name="Goblin Mime" />
+    <card name="Goblin S.W.A.T. Team" />
+    <card name="Goblin Secret Agent" />
+    <card name="Goblin Tutor" />
+    <card name="Granny's Payback" />
+    <card name="Graphic Violence" />
+    <card name="Greater Morphling" />
+    <card name="Growth Spurt" />
+    <card name="Handcuffs" />
+    <card name="Head to Head" />
+    <card name="I'm Rubber, You're Glue" />
+    <card name="Incoming!" />
+    <card name="Infernal Spawn of Infernal Spawn of Evil" />
+    <card name="Jack-in-the-Mox" />
+    <card name="Jester's Sombrero" />
+    <card name="Johnny, Combo Player" />
+    <card name="Keeper of the Sacred Word" />
+    <card name="Kill! Destroy!" />
+    <card name="Ladies' Knight" />
+    <card name="Land Aid '04" />
+    <card name="Landfill" />
+    <card name="Laughing Hyena" />
+    <card name="Letter Bomb" />
+    <card name="Little Girl" />
+    <card name="Look at Me, I'm R&amp;D" />
+    <card name="Look at Me, I'm the DCI" />
+    <card name="Loose Lips" />
+    <card name="Magical Hacker" />
+    <card name="Man of Measure" />
+    <card name="Mana Flair" />
+    <card name="Mana Screw" />
+    <card name="Meddling Kids" />
+    <card name="Mine, Mine, Mine!" />
+    <card name="Mirror Mirror" />
+    <card name="Mise" />
+    <card name="Moniker Mage" />
+    <card name="Monkey Monkey Monkey" />
+    <card name="Mons's Goblin Waiters" />
+    <card name="Mother of Goons" />
+    <card name="Mouth to Mouth" />
+    <card name="Mox Lotus" />
+    <card name="My First Tome" />
+    <card name="Name Dropping" />
+    <card name="Necro-Impotence" />
+    <card name="Now I Know My ABC's" />
+    <card name="Number Crunch" />
+    <card name="Once More with Feeling" />
+    <card name="Orcish Paratroopers" />
+    <card name="Organ Harvest" />
+    <card name="Our Market Research Shows That Players Like Really Long Card Names So We Made this Card to Have the Absolute Longest Card Name Ever Elemental" />
+    <card name="Ow" />
+    <card name="Paper Tiger" />
+    <card name="Persecute Artist" />
+    <card name="Phyrexian Librarian" />
+    <card name="Pointy Finger of Doom" />
+    <card name="Prismatic Wardrobe" />
+    <card name="Psychic Network" />
+    <card name="Punctuate" />
+    <card name="Pygmy Giant" />
+    <card name="Question Elemental?" />
+    <card name="R&amp;D's Secret Lair" />
+    <card name="Rare-B-Gone" />
+    <card name="Red-Hot Hottie" />
+    <card name="Remodel" />
+    <card name="Richard Garfield, Ph.D." />
+    <card name="Ricochet" />
+    <card name="Rock Lobster" />
+    <card name="Rocket-Powered Turbo Slug" />
+    <card name="Rod of Spanking" />
+    <card name="S.N.O.T." />
+    <card name="Saute" />
+    <card name="Save Life" />
+    <card name="Scissors Lizard" />
+    <card name="Sex Appeal" />
+    <card name="Shoe Tree" />
+    <card name="Side to Side" />
+    <card name="Six-y Beast" />
+    <card name="Smart Ass" />
+    <card name="Soldier" />
+    <card name="Sorry" />
+    <card name="Spatula of the Ages" />
+    <card name="Spell Counter" />
+    <card name="Squirrel Farm" />
+    <card name="Standing Army" />
+    <card name="Staying Power" />
+    <card name="Stone-Cold Basilisk" />
+    <card name="Stop That" />
+    <card name="Strategy, Schmategy" />
+    <card name="Super Secret Tech" />
+    <card name="Supersize" />
+    <card name="Symbol Status" />
+    <card name="Tainted Monkey" />
+    <card name="Team Spirit" />
+    <card name="The Cheese Stands Alone" />
+    <card name="The Fallen Apart" />
+    <card name="The Ultimate Nightmare of Wizards of the Coast Customer Service" />
+    <card name="Time Machine" />
+    <card name="Togglodyte" />
+    <card name="Topsy Turvy" />
+    <card name="Touch and Go" />
+    <card name="Toy Boat" />
+    <card name="Uktabi Kong" />
+    <card name="Urza's Contact Lenses" />
+    <card name="Urza's Hot Tub" />
+    <card name="Urza's Science Fair Project" />
+    <card name="Vile Bile" />
+    <card name="Water Gun Balloon Game" />
+    <card name="Wet Willie of the Damned" />
+    <card name="When Fluffy Bunnies Attack" />
+    <card name="Who" />
+    <card name="What" />
+    <card name="When" />
+    <card name="Where" />
+    <card name="Why" />
+    <card name="Wordmail" />
+    <card name="Working Stiff" />
+    <card name="World-Bottling Kit" />
+    <card name="Yet Another AEther Vortex" />
+    <card name="Zombie" />
+    <card name="Zombie Fanboy" />
+    <card name="Zzzyxas's Abyss" />
   </remove>
 </mojp>
