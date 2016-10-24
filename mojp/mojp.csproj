@@ -101,10 +101,15 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Resources\Checkmark.png" />
     <Resource Include="Resources\Web.png" />
     <Resource Include="Resources\Copy.png" />
     <Resource Include="Resources\Information.png" />
     <Resource Include="Resources\dictionary.ico" />
+    <Content Include="appendix.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="cards.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
