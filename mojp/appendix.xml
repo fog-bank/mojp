@@ -73,6 +73,7 @@
 搭乗１（あなたがコントロールする望む数のクリーチャーを、パワーの合計が１以上になるように選んでタップする：ターン終了時まで、この機体(Vehicle)はアーティファクト・クリーチャーになる。）</card>
   </replace>
   <remove>
+    <card name="1996 World Champion" />
     <!-- ジョーク・エキスパンション -->
     <card name="_____" />
     <card name="&quot;Ach! Hans, Run!&quot;" />

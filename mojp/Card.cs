@@ -223,7 +223,7 @@ namespace Mojp
 										break;
 								}
 							}
-							sb.Replace("---", "—");
+							sb.Replace("---", "―");
 							card.Type = sb.ToString();
 							break;
 
