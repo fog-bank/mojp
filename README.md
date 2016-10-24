@@ -1,6 +1,8 @@
 # MTGO Japanese Card Text Preview
 [Magic: The Gathering Online](http://www.mtgo.com) で表示されているカードに対応して、日本語テキストを自動で表示するアプリです。
 
+![Screenshot v1.2.0](https://cloud.githubusercontent.com/assets/22735830/19632786/101c571a-99e5-11e6-911b-2e4f5db34240.png)
+
 ## 使い方
 1. MO を起動し、COLLECTION 画面や、対戦・トレード中に「Preview Pane」を表示するようにします。
 2. このアプリを起動し、右上のカメラアイコンのボタンを押します。自動検索機能が有効な場合は、押さなくても自動で処理します（下記参照）。
