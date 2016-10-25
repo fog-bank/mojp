@@ -83,7 +83,9 @@ namespace Mojp
 			foreach (var node in doc.Root.Element("replace").Elements("card"))
 			{
 				var card = Card.FromXml(node);
-				cards[card.Name] = card;
+
+				if (cards.ContainsKey(card.Name))
+					cards[card.Name] = card;
 			}
 		}
 
