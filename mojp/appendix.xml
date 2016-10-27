@@ -34,6 +34,8 @@
     <card name="Eldrazi Horror" jaName="エルドラージ・ホラー" type="トークン・クリーチャー ― エルドラージ・ホラー" pt="3 / 2"></card>
     <card name="Faerie Rogue" jaName="フェアリー・ならず者" type="トークン・クリーチャー ― フェアリー・ならず者" pt="1 / 1">飛行</card>
     <card name="Germ" jaName="細菌" type="トークン・クリーチャー ― 細菌" pt="0 / 0"></card>
+    <card name="Manifest" jaName="予示" type="クリーチャー" pt="2 / 2">予示されたクリーチャー・カードは、それのマナ・コストで、いつでも表向きにしてよい。裏向きのカードは、それの変異コストで表向きにしてもよい。</card>
+    <card name="Morph" jaName="変異" type="クリーチャー" pt="2 / 2">変異を持つカードは、それの変異コストを支払うことで、いつでも表向きにしてよい。</card>
     <card name="Myr" jaName="マイア" type="トークン・アーティファクト・クリーチャー ― マイア" pt="1 / 1"></card>
     <card name="Saproling" jaName="苗木" type="トークン・クリーチャー ― 苗木" pt="1 / 1"></card>
     <card name="Servo" jaName="霊気装置" type="トークン・アーティファクト・クリーチャー ― 霊気装置" pt="1 / 1"></card>
