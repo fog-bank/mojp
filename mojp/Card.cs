@@ -41,6 +41,11 @@ namespace Mojp
 		public string PT { get; set; }
 
 		/// <summary>
+		/// 両面カードのもう一方の面など、関連するカードの名前を取得または設定します。
+		/// </summary>
+		public string RelatedCardName { get; set; }
+
+		/// <summary>
 		/// カードの各情報をまとめた文字列を生成します。
 		/// </summary>
 		public string Summary
@@ -113,6 +118,9 @@ namespace Mojp
 			if (PT != null)
 				xml.Add(new XAttribute("pt", PT));
 
+			if (RelatedCardName != null)
+				xml.Add(new XAttribute("related", RelatedCardName));
+
 			xml.Add(Text);
 
 			return xml;
@@ -129,6 +137,7 @@ namespace Mojp
 			card.JapaneseName = (string)cardElement.Attribute("jaName");
 			card.Type = (string)cardElement.Attribute("type");
 			card.PT = (string)cardElement.Attribute("pt");
+			card.RelatedCardName = (string)cardElement.Attribute("related");
 			card.Text = cardElement.Value;
 
 			return card;
@@ -156,32 +165,55 @@ namespace Mojp
 		{
 			var card = new Card();
 			var texts = new List<string>();
+			int emptyLines = 0;
+			Card prevCard = null;
 
 			while (!sr.EndOfStream)
 			{
-				// 各行をコロンで区切り、各項目を探す
 				string line = sr.ReadLine();
+
+				// カードの区切りを認識
+				if (string.IsNullOrWhiteSpace(line))
+				{
+					emptyLines++;
+					continue;
+				}
+				else if (emptyLines > 0)
+				{
+					// 空白行が入ったので別のカード
+					emptyLines = 0;
+					prevCard = null;
+				}
+
+				// 各行をコロンで区切り、各項目を探す
 				var tokens = line.Split('：');
 
 				if (tokens.Length == 1)
 				{
-					if (!string.IsNullOrWhiteSpace(line))
-						texts.Add(line);
+					texts.Add(line);
 				}
-				else if (tokens.Length > 1)
+				else
 				{
 					switch (tokens[0])
 					{
 						case "　英語名":
+							// 新しいカードの行に入った
 							if (card.Name != null)
 							{
 								card.Text = string.Join(Environment.NewLine, texts);
 								yield return card;
 							}
-							texts.Clear();
-
 							card = new Card();
 							card.Name = tokens[1].Trim();
+							texts.Clear();
+
+							if (prevCard != null)
+							{
+								// 直前に空白行が無く、関連カードである
+								card.RelatedCardName = prevCard.Name;
+								prevCard.RelatedCardName = card.Name;
+							}
+							prevCard = card;
 							break;
 
 						case "日本語名":
@@ -197,7 +229,9 @@ namespace Mojp
 
 						case "　Ｐ／Ｔ":
 						case "　忠誠度":
-							card.PT = tokens[1].Replace("/", " / ");
+							// 両面 PW カードの裏の忠誠度が空白のことがあるので、その場合は設定しない
+							if (!string.IsNullOrWhiteSpace(tokens[1]))
+								card.PT = tokens[1].Replace("/", " / ");
 							break;
 
 						case "　タイプ":
@@ -235,8 +269,7 @@ namespace Mojp
 							break;
 
 						default:
-							if (!string.IsNullOrWhiteSpace(line))
-								texts.Add(line);
+							texts.Add(line);
 							break;
 					}
 				}
@@ -245,7 +278,6 @@ namespace Mojp
 			if (card.Name != null)
 			{
 				card.Text = string.Join(Environment.NewLine, texts);
-
 				yield return card;
 			}
 		}

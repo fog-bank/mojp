@@ -373,6 +373,15 @@ namespace Mojp
 				if (name != null && App.Cards.TryGetValue(name, out card) && !foundCards.Contains(card))
 				{
 					foundCards.Add(card);
+
+					// 両面カードの場合に、Preview Pane に片面だけ表示されていても、もう一方の面を表示するようにする
+					if (card.RelatedCardName != null)
+					{
+						var card2 = App.Cards[card.RelatedCardName];
+
+						if (!foundCards.Contains(card2))
+							foundCards.Add(card2);
+					}
 				}
 			}
 
