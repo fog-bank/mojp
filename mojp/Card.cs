@@ -240,9 +240,15 @@ namespace Mojp
 
 						case "　Ｐ／Ｔ":
 						case "　忠誠度":
-							// 両面 PW カードの裏の忠誠度が空白のことがあるので、その場合は設定しない
+							// 両面 PW カードの裏の忠誠度が空白の場合があるので、そのときは設定しない
 							if (!string.IsNullOrWhiteSpace(tokens[1]))
-								card.PT = tokens[1].Replace("/", " / ");
+							{
+								// Lv アップクリーチャーは P/T 行が複数あるので、Lv アップ後の P/T は通常テキストに加える
+								if (card.PT == null)
+									card.PT = tokens[1].Replace("/", " / ");
+								else
+									texts.Add(tokens[1]);
+							}
 							break;
 
 						case "　タイプ":
