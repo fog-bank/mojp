@@ -245,7 +245,7 @@ namespace Mojp
 							{
 								// Lv アップクリーチャーは P/T 行が複数あるので、Lv アップ後の P/T は通常テキストに加える
 								if (card.PT == null)
-									card.PT = tokens[1].Replace("/", " / ");
+									card.PT = tokens[1];
 								else
 									texts.Add(tokens[1]);
 							}

@@ -9,111 +9,111 @@
 装備しているクリーチャーは+5/+5の修整を受けるとともに二段攻撃を持つ。
 装備(０)</card>
     <!-- 特定の名前を持つトークン -->
-    <card name="Ashaya, the Awoken World" jaName="目覚めし世界、アシャヤ" type="トークン・伝説のクリーチャー ― エレメンタル" pt="4 / 4"></card>
-    <card name="Butterfly" jaName="蝶" type="トークン・クリーチャー ― 昆虫" pt="1 / 1">飛行</card>
-    <card name="Carnivore" jaName="肉食動物" type="トークン・クリーチャー ― ビースト" pt="3 / 1"></card>
-    <card name="Hornet" jaName="スズメバチ" type="トークン・アーティファクト・クリーチャー ― 昆虫" pt="1 / 1">飛行、速攻</card>
-    <card name="Kaldra" jaName="カルドラ" type="トークン・伝説のクリーチャー ― アバター" pt="4 / 4"></card>
-    <card name="Kelp" jaName="ケルプ" type="トークン・クリーチャー ― 植物・壁" pt="0 / 1">防衛</card>
-    <card name="Lightning Rager" jaName="稲妻の憤怒獣" type="トークン・クリーチャー ― エレメンタル" pt="5 / 1">トランプル、速攻
+    <card name="Ashaya, the Awoken World" jaName="目覚めし世界、アシャヤ" type="トークン・伝説のクリーチャー ― エレメンタル" pt="4/4"></card>
+    <card name="Butterfly" jaName="蝶" type="トークン・クリーチャー ― 昆虫" pt="1/1">飛行</card>
+    <card name="Carnivore" jaName="肉食動物" type="トークン・クリーチャー ― ビースト" pt="3/1"></card>
+    <card name="Hornet" jaName="スズメバチ" type="トークン・アーティファクト・クリーチャー ― 昆虫" pt="1/1">飛行、速攻</card>
+    <card name="Kaldra" jaName="カルドラ" type="トークン・伝説のクリーチャー ― アバター" pt="4/4"></card>
+    <card name="Kelp" jaName="ケルプ" type="トークン・クリーチャー ― 植物・壁" pt="0/1">防衛</card>
+    <card name="Lightning Rager" jaName="稲妻の憤怒獣" type="トークン・クリーチャー ― エレメンタル" pt="5/1">トランプル、速攻
 終了ステップの開始時に、このクリーチャーを生け贄に捧げる。</card>
-    <card name="Marit Lage" jaName="マリット・レイジ" type="トークン・伝説のクリーチャー — アバター" pt="20 / 20"></card>
-    <card name="Minor Demon" jaName="マイナー・デーモン" type="トークン・クリーチャー ― デーモン" pt="1 / 1"></card>
-    <card name="Stangg Twin" jaName="スタングの双子" type="トークン・伝説のクリーチャー ― 人間・戦士" pt="3 / 4"></card>
-    <card name="Tombspawn" jaName="屍鬼" type="トークン・クリーチャー ― ゾンビ" pt="2 / 2">速攻</card>
-    <card name="Tuktuk the Returned" jaName="復活のタクタク" type="トークン・伝説のアーティファクト・クリーチャー ― ゴブリン・ゴーレム" pt="5 / 5"></card>
-    <card name="Twin" jaName="双子" type="トークン・アーティファクト・クリーチャー ― 構築物" pt="* / *"></card>
-    <card name="Urami" jaName="烏羅未" type="トークン・伝説のクリーチャー ― デーモン・スピリット" pt="5 / 5">飛行</card>
-    <card name="Voja" jaName="ヴォジャ" type="トークン・伝説のクリーチャー ― 狼" pt="2 / 2"></card>
-    <card name="Wasp" jaName="ワスプ" type="トークン・アーティファクト・クリーチャー ― 昆虫" pt="1 / 1">飛行（それは飛行や到達を持たないクリーチャーによってはブロックされない。）</card>
-    <card name="Wirefly" jaName="針金バエ" type="トークン・アーティファクト・クリーチャー ― 昆虫" pt="2 / 2">飛行</card>
-    <card name="Wolves of the Hunt" jaName="狩人狼" type="トークン・クリーチャー ― 狼" pt="1 / 1">他の《狩人狼》という名前のクリーチャーとのバンド</card>
+    <card name="Marit Lage" jaName="マリット・レイジ" type="トークン・伝説のクリーチャー — アバター" pt="20/20"></card>
+    <card name="Minor Demon" jaName="マイナー・デーモン" type="トークン・クリーチャー ― デーモン" pt="1/1"></card>
+    <card name="Stangg Twin" jaName="スタングの双子" type="トークン・伝説のクリーチャー ― 人間・戦士" pt="3/4"></card>
+    <card name="Tombspawn" jaName="屍鬼" type="トークン・クリーチャー ― ゾンビ" pt="2/2">速攻</card>
+    <card name="Tuktuk the Returned" jaName="復活のタクタク" type="トークン・伝説のアーティファクト・クリーチャー ― ゴブリン・ゴーレム" pt="5/5"></card>
+    <card name="Twin" jaName="双子" type="トークン・アーティファクト・クリーチャー ― 構築物" pt="*/*"></card>
+    <card name="Urami" jaName="烏羅未" type="トークン・伝説のクリーチャー ― デーモン・スピリット" pt="5/5">飛行</card>
+    <card name="Voja" jaName="ヴォジャ" type="トークン・伝説のクリーチャー ― 狼" pt="2/2"></card>
+    <card name="Wasp" jaName="ワスプ" type="トークン・アーティファクト・クリーチャー ― 昆虫" pt="1/1">飛行（それは飛行や到達を持たないクリーチャーによってはブロックされない。）</card>
+    <card name="Wirefly" jaName="針金バエ" type="トークン・アーティファクト・クリーチャー ― 昆虫" pt="2/2">飛行</card>
+    <card name="Wolves of the Hunt" jaName="狩人狼" type="トークン・クリーチャー ― 狼" pt="1/1">他の《狩人狼》という名前のクリーチャーとのバンド</card>
     <!-- 単一の特性しかないトークン -->
-    <card name="Eldrazi Spawn" jaName="エルドラージ・落とし子" type="トークン・クリーチャー ― エルドラージ・落とし子" pt="0 / 1">このクリーチャーを生け贄に捧げる：あなたのマナ・プールに(◇)を加える。</card>
-    <card name="Eldrazi Scion" jaName="エルドラージ・末裔" type="トークン・クリーチャー ― エルドラージ・末裔" pt="1 / 1">このクリーチャーを生け贄に捧げる：あなたのマナ・プールに(◇)を加える。</card>
-    <card name="Eldrazi Horror" jaName="エルドラージ・ホラー" type="トークン・クリーチャー ― エルドラージ・ホラー" pt="3 / 2"></card>
-    <card name="Faerie Rogue" jaName="フェアリー・ならず者" type="トークン・クリーチャー ― フェアリー・ならず者" pt="1 / 1">飛行</card>
-    <card name="Germ" jaName="細菌" type="トークン・クリーチャー ― 細菌" pt="0 / 0"></card>
-    <card name="Manifest" jaName="予示" type="クリーチャー" pt="2 / 2">予示されたクリーチャー・カードは、それのマナ・コストで、いつでも表向きにしてよい。裏向きのカードは、それの変異コストで表向きにしてもよい。</card>
-    <card name="Morph" jaName="変異" type="クリーチャー" pt="2 / 2">変異を持つカードは、それの変異コストを支払うことで、いつでも表向きにしてよい。</card>
-    <card name="Myr" jaName="マイア" type="トークン・アーティファクト・クリーチャー ― マイア" pt="1 / 1"></card>
-    <card name="Saproling" jaName="苗木" type="トークン・クリーチャー ― 苗木" pt="1 / 1"></card>
-    <card name="Servo" jaName="霊気装置" type="トークン・アーティファクト・クリーチャー ― 霊気装置" pt="1 / 1"></card>
-    <card name="Thopter" jaName="飛行機械" type="トークン・アーティファクト・クリーチャー ― 飛行機械" pt="1 / 1">飛行</card>
+    <card name="Eldrazi Spawn" jaName="エルドラージ・落とし子" type="トークン・クリーチャー ― エルドラージ・落とし子" pt="0/1">このクリーチャーを生け贄に捧げる：あなたのマナ・プールに(◇)を加える。</card>
+    <card name="Eldrazi Scion" jaName="エルドラージ・末裔" type="トークン・クリーチャー ― エルドラージ・末裔" pt="1/1">このクリーチャーを生け贄に捧げる：あなたのマナ・プールに(◇)を加える。</card>
+    <card name="Eldrazi Horror" jaName="エルドラージ・ホラー" type="トークン・クリーチャー ― エルドラージ・ホラー" pt="3/2"></card>
+    <card name="Faerie Rogue" jaName="フェアリー・ならず者" type="トークン・クリーチャー ― フェアリー・ならず者" pt="1/1">飛行</card>
+    <card name="Germ" jaName="細菌" type="トークン・クリーチャー ― 細菌" pt="0/0"></card>
+    <card name="Manifest" jaName="予示" type="クリーチャー" pt="2/2">予示されたクリーチャー・カードは、それのマナ・コストで、いつでも表向きにしてよい。裏向きのカードは、それの変異コストで表向きにしてもよい。</card>
+    <card name="Morph" jaName="変異" type="クリーチャー" pt="2/2">変異を持つカードは、それの変異コストを支払うことで、いつでも表向きにしてよい。</card>
+    <card name="Myr" jaName="マイア" type="トークン・アーティファクト・クリーチャー ― マイア" pt="1/1"></card>
+    <card name="Saproling" jaName="苗木" type="トークン・クリーチャー ― 苗木" pt="1/1"></card>
+    <card name="Servo" jaName="霊気装置" type="トークン・アーティファクト・クリーチャー ― 霊気装置" pt="1/1"></card>
+    <card name="Thopter" jaName="飛行機械" type="トークン・アーティファクト・クリーチャー ― 飛行機械" pt="1/1">飛行</card>
   </add>
   <replace>
     <!-- テキストが正常でないカード -->
-    <card name="Aetherborn Marauder" jaName="霊基体の匪賊" type="クリーチャー ― 霊基体・ならず者" pt="2 / 2">飛行、絆魂
+    <card name="Aetherborn Marauder" jaName="霊基体の匪賊" type="クリーチャー ― 霊基体・ならず者" pt="2/2">飛行、絆魂
 霊基体の匪賊が戦場に出たとき、あなたがコントロールする他のパーマネントの上から望む数の+1/+1カウンターを霊基体の匪賊の上に移動する。</card>
     <card name="Aether Meltdown" jaName="霊気溶融" type="エンチャント ― オーラ">瞬速（あなたはこの呪文を、あなたがインスタントを唱えられるときならいつでも唱えてよい。）
 エンチャント（クリーチャーか機体(Vehicle)）
 霊気溶融が戦場に出たとき、あなたは(Ｅ)(Ｅ)（エネルギー・カウンター２個）を得る。
 エンチャントされているパーマネントは-4/-0の修整を受ける。</card>
-    <card name="Ambitious Aetherborn" jaName="霊基体の野心家" type="クリーチャー ― 霊基体・工匠" pt="4 / 3">製造１（このクリーチャーが戦場に出たとき、これの上に+1/+1カウンターを１個置くか、無色の1/1の霊気装置(Servo)アーティファクト・クリーチャー・トークンを１体生成する。）</card>
-    <card name="Contraband Kingpin" jaName="禁制品の黒幕" type="クリーチャー ― 霊基体・ならず者" pt="1 / 4">絆魂
+    <card name="Ambitious Aetherborn" jaName="霊基体の野心家" type="クリーチャー ― 霊基体・工匠" pt="4/3">製造１（このクリーチャーが戦場に出たとき、これの上に+1/+1カウンターを１個置くか、無色の1/1の霊気装置(Servo)アーティファクト・クリーチャー・トークンを１体生成する。）</card>
+    <card name="Contraband Kingpin" jaName="禁制品の黒幕" type="クリーチャー ― 霊基体・ならず者" pt="1/4">絆魂
 アーティファクトが１つあなたのコントロール下で戦場に出るたび、占術１を行う。</card>
-    <card name="Gonti, Lord of Luxury" jaName="豪華の王、ゴンティ" type="伝説のクリーチャー ― 霊基体・ならず者" pt="2 / 3">接死
+    <card name="Gonti, Lord of Luxury" jaName="豪華の王、ゴンティ" type="伝説のクリーチャー ― 霊基体・ならず者" pt="2/3">接死
 豪華の王、ゴンティが戦場に出たとき、対戦相手１人を対象とする。そのプレイヤーのライブラリーの一番上からカードを４枚見て、そのうち１枚を裏向きに追放し、その後残りをそのライブラリーの一番下に無作為の順番で置く。そのカードが追放され続けているかぎり、あなたはそれを見てもよく、あなたはそれを唱えてもよく、あなたはそれを唱えるために任意のマナを望むタイプのマナであるかのように支払ってもよい。</card>
-    <card name="Lawless Broker" jaName="不法仲買人" type="クリーチャー ― 霊基体・ならず者" pt="3 / 2">不法仲買人が死亡したとき、あなたがコントロールするクリーチャー１体を対象とし、それの上に+1/+1カウンターを１個置く。</card>
+    <card name="Lawless Broker" jaName="不法仲買人" type="クリーチャー ― 霊基体・ならず者" pt="3/2">不法仲買人が死亡したとき、あなたがコントロールするクリーチャー１体を対象とし、それの上に+1/+1カウンターを１個置く。</card>
     <card name="Midnight Oil" jaName="夜更かし" type="エンチャント">夜更かしは時刻(hour)カウンターが７個置かれた状態で戦場に出る。
 あなたのドロー・ステップの開始時に、あなたはカードを追加で１枚引き、夜更かしの上から時刻カウンターを２個取り除く。
 あなたの手札の上限は、夜更かしの上に置かれている時刻カウンターの数に等しい。
 あなたがカードを１枚捨てるたび、あなたは１点のライフを失う。</card>
     <card name="Overabundance" jaName="過ぎたる実り" type="エンチャント">プレイヤーがマナを引き出す目的で土地をタップするたび、そのプレイヤーは自分のマナ・プールにその土地が生み出したいずれかのタイプのマナ１点を加え、過ぎたる実りはそのプレイヤーに１点のダメージを与える。</card>
-    <card name="Prakhata Club Security" jaName="プラカタクラブの用心棒" type="クリーチャー ― 霊基体・戦士" pt="3 / 4"></card>
-    <card name="Stoneforge Acolyte" jaName="石鍛冶の見習い" type="クリーチャー ― コー・工匠・同盟者" pt="1 / 2">盟友 ― (Ｔ),あなたがコントロールするアンタップ状態の同盟者(Ally)を１体タップする：あなたのライブラリーの一番上から４枚のカードを見る。あなたはその中から装備品(Equipment)カード１枚を公開してもよい。そうしたなら、それをあなたの手札に加える。残りをあなたのライブラリーの一番下に望む順番で置く。</card>
-    <card name="Syndicate Trafficker" jaName="組織の密売人" type="クリーチャー ― 霊基体・ならず者" pt="3 / 1">(１),アーティファクト１つを生け贄に捧げる：組織の密売人の上に+1/+1カウンターを１個置く。ターン終了時まで、これは破壊不能を得る。</card>
+    <card name="Prakhata Club Security" jaName="プラカタクラブの用心棒" type="クリーチャー ― 霊基体・戦士" pt="3/4"></card>
+    <card name="Stoneforge Acolyte" jaName="石鍛冶の見習い" type="クリーチャー ― コー・工匠・同盟者" pt="1/2">盟友 ― (Ｔ),あなたがコントロールするアンタップ状態の同盟者(Ally)を１体タップする：あなたのライブラリーの一番上から４枚のカードを見る。あなたはその中から装備品(Equipment)カード１枚を公開してもよい。そうしたなら、それをあなたの手札に加える。残りをあなたのライブラリーの一番下に望む順番で置く。</card>
+    <card name="Syndicate Trafficker" jaName="組織の密売人" type="クリーチャー ― 霊基体・ならず者" pt="3/1">(１),アーティファクト１つを生け贄に捧げる：組織の密売人の上に+1/+1カウンターを１個置く。ターン終了時まで、これは破壊不能を得る。</card>
     <card name="Timetwister" jaName="時間の歪曲" type="ソーサリー">各プレイヤーは、自分の墓地と手札を自分のライブラリーに加えて切り直す。その後、カードを７枚引く。（その後、Timetwisterをそのオーナーの墓地に置く。）</card>
     <card name="Urza's Factory" jaName="ウルザの工廠" type="土地 ― ウルザの">(Ｔ)：あなたのマナ・プールに(◇)を加える。
 (７),(Ｔ)：無色の2/2の組立作業員(Assembly-Worker)アーティファクト・クリーチャー・トークンを１体生成する。</card>
     <card name="Urza's Mine" jaName="ウルザの鉱山" type="土地 ― ウルザの・鉱山">(Ｔ)：あなたのマナ・プールに(◇)を加える。あなたがウルザの(Urza's)・魔力炉(Power-Plant)とウルザの・塔(Tower)をコントロールしている場合、代わりにあなたのマナ・プールに(◇)(◇)を加える。</card>
     <card name="Urza's Power Plant" jaName="ウルザの魔力炉" type="土地 ― ウルザの・魔力炉">(Ｔ)：あなたのマナ・プールに(◇)を加える。あなたがウルザの(Urza's)・鉱山(Mine)とウルザの・塔(Tower)をコントロールしている場合、代わりにあなたのマナ・プールに(◇)(◇)を加える。</card>
     <card name="Urza's Tower" jaName="ウルザの塔" type="土地 ― ウルザの・塔">(Ｔ)：あなたのマナ・プールに(◇)を加える。あなたがウルザの(Urza's)・鉱山(Mine)とウルザの・魔力炉(Power-Plant)をコントロールしている場合、代わりにあなたのマナ・プールに(◇)(◇)(◇)を加える。</card>
-    <card name="Weaponcraft Enthusiast" jaName="武器作り狂" type="クリーチャー ― 霊基体・工匠" pt="0 / 1">製造２（このクリーチャーが戦場に出たとき、これの上に+1/+1カウンターを２個置くか、無色の1/1の霊気装置(Servo)アーティファクト・クリーチャー・トークンを２体生成する。）</card>
+    <card name="Weaponcraft Enthusiast" jaName="武器作り狂" type="クリーチャー ― 霊基体・工匠" pt="0/1">製造２（このクリーチャーが戦場に出たとき、これの上に+1/+1カウンターを２個置くか、無色の1/1の霊気装置(Servo)アーティファクト・クリーチャー・トークンを２体生成する。）</card>
     <card name="Winter's Night" jaName="冬の夜" type="ワールド・エンチャント">プレイヤー１人が氷雪土地をマナを引き出す目的でタップするたび、そのプレイヤーは自分のマナ・プールにその土地が生み出したいずれかのタイプのマナ１点を加える。その土地は、それのコントローラーの次のアンタップ・ステップにアンタップしない。</card>
     <!-- 最新オラクル未対応 -->
     <card name="Alive" jaName="生存" type="ソーサリー" related="Well">緑の3/3のケンタウルス(Centaur)・クリーチャー・トークンを１体生成する。
 融合（あなたはこのカードの片方の半分または両方の半分をあなたの手札から唱えてもよい。）</card>
-    <card name="Crimson Kobolds" jaName="真紅のコボルド" type="クリーチャー ― コボルド" pt="0 / 1"></card>
-    <card name="Crookshank Kobolds" jaName="曲がり脛族のコボルド" type="クリーチャー ― コボルド" pt="0 / 1"></card>
+    <card name="Crimson Kobolds" jaName="真紅のコボルド" type="クリーチャー ― コボルド" pt="0/1"></card>
+    <card name="Crookshank Kobolds" jaName="曲がり脛族のコボルド" type="クリーチャー ― コボルド" pt="0/1"></card>
     <card name="Garruk, Primal Hunter" jaName="原初の狩人、ガラク" type="プレインズウォーカー ― ガラク" pt="3">[+1]：緑の3/3のビースト(Beast)・クリーチャー・トークンを１体生成する。
 [-3]：あなたがコントロールするクリーチャーの中で最大のパワーの値に等しい枚数のカードを引く。
 [-6]：あなたがコントロールする土地１つにつき、緑の6/6のワーム(Wurm)・クリーチャー・トークンを１体生成する。</card>
     <card name="Growing Ranks" jaName="兵士の育成" type="エンチャント">あなたのアップキープの開始時に、居住を行う。（あなたがコントロールするクリーチャー・トークン１体のコピーであるトークンを１体生成する。）</card>
-    <card name="Kazandu Tuskcaller" jaName="カザンドゥの牙呼び" type="クリーチャー ― 人間・シャーマン" pt="1 / 1">Ｌｖアップ(１)(緑)（(１)(緑)：この上にＬｖ(level)カウンターを１個置く。Ｌｖアップはソーサリーとしてのみ行う。）
+    <card name="Kazandu Tuskcaller" jaName="カザンドゥの牙呼び" type="クリーチャー ― 人間・シャーマン" pt="1/1">Ｌｖアップ(１)(緑)（(１)(緑)：この上にＬｖ(level)カウンターを１個置く。Ｌｖアップはソーサリーとしてのみ行う。）
 Lv2-5：
 (Ｔ)：緑の3/3の象(Elephant)クリーチャー・トークンを１体生成する。
 1/1
 Lv6+：
 (Ｔ)：緑の3/3の象(Elephant)クリーチャー・トークンを２体生成する。
 1/1</card>
-    <card name="Kobolds of Kher Keep" jaName="カー砦のコボルド" type="クリーチャー ― コボルド" pt="0 / 1"></card>
+    <card name="Kobolds of Kher Keep" jaName="カー砦のコボルド" type="クリーチャー ― コボルド" pt="0/1"></card>
     <card name="Monkey Cage" jaName="猿の檻" type="アーティファクト">クリーチャーが戦場に出たとき、猿の檻を生け贄に捧げ、緑の2/2の猿(Monkey)クリーチャー・トークンをＸ体生成する。Ｘはそのクリーチャーの点数で見たマナ・コストである。</card>
     <card name="Murgish's Cemetery" jaName="マーギッシュの霊園" type="エンチャント">(３)(黒),カードを１枚捨てる：黒のX/Xのゾンビ(Zombie)・クリーチャー・トークンを１体生成する。Ｘは２から６までの無作為に選ばれた数である。</card>
     <!-- 機体のP/T -->
-    <card name="Aradara Express" jaName="アラダラ急行" type="アーティファクト ― 機体" pt="8 / 6">威迫
+    <card name="Aradara Express" jaName="アラダラ急行" type="アーティファクト ― 機体" pt="8/6">威迫
 搭乗４（あなたがコントロールする望む数のクリーチャーを、パワーの合計が４以上になるように選んでタップする：ターン終了時まで、この機体(Vehicle)はアーティファクト・クリーチャーになる。）</card>
-    <card name="Ballista Charger" jaName="バリスタ突撃車" type="アーティファクト ― 機体" pt="6 / 6">バリスタ突撃車が攻撃するたび、クリーチャー１体かプレイヤー１人を対象とする。バリスタ突撃車はそれに１点のダメージを与える。
+    <card name="Ballista Charger" jaName="バリスタ突撃車" type="アーティファクト ― 機体" pt="6/6">バリスタ突撃車が攻撃するたび、クリーチャー１体かプレイヤー１人を対象とする。バリスタ突撃車はそれに１点のダメージを与える。
 搭乗３（あなたがコントロールする望む数のクリーチャーを、パワーの合計が３以上になるように選んでタップする：ターン終了時まで、この機体(Vehicle)はアーティファクト・クリーチャーになる。）</card>
-    <card name="Bomat Bazaar Barge" jaName="ボーマットのバザール船" type="アーティファクト ― 機体" pt="5 / 5">ボーマットのバザール船が戦場に出たとき、カードを１枚引く。
+    <card name="Bomat Bazaar Barge" jaName="ボーマットのバザール船" type="アーティファクト ― 機体" pt="5/5">ボーマットのバザール船が戦場に出たとき、カードを１枚引く。
 搭乗３（あなたがコントロールする望む数のクリーチャーを、パワーの合計が３以上になるように選んでタップする：ターン終了時まで、この機体(Vehicle)はアーティファクト・クリーチャーになる。）</card>
-    <card name="Cultivator's Caravan" jaName="耕作者の荷馬車" type="アーティファクト ― 機体" pt="5 / 5">(Ｔ)：あなたのマナ・プールに、好きな色１色のマナ１点を加える。
+    <card name="Cultivator's Caravan" jaName="耕作者の荷馬車" type="アーティファクト ― 機体" pt="5/5">(Ｔ)：あなたのマナ・プールに、好きな色１色のマナ１点を加える。
 搭乗３（あなたがコントロールする望む数のクリーチャーを、パワーの合計が３以上になるように選んでタップする：ターン終了時まで、この機体(Vehicle)はアーティファクト・クリーチャーになる。）</card>
-    <card name="Demolition Stomper" jaName="破砕踏歩機" type="アーティファクト ― 機体" pt="10 / 7">破砕踏歩機は、パワーが２以下のクリーチャーによってはブロックされない。
+    <card name="Demolition Stomper" jaName="破砕踏歩機" type="アーティファクト ― 機体" pt="10/7">破砕踏歩機は、パワーが２以下のクリーチャーによってはブロックされない。
 搭乗５（あなたがコントロールする望む数のクリーチャーを、パワーの合計が５以上になるように選んでタップする：ターン終了時まで、この機体(Vehicle)はアーティファクト・クリーチャーになる。）</card>
-    <card name="Fleetwheel Cruiser" jaName="高速警備車" type="アーティファクト ― 機体" pt="5 / 3">トランプル、速攻
+    <card name="Fleetwheel Cruiser" jaName="高速警備車" type="アーティファクト ― 機体" pt="5/3">トランプル、速攻
 高速警備車が戦場に出たとき、ターン終了時まで、これはアーティファクト・クリーチャーになる。
 搭乗２（あなたがコントロールする望む数のクリーチャーを、パワーの合計が２以上になるように選んでタップする：ターン終了時まで、この機体(Vehicle)はアーティファクト・クリーチャーになる。）</card>
-    <card name="Ovalchase Dragster" jaName="楕円競走車" type="アーティファクト ― 機体" pt="6 / 1">トランプル、速攻
+    <card name="Ovalchase Dragster" jaName="楕円競走車" type="アーティファクト ― 機体" pt="6/1">トランプル、速攻
 搭乗１（あなたがコントロールする望む数のクリーチャーを、パワーの合計が１以上になるように選んでタップする：ターン終了時まで、この機体(Vehicle)はアーティファクト・クリーチャーになる。）</card>
-    <card name="Renegade Freighter" jaName="改革派の貨物車" type="アーティファクト ― 機体" pt="4 / 3">改革派の貨物車が攻撃するたび、ターン終了時まで、これは+1/+1の修整を受けるとともにトランプルを得る。
+    <card name="Renegade Freighter" jaName="改革派の貨物車" type="アーティファクト ― 機体" pt="4/3">改革派の貨物車が攻撃するたび、ターン終了時まで、これは+1/+1の修整を受けるとともにトランプルを得る。
 搭乗２（あなたがコントロールする望む数のクリーチャーを、パワーの合計が２以上になるように選んでタップする：ターン終了時まで、この機体(Vehicle)はアーティファクト・クリーチャーになる。）</card>
-    <card name="Sky Skiff" jaName="航空艇" type="アーティファクト ― 機体" pt="2 / 3">飛行
+    <card name="Sky Skiff" jaName="航空艇" type="アーティファクト ― 機体" pt="2/3">飛行
 搭乗１（あなたがコントロールする望む数のクリーチャーを、パワーの合計が１以上になるように選んでタップする：ターン終了時まで、この機体(Vehicle)はアーティファクト・クリーチャーになる。）</card>
-    <card name="Skysovereign, Consul Flagship" jaName="領事の旗艦、スカイソブリン" type="伝説のアーティファクト ― 機体" pt="6 / 5">飛行
+    <card name="Skysovereign, Consul Flagship" jaName="領事の旗艦、スカイソブリン" type="伝説のアーティファクト ― 機体" pt="6/5">飛行
 領事の旗艦、スカイソブリンが戦場に出るか攻撃するたび、対戦相手がコントロールするクリーチャー１体かプレインズウォーカー１体を対象とする。領事の旗艦、スカイソブリンはそれに３点のダメージを与える。
 搭乗３（あなたがコントロールする望む数のクリーチャーを、パワーの合計が３以上になるように選んでタップする：ターン終了時まで、この機体(Vehicle)はアーティファクト・クリーチャーになる。）</card>
-    <card name="Smuggler's Copter" jaName="密輸人の回転翼機" type="アーティファクト ― 機体" pt="3 / 3">飛行
+    <card name="Smuggler's Copter" jaName="密輸人の回転翼機" type="アーティファクト ― 機体" pt="3/3">飛行
 密輸人の回転翼機が攻撃かブロックするたび、あなたはカードを１枚引いてもよい。そうしたなら、カード１枚を捨てる。
 搭乗１（あなたがコントロールする望む数のクリーチャーを、パワーの合計が１以上になるように選んでタップする：ターン終了時まで、この機体(Vehicle)はアーティファクト・クリーチャーになる。）</card>
   </replace>
