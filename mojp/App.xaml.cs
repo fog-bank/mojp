@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Windows;
 using System.Xml.Linq;
@@ -74,6 +75,12 @@ namespace Mojp
 			foreach (var node in doc.Root.Element("add").Elements("card"))
 			{
 				var card = Card.FromXml(node);
+
+				if (cards.ContainsKey(card.Name))
+				{
+					Debug.WriteLineIf(!card.EqualsStrict(cards[card.Name]), card.Name + " には既に別種の同名カードが存在します。");
+					continue;
+				}
 				cards.Add(card.Name, card);
 			}
 
@@ -85,7 +92,10 @@ namespace Mojp
 				var card = Card.FromXml(node);
 
 				if (cards.ContainsKey(card.Name))
+				{
+					Debug.WriteLineIf(card.EqualsStrict(cards[card.Name]), card.Name + " は置換する必要がありません。");
 					cards[card.Name] = card;
+				}
 			}
 		}
 
