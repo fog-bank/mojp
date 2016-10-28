@@ -79,9 +79,20 @@ namespace Mojp
 			}
 		}
 
+		/// <summary>
+		/// カードの英語名が一致しているかどうかを調べます。
+		/// </summary>
 		public bool Equals(Card other)
 		{
 			return !string.IsNullOrWhiteSpace(Name) && string.Equals(Name, other?.Name);
+		}
+
+		/// <summary>
+		/// <see cref="Card"/> オブジェクトの各メンバの値が一致しているかどうかを調べます。
+		/// </summary>
+		public bool EqualsStrict(Card other)
+		{
+			return Equals(other) && JapaneseName == other.JapaneseName && Type == other.Type && Text == other.Text && PT == other.PT && RelatedCardName == other.RelatedCardName;
 		}
 
 		public override bool Equals(object obj)
