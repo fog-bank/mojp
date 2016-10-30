@@ -29,10 +29,7 @@
 			</TabControl.ItemContainerStyle>
 			<TabControl.ItemTemplate>
 				<DataTemplate DataType="local:Card">
-					<TextBlock Margin="2" MinHeight="15" Text="{Binding JapaneseName}">
-						<TextBlock.ToolTip>
-							<TextBlock><Run Text="{Binding JapaneseName}" /> / <Run Text="{Binding Name}" /></TextBlock>
-						</TextBlock.ToolTip>
+					<TextBlock Margin="2" MinHeight="15" Text="{Binding JapaneseName}" ToolTip="{Binding FullName}" />
 					</TextBlock>
 				</DataTemplate>
 			</TabControl.ItemTemplate>
