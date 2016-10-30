@@ -30,7 +30,6 @@
 			<TabControl.ItemTemplate>
 				<DataTemplate DataType="local:Card">
 					<TextBlock Margin="2" MinHeight="15" Text="{Binding JapaneseName}" ToolTip="{Binding FullName}" />
-					</TextBlock>
 				</DataTemplate>
 			</TabControl.ItemTemplate>
 			<TabControl.ContentTemplate>
