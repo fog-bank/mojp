@@ -46,6 +46,11 @@ namespace Mojp
 		public string RelatedCardName { get; set; }
 
 		/// <summary>
+		/// 日本語カード名 / 英語カード名、のような表記でカード名を取得します。
+		/// </summary>
+		public string FullName => JapaneseName == null || Name == JapaneseName ? Name : JapaneseName + " / " + Name;
+
+		/// <summary>
 		/// カードの各情報をまとめた文字列を生成します。
 		/// </summary>
 		public string Summary
@@ -54,14 +59,8 @@ namespace Mojp
 			{
 				var sb = new StringBuilder();
 
-				if (Name != null || JapaneseName != null)
-				{
-					// 日本語名がない場合は英語名だけを使用
-					if (string.IsNullOrEmpty(JapaneseName) || Name == JapaneseName)
-						sb.AppendLine(Name);
-					else
-						sb.Append(JapaneseName).Append(" / ").AppendLine(Name);
-				}
+				if (Name != null)
+					sb.AppendLine(FullName);
 
 				if (!string.IsNullOrEmpty(Type))
 					sb.AppendLine(Type);
