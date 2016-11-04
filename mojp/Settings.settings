@@ -9,7 +9,7 @@
       <Value Profile="(Default)">260</Value>
     </Setting>
     <Setting Name="CardTextFontFamily" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Meiryo</Value>
+      <Value Profile="(Default)">メイリオ</Value>
     </Setting>
     <Setting Name="CardTextFontSize" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">12</Value>

@@ -1,7 +1,7 @@
 ﻿<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
 		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-		x:Class="Mojp.OptionDialog"
-		Title="設定" SizeToContent="WidthAndHeight" ResizeMode="NoResize" ShowInTaskbar="False"
+		x:Class="Mojp.OptionDialog" xml:lang="ja-jp"
+		Title="設定" SizeToContent="WidthAndHeight" ResizeMode="NoResize"
 		Icon="Resources/dictionary.ico" SnapsToDevicePixels="True">
     <Grid Margin="4">
 		<Grid.Resources>
@@ -26,8 +26,37 @@
 				<RowDefinition Height="Auto" />
 				<RowDefinition Height="Auto" />
 				<RowDefinition Height="Auto" />
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="Auto" />
 			</Grid.RowDefinitions>
-			<Grid Margin="0,0,0,5">
+			<Grid Grid.Row="0" Margin="0,0,0,5">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="Auto" />
+					<ColumnDefinition />
+				</Grid.ColumnDefinitions>
+				<TextBlock Margin="5,0" VerticalAlignment="Center">バージョン情報</TextBlock>
+				<Separator Grid.Column="1" BorderThickness="1" BorderBrush="Gray" />
+			</Grid>
+			<Grid Grid.Row="1">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="Auto" />
+					<ColumnDefinition Width="20" />
+					<ColumnDefinition Width="Auto" />
+					<ColumnDefinition />
+				</Grid.ColumnDefinitions>
+				<Grid.RowDefinitions>
+					<RowDefinition Height="Auto" />
+					<RowDefinition Height="Auto" />
+				</Grid.RowDefinitions>
+				<TextBlock>リリース バージョン：</TextBlock>
+				<TextBlock Grid.Column="2">1.2.0 Beta 3</TextBlock>
+				<TextBlock Grid.Column="3" HorizontalAlignment="Right">
+					<Hyperlink ToolTip="https://github.com/fog-bank/mojp/releases" Click="OnClickHyperlink">GitHub に移動</Hyperlink>
+				</TextBlock>
+				<TextBlock Grid.Row="1">対応最新セット：</TextBlock>
+				<TextBlock Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2">カラデシュ</TextBlock>
+			</Grid>
+			<Grid Grid.Row="2" Margin="0,15,0,5">
 				<Grid.ColumnDefinitions>
 					<ColumnDefinition Width="Auto" />
 					<ColumnDefinition />
@@ -35,7 +64,7 @@
 				<TextBlock Margin="5,0" VerticalAlignment="Center">表示</TextBlock>
 				<Separator Grid.Column="1" BorderThickness="1" BorderBrush="Gray" />
 			</Grid>
-			<Grid Grid.Row="1">
+			<Grid Grid.Row="3">
 				<Grid.ColumnDefinitions>
 					<ColumnDefinition Width="Auto" />
 					<ColumnDefinition Width="20" />
@@ -47,10 +76,11 @@
 					<RowDefinition Height="Auto" />
 				</Grid.RowDefinitions>
 				<TextBlock>フォント</TextBlock>
-				<ComboBox Name="cmbFonts" Grid.Column="2" Margin="2" SelectedValue="{Binding FontFamily}">
+				<ComboBox Name="cmbFonts" Grid.Column="2" Margin="2" Padding="2" Text="{Binding FontFamily}"
+						  IsEditable="True" ShouldPreserveUserEnteredPrefix="True" IsTextSearchEnabled="False">
 					<ComboBox.ItemTemplate>
 						<DataTemplate>
-							<TextBlock Margin="2" FontFamily="{Binding}" Text="{Binding}" />
+							<TextBlock Padding="2" FontFamily="{Binding}" Text="{Binding}" />
 						</DataTemplate>
 					</ComboBox.ItemTemplate>
 				</ComboBox>
@@ -65,7 +95,7 @@
 				</Grid>
 				<CheckBox Grid.Row="2" Margin="0,10,0,0" VerticalAlignment="Center" IsChecked="{Binding TopMost}">常に手前に表示する</CheckBox>
 			</Grid>
-			<Grid Grid.Row="2" Margin="0,15,0,5">
+			<Grid Grid.Row="4" Margin="0,15,0,5">
 				<Grid.ColumnDefinitions>
 					<ColumnDefinition Width="Auto" />
 					<ColumnDefinition />
@@ -73,16 +103,16 @@
 				<TextBlock Margin="5,0" VerticalAlignment="Center">動作</TextBlock>
 				<Separator Grid.Column="1" BorderThickness="1" BorderBrush="Gray" />
 			</Grid>
-			<Grid Grid.Row="3">
+			<Grid Grid.Row="5">
 				<Grid.RowDefinitions>
 					<RowDefinition Height="Auto" />
 					<RowDefinition Height="Auto" />
 				</Grid.RowDefinitions>
-				<CheckBox Name="chbAutoRefresh" VerticalContentAlignment="Center" IsChecked="{Binding AutoRefresh}">
+				<CheckBox Name="chbAutoRefresh" VerticalContentAlignment="Center" IsChecked="{Binding AutoRefresh}"
+						  ToolTip="指定された時間ごとに Preview Pane を探します。動作が重くなる場合は手動更新にしてください。">
 					<StackPanel Orientation="Horizontal">
 						<TextBlock>MO の Preview Pane を自動的に見つける</TextBlock>
-						<Image Source="Resources/Information.png" Height="16" Margin="5,0,0,0" 
-							   ToolTip="指定された時間ごとに Preview Pane を探します。動作が重くなる場合は手動更新にしてください。" />
+						<Image Source="Resources/Information.png" Height="16" Margin="5,0,0,0" />
 					</StackPanel>
 				</CheckBox>
 				<Grid Grid.Row="1" Margin="10,5,0,0">
@@ -96,7 +126,7 @@
 					<TextBlock Grid.Column="2">ミリ秒</TextBlock>
 				</Grid>
 			</Grid>
-			<Grid Grid.Row="4" Margin="0,15,0,5">
+			<Grid Grid.Row="6" Margin="0,15,0,5">
 				<Grid.ColumnDefinitions>
 					<ColumnDefinition Width="Auto" />
 					<ColumnDefinition />
@@ -104,7 +134,7 @@
 				<TextBlock Margin="5,0" VerticalAlignment="Center">カード データベースの置換 (上級者向け)</TextBlock>
 				<Separator Grid.Column="1" BorderThickness="1" BorderBrush="Gray" />
 			</Grid>
-			<Grid Grid.Row="5">
+			<Grid Grid.Row="7">
 				<Grid.RowDefinitions>
 					<RowDefinition Height="Auto" />
 					<RowDefinition Height="Auto" />
@@ -112,19 +142,20 @@
 					<RowDefinition Height="Auto" />
 				</Grid.RowDefinitions>
 				<TextBlock>
-					<Run>Wisdom Guild で「出力形式」を「テキスト」にしてカード検索し、</Run>
+					<Hyperlink ToolTip="http://whisper.wisdom-guild.net/" Click="OnClickHyperlink">Wisdom Guild</Hyperlink>
+					<Run> で「出力形式」を「テキスト」にしてカード検索し、</Run>
 					<LineBreak />
 					<Run>表示されたテキスト ファイルを shift-jis で保存してください。</Run>
 				</TextBlock>
-				<CheckBox Name="cbxSaveDb" Grid.Row="1" VerticalContentAlignment="Center">
+				<CheckBox Name="cbxSaveDb" Grid.Row="1" VerticalContentAlignment="Center" IsChecked="True" 
+						  ToolTip="アプリケーション フォルダの cards.xml を編集し、次回起動以降もそれを使用するようにします。">
 					<StackPanel Orientation="Horizontal">
-						<TextBlock>置換したデータベースをそのまま保存する</TextBlock>
-						<Image Source="Resources/Information.png" Height="16" Margin="5,0,0,0" 
-							   ToolTip="アプリケーション フォルダの cards.xml も置換し、既定のデータベースを置換します。" />
+						<TextBlock>置換したデータベースを永続化する</TextBlock>
+						<Image Source="Resources/Information.png" Height="16" Margin="5,0,0,0" />
 					</StackPanel>
 				</CheckBox>
 				<StackPanel Grid.Row="3" HorizontalAlignment="Right" Orientation="Horizontal">
-					<Button Click="OnBrowseSearchTxt">Whisper 検索結果テキストの読み込み..</Button>
+					<Button Click="OnBrowseSearchTxt">WHISPER 検索結果テキストの読み込み..</Button>
 					<Image Name="imgLoaded" Source="Resources/Checkmark.png" Height="20" Margin="5,0,5,0" Visibility="Collapsed" />
 				</StackPanel>
 			</Grid>

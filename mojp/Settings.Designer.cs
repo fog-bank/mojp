@@ -49,7 +49,7 @@ namespace Mojp {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Meiryo")]
+        [global::System.Configuration.DefaultSettingValueAttribute("メイリオ")]
         public string CardTextFontFamily {
             get {
                 return ((string)(this["CardTextFontFamily"]));
