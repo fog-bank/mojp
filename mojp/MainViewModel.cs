@@ -44,7 +44,9 @@ namespace Mojp
 						new NotCondition(new PropertyCondition(AutomationElement.NameProperty, string.Empty)),
 						new PropertyCondition(AutomationElement.AutomationIdProperty, string.Empty));
 
-			SetMessage("MO の Preview Pane を表示させた状態で、右上のカメラアイコンのボタンを押してください");
+			SetMessage(AutoRefresh ? 
+				"MO の Preview Pane を探しています" :
+				"MO の Preview Pane を表示させた状態で、右上のカメラアイコンのボタンを押してください");
 		}
 
 		/// <summary>

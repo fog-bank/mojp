@@ -1,7 +1,9 @@
 ﻿using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Text;
 using System.Windows;
+using System.Windows.Documents;
 using System.Windows.Media;
 using Microsoft.Win32;
 
@@ -12,19 +14,29 @@ namespace Mojp
 	/// </summary>
 	public partial class OptionDialog : Window
 	{
-		public OptionDialog(object vm)
+		public OptionDialog(object viewModel)
 		{
 			InitializeComponent();
 
+			var vm = viewModel as MainViewModel;
 			var fonts = Fonts.SystemFontFamilies;
 			var fontNames = new List<string>(fonts.Count);
+			var lang = this.Language;
 
 			foreach (var font in fonts)
-				fontNames.Add(font.Source);
+			{
+				// 日本語フォントのみをリストにする
+				string source;
+				if (font.FamilyNames.TryGetValue(lang, out source))
+					fontNames.Add(source);
 
+				// フォント名を日本語で表示する前のバージョンのための措置 (~ 1.2.11030.7)
+				if (source != null && font.Source == vm.FontFamily)
+					vm.FontFamily = source;
+			}
 			fontNames.Sort();
 			this.cmbFonts.ItemsSource = fontNames;
-
+			
 			this.DataContext = vm;
 		}
 
@@ -56,6 +68,11 @@ namespace Mojp
 					imgLoaded.Visibility = Visibility.Visible;
 				}
 			}
+		}
+
+		private void OnClickHyperlink(object sender, RoutedEventArgs e)
+		{
+			Process.Start((sender as Hyperlink).ToolTip.ToString());
 		}
 	}
 }
