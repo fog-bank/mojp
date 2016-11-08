@@ -25,13 +25,15 @@ namespace Mojp
 
 			foreach (var font in fonts)
 			{
-				// 日本語フォントのみをリストにする
+				// フォント名に日本語があるなら、それを使う
 				string source;
-				if (font.FamilyNames.TryGetValue(lang, out source))
-					fontNames.Add(source);
+				if (!font.FamilyNames.TryGetValue(lang, out source))
+					source = font.Source;
+
+				fontNames.Add(source);
 
 				// フォント名を日本語で表示する前のバージョンのための措置 (~ 1.2.11030.7)
-				if (source != null && font.Source == vm.FontFamily)
+				if (font.Source == vm.FontFamily)
 					vm.FontFamily = source;
 			}
 			fontNames.Sort();
