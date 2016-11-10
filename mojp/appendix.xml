@@ -53,6 +53,11 @@
     <card name="Mountain" jaName="山" type="基本土地 ― 山">（(Ｔ)：あなたのマナ・プールに(赤)を加える。）</card>
     <card name="Plains" jaName="平地" type="基本土地 ― 平地">（(Ｔ)：あなたのマナ・プールに(白)を加える。）</card>
     <card name="Swamp" jaName="沼" type="基本土地 ― 沼">（(Ｔ)：あなたのマナ・プールに(黒)を加える。）</card>
+    <card name="Snow-Covered Forest" jaName="冠雪の森" type="基本氷雪土地 ― 森">（(Ｔ)：あなたのマナ・プールに(緑)を加える。）</card>
+    <card name="Snow-Covered Island" jaName="冠雪の島" type="基本氷雪土地 ― 島">（(Ｔ)：あなたのマナ・プールに(青)を加える。）</card>
+    <card name="Snow-Covered Mountain" jaName="冠雪の山" type="基本氷雪土地 ― 山">（(Ｔ)：あなたのマナ・プールに(赤)を加える。）</card>
+    <card name="Snow-Covered Plains" jaName="冠雪の平地" type="基本氷雪土地 ― 平地">（(Ｔ)：あなたのマナ・プールに(白)を加える。）</card>
+    <card name="Snow-Covered Swamp" jaName="冠雪の沼" type="基本氷雪土地 ― 沼">（(Ｔ)：あなたのマナ・プールに(黒)を加える。）</card>
     <!-- テキストが正常でないカード -->
     <card name="Aetherborn Marauder" jaName="霊基体の匪賊" type="クリーチャー ― 霊基体・ならず者" pt="2/2">飛行、絆魂
 霊基体の匪賊が戦場に出たとき、あなたがコントロールする他のパーマネントの上から望む数の+1/+1カウンターを霊基体の匪賊の上に移動する。</card>

@@ -142,5 +142,17 @@ namespace Mojp {
                 this["UpgradeRequired"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool ShowBasicLands {
+            get {
+                return ((bool)(this["ShowBasicLands"]));
+            }
+            set {
+                this["ShowBasicLands"] = value;
+            }
+        }
     }
 }

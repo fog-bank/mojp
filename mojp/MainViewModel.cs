@@ -22,6 +22,7 @@ namespace Mojp
 		private double height = Settings.Default.WindowHeight;
 		private double left = Settings.Default.WindowLeft;
 		private double top = Settings.Default.WindowTop;
+		private bool showBasicLands = Settings.Default.ShowBasicLands;
 		private bool autoRefresh = Settings.Default.AutoRefresh;
 		private TimeSpan refreshInterval = Settings.Default.RefreshInterval;
 
@@ -144,6 +145,20 @@ namespace Mojp
 				top = value;
 				OnPropertyChanged();
 				Settings.Default.WindowTop = value;
+			}
+		}
+
+		/// <summary>
+		/// 基本土地に反応するかどうかを示す値を取得または設定します。
+		/// </summary>
+		public bool ShowBasicLands
+		{
+			get { return showBasicLands; }
+			set
+			{
+				showBasicLands = value;
+				OnPropertyChanged();
+				Settings.Default.ShowBasicLands = value;
 			}
 		}
 
@@ -392,6 +407,20 @@ namespace Mojp
 						if (!foundCards.Contains(card2))
 							foundCards.Add(card2);
 					}
+				}
+			}
+
+			// 設定によっては基本土地 5 種の場合は表示を変えないようにする
+			if (!ShowBasicLands && foundCards.Count == 1)
+			{
+				switch (foundCards[0].Name)
+				{
+					case "Plains":
+					case "Island":
+					case "Swamp":
+					case "Mountain":
+					case "Forest":
+						return;
 				}
 			}
 
