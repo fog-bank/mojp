@@ -112,22 +112,30 @@
 				<Grid.RowDefinitions>
 					<RowDefinition Height="Auto" />
 					<RowDefinition Height="Auto" />
+					<RowDefinition Height="Auto" />
 				</Grid.RowDefinitions>
-				<CheckBox Name="chbAutoRefresh" VerticalContentAlignment="Center" IsChecked="{Binding AutoRefresh}"
+				<CheckBox VerticalContentAlignment="Center" IsChecked="{Binding ShowBasicLands}"
+						  ToolTip="チェックを外すと、氷雪土地でない平地、島、沼、山、森には反応しなくなります。">
+					<StackPanel Orientation="Horizontal">
+						<TextBlock>基本土地 5 種のカードテキストを表示する</TextBlock>
+						<Image Source="Resources/Information.png" Height="16" Margin="5,0,0,0" />
+					</StackPanel>
+				</CheckBox>
+				<CheckBox Grid.Row="1" VerticalContentAlignment="Center" IsChecked="{Binding AutoRefresh}"
 						  ToolTip="指定された時間ごとに Preview Pane を探します。動作が重くなる場合は手動更新にしてください。">
 					<StackPanel Orientation="Horizontal">
 						<TextBlock>MO の Preview Pane を自動的に見つける</TextBlock>
 						<Image Source="Resources/Information.png" Height="16" Margin="5,0,0,0" />
 					</StackPanel>
 				</CheckBox>
-				<Grid Grid.Row="1" Margin="10,5,0,0">
+				<Grid Grid.Row="2" Margin="10,5,0,0">
 					<Grid.ColumnDefinitions>
 						<ColumnDefinition />
 						<ColumnDefinition />
 						<ColumnDefinition />
 					</Grid.ColumnDefinitions>
 					<TextBlock Margin="0,0,10,0">Preview Pane を探す時間間隔 :</TextBlock>
-					<TextBox Name="txbRefreshInterval" Grid.Column="1" MinWidth="100" VerticalContentAlignment="Center" Text="{Binding RefreshIntervalMilliseconds}" />
+					<TextBox Grid.Column="1" MinWidth="100" VerticalContentAlignment="Center" Text="{Binding RefreshIntervalMilliseconds}" />
 					<TextBlock Grid.Column="2">ミリ秒</TextBlock>
 				</Grid>
 			</Grid>
