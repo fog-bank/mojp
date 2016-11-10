@@ -54,7 +54,7 @@
 					<Hyperlink ToolTip="https://github.com/fog-bank/mojp/releases" Click="OnClickHyperlink">GitHub に移動</Hyperlink>
 				</TextBlock>
 				<TextBlock Grid.Row="1">対応最新セット：</TextBlock>
-				<TextBlock Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2">カラデシュ</TextBlock>
+				<TextBlock Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2">統率者 2016 / カラデシュ</TextBlock>
 			</Grid>
 			<Grid Grid.Row="2" Margin="0,15,0,5">
 				<Grid.ColumnDefinitions>
@@ -128,7 +128,7 @@
 						<Image Source="Resources/Information.png" Height="16" Margin="5,0,0,0" />
 					</StackPanel>
 				</CheckBox>
-				<Grid Grid.Row="2" Margin="10,5,0,0">
+				<Grid Grid.Row="2" Margin="10,5,0,0" IsEnabled="{Binding AutoRefresh}">
 					<Grid.ColumnDefinitions>
 						<ColumnDefinition />
 						<ColumnDefinition />
