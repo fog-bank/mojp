@@ -224,8 +224,18 @@ namespace Mojp
 		/// </summary>
 		public void SetMessage(string text)
 		{
-			Cards.Clear();
-			Cards.Add(new Card { Text = text });
+			var card = new Card { Text = text };
+
+			if (Cards.Count > 0)
+			{
+				Cards[0] = card;
+
+				for (int i = Cards.Count - 1; i >= 1; i--)
+					Cards.RemoveAt(i);
+			}
+			else
+				Cards.Add(card);
+
 			SelectedIndex = 0;
 		}
 
@@ -290,8 +300,6 @@ namespace Mojp
 		/// </summary>
 		private void OnCapture(object sender, EventArgs e)
 		{
-			Debug.WriteLine(nameof(OnCapture) + " " + DateTime.Now);
-
 			var proc = Process.GetProcessesByName("mtgo");
 
 			if (proc.Length == 0)
@@ -387,15 +395,24 @@ namespace Mojp
 				}
 			}
 
+			// ツールバーと重ならないようにするためのダミー項目
+			foundCards.Add(Card.Empty);
+
 			App.Current.Dispatcher.Invoke(() =>
 			{
-				Cards.Clear();
+				int j = 0;
 
-				foreach (var card in foundCards)
-					Cards.Add(card);
+				for (int i = 0; i < Cards.Count && j < foundCards.Count; i++, j++)
+					Cards[i] = foundCards[j];
 
-				// ツールバーと重ならないようにするためのダミー項目
-				Cards.Add(new Card());
+				// 項目数が減る場合：末端から削除
+				for (int i = Cards.Count - 1; i >= foundCards.Count; i--)
+					Cards.RemoveAt(i);
+
+				// 項目数が増える場合：継続して追加
+				for (; j < foundCards.Count; j++)
+					Cards.Add(foundCards[j]);
+
 				SelectedIndex = 0;
 			});
 		}

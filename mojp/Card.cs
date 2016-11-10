@@ -79,6 +79,11 @@ namespace Mojp
 		}
 
 		/// <summary>
+		/// 空のオブジェクトを取得します。オブジェクト自身は読み取り専用になっていませんではないですが、変更しないでください。
+		/// </summary>
+		public static Card Empty { get; } = new Card();
+
+		/// <summary>
 		/// カードの英語名が一致しているかどうかを調べます。
 		/// </summary>
 		public bool Equals(Card other)
