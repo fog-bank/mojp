@@ -219,7 +219,7 @@ namespace Mojp
 								yield return card;
 							}
 							card = new Card();
-							card.Name = tokens[1].Trim();
+							card.Name = tokens[1].Trim().Replace("AE", "Ae");
 							texts.Clear();
 
 							if (prevCard != null)
