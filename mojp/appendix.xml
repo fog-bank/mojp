@@ -193,6 +193,7 @@
     <card name="Kobolds of Kher Keep" jaName="カー砦のコボルド" type="クリーチャー ― コボルド" pt="0/1"></card>
     <card name="Monkey Cage" jaName="猿の檻" type="アーティファクト">クリーチャーが戦場に出たとき、猿の檻を生け贄に捧げ、緑の2/2の猿(Monkey)・クリーチャー・トークンをＸ体生成する。Ｘはそのクリーチャーの点数で見たマナ・コストである。</card>
     <!-- 最新オラクル未対応：AE -->
+    <card name="Aerathi Berserker" jaName="Aerathi Berserker" type="クリーチャー ― 人間・狂戦士" pt="2/4" wikilink="AErathi Berserker">ランページ３（このクリーチャーがブロックされるたび、それをブロックしている２体目以降のクリーチャー１体につき+3/+3の修整を受ける。）</card>
     <card name="Aether Burst" jaName="霊気の噴出" type="インスタント" wikilink="霊気の噴出/AEther Burst">クリーチャーをＸ体まで対象とし、それらをオーナーの手札に戻す。Ｘは、あなたが霊気の噴出を唱える際の、すべての墓地にある名前が《霊気の噴出/Aether Burst》であるカードの枚数に１を足した数である。</card>
     <card name="Aether Searcher" jaName="霊気探知機" type="アーティファクト・クリーチャー ― 構築物" pt="6/4" wikilink="霊気探知機/AEther Searcher">霊気探知機をドラフトするに際し、これを公開する。あなたが次にドラフトしたカードを公開し、その名前を記録する。
 霊気探知機が戦場に出たとき、あなたの手札およびライブラリーから、《霊気探知機/Aether Searcher》という名前のカードをドラフトした際に記録した名前を持つカードを１枚探してもよい。あなたはそれをそのマナ・コストを支払うことなく唱えてもよい。あなたがこれによりあなたのライブラリーからカードを探した場合、それを切り直す。</card>
