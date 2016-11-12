@@ -60,23 +60,32 @@ namespace Mojp
 
 		private void OnCopyCardName(object sender, RoutedEventArgs e)
 		{
-			var card = ViewModel.SelectedCard;
-			string name = card?.JapaneseName;
+			Clipboard.SetText(ViewModel.SelectedCard.JapaneseName);
+		}
 
-			if (string.IsNullOrEmpty(name))
-				name = card?.Name;
-
-			if (name != null)
-				Clipboard.SetText(name);
+		private void OnCopyEnglishName(object sender, RoutedEventArgs e)
+		{
+			Clipboard.SetText(ViewModel.SelectedCard.Name);
 		}
 
 		private void OnGoToWiki(object sender, RoutedEventArgs e)
 		{
 			var card = ViewModel.SelectedCard;
-			string jaName = card?.JapaneseName;
+			string link = card.WikiLink;
 
-			if (!string.IsNullOrEmpty(jaName))
-				Process.Start("http://mtgwiki.com/wiki/" + Uri.EscapeDataString(jaName) + "/" + card.Name.Replace(' ', '_'));
+			if (link == null)
+			{
+				if (card.HasJapaneseName)
+				{
+					link = Uri.EscapeUriString(card.JapaneseName) + "/" + card.Name.Replace(' ', '_');
+				}
+				else
+					link = card.Name.Replace(' ', '_');
+			}
+			else
+				link = Uri.EscapeUriString(link);
+
+			Process.Start("http://mtgwiki.com/wiki/" + link);
 		}
 
 		private void OnOption(object sender, RoutedEventArgs e)

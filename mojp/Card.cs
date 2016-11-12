@@ -46,9 +46,14 @@ namespace Mojp
 		public string RelatedCardName { get; set; }
 
 		/// <summary>
+		/// 日本語名/英語名 で MTG Wiki に移動できない場合の、http://mtgwiki.com/wiki/ 以下の代替リンクを取得または設定します。
+		/// </summary>
+		public string WikiLink { get; set; }
+
+		/// <summary>
 		/// 日本語カード名 / 英語カード名、のような表記でカード名を取得します。
 		/// </summary>
-		public string FullName => JapaneseName == null || Name == JapaneseName ? Name : JapaneseName + " / " + Name;
+		public string FullName => HasJapaneseName ? JapaneseName + " / " + Name : Name;
 
 		/// <summary>
 		/// カードの各情報をまとめた文字列を生成します。
@@ -79,6 +84,11 @@ namespace Mojp
 		}
 
 		/// <summary>
+		/// 公式のカード名日本語訳があるかどうかを示す値を取得します。
+		/// </summary>
+		public bool HasJapaneseName => JapaneseName != null && Name != JapaneseName;
+
+		/// <summary>
 		/// 空のオブジェクトを取得します。オブジェクト自身は読み取り専用になっていませんではないですが、変更しないでください。
 		/// </summary>
 		public static Card Empty { get; } = new Card();
@@ -96,7 +106,8 @@ namespace Mojp
 		/// </summary>
 		public bool EqualsStrict(Card other)
 		{
-			return Equals(other) && JapaneseName == other.JapaneseName && Type == other.Type && Text == other.Text && PT == other.PT && RelatedCardName == other.RelatedCardName;
+			return Equals(other) && JapaneseName == other.JapaneseName && Type == other.Type && Text == other.Text && 
+				PT == other.PT && RelatedCardName == other.RelatedCardName && WikiLink == other.WikiLink;
 		}
 
 		public override bool Equals(object obj)
@@ -136,6 +147,9 @@ namespace Mojp
 			if (RelatedCardName != null)
 				xml.Add(new XAttribute("related", RelatedCardName));
 
+			if (WikiLink != null)
+				xml.Add(new XAttribute("wikilink", WikiLink));
+
 			xml.Add(Text);
 
 			return xml;
@@ -153,6 +167,7 @@ namespace Mojp
 			card.Type = (string)cardElement.Attribute("type");
 			card.PT = (string)cardElement.Attribute("pt");
 			card.RelatedCardName = (string)cardElement.Attribute("related");
+			card.WikiLink = (string)cardElement.Attribute("wikilink");
 			card.Text = cardElement.Value;
 
 			return card;
@@ -215,11 +230,18 @@ namespace Mojp
 							// 新しいカードの行に入った
 							if (card.Name != null)
 							{
+								// AE 合字処理
+								string processed = card.Name.Replace("AE", "Ae");
+								if (card.Name != processed)
+								{
+									card.WikiLink = card.HasJapaneseName ? card.JapaneseName + "/" + card.Name : card.Name;
+									card.Name = processed;
+								}
 								card.Text = string.Join(Environment.NewLine, texts);
 								yield return card;
 							}
 							card = new Card();
-							card.Name = tokens[1].Trim().Replace("AE", "Ae");
+							card.Name = tokens[1].Trim();
 							texts.Clear();
 
 							if (prevCard != null)
@@ -298,6 +320,13 @@ namespace Mojp
 
 			if (card.Name != null)
 			{
+				// AE 合字処理
+				string processed = card.Name.Replace("AE", "Ae");
+				if (card.Name != processed)
+				{
+					card.WikiLink = card.HasJapaneseName ? card.JapaneseName + "/" + card.Name : card.Name;
+					card.Name = processed;
+				}
 				card.Text = string.Join(Environment.NewLine, texts);
 				yield return card;
 			}

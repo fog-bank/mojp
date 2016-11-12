@@ -213,6 +213,9 @@ namespace Mojp
 			{
 				selectedIndex = value;
 				OnPropertyChanged();
+				OnPropertyChanged(nameof(CanCopyJapaneseName));
+				OnPropertyChanged(nameof(CanCopyEnglishName));
+				OnPropertyChanged(nameof(CanBrowseWiki));
 			}
 		}
 
@@ -231,6 +234,37 @@ namespace Mojp
 						return card;
 				}
 				return null;
+			}
+		}
+
+		/// <summary>
+		/// 日本語カード名をコピーできるかどうかを示す値を取得します。
+		/// </summary>
+		public bool CanCopyJapaneseName => SelectedCard != null && SelectedCard.HasJapaneseName;
+
+		/// <summary>
+		/// 英語カード名をコピーできるかどうかを示す値を取得します。
+		/// </summary>
+		public bool CanCopyEnglishName => SelectedCard != null && SelectedCard.Name != null;
+
+		/// <summary>
+		/// MTG Wiki でカードを調べられるかどうかを示す値を取得します。
+		/// </summary>
+		public bool CanBrowseWiki
+		{
+			get
+			{
+				var card = SelectedCard;
+
+				if (card != null)
+				{
+					if (card.WikiLink != null)
+						return true;
+
+					if (!card.Type.StartsWith("トークン"))
+						return true;
+				}
+				return false;
 			}
 		}
 
