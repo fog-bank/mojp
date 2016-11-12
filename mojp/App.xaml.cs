@@ -72,21 +72,7 @@ namespace Mojp
 		{
 			var doc = XDocument.Load(file);
 
-			foreach (var node in doc.Root.Element("add").Elements("card"))
-			{
-				var card = Card.FromXml(node);
-
-				if (cards.ContainsKey(card.Name))
-				{
-					Debug.WriteLineIf(!card.EqualsStrict(cards[card.Name]), card.Name + " には既に別種の同名カードが存在します。");
-					continue;
-				}
-				cards.Add(card.Name, card);
-			}
-
-			foreach (var node in doc.Root.Elements("remove").Elements("card"))
-				cards.Remove((string)node.Attribute("name"));
-			
+			// カードデータの差し替え
 			var replacedNodes = new XElement("replaced");
 			var identicalNodes = new XElement("identical");
 
@@ -114,6 +100,61 @@ namespace Mojp
 			var root = new XElement("mojp", doc.Root.Element("add"), replacedNodes, identicalNodes, doc.Root.Element("remove"));
 			var result = new XDocument(new XDeclaration("1.0", "utf-8", "yes"), root);
 			result.Save("appendix_result.xml");
+
+			// カードの追加
+			foreach (var node in doc.Root.Element("add").Elements("card"))
+			{
+				var card = Card.FromXml(node);
+
+				if (cards.ContainsKey(card.Name))
+				{
+					Debug.WriteLineIf(!card.EqualsStrict(cards[card.Name]), card.Name + " には既に別種の同名カードが存在します。");
+					continue;
+				}
+				cards.Add(card.Name, card);
+			}
+
+			// P/T だけ追加
+			foreach (var node in doc.Root.Element("add").Elements("pt"))
+			{
+				Card card;
+				if (cards.TryGetValue((string)node.Attribute("name"), out card))
+				{
+					Debug.WriteLineIf(card.PT != null, card.Name + " には既に P/T の情報があります。");
+					card.PT = (string)node.Attribute("pt");
+				}
+			}
+
+			// Wiki へのリンクだけ追加
+			foreach (var node in doc.Root.Element("add").Elements("wikilink"))
+			{
+				Card card;
+				if (cards.TryGetValue((string)node.Attribute("name"), out card))
+				{
+					Debug.WriteLineIf(card.WikiLink != null, card.Name + " には既に wiki へのリンク情報があります。");
+					card.WikiLink = (string)node.Attribute("wikilink");
+				}
+			}
+
+			// カードの削除
+			foreach (var node in doc.Root.Elements("remove").Elements("card"))
+			{
+				string name = (string)node.Attribute("name");
+				Debug.WriteLineIf(!cards.ContainsKey(name), name + " は既にカードリストに含まれていません。");
+				cards.Remove(name);
+			}
+
+			// 暫定日本語カード名の削除
+			foreach (var node in doc.Root.Elements("remove").Elements("jaName"))
+			{
+				string name = (string)node.Attribute("name");
+
+				Card card;
+				if (cards.TryGetValue(name, out card))
+					card.JapaneseName = card.Name;
+				else
+					Debug.WriteLine(name + " は既にカードリストに含まれていません。");
+			}
 		}
 
 		protected override void OnStartup(StartupEventArgs e)

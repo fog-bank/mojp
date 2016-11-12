@@ -54,6 +54,95 @@
 (３),カードを１枚捨てる：無作為に選ばれたソーサリー・カード３枚をコピーする。あなたはそれらのコピーのうちの１つをマナ・コストを支払わずに唱えてもよい。この能力は、あなたがソーサリーを唱えられるときにのみ起動できる。</card>
     <card name="Avatar - Momir Vig, Simic Visionary" jaName="シミックの幻想家、モミール・ヴィグ" type="ヴァンガード" pt="手札 +0/ライフ +4" wikilink="Momir Vig, Simic Visionary Avatar">(Ｘ),カードを１枚捨てる：点数で見たマナ・コストがＸである、無作為に選ばれたクリーチャー・カード１枚のコピーであるトークンを１体生成する。この能力は、あなたがソーサリーを唱えられるときにのみ起動でき、各ターンに１回しか起動できない。</card>
     <card name="Avatar - Momir Vig, Simic Visionary (Alt.)" jaName="シミックの幻想家、モミール・ヴィグ" type="ヴァンガード" pt="手札 +0/ライフ +4" wikilink="Momir Vig, Simic Visionary Avatar">(Ｘ),カードを１枚捨てる：点数で見たマナ・コストがＸである、無作為に選ばれたクリーチャー・カード１枚のコピーであるトークンを１体生成する。この能力は、あなたがソーサリーを唱えられるときにのみ起動でき、各ターンに１回しか起動できない。</card>
+    <!-- 機体のP/T -->
+    <pt name="Aradara Express" pt="8/6" />
+    <pt name="Ballista Charger" pt="6/6" />
+    <pt name="Bomat Bazaar Barge" pt="5/5" />
+    <pt name="Cultivator's Caravan" pt="5/5" />
+    <pt name="Demolition Stomper" pt="10/7" />
+    <pt name="Fleetwheel Cruiser" pt="5/3" />
+    <pt name="Ovalchase Dragster" pt="6/1" />
+    <pt name="Renegade Freighter" pt="4/3" />
+    <pt name="Sky Skiff" pt="2/3" />
+    <pt name="Skysovereign, Consul Flagship" pt="6/5" />
+    <pt name="Smuggler's Copter" pt="3/3" />
+    <!-- 分割カードのwikiページ -->
+    <wikilink name="Stand" wikilink="抵抗+救難/Stand+Deliver" />
+    <wikilink name="Deliver" wikilink="抵抗+救難/Stand+Deliver" />
+    <wikilink name="Spite" wikilink="悪意+敵意/Spite+Malice" />
+    <wikilink name="Malice" wikilink="悪意+敵意/Spite+Malice" />
+    <wikilink name="Pain" wikilink="苦痛+受難/Pain+Suffering" />
+    <wikilink name="Suffering" wikilink="苦痛+受難/Pain+Suffering" />
+    <wikilink name="Assault" wikilink="暴行+殴打/Assault+Battery" />
+    <wikilink name="Battery" wikilink="暴行+殴打/Assault+Battery" />
+    <wikilink name="Wax" wikilink="増進+衰退/Wax+Wane" />
+    <wikilink name="Wane" wikilink="増進+衰退/Wax+Wane" />
+    <wikilink name="Night" wikilink="夜+昼/Night+Day" />
+    <wikilink name="Day" wikilink="夜+昼/Night+Day" />
+    <wikilink name="Life" wikilink="生+死/Life+Death" />
+    <wikilink name="Death" wikilink="生+死/Life+Death" />
+    <wikilink name="Illusion" wikilink="空想+現実/Illusion+Reality" />
+    <wikilink name="Reality" wikilink="空想+現実/Illusion+Reality" />
+    <wikilink name="Fire" wikilink="火+氷/Fire+Ice" />
+    <wikilink name="Ice" wikilink="火+氷/Fire+Ice" />
+    <wikilink name="Order" wikilink="秩序+混沌/Order+Chaos" />
+    <wikilink name="Chaos" wikilink="秩序+混沌/Order+Chaos" />
+    <wikilink name="Supply" wikilink="供給+需要/Supply+Demand" />
+    <wikilink name="Demand" wikilink="供給+需要/Supply+Demand" />
+    <wikilink name="Trial" wikilink="試行+錯誤/Trial+Error" />
+    <wikilink name="Error" wikilink="試行+錯誤/Trial+Error" />
+    <wikilink name="Rise" wikilink="隆盛+下落/Rise+Fall" />
+    <wikilink name="Fall" wikilink="隆盛+下落/Rise+Fall" />
+    <wikilink name="Hit" wikilink="打撃+爆走/Hit+Run" />
+    <wikilink name="Run" wikilink="打撃+爆走/Hit+Run" />
+    <wikilink name="Pure" wikilink="純粋+単純/Pure+Simple" />
+    <wikilink name="Simple" wikilink="純粋+単純/Pure+Simple" />
+    <wikilink name="Hide" wikilink="隠匿+探求/Hide+Seek" />
+    <wikilink name="Seek" wikilink="隠匿+探求/Hide+Seek" />
+    <wikilink name="Research" wikilink="研究+開発/Research+Development" />
+    <wikilink name="Development" wikilink="研究+開発/Research+Development" />
+    <wikilink name="Crime" wikilink="罪+罰/Crime+Punishment" />
+    <wikilink name="Punishment" wikilink="罪+罰/Crime+Punishment" />
+    <wikilink name="Odds" wikilink="確率+結末/Odds+Ends" />
+    <wikilink name="Ends" wikilink="確率+結末/Odds+Ends" />
+    <wikilink name="Bound" wikilink="拘束+決心/Bound+Determined" />
+    <wikilink name="Determined" wikilink="拘束+決心/Bound+Determined" />
+    <wikilink name="Dead" wikilink="死亡+退場/Dead+Gone" />
+    <wikilink name="Gone" wikilink="死亡+退場/Dead+Gone" />
+    <wikilink name="Rough" wikilink="乱暴+転落/Rough+Tumble" />
+    <wikilink name="Tumble" wikilink="乱暴+転落/Rough+Tumble" />
+    <wikilink name="Boom" wikilink="爆裂+破綻/Boom+Bust" />
+    <wikilink name="Bust" wikilink="爆裂+破綻/Boom+Bust" />
+    <wikilink name="Far" wikilink="遠隔+不在/Far+Away" />
+    <wikilink name="Away" wikilink="遠隔+不在/Far+Away" />
+    <wikilink name="Alive" wikilink="生存+存命/Alive+Well" />
+    <wikilink name="Well" wikilink="生存+存命/Alive+Well" />
+    <wikilink name="Give" wikilink="投与+享受/Give+Take" />
+    <wikilink name="Take" wikilink="投与+享受/Give+Take" />
+    <wikilink name="Protect" wikilink="保安+奉仕/Protect+Serve" />
+    <wikilink name="Serve" wikilink="保安+奉仕/Protect+Serve" />
+    <wikilink name="Armed" wikilink="武装+物騒/Armed+Dangerous" />
+    <wikilink name="Dangerous" wikilink="武装+物騒/Armed+Dangerous" />
+    <wikilink name="Turn" wikilink="変化+点火/Turn+Burn" />
+    <wikilink name="Burn" wikilink="変化+点火/Turn+Burn" />
+    <wikilink name="Wear" wikilink="摩耗+損耗/Wear+Tear" />
+    <wikilink name="Tear" wikilink="摩耗+損耗/Wear+Tear" />
+    <wikilink name="Down" wikilink="有害+不潔/Down+Dirty" />
+    <wikilink name="Dirty" wikilink="有害+不潔/Down+Dirty" />
+    <wikilink name="Toil" wikilink="労苦+苦難/Toil+Trouble" />
+    <wikilink name="Trouble" wikilink="労苦+苦難/Toil+Trouble" />
+    <wikilink name="Profit" wikilink="利得+損失/Profit+Loss" />
+    <wikilink name="Loss" wikilink="利得+損失/Profit+Loss" />
+    <wikilink name="Beck" wikilink="唯々+諾々/Beck+Call" />
+    <wikilink name="Call" wikilink="唯々+諾々/Beck+Call" />
+    <wikilink name="Ready" wikilink="覚悟+意欲/Ready+Willing" />
+    <wikilink name="Willing" wikilink="覚悟+意欲/Ready+Willing" />
+    <wikilink name="Breaking" wikilink="強行+突入/Breaking+Entering" />
+    <wikilink name="Entering" wikilink="強行+突入/Breaking+Entering" />
+    <wikilink name="Flesh" wikilink="肉体+血流/Flesh+Blood" />
+    <wikilink name="Blood" wikilink="肉体+血流/Flesh+Blood" />
+    <wikilink name="Catch" wikilink="捕獲+放流/Catch+Release" />
+    <wikilink name="Release" wikilink="捕獲+放流/Catch+Release" />
   </add>
   <replace>
     <!-- 基本土地 -->
@@ -684,32 +773,6 @@ Thallid Devourerから胞子カウンターを３個取り除く：緑の1/1の�
 ゼクター祭殿の探検から探索カウンターを３個取り除くとともに、それを生け贄に捧げる：トランプルと速攻を持つ赤の7/1のエレメンタル(Elemental)・クリーチャー・トークンを１体生成する。次の終了ステップの開始時に、それを追放する。</card>
     <card name="Zendikar's Roil" jaName="ゼンディカーの乱動" type="エンチャント">土地が１つあなたのコントロール下で戦場に出るたび、緑の2/2のエレメンタル(Elemental)・クリーチャー・トークンを１体生成する。</card>
     <card name="Zombie Infestation" jaName="ゾンビの横行" type="エンチャント">カードを２枚捨てる：黒の2/2のゾンビ(Zombie)・クリーチャー・トークンを１体生成する。</card>
-    <!-- 機体のP/T -->
-    <card name="Aradara Express" jaName="アラダラ急行" type="アーティファクト ― 機体" pt="8/6">威迫
-搭乗４（あなたがコントロールする望む数のクリーチャーを、パワーの合計が４以上になるように選んでタップする：ターン終了時まで、この機体(Vehicle)はアーティファクト・クリーチャーになる。）</card>
-    <card name="Ballista Charger" jaName="バリスタ突撃車" type="アーティファクト ― 機体" pt="6/6">バリスタ突撃車が攻撃するたび、クリーチャー１体かプレイヤー１人を対象とする。バリスタ突撃車はそれに１点のダメージを与える。
-搭乗３（あなたがコントロールする望む数のクリーチャーを、パワーの合計が３以上になるように選んでタップする：ターン終了時まで、この機体(Vehicle)はアーティファクト・クリーチャーになる。）</card>
-    <card name="Bomat Bazaar Barge" jaName="ボーマットのバザール船" type="アーティファクト ― 機体" pt="5/5">ボーマットのバザール船が戦場に出たとき、カードを１枚引く。
-搭乗３（あなたがコントロールする望む数のクリーチャーを、パワーの合計が３以上になるように選んでタップする：ターン終了時まで、この機体(Vehicle)はアーティファクト・クリーチャーになる。）</card>
-    <card name="Cultivator's Caravan" jaName="耕作者の荷馬車" type="アーティファクト ― 機体" pt="5/5">(Ｔ)：あなたのマナ・プールに、好きな色１色のマナ１点を加える。
-搭乗３（あなたがコントロールする望む数のクリーチャーを、パワーの合計が３以上になるように選んでタップする：ターン終了時まで、この機体(Vehicle)はアーティファクト・クリーチャーになる。）</card>
-    <card name="Demolition Stomper" jaName="破砕踏歩機" type="アーティファクト ― 機体" pt="10/7">破砕踏歩機は、パワーが２以下のクリーチャーによってはブロックされない。
-搭乗５（あなたがコントロールする望む数のクリーチャーを、パワーの合計が５以上になるように選んでタップする：ターン終了時まで、この機体(Vehicle)はアーティファクト・クリーチャーになる。）</card>
-    <card name="Fleetwheel Cruiser" jaName="高速警備車" type="アーティファクト ― 機体" pt="5/3">トランプル、速攻
-高速警備車が戦場に出たとき、ターン終了時まで、これはアーティファクト・クリーチャーになる。
-搭乗２（あなたがコントロールする望む数のクリーチャーを、パワーの合計が２以上になるように選んでタップする：ターン終了時まで、この機体(Vehicle)はアーティファクト・クリーチャーになる。）</card>
-    <card name="Ovalchase Dragster" jaName="楕円競走車" type="アーティファクト ― 機体" pt="6/1">トランプル、速攻
-搭乗１（あなたがコントロールする望む数のクリーチャーを、パワーの合計が１以上になるように選んでタップする：ターン終了時まで、この機体(Vehicle)はアーティファクト・クリーチャーになる。）</card>
-    <card name="Renegade Freighter" jaName="改革派の貨物車" type="アーティファクト ― 機体" pt="4/3">改革派の貨物車が攻撃するたび、ターン終了時まで、これは+1/+1の修整を受けるとともにトランプルを得る。
-搭乗２（あなたがコントロールする望む数のクリーチャーを、パワーの合計が２以上になるように選んでタップする：ターン終了時まで、この機体(Vehicle)はアーティファクト・クリーチャーになる。）</card>
-    <card name="Sky Skiff" jaName="航空艇" type="アーティファクト ― 機体" pt="2/3">飛行
-搭乗１（あなたがコントロールする望む数のクリーチャーを、パワーの合計が１以上になるように選んでタップする：ターン終了時まで、この機体(Vehicle)はアーティファクト・クリーチャーになる。）</card>
-    <card name="Skysovereign, Consul Flagship" jaName="領事の旗艦、スカイソブリン" type="伝説のアーティファクト ― 機体" pt="6/5">飛行
-領事の旗艦、スカイソブリンが戦場に出るか攻撃するたび、対戦相手がコントロールするクリーチャー１体かプレインズウォーカー１体を対象とする。領事の旗艦、スカイソブリンはそれに３点のダメージを与える。
-搭乗３（あなたがコントロールする望む数のクリーチャーを、パワーの合計が３以上になるように選んでタップする：ターン終了時まで、この機体(Vehicle)はアーティファクト・クリーチャーになる。）</card>
-    <card name="Smuggler's Copter" jaName="密輸人の回転翼機" type="アーティファクト ― 機体" pt="3/3">飛行
-密輸人の回転翼機が攻撃かブロックするたび、あなたはカードを１枚引いてもよい。そうしたなら、カード１枚を捨てる。
-搭乗１（あなたがコントロールする望む数のクリーチャーを、パワーの合計が１以上になるように選んでタップする：ターン終了時まで、この機体(Vehicle)はアーティファクト・クリーチャーになる。）</card>
   </replace>
   <remove>
     <card name="1996 World Champion" />
@@ -907,5 +970,823 @@ Thallid Devourerから胞子カウンターを３個取り除く：緑の1/1の�
     <card name="Zombie" />
     <card name="Zombie Fanboy" />
     <card name="Zzzyxas's Abyss" />
+    <!-- 公式日本語カード名が無いカード -->
+    <jaName name="Abbey Matron" />
+    <jaName name="Acid Rain" />
+    <jaName name="Adarkar Sentinel" />
+    <jaName name="Adarkar Unicorn" />
+    <jaName name="Adun Oakenshield" />
+    <jaName name="Adventurers' Guildhouse" />
+    <jaName name="Aegis of the Meek" />
+    <jaName name="Aeolipile" />
+    <jaName name="Aerathi Berserker" />
+    <jaName name="Aesthir Glider" />
+    <jaName name="Agent of Stromgald" />
+    <jaName name="Aggression" />
+    <jaName name="Aisling Leprechaun" />
+    <jaName name="Al-abara's Carpet" />
+    <jaName name="Alchor's Tomb" />
+    <jaName name="Ali from Cairo" />
+    <jaName name="Aliban's Tower" />
+    <jaName name="All Hallow's Eve" />
+    <jaName name="Altar of Bone" />
+    <jaName name="Ambush" />
+    <jaName name="Amnesia" />
+    <jaName name="Amulet of Quoz" />
+    <jaName name="Anaba Ancestor" />
+    <jaName name="Anaba Spirit Crafter" />
+    <jaName name="Anarchy" />
+    <jaName name="Ancestral Recall" />
+    <jaName name="Angel of Light" />
+    <jaName name="Angus Mackenzie" />
+    <jaName name="An-Havva Inn" />
+    <jaName name="An-Havva Township" />
+    <jaName name="An-Zerrin Ruins" />
+    <jaName name="Apocalypse Chime" />
+    <jaName name="Arboria" />
+    <jaName name="Arctic Foxes" />
+    <jaName name="Arcum's Sleigh" />
+    <jaName name="Arcum's Whistle" />
+    <jaName name="Argivian Archaeologist" />
+    <jaName name="Argivian Blacksmith" />
+    <jaName name="Argothian Treefolk" />
+    <jaName name="Armor Thrull" />
+    <jaName name="Army of Allah" />
+    <jaName name="Arnjlot's Ascent" />
+    <jaName name="Artifact Blast" />
+    <jaName name="Artifact Possession" />
+    <jaName name="Artifact Ward" />
+    <jaName name="Ashnod's Cylix" />
+    <jaName name="Astrolabe" />
+    <jaName name="Autumn Willow" />
+    <jaName name="Avalanche" />
+    <jaName name="Awesome Presence" />
+    <jaName name="Aysen Abbey" />
+    <jaName name="Aysen Crusader" />
+    <jaName name="Aysen Highway" />
+    <jaName name="Backdraft" />
+    <jaName name="Badlands" />
+    <jaName name="Baki's Curse" />
+    <jaName name="Balduvian Bears" />
+    <jaName name="Balduvian Conjurer" />
+    <jaName name="Balduvian Hydra" />
+    <jaName name="Balduvian Shaman" />
+    <jaName name="Balduvian Trading Post" />
+    <jaName name="Balduvian War-Makers" />
+    <jaName name="Balm of Restoration" />
+    <jaName name="Barbarian Guides" />
+    <jaName name="Barbary Apes" />
+    <jaName name="Barktooth Warbeard" />
+    <jaName name="Baron Sengir" />
+    <jaName name="Bartel Runeaxe" />
+    <jaName name="Basal Thrull" />
+    <jaName name="Baton of Morale" />
+    <jaName name="Battle Cry" />
+    <jaName name="Battle Frenzy" />
+    <jaName name="Bayou" />
+    <jaName name="Bazaar of Baghdad" />
+    <jaName name="Beast Walkers" />
+    <jaName name="Benthic Explorers" />
+    <jaName name="Berserk" />
+    <jaName name="Bestial Fury" />
+    <jaName name="Black Carriage" />
+    <jaName name="Black Lotus" />
+    <jaName name="Black Scarab" />
+    <jaName name="Blaze of Glory" />
+    <jaName name="Blazing Effigy" />
+    <jaName name="Blizzard" />
+    <jaName name="Blue Scarab" />
+    <jaName name="Bone Flute" />
+    <jaName name="Bone Shaman" />
+    <jaName name="Boris Devilboon" />
+    <jaName name="Braingeyser" />
+    <jaName name="Brand of Ill Omen" />
+    <jaName name="Breath of Dreams" />
+    <jaName name="Brine Hag" />
+    <jaName name="Brine Shaman" />
+    <jaName name="Burnout" />
+    <jaName name="Burnt Offering" />
+    <jaName name="Call to Arms" />
+    <jaName name="Camel" />
+    <jaName name="Camouflage" />
+    <jaName name="Candelabra of Tawnos" />
+    <jaName name="Carrier Pigeons" />
+    <jaName name="Castle Sengir" />
+    <jaName name="Cathedral of Serra" />
+    <jaName name="Caverns of Despair" />
+    <jaName name="Celestial Sword" />
+    <jaName name="Cemetery Gate" />
+    <jaName name="Centaur Archer" />
+    <jaName name="Chain Stasis" />
+    <jaName name="Chains of Mephistopheles" />
+    <jaName name="Champion Lancer" />
+    <jaName name="Chandler" />
+    <jaName name="Chaos Harlequin" />
+    <jaName name="Chaos Lord" />
+    <jaName name="Chaos Moon" />
+    <jaName name="Chaos Orb" />
+    <jaName name="Chromatic Armor" />
+    <jaName name="Cinder Storm" />
+    <jaName name="Citanul Druid" />
+    <jaName name="City in a Bottle" />
+    <jaName name="City of Shadows" />
+    <jaName name="Clairvoyance" />
+    <jaName name="Cleanse" />
+    <jaName name="Cleansing" />
+    <jaName name="Clergy of the Holy Nimbus" />
+    <jaName name="Clockwork Gnomes" />
+    <jaName name="Clockwork Swarm" />
+    <jaName name="Coal Golem" />
+    <jaName name="Cold Snap" />
+    <jaName name="Combat Medic" />
+    <jaName name="Conch Horn" />
+    <jaName name="Contagion" />
+    <jaName name="Contract from Below" />
+    <jaName name="Cooperation" />
+    <jaName name="Copper Tablet" />
+    <jaName name="Copy Artifact" />
+    <jaName name="Coral Reef" />
+    <jaName name="Crevasse" />
+    <jaName name="Crimson Kobolds" />
+    <jaName name="Crookshank Kobolds" />
+    <jaName name="Curse Artifact" />
+    <jaName name="Curse of Marit Lage" />
+    <jaName name="Cyclopean Tomb" />
+    <jaName name="Dakmor Ghoul" />
+    <jaName name="Damping Field" />
+    <jaName name="Dance of the Dead" />
+    <jaName name="Dark Sphere" />
+    <jaName name="Darkpact" />
+    <jaName name="Daughter of Autumn" />
+    <jaName name="Deadfall" />
+    <jaName name="Deep Spawn" />
+    <jaName name="Deep Water" />
+    <jaName name="Delif's Cone" />
+    <jaName name="Delif's Cube" />
+    <jaName name="Demonic Attorney" />
+    <jaName name="Demonic Consultation" />
+    <jaName name="Demonic Hordes" />
+    <jaName name="Demonic Torment" />
+    <jaName name="Demonic Tutor" />
+    <jaName name="Desert Nomads" />
+    <jaName name="Despotic Scepter" />
+    <jaName name="Devouring Deep" />
+    <jaName name="Devout Monk" />
+    <jaName name="Diabolic Vision" />
+    <jaName name="Diamond Valley" />
+    <jaName name="Didgeridoo" />
+    <jaName name="Dire Wolves" />
+    <jaName name="Diseased Vermin" />
+    <jaName name="Disharmony" />
+    <jaName name="Divine Intervention" />
+    <jaName name="Draconian Cylix" />
+    <jaName name="Drafna's Restoration" />
+    <jaName name="Dread Wight" />
+    <jaName name="Dream Coat" />
+    <jaName name="Dreams of the Dead" />
+    <jaName name="Drop of Honey" />
+    <jaName name="Drought" />
+    <jaName name="Drowned" />
+    <jaName name="Drudge Spell" />
+    <jaName name="Dwarven Armorer" />
+    <jaName name="Dwarven Armory" />
+    <jaName name="Dwarven Lieutenant" />
+    <jaName name="Dwarven Pony" />
+    <jaName name="Dwarven Sea Clan" />
+    <jaName name="Dwarven Song" />
+    <jaName name="Dwarven Trader" />
+    <jaName name="Dwarven Weaponsmith" />
+    <jaName name="Dystopia" />
+    <jaName name="Earthbind" />
+    <jaName name="Earthlink" />
+    <jaName name="Earthlore" />
+    <jaName name="Eater of the Dead" />
+    <jaName name="Ebon Praetor" />
+    <jaName name="Ebony Rhino" />
+    <jaName name="Elder Spawn" />
+    <jaName name="Electric Eel" />
+    <jaName name="Elemental Augury" />
+    <jaName name="Elephant Graveyard" />
+    <jaName name="Elven Fortress" />
+    <jaName name="Elven Lyre" />
+    <jaName name="Elvish Farmer" />
+    <jaName name="Elvish Healer" />
+    <jaName name="Elvish Hunter" />
+    <jaName name="Elvish Scout" />
+    <jaName name="Elvish Spirit Guide" />
+    <jaName name="Enchanted Being" />
+    <jaName name="Energy Arc" />
+    <jaName name="Energy Storm" />
+    <jaName name="Enslaved Scout" />
+    <jaName name="Equinox" />
+    <jaName name="Errand of Duty" />
+    <jaName name="Errant Minion" />
+    <jaName name="Essence Filter" />
+    <jaName name="Essence Vortex" />
+    <jaName name="Eternal Flame" />
+    <jaName name="Eureka" />
+    <jaName name="Evaporate" />
+    <jaName name="Exorcist" />
+    <jaName name="Faerie Noble" />
+    <jaName name="Falling Star" />
+    <jaName name="False Orders" />
+    <jaName name="Fanatical Fever" />
+    <jaName name="Farmstead" />
+    <jaName name="Farrelite Priest" />
+    <jaName name="Farrel's Mantle" />
+    <jaName name="Farrel's Zealot" />
+    <jaName name="Fastbond" />
+    <jaName name="Fasting" />
+    <jaName name="Fatal Lore" />
+    <jaName name="Feast or Famine" />
+    <jaName name="Feint" />
+    <jaName name="Feral Thallid" />
+    <jaName name="Festival" />
+    <jaName name="Fevered Strength" />
+    <jaName name="Field of Dreams" />
+    <jaName name="Fire and Brimstone" />
+    <jaName name="Fire Covenant" />
+    <jaName name="Fire Sprites" />
+    <jaName name="Firestorm Phoenix" />
+    <jaName name="Flooded Woodlands" />
+    <jaName name="Floodwater Dam" />
+    <jaName name="Floral Spuzzem" />
+    <jaName name="Flow of Maggots" />
+    <jaName name="Folk of An-Havva" />
+    <jaName name="Folk of the Pines" />
+    <jaName name="Forbidden Lore" />
+    <jaName name="Force Void" />
+    <jaName name="Forcefield" />
+    <jaName name="Foresight" />
+    <jaName name="Forethought Amulet" />
+    <jaName name="Forgotten Lore" />
+    <jaName name="Fork" />
+    <jaName name="Formation" />
+    <jaName name="Foul Familiar" />
+    <jaName name="Frankenstein's Monster" />
+    <jaName name="Freyalise Supplicant" />
+    <jaName name="Freyalise's Charm" />
+    <jaName name="Freyalise's Winds" />
+    <jaName name="Frost Giant" />
+    <jaName name="Fumarole" />
+    <jaName name="Fungal Bloom" />
+    <jaName name="Fylgja" />
+    <jaName name="Fyndhorn Bow" />
+    <jaName name="Fyndhorn Druid" />
+    <jaName name="Fyndhorn Elves" />
+    <jaName name="Fyndhorn Pollen" />
+    <jaName name="Gaea's Avenger" />
+    <jaName name="Gaea's Touch" />
+    <jaName name="Gargantuan Gorilla" />
+    <jaName name="Gate to Phyrexia" />
+    <jaName name="Gauntlet of Might" />
+    <jaName name="Gaze of Pain" />
+    <jaName name="General Jarkeld" />
+    <jaName name="Ghost Hounds" />
+    <jaName name="Ghostly Flame" />
+    <jaName name="Ghosts of the Damned" />
+    <jaName name="Giant Albatross" />
+    <jaName name="Giant Shark" />
+    <jaName name="Giant Turtle" />
+    <jaName name="Gift of the Woods" />
+    <jaName name="Glacial Chasm" />
+    <jaName name="Glacial Crevasses" />
+    <jaName name="Glaciers" />
+    <jaName name="Glyph of Delusion" />
+    <jaName name="Glyph of Destruction" />
+    <jaName name="Glyph of Doom" />
+    <jaName name="Glyph of Life" />
+    <jaName name="Glyph of Reincarnation" />
+    <jaName name="Goblin Caves" />
+    <jaName name="Goblin Chirurgeon" />
+    <jaName name="Goblin Commando" />
+    <jaName name="Goblin Flotilla" />
+    <jaName name="Goblin Kites" />
+    <jaName name="Goblin Lyre" />
+    <jaName name="Goblin Sappers" />
+    <jaName name="Goblin Settler" />
+    <jaName name="Goblin Ski Patrol" />
+    <jaName name="Goblin Wizard" />
+    <jaName name="Golgothian Sylex" />
+    <jaName name="Gorilla Berserkers" />
+    <jaName name="Gorilla Pack" />
+    <jaName name="Gorilla War Cry" />
+    <jaName name="Gosta Dirk" />
+    <jaName name="Grandmother Sengir" />
+    <jaName name="Granite Gargoyle" />
+    <jaName name="Grave Robbers" />
+    <jaName name="Gravebind" />
+    <jaName name="Gravity Sphere" />
+    <jaName name="Great Defender" />
+    <jaName name="Great Wall" />
+    <jaName name="Green Scarab" />
+    <jaName name="Grim Tutor" />
+    <jaName name="Grizzled Wolverine" />
+    <jaName name="Guardian Angel" />
+    <jaName name="Guardian Beast" />
+    <jaName name="Gustha's Scepter" />
+    <jaName name="Gwendlyn Di Corci" />
+    <jaName name="Halfdane" />
+    <jaName name="Hallowed Ground" />
+    <jaName name="Halls of Mist" />
+    <jaName name="Hammerheim" />
+    <jaName name="Hand of Justice" />
+    <jaName name="Haunting Wind" />
+    <jaName name="Hazduhr the Abbot" />
+    <jaName name="Hazezon Tamar" />
+    <jaName name="Headless Horseman" />
+    <jaName name="Headstone" />
+    <jaName name="Heart of Yavimaya" />
+    <jaName name="Heart Wolf" />
+    <jaName name="Heaven's Gate" />
+    <jaName name="Hell Swarm" />
+    <jaName name="Hellfire" />
+    <jaName name="Helm of Obedience" />
+    <jaName name="Hematite Talisman" />
+    <jaName name="Heroism" />
+    <jaName name="Hidden Path" />
+    <jaName name="High Tide" />
+    <jaName name="Hoar Shade" />
+    <jaName name="Holy Light" />
+    <jaName name="Homarid" />
+    <jaName name="Homarid Shaman" />
+    <jaName name="Homarid Spawning Bed" />
+    <jaName name="Hornet Cobra" />
+    <jaName name="Hot Springs" />
+    <jaName name="Hunding Gjornersen" />
+    <jaName name="Hyalopterous Lemure" />
+    <jaName name="Hymn of Rebirth" />
+    <jaName name="Hyperion Blacksmith" />
+    <jaName name="Icatian Infantry" />
+    <jaName name="Icatian Lieutenant" />
+    <jaName name="Icatian Moneychanger" />
+    <jaName name="Icatian Skirmishers" />
+    <jaName name="Ice Cauldron" />
+    <jaName name="Ice Storm" />
+    <jaName name="Icequake" />
+    <jaName name="Ichneumon Druid" />
+    <jaName name="Icy Prison" />
+    <jaName name="Ifh-Biff Efreet" />
+    <jaName name="Illusionary Forces" />
+    <jaName name="Illusionary Mask" />
+    <jaName name="Illusionary Presence" />
+    <jaName name="Illusionary Terrain" />
+    <jaName name="Illusionary Wall" />
+    <jaName name="Illusions of Grandeur" />
+    <jaName name="Implements of Sacrifice" />
+    <jaName name="Imprison" />
+    <jaName name="In the Eye of Chaos" />
+    <jaName name="Infernal Darkness" />
+    <jaName name="Infernal Denizen" />
+    <jaName name="Infernal Medusa" />
+    <jaName name="Infinite Authority" />
+    <jaName name="Infuse" />
+    <jaName name="Inheritance" />
+    <jaName name="Inquisition" />
+    <jaName name="Invoke Prejudice" />
+    <jaName name="Irini Sengir" />
+    <jaName name="Island of Wak-Wak" />
+    <jaName name="Ivory Gargoyle" />
+    <jaName name="Jacques le Vert" />
+    <jaName name="Jandor's Ring" />
+    <jaName name="Jedit Ojanen" />
+    <jaName name="Jerrard of the Closed Fist" />
+    <jaName name="Jester's Mask" />
+    <jaName name="Jeweled Amulet" />
+    <jaName name="Jihad" />
+    <jaName name="Jinx" />
+    <jaName name="Joven" />
+    <jaName name="Joven's Ferrets" />
+    <jaName name="Jovial Evil" />
+    <jaName name="Juniper Order Advocate" />
+    <jaName name="Juniper Order Druid" />
+    <jaName name="Juzam Djinn" />
+    <jaName name="Karplusan Giant" />
+    <jaName name="Kasimir the Lone Wolf" />
+    <jaName name="Kaysa" />
+    <jaName name="Keeper of Tresserhorn" />
+    <jaName name="Kelsinko Ranger" />
+    <jaName name="Khabal Ghoul" />
+    <jaName name="King Suleiman" />
+    <jaName name="Kjeldoran Escort" />
+    <jaName name="Kjeldoran Frostbeast" />
+    <jaName name="Kjeldoran Guard" />
+    <jaName name="Kjeldoran Knight" />
+    <jaName name="Kjeldoran Outpost" />
+    <jaName name="Kjeldoran Phalanx" />
+    <jaName name="Kjeldoran Skyknight" />
+    <jaName name="Kjeldoran Warrior" />
+    <jaName name="Knights of Thorn" />
+    <jaName name="Knowledge Vault" />
+    <jaName name="Kobold Drill Sergeant" />
+    <jaName name="Kobold Overlord" />
+    <jaName name="Kobolds of Kher Keep" />
+    <jaName name="Koskun Falls" />
+    <jaName name="Koskun Keep" />
+    <jaName name="Krovikan Elementalist" />
+    <jaName name="Krovikan Horror" />
+    <jaName name="Krovikan Plague" />
+    <jaName name="Kry Shield" />
+    <jaName name="Kudzu" />
+    <jaName name="Lady Caleria" />
+    <jaName name="Lady Evangela" />
+    <jaName name="Lady Orca" />
+    <jaName name="Lake of the Dead" />
+    <jaName name="Lance" />
+    <jaName name="Land Cap" />
+    <jaName name="Land Equilibrium" />
+    <jaName name="Lapis Lazuli Talisman" />
+    <jaName name="Lava Burst" />
+    <jaName name="Lava Tubes" />
+    <jaName name="Leaping Lizard" />
+    <jaName name="Leeches" />
+    <jaName name="Leshrac's Sigil" />
+    <jaName name="Lesser Werewolf" />
+    <jaName name="Library of Alexandria" />
+    <jaName name="Lich" />
+    <jaName name="Life Chisel" />
+    <jaName name="Life Matrix" />
+    <jaName name="Lifeblood" />
+    <jaName name="Lightning Blow" />
+    <jaName name="Lim-Dul's Cohort" />
+    <jaName name="Lim-Dul's Hex" />
+    <jaName name="Lim-Dul's High Guard" />
+    <jaName name="Lim-Dul's Paladin" />
+    <jaName name="Living Plane" />
+    <jaName name="Living Wall" />
+    <jaName name="Livonya Silone" />
+    <jaName name="Lodestone Bauble" />
+    <jaName name="Lord Magnus" />
+    <jaName name="Lord of Tresserhorn" />
+    <jaName name="Lost Order of Jarkeld" />
+    <jaName name="Lurker" />
+    <jaName name="Maddening Wind" />
+    <jaName name="Malachite Talisman" />
+    <jaName name="Mammoth Harness" />
+    <jaName name="Mana Drain" />
+    <jaName name="Mana Matrix" />
+    <jaName name="Mana Vortex" />
+    <jaName name="Marble Priest" />
+    <jaName name="Marjhan" />
+    <jaName name="Marsh Goblins" />
+    <jaName name="Marton Stromgald" />
+    <jaName name="Martyrdom" />
+    <jaName name="Martyr's Cry" />
+    <jaName name="Martyrs of Korlis" />
+    <jaName name="Master of the Hunt" />
+    <jaName name="Melee" />
+    <jaName name="Melting" />
+    <jaName name="Mercenaries" />
+    <jaName name="Merchant Ship" />
+    <jaName name="Merseine" />
+    <jaName name="Mesmeric Trance" />
+    <jaName name="Meteor Shower" />
+    <jaName name="Mightstone" />
+    <jaName name="Mijae Djinn" />
+    <jaName name="Mind Whip" />
+    <jaName name="Minion of Leshrac" />
+    <jaName name="Minion of Tevesh Szat" />
+    <jaName name="Miracle Worker" />
+    <jaName name="Mirror Universe" />
+    <jaName name="Misfortune" />
+    <jaName name="Mishra's Groundbreaker" />
+    <jaName name="Mishra's Workshop" />
+    <jaName name="Misinformation" />
+    <jaName name="Moat" />
+    <jaName name="Mold Demon" />
+    <jaName name="Monsoon" />
+    <jaName name="Moor Fiend" />
+    <jaName name="Mountain Stronghold" />
+    <jaName name="Mountain Titan" />
+    <jaName name="Mox Emerald" />
+    <jaName name="Mox Jet" />
+    <jaName name="Mox Pearl" />
+    <jaName name="Mox Ruby" />
+    <jaName name="Mox Sapphire" />
+    <jaName name="Mudslide" />
+    <jaName name="Musician" />
+    <jaName name="Mystic Decree" />
+    <jaName name="Mystic Might" />
+    <jaName name="Mystic Remora" />
+    <jaName name="Nacre Talisman" />
+    <jaName name="Naked Singularity" />
+    <jaName name="Nameless Race" />
+    <jaName name="Narwhal" />
+    <jaName name="Natural Selection" />
+    <jaName name="Nature's Blessing" />
+    <jaName name="Nature's Chosen" />
+    <jaName name="Nature's Wrath" />
+    <jaName name="Necropolis" />
+    <jaName name="Nether Void" />
+    <jaName name="Nettling Imp" />
+    <jaName name="Niall Silvain" />
+    <jaName name="Noble Steeds" />
+    <jaName name="Norritt" />
+    <jaName name="North Star" />
+    <jaName name="Nova Pentacle" />
+    <jaName name="Oath of Lim-Dul" />
+    <jaName name="Old Man of the Sea" />
+    <jaName name="Omen of Fire" />
+    <jaName name="Onyx Talisman" />
+    <jaName name="Orc General" />
+    <jaName name="Orcish Cannoneers" />
+    <jaName name="Orcish Mechanics" />
+    <jaName name="Orcish Mine" />
+    <jaName name="Orcish Veteran" />
+    <jaName name="Order of Leitbur" />
+    <jaName name="Order of the Ebon Hand" />
+    <jaName name="Oubliette" />
+    <jaName name="Pale Bears" />
+    <jaName name="Part Water" />
+    <jaName name="Pavel Maliki" />
+    <jaName name="People of the Woods" />
+    <jaName name="Pestilence Rats" />
+    <jaName name="Phantasmal Mount" />
+    <jaName name="Phantasmal Sphere" />
+    <jaName name="Phelddagrif" />
+    <jaName name="Phyrexian Boon" />
+    <jaName name="Phyrexian Devourer" />
+    <jaName name="Phyrexian Gremlins" />
+    <jaName name="Phyrexian Portal" />
+    <jaName name="Phyrexian War Beast" />
+    <jaName name="Pixie Queen" />
+    <jaName name="Planar Gate" />
+    <jaName name="Plateau" />
+    <jaName name="Polar Kraken" />
+    <jaName name="Power Artifact" />
+    <jaName name="Powerleech" />
+    <jaName name="Preacher" />
+    <jaName name="Priest of Yawgmoth" />
+    <jaName name="Primitive Justice" />
+    <jaName name="Princess Lucrezia" />
+    <jaName name="Prophecy" />
+    <jaName name="Psychic Allergy" />
+    <jaName name="Psychic Purge" />
+    <jaName name="Pygmy Allosaurus" />
+    <jaName name="Pyknite" />
+    <jaName name="Pyramids" />
+    <jaName name="Quagmire" />
+    <jaName name="Quarum Trench Gnomes" />
+    <jaName name="Raging Bull" />
+    <jaName name="Raging River" />
+    <jaName name="Ragnar" />
+    <jaName name="Raiding Party" />
+    <jaName name="Rainbow Vale" />
+    <jaName name="Rally" />
+    <jaName name="Ramirez DePietro" />
+    <jaName name="Ramses Overdark" />
+    <jaName name="Rapid Fire" />
+    <jaName name="Rashka the Slayer" />
+    <jaName name="Rasputin Dreamweaver" />
+    <jaName name="Ray of Erasure" />
+    <jaName name="Reality Twist" />
+    <jaName name="Reclamation" />
+    <jaName name="Reconstruction" />
+    <jaName name="Red Scarab" />
+    <jaName name="Reflecting Mirror" />
+    <jaName name="Regrowth" />
+    <jaName name="Remove Enchantments" />
+    <jaName name="Renewal" />
+    <jaName name="Reset" />
+    <jaName name="Retribution" />
+    <jaName name="Reveka, Wizard Savant" />
+    <jaName name="Reverberation" />
+    <jaName name="Reverse Polarity" />
+    <jaName name="Righteous Avengers" />
+    <jaName name="Rime Dryad" />
+    <jaName name="Ring of Immortals" />
+    <jaName name="Ring of Ma'ruf" />
+    <jaName name="Ring of Renewal" />
+    <jaName name="Riptide" />
+    <jaName name="Ritual of Subdual" />
+    <jaName name="Ritual of the Machine" />
+    <jaName name="Riven Turnbull" />
+    <jaName name="River Delta" />
+    <jaName name="River Merfolk" />
+    <jaName name="Roc of Kher Ridges" />
+    <jaName name="Rock Hydra" />
+    <jaName name="Rocket Launcher" />
+    <jaName name="Rogue Skycaptain" />
+    <jaName name="Rohgahh of Kher Keep" />
+    <jaName name="Root Spider" />
+    <jaName name="Roterothopter" />
+    <jaName name="Royal Decree" />
+    <jaName name="Royal Herbalist" />
+    <jaName name="Royal Trooper" />
+    <jaName name="Runed Arch" />
+    <jaName name="Rust" />
+    <jaName name="Rysorian Badger" />
+    <jaName name="Sacrifice" />
+    <jaName name="Samite Alchemist" />
+    <jaName name="Sandals of Abdallah" />
+    <jaName name="Savaen Elves" />
+    <jaName name="Savannah" />
+    <jaName name="Scarab of the Unseen" />
+    <jaName name="Scarecrow" />
+    <jaName name="Scarwood Bandits" />
+    <jaName name="Scarwood Goblins" />
+    <jaName name="Scarwood Hag" />
+    <jaName name="School of the Unseen" />
+    <jaName name="Scrubland" />
+    <jaName name="Sea Kings' Blessing" />
+    <jaName name="Sea Troll" />
+    <jaName name="Seafarer's Quay" />
+    <jaName name="Season of the Witch" />
+    <jaName name="Seasoned Tactician" />
+    <jaName name="Sedge Troll" />
+    <jaName name="Seizures" />
+    <jaName name="Sengir Bats" />
+    <jaName name="Serendib Djinn" />
+    <jaName name="Serra Aviary" />
+    <jaName name="Serra Inquisitors" />
+    <jaName name="Shahrazad" />
+    <jaName name="Shambling Strider" />
+    <jaName name="Shelkin Brownie" />
+    <jaName name="Sheltered Valley" />
+    <jaName name="Shield of the Ages" />
+    <jaName name="Shield Sphere" />
+    <jaName name="Shrieking Specter" />
+    <jaName name="Shyft" />
+    <jaName name="Silhouette" />
+    <jaName name="Silver Erne" />
+    <jaName name="Singing Tree" />
+    <jaName name="Sir Shandlar of Eberyn" />
+    <jaName name="Skeleton Ship" />
+    <jaName name="Snow Fortress" />
+    <jaName name="Snow Hound" />
+    <jaName name="Snowblind" />
+    <jaName name="Snowfall" />
+    <jaName name="Sol Grail" />
+    <jaName name="Soldevi Adnate" />
+    <jaName name="Soldevi Digger" />
+    <jaName name="Soldevi Excavations" />
+    <jaName name="Soldevi Golem" />
+    <jaName name="Soldevi Heretic" />
+    <jaName name="Soldevi Machinist" />
+    <jaName name="Soldevi Sentry" />
+    <jaName name="Soldevi Simulacrum" />
+    <jaName name="Soldevi Steam Beast" />
+    <jaName name="Soldier of Fortune" />
+    <jaName name="Songs of the Damned" />
+    <jaName name="Soraya the Falconer" />
+    <jaName name="Sorrow's Path" />
+    <jaName name="Soul Exchange" />
+    <jaName name="Soul Kiss" />
+    <jaName name="Spectral Bears" />
+    <jaName name="Spectral Cloak" />
+    <jaName name="Spectral Shield" />
+    <jaName name="Spinal Villain" />
+    <jaName name="Spiny Starfish" />
+    <jaName name="Spirit Shield" />
+    <jaName name="Spiritual Sanctuary" />
+    <jaName name="Splintering Wind" />
+    <jaName name="Spoils of Evil" />
+    <jaName name="Spoils of War" />
+    <jaName name="Spore Cloud" />
+    <jaName name="Spore Flower" />
+    <jaName name="Staff of the Ages" />
+    <jaName name="Staff of Zegon" />
+    <jaName name="Standing Stones" />
+    <jaName name="Stench of Decay" />
+    <jaName name="Stench of Evil" />
+    <jaName name="Stone Calendar" />
+    <jaName name="Stonehands" />
+    <jaName name="Stone-Throwing Devils" />
+    <jaName name="Storm Spirit" />
+    <jaName name="Storm World" />
+    <jaName name="Stream of Acid" />
+    <jaName name="Stromgald Spy" />
+    <jaName name="Stunted Growth" />
+    <jaName name="Subdue" />
+    <jaName name="Su-Chi" />
+    <jaName name="Suffocation" />
+    <jaName name="Sunastian Falconer" />
+    <jaName name="Sunstone" />
+    <jaName name="Sustaining Spirit" />
+    <jaName name="Svyelunite Priest" />
+    <jaName name="Sword of the Ages" />
+    <jaName name="Sworn Defender" />
+    <jaName name="Sylvan Paradise" />
+    <jaName name="Tablet of Epityr" />
+    <jaName name="Taiga" />
+    <jaName name="Tangle Kelp" />
+    <jaName name="Taste of Paradise" />
+    <jaName name="Tawnos's Coffin" />
+    <jaName name="Telekinesis" />
+    <jaName name="Tetsuo Umezawa" />
+    <jaName name="Thallid Devourer" />
+    <jaName name="Thawing Glaciers" />
+    <jaName name="The Abyss" />
+    <jaName name="The Lady of the Mountain" />
+    <jaName name="The Tabernacle at Pendrell Vale" />
+    <jaName name="Thelonite Druid" />
+    <jaName name="Thelonite Monk" />
+    <jaName name="Thelon's Chant" />
+    <jaName name="Thelon's Curse" />
+    <jaName name="Thermokarst" />
+    <jaName name="Thorn Thallid" />
+    <jaName name="Thought Lash" />
+    <jaName name="Thrull Champion" />
+    <jaName name="Thrull Wizard" />
+    <jaName name="Thunder Dragon" />
+    <jaName name="Thunder Spirit" />
+    <jaName name="Thunder Wall" />
+    <jaName name="Tidal Control" />
+    <jaName name="Tidal Flats" />
+    <jaName name="Tidal Influence" />
+    <jaName name="Timberline Ridge" />
+    <jaName name="Time Vault" />
+    <jaName name="Time Walk" />
+    <jaName name="Timetwister" />
+    <jaName name="Timmerian Fiends" />
+    <jaName name="Tivadar's Crusade" />
+    <jaName name="Tolaria" />
+    <jaName name="Tor Giant" />
+    <jaName name="Tornado" />
+    <jaName name="Torsten Von Ursus" />
+    <jaName name="Total War" />
+    <jaName name="Touch of Darkness" />
+    <jaName name="Touch of Vitae" />
+    <jaName name="Tourach's Chant" />
+    <jaName name="Tourach's Gate" />
+    <jaName name="Tower of Coireall" />
+    <jaName name="Tracker" />
+    <jaName name="Trade Caravan" />
+    <jaName name="Trailblazer" />
+    <jaName name="Transmute Artifact" />
+    <jaName name="Tropical Island" />
+    <jaName name="Tuknir Deathlock" />
+    <jaName name="Tundra" />
+    <jaName name="Two-Headed Giant of Foriys" />
+    <jaName name="Typhoon" />
+    <jaName name="Underground Sea" />
+    <jaName name="Undergrowth" />
+    <jaName name="Undertow" />
+    <jaName name="Unholy Citadel" />
+    <jaName name="Unlikely Alliance" />
+    <jaName name="Urborg" />
+    <jaName name="Ur-Drago" />
+    <jaName name="Urza's Chalice" />
+    <jaName name="Urza's Engine" />
+    <jaName name="Urza's Miter" />
+    <jaName name="Varchild's Crusader" />
+    <jaName name="Varchild's War-Riders" />
+    <jaName name="Veldrane of Sengir" />
+    <jaName name="Veldt" />
+    <jaName name="Venarian Gold" />
+    <jaName name="Vesuvan Doppelganger" />
+    <jaName name="Veteran Bodyguard" />
+    <jaName name="Veteran's Voice" />
+    <jaName name="Vibrating Sphere" />
+    <jaName name="Viscerid Armor" />
+    <jaName name="Vodalian Knights" />
+    <jaName name="Vodalian Mage" />
+    <jaName name="Vodalian War Machine" />
+    <jaName name="Volcanic Island" />
+    <jaName name="Walking Dead" />
+    <jaName name="Walking Wall" />
+    <jaName name="Wall of Caltrops" />
+    <jaName name="Wall of Earth" />
+    <jaName name="Wall of Kelp" />
+    <jaName name="Wall of Lava" />
+    <jaName name="Wall of Light" />
+    <jaName name="Wall of Pine Needles" />
+    <jaName name="Wall of Putrid Flesh" />
+    <jaName name="Wall of Shields" />
+    <jaName name="Wall of Tombstones" />
+    <jaName name="Wand of Ith" />
+    <jaName name="Wandering Mage" />
+    <jaName name="War Chariot" />
+    <jaName name="Warning" />
+    <jaName name="Water Wurm" />
+    <jaName name="Weakstone" />
+    <jaName name="Wheel of Fortune" />
+    <jaName name="Whip Vine" />
+    <jaName name="Whippoorwill" />
+    <jaName name="Whirling Catapult" />
+    <jaName name="White Scarab" />
+    <jaName name="Whiteout" />
+    <jaName name="Wiitigo" />
+    <jaName name="Wild Aesthir" />
+    <jaName name="Willow Faerie" />
+    <jaName name="Willow Priestess" />
+    <jaName name="Willow Satyr" />
+    <jaName name="Winter Sky" />
+    <jaName name="Winter's Chill" />
+    <jaName name="Winter's Night" />
+    <jaName name="Withering Wisps" />
+    <jaName name="Wizards' School" />
+    <jaName name="Wood Elemental" />
+    <jaName name="Woolly Spider" />
+    <jaName name="Word of Command" />
+    <jaName name="Word of Undoing" />
+    <jaName name="Worms of the Earth" />
+    <jaName name="Wormwood Treefolk" />
+    <jaName name="Yavimaya Ancients" />
+    <jaName name="Yavimaya Gnats" />
+    <jaName name="Ydwen Efreet" />
+    <jaName name="Zelyon Sword" />
+    <jaName name="Zuran Enchanter" />
+    <jaName name="Zuran Orb" />
   </remove>
 </mojp>
