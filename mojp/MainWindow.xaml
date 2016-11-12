@@ -127,12 +127,13 @@
 	<Window.ContextMenu>
 		<ContextMenu>
 			<MenuItem Header="MO をキャプチャ" Click="OnCapture" />
-			<MenuItem Header="カード名をコピー" Click="OnCopyCardName">
+			<MenuItem Header="カード名をコピー" IsEnabled="{Binding CanCopyJapaneseName}" Click="OnCopyCardName">
 				<MenuItem.Icon>
 					<Image Source="Resources\Copy.png" />
 				</MenuItem.Icon>
 			</MenuItem>
-			<MenuItem Header="カードを MTG Wiki で調べる" Click="OnGoToWiki">
+			<MenuItem Header="カード名 (英語) をコピー" IsEnabled="{Binding CanCopyEnglishName}" Click="OnCopyEnglishName" />
+			<MenuItem Header="カードを MTG Wiki で調べる" IsEnabled="{Binding CanBrowseWiki}" Click="OnGoToWiki">
 				<MenuItem.Icon>
 					<Image Source="Resources\Web.png" />
 				</MenuItem.Icon>
