@@ -13,6 +13,7 @@
 				<Setter Property="Padding" Value="5,2" />
 				<Setter Property="VerticalContentAlignment" Value="Center" />
 			</Style>
+			<BooleanToVisibilityConverter x:Key="bool2visible" />
 		</Grid.Resources>
 		<Grid.RowDefinitions>
 			<RowDefinition Height="Auto" />
@@ -35,7 +36,7 @@
 					<ColumnDefinition />
 				</Grid.ColumnDefinitions>
 				<TextBlock Margin="5,0" VerticalAlignment="Center">バージョン情報</TextBlock>
-				<Separator Grid.Column="1" BorderThickness="1" BorderBrush="Gray" />
+				<Separator Grid.Column="1" BorderBrush="Gray" />
 			</Grid>
 			<Grid Grid.Row="1">
 				<Grid.ColumnDefinitions>
@@ -48,12 +49,12 @@
 					<RowDefinition Height="Auto" />
 					<RowDefinition Height="Auto" />
 				</Grid.RowDefinitions>
-				<TextBlock>リリース バージョン：</TextBlock>
+				<TextBlock>リリース バージョン</TextBlock>
 				<TextBlock Grid.Column="2">1.2.0</TextBlock>
 				<TextBlock Grid.Column="3" HorizontalAlignment="Right">
 					<Hyperlink ToolTip="https://github.com/fog-bank/mojp/releases" Click="OnClickHyperlink">GitHub に移動</Hyperlink>
 				</TextBlock>
-				<TextBlock Grid.Row="1">対応最新セット：</TextBlock>
+				<TextBlock Grid.Row="1">対応最新セット</TextBlock>
 				<TextBlock Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2">統率者 2016 / カラデシュ</TextBlock>
 			</Grid>
 			<Grid Grid.Row="2" Margin="0,15,0,5">
@@ -62,7 +63,7 @@
 					<ColumnDefinition />
 				</Grid.ColumnDefinitions>
 				<TextBlock Margin="5,0" VerticalAlignment="Center">表示</TextBlock>
-				<Separator Grid.Column="1" BorderThickness="1" BorderBrush="Gray" />
+				<Separator Grid.Column="1" BorderBrush="Gray" />
 			</Grid>
 			<Grid Grid.Row="3">
 				<Grid.ColumnDefinitions>
@@ -106,7 +107,7 @@
 					<ColumnDefinition />
 				</Grid.ColumnDefinitions>
 				<TextBlock Margin="5,0" VerticalAlignment="Center">動作</TextBlock>
-				<Separator Grid.Column="1" BorderThickness="1" BorderBrush="Gray" />
+				<Separator Grid.Column="1" BorderBrush="Gray" />
 			</Grid>
 			<Grid Grid.Row="5">
 				<Grid.RowDefinitions>
@@ -134,20 +135,21 @@
 						<ColumnDefinition />
 						<ColumnDefinition />
 					</Grid.ColumnDefinitions>
-					<TextBlock Margin="0,0,10,0">Preview Pane を探す時間間隔 :</TextBlock>
+					<TextBlock Margin="0,0,10,0">Preview Pane を探す時間間隔</TextBlock>
 					<TextBox Grid.Column="1" MinWidth="100" VerticalContentAlignment="Center" Text="{Binding RefreshIntervalMilliseconds}" />
 					<TextBlock Grid.Column="2">ミリ秒</TextBlock>
 				</Grid>
 			</Grid>
-			<Grid Grid.Row="6" Margin="0,15,0,5">
+			<Grid Grid.Row="6" Margin="0,10,0,0">
 				<Grid.ColumnDefinitions>
 					<ColumnDefinition Width="Auto" />
+					<ColumnDefinition Width="5" />
 					<ColumnDefinition />
 				</Grid.ColumnDefinitions>
-				<TextBlock Margin="5,0" VerticalAlignment="Center">カード データベースの置換 (上級者向け)</TextBlock>
-				<Separator Grid.Column="1" BorderThickness="1" BorderBrush="Gray" />
+				<Expander Name="expander" Header="カードデータの編集 (開発用)" />
+				<Separator Grid.Column="2" BorderBrush="Gray" />
 			</Grid>
-			<Grid Grid.Row="7">
+			<Grid Grid.Row="7" Visibility="{Binding IsExpanded, ElementName=expander, Converter={StaticResource bool2visible}}">
 				<Grid.RowDefinitions>
 					<RowDefinition Height="Auto" />
 					<RowDefinition Height="Auto" />
@@ -161,20 +163,20 @@
 					<Run>表示されたテキスト ファイルを shift-jis で保存してください。</Run>
 				</TextBlock>
 				<CheckBox Name="cbxSaveDb" Grid.Row="1" VerticalContentAlignment="Center" IsChecked="True" 
-						  ToolTip="アプリケーション フォルダの cards.xml を編集し、次回起動以降もそれを使用するようにします。">
+						  ToolTip="起動時に読み込む cards.xml を編集し、次回起動以降もそれを使用するようにします。">
 					<StackPanel Orientation="Horizontal">
-						<TextBlock>置換したデータベースを永続化する</TextBlock>
+						<TextBlock>置換したデータを永続化する</TextBlock>
 						<Image Source="Resources/Information.png" Height="16" Margin="5,0,0,0" />
 					</StackPanel>
 				</CheckBox>
 				<StackPanel Grid.Row="3" HorizontalAlignment="Right" Orientation="Horizontal">
-					<Button Click="OnBrowseSearchTxt">WHISPER 検索結果テキストの読み込み..</Button>
+					<Button Click="OnBrowseSearchTxt">検索結果テキストの読み込み..</Button>
 					<Image Name="imgLoaded" Source="Resources/Checkmark.png" Height="20" Margin="5,0,5,0" Visibility="Collapsed" />
 				</StackPanel>
 			</Grid>
 		</Grid>
-		<StackPanel Grid.Row="1" Margin="0,20,0,0">
-			<Button HorizontalAlignment="Right" IsCancel="True">OK</Button>
+		<StackPanel Grid.Row="1" Margin="0,10,0,0">
+			<Button Padding="10,2" HorizontalAlignment="Right" IsCancel="True">OK</Button>
 		</StackPanel>
 	</Grid>
 </Window>
