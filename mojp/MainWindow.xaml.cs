@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.IO;
 using System.Threading.Tasks;
 using System.Windows;
@@ -49,38 +50,42 @@ namespace Mojp
 
 				imgLoading.Visibility = Visibility.Hidden;
 			}
-
 			ViewModel.SetRefreshTimer(Dispatcher);
-		}
-
-		private void OnCopyCardName(object sender, RoutedEventArgs e)
-		{
-			var card = ViewModel?.CurrentCard;
-			string name = card?.JapaneseName;
-
-			if (string.IsNullOrEmpty(name))
-				name = card?.Name;
-
-			if (name != null)
-				Clipboard.SetText(name);
-		}
-
-		private void OnVoice(object sender, RoutedEventArgs e)
-		{
-		}
-
-		private async void OnHide(object sender, RoutedEventArgs e)
-		{
-			Visibility = Visibility.Hidden;
-
-			await Task.Delay(5000);
-
-			Visibility = Visibility.Visible;
 		}
 
 		private void OnCapture(object sender, RoutedEventArgs e)
 		{
 			ViewModel.CapturePreviewPane();
+		}
+
+		private void OnCopyCardName(object sender, RoutedEventArgs e)
+		{
+			Clipboard.SetText(ViewModel.SelectedCard.JapaneseName);
+		}
+
+		private void OnCopyEnglishName(object sender, RoutedEventArgs e)
+		{
+			Clipboard.SetText(ViewModel.SelectedCard.Name);
+		}
+
+		private void OnGoToWiki(object sender, RoutedEventArgs e)
+		{
+			var card = ViewModel.SelectedCard;
+			string link = card.WikiLink;
+
+			if (link == null)
+			{
+				if (card.HasJapaneseName)
+				{
+					link = Uri.EscapeUriString(card.JapaneseName) + "/" + card.Name.Replace(' ', '_');
+				}
+				else
+					link = card.Name.Replace(' ', '_');
+			}
+			else
+				link = Uri.EscapeUriString(link);
+
+			Process.Start("http://mtgwiki.com/wiki/" + link);
 		}
 
 		private void OnOption(object sender, RoutedEventArgs e)
@@ -95,6 +100,15 @@ namespace Mojp
 
 			// Preview Pane の自動探索の設定を反映
 			ViewModel.SetRefreshTimer(Dispatcher);
+		}
+
+		private async void OnHide(object sender, RoutedEventArgs e)
+		{
+			Visibility = Visibility.Hidden;
+
+			await Task.Delay(5000);
+
+			Visibility = Visibility.Visible;
 		}
 
 		private void OnWindowMinimize(object sender, RoutedEventArgs e)

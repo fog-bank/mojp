@@ -25,7 +25,7 @@ namespace Mojp {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("360")]
+        [global::System.Configuration.DefaultSettingValueAttribute("330")]
         public double WindowWidth {
             get {
                 return ((double)(this["WindowWidth"]));
@@ -37,7 +37,7 @@ namespace Mojp {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("200")]
+        [global::System.Configuration.DefaultSettingValueAttribute("260")]
         public double WindowHeight {
             get {
                 return ((double)(this["WindowHeight"]));
@@ -49,7 +49,7 @@ namespace Mojp {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Meiryo")]
+        [global::System.Configuration.DefaultSettingValueAttribute("メイリオ")]
         public string CardTextFontFamily {
             get {
                 return ((string)(this["CardTextFontFamily"]));
@@ -140,6 +140,18 @@ namespace Mojp {
             }
             set {
                 this["UpgradeRequired"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool ShowBasicLands {
+            get {
+                return ((bool)(this["ShowBasicLands"]));
+            }
+            set {
+                this["ShowBasicLands"] = value;
             }
         }
     }

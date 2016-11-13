@@ -1,7 +1,9 @@
 ﻿using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Text;
 using System.Windows;
+using System.Windows.Documents;
 using System.Windows.Media;
 using Microsoft.Win32;
 
@@ -12,19 +14,31 @@ namespace Mojp
 	/// </summary>
 	public partial class OptionDialog : Window
 	{
-		public OptionDialog(object vm)
+		public OptionDialog(object viewModel)
 		{
 			InitializeComponent();
 
+			var vm = viewModel as MainViewModel;
 			var fonts = Fonts.SystemFontFamilies;
 			var fontNames = new List<string>(fonts.Count);
+			var lang = this.Language;
 
 			foreach (var font in fonts)
-				fontNames.Add(font.Source);
+			{
+				// フォント名に日本語があるなら、それを使う
+				string source;
+				if (!font.FamilyNames.TryGetValue(lang, out source))
+					source = font.Source;
 
+				fontNames.Add(source);
+
+				// フォント名を日本語で表示する前のバージョンのための措置 (~ 1.2.11030.7)
+				if (font.Source == vm.FontFamily)
+					vm.FontFamily = source;
+			}
 			fontNames.Sort();
 			this.cmbFonts.ItemsSource = fontNames;
-
+			
 			this.DataContext = vm;
 		}
 
@@ -33,6 +47,8 @@ namespace Mojp
 		/// </summary>
 		private void OnBrowseSearchTxt(object sender, RoutedEventArgs e)
 		{
+			imgLoaded.Visibility = Visibility.Collapsed;
+
 			var dlg = new OpenFileDialog();
 			dlg.FileName = "search.txt";
 			dlg.CheckFileExists = true;
@@ -45,10 +61,20 @@ namespace Mojp
 				{
 					App.SetCardInfosFromWhisper(sr);
 
+					if (File.Exists("appendix.xml"))
+						App.FixCardInfo("appendix.xml");
+
 					if (cbxSaveDb.IsChecked == true)
 						App.SaveAsXml("cards.xml");
+
+					imgLoaded.Visibility = Visibility.Visible;
 				}
 			}
+		}
+
+		private void OnClickHyperlink(object sender, RoutedEventArgs e)
+		{
+			Process.Start((sender as Hyperlink).ToolTip.ToString());
 		}
 	}
 }
