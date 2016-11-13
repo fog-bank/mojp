@@ -37,7 +37,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>1468678499_contents.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\dictionary.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -101,8 +101,15 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Information.png" />
-    <Resource Include="1468678499_contents.ico" />
+    <Resource Include="Resources\Checkmark.png" />
+    <Resource Include="Resources\Web.png" />
+    <Resource Include="Resources\Copy.png" />
+    <Resource Include="Resources\Information.png" />
+    <Resource Include="Resources\dictionary.ico" />
+    <Content Include="appendix.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="cards.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

@@ -3,13 +3,13 @@
   <Profiles />
   <Settings>
     <Setting Name="WindowWidth" Type="System.Double" Scope="User">
-      <Value Profile="(Default)">360</Value>
+      <Value Profile="(Default)">330</Value>
     </Setting>
     <Setting Name="WindowHeight" Type="System.Double" Scope="User">
-      <Value Profile="(Default)">200</Value>
+      <Value Profile="(Default)">260</Value>
     </Setting>
     <Setting Name="CardTextFontFamily" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Meiryo</Value>
+      <Value Profile="(Default)">メイリオ</Value>
     </Setting>
     <Setting Name="CardTextFontSize" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">12</Value>
@@ -30,6 +30,9 @@
       <Value Profile="(Default)">True</Value>
     </Setting>
     <Setting Name="UpgradeRequired" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ShowBasicLands" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
   </Settings>
