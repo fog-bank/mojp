@@ -18,7 +18,7 @@ namespace Mojp
 		/// <summary>
 		/// カードの英語名を取得または設定します。
 		/// </summary>
-		public string Name { get; set; }
+		public string Name { get; private set; }
 
 		/// <summary>
 		/// カードの日本語名を取得または設定します。
@@ -89,7 +89,7 @@ namespace Mojp
 		public bool HasJapaneseName => JapaneseName != null && Name != JapaneseName;
 
 		/// <summary>
-		/// 空のオブジェクトを取得します。オブジェクト自身は読み取り専用になっていませんではないですが、変更しないでください。
+		/// 空のオブジェクトを取得します。オブジェクト自身は読み取り専用になっていませんが、変更しないでください。
 		/// </summary>
 		public static Card Empty { get; } = new Card();
 
