@@ -1,10 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns="https://github.com/fog-bank/mojp/blob/master/mojp/appendix.xsd"
-           xmlns:mstns="https://github.com/fog-bank/mojp/blob/master/mojp/appendix.xsd"
-           xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           id="appendix"
-           targetNamespace="https://github.com/fog-bank/mojp/blob/master/mojp/appendix.xsd"
-           elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
   <xs:attributeGroup name="cardAttributes">
     <xs:attribute name="name" type="xs:string" use="required" />
     <xs:attribute name="jaName" type="xs:string" use="required" />
