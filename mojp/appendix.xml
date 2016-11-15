@@ -17,7 +17,7 @@
     <card name="Kelp" jaName="ケルプ" type="トークン・クリーチャー ― 植物・壁" pt="0/1" related="Wall of Kelp">防衛</card>
     <card name="Lightning Rager" jaName="稲妻の憤怒獣" type="トークン・クリーチャー ― エレメンタル" pt="5/1" related="Rite of the Raging Storm">トランプル、速攻
 終了ステップの開始時に、このクリーチャーを生け贄に捧げる。</card>
-    <card name="Marit Lage" jaName="マリット・レイジ" type="トークン・伝説のクリーチャー — アバター" pt="20/20" related="Dark Depths"></card>
+    <card name="Marit Lage" jaName="マリット・レイジ" type="トークン・伝説のクリーチャー — アバター" pt="20/20" related="Dark Depths">飛行、破壊不能</card>
     <card name="Minor Demon" jaName="マイナー・デーモン" type="トークン・クリーチャー ― デーモン" pt="1/1" related="Boris Devilboon"></card>
     <card name="Stangg Twin" jaName="スタングの双子" type="トークン・伝説のクリーチャー ― 人間・戦士" pt="3/4" related="Stangg"></card>
     <card name="Tombspawn" jaName="屍鬼" type="トークン・クリーチャー ― ゾンビ" pt="2/2" related="Tombstone Stairwell">速攻</card>
@@ -27,7 +27,7 @@
     <card name="Voja" jaName="ヴォジャ" type="トークン・伝説のクリーチャー ― 狼" pt="2/2" related="Tolsimir Wolfblood"></card>
     <card name="Wasp" jaName="ワスプ" type="トークン・アーティファクト・クリーチャー ― 昆虫" pt="1/1" related="The Hive">飛行（それは飛行や到達を持たないクリーチャーによってはブロックされない。）</card>
     <card name="Wirefly" jaName="針金バエ" type="トークン・アーティファクト・クリーチャー ― 昆虫" pt="2/2" related="Wirefly Hive">飛行</card>
-    <card name="Wolves of the Hunt" jaName="狩人狼" type="トークン・クリーチャー ― 狼" pt="1/1" related="Master of the Hunt">他の《狩人狼》という名前のクリーチャーとのバンド</card>
+    <card name="Wolves of the Hunt" jaName="狩人狼" type="トークン・クリーチャー ― 狼" pt="1/1" related="Master of the Hunt">他の《狩人狼/Wolves of the Hunt》という名前のクリーチャーとのバンド</card>
     <!-- 単一の特性しかないトークン -->
     <card name="Eldrazi Spawn" jaName="エルドラージ・落とし子" type="トークン・クリーチャー ― エルドラージ・落とし子" pt="0/1">このクリーチャーを生け贄に捧げる：あなたのマナ・プールに(◇)を加える。</card>
     <card name="Eldrazi Scion" jaName="エルドラージ・末裔" type="トークン・クリーチャー ― エルドラージ・末裔" pt="1/1">このクリーチャーを生け贄に捧げる：あなたのマナ・プールに(◇)を加える。</card>
@@ -39,14 +39,14 @@
     <card name="Manifest" jaName="予示" type="クリーチャー" pt="2/2">予示されたクリーチャー・カードは、それのマナ・コストで、いつでも表向きにしてよい。裏向きのカードは、それの変異コストで表向きにしてもよい。</card>
     <card name="Morph" jaName="変異" type="クリーチャー" pt="2/2">変異を持つカードは、それの変異コストを支払うことで、いつでも表向きにしてよい。</card>
     <card name="Myr" jaName="マイア" type="トークン・アーティファクト・クリーチャー ― マイア" pt="1/1"></card>
-    <card name="Pincher" jaName="ピンチャー" type="トークン・クリーチャー ― ピンチャー" pt="2/2"></card>
+    <card name="Pincher" jaName="ピンチャー" type="トークン・クリーチャー ― ピンチャー" pt="2/2" related="Summoning Station"></card>
     <card name="Serf" jaName="農奴" type="トークン・クリーチャー ― 農奴" pt="0/1" related="Sengir Autocrat"></card>
     <card name="Servo" jaName="霊気装置" type="トークン・アーティファクト・クリーチャー ― 霊気装置" pt="1/1"></card>
     <card name="Starfish" jaName="ヒトデ" type="トークン・クリーチャー ― ヒトデ" pt="0/1" related="Spiny Starfish"></card>
     <card name="Survivor" jaName="生存者" type="トークン・クリーチャー ― 生存者" pt="1/1" related="Varchild's War-Riders"></card>
     <card name="Squirrel" jaName="リス" type="トークン・クリーチャー ― リス" pt="1/1"></card>
     <card name="Thopter" jaName="飛行機械" type="トークン・アーティファクト・クリーチャー ― 飛行機械" pt="1/1">飛行</card>
-    <card name="Triskelavite" jaName="トリスケラバイト" type="トークン・アーティファクト・クリーチャー ― トリスケラバイト" pt="1/1">飛行
+    <card name="Triskelavite" jaName="トリスケラバイト" type="トークン・アーティファクト・クリーチャー ― トリスケラバイト" pt="1/1" related="Triskelavus">飛行
 このクリーチャーを生け贄に捧げる：クリーチャー１体かプレイヤー１人を対象とする。このクリーチャーはそれに１点のダメージを与える。</card>
     <card name="Weird" jaName="奇魔" type="トークン・クリーチャー ― 奇魔" pt="3/3" related="Thunderheads">防衛、飛行</card>
     <!-- Vanguard -->
@@ -54,6 +54,7 @@
 (３),カードを１枚捨てる：無作為に選ばれたソーサリー・カード３枚をコピーする。あなたはそれらのコピーのうちの１つをマナ・コストを支払わずに唱えてもよい。この能力は、あなたがソーサリーを唱えられるときにのみ起動できる。</card>
     <card name="Avatar - Momir Vig, Simic Visionary" jaName="シミックの幻想家、モミール・ヴィグ" type="ヴァンガード" pt="手札 +0/ライフ +4" wikilink="Momir Vig, Simic Visionary Avatar">(Ｘ),カードを１枚捨てる：点数で見たマナ・コストがＸである、無作為に選ばれたクリーチャー・カード１枚のコピーであるトークンを１体生成する。この能力は、あなたがソーサリーを唱えられるときにのみ起動でき、各ターンに１回しか起動できない。</card>
     <card name="Avatar - Momir Vig, Simic Visionary (Alt.)" jaName="シミックの幻想家、モミール・ヴィグ" type="ヴァンガード" pt="手札 +0/ライフ +4" wikilink="Momir Vig, Simic Visionary Avatar">(Ｘ),カードを１枚捨てる：点数で見たマナ・コストがＸである、無作為に選ばれたクリーチャー・カード１枚のコピーであるトークンを１体生成する。この能力は、あなたがソーサリーを唱えられるときにのみ起動でき、各ターンに１回しか起動できない。</card>
+    <card name="Avatar - Stonehewer Giant" jaName="石切りの巨人" type="ヴァンガード" pt="手札 +1/ライフ -5" wikilink="Stonehewer Giant Avatar">クリーチャーが１体あなたのコントロール下で戦場に出るたび、点数で見たマナ・コストが、そのクリーチャーの点数で見たマナ・コスト以下の無作為に選ばれた装備品カード１枚のコピーであるトークンを１つ生成する。その装備品をそのクリーチャーにつける。</card>
     <!-- 機体のP/T -->
     <pt name="Aradara Express" pt="8/6" />
     <pt name="Ballista Charger" pt="6/6" />
@@ -216,31 +217,6 @@ Lv6+：
 (５),Necropolis of Azarから遺骸カウンターを１個取り除く：沼渡りを持つ黒のX/Xのアザーの落とし子（Spawn-of-Azar）・クリーチャー・トークンを１体生成する。Ｘは１から３までの無作為に選ばれた数である。</card>
     <card name="Orochi Eggwatcher" jaName="大蛇の卵張り" type="クリーチャー ― 蛇・シャーマン" pt="1/1" related="Shidako, Broodmistress">(２)(緑),(Ｔ)：緑の1/1の蛇(Snake)・クリーチャー・トークンを１体生成する。あなたが１０体以上のクリーチャーをコントロールしている場合、大蛇の卵張りを反転する。</card>
     <card name="Pandora's Box" jaName="パンドラの箱" type="アーティファクト">(３),(Ｔ)：すべてのプレイヤーのライブラリーからクリーチャー・カードを１枚無作為に選ぶ。プレイヤーの数に等しい枚数のコインを１枚投げる。表が出た場合、選ばれたカードのコピーであるクリーチャー・トークンを１体生成する。</card>
-    <card name="Queen Marchesa" jaName="マルチェッサ女王" type="伝説のクリーチャー ― 人間・暗殺者" pt="3/3">接死、速攻
-マルチェッサ女王が戦場に出たとき、あなたが統治者になる。
-あなたのアップキープの開始時に、対戦相手が統治者であった場合、接死と速攻を持つ黒の1/1の暗殺者(Assassin)・クリーチャー・トークンを１体生成する。</card>
-    <card name="Questing Phelddagrif" jaName="探索するフェルダグリフ" type="クリーチャー ― フェルダグリフ" pt="4/4">(緑)：探索するフェルダグリフはターン終了時まで+1/+1の修整を受ける。対戦相手１人を対象とする。そのプレイヤーは緑の1/1のカバ(Hippo)・クリーチャー・トークンを１体生成する。
-(白)：探索するフェルダグリフはターン終了時までプロテクション（黒）とプロテクション（赤）を得る。対戦相手１人を対象とする。そのプレイヤーは２点のライフを得る。
-(青)：探索するフェルダグリフはターン終了時まで飛行を得る。対戦相手１人を対象とする。そのプレイヤーはカードを１枚引いてもよい。</card>
-    <card name="Raise the Alarm" jaName="急報" type="インスタント">白の1/1の兵士(Soldier)・クリーチャー・トークンを２体生成する。</card>
-    <card name="Raised by Wolves" jaName="狼育ち" type="エンチャント ― オーラ">エンチャント（クリーチャー）
-狼育ちが戦場に出たとき、緑の2/2の狼(Wolf)・クリーチャー・トークンを２体生成する。
-エンチャントされているクリーチャーは、あなたがコントロールする狼１体につき+1/+1の修整を受ける。</card>
-    <card name="Rakdos Guildmage" jaName="ラクドスのギルド魔道士" type="クリーチャー ― ゾンビ・シャーマン" pt="2/2">（(黒/赤)は(黒)でも(赤)でも支払うことができる。）
-(３)(黒),カードを１枚捨てる：クリーチャー１体を対象とする。それはターン終了時まで-2/-2の修整を受ける。
-(３)(赤)：速攻を持つ赤の2/1のゴブリン(Goblin)・クリーチャー・トークンを１体生成する。次の終了ステップの開始時に、それを追放する。</card>
-    <card name="Rakka Mar" jaName="ラッカ・マー" type="伝説のクリーチャー ― 人間・シャーマン" pt="2/2">速攻
-(赤),(Ｔ)：速攻を持つ赤の3/1のエレメンタル(Elemental)・クリーチャー・トークンを１体生成する。</card>
-    <card name="Rakshasa Gravecaller" jaName="ラクシャーサの墓呼び" type="クリーチャー ― 猫・デーモン" pt="3/6">濫用（このクリーチャーが戦場に出たとき、あなたはクリーチャーを１体生け贄に捧げてもよい。）
-ラクシャーサの墓呼びがクリーチャーを１体濫用したとき、黒の2/2のゾンビ(Zombie)・クリーチャー・トークンを２体生成する。</card>
-    <card name="Rally the Horde" jaName="大軍の結集" type="ソーサリー">あなたのライブラリーの一番上のカードを追放する。あなたのライブラリーの一番上のカードを追放する。あなたのライブラリーの一番上のカードを追放する。その最後に追放されたカードが土地でない場合、この過程を繰り返す。これにより追放された土地でないカード１枚につき、赤の1/1の戦士(Warrior)・クリーチャー・トークンを１体生成する。</card>
-    <card name="Rampaging Baloths" jaName="猛り狂うベイロス" type="クリーチャー ― ビースト" pt="6/6">トランプル
-上陸 ― 土地が１つあなたのコントロール下で戦場に出るたび、あなたは緑の4/4のビースト(Beast)・クリーチャー・トークンを１体生成してもよい。</card>
-    <card name="Rapacious One" jaName="肉喰らうもの" type="クリーチャー ― エルドラージ・ドローン" pt="5/4">トランプル
-肉喰らうものがプレイヤー１人に戦闘ダメージを与えるたび、その点数に等しい数の無色の0/1のエルドラージ(Eldrazi)・落とし子(Spawn)・クリーチャー・トークンを生成する。それらは「このクリーチャーを生け贄に捧げる：あなたのマナ・プールに(◇)を加える。」を持つ。</card>
-    <card name="Rapid Hybridization" jaName="急速混成" type="インスタント">クリーチャー１体を対象とし、それを破壊する。それは再生できない。そのクリーチャーのコントローラーは、緑の3/3のカエル(Frog)・トカゲ(Lizard)・クリーチャー・トークンを１体生成する。</card>
-    <card name="Reach of Branches" jaName="枝の手の内" type="部族インスタント ― ツリーフォーク">緑の2/5のツリーフォーク(Treefolk)・シャーマン(Shaman)・クリーチャー・トークンを１体生成する。
-あなたのコントロール下で森(Forest)が戦場に出るたび、あなたはあなたの墓地にある枝の手の内をあなたの手札に戻してもよい。</card>
     <card name="Reap the Seagraf" jaName="海墓の刈り取り" type="ソーサリー">黒の2/2のゾンビ(Zombie)・クリーチャー・トークンを１体生成する。
 フラッシュバック(４)(青)（あなたはあなたの墓地にあるこのカードを、そのフラッシュバック・コストで唱えてもよい。その後それを追放する。）</card>
     <card name="Rebellion of the Flamekin" jaName="炎族の反乱" type="部族エンチャント ― エレメンタル">あなたが激突を行うたび、あなたは(１)を支払ってもよい。そうした場合、赤の3/1のエレメンタル(Elemental)・シャーマン(Shaman)・クリーチャー・トークンを１体生成する。あなたが勝った場合、そのトークンはターン終了時まで速攻を得る。</card>
