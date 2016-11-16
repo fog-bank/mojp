@@ -229,17 +229,8 @@ namespace Mojp
 						case "　英語名":
 							// 新しいカードの行に入った
 							if (card.Name != null)
-							{
-								// AE 合字処理
-								string processed = card.Name.Replace("AE", "Ae");
-								if (card.Name != processed)
-								{
-									card.WikiLink = card.HasJapaneseName ? card.JapaneseName + "/" + card.Name : card.Name;
-									card.Name = processed;
-								}
-								card.Text = string.Join(Environment.NewLine, texts);
-								yield return card;
-							}
+								yield return ProcessCard(card, texts);
+
 							card = new Card();
 							card.Name = tokens[1].Trim();
 							texts.Clear();
@@ -319,17 +310,33 @@ namespace Mojp
 			}
 
 			if (card.Name != null)
+				yield return ProcessCard(card, texts);
+		}
+
+		private static Card ProcessCard(Card card, IEnumerable<string> texts)
+		{
+			card.Text = string.Join(Environment.NewLine, texts);
+
+			string wikilink = card.HasJapaneseName ? card.JapaneseName + "/" + card.Name : card.Name;
+
+			// AE 合字処理
+			string processed = card.Name.Replace("AE", "Ae");
+			if (card.Name != processed)
 			{
-				// AE 合字処理
-				string processed = card.Name.Replace("AE", "Ae");
-				if (card.Name != processed)
-				{
-					card.WikiLink = card.HasJapaneseName ? card.JapaneseName + "/" + card.Name : card.Name;
-					card.Name = processed;
-				}
-				card.Text = string.Join(Environment.NewLine, texts);
-				yield return card;
+				card.WikiLink = wikilink;
+				card.Name = processed;
 			}
+
+			// 次元
+			if (card.Type.StartsWith("次元"))
+			{
+				if (card.WikiLink == null)
+					card.WikiLink = wikilink + " (次元カード)";
+				else
+					card.WikiLink += " (次元カード)";
+			}
+
+			return card;
 		}
 	}
 }
