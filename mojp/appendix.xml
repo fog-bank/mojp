@@ -29,28 +29,38 @@
     <card name="Wirefly" jaName="針金バエ" type="トークン・アーティファクト・クリーチャー ― 昆虫" pt="2/2" related="Wirefly Hive">飛行</card>
     <card name="Wolves of the Hunt" jaName="狩人狼" type="トークン・クリーチャー ― 狼" pt="1/1" related="Master of the Hunt">他の《狩人狼/Wolves of the Hunt》という名前のクリーチャーとのバンド</card>
     <card name="Wood" jaName="木材" type="トークン・クリーチャー ― 壁" pt="0/1" related="Jungle Patrol">防衛</card>
-    <!-- 単一の特性しかないトークン -->
-    <card name="Eldrazi Spawn" jaName="エルドラージ・落とし子" type="トークン・クリーチャー ― エルドラージ・落とし子" pt="0/1">このクリーチャーを生け贄に捧げる：あなたのマナ・プールに(◇)を加える。</card>
+    <!-- 専用のクリーチャータイプを持つトークン -->
+    <card name="Camarid" jaName="カマリッド" type="トークン・クリーチャー ― カマリッド" pt="1/1"></card>
+    <card name="Caribou" jaName="カリブー" type="トークン・クリーチャー ― カリブー" pt="0/1" related="Caribou Range"></card>
+    <card name="Citizen" jaName="市民" type="トークン・クリーチャー ― 市民" pt="1/1"></card>
+    <card name="Deserter" jaName="脱走者" type="トークン・クリーチャー ― 脱走者" pt="0/1" related="Kjeldoran Home Guard"></card>
     <card name="Eldrazi Scion" jaName="エルドラージ・末裔" type="トークン・クリーチャー ― エルドラージ・末裔" pt="1/1">このクリーチャーを生け贄に捧げる：あなたのマナ・プールに(◇)を加える。</card>
-    <card name="Eldrazi Horror" jaName="エルドラージ・ホラー" type="トークン・クリーチャー ― エルドラージ・ホラー" pt="3/2"></card>
-    <card name="Faerie Rogue" jaName="フェアリー・ならず者" type="トークン・クリーチャー ― フェアリー・ならず者" pt="1/1">飛行</card>
+    <card name="Eldrazi Spawn" jaName="エルドラージ・落とし子" type="トークン・クリーチャー ― エルドラージ・落とし子" pt="0/1">このクリーチャーを生け贄に捧げる：あなたのマナ・プールに(◇)を加える。</card>
     <card name="Germ" jaName="細菌" type="トークン・クリーチャー ― 細菌" pt="0/0"></card>
-    <card name="Goat" jaName="ヤギ" type="トークン・クリーチャー ― ヤギ" pt="0/1"></card>
     <card name="Graveborn" jaName="墓生まれ" type="トークン・クリーチャー ― 墓生まれ" pt="3/1">速攻</card>
-    <card name="Manifest" jaName="予示" type="クリーチャー" pt="2/2">予示されたクリーチャー・カードは、それのマナ・コストで、いつでも表向きにしてよい。裏向きのカードは、それの変異コストで表向きにしてもよい。</card>
-    <card name="Morph" jaName="変異" type="クリーチャー" pt="2/2">変異を持つカードは、それの変異コストを支払うことで、いつでも表向きにしてよい。</card>
-    <card name="Myr" jaName="マイア" type="トークン・アーティファクト・クリーチャー ― マイア" pt="1/1"></card>
+    <card name="Orb" jaName="オーブ" type="トークン・クリーチャー ― オーブ" pt="*/*" related="Phantasmal Sphere">飛行</card>
+    <card name="Pentavite" jaName="ペンタバイト" type="トークン・アーティファクト・クリーチャー ― ペンタバイト" pt="1/1" related="Pentavus">飛行</card>
     <card name="Pincher" jaName="ピンチャー" type="トークン・クリーチャー ― ピンチャー" pt="2/2" related="Summoning Station"></card>
+    <card name="Prism" jaName="プリズム" type="トークン・アーティファクト・クリーチャー ― プリズム" pt="0/1" related="Diamond Kaleidoscope"></card>
+    <card name="Sand" jaName="砂漠の民" type="トークン・クリーチャー ― 砂漠の民" pt="1/1" related="Dune-Brood Nephilim"></card>
+    <card name="Sand Warrior" jaName="砂漠の民・戦士" type="トークン・クリーチャー ― 砂漠の民・戦士" pt="1/1" related="Hazezon Tamar"></card>
     <card name="Serf" jaName="農奴" type="トークン・クリーチャー ― 農奴" pt="0/1" related="Sengir Autocrat"></card>
     <card name="Servo" jaName="霊気装置" type="トークン・アーティファクト・クリーチャー ― 霊気装置" pt="1/1"></card>
-    <card name="Starfish" jaName="ヒトデ" type="トークン・クリーチャー ― ヒトデ" pt="0/1" related="Spiny Starfish"></card>
     <card name="Survivor" jaName="生存者" type="トークン・クリーチャー ― 生存者" pt="1/1" related="Varchild's War-Riders"></card>
-    <card name="Squirrel" jaName="リス" type="トークン・クリーチャー ― リス" pt="1/1"></card>
-    <card name="Thopter" jaName="飛行機械" type="トークン・アーティファクト・クリーチャー ― 飛行機械" pt="1/1">飛行</card>
     <card name="Tetravite" jaName="テトラバイト" type="トークン・アーティファクト・クリーチャー ― テトラバイト" pt="1/1" related="Tetravus">飛行
 テトラバイトはエンチャントされない。</card>
     <card name="Triskelavite" jaName="トリスケラバイト" type="トークン・アーティファクト・クリーチャー ― トリスケラバイト" pt="1/1" related="Triskelavus">飛行
 このクリーチャーを生け贄に捧げる：クリーチャー１体かプレイヤー１人を対象とする。このクリーチャーはそれに１点のダメージを与える。</card>
+    <!-- 単一の特性しかないトークン -->
+    <card name="Eldrazi Horror" jaName="エルドラージ・ホラー" type="トークン・クリーチャー ― エルドラージ・ホラー" pt="3/2"></card>
+    <card name="Faerie Rogue" jaName="フェアリー・ならず者" type="トークン・クリーチャー ― フェアリー・ならず者" pt="1/1">飛行</card>
+    <card name="Goat" jaName="ヤギ" type="トークン・クリーチャー ― ヤギ" pt="0/1"></card>
+    <card name="Manifest" jaName="予示" type="クリーチャー" pt="2/2">予示されたクリーチャー・カードは、それのマナ・コストで、いつでも表向きにしてよい。裏向きのカードは、それの変異コストで表向きにしてもよい。</card>
+    <card name="Morph" jaName="変異" type="クリーチャー" pt="2/2">変異を持つカードは、それの変異コストを支払うことで、いつでも表向きにしてよい。</card>
+    <card name="Myr" jaName="マイア" type="トークン・アーティファクト・クリーチャー ― マイア" pt="1/1"></card>
+    <card name="Starfish" jaName="ヒトデ" type="トークン・クリーチャー ― ヒトデ" pt="0/1" related="Spiny Starfish"></card>
+    <card name="Squirrel" jaName="リス" type="トークン・クリーチャー ― リス" pt="1/1"></card>
+    <card name="Thopter" jaName="飛行機械" type="トークン・アーティファクト・クリーチャー ― 飛行機械" pt="1/1">飛行</card>
     <card name="Weird" jaName="奇魔" type="トークン・クリーチャー ― 奇魔" pt="3/3" related="Thunderheads">防衛、飛行</card>
     <!-- Vanguard -->
     <card name="Avatar - Jhoira of the Ghitu" jaName="ギトゥのジョイラ" type="ヴァンガード" pt="手札 +1/ライフ +0" wikilink="Jhoira of the Ghitu Avatar">(３),カードを１枚捨てる：無作為に選ばれたインスタント・カード３枚をコピーする。あなたはそれらのコピーのうちの１つをマナ・コストを支払わずに唱えてもよい。
@@ -69,7 +79,7 @@
     <card name="Aretopolis" jaName="アレトポリス" type="次元 ― ケファライ" wikilink="アレトポリス/Aretopolis (次元カード)">あなたがアレトポリスにプレインズウォークしたときか、あなたのアップキープの開始時に、アレトポリスの上に巻物(Scroll)カウンターを１個置き、その後、あなたはそれの上に置かれている巻物カウンターの数に等しい点数のライフを得る。
 アレトポリスの上に巻物カウンターが10個以上置かれているとき、プレインズウォークする。
 あなたがカオス・シンボルを出すたび、アレトポリスの上に巻物カウンターを１個置く。その後、それの上に置かれている巻物カウンターの数に等しい枚数のカードを引く。</card>
-    <card name="Astral Arena" jaName="天界闘技場" type="次元 ― コルバーン" wikilink="天界闘技場/Astral Arena (次元カード)">各戦闘では、２体以上のクリーチャーでは攻撃できない。
+    <card name="Astral Arena" jaName="天界闘技場" type="次元 ― コルバハン" wikilink="天界闘技場/Astral Arena (次元カード)">各戦闘では、２体以上のクリーチャーでは攻撃できない。
 各戦闘では、２体以上のクリーチャーではブロックできない。
 あなたがカオス・シンボルを出すたび、天界闘技場は各クリーチャーにそれぞれ２点のダメージを与える。</card>
     <card name="Bant" jaName="バント" type="次元 ― アラーラ" wikilink="バント/Bant (次元カード)">すべてのクリーチャーは賛美を持つ。（あなたがコントロールするクリーチャー１体が単独で攻撃するたび、そのクリーチャーはターン終了時まで、それのコントローラーがコントロールするパーマネントが持つ賛美１つにつき+1/+1の修整を受ける。）
