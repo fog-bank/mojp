@@ -27,4 +27,4 @@
 
 ## リソース
 * このアプリで表示する日本語テキストは、[WHISPER](http://whisper.wisdom-guild.net/) の検索結果をテキストファイルに保存したものに基づいています。
-* このアプリのアイコンは [Iconfinder](https://www.iconfinder.com/icons/6000/book_dictionary_learn_school_translate_icon#size=128) のものを利用しています。
+* アイコンの一部は Iconfinder \[[1](https://www.iconfinder.com/icons/6000/book_dictionary_learn_school_translate_icon#size=128), [2](https://www.iconfinder.com/icons/285680/camera_icon#size=16)\] を利用しています。
