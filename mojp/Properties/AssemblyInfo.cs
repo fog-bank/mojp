@@ -15,7 +15,8 @@ using System.Windows;
 [assembly: AssemblyTrademark("")]
 [assembly: NeutralResourcesLanguage("ja-JP")]
 
-// Icon: https://www.iconfinder.com/icons/6000/book_dictionary_learn_school_translate_icon#size=128
+// Icon 1: https://www.iconfinder.com/icons/6000/book_dictionary_learn_school_translate_icon#size=128
+// Icon 2: https://www.iconfinder.com/icons/285680/camera_icon#size=16
 // Card Database: http://whisper.wisdom-guild.net/search.php?name=&name_ope=and&mcost=&mcost_op=able&mcost_x=may&ccost_more=0&ccost_less=&msw_gt=0&msw_lt=&msu_gt=0&msu_lt=&msb_gt=0&msb_lt=&ms_ope=and&msr_gt=0&msr_lt=&msg_gt=0&msg_lt=&msc_gt=0&msc_lt=&msp_gt=0&msp_lt=&msh_gt=0&msh_lt=&color_multi=able&color_ope=and&rarity_ope=or&text=&text_ope=and&oracle=&oracle_ope=and&p_more=&p_less=&t_more=&t_less=&l_more=&l_less=&display=cardname&supertype_ope=or&cardtype%5B%5D=creature&cardtype%5B%5D=artifact&cardtype%5B%5D=instant&cardtype%5B%5D=enchantment&cardtype_ope=or&cardtype%5B%5D=land&cardtype%5B%5D=planeswalker&cardtype%5B%5D=sorcery&cardtype%5B%5D=tribal&subtype_ope=or&format=all&exclude=no&set_ope=or&illus_ope=or&illus_ope=or&flavor=&flavor_ope=and&sort=name_en&sort_op=&output=text
 
 // ComVisible を false に設定すると、その型はこのアセンブリ内で COM コンポーネントから
@@ -54,4 +55,4 @@ using System.Windows;
 // 既定値にすることができます:
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.2.0.0")]
-[assembly: AssemblyFileVersion("1.2.11117.19")]
+[assembly: AssemblyFileVersion("1.2.11119.20")]
