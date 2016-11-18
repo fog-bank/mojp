@@ -51,10 +51,10 @@
 								</Style>
 							</TextBlock.Style>
 						</TextBlock>
-						<ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
-							<TextBlock Margin="2" Text="{Binding Text}" TextWrapping="Wrap" />
+						<ScrollViewer Grid.Row="1" Padding="2" VerticalScrollBarVisibility="Auto">
+							<TextBlock Text="{Binding Text}" TextWrapping="Wrap" />
 						</ScrollViewer>
-						<TextBlock Grid.Row="2" Margin="2" Text="{Binding PT}" TextTrimming="CharacterEllipsis">
+						<TextBlock Grid.Row="2" Margin="2,2,2,0" Text="{Binding PT}" TextTrimming="CharacterEllipsis">
 							<TextBlock.Style>
 								<Style TargetType="TextBlock">
 									<Style.Triggers>
