@@ -113,7 +113,7 @@
 			<CheckBox Grid.Row="1" IsChecked="{Binding AutoRefresh}"
 					  ToolTip="指定された時間ごとに Preview Pane を探します。動作が重くなる場合は手動更新にしてください。">
 				<StackPanel Orientation="Horizontal">
-					<TextBlock>MO の Preview Pane を自動的に見つける</TextBlock>
+					<TextBlock>MO の Preview Pane を自動的に探す</TextBlock>
 					<Image Source="Resources/Information.png" Height="16" Margin="5,0,0,0" />
 				</StackPanel>
 			</CheckBox>

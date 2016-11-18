@@ -104,6 +104,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Resources\Camera.png" />
+    <Resource Include="Resources\Gears.png" />
     <Resource Include="Resources\Checkmark.png" />
     <Resource Include="Resources\Web.png" />
     <Resource Include="Resources\Copy.png" />
