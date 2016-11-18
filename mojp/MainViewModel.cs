@@ -37,7 +37,6 @@ namespace Mojp
 		public MainViewModel()
 		{
 			// UI 要素の名前だけキャッシュする
-			cacheReq.TreeScope = TreeScope.Element;
 			cacheReq.Add(AutomationElement.NameProperty);
 			cacheReq.AutomationElementMode = AutomationElementMode.None;
 
@@ -232,7 +231,7 @@ namespace Mojp
 				{
 					var card = Cards[SelectedIndex];
 
-					if (card != null && !string.IsNullOrEmpty(card.Name))
+					if (!string.IsNullOrEmpty(card?.Name))
 						return card;
 				}
 				return null;
@@ -389,7 +388,7 @@ namespace Mojp
 
 				// UI テキストの変化を追う
 				using (cacheReq.Activate())
-					Automation.AddAutomationPropertyChangedEventHandler(prevWnd, TreeScope.Descendants, OnAutomaionNamePropertyChanged, AutomationElement.NameProperty);
+					Automation.AddAutomationPropertyChangedEventHandler(prevWnd, TreeScope.Children, OnAutomaionNamePropertyChanged, AutomationElement.NameProperty);
 
 				if (SelectedCard == null)
 					SetMessage("準備完了");
@@ -426,7 +425,7 @@ namespace Mojp
 				return;
 			}
 			Debug.WriteLine(name);
-
+			
 			SearchCardName();
 		}
 
@@ -437,7 +436,10 @@ namespace Mojp
 		{
 			AutomationElementCollection elements;
 			using (cacheReq.Activate())
-				elements = prevWnd.FindAll(TreeScope.Descendants, condition);
+				elements = prevWnd?.FindAll(TreeScope.Children, condition);
+
+			if (elements == null)
+				return;
 
 			// 一連のテキストからカード名を探す (両面カードなど複数のカード名にヒットする場合があるので一通り探し直す必要がある)
 			var foundCards = new List<Card>();
