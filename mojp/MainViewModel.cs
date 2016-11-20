@@ -387,8 +387,9 @@ namespace Mojp
 				SearchCardName();
 
 				// UI テキストの変化を追う
+				// 対戦中、カード情報は Preview Pane の直接の子ではなく、ZoomCard_View というカスタムコントロールの下にくるので、スコープは子孫にしないとダメ
 				using (cacheReq.Activate())
-					Automation.AddAutomationPropertyChangedEventHandler(prevWnd, TreeScope.Children, OnAutomaionNamePropertyChanged, AutomationElement.NameProperty);
+					Automation.AddAutomationPropertyChangedEventHandler(prevWnd, TreeScope.Descendants, OnAutomaionNamePropertyChanged, AutomationElement.NameProperty);
 
 				if (SelectedCard == null)
 					SetMessage("準備完了");
@@ -436,7 +437,7 @@ namespace Mojp
 		{
 			AutomationElementCollection elements;
 			using (cacheReq.Activate())
-				elements = prevWnd?.FindAll(TreeScope.Children, condition);
+				elements = prevWnd?.FindAll(TreeScope.Descendants, condition);
 
 			if (elements == null)
 				return;
