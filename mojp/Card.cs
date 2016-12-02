@@ -86,7 +86,7 @@ namespace Mojp
 		/// <summary>
 		/// 公式のカード名日本語訳があるかどうかを示す値を取得します。
 		/// </summary>
-		public bool HasJapaneseName => JapaneseName != null && Name != JapaneseName;
+		public bool HasJapaneseName => JapaneseName != null && Name != JapaneseName && Type != "ヴァンガード";
 
 		/// <summary>
 		/// 空のオブジェクトを取得します。オブジェクト自身は読み取り専用になっていませんが、変更しないでください。
