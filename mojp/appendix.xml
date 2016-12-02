@@ -63,11 +63,55 @@
     <card name="Thopter" jaName="飛行機械" type="トークン・アーティファクト・クリーチャー ― 飛行機械" pt="1/1">飛行</card>
     <card name="Weird" jaName="奇魔" type="トークン・クリーチャー ― 奇魔" pt="3/3" related="Thunderheads">防衛、飛行</card>
     <!-- Vanguard -->
-    <card name="Avatar - Jhoira of the Ghitu" jaName="ギトゥのジョイラ" type="ヴァンガード" pt="手札 +1/ライフ +0" wikilink="Jhoira of the Ghitu Avatar">(３),カードを１枚捨てる：無作為に選ばれたインスタント・カード３枚をコピーする。あなたはそれらのコピーのうちの１つをマナ・コストを支払わずに唱えてもよい。
+    <card name="Avatar - Akroma, Angel of Wrath" jaName="Akroma, Angel of Wrath Avatar" type="ヴァンガード" pt="手札 +1/ライフ +7" wikilink="Akroma, Angel of Wrath Avatar">クリーチャーが１体あなたのコントロール下で戦場に出るたび、それは飛行、先制攻撃、トランプル、速攻、プロテクション(黒)、プロテクション(赤)、警戒のうち無作為に選ばれた２つの能力を得る。</card>
+    <card name="Avatar - Arcanis, the Omnipotent" jaName="Arcanis, the Omnipotent Avatar" type="ヴァンガード" pt="手札 +1/ライフ -3" wikilink="Arcanis, the Omnipotent Avatar">(Ｘ), あなたがコントロールする点数で見たマナ・コストがＸのクリーチャーを１体オーナーの手札に戻す：０からＸまでの無作為に選ばれた枚数のカードを引く。Ｘは０にできない。</card>
+    <card name="Avatar - Arcbound Overseer" jaName="Arcbound Overseer Avatar" type="ヴァンガード" pt="手札 +0/ライフ +3" wikilink="Arcbound Overseer Avatar">あなたのアップキープの開始時に、あなたがコントロールするクリーチャー１体を対象とし、その上に+1/+1カウンターを１個置いてもよい。
+あなたのアップキープの開始時に、あなたがコントロールするパーマネント１つを対象とし その上に蓄積(charge)カウンターを１個置いてもよい。</card>
+    <card name="Avatar - Ashling the Pilgrim" jaName="Ashling the Pilgrim Avatar" type="ヴァンガード" pt="手札 -1/ライフ +6" wikilink="Ashling the Pilgrim Avatar">(２)：Ashling the Pilgrim Avatarは、各クリーチャーと各プレイヤーにそれぞれ１点のダメージを与える。</card>
+    <card name="Avatar - Ashling, the Extinguisher" jaName="Ashling, the Extinguisher Avatar" type="ヴァンガード" pt="手札 +1/ライフ -3" wikilink="Ashling, the Extinguisher Avatar">(５)：すべての土地でないパーマネントを破壊する。この能力は１回しか起動できず、あなたのターンの間にしか起動できない。</card>
+    <card name="Avatar - Birds of Paradise" jaName="Birds of Paradise Avatar" type="ヴァンガード" pt="手札 +0/ライフ -3" wikilink="Birds of Paradise Avatar">あなたがコントロールする土地は「(Ｔ)：あなたのマナ・プールに好きな色１色のマナ１点を加える。」を持つ。</card>
+    <card name="Avatar - Bosh, Iron Golem" jaName="Bosh, Iron Golem Avatar" type="ヴァンガード" pt="手札 +0/ライフ -2" wikilink="Bosh, Iron Golem Avatar">(Ｘ), 点数で見たマナ・コストがＸのアーティファクト１つを生け贄に捧げる：クリーチャー１体かプレイヤー１人を対象とする。Bosh, Iron Golem AvatarはそれにＸ点のダメージを与える。</card>
+    <card name="Avatar - Braids, Conjurer Adept" jaName="Braids, Conjurer Adept Avatar" type="ヴァンガード" pt="手札 +0/ライフ +3" wikilink="Braids, Conjurer Adept Avatar">(２)：各プレイヤーはそれぞれ、自分の手札から土地カードを１枚タップ状態で戦場に出してもよい。
+(３)：各プレイヤーはそれぞれ、自分の手札からクリーチャーでないアーティファクト・カードを１枚戦場に出してもよい。
+(４)：各プレイヤーはそれぞれ、自分の手札からクリーチャー・カードを１枚戦場に出してもよい。この能力は、あなたがソーサリーを唱えられるときのみ起動できる。</card>
+    <card name="Avatar - Chronatog" jaName="Chronatog Avatar" type="ヴァンガード" pt="手札 -1/ライフ +1" wikilink="Chronatog Avatar">あなたの手札の上限はなくなる。
+(０)：カードを３枚引く。あなたはあなたの次のターンを飛ばす。この能力は、毎ターン１回のみ起動できる。</card>
+    <card name="Avatar - Dakkon Blackblade" jaName="Dakkon Blackblade Avatar" type="ヴァンガード" pt="手札 +1/ライフ +0" wikilink="Dakkon Blackblade Avatar">あなたは、あなたの手札から有色のカード１枚を、そのカードの色のうち１色のマナを生み出すことのできる、無作為に選ばれた基本土地・カード１枚のコピーとしてプレイしてもよい。</card>
+    <card name="Avatar - Dauntless Escort" jaName="Dauntless Escort Avatar" type="ヴァンガード" pt="手札 +1/ライフ +1" wikilink="Dauntless Escort Avatar">あなたがコントロールするクリーチャーは賛美を持つ。（あなたがコントロールするいずれかのクリーチャーが単独で攻撃するたび、あなたがコントロールするパーマネントの中にある賛美１つにつき、それはターン終了時まで+1/+1の修整を受ける。）</card>
+    <card name="Avatar - Diamond Faerie" jaName="Diamond Faerie Avatar" type="ヴァンガード" pt="手札 +0/ライフ +5" wikilink="Diamond Faerie Avatar">(氷)：あなたがコントロールするクリーチャー１体を対象とする。ターン終了時まで、それは+1/+1の修整を受ける。</card>
+    <card name="Avatar - Eight-and-a-Half-Tails" jaName="Eight-and-a-Half-Tails Avatar" type="ヴァンガード" pt="手札 +2/ライフ -3" wikilink="Eight-and-a-Half-Tails Avatar">(１)：あなたがコントロールするパーマネント１つを対象とする。それが持つプロテクションに記述されていない色から１色を無作為に選ぶ。ターン終了時まで、それはプロテクション（選ばれた色）を得る。</card>
+    <card name="Avatar - Eladamri, Lord of Leaves" jaName="Eladamri, Lord of Leaves Avatar" type="ヴァンガード" pt="手札 -1/ライフ +2" wikilink="Eladamri, Lord of Leaves Avatar">各プレイヤーの戦闘前メイン・フェイズの開始時に、そのプレイヤーは自分のマナ・プールに(緑)(緑)を加える。</card>
+    <card name="Avatar - Elvish Champion" jaName="Elvish Champion Avatar" type="ヴァンガード" pt="手札 +0/ライフ -5" wikilink="Elvish Champion Avatar">あなたは、「(Ｔ)：あなたのマナ・プールに(緑)を加える。」を持つ、緑の1/1のエルフ(Elf)・クリーチャー・トークンを１体生成した状態でゲームを始める。</card>
+    <card name="Avatar - Enigma Sphinx" jaName="Enigma Sphinx Avatar" type="ヴァンガード" pt="手札 -1/ライフ +0" wikilink="Enigma Sphinx Avatar">あなたがいずれかのターンに最初に有色のアーティファクト・呪文を唱えるたび、あなたのライブラリーから点数で見たマナ・コストがその呪文より小さい、無作為に選ばれた有色のアーティファクト・カード１枚を探す。あなたはそのカードをそれのマナ・コストを支払うことなく唱えてもよい。そうしなかった場合、そのカードをあなたのライブラリーの一番下に置く。</card>
+    <card name="Avatar - Erhnam Djinn" jaName="Erhnam Djinn Avatar" type="ヴァンガード" pt="手札 +0/ライフ +3" wikilink="Erhnam Djinn Avatar">あなたがクリーチャー・呪文を１つ唱えるたび、緑の1/1の苗木(Saproling)・クリーチャー・トークンを１体生成する。</card>
+    <card name="Avatar - Etched Oracle" jaName="Etched Oracle Avatar" type="ヴァンガード" pt="手札 +1/ライフ -4" wikilink="Etched Oracle Avatar">あなたは、あなたが唱える呪文のマナ・コストを支払うのではなく、(白)(青)(黒)(赤)(緑)を支払ってもよい。</card>
+    <card name="Avatar - Fallen Angel" jaName="Fallen Angel Avatar" type="ヴァンガード" pt="手札 +0/ライフ -5" wikilink="Fallen Angel Avatar">あなたがコントロールするクリーチャーが１体死亡するたび、対戦相手１人を対象とする。そのプレイヤーは１点のライフを失い、あなたは１点のライフを得る。</card>
+    <card name="Avatar - Figure of Destiny" jaName="Figure of Destiny Avatar" type="ヴァンガード" pt="手札 +0/ライフ +3" wikilink="Figure of Destiny Avatar">(Ｘ)：Ｘ個未満の+1/+1カウンターが置かれているクリーチャー１体を対象とする。それの上に+1/+1カウンターを１個置く。</card>
+    <card name="Avatar - Flametongue Kavu" jaName="Flametongue Kavu Avatar" type="ヴァンガード" pt="手札 +0/ライフ -6" wikilink="Flametongue Kavu Avatar">トークンでないクリーチャーが１体あなたのコントロール下で戦場に出るたび、クリーチャー１体を対象とする。前者は後者にＸ点のダメージを与える。Ｘは０から４のうち無作為に選ばれた数である。</card>
+    <card name="Avatar - Frenetic Efreet" jaName="Frenetic Efreet Avatar" type="ヴァンガード" pt="手札 -1/ライフ -3" wikilink="Frenetic Efreet Avatar">あなたがコントロールするパーマネントはフェイジングを持つ。（それはあなたの各アンタップ・ステップの間であなたがアンタップする前にフェイズ・インまたはフェイズ・アウトする。それがフェイズ・アウトされている間、それはそれが存在しないかのように扱う。）
+あなたの終了ステップの開始時に、コイン投げをする。あなたがコイン投げに勝った場合、このターンに続いて追加の１ターンを行う。</card>
+    <card name="Avatar - Goblin Warchief" jaName="Goblin Warchief Avatar" type="ヴァンガード" pt="手札 +1/ライフ +2" wikilink="Goblin Warchief Avatar">あなたがコントロールする攻撃クリーチャーは+1/+0の修整を受ける。</card>
+    <card name="Avatar - Grinning Demon" jaName="Grinning Demon Avatar" type="ヴァンガード" pt="手札 -1/ライフ -2" wikilink="Grinning Demon Avatar">あなたがコントロールするトークンでないクリーチャーが１体死亡するたび、対戦相手１人を対象とする。そのプレイヤーはカードを１枚捨てる。</card>
+    <card name="Avatar - Haakon, Stromgald Scourge" jaName="Haakon, Stromgald Scourge Avatar" type="ヴァンガード" pt="手札 +0/ライフ -3" wikilink="Haakon, Stromgald Scourge Avatar">１点のライフを支払う：あなたの墓地にあるクリーチャー・カード１枚を対象とする。このターン、あなたはそのカードをプレイしてもよい。
+あなたがあなたの墓地からクリーチャー・カードを１枚プレイするたび、それは黒のゾンビ(Zombie)・騎士(Knight)になる。
+ゾンビ・騎士が１つ戦場からあなたの墓地に置かれるなら、代わりにそれを追放する。</card>
+    <card name="Avatar - Heartwood Storyteller" jaName="Heartwood Storyteller Avatar" type="ヴァンガード" pt="手札 -1/ライフ +4" wikilink="Heartwood Storyteller Avatar">各ターン、あなたが最初に唱えるクリーチャー・呪文を唱えるためのコストは(１)少なくなる。
+各ターン、各対戦相手が最初に唱えるクリーチャーでない呪文を唱えるためのコストは(１)多くなる。</card>
+    <card name="Avatar - Hell's Caretaker" jaName="Hell's Caretaker Avatar" type="ヴァンガード" pt="手札 -1/ライフ -4" wikilink="Hell's Caretaker Avatar">(３),クリーチャー１体を生け贄に捧げる：あなたの墓地からクリーチャー・カード１枚を対象とし、それを戦場に戻す。</card>
+    <card name="Avatar - Hermit Druid" jaName="Hermit Druid Avatar" type="ヴァンガード" pt="手札 -2/ライフ -2" wikilink="Hermit Druid Avatar">あなたのアップキープの開始時に、あなたのライブラリーから無作為に選ばれた土地・カード１枚を戦場に出す。</card>
+    <card name="Avatar - Higure, the Still Wind" jaName="Higure, the Still Wind Avatar" type="ヴァンガード" pt="手札 -1/ライフ +3" wikilink="Higure, the Still Wind Avatar">あなたがコントロールするトークンでないクリーチャーが対戦相手に戦闘ダメージを与えるたび、あなたのライブラリーからクリーチャー・カードを１枚無作為に選び、そのカードを公開し、それをあなたの手札に加える。その後、あなたのライブラリーを切り直す。</card>
+    <card name="Avatar - Ink-Eyes, Servant of Oni" jaName="Ink-Eyes, Servant of Oni Avatar" type="ヴァンガード" pt="手札 +0/ライフ -3" wikilink="Ink-Eyes, Servant of Oni Avatar">ゲームの開始時に、対戦相手１人を対象とする。そのプレイヤーの手札を見て、その中から土地でないカードを１枚選ぶ。そのプレイヤーはそのカードを捨てる。
+(Ｘ),Ｘ点のライフを支払う：いずれかの対戦相手の墓地にある、点数で見たマナ・コストがＸのクリーチャー・カード１枚を対象とし、それをあなたのコントロール下で戦場に出す。</card>
+    <card name="Avatar - Jace Beleren" jaName="Jace Beleren Avatar" type="ヴァンガード" pt="手札 +0/ライフ +0" wikilink="Jace Beleren">（０）：プレイヤーを１人選ぶ。そのプレイヤーは手札を公開する。
+（０）：プレイヤーを１人選ぶ。そのプレイヤーは自分のライブラリーを公開し、その中から望む枚数のカードを選ぶ。そのプレイヤーはそれらのカードを手札に加える。
+（０）：プレイヤーを１人選ぶ。そのプレイヤーがコントロールする全てのパーマネントをアンタップする。
+（０）：パーマネントか呪文か戦場に無いカードを１つ選び、それをオーナーの手札に戻す。</card>
+    <card name="Avatar - Jaya Ballard" jaName="Jaya Ballard Avatar" type="ヴァンガード" pt="手札 +0/ライフ +1" wikilink="Jaya Ballard Avatar">(Ｘ)：クリーチャー１体かプレイヤー１人を対象とする。Jaya Balard Avatarはそれに０からＸまでの無作為に選ばれた点数のダメージを与える。この能力は、各ターンに１回しか起動できない。</card>
+    <card name="Avatar - Jhoira of the Ghitu" jaName="Jhoira of the Ghitu Avatar" type="ヴァンガード" pt="手札 +1/ライフ +0" wikilink="Jhoira of the Ghitu Avatar">(３),カードを１枚捨てる：無作為に選ばれたインスタント・カード３枚をコピーする。あなたはそれらのコピーのうちの１つをマナ・コストを支払わずに唱えてもよい。
 (３),カードを１枚捨てる：無作為に選ばれたソーサリー・カード３枚をコピーする。あなたはそれらのコピーのうちの１つをマナ・コストを支払わずに唱えてもよい。この能力は、あなたがソーサリーを唱えられるときにのみ起動できる。</card>
-    <card name="Avatar - Momir Vig, Simic Visionary" jaName="シミックの幻想家、モミール・ヴィグ" type="ヴァンガード" pt="手札 +0/ライフ +4" wikilink="Momir Vig, Simic Visionary Avatar">(Ｘ),カードを１枚捨てる：点数で見たマナ・コストがＸである、無作為に選ばれたクリーチャー・カード１枚のコピーであるトークンを１体生成する。この能力は、あなたがソーサリーを唱えられるときにのみ起動でき、各ターンに１回しか起動できない。</card>
-    <card name="Avatar - Momir Vig, Simic Visionary (Alt.)" jaName="シミックの幻想家、モミール・ヴィグ" type="ヴァンガード" pt="手札 +0/ライフ +4" wikilink="Momir Vig, Simic Visionary Avatar">(Ｘ),カードを１枚捨てる：点数で見たマナ・コストがＸである、無作為に選ばれたクリーチャー・カード１枚のコピーであるトークンを１体生成する。この能力は、あなたがソーサリーを唱えられるときにのみ起動でき、各ターンに１回しか起動できない。</card>
-    <card name="Avatar - Stonehewer Giant" jaName="石切りの巨人" type="ヴァンガード" pt="手札 +1/ライフ -5" wikilink="Stonehewer Giant Avatar">クリーチャーが１体あなたのコントロール下で戦場に出るたび、点数で見たマナ・コストが、そのクリーチャーの点数で見たマナ・コスト以下の無作為に選ばれた装備品カード１枚のコピーであるトークンを１つ生成する。その装備品をそのクリーチャーにつける。</card>
+    <card name="Avatar - Momir Vig, Simic Visionary" jaName="Momir Vig, Simic Visionary Avatar" type="ヴァンガード" pt="手札 +0/ライフ +4" wikilink="Momir Vig, Simic Visionary Avatar">(Ｘ),カードを１枚捨てる：点数で見たマナ・コストがＸである、無作為に選ばれたクリーチャー・カード１枚のコピーであるトークンを１体生成する。この能力は、あなたがソーサリーを唱えられるときにのみ起動でき、各ターンに１回しか起動できない。</card>
+    <card name="Avatar - Momir Vig, Simic Visionary (Alt.)" jaName="Momir Vig, Simic Visionary Avatar" type="ヴァンガード" pt="手札 +0/ライフ +4" wikilink="Momir Vig, Simic Visionary Avatar">(Ｘ),カードを１枚捨てる：点数で見たマナ・コストがＸである、無作為に選ばれたクリーチャー・カード１枚のコピーであるトークンを１体生成する。この能力は、あなたがソーサリーを唱えられるときにのみ起動でき、各ターンに１回しか起動できない。</card>
+    <card name="Avatar - Stonehewer Giant" jaName="Stonehewer Giant Avatar" type="ヴァンガード" pt="手札 +1/ライフ -5" wikilink="Stonehewer Giant Avatar">クリーチャーが１体あなたのコントロール下で戦場に出るたび、点数で見たマナ・コストが、そのクリーチャーの点数で見たマナ・コスト以下の無作為に選ばれた装備品カード１枚のコピーであるトークンを１つ生成する。その装備品をそのクリーチャーにつける。</card>
     <!-- 次元・現象 -->
     <card name="Academy at Tolaria West" jaName="トレイリア西部のアカデミー" type="次元 ― ドミナリア" wikilink="トレイリア西部のアカデミー/Academy at Tolaria West (次元カード)">あなたの終了ステップの開始時に、あなたの手札にカードが無い場合、カードを７枚引く。
 あなたがカオス・シンボルを出すたび、あなたの手札を捨てる。</card>

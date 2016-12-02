@@ -65,7 +65,12 @@ namespace Mojp
 
 		private void OnCopyEnglishName(object sender, RoutedEventArgs e)
 		{
-			Clipboard.SetText(ViewModel.SelectedCard.Name);
+			// MO ヴァンガードは MO 上ではカード名が "Avatar - ..." となっているので、
+			// 日本語名の代わりにオラクルでのカード名である "... Avatar" を表示し、それをコピーするようにする
+			if (ViewModel.SelectedCard.Type != "ヴァンガード")
+				Clipboard.SetText(ViewModel.SelectedCard.Name);
+			else
+				Clipboard.SetText(ViewModel.SelectedCard.JapaneseName);
 		}
 
 		private void OnGoToWiki(object sender, RoutedEventArgs e)
