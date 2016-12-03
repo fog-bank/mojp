@@ -65,7 +65,8 @@
 				<RowDefinition Height="Auto" />
 			</Grid.RowDefinitions>
 			<TextBlock>フォント</TextBlock>
-			<ComboBox Name="cmbFonts" Grid.Column="2" Margin="2" Padding="2" Text="{Binding FontFamily}"
+			<ComboBox Name="cmbFonts" Grid.Column="2" Margin="2" Padding="2" 
+					  Text="{Binding FontFamily}" SelectedItem="{Binding FontFamily, Mode=OneTime}"
 					  IsEditable="True" ShouldPreserveUserEnteredPrefix="True" IsTextSearchEnabled="False">
 				<ComboBox.ItemsPanel>
 					<ItemsPanelTemplate>
