@@ -109,9 +109,68 @@
     <card name="Avatar - Jaya Ballard" jaName="Jaya Ballard Avatar" type="ヴァンガード" pt="手札 +0/ライフ +1" wikilink="Jaya Ballard Avatar">(Ｘ)：クリーチャー１体かプレイヤー１人を対象とする。Jaya Balard Avatarはそれに０からＸまでの無作為に選ばれた点数のダメージを与える。この能力は、各ターンに１回しか起動できない。</card>
     <card name="Avatar - Jhoira of the Ghitu" jaName="Jhoira of the Ghitu Avatar" type="ヴァンガード" pt="手札 +1/ライフ +0" wikilink="Jhoira of the Ghitu Avatar">(３),カードを１枚捨てる：無作為に選ばれたインスタント・カード３枚をコピーする。あなたはそれらのコピーのうちの１つをマナ・コストを支払わずに唱えてもよい。
 (３),カードを１枚捨てる：無作為に選ばれたソーサリー・カード３枚をコピーする。あなたはそれらのコピーのうちの１つをマナ・コストを支払わずに唱えてもよい。この能力は、あなたがソーサリーを唱えられるときにのみ起動できる。</card>
+    <card name="Avatar - Karona, False God" jaName="Karona, False God Avatar" type="ヴァンガード" pt="手札 -1/ライフ +8" wikilink="Karona, False God Avatar">あなたのアップキープの開始時に、対戦相手１人を対象とする。無作為に選んだあなたがコントロールするパーマネント１つと、無作為に選んだそのプレイヤーがコントロールするパーマネント１つのコントロールを交換する。</card>
+    <card name="Avatar - Kresh the Bloodbraided" jaName="Kresh the Bloodbraided Avatar" type="ヴァンガード" pt="手札 +1/ライフ -3" wikilink="Kresh the Bloodbraided Avatar">あなたがコントロールするクリーチャーが１体貪食されるたび、緑のX/Xのウーズ(Ooze)・クリーチャー・トークンを１体生成する。Ｘはその貪食されたクリーチャーのパワーである。</card>
+    <card name="Avatar - Loxodon Hierarch" jaName="Loxodon Hierarch Avatar" type="ヴァンガード" pt="手札 +0/ライフ +12" wikilink="Loxodon Hierarch Avatar">パーマネント１つを生け贄に捧げる：あなたがコントロールするクリーチャー１体を対象とし、それを再生する。</card>
+    <card name="Avatar - Lyzolda, the Blood Witch" jaName="Lyzolda, the Blood Witch Avatar" type="ヴァンガード" pt="手札 -1/ライフ -1" wikilink="Lyzolda, the Blood Witch Avatar">暴勇 ― あなたの手札にカードがない限り、あなたがコントロールする発生源がいずれかのクリーチャーかプレイヤーにダメージを与える場合、代わりにそれはそのクリーチャーかプレイヤーにその２倍のダメージを与える。
+暴勇 ― あなたの終了ステップの開始時に、あなたの手札にカードがない場合、各対戦相手はそれぞれ、カードを１枚捨てる。</card>
+    <card name="Avatar - Maelstrom Archangel" jaName="Maelstrom Archangel Avatar" type="ヴァンガード" pt="手札 +0/ライフ +5" wikilink="Maelstrom Archangel Avatar">戦闘終了時に、このターンにクリーチャーがいずれかのプレイヤーに戦闘ダメージを与えたときにそのコントローラーがあなたであった各クリーチャーについて、そのクリーチャーと同じマナ・コストを持つ無作為に選ばれたカード１枚をコピーする。あなたは(３)を支払ってもよい。そうした場合、それらのコピーから１つを選ぶ。パーマネント・カードのコピーが選ばれた場合、あなたはそのカードのコピーであるトークンを１体生成してもよい。インスタント・カードかソーサリー・カードのコピーが選ばれた場合、あなたはそのコピーをそれのマナ・コストを支払うことなく唱えてもよい。</card>
+    <card name="Avatar - Malfegor" jaName="Malfegor Avatar" type="ヴァンガード" pt="手札 +2/ライフ -2" wikilink="Malfegor Avatar">クリーチャーが１体あなたのコントロール下で戦場に出るたび、それが蘇生されていた場合、それは+3/+0の修整を受ける。
+あなたがコントロールするクリーチャーが１体追放されるたび、それが蘇生されていた場合、それをオーナーのライブラリーに加えて切り直す。</card>
+    <card name="Avatar - Maralen of the Mornsong" jaName="Maralen of the Mornsong Avatar" type="ヴァンガード" pt="手札 +0/ライフ -3" wikilink="Maralen of the Mornsong Avatar">ゲームの開始時に、あなたは望む点数のライフを支払ってもよい。
+あなたはカードを引けない。
+あなたのドロー・ステップの開始時に、あなたのライブラリーの一番上からＸ枚のカードを見る。ＸはMaralen of the Mornsong Avatarによって支払われたライフの点数に等しい。その中から１枚をあなたの手札に加え、その後、あなたのライブラリーを切り直す。</card>
+    <card name="Avatar - Maro" jaName="Maro Avatar" type="ヴァンガード" pt="手札 +2/ライフ -7" wikilink="Maro Avatar">あなたがコントロールするアンタップ状態のクリーチャーを１体タップする,カードを１枚捨てる：あなたがコントロールするクリーチャー１体を対象とする。ターン終了時まで、それは+X/+Xの修整を受ける。Ｘはあなたの手札にあるカードの枚数に等しい。</card>
+    <card name="Avatar - Master of the Wild Hunt" jaName="Master of the Wild Hunt Avatar" type="ヴァンガード" pt="手札 +1/ライフ +3" wikilink="Master of the Wild Hunt Avatar">(２)(緑)：「2/2の狼(Wolf)」「森渡りを持つ2/3のアンテロープ(Antelope)」「被覆を持つ3/2の猫(Cat)」「トランプルを持つ緑の4/4のサイ(Rhino)」から無作為に選ばれた緑のクリーチャー・トークンを１体生成する。</card>
+    <card name="Avatar - Mayael the Anima" jaName="Mayael the Anima Avatar" type="ヴァンガード" pt="手札 +1/ライフ +5" wikilink="Mayael the Anima Avatar">あなたのアップキープの開始時に、あなたのライブラリーの一番上のカードを公開する。それがパワーが５以上のクリーチャー・カードである場合、それをあなたの手札に加える。そうでない場合、それをあなたのライブラリーの一番下に置いてもよい。</card>
+    <card name="Avatar - Mirri the Cursed" jaName="Mirri the Cursed Avatar" type="ヴァンガード" pt="手札 -2/ライフ -3" wikilink="Mirri the Cursed Avatar">あなたがコントロールするクリーチャーは「(Ｔ)：他のクリーチャー１体を対象とする。ターン終了時まで、それは-1/-1の修整を受ける。このクリーチャーの上に+1/+1カウンターを置く。」を持つ。</card>
+    <card name="Avatar - Mirror Entity" jaName="Mirror Entity Avatar" type="ヴァンガード" pt="手札 +1/ライフ -1" wikilink="Mirror Entity Avatar">(Ｘ)：クリーチャー・タイプを１つ選ぶ。ターン終了時まで、選ばれたタイプのあなたがコントロールするクリーチャーはX/Xになるとともにすべてのクリーチャー・タイプを得る。</card>
     <card name="Avatar - Momir Vig, Simic Visionary" jaName="Momir Vig, Simic Visionary Avatar" type="ヴァンガード" pt="手札 +0/ライフ +4" wikilink="Momir Vig, Simic Visionary Avatar">(Ｘ),カードを１枚捨てる：点数で見たマナ・コストがＸである、無作為に選ばれたクリーチャー・カード１枚のコピーであるトークンを１体生成する。この能力は、あなたがソーサリーを唱えられるときにのみ起動でき、各ターンに１回しか起動できない。</card>
     <card name="Avatar - Momir Vig, Simic Visionary (Alt.)" jaName="Momir Vig, Simic Visionary Avatar" type="ヴァンガード" pt="手札 +0/ライフ +4" wikilink="Momir Vig, Simic Visionary Avatar">(Ｘ),カードを１枚捨てる：点数で見たマナ・コストがＸである、無作為に選ばれたクリーチャー・カード１枚のコピーであるトークンを１体生成する。この能力は、あなたがソーサリーを唱えられるときにのみ起動でき、各ターンに１回しか起動できない。</card>
+    <card name="Avatar - Morinfen" jaName="Morinfen Avatar" type="ヴァンガード" pt="手札 +0/ライフ +30" wikilink="Morinfen Avatar">あなたのアップキープの開始時に、あなたは、あなたがコントロールするパーマネント１つにつき１点のライフを失う。</card>
+    <card name="Avatar - Murderous Redcap" jaName="Murderous Redcap Avatar" type="ヴァンガード" pt="手札 +0/ライフ -2" wikilink="Murderous Redcap Avatar">クリーチャーが１体カウンターが置かれた状態であなたのコントロール下で戦場に出るたび、クリーチャー１体かプレイヤー１人を対象とする。あなたは「前者は、後者に、その前者のパワーに等しいダメージを与える」ことを選んでもよい。</card>
+    <card name="Avatar - Necropotence" jaName="Necropotence Avatar" type="ヴァンガード" pt="手札 +0/ライフ +4" wikilink="Necropotence Avatar">あなたのドロー・ステップを飛ばす。
+あなたの終了ステップの開始時に、それがこのゲームの最初のターンでない場合、Necropotence Avatarの上に死亡(death)カウンターを１個置く。あなたはカードをＸ枚引き、Ｘ点のライフを失う。ＸはNecropotence Avatarの上に置かれている死亡カウンターの数に等しい。</card>
+    <card name="Avatar - Nekrataal" jaName="Nekrataal Avatar" type="ヴァンガード" pt="手札 -1/ライフ -4" wikilink="Nekrataal Avatar">あなたが唱えるクリーチャー呪文を唱えるためのコストは(黒)少なくなる。この効果は、あなたが支払う色マナの数のみを減らす。</card>
+    <card name="Avatar - Oni of Wild Places" jaName="Oni of Wild Places Avatar" type="ヴァンガード" pt="手札 +0/ライフ -2" wikilink="Oni of Wild Places Avatar">あなたがコントロールするクリーチャーは速攻を持つ。
+あなたのアップキープの開始時に、あなたがコントロールするクリーチャー１体をオーナーの手札に戻す。</card>
+    <card name="Avatar - Orcish Squatters" jaName="Orcish Squatters Avatar" type="ヴァンガード" pt="手札 -1/ライフ -1" wikilink="Orcish Squatters Avatar">あなたの戦闘前メイン・フェイズの開始時に、対戦相手１人を対象とする。あなたのマナ・プールに(Ｘ)を加える。Ｘはそのプレイヤーがコントロールする土地の数に等しい。</card>
+    <card name="Avatar - Peacekeeper" jaName="Peacekeeper Avatar" type="ヴァンガード" pt="手札 +0/ライフ +9" related="Arrest" wikilink="Peacekeeper Avatar">(３)：クリーチャーをコントロールしている対戦相手１人につき、それぞれ《拘引/Arrest》という名前のカードのコピーであるトークンを１つ生成し、無作為に選んだそのプレイヤーがコントロールするクリーチャー１体にそれをつける。</card>
+    <card name="Avatar - Phage the Untouchable" jaName="Phage the Untouchable Avatar" type="ヴァンガード" pt="手札 +0/ライフ -5" wikilink="Phage the Untouchable Avatar">１点のライフを支払う：ターン終了時まで、クリーチャー１体があなたに戦闘ダメージを与えるたび、そのクリーチャーを破壊する。
+１点のライフを支払う：あなたがコントロールするクリーチャー１体を対象とする。ターン終了時まで、そのクリーチャーがクリーチャー１体に戦闘ダメージを与えるたび、そのダメージを与えられたクリーチャーを破壊する。</card>
+    <card name="Avatar - Platinum Angel" jaName="Platinum Angel Avatar" type="ヴァンガード" pt="手札 -1/ライフ -2" wikilink="Platinum Angel Avatar">あなたがアーティファクト１つとクリーチャー１体とエンチャント１つと土地１つをコントロールしているなら、あなたはこのゲームに敗北することができず、あなたの対戦相手はこのゲームに勝利することができない。</card>
+    <card name="Avatar - Prodigal Sorcerer" jaName="Prodigal Sorcerer Avatar" type="ヴァンガード" pt="手札 +0/ライフ +5" wikilink="Prodigal Sorcerer Avatar">あなたのアップキープの開始時に、あなたのライブラリーの一番上のカードを見る。あなたはそのカードをあなたの墓地に置いてもよい。</card>
+    <card name="Avatar - Raksha Golden Cub" jaName="Raksha Golden Cub Avatar" type="ヴァンガード" pt="手札 +1/ライフ +9" wikilink="Raksha Golden Cub Avatar">あなたがコントロールするクリーチャーは+0/+1の修整を受ける。
+あなたがコントロールする装備しているクリーチャーは+1/+0の修整を受けるとともに先制攻撃を持つ。</card>
+    <card name="Avatar - Reaper King" jaName="Reaper King Avatar" type="ヴァンガード" pt="手札 -2/ライフ -5" wikilink="Reaper King Avatar">あなたがコントロールする各クリーチャーは、それぞれ自身の色１つにつき+1/+1の修整を受ける。</card>
+    <card name="Avatar - Rith, the Awakener" jaName="Rith, the Awakener Avatar" type="ヴァンガード" pt="手札 +0/ライフ +6" wikilink="Rith, the Awakener Avatar">あなたがコントロールするクリーチャー１体がプレイヤー１人に戦闘ダメージを与えるたび、あなたは(５)を支払ってもよい。そうしたなら、飛行を持つ赤の5/5のドラゴン(Dragon)・クリーチャー・トークンを１体生成する。</card>
+    <card name="Avatar - Royal Assassin" jaName="Royal Assassin Avatar" type="ヴァンガード" pt="手札 -2/ライフ +0" wikilink="Royal Assassin Avatar">あなたのアップキープの開始時に、あなたはカードを１枚引き、１点のライフを失う。</card>
+    <card name="Avatar - Rumbling Slum" jaName="Rumbling Slum Avatar" type="ヴァンガード" pt="手札 +1/ライフ +1" wikilink="Rumbling Slum Avatar">あなたのアップキープの開始時に、Rumbling Slum Avatarは各対戦相手に１点のダメージを与える。</card>
+    <card name="Avatar - Sakashima the Impostor" jaName="Sakashima the Impostor Avatar" type="ヴァンガード" pt="手札 +0/ライフ +1" wikilink="Sakashima the Impostor Avatar">(２)：クリーチャー１体を対象とする。あなたがコントロールするクリーチャーを１体選ぶ。後者はその名前を除いて、前者のコピーになる。</card>
+    <card name="Avatar - Serra Angel" jaName="Serra Angel Avatar" type="ヴァンガード" pt="手札 +0/ライフ -1" wikilink="Serra Angel Avatar">あなたが呪文を１つ唱えるたび、あなたは２点のライフを得る。</card>
+    <card name="Avatar - Serra Angel (Alt.)" jaName="Serra Angel Avatar" type="ヴァンガード" pt="手札 +0/ライフ -1" wikilink="Serra Angel Avatar">あなたが呪文を１つ唱えるたび、あなたは２点のライフを得る。</card>
+    <card name="Avatar - Seshiro the Anointed" jaName="Seshiro the Anointed Avatar" type="ヴァンガード" pt="手札 +0/ライフ -1" wikilink="Seshiro the Anointed Avatar">ゲームの開始時に、クリーチャー・タイプを１つ選ぶ。あなたがコントロールするクリーチャーと、あなたがコントロールするクリーチャー・呪文と、あなたがオーナーである、戦場やスタック以外のあらゆる領域にあるクリーチャー・カードは、それの他のタイプに加えて選ばれたタイプを持つ。</card>
+    <card name="Avatar - Sisters of Stone Death" jaName="Sisters of Stone Death Avatar" type="ヴァンガード" pt="手札 +1/ライフ -5" wikilink="Sisters of Stone Death Avatar">あなたがコントロールする各クリーチャーは、可能ならブロックされなければならない。
+(４)：あなたがコントロールするクリーチャーをブロックしているクリーチャー１体を対象とし、それを追放する。</card>
+    <card name="Avatar - Sliver Queen" jaName="Sliver Queen Avatar" type="ヴァンガード" pt="手札 +0/ライフ +7" wikilink="Sliver Queen Avatar">あなたがスリヴァーでないクリーチャー・呪文を１つ唱えるたび、その呪文を追放する。そうしたなら、その呪文と同じ点数で見たマナ・コストを持つ、無作為に選ばれた多相の戦士ではないスリヴァー・クリーチャー・カードのコピーであるトークンを１体生成する。</card>
+    <card name="Avatar - Squee, Goblin Nabob" jaName="Squee, Goblin Nabob Avatar" type="ヴァンガード" pt="手札 +3/ライフ -4" wikilink="Squee, Goblin Nabob Avatar">(１)：あなたがコントロールするクリーチャー１体を対象とする。このターン、それに与えられる次のダメージを１点軽減する。</card>
+    <card name="Avatar - Stalking Tiger" jaName="Stalking Tiger Avatar" type="ヴァンガード" pt="手札 +0/ライフ +2" wikilink="Stalking Tiger Avatar">あなたがクリーチャー・呪文を１つ唱えるたび、あなたは(１)を支払ってもよい。そうしたなら、カードを１枚引く。</card>
     <card name="Avatar - Stonehewer Giant" jaName="Stonehewer Giant Avatar" type="ヴァンガード" pt="手札 +1/ライフ -5" wikilink="Stonehewer Giant Avatar">クリーチャーが１体あなたのコントロール下で戦場に出るたび、点数で見たマナ・コストが、そのクリーチャーの点数で見たマナ・コスト以下の無作為に選ばれた装備品カード１枚のコピーであるトークンを１つ生成する。その装備品をそのクリーチャーにつける。</card>
+    <card name="Avatar - Stuffy Doll" jaName="Stuffy Doll Avatar" type="ヴァンガード" pt="手札 +0/ライフ -6" wikilink="Stuffy Doll Avatar">(０):対戦相手１人を対象とする。このターン、あなたが選んだ発生源１つからあなたにダメージが与えられるなら、そのダメージを軽減する。Stuffy Doll Avatarはあなたとそのプレイヤーに、これにより軽減されたダメージの端数を切り上げた半分に等しいダメージを与える。この能力は、各ターンに１回しか起動できない。</card>
+    <card name="Avatar - Teysa, Orzhov Scion" jaName="Teysa, Orzhov Scion Avatar" type="ヴァンガード" pt="手札 +0/ライフ -2" wikilink="Teysa, Orzhov Scion Avatar">トークンでないクリーチャーが１体死亡するたび、飛行を持つ白の1/1のスピリット(Spirit)・クリーチャー・トークンを１体生成する。</card>
+    <card name="Avatar - The Avenger" jaName="報復者" type="ヴァンガード" wikilink="報復者/The Avenger">(３),(Ｔ)：あなたがコントロールするクリーチャー１体を対象とする。ターン終了時まで、それは接死を得る。</card>
+    <card name="Avatar - The Harvester" jaName="収穫者" type="ヴァンガード" wikilink="収穫者/The Harvester">(Ｔ)：カードを１枚引き、その後カードを１枚捨てる。</card>
+    <card name="Avatar - The Hunter" jaName="狩人" type="ヴァンガード" wikilink="英雄/The Hunter">(Ｔ)：あなたがコントロールするクリーチャー１体を対象とする。ターン終了時まで、それは+1/+1の修整を受ける。</card>
+    <card name="Avatar - The Philosopher" jaName="哲人" type="ヴァンガード" wikilink="哲人/The Philosopher">(２),(Ｔ)：クリーチャー１体を対象とし、それをタップする。</card>
+    <card name="Avatar - The Protector" jaName="庇護者" type="ヴァンガード" wikilink="庇護者/The Protector">(Ｔ)：クリーチャー１体かプレイヤー１人を対象とする。このターン、次にそれに与えられるダメージを１点軽減する。</card>
+    <card name="Avatar - The Slayer" jaName="殺害者" type="ヴァンガード" wikilink="殺害者/The Slayer">あなたは追加で７点のライフを得た状態でゲームを開始する。</card>
+    <card name="Avatar - The Warrior" jaName="戦士" type="ヴァンガード" wikilink="戦士/The Warrior">(Ｔ)：あなたがコントロールするクリーチャー１体を対象とする。ターン終了時まで、それは速攻を得る。</card>
+    <card name="Avatar - Tradewind Rider" jaName="Tradewind Rider Avatar" type="ヴァンガード" pt="手札 +1/ライフ +4" wikilink="Tradewind Rider Avatar">(３)：各プレイヤーは、そのプレイヤーが２点のライフを支払わない限り、そのプレイヤーがコントロールするパーマネント１つをオーナーの手札に戻す。</card>
+    <card name="Avatar - Two-Headed Giant of Foriys" jaName="Two-Headed Giant of Foriys Avatar" type="ヴァンガード" pt="手札 +1/ライフ -4" wikilink="Two-Headed Giant of Foriys Avatar">あなたがコントロールする各クリーチャーは、各戦闘で追加で１体のクリーチャーをブロックできる。
+あなたがコントロールする各クリーチャーは、２体以上のクリーチャーによってしかブロックされない。</card>
+    <card name="Avatar - Vampire Nocturnus" jaName="Vampire Nocturnus Avatar" type="ヴァンガード" pt="手札 -1/ライフ -2" wikilink="Vampire Nocturnus Avatar">あなたのライブラリーの一番上のカードを公開した状態でプレイする。
+あなたのライブラリーの一番上のカードが黒である限り、あなたがコントロールする黒のクリーチャーは+2/+1の修整を受ける。</card>
+    <card name="Avatar - Viridian Zealot" jaName="Viridian Zealot Avatar" type="ヴァンガード" pt="手札 +0/ライフ +2" wikilink="Viridian Zealot Avatar">(２), クリーチャー１体を生け贄に捧げる：アーティファクト１つかエンチャント１つを対象とし、それを破壊する。あなたのライブラリーから生け贄に捧げたクリーチャーと同じ名前のカードを１枚探し、そのカードを公開し、それをあなたの手札に加える。その後、あなたのライブラリーを切り直す。</card>
     <!-- 次元・現象 -->
     <card name="Academy at Tolaria West" jaName="トレイリア西部のアカデミー" type="次元 ― ドミナリア" wikilink="トレイリア西部のアカデミー/Academy at Tolaria West (次元カード)">あなたの終了ステップの開始時に、あなたの手札にカードが無い場合、カードを７枚引く。
 あなたがカオス・シンボルを出すたび、あなたの手札を捨てる。</card>
