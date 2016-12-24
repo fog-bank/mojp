@@ -220,7 +220,7 @@ namespace Mojp
 
 				if (tokens.Length == 1)
 				{
-					texts.Add(line);
+					texts.Add(RemoveParenthesis(line));
 				}
 				else
 				{
@@ -269,30 +269,7 @@ namespace Mojp
 							break;
 
 						case "　タイプ":
-							var sb = new StringBuilder(tokens[1].Length);
-							bool parenthesis = false;
-
-							foreach (char c in tokens[1])
-							{
-								switch (c)
-								{
-									case '(':
-										parenthesis = true;
-										break;
-
-									case ')':
-										parenthesis = false;
-										break;
-
-									default:
-										// 読みがついているなら、取り除く
-										if (!parenthesis)
-											sb.Append(c);
-										break;
-								}
-							}
-							sb.Replace("---", "―");
-							card.Type = sb.ToString();
+							card.Type = RemoveParenthesis(tokens[1]).Replace("---", "―");
 							break;
 
 						case "　コスト":
@@ -303,7 +280,7 @@ namespace Mojp
 							break;
 
 						default:
-							texts.Add(line);
+							texts.Add(RemoveParenthesis(line));
 							break;
 					}
 				}
@@ -337,6 +314,72 @@ namespace Mojp
 			}
 
 			return card;
+		}
+
+		/// <summary>
+		/// サブタイプの英語名を削除した文字列にします。
+		/// </summary>
+		private static string RemoveParenthesis(string line)
+		{
+			var text = new StringBuilder(line.Length);
+			var parenthesis = new StringBuilder();
+			var sb = text;
+
+			for (int i = 0; i < line.Length; i++)
+			{
+				char c = line[i];
+				switch (c)
+				{
+					case '(':
+						sb = parenthesis;
+						break;
+
+					case ')':
+						bool english = parenthesis.Length >= 2;
+
+						for (int j = 0; j < parenthesis.Length; j++)
+						{
+							char parChr = parenthesis[j];
+
+							if (parChr >= 'a' && parChr <= 'z')
+								continue;
+
+							if (parChr >= 'A' && parChr <= 'Z')
+								continue;
+
+							// 「Bolas’s Meditation Realm」「Urza’s」「Power-Plant」
+							if (parChr == ' ' || parChr == '\'' || parChr == '-')
+								continue;
+
+							english = false;
+							break;
+						}
+						sb = text;
+
+						if (english)
+						{
+							// サブタイプとタイプの間にあるべき中点が抜けている場合を修正
+							if (i + 1 < line.Length && line[i + 1] != '・')
+							{
+								string follow = line.Substring(i + 1);
+
+								if (follow.StartsWith("クリーチャー") || follow.StartsWith("アーティファクト") || follow.StartsWith("土地") ||
+									follow.StartsWith("呪文") || follow.StartsWith("パーマネント") || follow.StartsWith("カード"))
+									sb.Append('・');
+							}
+						}
+						else
+							sb.Append('(').Append(parenthesis.ToString()).Append(')');
+
+						parenthesis.Clear();
+						break;
+
+					default:
+						sb.Append(c);
+						break;
+				}
+			}
+			return text.ToString();
 		}
 	}
 }

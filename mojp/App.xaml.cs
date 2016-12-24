@@ -73,7 +73,7 @@ namespace Mojp
 			var doc = XDocument.Load(file);
 
 			// カードデータの差し替え
-			var replacedNodes = new XElement("replaced");
+			var replacedNodes = new XElement("replace");
 			var identicalNodes = new XElement("identical");
 
 			foreach (var node in doc.Root.Element("replace").Elements("card"))
@@ -97,7 +97,7 @@ namespace Mojp
 				}
 			}
 
-			var root = new XElement("mojp", doc.Root.Element("add"), replacedNodes, identicalNodes, doc.Root.Element("remove"));
+			var root = new XElement("mojp", replacedNodes, identicalNodes);
 			var result = new XDocument(new XDeclaration("1.0", "utf-8", "yes"), root);
 			result.Save("appendix_result.xml");
 
