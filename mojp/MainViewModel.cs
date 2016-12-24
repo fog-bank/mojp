@@ -364,11 +364,16 @@ namespace Mojp
 			}
 
 			// "Preview" という名前のウィンドウを探す (なぜかルートの子で見つかる)
-			var currentPrevWnd = AutomationElement.RootElement.FindFirst(TreeScope.Children,
-				new AndCondition(
-					new PropertyCondition(AutomationElement.ProcessIdProperty, proc[0].Id),
-					new PropertyCondition(AutomationElement.ClassNameProperty, "Window"),
-					new PropertyCondition(AutomationElement.NameProperty, "Preview")));
+			AutomationElement currentPrevWnd = null;
+			try
+			{
+				currentPrevWnd = AutomationElement.RootElement.FindFirst(TreeScope.Children,
+					new AndCondition(
+						new PropertyCondition(AutomationElement.ProcessIdProperty, proc[0].Id),
+						new PropertyCondition(AutomationElement.ClassNameProperty, "Window"),
+						new PropertyCondition(AutomationElement.NameProperty, "Preview")));
+			}
+			catch { }
 
 			if (currentPrevWnd == null)
 			{
