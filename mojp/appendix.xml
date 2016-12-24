@@ -3,6 +3,7 @@
   <add>
     <!-- クリーチャーでないトークン -->
     <card name="Clue" jaName="手掛かり" type="トークン・アーティファクト ― 手掛かり">(２),このアーティファクトを生け贄に捧げる：カードを1枚引く。</card>
+    <card name="Etherium Cell" jaName="エーテリウム電池" type="トークン・アーティファクト" related="Tezzeret the Schemer">(Ｔ),このアーティファクトを生け贄に捧げる：あなたのマナ・プールに好きな色１色のマナ１点を加える。</card>
     <card name="Gold" jaName="金" type="トークン・アーティファクト">このアーティファクトを生け贄に捧げる：あなたのマナ・プールに好きな色１色のマナ１点を加える。</card>
     <card name="Land Mine" jaName="地雷" type="トークン・アーティファクト">(赤),このアーティファクトを生け贄に捧げる：飛行を持たない攻撃クリーチャー１体を対象とする。このアーティファクトはそれに２点のダメージを与える。</card>
     <card name="Stoneforged Blade" jaName="石鍛冶製の剣" type="トークン・アーティファクト ― 装備品" related="Nahiri, the Lithomancer">破壊不能
@@ -66,12 +67,12 @@
     <card name="Avatar - Akroma, Angel of Wrath" jaName="Akroma, Angel of Wrath Avatar" type="ヴァンガード" pt="手札 +1/ライフ +7" wikilink="Akroma, Angel of Wrath Avatar">クリーチャーが１体あなたのコントロール下で戦場に出るたび、それは飛行、先制攻撃、トランプル、速攻、プロテクション(黒)、プロテクション(赤)、警戒のうち無作為に選ばれた２つの能力を得る。</card>
     <card name="Avatar - Arcanis, the Omnipotent" jaName="Arcanis, the Omnipotent Avatar" type="ヴァンガード" pt="手札 +1/ライフ -3" wikilink="Arcanis, the Omnipotent Avatar">(Ｘ), あなたがコントロールする点数で見たマナ・コストがＸのクリーチャーを１体オーナーの手札に戻す：０からＸまでの無作為に選ばれた枚数のカードを引く。Ｘは０にできない。</card>
     <card name="Avatar - Arcbound Overseer" jaName="Arcbound Overseer Avatar" type="ヴァンガード" pt="手札 +0/ライフ +3" wikilink="Arcbound Overseer Avatar">あなたのアップキープの開始時に、あなたがコントロールするクリーチャー１体を対象とし、その上に+1/+1カウンターを１個置いてもよい。
-あなたのアップキープの開始時に、あなたがコントロールするパーマネント１つを対象とし その上に蓄積(charge)カウンターを１個置いてもよい。</card>
+あなたのアップキープの開始時に、あなたがコントロールするパーマネント１つを対象とし その上に蓄積カウンターを１個置いてもよい。</card>
     <card name="Avatar - Ashling the Pilgrim" jaName="Ashling the Pilgrim Avatar" type="ヴァンガード" pt="手札 -1/ライフ +6" wikilink="Ashling the Pilgrim Avatar">(２)：Ashling the Pilgrim Avatarは、各クリーチャーと各プレイヤーにそれぞれ１点のダメージを与える。</card>
     <card name="Avatar - Ashling, the Extinguisher" jaName="Ashling, the Extinguisher Avatar" type="ヴァンガード" pt="手札 +1/ライフ -3" wikilink="Ashling, the Extinguisher Avatar">(５)：すべての土地でないパーマネントを破壊する。この能力は１回しか起動できず、あなたのターンの間にしか起動できない。</card>
     <card name="Avatar - Birds of Paradise" jaName="Birds of Paradise Avatar" type="ヴァンガード" pt="手札 +0/ライフ -3" wikilink="Birds of Paradise Avatar">あなたがコントロールする土地は「(Ｔ)：あなたのマナ・プールに好きな色１色のマナ１点を加える。」を持つ。</card>
     <card name="Avatar - Bosh, Iron Golem" jaName="Bosh, Iron Golem Avatar" type="ヴァンガード" pt="手札 +0/ライフ -2" wikilink="Bosh, Iron Golem Avatar">(Ｘ), 点数で見たマナ・コストがＸのアーティファクト１つを生け贄に捧げる：クリーチャー１体かプレイヤー１人を対象とする。Bosh, Iron Golem AvatarはそれにＸ点のダメージを与える。</card>
-    <card name="Avatar - Braids, Conjurer Adept" jaName="Braids, Conjurer Adept Avatar" type="ヴァンガード" pt="手札 +0/ライフ +3" wikilink="Braids, Conjurer Adept Avatar">(２)：各プレイヤーはそれぞれ、自分の手札から土地カードを１枚タップ状態で戦場に出してもよい。
+    <card name="Avatar - Braids, Conjurer Adept" jaName="Braids, Conjurer Adept Avatar" type="ヴァンガード" pt="手札 +0/ライフ +3" wikilink="Braids, Conjurer Adept Avatar">(２)：各プレイヤーはそれぞれ、自分の手札から土地・カードを１枚タップ状態で戦場に出してもよい。
 (３)：各プレイヤーはそれぞれ、自分の手札からクリーチャーでないアーティファクト・カードを１枚戦場に出してもよい。
 (４)：各プレイヤーはそれぞれ、自分の手札からクリーチャー・カードを１枚戦場に出してもよい。この能力は、あなたがソーサリーを唱えられるときのみ起動できる。</card>
     <card name="Avatar - Chronatog" jaName="Chronatog Avatar" type="ヴァンガード" pt="手札 -1/ライフ +1" wikilink="Chronatog Avatar">あなたの手札の上限はなくなる。
@@ -81,9 +82,9 @@
     <card name="Avatar - Diamond Faerie" jaName="Diamond Faerie Avatar" type="ヴァンガード" pt="手札 +0/ライフ +5" wikilink="Diamond Faerie Avatar">(氷)：あなたがコントロールするクリーチャー１体を対象とする。ターン終了時まで、それは+1/+1の修整を受ける。</card>
     <card name="Avatar - Eight-and-a-Half-Tails" jaName="Eight-and-a-Half-Tails Avatar" type="ヴァンガード" pt="手札 +2/ライフ -3" wikilink="Eight-and-a-Half-Tails Avatar">(１)：あなたがコントロールするパーマネント１つを対象とする。それが持つプロテクションに記述されていない色から１色を無作為に選ぶ。ターン終了時まで、それはプロテクション（選ばれた色）を得る。</card>
     <card name="Avatar - Eladamri, Lord of Leaves" jaName="Eladamri, Lord of Leaves Avatar" type="ヴァンガード" pt="手札 -1/ライフ +2" wikilink="Eladamri, Lord of Leaves Avatar">各プレイヤーの戦闘前メイン・フェイズの開始時に、そのプレイヤーは自分のマナ・プールに(緑)(緑)を加える。</card>
-    <card name="Avatar - Elvish Champion" jaName="Elvish Champion Avatar" type="ヴァンガード" pt="手札 +0/ライフ -5" wikilink="Elvish Champion Avatar">あなたは、「(Ｔ)：あなたのマナ・プールに(緑)を加える。」を持つ、緑の1/1のエルフ(Elf)・クリーチャー・トークンを１体生成した状態でゲームを始める。</card>
+    <card name="Avatar - Elvish Champion" jaName="Elvish Champion Avatar" type="ヴァンガード" pt="手札 +0/ライフ -5" wikilink="Elvish Champion Avatar">あなたは、「(Ｔ)：あなたのマナ・プールに(緑)を加える。」を持つ、緑の1/1のエルフ・クリーチャー・トークンを１体生成した状態でゲームを始める。</card>
     <card name="Avatar - Enigma Sphinx" jaName="Enigma Sphinx Avatar" type="ヴァンガード" pt="手札 -1/ライフ +0" wikilink="Enigma Sphinx Avatar">あなたがいずれかのターンに最初に有色のアーティファクト・呪文を唱えるたび、あなたのライブラリーから点数で見たマナ・コストがその呪文より小さい、無作為に選ばれた有色のアーティファクト・カード１枚を探す。あなたはそのカードをそれのマナ・コストを支払うことなく唱えてもよい。そうしなかった場合、そのカードをあなたのライブラリーの一番下に置く。</card>
-    <card name="Avatar - Erhnam Djinn" jaName="Erhnam Djinn Avatar" type="ヴァンガード" pt="手札 +0/ライフ +3" wikilink="Erhnam Djinn Avatar">あなたがクリーチャー・呪文を１つ唱えるたび、緑の1/1の苗木(Saproling)・クリーチャー・トークンを１体生成する。</card>
+    <card name="Avatar - Erhnam Djinn" jaName="Erhnam Djinn Avatar" type="ヴァンガード" pt="手札 +0/ライフ +3" wikilink="Erhnam Djinn Avatar">あなたがクリーチャー・呪文を１つ唱えるたび、緑の1/1の苗木・クリーチャー・トークンを１体生成する。</card>
     <card name="Avatar - Etched Oracle" jaName="Etched Oracle Avatar" type="ヴァンガード" pt="手札 +1/ライフ -4" wikilink="Etched Oracle Avatar">あなたは、あなたが唱える呪文のマナ・コストを支払うのではなく、(白)(青)(黒)(赤)(緑)を支払ってもよい。</card>
     <card name="Avatar - Fallen Angel" jaName="Fallen Angel Avatar" type="ヴァンガード" pt="手札 +0/ライフ -5" wikilink="Fallen Angel Avatar">あなたがコントロールするクリーチャーが１体死亡するたび、対戦相手１人を対象とする。そのプレイヤーは１点のライフを失い、あなたは１点のライフを得る。</card>
     <card name="Avatar - Figure of Destiny" jaName="Figure of Destiny Avatar" type="ヴァンガード" pt="手札 +0/ライフ +3" wikilink="Figure of Destiny Avatar">(Ｘ)：Ｘ個未満の+1/+1カウンターが置かれているクリーチャー１体を対象とする。それの上に+1/+1カウンターを１個置く。</card>
@@ -93,7 +94,7 @@
     <card name="Avatar - Goblin Warchief" jaName="Goblin Warchief Avatar" type="ヴァンガード" pt="手札 +1/ライフ +2" wikilink="Goblin Warchief Avatar">あなたがコントロールする攻撃クリーチャーは+1/+0の修整を受ける。</card>
     <card name="Avatar - Grinning Demon" jaName="Grinning Demon Avatar" type="ヴァンガード" pt="手札 -1/ライフ -2" wikilink="Grinning Demon Avatar">あなたがコントロールするトークンでないクリーチャーが１体死亡するたび、対戦相手１人を対象とする。そのプレイヤーはカードを１枚捨てる。</card>
     <card name="Avatar - Haakon, Stromgald Scourge" jaName="Haakon, Stromgald Scourge Avatar" type="ヴァンガード" pt="手札 +0/ライフ -3" wikilink="Haakon, Stromgald Scourge Avatar">１点のライフを支払う：あなたの墓地にあるクリーチャー・カード１枚を対象とする。このターン、あなたはそのカードをプレイしてもよい。
-あなたがあなたの墓地からクリーチャー・カードを１枚プレイするたび、それは黒のゾンビ(Zombie)・騎士(Knight)になる。
+あなたがあなたの墓地からクリーチャー・カードを１枚プレイするたび、それは黒のゾンビ・騎士になる。
 ゾンビ・騎士が１つ戦場からあなたの墓地に置かれるなら、代わりにそれを追放する。</card>
     <card name="Avatar - Heartwood Storyteller" jaName="Heartwood Storyteller Avatar" type="ヴァンガード" pt="手札 -1/ライフ +4" wikilink="Heartwood Storyteller Avatar">各ターン、あなたが最初に唱えるクリーチャー・呪文を唱えるためのコストは(１)少なくなる。
 各ターン、各対戦相手が最初に唱えるクリーチャーでない呪文を唱えるためのコストは(１)多くなる。</card>
@@ -110,7 +111,7 @@
     <card name="Avatar - Jhoira of the Ghitu" jaName="Jhoira of the Ghitu Avatar" type="ヴァンガード" pt="手札 +1/ライフ +0" wikilink="Jhoira of the Ghitu Avatar">(３),カードを１枚捨てる：無作為に選ばれたインスタント・カード３枚をコピーする。あなたはそれらのコピーのうちの１つをマナ・コストを支払わずに唱えてもよい。
 (３),カードを１枚捨てる：無作為に選ばれたソーサリー・カード３枚をコピーする。あなたはそれらのコピーのうちの１つをマナ・コストを支払わずに唱えてもよい。この能力は、あなたがソーサリーを唱えられるときにのみ起動できる。</card>
     <card name="Avatar - Karona, False God" jaName="Karona, False God Avatar" type="ヴァンガード" pt="手札 -1/ライフ +8" wikilink="Karona, False God Avatar">あなたのアップキープの開始時に、対戦相手１人を対象とする。無作為に選んだあなたがコントロールするパーマネント１つと、無作為に選んだそのプレイヤーがコントロールするパーマネント１つのコントロールを交換する。</card>
-    <card name="Avatar - Kresh the Bloodbraided" jaName="Kresh the Bloodbraided Avatar" type="ヴァンガード" pt="手札 +1/ライフ -3" wikilink="Kresh the Bloodbraided Avatar">あなたがコントロールするクリーチャーが１体貪食されるたび、緑のX/Xのウーズ(Ooze)・クリーチャー・トークンを１体生成する。Ｘはその貪食されたクリーチャーのパワーである。</card>
+    <card name="Avatar - Kresh the Bloodbraided" jaName="Kresh the Bloodbraided Avatar" type="ヴァンガード" pt="手札 +1/ライフ -3" wikilink="Kresh the Bloodbraided Avatar">あなたがコントロールするクリーチャーが１体貪食されるたび、緑のX/Xのウーズ・クリーチャー・トークンを１体生成する。Ｘはその貪食されたクリーチャーのパワーである。</card>
     <card name="Avatar - Loxodon Hierarch" jaName="Loxodon Hierarch Avatar" type="ヴァンガード" pt="手札 +0/ライフ +12" wikilink="Loxodon Hierarch Avatar">パーマネント１つを生け贄に捧げる：あなたがコントロールするクリーチャー１体を対象とし、それを再生する。</card>
     <card name="Avatar - Lyzolda, the Blood Witch" jaName="Lyzolda, the Blood Witch Avatar" type="ヴァンガード" pt="手札 -1/ライフ -1" wikilink="Lyzolda, the Blood Witch Avatar">暴勇 ― あなたの手札にカードがない限り、あなたがコントロールする発生源がいずれかのクリーチャーかプレイヤーにダメージを与える場合、代わりにそれはそのクリーチャーかプレイヤーにその２倍のダメージを与える。
 暴勇 ― あなたの終了ステップの開始時に、あなたの手札にカードがない場合、各対戦相手はそれぞれ、カードを１枚捨てる。</card>
@@ -121,7 +122,7 @@
 あなたはカードを引けない。
 あなたのドロー・ステップの開始時に、あなたのライブラリーの一番上からＸ枚のカードを見る。ＸはMaralen of the Mornsong Avatarによって支払われたライフの点数に等しい。その中から１枚をあなたの手札に加え、その後、あなたのライブラリーを切り直す。</card>
     <card name="Avatar - Maro" jaName="Maro Avatar" type="ヴァンガード" pt="手札 +2/ライフ -7" wikilink="Maro Avatar">あなたがコントロールするアンタップ状態のクリーチャーを１体タップする,カードを１枚捨てる：あなたがコントロールするクリーチャー１体を対象とする。ターン終了時まで、それは+X/+Xの修整を受ける。Ｘはあなたの手札にあるカードの枚数に等しい。</card>
-    <card name="Avatar - Master of the Wild Hunt" jaName="Master of the Wild Hunt Avatar" type="ヴァンガード" pt="手札 +1/ライフ +3" wikilink="Master of the Wild Hunt Avatar">(２)(緑)：「2/2の狼(Wolf)」「森渡りを持つ2/3のアンテロープ(Antelope)」「被覆を持つ3/2の猫(Cat)」「トランプルを持つ緑の4/4のサイ(Rhino)」から無作為に選ばれた緑のクリーチャー・トークンを１体生成する。</card>
+    <card name="Avatar - Master of the Wild Hunt" jaName="Master of the Wild Hunt Avatar" type="ヴァンガード" pt="手札 +1/ライフ +3" wikilink="Master of the Wild Hunt Avatar">(２)(緑)：「2/2の狼」「森渡りを持つ2/3のアンテロープ」「被覆を持つ3/2の猫」「トランプルを持つ緑の4/4のサイ」から無作為に選ばれた緑のクリーチャー・トークンを１体生成する。</card>
     <card name="Avatar - Mayael the Anima" jaName="Mayael the Anima Avatar" type="ヴァンガード" pt="手札 +1/ライフ +5" wikilink="Mayael the Anima Avatar">あなたのアップキープの開始時に、あなたのライブラリーの一番上のカードを公開する。それがパワーが５以上のクリーチャー・カードである場合、それをあなたの手札に加える。そうでない場合、それをあなたのライブラリーの一番下に置いてもよい。</card>
     <card name="Avatar - Mirri the Cursed" jaName="Mirri the Cursed Avatar" type="ヴァンガード" pt="手札 -2/ライフ -3" wikilink="Mirri the Cursed Avatar">あなたがコントロールするクリーチャーは「(Ｔ)：他のクリーチャー１体を対象とする。ターン終了時まで、それは-1/-1の修整を受ける。このクリーチャーの上に+1/+1カウンターを置く。」を持つ。</card>
     <card name="Avatar - Mirror Entity" jaName="Mirror Entity Avatar" type="ヴァンガード" pt="手札 +1/ライフ -1" wikilink="Mirror Entity Avatar">(Ｘ)：クリーチャー・タイプを１つ選ぶ。ターン終了時まで、選ばれたタイプのあなたがコントロールするクリーチャーはX/Xになるとともにすべてのクリーチャー・タイプを得る。</card>
@@ -130,7 +131,7 @@
     <card name="Avatar - Morinfen" jaName="Morinfen Avatar" type="ヴァンガード" pt="手札 +0/ライフ +30" wikilink="Morinfen Avatar">あなたのアップキープの開始時に、あなたは、あなたがコントロールするパーマネント１つにつき１点のライフを失う。</card>
     <card name="Avatar - Murderous Redcap" jaName="Murderous Redcap Avatar" type="ヴァンガード" pt="手札 +0/ライフ -2" wikilink="Murderous Redcap Avatar">クリーチャーが１体カウンターが置かれた状態であなたのコントロール下で戦場に出るたび、クリーチャー１体かプレイヤー１人を対象とする。あなたは「前者は、後者に、その前者のパワーに等しいダメージを与える」ことを選んでもよい。</card>
     <card name="Avatar - Necropotence" jaName="Necropotence Avatar" type="ヴァンガード" pt="手札 +0/ライフ +4" wikilink="Necropotence Avatar">あなたのドロー・ステップを飛ばす。
-あなたの終了ステップの開始時に、それがこのゲームの最初のターンでない場合、Necropotence Avatarの上に死亡(death)カウンターを１個置く。あなたはカードをＸ枚引き、Ｘ点のライフを失う。ＸはNecropotence Avatarの上に置かれている死亡カウンターの数に等しい。</card>
+あなたの終了ステップの開始時に、それがこのゲームの最初のターンでない場合、Necropotence Avatarの上に死亡カウンターを１個置く。あなたはカードをＸ枚引き、Ｘ点のライフを失う。ＸはNecropotence Avatarの上に置かれている死亡カウンターの数に等しい。</card>
     <card name="Avatar - Nekrataal" jaName="Nekrataal Avatar" type="ヴァンガード" pt="手札 -1/ライフ -4" wikilink="Nekrataal Avatar">あなたが唱えるクリーチャー呪文を唱えるためのコストは(黒)少なくなる。この効果は、あなたが支払う色マナの数のみを減らす。</card>
     <card name="Avatar - Oni of Wild Places" jaName="Oni of Wild Places Avatar" type="ヴァンガード" pt="手札 +0/ライフ -2" wikilink="Oni of Wild Places Avatar">あなたがコントロールするクリーチャーは速攻を持つ。
 あなたのアップキープの開始時に、あなたがコントロールするクリーチャー１体をオーナーの手札に戻す。</card>
@@ -143,7 +144,7 @@
     <card name="Avatar - Raksha Golden Cub" jaName="Raksha Golden Cub Avatar" type="ヴァンガード" pt="手札 +1/ライフ +9" wikilink="Raksha Golden Cub Avatar">あなたがコントロールするクリーチャーは+0/+1の修整を受ける。
 あなたがコントロールする装備しているクリーチャーは+1/+0の修整を受けるとともに先制攻撃を持つ。</card>
     <card name="Avatar - Reaper King" jaName="Reaper King Avatar" type="ヴァンガード" pt="手札 -2/ライフ -5" wikilink="Reaper King Avatar">あなたがコントロールする各クリーチャーは、それぞれ自身の色１つにつき+1/+1の修整を受ける。</card>
-    <card name="Avatar - Rith, the Awakener" jaName="Rith, the Awakener Avatar" type="ヴァンガード" pt="手札 +0/ライフ +6" wikilink="Rith, the Awakener Avatar">あなたがコントロールするクリーチャー１体がプレイヤー１人に戦闘ダメージを与えるたび、あなたは(５)を支払ってもよい。そうしたなら、飛行を持つ赤の5/5のドラゴン(Dragon)・クリーチャー・トークンを１体生成する。</card>
+    <card name="Avatar - Rith, the Awakener" jaName="Rith, the Awakener Avatar" type="ヴァンガード" pt="手札 +0/ライフ +6" wikilink="Rith, the Awakener Avatar">あなたがコントロールするクリーチャー１体がプレイヤー１人に戦闘ダメージを与えるたび、あなたは(５)を支払ってもよい。そうしたなら、飛行を持つ赤の5/5のドラゴン・クリーチャー・トークンを１体生成する。</card>
     <card name="Avatar - Royal Assassin" jaName="Royal Assassin Avatar" type="ヴァンガード" pt="手札 -2/ライフ +0" wikilink="Royal Assassin Avatar">あなたのアップキープの開始時に、あなたはカードを１枚引き、１点のライフを失う。</card>
     <card name="Avatar - Rumbling Slum" jaName="Rumbling Slum Avatar" type="ヴァンガード" pt="手札 +1/ライフ +1" wikilink="Rumbling Slum Avatar">あなたのアップキープの開始時に、Rumbling Slum Avatarは各対戦相手に１点のダメージを与える。</card>
     <card name="Avatar - Sakashima the Impostor" jaName="Sakashima the Impostor Avatar" type="ヴァンガード" pt="手札 +0/ライフ +1" wikilink="Sakashima the Impostor Avatar">(２)：クリーチャー１体を対象とする。あなたがコントロールするクリーチャーを１体選ぶ。後者はその名前を除いて、前者のコピーになる。</card>
@@ -157,7 +158,7 @@
     <card name="Avatar - Stalking Tiger" jaName="Stalking Tiger Avatar" type="ヴァンガード" pt="手札 +0/ライフ +2" wikilink="Stalking Tiger Avatar">あなたがクリーチャー・呪文を１つ唱えるたび、あなたは(１)を支払ってもよい。そうしたなら、カードを１枚引く。</card>
     <card name="Avatar - Stonehewer Giant" jaName="Stonehewer Giant Avatar" type="ヴァンガード" pt="手札 +1/ライフ -5" wikilink="Stonehewer Giant Avatar">クリーチャーが１体あなたのコントロール下で戦場に出るたび、点数で見たマナ・コストが、そのクリーチャーの点数で見たマナ・コスト以下の無作為に選ばれた装備品カード１枚のコピーであるトークンを１つ生成する。その装備品をそのクリーチャーにつける。</card>
     <card name="Avatar - Stuffy Doll" jaName="Stuffy Doll Avatar" type="ヴァンガード" pt="手札 +0/ライフ -6" wikilink="Stuffy Doll Avatar">(０):対戦相手１人を対象とする。このターン、あなたが選んだ発生源１つからあなたにダメージが与えられるなら、そのダメージを軽減する。Stuffy Doll Avatarはあなたとそのプレイヤーに、これにより軽減されたダメージの端数を切り上げた半分に等しいダメージを与える。この能力は、各ターンに１回しか起動できない。</card>
-    <card name="Avatar - Teysa, Orzhov Scion" jaName="Teysa, Orzhov Scion Avatar" type="ヴァンガード" pt="手札 +0/ライフ -2" wikilink="Teysa, Orzhov Scion Avatar">トークンでないクリーチャーが１体死亡するたび、飛行を持つ白の1/1のスピリット(Spirit)・クリーチャー・トークンを１体生成する。</card>
+    <card name="Avatar - Teysa, Orzhov Scion" jaName="Teysa, Orzhov Scion Avatar" type="ヴァンガード" pt="手札 +0/ライフ -2" wikilink="Teysa, Orzhov Scion Avatar">トークンでないクリーチャーが１体死亡するたび、飛行を持つ白の1/1のスピリット・クリーチャー・トークンを１体生成する。</card>
     <card name="Avatar - The Avenger" jaName="報復者" type="ヴァンガード" wikilink="報復者/The Avenger">(３),(Ｔ)：あなたがコントロールするクリーチャー１体を対象とする。ターン終了時まで、それは接死を得る。</card>
     <card name="Avatar - The Harvester" jaName="収穫者" type="ヴァンガード" wikilink="収穫者/The Harvester">(Ｔ)：カードを１枚引き、その後カードを１枚捨てる。</card>
     <card name="Avatar - The Hunter" jaName="狩人" type="ヴァンガード" wikilink="英雄/The Hunter">(Ｔ)：あなたがコントロールするクリーチャー１体を対象とする。ターン終了時まで、それは+1/+1の修整を受ける。</card>
@@ -179,14 +180,14 @@
 あなたがカオス・シンボルを出すたび、プレイヤー１人がプレインズウォークするまで、クリーチャーはあなたを攻撃できない。</card>
     <card name="Akoum" jaName="アクーム" type="次元 ― ゼンディカー" wikilink="アクーム/Akoum (次元カード)">プレイヤーはエンチャント・カードを、それが瞬速を持っているかのように唱えてもよい。
 あなたがカオス・シンボルを出すたび、エンチャントされていないクリーチャー１体を対象とし、それを破壊する。</card>
-    <card name="Aretopolis" jaName="アレトポリス" type="次元 ― ケファライ" wikilink="アレトポリス/Aretopolis (次元カード)">あなたがアレトポリスにプレインズウォークしたときか、あなたのアップキープの開始時に、アレトポリスの上に巻物(Scroll)カウンターを１個置き、その後、あなたはそれの上に置かれている巻物カウンターの数に等しい点数のライフを得る。
+    <card name="Aretopolis" jaName="アレトポリス" type="次元 ― ケファライ" wikilink="アレトポリス/Aretopolis (次元カード)">あなたがアレトポリスにプレインズウォークしたときか、あなたのアップキープの開始時に、アレトポリスの上に巻物カウンターを１個置き、その後、あなたはそれの上に置かれている巻物カウンターの数に等しい点数のライフを得る。
 アレトポリスの上に巻物カウンターが10個以上置かれているとき、プレインズウォークする。
 あなたがカオス・シンボルを出すたび、アレトポリスの上に巻物カウンターを１個置く。その後、それの上に置かれている巻物カウンターの数に等しい枚数のカードを引く。</card>
     <card name="Astral Arena" jaName="天界闘技場" type="次元 ― コルバハン" wikilink="天界闘技場/Astral Arena (次元カード)">各戦闘では、２体以上のクリーチャーでは攻撃できない。
 各戦闘では、２体以上のクリーチャーではブロックできない。
 あなたがカオス・シンボルを出すたび、天界闘技場は各クリーチャーにそれぞれ２点のダメージを与える。</card>
     <card name="Bant" jaName="バント" type="次元 ― アラーラ" wikilink="バント/Bant (次元カード)">すべてのクリーチャーは賛美を持つ。（あなたがコントロールするクリーチャー１体が単独で攻撃するたび、そのクリーチャーはターン終了時まで、それのコントローラーがコントロールするパーマネントが持つ賛美１つにつき+1/+1の修整を受ける。）
-あなたがカオス・シンボルを出すたび、緑か白か青のクリーチャー１体を対象とし、それの上に神性(divinity)カウンターを１個置く。そのクリーチャーは、それの上に神性カウンターが置かれているかぎり破壊不能を持つ。</card>
+あなたがカオス・シンボルを出すたび、緑か白か青のクリーチャー１体を対象とし、それの上に神性カウンターを１個置く。そのクリーチャーは、それの上に神性カウンターが置かれているかぎり破壊不能を持つ。</card>
     <card name="Bloodhill Bastion" jaName="血丘の砦" type="次元 ― エクィロー" wikilink="血丘の砦/Bloodhill Bastion (次元カード)">クリーチャーが１体戦場に出るたび、ターン終了時まで、それは二段攻撃と速攻を得る。
 あなたがカオス・シンボルを出すたび、あなたがコントロールするトークンでないクリーチャー１体を対象とし、それを追放する。その後、それをあなたのコントロール下で戦場に戻す。</card>
     <card name="Chaotic Aether" jaName="混沌の霊気" type="現象" wikilink="混沌の霊気/Chaotic AEther">あなたが混沌の霊気に遭遇したとき、プレイヤー１人がいずれかの次元からプレインズウォークするまで、次元ダイスで出た空白はカオス・シンボルである。（その後、この現象からプレインズウォークする。）</card>
@@ -209,16 +210,16 @@
 あなたがカオス・シンボルを出すたび、あなたがオーナーであるクリーチャー１体を対象とし、それのコントロールを得る。</card>
     <card name="Glimmervoid Basin" jaName="空僻の盆地" type="次元 ― ミラディン" wikilink="空僻の盆地/Glimmervoid Basin (次元カード)">プレイヤーが単一の対象を持つインスタント呪文かソーサリー呪文を１つ唱えるたび、そのプレイヤーは、その呪文が対象にできる他の呪文１つやパーマネント１つや戦場に出ていないカード１枚やプレイヤー１人につき、その呪文を１回コピーする。各コピーは、それらのうち別々のものを対象とする。
 あなたがカオス・シンボルを出すたび、クリーチャー１体を対象とする。そのクリーチャーのコントローラー以外の各プレイヤーは、そのクリーチャーのコピーであるトークンを１体生成する。</card>
-    <card name="Goldmeadow" jaName="ゴールドメドウ" type="次元 ― ローウィン" wikilink="ゴールドメドウ/Goldmeadow (次元カード)">土地が１つ戦場に出るたび、その土地のコントローラーは白の0/1のヤギ(Goat)・クリーチャー・トークンを３体生成する。
+    <card name="Goldmeadow" jaName="ゴールドメドウ" type="次元 ― ローウィン" wikilink="ゴールドメドウ/Goldmeadow (次元カード)">土地が１つ戦場に出るたび、その土地のコントローラーは白の0/1のヤギ・クリーチャー・トークンを３体生成する。
 あなたがカオス・シンボルを出すたび、白の0/1のヤギ・クリーチャー・トークンを１体生成する。</card>
     <card name="Grand Ossuary" jaName="大納骨堂" type="次元 ― ラヴニカ" wikilink="大納骨堂/Grand Ossuary (次元カード)">クリーチャーが１体死亡するたび、それのコントローラーは望む数の自分がコントロールするクリーチャーを対象とし、それらの上に、死亡したクリーチャーのパワーに等しい数の+1/+1カウンターを割り振って置く。
-あなたがカオス・シンボルを出すたび、各プレイヤーは自分がコントロールするすべてのクリーチャーを追放し、緑の1/1の苗木(Saproling)・クリーチャー・トークンをＸ体生成する。Ｘはそのプレイヤーがこれにより追放したクリーチャーのパワーの合計に等しい。その後、プレインズウォークする。</card>
+あなたがカオス・シンボルを出すたび、各プレイヤーは自分がコントロールするすべてのクリーチャーを追放し、緑の1/1の苗木・クリーチャー・トークンをＸ体生成する。Ｘはそのプレイヤーがこれにより追放したクリーチャーのパワーの合計に等しい。その後、プレインズウォークする。</card>
     <card name="Grixis" jaName="グリクシス" type="次元 ― アラーラ" wikilink="グリクシス/Grixis (次元カード)">あなたの墓地にある青か黒か赤のクリーチャー・カードは蘇生を持つ。その蘇生コストはそのカードのマナ・コストに等しい。（そのカードのマナ・コストを支払う：それを戦場に戻す。そのクリーチャーは速攻を得る。次のターン終了ステップの開始時か、それが戦場を離れる場合に、それを追放する。蘇生はソーサリーとしてのみ行う。）
 あなたがカオス・シンボルを出すたび、いずれかの墓地にあるクリーチャー・カード１枚を対象とし、それをあなたのコントロール下で戦場に出す。</card>
     <card name="Grove of the Dreampods" jaName="夢鞘の木立ち" type="次元 ― ファバシン" wikilink="夢鞘の木立ち/Grove of the Dreampods (次元カード)">あなたが夢鞘の木立ちにプレインズウォークしたときか、あなたのアップキープの開始時に、クリーチャー・カードが公開されるまで、あなたのライブラリーの一番上からカードを１枚ずつ公開する。そのカードを戦場に出し、残りをあなたのライブラリーの一番下に無作為の順番で置く。
 あなたがカオス・シンボルを出すたび、あなたの墓地にあるクリーチャー・カード１枚を対象とし、それを戦場に戻す。</card>
     <card name="Hedron Fields of Agadeem" jaName="アガディームの面晶体原" type="次元 ― ゼンディカー" wikilink="アガディームの面晶体原/Hedron Fields of Agadeem (次元カード)">パワーが７以上のクリーチャーは攻撃したりブロックしたりできない。
-あなたがカオス・シンボルを出すたび、滅殺１を持つ無色の7/7のエルドラージ(Eldrazi)・クリーチャー・トークンを１体生成する。（それが攻撃するたび、防御プレイヤーはパーマネントを１つ生け贄に捧げる。）</card>
+あなたがカオス・シンボルを出すたび、滅殺１を持つ無色の7/7のエルドラージ・クリーチャー・トークンを１体生成する。（それが攻撃するたび、防御プレイヤーはパーマネントを１つ生け贄に捧げる。）</card>
     <card name="Immersturm" jaName="イマースターム" type="次元 ― ヴァラ" wikilink="イマースターム/Immersturm (次元カード)">クリーチャーが１体戦場に出るたび、そのクリーチャーのコントローラーが選んだクリーチャー１体かプレイヤー１人を対象とする。その戦場に出たクリーチャーのコントローラーは「このクリーチャーは、それに自身のパワーに等しい点数のダメージを与える。」を選んでもよい。
 あなたがカオス・シンボルを出すたび、クリーチャー１体を対象とし、それを追放する。その後、それをオーナーのコントロール下で戦場に戻す。</card>
     <card name="Interplanar Tunnel" jaName="次元間トンネル" type="現象">あなたが次元間トンネルに遭遇したとき、次元カードが５枚公開されるまで、あなたの次元デッキの一番上からカードを１枚ずつ公開する。それらの中から次元カードを１枚、あなたの次元デッキの一番上に置き、その後、その公開された残りのカードをあなたの次元デッキの一番下に無作為の順番で置く。（その後、この現象からプレインズウォークする。）</card>
@@ -227,17 +228,17 @@
     <card name="Izzet Steam Maze" jaName="イゼットの蒸気迷路" type="次元 ― ラヴニカ" wikilink="イゼットの蒸気迷路/Izzet Steam Maze (次元カード)">プレイヤーがインスタント呪文かソーサリー呪文を１つ唱えるたび、そのプレイヤーはそれをコピーする。そのプレイヤーはそのコピーの新たな対象を選んでもよい。
 あなたがカオス・シンボルを出すたび、このターン、あなたが唱えるインスタント呪文とソーサリー呪文は、それを唱えるためのコストが(３)少なくなる。</card>
     <card name="Jund" jaName="ジャンド" type="次元 ― アラーラ" wikilink="ジャンド/Jund (次元カード)">プレイヤーが黒か赤か緑のクリーチャー呪文を１つ唱えるたび、それは貪食５を得る。（そのクリーチャーが戦場に出るに際し、それのコントローラーは望む数のクリーチャーを生け贄に捧げてもよい。そのクリーチャーはその数の５倍に等しい+1/+1カウンターが置かれた状態で戦場に出る。）
-あなたがカオス・シンボルを出すたび、赤の1/1のゴブリン(Goblin)・クリーチャー・トークンを２体生成する。</card>
-    <card name="Kessig" jaName="ケッシグ" type="次元 ― イニストラード" wikilink="ケッシグ/Kessig (次元カード)">狼男(Werewolf)でないクリーチャーが与えるすべての戦闘ダメージを軽減する。
+あなたがカオス・シンボルを出すたび、赤の1/1のゴブリン・クリーチャー・トークンを２体生成する。</card>
+    <card name="Kessig" jaName="ケッシグ" type="次元 ― イニストラード" wikilink="ケッシグ/Kessig (次元カード)">狼男でないクリーチャーが与えるすべての戦闘ダメージを軽減する。
 あなたがカオス・シンボルを出すたび、ターン終了時まで、あなたがコントロールする各クリーチャーは+2/+2の修整を受けるとともにトランプルを得て、それの他のタイプに加えて狼男になる。</card>
     <card name="Kharasha Foothills" jaName="カラーシャの山麓" type="次元 ― モンセン" wikilink="カラーシャの山麓/Kharasha Foothills (次元カード)">あなたがコントロールするクリーチャーが１体いずれかのプレイヤーを攻撃するたび、他の対戦相手１人につき、あなたはそのクリーチャーのコピーであるトークンを１体、タップ状態でその対戦相手を攻撃している状態で生成してもよい。次の終了ステップの開始時に、それらのトークンを追放する。
 あなたがカオス・シンボルを出すたび、あなたは望む数のクリーチャーを生け贄に捧げてもよい。そうした場合、クリーチャー１体を対象とする。カラーシャの山麓はそれに、その数に等しい点数のダメージを与える。</card>
-    <card name="Kilnspire District" jaName="窯尖塔地域" type="次元 ― ラヴニカ" wikilink="窯尖塔地域/Kilnspire District (次元カード)">あなたが窯尖塔地域にプレインズウォークしたときか、あなたの戦闘前メイン・フェイズの開始時に、窯尖塔地域の上に蓄積(Charge)カウンターを１個置き、その後、それの上に置かれている蓄積カウンター１個につき、あなたのマナ・プールに(赤)を加える。
+    <card name="Kilnspire District" jaName="窯尖塔地域" type="次元 ― ラヴニカ" wikilink="窯尖塔地域/Kilnspire District (次元カード)">あなたが窯尖塔地域にプレインズウォークしたときか、あなたの戦闘前メイン・フェイズの開始時に、窯尖塔地域の上に蓄積カウンターを１個置き、その後、それの上に置かれている蓄積カウンター１個につき、あなたのマナ・プールに(赤)を加える。
 あなたがカオス・シンボルを出すたび、クリーチャー１体かプレイヤー１人を対象とする。あなたは(Ｘ)を支払ってもよい。そうした場合、窯尖塔地域はそれにＸ点のダメージを与える。</card>
     <card name="Krosa" jaName="クローサ" type="次元 ― ドミナリア" wikilink="クローサ/Krosa (次元カード)">すべてのクリーチャーは+2/+2の修整を受ける。
 あなたがカオス・シンボルを出すたび、あなたはあなたのマナ・プールに(白)(青)(黒)(赤)(緑)を加えてもよい。</card>
     <card name="Lair of the Ashen Idol" jaName="灰の偶像のねぐら" type="次元 ― アズゴル" wikilink="灰の偶像のねぐら/Lair of the Ashen Idol (次元カード)">あなたのアップキープの開始時に、クリーチャーを１体生け贄に捧げる。それができない場合、プレインズウォークする。
-あなたがカオス・シンボルを出すたび、望む数のプレイヤーを対象とする。それらのプレイヤーは、それぞれ黒の2/2のゾンビ(Zombie)・クリーチャー・トークンを１体生成する。</card>
+あなたがカオス・シンボルを出すたび、望む数のプレイヤーを対象とする。それらのプレイヤーは、それぞれ黒の2/2のゾンビ・クリーチャー・トークンを１体生成する。</card>
     <card name="Lethe Lake" jaName="忘却湖" type="次元 ― アーコス" wikilink="忘却湖/Lethe Lake (次元カード)">あなたのアップキープの開始時に、あなたのライブラリーの一番上から１０枚のカードをあなたの墓地に置く。
 あなたがカオス・シンボルを出すたび、プレイヤー１人を対象とする。そのプレイヤーは自分のライブラリーの一番上から１０枚のカードを自分の墓地に置く。</card>
     <card name="Llanowar" jaName="ラノワール" type="次元 ― ドミナリア" wikilink="ラノワール/Llanowar (次元カード)">すべてのクリーチャーは「(Ｔ)：あなたのマナ・プールに(緑)(緑)を加える。」を持つ。
@@ -245,19 +246,19 @@
     <card name="Minamo" jaName="水面院" type="次元 ― 神河" wikilink="水面院/Minamo (次元カード)">プレイヤーが呪文を１つ唱えるたび、そのプレイヤーはカードを１枚引いてもよい。
 あなたがカオス・シンボルを出すたび、各プレイヤーは自分の墓地にある青のカードを１枚、自分の手札に戻してもよい。</card>
     <card name="Morphic Tide" jaName="変異の潮流" type="現象">あなたが変異の潮流に遭遇したとき、各プレイヤーは自分がオーナーであるすべてのパーマネントを自分のライブラリーに加えて切り直し、その後、自分のライブラリーの一番上からその総数に等しい枚数のカードを公開する。各プレイヤーは、これにより公開されたすべてのアーティファクト・カードとクリーチャー・カードと土地・カードとプレインズウォーカー・カードを戦場に出し、その後、エンチャント・カードも同様に行う。その後、これにより公開されて戦場に出されなかったすべてのカードを自分のライブラリーの一番下に望む順番で置く。（その後、この現象からプレインズウォークする。）</card>
-    <card name="Mount Keralia" jaName="ケラル山" type="次元 ― レガーサ" wikilink="ケラル山/Mount Keralia (次元カード)">あなたの終了ステップの開始時に、ケラル山の上に内圧(Pressure)カウンターを１個置く。
+    <card name="Mount Keralia" jaName="ケラル山" type="次元 ― レガーサ" wikilink="ケラル山/Mount Keralia (次元カード)">あなたの終了ステップの開始時に、ケラル山の上に内圧カウンターを１個置く。
 あなたがケラル山からプレインズウォークしたとき、それは各クリーチャーと各プレインズウォーカーに、それの上に置かれている内圧カウンターの数に等しい点数のダメージを与える。
 あなたがカオス・シンボルを出すたび、このゲームの間、《ケラル山/Mount Keralia》という名前の次元があなたがコントロールするパーマネントに与えるすべてのダメージを軽減する。</card>
     <card name="Murasa" jaName="ムラーサ" type="次元 ― ゼンディカー" wikilink="ムラーサ/Murasa (次元カード)">トークンでないクリーチャーが１体戦場に出るたび、それのコントローラーは自分のライブラリーから基本土地・カードを１枚探してもよい。そうしたなら、そのプレイヤーはそのカードをタップ状態で戦場に出し、その後、自分のライブラリーを切り直す。
 あなたがカオス・シンボルを出すたび、土地１つを対象とする。それは4/4のクリーチャーになる。それは土地でもある。</card>
     <card name="Mutual Epiphany" jaName="相互の天啓" type="現象">あなたが相互の天啓に遭遇したとき、各プレイヤーはカードを４枚引く。（その後、この現象からプレインズウォークする。）</card>
-    <card name="Naar Isle" jaName="ナー島" type="次元 ― ワイルドファイア" wikilink="ナー島/Naar Isle (次元カード)">あなたのアップキープの開始時に、ナー島の上に火炎(Flame)カウンターを１個置く。その後、ナー島はそれの上に置かれている火炎カウンターの数に等しい点数のダメージをあなたに与える。
+    <card name="Naar Isle" jaName="ナー島" type="次元 ― ワイルドファイア" wikilink="ナー島/Naar Isle (次元カード)">あなたのアップキープの開始時に、ナー島の上に火炎カウンターを１個置く。その後、ナー島はそれの上に置かれている火炎カウンターの数に等しい点数のダメージをあなたに与える。
 あなたがカオス・シンボルを出すたび、プレイヤー１人を対象とする。ナー島はそのプレイヤーに３点のダメージを与える。</card>
     <card name="Naya" jaName="ナヤ" type="次元 ― アラーラ" wikilink="ナヤ/Naya (次元カード)">あなたの各ターンに、あなたは望む枚数の土地をプレイしてもよい。
 あなたがカオス・シンボルを出すたび、あなたがコントロールする赤か緑か白のクリーチャー１体を対象とする。ターン終了時まで、それはあなたがコントロールする土地１つにつき+1/+1の修整を受ける。</card>
     <card name="Nephalia" jaName="ネファリア" type="次元 ― イニストラード" wikilink="ネファリア/Nephalia (次元カード)">あなたの終了ステップの開始時に、あなたのライブラリーの一番上から７枚のカードをあなたの墓地に置く。その後、あなたの墓地にあるカードを無作為に１枚選び、それをあなたの手札に戻す。
 あなたがカオス・シンボルを出すたび、あなたの墓地にあるカード１枚を対象とし、それをあなたの手札に戻す。</card>
-    <card name="Norn's Dominion" jaName="ノーンの領地" type="次元 ― 新ファイレクシア" wikilink="ノーンの領地/Norn's Dominion (次元カード)">あなたがノーンの領地からプレインズウォークしたとき、運命(Fate)カウンターが置かれていない土地でない各パーマネントを破壊し、その後、すべてのパーマネントからすべての運命カウンターを取り除く。
+    <card name="Norn's Dominion" jaName="ノーンの領地" type="次元 ― 新ファイレクシア" wikilink="ノーンの領地/Norn's Dominion (次元カード)">あなたがノーンの領地からプレインズウォークしたとき、運命カウンターが置かれていない土地でない各パーマネントを破壊し、その後、すべてのパーマネントからすべての運命カウンターを取り除く。
 あなたがカオス・シンボルを出すたび、パーマネント１つを対象とする。あなたはそれの上に運命カウンターを１個置いてもよい。</card>
     <card name="Onakke Catacomb" jaName="オナッケの地下墓地" type="次元 ― シャンダラー" wikilink="オナッケの地下墓地/Onakke Catacomb (次元カード)">すべてのクリーチャーは黒であるとともに接死を持つ。
 あなたがカオス・シンボルを出すたび、ターン終了時まで、あなたがコントロールするクリーチャーは+1/+0の修整を受けるとともに先制攻撃を得る。</card>
@@ -291,7 +292,7 @@
 いずれかの効果がパーマネントの上に１個以上のカウンターを置く場合、代わりにそれはその２倍の数のカウンターをそのパーマネントの上に置く。
 あなたがカオス・シンボルを出すたび、ターン終了時まで、あなたがマナを引き出す目的で土地を１つタップするたび、その土地が生み出したいずれかのタイプのマナ１点をあなたのマナ・プールに加える。</card>
     <card name="Shiv" jaName="シヴ" type="次元 ― ドミナリア" wikilink="シヴ/Shiv (次元カード)">すべてのクリーチャーは「(赤)：ターン終了時まで、このクリーチャーは+1/+0の修整を受ける。」を持つ。
-あなたがカオス・シンボルを出すたび、飛行を持つ赤の5/5のドラゴン(Dragon)・クリーチャー・トークンを１体生成する。</card>
+あなたがカオス・シンボルを出すたび、飛行を持つ赤の5/5のドラゴン・クリーチャー・トークンを１体生成する。</card>
     <card name="Skybreen" jaName="スカイブリーン" type="次元 ― カルドハイム" wikilink="スカイブリーン/Skybreen (次元カード)">プレイヤーは自分のライブラリーの一番上のカードを公開したままプレイする。
 ライブラリーの一番上のカードと共通のカード・タイプを持つ呪文は唱えられない。
 あなたがカオス・シンボルを出すたび、プレイヤー１人を対象とする。そのプレイヤーは自分の手札にあるカードの枚数に等しい点数のライフを失う。</card>
@@ -307,7 +308,7 @@
 あなたがカオス・シンボルを出すたび、クリーチャー１体かプレイヤー１人を対象とする。要塞の灼熱洞はそれに１点のダメージを与える。</card>
     <card name="Takenuma" jaName="竹沼" type="次元 ― 神河" wikilink="竹沼/Takenuma (次元カード)">クリーチャー１体が戦場を離れるたび、それのコントローラーはカードを１枚引く。
 あなたがカオス・シンボルを出すたび、あなたがコントロールするクリーチャー１体を対象とし、それをオーナーの手札に戻す。</card>
-    <card name="Talon Gates" jaName="鉤爪の門" type="次元 ― ドミナリア" wikilink="鉤爪の門/Talon Gates (次元カード)">あなたがソーサリーを唱えられるときならいつでも、あなたはあなたの手札から土地でないカードを１枚、その上に時間(Time)カウンターがＸ個置かれた状態で追放してもよい。Ｘはそれの点数で見たマナ・コストに等しい。その追放されたカードが待機を持たない場合、それは待機を得る。（それのオーナーのアップキープの開始時に、時間カウンターを１個取り除く。最後の１個を取り除いたとき、それをそのマナ・コストを支払うことなく唱える。それがクリーチャーである場合、それは速攻を持つ。）
+    <card name="Talon Gates" jaName="鉤爪の門" type="次元 ― ドミナリア" wikilink="鉤爪の門/Talon Gates (次元カード)">あなたがソーサリーを唱えられるときならいつでも、あなたはあなたの手札から土地でないカードを１枚、その上に時間カウンターがＸ個置かれた状態で追放してもよい。Ｘはそれの点数で見たマナ・コストに等しい。その追放されたカードが待機を持たない場合、それは待機を得る。（それのオーナーのアップキープの開始時に、時間カウンターを１個取り除く。最後の１個を取り除いたとき、それをそのマナ・コストを支払うことなく唱える。それがクリーチャーである場合、それは速攻を持つ。）
 あなたがカオス・シンボルを出すたび、あなたがオーナーである待機状態の各カードから時間カウンターを２個取り除く。</card>
     <card name="Tazeem" jaName="タジーム" type="次元 ― ゼンディカー" wikilink="タジーム/Tazeem (次元カード)">クリーチャーではブロックできない。
 あなたがカオス・シンボルを出すたび、あなたがコントロールする土地１つにつきカードを１枚引く。</card>
@@ -318,7 +319,7 @@
     <card name="The Eon Fog" jaName="永劫の霧" type="次元 ― エクィロー" wikilink="永劫の霧/The Eon Fog (次元カード)">プレイヤーは自分のアンタップ・ステップを飛ばす。
 あなたがカオス・シンボルを出すたび、あなたがコントロールするすべてのパーマネントをアンタップする。</card>
     <card name="The Fourth Sphere" jaName="第四球層" type="次元 ― ファイレクシア" wikilink="第四球層/The Fourth Sphere (次元カード)">あなたのアップキープの開始時に、黒でないクリーチャーを１体生け贄に捧げる。
-あなたがカオス・シンボルを出すたび、黒の2/2のゾンビ(Zombie)・クリーチャー・トークンを１体生成する。</card>
+あなたがカオス・シンボルを出すたび、黒の2/2のゾンビ・クリーチャー・トークンを１体生成する。</card>
     <card name="The Great Forest" jaName="偉大なる森" type="次元 ― ローウィン" wikilink="偉大なる森/The Great Forest (次元カード)">各クリーチャーは、パワーではなくタフネスに等しい点数の戦闘ダメージを割り振る。
 あなたがカオス・シンボルを出すたび、ターン終了時まで、あなたがコントロールするクリーチャーは+0/+2の修整を受けるとともにトランプルを得る。</card>
     <card name="The Hippodrome" jaName="ヒッポドローム" type="次元 ― セゴビア" wikilink="ヒッポドローム/The Hippodrome (次元カード)">すべてのクリーチャーは-5/-0の修整を受ける。
@@ -333,11 +334,11 @@
 あなたがカオス・シンボルを出すたび、あなたはあなたのライブラリーからインスタント・カード１枚かソーサリー・カード１枚を探してもよい。そうしたなら、それを公開してあなたの手札に加え、その後あなたのライブラリーを切り直す。</card>
     <card name="Truga Jungle" jaName="トルーガの密林" type="次元 ― エルガモン" wikilink="トルーガの密林/Truga Jungle (次元カード)">すべての土地は「(Ｔ)：あなたのマナ・プールに好きな色のマナ１点を加える。」を持つ。
 あなたがカオス・シンボルを出すたび、あなたのライブラリーの一番上から３枚のカードを公開する。これにより公開されたすべての土地・カードをあなたの手札に加え、残りをあなたのライブラリーの一番下に望む順番で置く。</card>
-    <card name="Turri Island" jaName="ターリ島" type="次元 ― アー" wikilink="ターリ島/Turri Island (次元カード)">クリーチャー呪文を唱えるためのコストは(２)少なくなる。
+    <card name="Turri Island" jaName="ターリ島" type="次元 ― アー" wikilink="ターリ島/Turri Island (次元カード)">クリーチャー・呪文を唱えるためのコストは(２)少なくなる。
 あなたがカオス・シンボルを出すたび、あなたのライブラリーの一番上から３枚のカードを公開する。これにより公開されたすべてのクリーチャー・カードをあなたの手札に加え、残りをあなたの墓地に置く。</card>
     <card name="Undercity Reaches" jaName="地下都市の辺境" type="次元 ― ラヴニカ" wikilink="地下都市の辺境/Undercity Reaches (次元カード)">クリーチャー１体がプレイヤー１人に戦闘ダメージを与えるたび、それのコントローラーはカードを１枚引いてもよい。
 あなたがカオス・シンボルを出すたび、このゲームの残りの間、あなたの手札の上限はなくなる。</card>
-    <card name="Velis Vel" jaName="ヴェリズ・ヴェル" type="次元 ― ローウィン" wikilink="ヴェリズ・ヴェル/Velis Vel (次元カード)">各クリーチャーは、それと共通のクリーチャー・タイプを少なくとも１つ持つ、戦場に出ている他のクリーチャー１体につき+1/+1の修整を受ける。（例えば、２体のエレメンタル(Elemental)・シャーマン(Shaman)と１体のエレメンタル・スピリット(Spirit)が戦場に出ている場合、それらは+2/+2の修整を受ける。）
+    <card name="Velis Vel" jaName="ヴェリズ・ヴェル" type="次元 ― ローウィン" wikilink="ヴェリズ・ヴェル/Velis Vel (次元カード)">各クリーチャーは、それと共通のクリーチャー・タイプを少なくとも１つ持つ、戦場に出ている他のクリーチャー１体につき+1/+1の修整を受ける。（例えば、２体のエレメンタル・シャーマンと１体のエレメンタル・スピリットが戦場に出ている場合、それらは+2/+2の修整を受ける。）
 あなたがカオス・シンボルを出すたび、クリーチャー１体を対象とする。ターン終了時まで、それはすべてのクリーチャー・タイプを得る。</card>
     <card name="Windriddle Palaces" jaName="風謎の宮殿" type="次元 ― ベレノン" wikilink="風謎の宮殿/Windriddle Palaces (次元カード)">プレイヤーは自分のライブラリーの一番上のカードを公開したままプレイする。
 あなたはプレイヤー１人のライブラリーの一番上のカードをプレイしてもよい。
@@ -358,6 +359,7 @@
     <pt name="Cultivator's Caravan" pt="5/5" />
     <pt name="Demolition Stomper" pt="10/7" />
     <pt name="Fleetwheel Cruiser" pt="5/3" />
+    <pt name="Heart of Kiran" pt="4/4" />
     <pt name="Ovalchase Dragster" pt="6/1" />
     <pt name="Renegade Freighter" pt="4/3" />
     <pt name="Sky Skiff" pt="2/3" />
@@ -455,21 +457,31 @@
     <card name="Snow-Covered Swamp" jaName="冠雪の沼" type="基本氷雪土地 ― 沼">（(Ｔ)：あなたのマナ・プールに(黒)を加える。）</card>
     <!-- テキストが正常でないカード -->
     <card name="Aether Meltdown" jaName="霊気溶融" type="エンチャント ― オーラ">瞬速（あなたはこの呪文を、あなたがインスタントを唱えられるときならいつでも唱えてよい。）
-エンチャント（クリーチャーか機体(Vehicle)）
+エンチャント（クリーチャーか機体）
 霊気溶融が戦場に出たとき、あなたは(Ｅ)(Ｅ)（エネルギー・カウンター２個）を得る。
 エンチャントされているパーマネントは-4/-0の修整を受ける。</card>
-    <card name="Midnight Oil" jaName="夜更かし" type="エンチャント">夜更かしは時刻(hour)カウンターが７個置かれた状態で戦場に出る。
+    <card name="Dauntless Dourbark" jaName="不屈の頑固皮" type="クリーチャー ― ツリーフォーク・戦士" pt="*/*">不屈の頑固皮のパワーとタフネスは、それぞれあなたがコントロールする森の総数とあなたがコントロールするツリーフォークの総数の合計に等しい。
+不屈の頑固皮は、あなたが他のツリーフォークをコントロールしているかぎりトランプルを持つ。</card>
+    <card name="Eldrazi Temple" jaName="エルドラージの寺院" type="土地">(Ｔ)：あなたのマナ・プールに(◇)を加える。
+(Ｔ)：あなたのマナ・プールに(◇)(◇)を加える。このマナは、無色のエルドラージ・呪文を唱えるためか、無色のエルドラージの能力を起動するためにのみ使用できる。</card>
+    <card name="Emeria Shepherd" jaName="エメリアの番人" type="クリーチャー ― 天使" pt="4/4">飛行
+上陸 ― 土地が１つあなたのコントロール下で戦場に出るたび、あなたの墓地から土地でないパーマネント・カード１枚を対象とする。あなたはそれをあなたの手札に戻してもよい。その土地が平地であるなら、あなたはその土地でないパーマネント・カードを代わりに戦場に戻してもよい。</card>
+    <card name="Midnight Oil" jaName="夜更かし" type="エンチャント">夜更かしは時刻カウンターが７個置かれた状態で戦場に出る。
 あなたのドロー・ステップの開始時に、あなたはカードを追加で１枚引き、夜更かしの上から時刻カウンターを２個取り除く。
 あなたの手札の上限は、夜更かしの上に置かれている時刻カウンターの数に等しい。
 あなたがカードを１枚捨てるたび、あなたは１点のライフを失う。</card>
     <card name="Overabundance" jaName="過ぎたる実り" type="エンチャント">プレイヤーがマナを引き出す目的で土地をタップするたび、そのプレイヤーは自分のマナ・プールにその土地が生み出したいずれかのタイプのマナ１点を加え、過ぎたる実りはそのプレイヤーに１点のダメージを与える。</card>
-    <card name="Stoneforge Acolyte" jaName="石鍛冶の見習い" type="クリーチャー ― コー・工匠・同盟者" pt="1/2">盟友 ― (Ｔ),あなたがコントロールするアンタップ状態の同盟者(Ally)を１体タップする：あなたのライブラリーの一番上から４枚のカードを見る。あなたはその中から装備品(Equipment)カード１枚を公開してもよい。そうしたなら、それをあなたの手札に加える。残りをあなたのライブラリーの一番下に望む順番で置く。</card>
+    <card name="Quarantine Field" jaName="隔離の場" type="エンチャント">隔離の場は、孤立カウンターがＸ個置かれた状態で戦場に出る。
+隔離の場が戦場に出たとき、これの上に置かれている孤立カウンター１個につき、対戦相手がコントロールする土地でないパーマネントを最大１つ対象とし、隔離の場が戦場を離れるまでそれらを追放する。</card>
+    <card name="Steamflogger Boss" jaName="蒸気打ちの親分" type="クリーチャー ― ゴブリン・装具工" pt="3/3">あなたがコントロールする他の装具工・クリーチャーは、+1/+0の修整を受けるとともに速攻を持つ。
+あなたがコントロールする装具工がからくりを組み立てる場合、それは代わりに２個のからくりを組み立てる。</card>
+    <card name="Stoneforge Acolyte" jaName="石鍛冶の見習い" type="クリーチャー ― コー・工匠・同盟者" pt="1/2">盟友 ― (Ｔ),あなたがコントロールするアンタップ状態の同盟者を１体タップする：あなたのライブラリーの一番上から４枚のカードを見る。あなたはその中から装備品・カード１枚を公開してもよい。そうしたなら、それをあなたの手札に加える。残りをあなたのライブラリーの一番下に望む順番で置く。</card>
     <card name="Timetwister" jaName="時間の歪曲" type="ソーサリー">各プレイヤーは、自分の墓地と手札を自分のライブラリーに加えて切り直す。その後、カードを７枚引く。（その後、Timetwisterをそのオーナーの墓地に置く。）</card>
     <card name="Winter's Night" jaName="冬の夜" type="ワールド・エンチャント">プレイヤー１人が氷雪土地をマナを引き出す目的でタップするたび、そのプレイヤーは自分のマナ・プールにその土地が生み出したいずれかのタイプのマナ１点を加える。その土地は、それのコントローラーの次のアンタップ・ステップにアンタップしない。</card>
     <!-- テキストが正常でないカード：霊基体 -->
     <card name="Aetherborn Marauder" jaName="霊基体の匪賊" type="クリーチャー ― 霊基体・ならず者" pt="2/2">飛行、絆魂
 霊基体の匪賊が戦場に出たとき、あなたがコントロールする他のパーマネントの上から望む数の+1/+1カウンターを霊基体の匪賊の上に移動する。</card>
-    <card name="Ambitious Aetherborn" jaName="霊基体の野心家" type="クリーチャー ― 霊基体・工匠" pt="4/3">製造１（このクリーチャーが戦場に出たとき、これの上に+1/+1カウンターを１個置くか、無色の1/1の霊気装置(Servo)アーティファクト・クリーチャー・トークンを１体生成する。）</card>
+    <card name="Ambitious Aetherborn" jaName="霊基体の野心家" type="クリーチャー ― 霊基体・工匠" pt="4/3">製造１（このクリーチャーが戦場に出たとき、これの上に+1/+1カウンターを１個置くか、無色の1/1の霊気装置・アーティファクト・クリーチャー・トークンを１体生成する。）</card>
     <card name="Contraband Kingpin" jaName="禁制品の黒幕" type="クリーチャー ― 霊基体・ならず者" pt="1/4">絆魂
 アーティファクトが１つあなたのコントロール下で戦場に出るたび、占術１を行う。</card>
     <card name="Gonti, Lord of Luxury" jaName="豪華の王、ゴンティ" type="伝説のクリーチャー ― 霊基体・ならず者" pt="2/3">接死
@@ -477,281 +489,357 @@
     <card name="Lawless Broker" jaName="不法仲買人" type="クリーチャー ― 霊基体・ならず者" pt="3/2">不法仲買人が死亡したとき、あなたがコントロールするクリーチャー１体を対象とし、それの上に+1/+1カウンターを１個置く。</card>
     <card name="Prakhata Club Security" jaName="プラカタクラブの用心棒" type="クリーチャー ― 霊基体・戦士" pt="3/4"></card>
     <card name="Syndicate Trafficker" jaName="組織の密売人" type="クリーチャー ― 霊基体・ならず者" pt="3/1">(１),アーティファクト１つを生け贄に捧げる：組織の密売人の上に+1/+1カウンターを１個置く。ターン終了時まで、これは破壊不能を得る。</card>
-    <card name="Weaponcraft Enthusiast" jaName="武器作り狂" type="クリーチャー ― 霊基体・工匠" pt="0/1">製造２（このクリーチャーが戦場に出たとき、これの上に+1/+1カウンターを２個置くか、無色の1/1の霊気装置(Servo)アーティファクト・クリーチャー・トークンを２体生成する。）</card>
+    <card name="Weaponcraft Enthusiast" jaName="武器作り狂" type="クリーチャー ― 霊基体・工匠" pt="0/1">製造２（このクリーチャーが戦場に出たとき、これの上に+1/+1カウンターを２個置くか、無色の1/1の霊気装置・アーティファクト・クリーチャー・トークンを２体生成する。）</card>
     <!-- テキストが正常でないカード：ウルザの -->
     <card name="Urza's Factory" jaName="ウルザの工廠" type="土地 ― ウルザの">(Ｔ)：あなたのマナ・プールに(◇)を加える。
-(７),(Ｔ)：無色の2/2の組立作業員(Assembly-Worker)アーティファクト・クリーチャー・トークンを１体生成する。</card>
-    <card name="Urza's Mine" jaName="ウルザの鉱山" type="土地 ― ウルザの・鉱山">(Ｔ)：あなたのマナ・プールに(◇)を加える。あなたがウルザの(Urza's)・魔力炉(Power-Plant)とウルザの・塔(Tower)をコントロールしている場合、代わりにあなたのマナ・プールに(◇)(◇)を加える。</card>
-    <card name="Urza's Power Plant" jaName="ウルザの魔力炉" type="土地 ― ウルザの・魔力炉">(Ｔ)：あなたのマナ・プールに(◇)を加える。あなたがウルザの(Urza's)・鉱山(Mine)とウルザの・塔(Tower)をコントロールしている場合、代わりにあなたのマナ・プールに(◇)(◇)を加える。</card>
-    <card name="Urza's Tower" jaName="ウルザの塔" type="土地 ― ウルザの・塔">(Ｔ)：あなたのマナ・プールに(◇)を加える。あなたがウルザの(Urza's)・鉱山(Mine)とウルザの・魔力炉(Power-Plant)をコントロールしている場合、代わりにあなたのマナ・プールに(◇)(◇)(◇)を加える。</card>
+(７),(Ｔ)：無色の2/2の組立作業員・アーティファクト・クリーチャー・トークンを１体生成する。</card>
+    <card name="Urza's Mine" jaName="ウルザの鉱山" type="土地 ― ウルザの・鉱山">(Ｔ)：あなたのマナ・プールに(◇)を加える。あなたがウルザの・魔力炉とウルザの・塔をコントロールしている場合、代わりにあなたのマナ・プールに(◇)(◇)を加える。</card>
+    <card name="Urza's Power Plant" jaName="ウルザの魔力炉" type="土地 ― ウルザの・魔力炉">(Ｔ)：あなたのマナ・プールに(◇)を加える。あなたがウルザの・鉱山とウルザの・塔をコントロールしている場合、代わりにあなたのマナ・プールに(◇)(◇)を加える。</card>
+    <card name="Urza's Tower" jaName="ウルザの塔" type="土地 ― ウルザの・塔">(Ｔ)：あなたのマナ・プールに(◇)を加える。あなたがウルザの・鉱山とウルザの・魔力炉をコントロールしている場合、代わりにあなたのマナ・プールに(◇)(◇)(◇)を加える。</card>
+    <!-- テキストが正常でないカード：AまたはB呪文 -->
+    <card name="Aven Warhawk" jaName="エイヴンの戦鷹" type="クリーチャー ― 鳥・兵士" pt="2/2">増幅１（このクリーチャーが戦場に出るに際し、あなたの手札から公開した鳥・カードまたは兵士・カード１枚につき+1/+1カウンターを１個置く。）
+飛行</card>
+    <card name="Baku Altar" jaName="獏の供犠台" type="アーティファクト">あなたがスピリット・呪文か秘儀・呪文を唱えるたび、あなたは獏の供犠台の上に気カウンターを１個置いてもよい。
+(２),(Ｔ),獏の供犠台から気カウンターを１個取り除く：無色の1/1のスピリット・クリーチャー・トークンを１体生成する。</card>
+    <card name="Blademane Baku" jaName="刃鬣の獏" type="クリーチャー ― スピリット" pt="1/1">あなたがスピリット・呪文か秘儀・呪文を唱えるたび、あなたは刃鬣の獏の上に気カウンターを１個置いてもよい。 
+(１),刃鬣の獏から気カウンターをＸ個取り除く：取り除かれた気カウンター１個につき、刃鬣の獏はターン終了時まで+2/+0の修整を受ける。</card>
+    <card name="Bounteous Kirin" jaName="寛大な麒麟" type="伝説のクリーチャー ― 麒麟・スピリット" pt="4/4">飛行
+あなたがスピリット・呪文か秘儀・呪文を唱えるたび、あなたはその呪文の点数で見たマナ・コストに等しい点数のライフを得てもよい。</card>
+    <card name="Briarknit Kami" jaName="茨編みの神" type="クリーチャー ― スピリット" pt="3/3">あなたがスピリット・呪文か秘儀・呪文を唱えるたび、クリーチャー１体を対象とし、その上に+1/+1カウンターを１個置く。</card>
+    <card name="Budoka Pupil" jaName="武道家の学徒" type="クリーチャー ― 人間・モンク" pt="2/2" related="Ichiga, Who Topples Oaks">あなたがスピリット・呪文か秘儀・呪文を唱えるたび、あなたは武道家の学徒の上に気カウンターを１個置いてもよい。 
+ターン終了時に、武道家の学徒の上に気カウンターが２個以上置かれている場合、あなたは武道家の学徒を反転してもよい。</card>
+    <card name="Callow Jushi" jaName="未熟な呪士" type="クリーチャー ― 人間・ウィザード" pt="2/2" related="Jaraku the Interloper">あなたがスピリット・呪文か秘儀・呪文を唱えるたび、あなたは未熟な呪士の上に気カウンターを１個置いてもよい。 
+終了ステップの開始時に、未熟な呪士の上に気カウンターが２個以上置かれている場合、あなたは未熟な呪士を反転してもよい。</card>
+    <card name="Celestial Kirin" jaName="天界の麒麟" type="伝説のクリーチャー ― 麒麟・スピリット" pt="3/3">飛行
+あなたがスピリット・呪文か秘儀・呪文を唱えるたび、その呪文の点数で見たマナ・コストを持つすべてのパーマネントを破壊する。</card>
+    <card name="Cunning Bandit" jaName="狡猾な山賊" type="クリーチャー ― 人間・戦士" pt="2/2" related="Azamuki, Treachery Incarnate">あなたがスピリット・呪文か秘儀・呪文を唱えるたび、あなたは狡猾な山賊の上に気カウンターを１個置いてもよい。 
+終了ステップの開始時に、狡猾な山賊の上に気カウンターが２個以上置かれている場合、あなたはそれを反転してもよい。</card>
+    <card name="Dreamcatcher" jaName="夢捉え" type="クリーチャー ― スピリット" pt="1/1">あなたがスピリット・呪文か秘儀・呪文を唱えるたび、あなたは夢捉えを生け贄に捧げてもよい。そうした場合、カードを１枚引く。</card>
+    <card name="Earthshaker" jaName="地揺すり" type="クリーチャー ― スピリット" pt="4/5">あなたがスピリット・呪文か秘儀・呪文を唱えるたび、地揺すりは、飛行を持たない各クリーチャーにそれぞれ２点のダメージを与える。</card>
+    <card name="Elder Pine of Jukai" jaName="樹海の古松" type="クリーチャー ― スピリット" pt="2/1">あなたがスピリット・呪文か秘儀・呪文を唱えるたび、あなたのライブラリーのカードを上から３枚公開する。これにより公開されたすべての土地・カードをあなたの手札に加え、残りをあなたのライブラリーの一番下に望む順番で置く。
+転生２（このクリーチャーが死亡したとき、あなたはあなたの墓地にある点数で見たマナ・コストが２以下のスピリット・カード１枚を対象とし、それをあなたの手札に戻してもよい。）</card>
+    <card name="Faithful Squire" jaName="信心深い従者" type="クリーチャー ― 人間・兵士" pt="2/2" related="Kaiso, Memory of Loyalty">あなたがスピリット・呪文か秘儀・呪文を唱えるたび、あなたは信心深い従者の上に気カウンターを１個置いてもよい。
+終了ステップの開始時に、信心深い従者の上に気カウンターが２個以上置かれている場合、あなたは信心深い従者を反転してもよい。</card>
+    <card name="Fiddlehead Kami" jaName="蕨の神" type="クリーチャー ― スピリット" pt="3/3">あなたがスピリット・呪文か秘儀・呪文を唱えるたび、蕨の神を再生する。</card>
+    <card name="Guardian of Solitude" jaName="孤独の守護者" type="クリーチャー ― スピリット" pt="1/2">あなたがスピリット・呪文か秘儀・呪文を唱えるたび、クリーチャー１体を対象とする。ターン終了時まで、それは飛行を得る。</card>
+    <card name="Haru-Onna" jaName="春女" type="クリーチャー ― スピリット" pt="2/1">春女が戦場に出たとき、カードを１枚引く。
+あなたがスピリット・呪文か秘儀・呪文を唱えるたび、あなたは春女をオーナーの手札に戻してもよい。</card>
+    <card name="Hired Muscle" jaName="雇いの力男" type="クリーチャー ― 人間・戦士" pt="2/2" related="Scarmaker">あなたがスピリット・呪文か秘儀・呪文を唱えるたび、あなたは雇いの力男の上に気カウンターを１個置いてもよい。 
+終了ステップの開始時に、雇いの力男の上に気カウンターが２個以上置かれている場合、あなたはそれを反転してもよい。</card>
+    <card name="Horizon Seed" jaName="彼方蒔" type="クリーチャー ― スピリット" pt="2/1">あなたがスピリット・呪文か秘儀・呪文を唱えるたび、クリーチャー１体を対象とし、それを再生する。</card>
+    <card name="Infernal Kirin" jaName="冥府の麒麟" type="伝説のクリーチャー ― 麒麟・スピリット" pt="3/3">飛行
+あなたがスピリット・呪文か秘儀・呪文を唱えるたび、プレイヤー１人を対象とする。そのプレイヤーは手札を公開し、その呪文の点数で見たマナ・コストを持つカードをすべて捨てる。</card>
+    <card name="Innocence Kami" jaName="無垢の神" type="クリーチャー ― スピリット" pt="2/3">(白),(Ｔ)：クリーチャー１体を対象とし、それをタップする。
+あなたがスピリット・呪文か秘儀・呪文を唱えるたび、無垢の神をアンタップする。</card>
+    <card name="Ishi-Ishi, Akki Crackshot" jaName="悪忌の撃ち手、イシイシ" type="伝説のクリーチャー ― ゴブリン・戦士" pt="1/1">対戦相手１人がスピリット・呪文か秘儀・呪文を唱えるたび、悪忌の撃ち手、イシイシはそのプレイヤーに２点のダメージを与える。</card>
+    <card name="Kami of Fire's Roar" jaName="火の咆哮の神" type="クリーチャー ― スピリット" pt="2/3">あなたがスピリット・呪文か秘儀・呪文を唱えるたび、クリーチャー１体を対象とする。このターン、それではブロックできない。</card>
+    <card name="Kami of Tattered Shoji" jaName="破れ障子の神" type="クリーチャー ― スピリット" pt="2/5">あなたがスピリット・呪文か秘儀・呪文を唱えるたび、ターン終了時まで、破れ障子の神は飛行を得る。</card>
+    <card name="Kami of the Hunt" jaName="狩猟の神" type="クリーチャー ― スピリット" pt="2/2">あなたがスピリット・呪文か秘儀・呪文を唱えるたび、ターン終了時まで、狩猟の神は+1/+1の修整を受ける。</card>
+    <card name="Kami of the Painted Road" jaName="虚飾の道の神" type="クリーチャー ― スピリット" pt="3/3">あなたがスピリット・呪文か秘儀・呪文を唱えるたび、ターン終了時まで、虚飾の道の神はあなたが選んだ色１色に対するプロテクションを得る。</card>
+    <card name="Kami of the Waning Moon" jaName="欠け月の神" type="クリーチャー ― スピリット" pt="1/1">飛行
+あなたがスピリット・呪文か秘儀・呪文を唱えるたび、クリーチャー１体を対象とする。ターン終了時まで、それは畏怖を得る。（それは黒でもアーティファクトでもないクリーチャーによってはブロックされない。）</card>
+    <card name="Kemuri-Onna" jaName="煙女" type="クリーチャー ― スピリット" pt="3/3">煙女が戦場に出たとき、プレイヤー１人を対象とする。そのプレイヤーはカードを１枚捨てる。
+あなたがスピリット・呪文か秘儀・呪文を唱えるたび、あなたは煙女をオーナーの手札に戻してもよい。</card>
+    <card name="Kiri-Onna" jaName="霧女" type="クリーチャー ― スピリット" pt="2/2">霧女が戦場に出たとき、クリーチャー１体を対象とし、それをオーナーの手札に戻す。
+あなたがスピリット・呪文か秘儀・呪文を唱えるたび、あなたは霧女をオーナーの手札に戻してもよい。</card>
+    <card name="Kodama of the South Tree" jaName="南の樹の木霊" type="伝説のクリーチャー ― スピリット" pt="4/4">あなたがスピリット・呪文か秘儀・呪文を唱えるたび、ターン終了時まで、あなたがコントロールする他の各クリーチャーは+1/+1の修整を受けるとともにトランプルを得る。</card>
+    <card name="Kyoki, Sanity's Eclipse" jaName="蝕まれた正気、凶鬼" type="伝説のクリーチャー ― デーモン・スピリット" pt="6/4">あなたがスピリット・呪文か秘儀・呪文を唱えるたび、対戦相手１人を対象とする。そのプレイヤーは、自分の手札にあるカードを１枚、追放する。</card>
+    <card name="Loam Dweller" jaName="壌土に住むもの" type="クリーチャー ― スピリット" pt="2/2">あなたがスピリット・呪文か秘儀・呪文を唱えるたび、あなたはあなたの手札にある土地カードを１枚、タップ状態で戦場に出してもよい。</card>
+    <card name="Nikko-Onna" jaName="日光女" type="クリーチャー ― スピリット" pt="2/2">日光女が戦場に出たとき、エンチャント１つを対象とし、それを破壊する。
+あなたがスピリット・呪文か秘儀・呪文を唱えるたび、あなたは日光女をオーナーの手札に戻してもよい。</card>
+    <card name="Orbweaver Kumo" jaName="宝珠編みの蜘蛛" type="クリーチャー ― スピリット" pt="3/4">到達（このクリーチャーは飛行を持つクリーチャーをブロックできる。）
+あなたがスピリット・呪文か秘儀・呪文を唱えるたび、ターン終了時まで、宝珠編みの蜘蛛は森渡りを得る。（それは、防御プレイヤーが森をコントロールしているかぎりブロックされない。）</card>
+    <card name="Ore Gorger" jaName="鉱石喰らい" type="クリーチャー ― スピリット" pt="3/1">あなたがスピリット・呪文か秘儀・呪文を唱えるたび、基本でない土地１つを対象とする。あなたはそれを破壊してもよい。</card>
+    <card name="Oyobi, Who Split the Heavens" jaName="天を裂くもの、央誉飛" type="伝説のクリーチャー ― スピリット" pt="3/6">飛行
+あなたがスピリット・呪文か秘儀・呪文を唱えるたび、あなたは飛行を持つ白の3/3のスピリット・クリーチャー・トークンを１体生成する。</card>
+    <card name="Petalmane Baku" jaName="花鬣の獏" type="クリーチャー ― スピリット" pt="1/2">あなたがスピリット・呪文か秘儀・呪文を唱えるたび、あなたは花鬣の獏の上に気カウンターを１個置いてもよい。 
+(１),花鬣の獏から気カウンターをＸ個取り除く：あなたのマナ・プールに、好きな色１色のマナＸ点を加える。</card>
+    <card name="Quillmane Baku" jaName="筆鬣の獏" type="クリーチャー ― スピリット" pt="3/3">あなたがスピリット・呪文か秘儀・呪文を唱えるたび、あなたは筆鬣の獏の上に気カウンターを１個置いてもよい。 
+(１),(Ｔ),筆鬣の獏から気カウンターをＸ個取り除く：点数で見たマナ・コストがＸ以下のクリーチャー１体を対象とし、それをオーナーの手札に戻す。</card>
+    <card name="Scaled Hulk" jaName="鱗の大男" type="クリーチャー ― スピリット" pt="4/4">あなたがスピリット呪文か秘儀・呪文を唱えるたび、ターン終了時まで、鱗の大男は+2/+2の修整を受ける。</card>
+    <card name="Sire of the Storm" jaName="嵐の種父" type="クリーチャー ― スピリット" pt="3/3">飛行
+あなたがスピリット・呪文か秘儀・呪文を唱えるたび、あなたはカードを１枚引いてもよい。</card>
+    <card name="Skullmane Baku" jaName="骨鬣の獏" type="クリーチャー ― スピリット" pt="2/1">あなたがスピリット・呪文か秘儀・呪文を唱えるたび、あなたは骨鬣の獏の上に気カウンターを１個置いてもよい。 
+(１),(Ｔ),骨鬣の獏から気カウンターをＸ個取り除く：クリーチャー１体を対象とする。ターン終了時まで、それは-X/-Xの修整を受ける。</card>
+    <card name="Skyfire Kirin" jaName="空火の麒麟" type="伝説のクリーチャー ― 麒麟・スピリット" pt="3/3">飛行
+あなたがスピリット・呪文か秘儀・呪文を唱えるたび、その呪文の点数で見たマナ・コストを持つクリーチャー１体を対象とする。ターン終了時まで、あなたはそのコントロールを得てもよい。</card>
+    <card name="Soilshaper" jaName="泥穿ち" type="クリーチャー ― スピリット" pt="1/1">あなたがスピリット・呪文か秘儀・呪文を唱えるたび、土地１つを対象とする。ターン終了時まで、それは3/3のクリーチャーになる。それは土地でもある。</card>
+    <card name="Soul of Magma" jaName="溶岩の魂" type="クリーチャー ― スピリット" pt="2/2">あなたがスピリット・呪文か秘儀・呪文を唱えるたび、クリーチャー１体を対象とする。溶岩の魂はそれに１点のダメージを与える。</card>
+    <card name="Tallowisp" jaName="脂火玉" type="クリーチャー ― スピリット" pt="1/3">あなたがスピリット・呪文か秘儀・呪文を唱えるたび、あなたはあなたのライブラリーからエンチャント（クリーチャー）を持つオーラ・カードを１枚探し、それを公開し、あなたの手札に加えてもよい。そうした場合、あなたのライブラリーを切り直す。</card>
+    <card name="Thief of Hope" jaName="希望の盗人" type="クリーチャー ― スピリット" pt="2/2">あなたがスピリット・呪文か秘儀・呪文を唱えるたび、対戦相手１人を対象とする。そのプレイヤーは１点のライフを失い、あなたは１点のライフを得る。
+転生２（このクリーチャーが死亡したとき、あなたはあなたの墓地にある点数で見たマナ・コストが２以下のスピリット・カード１枚を対象とし、それをあなたの手札に戻してもよい。）</card>
+    <card name="Waxmane Baku" jaName="蝋鬣の獏" type="クリーチャー ― スピリット" pt="2/2">あなたがスピリット・呪文か秘儀・呪文を唱えるたび、あなたは蝋鬣の獏の上に気カウンターを１個置いてもよい。
+(１),蝋鬣の獏から気カウンターをＸ個取り除く：クリーチャーＸ体を対象とし、それらをタップする。</card>
+    <card name="Yuki-Onna" jaName="雪女" type="クリーチャー ― スピリット" pt="3/1">雪女が戦場に出たとき、アーティファクト１つを対象とし、それを破壊する。
+あなたがスピリット・呪文か秘儀・呪文を唱えるたび、あなたは雪女をオーナーの手札に戻してもよい。</card>
     <!-- 最新オラクル未対応 -->
     <card name="Crimson Kobolds" jaName="真紅のコボルド" type="クリーチャー ― コボルド" pt="0/1"></card>
     <card name="Crookshank Kobolds" jaName="曲がり脛族のコボルド" type="クリーチャー ― コボルド" pt="0/1"></card>
     <card name="Kobolds of Kher Keep" jaName="カー砦のコボルド" type="クリーチャー ― コボルド" pt="0/1"></card>
-    <card name="Monkey Cage" jaName="猿の檻" type="アーティファクト">クリーチャーが戦場に出たとき、猿の檻を生け贄に捧げ、緑の2/2の猿(Monkey)・クリーチャー・トークンをＸ体生成する。Ｘはそのクリーチャーの点数で見たマナ・コストである。</card>
+    <card name="Monkey Cage" jaName="猿の檻" type="アーティファクト">クリーチャーが戦場に出たとき、猿の檻を生け贄に捧げ、緑の2/2の猿・クリーチャー・トークンをＸ体生成する。Ｘはそのクリーチャーの点数で見たマナ・コストである。</card>
     <!-- 最新オラクル未対応：AE -->
     <card name="Aerathi Berserker" jaName="Aerathi Berserker" type="クリーチャー ― 人間・狂戦士" pt="2/4" wikilink="AErathi Berserker">ランページ３（このクリーチャーがブロックされるたび、それをブロックしている２体目以降のクリーチャー１体につき+3/+3の修整を受ける。）</card>
     <card name="Aether Burst" jaName="霊気の噴出" type="インスタント" wikilink="霊気の噴出/AEther Burst">クリーチャーをＸ体まで対象とし、それらをオーナーの手札に戻す。Ｘは、あなたが霊気の噴出を唱える際の、すべての墓地にある名前が《霊気の噴出/Aether Burst》であるカードの枚数に１を足した数である。</card>
     <card name="Aether Searcher" jaName="霊気探知機" type="アーティファクト・クリーチャー ― 構築物" pt="6/4" wikilink="霊気探知機/AEther Searcher">霊気探知機をドラフトするに際し、これを公開する。あなたが次にドラフトしたカードを公開し、その名前を記録する。
 霊気探知機が戦場に出たとき、あなたの手札およびライブラリーから、《霊気探知機/Aether Searcher》という名前のカードをドラフトした際に記録した名前を持つカードを１枚探してもよい。あなたはそれをそのマナ・コストを支払うことなく唱えてもよい。あなたがこれによりあなたのライブラリーからカードを探した場合、それを切り直す。</card>
     <!-- 最新オラクル未対応：生成 -->
-    <card name="Alive" jaName="生存" type="ソーサリー" related="Well" wikilink="生存+存命/Alive+Well">緑の3/3のケンタウルス(Centaur)・クリーチャー・トークンを１体生成する。
+    <card name="Alive" jaName="生存" type="ソーサリー" related="Well" wikilink="生存+存命/Alive+Well">緑の3/3のケンタウルス・クリーチャー・トークンを１体生成する。
 融合（あなたはこのカードの片方の半分または両方の半分をあなたの手札から唱えてもよい。）</card>
-    <card name="Garruk, Primal Hunter" jaName="原初の狩人、ガラク" type="プレインズウォーカー ― ガラク" pt="3">[+1]：緑の3/3のビースト(Beast)・クリーチャー・トークンを１体生成する。
+    <card name="Garruk, Primal Hunter" jaName="原初の狩人、ガラク" type="プレインズウォーカー ― ガラク" pt="3">[+1]：緑の3/3のビースト・クリーチャー・トークンを１体生成する。
 [-3]：あなたがコントロールするクリーチャーの中で最大のパワーの値に等しい枚数のカードを引く。
-[-6]：あなたがコントロールする土地１つにつき、緑の6/6のワーム(Wurm)・クリーチャー・トークンを１体生成する。</card>
+[-6]：あなたがコントロールする土地１つにつき、緑の6/6のワーム・クリーチャー・トークンを１体生成する。</card>
     <card name="Growing Ranks" jaName="兵士の育成" type="エンチャント">あなたのアップキープの開始時に、居住を行う。（あなたがコントロールするクリーチャー・トークン１体のコピーであるトークンを１体生成する。）</card>
-    <card name="Kazandu Tuskcaller" jaName="カザンドゥの牙呼び" type="クリーチャー ― 人間・シャーマン" pt="1/1">Ｌｖアップ(１)(緑)（(１)(緑)：この上にＬｖ(level)カウンターを１個置く。Ｌｖアップはソーサリーとしてのみ行う。）
+    <card name="Kazandu Tuskcaller" jaName="カザンドゥの牙呼び" type="クリーチャー ― 人間・シャーマン" pt="1/1">Ｌｖアップ(１)(緑)（(１)(緑)：この上にＬｖカウンターを１個置く。Ｌｖアップはソーサリーとしてのみ行う。）
 Lv2-5：
-(Ｔ)：緑の3/3の象(Elephant)・クリーチャー・トークンを１体生成する。
+(Ｔ)：緑の3/3の象・クリーチャー・トークンを１体生成する。
 1/1
 Lv6+：
-(Ｔ)：緑の3/3の象(Elephant)・クリーチャー・トークンを２体生成する。
+(Ｔ)：緑の3/3の象・クリーチャー・トークンを２体生成する。
 1/1</card>
-    <card name="Murgish's Cemetery" jaName="マーギッシュの霊園" type="エンチャント">(３)(黒),カードを１枚捨てる：黒のX/Xのゾンビ(Zombie)・クリーチャー・トークンを１体生成する。Ｘは２から６までの無作為に選ばれた数である。</card>
-    <card name="Necropolis of Azar" jaName="アザーの死滅都市" type="エンチャント">黒でないクリーチャーが戦場から墓地に置かれるたび、Necropolis of Azarの上に遺骸（husk）カウンターを１個置く。
-(５),Necropolis of Azarから遺骸カウンターを１個取り除く：沼渡りを持つ黒のX/Xのアザーの落とし子（Spawn-of-Azar）・クリーチャー・トークンを１体生成する。Ｘは１から３までの無作為に選ばれた数である。</card>
-    <card name="Orochi Eggwatcher" jaName="大蛇の卵張り" type="クリーチャー ― 蛇・シャーマン" pt="1/1" related="Shidako, Broodmistress">(２)(緑),(Ｔ)：緑の1/1の蛇(Snake)・クリーチャー・トークンを１体生成する。あなたが１０体以上のクリーチャーをコントロールしている場合、大蛇の卵張りを反転する。</card>
+    <card name="Murgish's Cemetery" jaName="マーギッシュの霊園" type="エンチャント">(３)(黒),カードを１枚捨てる：黒のX/Xのゾンビ・クリーチャー・トークンを１体生成する。Ｘは２から６までの無作為に選ばれた数である。</card>
+    <card name="Necropolis of Azar" jaName="アザーの死滅都市" type="エンチャント">黒でないクリーチャーが戦場から墓地に置かれるたび、Necropolis of Azarの上に遺骸カウンターを１個置く。
+(５),Necropolis of Azarから遺骸カウンターを１個取り除く：沼渡りを持つ黒のX/Xのアザーの落とし子・クリーチャー・トークンを１体生成する。Ｘは１から３までの無作為に選ばれた数である。</card>
+    <card name="Orochi Eggwatcher" jaName="大蛇の卵張り" type="クリーチャー ― 蛇・シャーマン" pt="1/1" related="Shidako, Broodmistress">(２)(緑),(Ｔ)：緑の1/1の蛇・クリーチャー・トークンを１体生成する。あなたが１０体以上のクリーチャーをコントロールしている場合、大蛇の卵張りを反転する。</card>
     <card name="Pandora's Box" jaName="パンドラの箱" type="アーティファクト">(３),(Ｔ)：すべてのプレイヤーのライブラリーからクリーチャー・カードを１枚無作為に選ぶ。プレイヤーの数に等しい枚数のコインを１枚投げる。表が出た場合、選ばれたカードのコピーであるクリーチャー・トークンを１体生成する。</card>
-    <card name="Supply" jaName="供給" type="ソーサリー" related="Demand" wikilink="供給+需要/Supply+Demand">緑の1/1の苗木(Saproling)・クリーチャー・トークンをＸ体生成する。</card>
-    <card name="Take Up Arms" jaName="武器を手に" type="インスタント">白の1/1の戦士(Warrior)・クリーチャー・トークンを３体生成する。</card>
-    <card name="Talrand's Invocation" jaName="ターランドの発動" type="ソーサリー">飛行を持つ青の2/2のドレイク(Drake)・クリーチャー・トークンを２体生成する。</card>
-    <card name="Talrand, Sky Summoner" jaName="空召喚士ターランド" type="伝説のクリーチャー ― マーフォーク・ウィザード" pt="2/2">あなたがインスタント呪文かソーサリー呪文を唱えるたび、飛行を持つ青の2/2のドレイク(Drake)・クリーチャー・トークンを１体生成する。</card>
-    <card name="Tamiyo's Journal" jaName="タミヨウの日誌" type="伝説のアーティファクト">あなたのアップキープの開始時に、調査を行う。（「(２),このアーティファクトを生け贄に捧げる：カードを１枚引く。」を持つ無色の手掛かり(Clue)アーティファクト・トークンを１つ生成する。）
+    <card name="Supply" jaName="供給" type="ソーサリー" related="Demand" wikilink="供給+需要/Supply+Demand">緑の1/1の苗木・クリーチャー・トークンをＸ体生成する。</card>
+    <card name="Take Up Arms" jaName="武器を手に" type="インスタント">白の1/1の戦士・クリーチャー・トークンを３体生成する。</card>
+    <card name="Talrand's Invocation" jaName="ターランドの発動" type="ソーサリー">飛行を持つ青の2/2のドレイク・クリーチャー・トークンを２体生成する。</card>
+    <card name="Talrand, Sky Summoner" jaName="空召喚士ターランド" type="伝説のクリーチャー ― マーフォーク・ウィザード" pt="2/2">あなたがインスタント・呪文かソーサリー・呪文を唱えるたび、飛行を持つ青の2/2のドレイク・クリーチャー・トークンを１体生成する。</card>
+    <card name="Tamiyo's Journal" jaName="タミヨウの日誌" type="伝説のアーティファクト">あなたのアップキープの開始時に、調査を行う。（「(２),このアーティファクトを生け贄に捧げる：カードを１枚引く。」を持つ無色の手掛かり・アーティファクト・トークンを１つ生成する。）
 (Ｔ),手掛かりを３つ生け贄に捧げる：あなたのライブラリーからカードを１枚探し、それをあなたの手札に加える。その後、あなたのライブラリーを切り直す。</card>
     <card name="Tatsumasa, the Dragon's Fang" jaName="龍の牙、辰正" type="伝説のアーティファクト ― 装備品">装備しているクリーチャーは+5/+5の修整を受ける。
-(６),龍の牙、辰正を追放する：青の5/5の飛行を持つドラゴン(Dragon)・スピリット(Spirit)・クリーチャー・トークンを１体生成する。そのトークンが死亡したとき、龍の牙、辰正をオーナーのコントロール下で戦場に戻す。
+(６),龍の牙、辰正を追放する：青の5/5の飛行を持つドラゴン・スピリット・クリーチャー・トークンを１体生成する。そのトークンが死亡したとき、龍の牙、辰正をオーナーのコントロール下で戦場に戻す。
 装備(３)</card>
     <card name="Tempt with Reflections" jaName="反射の誘惑" type="ソーサリー">誘引 ― あなたがコントロールするクリーチャー１体を対象とする。そのクリーチャーのコピーであるトークンを１体生成する。各対戦相手は、それぞれそのクリーチャーのコピーであるトークンを１体生成してもよい。そうしたなら、それを行った対戦相手１人につき、あなたはそのクリーチャーのコピーであるトークンを１体生成する。</card>
-    <card name="Tempt with Vengeance" jaName="復讐の誘惑" type="ソーサリー">誘引 ― 速攻を持つ赤の1/1のエレメンタル(Elemental)・クリーチャー・トークンをＸ体生成する。各対戦相手はそれぞれ速攻を持つ赤の1/1のエレメンタル・クリーチャー・トークンをＸ体生成してもよい。そうしたなら、それを行ったプレイヤー１人につき、速攻を持つ赤の1/1のエレメンタル・クリーチャー・トークンをＸ体生成する。</card>
-    <card name="Terastodon" jaName="テラストドン" type="クリーチャー ― 象" pt="9/9">テラストドンが戦場に出たとき、クリーチャーでないパーマネント最大３つを対象とする。あなたはそれらを破壊してもよい。これにより墓地に置かれたパーマネント１つにつき、それのコントローラーは緑の3/3の象(Elephant)・クリーチャー・トークンを１体生成する。</card>
+    <card name="Tempt with Vengeance" jaName="復讐の誘惑" type="ソーサリー">誘引 ― 速攻を持つ赤の1/1のエレメンタル・クリーチャー・トークンをＸ体生成する。各対戦相手はそれぞれ速攻を持つ赤の1/1のエレメンタル・クリーチャー・トークンをＸ体生成してもよい。そうしたなら、それを行ったプレイヤー１人につき、速攻を持つ赤の1/1のエレメンタル・クリーチャー・トークンをＸ体生成する。</card>
+    <card name="Terastodon" jaName="テラストドン" type="クリーチャー ― 象" pt="9/9">テラストドンが戦場に出たとき、クリーチャーでないパーマネント最大３つを対象とする。あなたはそれらを破壊してもよい。これにより墓地に置かれたパーマネント１つにつき、それのコントローラーは緑の3/3の象・クリーチャー・トークンを１体生成する。</card>
     <card name="Tetravus" jaName="テトラバス" type="アーティファクト・クリーチャー ― 構築物" pt="1/1">飛行
 テトラバスはその上に+1/+1カウンターが３個置かれた状態で戦場に出る。
-あなたのアップキープの開始時に、あなたはテトラバスから望む数の+1/+1カウンターを取り除いてもよい。そうした場合、同じ数の無色の1/1のテトラバイト(Tetravite)・アーティファクト・クリーチャー・トークンを生成する。それらは飛行と「テトラバイトはエンチャントされない。」を持つ。
+あなたのアップキープの開始時に、あなたはテトラバスから望む数の+1/+1カウンターを取り除いてもよい。そうした場合、同じ数の無色の1/1のテトラバイト・アーティファクト・クリーチャー・トークンを生成する。それらは飛行と「テトラバイトはエンチャントされない。」を持つ。
 あなたのアップキープの開始時に、あなたはテトラバスによって戦場に出された望む数のトークンを追放してもよい。そうした場合、テトラバスの上に同じ数の+1/+1カウンターを置く。</card>
     <card name="Teysa, Envoy of Ghosts" jaName="幽霊の特使、テイサ" type="伝説のクリーチャー ― 人間・アドバイザー" pt="4/4">警戒、プロテクション（クリーチャー）
-クリーチャー１体があなたに戦闘ダメージを与えるたび、そのクリーチャーを破壊する。飛行を持つ白であり黒である1/1のスピリット(Spirit)・クリーチャー・トークンを１体生成する。</card>
+クリーチャー１体があなたに戦闘ダメージを与えるたび、そのクリーチャーを破壊する。飛行を持つ白であり黒である1/1のスピリット・クリーチャー・トークンを１体生成する。</card>
     <card name="Teysa, Orzhov Scion" jaName="オルゾフの御曹子、テイサ" type="伝説のクリーチャー ― 人間・アドバイザー" pt="2/3">白のクリーチャーを３体生け贄に捧げる：クリーチャー１体を対象とし、それを追放する。
-あなたがコントロールする他の黒のクリーチャーが死亡するたび、飛行を持つ白の1/1のスピリット(Spirit)・クリーチャー・トークンを１体生成する。</card>
-    <card name="Thallid" jaName="サリッド" type="クリーチャー ― ファンガス" pt="1/1">あなたのアップキープの開始時に、サリッドの上に胞子(spore)カウンターを１個置く。
-サリッドから胞子カウンターを３個取り除く：緑の1/1の苗木(Saproling)・クリーチャー・トークンを１体生成する。</card>
-    <card name="Thallid Devourer" jaName="サリッドの貪り食い" type="クリーチャー ― ファンガス" pt="2/2">あなたのアップキープの開始時に、Thallid Devourerの上に胞子(spore)カウンターを１個置く。
-Thallid Devourerから胞子カウンターを３個取り除く：緑の1/1の苗木(Saproling)・クリーチャー・トークンを１体生成する。
+あなたがコントロールする他の黒のクリーチャーが死亡するたび、飛行を持つ白の1/1のスピリット・クリーチャー・トークンを１体生成する。</card>
+    <card name="Thallid" jaName="サリッド" type="クリーチャー ― ファンガス" pt="1/1">あなたのアップキープの開始時に、サリッドの上に胞子カウンターを１個置く。
+サリッドから胞子カウンターを３個取り除く：緑の1/1の苗木・クリーチャー・トークンを１体生成する。</card>
+    <card name="Thallid Devourer" jaName="サリッドの貪り食い" type="クリーチャー ― ファンガス" pt="2/2">あなたのアップキープの開始時に、Thallid Devourerの上に胞子カウンターを１個置く。
+Thallid Devourerから胞子カウンターを３個取り除く：緑の1/1の苗木・クリーチャー・トークンを１体生成する。
 苗木を１体生け贄に捧げる：ターン終了時まで、Thallid Devourerは+1/+2の修整を受ける。</card>
-    <card name="Thallid Germinator" jaName="サリッドの発芽者" type="クリーチャー ― ファンガス" pt="2/2">あなたのアップキープの開始時に、サリッドの発芽者の上に胞子(spore)カウンターを１個置く。 
-サリッドの発芽者から胞子カウンターを３個取り除く：緑の1/1の苗木(Saproling)・クリーチャー・トークンを１体生成する。
+    <card name="Thallid Germinator" jaName="サリッドの発芽者" type="クリーチャー ― ファンガス" pt="2/2">あなたのアップキープの開始時に、サリッドの発芽者の上に胞子カウンターを１個置く。 
+サリッドの発芽者から胞子カウンターを３個取り除く：緑の1/1の苗木・クリーチャー・トークンを１体生成する。
 苗木を１体生け贄に捧げる：クリーチャー１体を対象とする。ターン終了時まで、それは+1/+1の修整を受ける。</card>
     <card name="Thallid Shell-Dweller" jaName="サリッドの殻住まい" type="クリーチャー ― ファンガス" pt="0/5">防衛
-あなたのアップキープの開始時に、サリッドの殻住まいの上に胞子(spore)カウンターを１個置く。 
-サリッドの殻住まいから胞子カウンターを３個取り除く：緑の1/1の苗木(Saproling)・クリーチャー・トークンを１体生成する。</card>
-    <card name="Thatcher Revolt" jaName="屋根職人の反乱" type="ソーサリー">速攻を持つ赤の1/1の人間(Human)・クリーチャー・トークンを３体生成する。次の終了ステップの開始時に、それらのトークンを生け贄に捧げる。</card>
-    <card name="The Hive" jaName="蜂の巣" type="アーティファクト">(５),(Ｔ)：《ワスプ/Wasp》という名前の、飛行を持つ無色の1/1の昆虫(Insect)・アーティファクト・クリーチャー・トークンを１体生成する。（それは飛行や到達を持たないクリーチャーによってはブロックされない。）</card>
-    <card name="Thelonite Hermit" jaName="セロン教の隠遁者" type="クリーチャー ― エルフ・シャーマン" pt="1/1">苗木(Saproling)クリーチャーは+1/+1の修整を受ける。
+あなたのアップキープの開始時に、サリッドの殻住まいの上に胞子カウンターを１個置く。 
+サリッドの殻住まいから胞子カウンターを３個取り除く：緑の1/1の苗木・クリーチャー・トークンを１体生成する。</card>
+    <card name="Thatcher Revolt" jaName="屋根職人の反乱" type="ソーサリー">速攻を持つ赤の1/1の人間・クリーチャー・トークンを３体生成する。次の終了ステップの開始時に、それらのトークンを生け贄に捧げる。</card>
+    <card name="The Hive" jaName="蜂の巣" type="アーティファクト">(５),(Ｔ)：《ワスプ/Wasp》という名前の、飛行を持つ無色の1/1の昆虫・アーティファクト・クリーチャー・トークンを１体生成する。（それは飛行や到達を持たないクリーチャーによってはブロックされない。）</card>
+    <card name="Thelonite Hermit" jaName="セロン教の隠遁者" type="クリーチャー ― エルフ・シャーマン" pt="1/1">苗木クリーチャーは+1/+1の修整を受ける。
 変異(３)(緑)(緑)（あなたはこのカードを、(３)で2/2クリーチャーとして裏向きに唱えてもよい。これの変異コストで、これをいつでも表向きにしてもよい。）
 セロン教の隠遁者が表向きになったとき、緑の1/1の苗木・クリーチャー・トークンを４体生成する。</card>
     <card name="Thopter Assembly" jaName="飛行機械の組立工" type="アーティファクト・クリーチャー ― 飛行機械" pt="5/5">飛行
-あなたのアップキープの開始時に、あなたが飛行機械の組立工以外の飛行機械(Thopter)をコントロールしていない場合、飛行機械の組立工をオーナーの手札に戻し、飛行を持つ無色の1/1の飛行機械・アーティファクト・クリーチャー・トークンを５体生成する。</card>
-    <card name="Thopter Engineer" jaName="飛行機械技師" type="クリーチャー ― 人間・工匠" pt="1/3">飛行機械技師が戦場に出たとき、飛行を持つ無色の1/1の飛行機械(Thopter)・アーティファクト・クリーチャー・トークンを１体生成する。
+あなたのアップキープの開始時に、あなたが飛行機械の組立工以外の飛行機械をコントロールしていない場合、飛行機械の組立工をオーナーの手札に戻し、飛行を持つ無色の1/1の飛行機械・アーティファクト・クリーチャー・トークンを５体生成する。</card>
+    <card name="Thopter Engineer" jaName="飛行機械技師" type="クリーチャー ― 人間・工匠" pt="1/3">飛行機械技師が戦場に出たとき、飛行を持つ無色の1/1の飛行機械・アーティファクト・クリーチャー・トークンを１体生成する。
 あなたがコントロールするアーティファクト・クリーチャーは速攻を持つ。（それらはあなたのコントロール下になってすぐに攻撃したり(Ｔ)したりできる。）</card>
-    <card name="Thopter Foundry" jaName="飛行機械の鋳造所" type="アーティファクト">(１),トークンでないアーティファクト１つを生け贄に捧げる：飛行を持つ青の1/1の飛行機械(Thopter)・アーティファクト・クリーチャー・トークンを１体生成する。あなたは１点のライフを得る。</card>
-    <card name="Thopter Spy Network" jaName="飛行機械の諜報網" type="エンチャント">あなたのアップキープの開始時に、あなたがアーティファクトをコントロールしている場合、飛行を持つ無色の1/1の飛行機械(Thopter)・アーティファクト・クリーチャー・トークンを１体生成する。
+    <card name="Thopter Foundry" jaName="飛行機械の鋳造所" type="アーティファクト">(１),トークンでないアーティファクト１つを生け贄に捧げる：飛行を持つ青の1/1の飛行機械・アーティファクト・クリーチャー・トークンを１体生成する。あなたは１点のライフを得る。</card>
+    <card name="Thopter Spy Network" jaName="飛行機械の諜報網" type="エンチャント">あなたのアップキープの開始時に、あなたがアーティファクトをコントロールしている場合、飛行を持つ無色の1/1の飛行機械・アーティファクト・クリーチャー・トークンを１体生成する。
 あなたがコントロールする１体以上のアーティファクト・クリーチャーがプレイヤー１人に戦闘ダメージを与えるたび、カードを１枚引く。</card>
     <card name="Thopter Squadron" jaName="飛行機械隊" type="アーティファクト・クリーチャー ― 飛行機械" pt="0/0">飛行
 飛行機械隊はその上に+1/+1カウンターが３個置かれた状態で戦場に出る。
-(１),飛行機械隊から+1/+1カウンターを１個取り除く：飛行を持つ無色の1/1の飛行機械(Thopter)・アーティファクト・クリーチャー・トークンを１体生成する。この能力は、あなたがソーサリーを唱えられるときにのみ起動できる。
+(１),飛行機械隊から+1/+1カウンターを１個取り除く：飛行を持つ無色の1/1の飛行機械・アーティファクト・クリーチャー・トークンを１体生成する。この能力は、あなたがソーサリーを唱えられるときにのみ起動できる。
 (１),他の飛行機械を１つ生け贄に捧げる：飛行機械隊の上に+1/+1カウンターを１個置く。この能力は、あなたがソーサリーをプレイできるときにのみプレイできる。</card>
-    <card name="Thraben Doomsayer" jaName="スレイベンの破滅預言者" type="クリーチャー ― 人間・クレリック" pt="2/2">(Ｔ)：白の1/1の人間(Human)・クリーチャー・トークンを１体生成する。
+    <card name="Thraben Doomsayer" jaName="スレイベンの破滅預言者" type="クリーチャー ― 人間・クレリック" pt="2/2">(Ｔ)：白の1/1の人間・クリーチャー・トークンを１体生成する。
 窮地 ― あなたのライフが５点以下であるかぎり、あなたがコントロールする他のクリーチャーは+2/+2の修整を受ける。</card>
-    <card name="Thraben Inspector" jaName="スレイベンの検査官" type="クリーチャー ― 人間・兵士" pt="1/2">スレイベンの検査官が戦場に出たとき、調査を行う。（「(２),このアーティファクトを生け贄に捧げる：カードを１枚引く。」を持つ無色の手掛かり(Clue)・アーティファクト・トークンを１つ生成する。）</card>
-    <card name="Thraben Standard Bearer" jaName="スレイベンの軍旗手" type="クリーチャー ― 人間・兵士" pt="1/1">(１)(白),(Ｔ),カードを１枚捨てる：白の1/1の人間(Human)・兵士(Soldier)・クリーチャー・トークンを１体生成する。</card>
+    <card name="Thraben Inspector" jaName="スレイベンの検査官" type="クリーチャー ― 人間・兵士" pt="1/2">スレイベンの検査官が戦場に出たとき、調査を行う。（「(２),このアーティファクトを生け贄に捧げる：カードを１枚引く。」を持つ無色の手掛かり・アーティファクト・トークンを１つ生成する。）</card>
+    <card name="Thraben Standard Bearer" jaName="スレイベンの軍旗手" type="クリーチャー ― 人間・兵士" pt="1/1">(１)(白),(Ｔ),カードを１枚捨てる：白の1/1の人間・兵士・クリーチャー・トークンを１体生成する。</card>
     <card name="Thragtusk" jaName="スラーグ牙" type="クリーチャー ― ビースト" pt="5/3">スラーグ牙が戦場に出たとき、あなたは５点のライフを得る。
-スラーグ牙が戦場を離れたとき、緑の3/3のビースト(Beast)・クリーチャー・トークンを１体生成する。</card>
-    <card name="Throne of Empires" jaName="帝国の玉座" type="アーティファクト">(１),(Ｔ)：白の1/1の兵士(Soldier)・クリーチャー・トークンを１体生成する。あなたが《帝国の王冠/Crown of Empires》という名前のアーティファクトと《帝国の王笏/Scepter of Empires》という名前のアーティファクトをコントロールしている場合、代わりにそのトークンを５体生成する。</card>
+スラーグ牙が戦場を離れたとき、緑の3/3のビースト・クリーチャー・トークンを１体生成する。</card>
+    <card name="Throne of Empires" jaName="帝国の玉座" type="アーティファクト">(１),(Ｔ)：白の1/1の兵士・クリーチャー・トークンを１体生成する。あなたが《帝国の王冠/Crown of Empires》という名前のアーティファクトと《帝国の王笏/Scepter of Empires》という名前のアーティファクトをコントロールしている場合、代わりにそのトークンを５体生成する。</card>
     <card name="Thunderheads" jaName="いかづち頭" type="インスタント">複製(２)(青)（あなたがこの呪文を唱えるとき、あなたがその複製コストを支払った回数１回につき、それをコピーする。あなたはそのコピーの新しい対象を選んでもよい。）
-防衛と飛行を持つ青の3/3の奇魔(Weird)・クリーチャー・トークンを１体生成する。ターン終了時に、それを追放する。</card>
-    <card name="Tidal Wave" jaName="高波" type="インスタント">防衛を持つ青の5/5の壁(Wall)・クリーチャー・トークンを１体生成する。次の終了ステップの開始時に、それを生け贄に捧げる。</card>
-    <card name="Timely Reinforcements" jaName="機を見た援軍" type="ソーサリー">あなたのライフの点数がいずれかの対戦相手よりも低い場合、あなたは６点のライフを得る。あなたがコントロールしているクリーチャーの数がいずれかの対戦相手よりも少ない場合、白の1/1の兵士(Soldier)・クリーチャー・トークンを３体生成する。</card>
-    <card name="Tireless Tracker" jaName="不屈の追跡者" type="クリーチャー ― 人間・スカウト" pt="3/2">土地が１つあなたのコントロール下で戦場に出るたび、調査を行う。（「(２),このアーティファクトを生け贄に捧げる：カードを１枚引く。」を持つ無色の手掛かり(Clue)・アーティファクト・トークンを１つ生成する。）
+防衛と飛行を持つ青の3/3の奇魔・クリーチャー・トークンを１体生成する。ターン終了時に、それを追放する。</card>
+    <card name="Tidal Wave" jaName="高波" type="インスタント">防衛を持つ青の5/5の壁・クリーチャー・トークンを１体生成する。次の終了ステップの開始時に、それを生け贄に捧げる。</card>
+    <card name="Timely Reinforcements" jaName="機を見た援軍" type="ソーサリー">あなたのライフの点数がいずれかの対戦相手よりも低い場合、あなたは６点のライフを得る。あなたがコントロールしているクリーチャーの数がいずれかの対戦相手よりも少ない場合、白の1/1の兵士・クリーチャー・トークンを３体生成する。</card>
+    <card name="Tireless Tracker" jaName="不屈の追跡者" type="クリーチャー ― 人間・スカウト" pt="3/2">土地が１つあなたのコントロール下で戦場に出るたび、調査を行う。（「(２),このアーティファクトを生け贄に捧げる：カードを１枚引く。」を持つ無色の手掛かり・アーティファクト・トークンを１つ生成する。）
 あなたが手掛かりを１つ生け贄に捧げるたび、不屈の追跡者の上に+1/+1カウンターを１個置く。</card>
-    <card name="Titan Forge" jaName="タイタンの炉" type="アーティファクト">(３),(Ｔ)：タイタンの炉の上に蓄積(charge)カウンターを１個置く。
-(Ｔ),タイタンの炉から蓄積カウンターを３個取り除く：無色の9/9のゴーレム(Golem)・アーティファクト・クリーチャー・トークンを１体生成する。</card>
+    <card name="Titan Forge" jaName="タイタンの炉" type="アーティファクト">(３),(Ｔ)：タイタンの炉の上に蓄積カウンターを１個置く。
+(Ｔ),タイタンの炉から蓄積カウンターを３個取り除く：無色の9/9のゴーレム・アーティファクト・クリーチャー・トークンを１体生成する。</card>
     <card name="Titania, Protector of Argoth" jaName="アルゴスの庇護者、ティタニア" type="伝説のクリーチャー ― エレメンタル" pt="5/3">アルゴスの庇護者、ティタニアが戦場に出たとき、あなたの墓地にある土地・カード１枚を対象とし、それを戦場に戻す。
-あなたがコントロールする土地が１つ戦場から墓地に置かれるたび、緑の5/3のエレメンタル(Elemental)・クリーチャー・トークンを１体生成する。</card>
+あなたがコントロールする土地が１つ戦場から墓地に置かれるたび、緑の5/3のエレメンタル・クリーチャー・トークンを１体生成する。</card>
     <card name="Tolsimir Wolfblood" jaName="トルシミール・ウルフブラッド" type="伝説のクリーチャー ― エルフ・戦士" pt="3/4">あなたがコントロールする他の緑のクリーチャーは+1/+1の修整を受ける。
 あなたがコントロールする他の白のクリーチャーは+1/+1の修整を受ける。
-(Ｔ)：《ヴォジャ/Voja》という名前の緑であり白である2/2の伝説の狼(Wolf)・クリーチャー・トークンを１体生成する。</card>
-    <card name="Tomb of Urami" jaName="烏羅未の墳墓" type="伝説の土地">(Ｔ)：あなたのマナ・プールに(黒)を加える。あなたがオーガ(Ogre)をコントロールしていない場合、烏羅未の墳墓はあなたに１点のダメージを与える。
-(２)(黒)(黒),(Ｔ),あなたがコントロールするすべての土地を生け贄に捧げる：《烏羅未/Urami》という名前の、飛行を持つ黒の5/5の伝説のデーモン(Demon)・スピリット(Spirit)・クリーチャー・トークンを１体生成する。</card>
-    <card name="Tombstone Stairwell" jaName="墓石の階段" type="ワールド・エンチャント">累加アップキープ(１)(黒)（あなたのアップキープの開始時に、このパーマネントの上に経年(age)カウンターを１個置く。その後あなたがこの上に置かれている経年カウンター１個につきアップキープ・コストを１回支払わないかぎり、それを生け贄に捧げる。）
-各ターンのアップキープの開始時に、墓石の階段が戦場に出ている場合、各プレイヤーは自分の墓地にあるクリーチャー・カード１枚につき、《屍鬼/Tombspawn》という名前の、速攻を持つ黒の2/2のゾンビ(Zombie)・クリーチャー・トークンを１体生成する。
+(Ｔ)：《ヴォジャ/Voja》という名前の緑であり白である2/2の伝説の狼・クリーチャー・トークンを１体生成する。</card>
+    <card name="Tomb of Urami" jaName="烏羅未の墳墓" type="伝説の土地">(Ｔ)：あなたのマナ・プールに(黒)を加える。あなたがオーガをコントロールしていない場合、烏羅未の墳墓はあなたに１点のダメージを与える。
+(２)(黒)(黒),(Ｔ),あなたがコントロールするすべての土地を生け贄に捧げる：《烏羅未/Urami》という名前の、飛行を持つ黒の5/5の伝説のデーモン・スピリット・クリーチャー・トークンを１体生成する。</card>
+    <card name="Tombstone Stairwell" jaName="墓石の階段" type="ワールド・エンチャント">累加アップキープ(１)(黒)（あなたのアップキープの開始時に、このパーマネントの上に経年カウンターを１個置く。その後あなたがこの上に置かれている経年カウンター１個につきアップキープ・コストを１回支払わないかぎり、それを生け贄に捧げる。）
+各ターンのアップキープの開始時に、墓石の階段が戦場に出ている場合、各プレイヤーは自分の墓地にあるクリーチャー・カード１枚につき、《屍鬼/Tombspawn》という名前の、速攻を持つ黒の2/2のゾンビ・クリーチャー・トークンを１体生成する。
 各終了ステップの開始時か、墓石の階段が戦場を離れたとき、それによって生成されたすべてのトークンを破壊する。それらは再生できない。</card>
-    <card name="Tooth and Claw" jaName="歯とかぎ爪" type="エンチャント">クリーチャーを２体生け贄に捧げる：《肉食動物/Carnivore》という名前の、赤の3/1のビースト(Beast)・クリーチャー・トークンを１体生成する。</card>
+    <card name="Tooth and Claw" jaName="歯とかぎ爪" type="エンチャント">クリーチャーを２体生け贄に捧げる：《肉食動物/Carnivore》という名前の、赤の3/1のビースト・クリーチャー・トークンを１体生成する。</card>
     <card name="Trading Post" jaName="交易所" type="アーティファクト">(１),(Ｔ),カードを１枚捨てる：あなたは４点のライフを得る。
-(１),(Ｔ),ライフを１点支払う：白の0/1のヤギ(Goat)・クリーチャー・トークンを１体生成する。
+(１),(Ｔ),ライフを１点支払う：白の0/1のヤギ・クリーチャー・トークンを１体生成する。
 (１),(Ｔ),クリーチャーを１体生け贄に捧げる：あなたの墓地にあるアーティファクト・カード１枚を対象とし、それをあなたの手札に戻す。
 (１),(Ｔ),アーティファクトを１つ生け贄に捧げる：カードを１枚引く。</card>
-    <card name="Trail of Evidence" jaName="証拠の痕跡" type="エンチャント">あなたがインスタント呪文かソーサリー呪文を１つ唱えるたび、調査を行う。（「(２),このアーティファクトを生け贄に捧げる：カードを１枚引く。」を持つ無色の手掛かり(Clue)アーティファクト・トークンを１つ生成する。）</card>
-    <card name="Transluminant" jaName="光と成す者" type="クリーチャー ― ドライアド・シャーマン" pt="2/2">(白),光と成す者を生け贄に捧げる：次の終了ステップの開始時に、飛行を持つ白の1/1のスピリット(Spirit)・クリーチャー・トークンを１体生成する。</card>
-    <card name="Trigon of Infestation" jaName="感染の三角護符" type="アーティファクト">感染の三角護符は、その上に蓄積(charge)カウンターが３個置かれた状態で戦場に出る。
+    <card name="Trail of Evidence" jaName="証拠の痕跡" type="エンチャント">あなたがインスタント・呪文かソーサリー・呪文を１つ唱えるたび、調査を行う。（「(２),このアーティファクトを生け贄に捧げる：カードを１枚引く。」を持つ無色の手掛かり・アーティファクト・トークンを１つ生成する。）</card>
+    <card name="Transluminant" jaName="光と成す者" type="クリーチャー ― ドライアド・シャーマン" pt="2/2">(白),光と成す者を生け贄に捧げる：次の終了ステップの開始時に、飛行を持つ白の1/1のスピリット・クリーチャー・トークンを１体生成する。</card>
+    <card name="Trigon of Infestation" jaName="感染の三角護符" type="アーティファクト">感染の三角護符は、その上に蓄積カウンターが３個置かれた状態で戦場に出る。
 (緑)(緑),(Ｔ)：感染の三角護符の上に蓄積カウンターを１個置く。
-(２),(Ｔ),感染の三角護符から蓄積カウンターを１個取り除く：感染を持つ緑の1/1の昆虫(Insect)・クリーチャー・トークンを１体生成する。</card>
+(２),(Ｔ),感染の三角護符から蓄積カウンターを１個取り除く：感染を持つ緑の1/1の昆虫・クリーチャー・トークンを１体生成する。</card>
     <card name="Triplicate Spirits" jaName="三つぞろいの霊魂" type="ソーサリー">召集（あなたのクリーチャーが、この呪文を唱える助けとなる。この呪文を唱えるに際しあなたがタップしたクリーチャー１体で、(１)かそのクリーチャーの色のマナ１点を支払う。）
-飛行を持つ白の1/1のスピリット(Spirit)・クリーチャー・トークンを３体生成する。（それは飛行や到達を持たないクリーチャーによってブロックされない。）</card>
+飛行を持つ白の1/1のスピリット・クリーチャー・トークンを３体生成する。（それは飛行や到達を持たないクリーチャーによってブロックされない。）</card>
     <card name="Triskelavus" jaName="トリスケラバス" type="アーティファクト・クリーチャー ― 構築物" pt="1/1">飛行
 トリスケラバスはその上に+1/+1カウンターが３個置かれた状態で戦場に出る。
-(１),トリスケラバスから+1/+1カウンターを１個取り除く：飛行を持つ無色の1/1のトリスケラバイト(Triskelavite)・アーティファクト・クリーチャー・トークンを１体生成する。それは「このクリーチャーを生け贄に捧げる：クリーチャー１体かプレイヤー１人を対象とする。このクリーチャーはそれに１点のダメージを与える。」を持つ。</card>
+(１),トリスケラバスから+1/+1カウンターを１個取り除く：飛行を持つ無色の1/1のトリスケラバイト・アーティファクト・クリーチャー・トークンを１体生成する。それは「このクリーチャーを生け贄に捧げる：クリーチャー１体かプレイヤー１人を対象とする。このクリーチャーはそれに１点のダメージを与える。」を持つ。</card>
     <card name="Trostani's Judgment" jaName="トロスターニの裁き" type="インスタント">クリーチャー１体を対象とし、それを追放する。その後、居住を行う。（あなたがコントロールするクリーチャー・トークン１体のコピーであるトークンを１体生成する。）</card>
-    <card name="Trostani's Summoner" jaName="トロスターニの召喚士" type="クリーチャー ― エルフ・シャーマン" pt="1/1">トロスターニの召喚士が戦場に出たとき、警戒を持つ白の2/2の騎士(Knight)・クリーチャー・トークンを１体、緑の3/3のケンタウルス(Centaur)・クリーチャー・トークンを１体、トランプルを持つ緑の4/4のサイ(Rhino)・クリーチャー・トークンを１体生成する。</card>
+    <card name="Trostani's Summoner" jaName="トロスターニの召喚士" type="クリーチャー ― エルフ・シャーマン" pt="1/1">トロスターニの召喚士が戦場に出たとき、警戒を持つ白の2/2の騎士・クリーチャー・トークンを１体、緑の3/3のケンタウルス・クリーチャー・トークンを１体、トランプルを持つ緑の4/4のサイ・クリーチャー・トークンを１体生成する。</card>
     <card name="Trostani, Selesnya's Voice" jaName="セレズニアの声、トロスターニ" type="伝説のクリーチャー ― ドライアド" pt="2/5">他のクリーチャー１体があなたのコントロール下で戦場に出るたび、あなたはそのクリーチャーのタフネスに等しい点数のライフを得る。
 (１)(緑)(白),(Ｔ)：居住を行う。（あなたがコントロールするクリーチャー・トークン１体のコピーであるトークンを１体生成する。）</card>
-    <card name="Tukatongue Thallid" jaName="ツカタンのサリッド" type="クリーチャー ― ファンガス" pt="1/1">ツカタンのサリッドが死亡したとき、緑の1/1の苗木(Saproling)・クリーチャー・トークンを１体生成する。</card>
+    <card name="Tukatongue Thallid" jaName="ツカタンのサリッド" type="クリーチャー ― ファンガス" pt="1/1">ツカタンのサリッドが死亡したとき、緑の1/1の苗木・クリーチャー・トークンを１体生成する。</card>
     <card name="Tuktuk the Explorer" jaName="探検家タクタク" type="伝説のクリーチャー ― ゴブリン" pt="1/1">速攻
-探検家タクタクが死亡したとき、《復活のタクタク/Tuktuk the Returned》という名前の無色の5/5の伝説のゴブリン(Goblin)・ゴーレム(Golem)・アーティファクト・クリーチャー・トークンを１体生成する。</card>
-    <card name="Turntimber Ranger" jaName="変わり樹のレインジャー" type="クリーチャー ― エルフ・スカウト・同盟者" pt="2/2">変わり樹のレインジャーか他の同盟者(Ally)があなたのコントロール下で戦場に出るたび、あなたは緑の2/2の狼(Wolf)・クリーチャー・トークンを１体生成してもよい。そうした場合、変わり樹のレインジャーの上に+1/+1カウンターを１個置く。</card>
+探検家タクタクが死亡したとき、《復活のタクタク/Tuktuk the Returned》という名前の無色の5/5の伝説のゴブリン・ゴーレム・アーティファクト・クリーチャー・トークンを１体生成する。</card>
+    <card name="Turntimber Ranger" jaName="変わり樹のレインジャー" type="クリーチャー ― エルフ・スカウト・同盟者" pt="2/2">変わり樹のレインジャーか他の同盟者があなたのコントロール下で戦場に出るたび、あなたは緑の2/2の狼・クリーチャー・トークンを１体生成してもよい。そうした場合、変わり樹のレインジャーの上に+1/+1カウンターを１個置く。</card>
     <card name="Twilight Drover" jaName="黄昏の群れ操り" type="クリーチャー ― スピリット" pt="1/1">クリーチャー・トークンが戦場を離れるたび、黄昏の群れ操りの上に+1/+1カウンターを１個置く。
-(２)(白),黄昏の群れ操りから+1/+1カウンターを１個取り除く：飛行を持つ白の1/1のスピリット(Spirit)・クリーチャー・トークンを２体生成する。</card>
+(２)(白),黄昏の群れ操りから+1/+1カウンターを１個取り除く：飛行を持つ白の1/1のスピリット・クリーチャー・トークンを２体生成する。</card>
     <card name="Twinflame" jaName="双つ身の炎" type="ソーサリー">奮励 ― 双つ身の炎を唱えるためのコストは、２つ目以降の対象１つにつき(２)(赤)多くなる。
 あなたがコントロールする望む数のクリーチャーを対象とする。それら１体につき、それのコピーであるトークンを１体生成する。それらのトークンは速攻を持つ。次の終了ステップの開始時に、それらを追放する。</card>
     <card name="Ulasht, the Hate Seed" jaName="憎悪の種、ウラシュト" type="伝説のクリーチャー ― ヘリオン・ハイドラ" pt="0/0">憎悪の種、ウラシュトは、あなたがコントロールする他の赤のクリーチャー１体につき１個の+1/+1カウンターと、あなたがコントロールする他の緑のクリーチャー１体につき１個の+1/+1カウンターが置かれた状態で戦場に出る。
 (１),憎悪の種、ウラシュトから+1/+1カウンターを１個取り除く：以下から１つを選ぶ。
 ・クリーチャー１体を対象とする。憎悪の種、ウラシュトはそれに１点のダメージを与える。
-・緑の1/1の苗木(Saproling)・クリーチャー・トークンを１体生成する。</card>
-    <card name="Ulvenwald Mysteries" jaName="ウルヴェンワルドの謎" type="エンチャント">あなたがコントロールするトークンでないクリーチャーが１体死亡するたび、調査を行う。（「(２),このアーティファクトを生け贄に捧げる：カードを１枚引く。」を持つ無色の手掛かり(Clue)アーティファクト・トークンを１つ生成する。）
-あなたが手掛かりを１つ生け贄に捧げるたび、白の1/1の人間(Human)・兵士(Soldier)・クリーチャー・トークンを１体生成する。</card>
-    <card name="Undead Alchemist" jaName="アンデッドの錬金術師" type="クリーチャー ― ゾンビ" pt="4/2">あなたがコントロールするゾンビ(Zombie)がプレイヤー１人に戦闘ダメージを与える場合、代わりにそのプレイヤーは自分のライブラリーの一番上から、その点数に等しい枚数のカードを自分の墓地に置く。
+・緑の1/1の苗木・クリーチャー・トークンを１体生成する。</card>
+    <card name="Ulvenwald Mysteries" jaName="ウルヴェンワルドの謎" type="エンチャント">あなたがコントロールするトークンでないクリーチャーが１体死亡するたび、調査を行う。（「(２),このアーティファクトを生け贄に捧げる：カードを１枚引く。」を持つ無色の手掛かり・アーティファクト・トークンを１つ生成する。）
+あなたが手掛かりを１つ生け贄に捧げるたび、白の1/1の人間・兵士・クリーチャー・トークンを１体生成する。</card>
+    <card name="Undead Alchemist" jaName="アンデッドの錬金術師" type="クリーチャー ― ゾンビ" pt="4/2">あなたがコントロールするゾンビがプレイヤー１人に戦闘ダメージを与える場合、代わりにそのプレイヤーは自分のライブラリーの一番上から、その点数に等しい枚数のカードを自分の墓地に置く。
 対戦相手１人のライブラリーからそのプレイヤーの墓地にクリーチャー・カードが１枚置かれるたび、そのカードを追放し、黒の2/2のゾンビ・クリーチャー・トークンを１体生成する。</card>
-    <card name="Undead Servant" jaName="アンデッドの召使い" type="クリーチャー ― ゾンビ" pt="3/2">アンデッドの召使いが戦場に出たとき、あなたの墓地にある《アンデッドの召使い/Undead Servant》という名前のカード１枚につき、黒の2/2のゾンビ(Zombie)・クリーチャー・トークンを１体生成する。</card>
-    <card name="Unified Front" jaName="統一戦線" type="ソーサリー">収斂 ― 統一戦線を唱えるために支払われたマナの色１色につき、白の1/1のコー(Kor)・同盟者(Ally)・クリーチャー・トークンを１体生成する。</card>
+    <card name="Undead Servant" jaName="アンデッドの召使い" type="クリーチャー ― ゾンビ" pt="3/2">アンデッドの召使いが戦場に出たとき、あなたの墓地にある《アンデッドの召使い/Undead Servant》という名前のカード１枚につき、黒の2/2のゾンビ・クリーチャー・トークンを１体生成する。</card>
+    <card name="Unified Front" jaName="統一戦線" type="ソーサリー">収斂 ― 統一戦線を唱えるために支払われたマナの色１色につき、白の1/1のコー・同盟者・クリーチャー・トークンを１体生成する。</card>
     <card name="Unscythe, Killer of Kings" jaName="王を葬る鎌、アンサイズ" type="伝説のアーティファクト ― 装備品">装備しているクリーチャーは+3/+3の修整を受けるとともに先制攻撃を持つ。
-このターン、装備しているクリーチャーによってダメージを与えられたクリーチャーが死亡するたび、あなたはそのカードを追放してもよい。そうした場合、黒の2/2のゾンビ(Zombie)・クリーチャー・トークンを１体生成する。
+このターン、装備しているクリーチャーによってダメージを与えられたクリーチャーが死亡するたび、あなたはそのカードを追放してもよい。そうした場合、黒の2/2のゾンビ・クリーチャー・トークンを１体生成する。
 装備(２)</card>
-    <card name="Urbis Protector" jaName="都邑の庇護者" type="クリーチャー ― 人間・クレリック" pt="1/1">都邑の庇護者が戦場に出たとき、飛行を持つ白の4/4の天使(Angel)・クリーチャー・トークンを１体生成する。</card>
-    <card name="Utopia Mycon" jaName="ユートピアの菌類" type="クリーチャー ― ファンガス" pt="0/2">あなたのアップキープの開始時に、ユートピアの菌類の上に胞子(spore)カウンターを１個置く。
-ユートピアの菌類から胞子カウンターを３個取り除く：緑の1/1の苗木(Saproling)・クリーチャー・トークンを１体生成する。
+    <card name="Urbis Protector" jaName="都邑の庇護者" type="クリーチャー ― 人間・クレリック" pt="1/1">都邑の庇護者が戦場に出たとき、飛行を持つ白の4/4の天使・クリーチャー・トークンを１体生成する。</card>
+    <card name="Utopia Mycon" jaName="ユートピアの菌類" type="クリーチャー ― ファンガス" pt="0/2">あなたのアップキープの開始時に、ユートピアの菌類の上に胞子カウンターを１個置く。
+ユートピアの菌類から胞子カウンターを３個取り除く：緑の1/1の苗木・クリーチャー・トークンを１体生成する。
 苗木を１体生け贄に捧げる：あなたのマナ・プールに、好きな色１色のマナ１点を加える。</card>
     <card name="Utvara Hellkite" jaName="ウトヴァラのヘルカイト" type="クリーチャー ― ドラゴン" pt="6/6">飛行
-あなたがコントロールするドラゴン(Dragon)が攻撃するたび、飛行を持つ赤の6/6のドラゴン・クリーチャー・トークンを１体生成する。</card>
+あなたがコントロールするドラゴンが攻撃するたび、飛行を持つ赤の6/6のドラゴン・クリーチャー・トークンを１体生成する。</card>
     <card name="Vanguard of Brimaz" jaName="ブリマーズの先兵" type="クリーチャー ― 猫・兵士" pt="2/2">警戒
-英雄的 ― あなたがブリマーズの先兵を対象とする呪文を１つ唱えるたび、警戒を持つ白の1/1の猫(Cat)・兵士(Soldier)・クリーチャー・トークンを１体生成する。</card>
-    <card name="Varchild's War-Riders" jaName="ヴァーチャイルドの戦場の騎手" type="クリーチャー ― 人間・戦士" pt="3/4">累加アップキープ ― 対戦相手１人は赤の1/1の生存者(Survivor)・クリーチャー・トークンを１体生成する。（あなたのアップキープの開始時に、このパーマネントの上に経年(age)カウンターを１個置く。その後あなたがこの上に置かれている経年カウンター１個につきアップキープ・コストを１回支払わないかぎり、それを生け贄に捧げる。）
+英雄的 ― あなたがブリマーズの先兵を対象とする呪文を１つ唱えるたび、警戒を持つ白の1/1の猫・兵士・クリーチャー・トークンを１体生成する。</card>
+    <card name="Varchild's War-Riders" jaName="ヴァーチャイルドの戦場の騎手" type="クリーチャー ― 人間・戦士" pt="3/4">累加アップキープ ― 対戦相手１人は赤の1/1の生存者・クリーチャー・トークンを１体生成する。（あなたのアップキープの開始時に、このパーマネントの上に経年カウンターを１個置く。その後あなたがこの上に置かれている経年カウンター１個につきアップキープ・コストを１回支払わないかぎり、それを生け贄に捧げる。）
 トランプル、ランページ１（このクリーチャーがブロックされるたび、それをブロックしている２体目以降のクリーチャー１体につき+1/+1の修整を受ける。）</card>
     <card name="Verdant Embrace" jaName="新緑の抱擁" type="エンチャント ― オーラ">エンチャント（クリーチャー）
-エンチャントされているクリーチャーは+3/+3の修整を受けるとともに「各アップキープの開始時に、緑の1/1の苗木(Saproling)・クリーチャー・トークンを１体生成する。」を持つ。</card>
-    <card name="Verdant Force" jaName="新緑の魔力" type="クリーチャー ― エレメンタル" pt="7/7">各アップキープの開始時に、緑の1/1の苗木(Saproling)・クリーチャー・トークンを１体生成する。</card>
+エンチャントされているクリーチャーは+3/+3の修整を受けるとともに「各アップキープの開始時に、緑の1/1の苗木・クリーチャー・トークンを１体生成する。」を持つ。</card>
+    <card name="Verdant Force" jaName="新緑の魔力" type="クリーチャー ― エレメンタル" pt="7/7">各アップキープの開始時に、緑の1/1の苗木・クリーチャー・トークンを１体生成する。</card>
     <card name="Verdeloth the Ancient" jaName="古木のヴァーデロス" type="伝説のクリーチャー ― ツリーフォーク" pt="4/7">キッカー(Ｘ)（あなたがこの呪文を唱えるに際し、あなたは追加の(Ｘ)を支払ってもよい。）
-苗木(Saproling)・クリーチャーと他のツリーフォーク(Treefolk)・クリーチャーは+1/+1の修整を受ける。
+苗木・クリーチャーと他のツリーフォーク・クリーチャーは+1/+1の修整を受ける。
 古木のヴァーデロスが戦場に出たとき、それがキッカーされていた場合、緑の1/1の苗木・クリーチャー・トークンをＸ体生成する。</card>
-    <card name="Vessel of Ephemera" jaName="刹那の器" type="エンチャント">(２)(白),刹那の器を生け贄に捧げる：飛行を持つ白の1/1のスピリット(Spirit)・クリーチャー・トークンを２体生成する。</card>
-    <card name="Vile Rebirth" jaName="不快な再誕" type="インスタント">いずれかの墓地にあるクリーチャー・カード１枚を対象とし、それを追放する。黒の2/2のゾンビ(Zombie)・クリーチャー・トークンを１体生成する。</card>
+    <card name="Vessel of Ephemera" jaName="刹那の器" type="エンチャント">(２)(白),刹那の器を生け贄に捧げる：飛行を持つ白の1/1のスピリット・クリーチャー・トークンを２体生成する。</card>
+    <card name="Vile Rebirth" jaName="不快な再誕" type="インスタント">いずれかの墓地にあるクリーチャー・カード１枚を対象とし、それを追放する。黒の2/2のゾンビ・クリーチャー・トークンを１体生成する。</card>
     <card name="Vile Redeemer" jaName="卑小な回収者" type="クリーチャー ― エルドラージ" pt="3/3">欠色（このカードは無色である。）
 瞬速
-あなたが卑小な回収者を唱えたとき、あなたは(◇)を支払ってもよい。そうしたなら、このターンにあなたのコントロール下で死亡したトークンでないクリーチャー１体につき、無色の1/1のエルドラージ(Eldrazi)・末裔(Scion)・クリーチャー・トークンを１体生成する。それらのトークンは「このクリーチャーを生け贄に捧げる：あなたのマナ・プールに(◇)を加える。」を持つ。</card>
-    <card name="Violet Pall" jaName="スミレの棺" type="部族インスタント ― フェアリー">黒でないクリーチャー１体を対象とし、それを破壊する。飛行を持つ黒の1/1のフェアリー(Faerie)・ならず者(Rogue)・クリーチャー・トークンを１体生成する。</card>
-    <card name="Vital Splicer" jaName="生命の接合者" type="クリーチャー ― 人間・工匠" pt="1/1">生命の接合者が戦場に出たとき、無色の3/3のゴーレム(Golem)・アーティファクト・クリーチャー・トークンを１体生成する。
+あなたが卑小な回収者を唱えたとき、あなたは(◇)を支払ってもよい。そうしたなら、このターンにあなたのコントロール下で死亡したトークンでないクリーチャー１体につき、無色の1/1のエルドラージ・末裔・クリーチャー・トークンを１体生成する。それらのトークンは「このクリーチャーを生け贄に捧げる：あなたのマナ・プールに(◇)を加える。」を持つ。</card>
+    <card name="Violet Pall" jaName="スミレの棺" type="部族インスタント ― フェアリー">黒でないクリーチャー１体を対象とし、それを破壊する。飛行を持つ黒の1/1のフェアリー・ならず者・クリーチャー・トークンを１体生成する。</card>
+    <card name="Vital Splicer" jaName="生命の接合者" type="クリーチャー ― 人間・工匠" pt="1/1">生命の接合者が戦場に出たとき、無色の3/3のゴーレム・アーティファクト・クリーチャー・トークンを１体生成する。
 (１)：あなたがコントロールするゴーレム１つを対象とし、それを再生する。</card>
     <card name="Vitality Charm" jaName="活力の魔除け" type="インスタント">以下から１つを選ぶ。
-・緑の1/1の昆虫(Insect)・クリーチャー・トークンを１体生成する。
+・緑の1/1の昆虫・クリーチャー・トークンを１体生成する。
 ・クリーチャー１体を対象とする。ターン終了時まで、それは+1/+1の修整を受けるとともにトランプルを得る。
-・ビースト(Beast)１つを対象とし、それを再生する。</card>
-    <card name="Vitaspore Thallid" jaName="活力菌サリッド" type="クリーチャー ― ファンガス" pt="1/1">あなたのアップキープの開始時に、活力菌サリッドの上に胞子(spore)カウンターを１個置く。
-活力菌サリッドから胞子カウンターを３個取り除く：緑の1/1の苗木(Saproling)・クリーチャー・トークンを１体生成する。 
+・ビースト１つを対象とし、それを再生する。</card>
+    <card name="Vitaspore Thallid" jaName="活力菌サリッド" type="クリーチャー ― ファンガス" pt="1/1">あなたのアップキープの開始時に、活力菌サリッドの上に胞子カウンターを１個置く。
+活力菌サリッドから胞子カウンターを３個取り除く：緑の1/1の苗木・クリーチャー・トークンを１体生成する。 
 苗木を１体生け贄に捧げる：クリーチャー１体を対象とする。ターン終了時まで、それは速攻を得る。</card>
-    <card name="Vitu-Ghazi Guildmage" jaName="ヴィトゥ＝ガジーのギルド魔道士" type="クリーチャー ― ドライアド・シャーマン" pt="2/2">(４)(緑)(白)：緑の3/3のケンタウルス(Centaur)・クリーチャー・トークンを１体生成する。
+    <card name="Vitu-Ghazi Guildmage" jaName="ヴィトゥ＝ガジーのギルド魔道士" type="クリーチャー ― ドライアド・シャーマン" pt="2/2">(４)(緑)(白)：緑の3/3のケンタウルス・クリーチャー・トークンを１体生成する。
 (２)(緑)(白)：居住を行う。（あなたがコントロールするクリーチャー・トークン１体のコピーであるトークンを１体生成する。）</card>
     <card name="Vitu-Ghazi, the City-Tree" jaName="都市の樹、ヴィトゥ＝ガジー" type="土地">(Ｔ)：あなたのマナ・プールに(◇)を加える。
-(２)(緑)(白),(Ｔ)：緑の1/1の苗木(Saproling)・クリーチャー・トークンを１体生成する。</card>
-    <card name="Voice of Resurgence" jaName="復活の声" type="クリーチャー ― エレメンタル" pt="2/2">対戦相手１人があなたのターンに呪文を１つ唱えるたび、または復活の声が死亡したとき、「このクリーチャーのパワーとタフネスは、あなたがコントロールするクリーチャーの総数に等しい。」を持つ緑であり白であるエレメンタル(Elemental)・クリーチャー・トークンを１体生成する。</card>
+(２)(緑)(白),(Ｔ)：緑の1/1の苗木・クリーチャー・トークンを１体生成する。</card>
+    <card name="Voice of Resurgence" jaName="復活の声" type="クリーチャー ― エレメンタル" pt="2/2">対戦相手１人があなたのターンに呪文を１つ唱えるたび、または復活の声が死亡したとき、「このクリーチャーのパワーとタフネスは、あなたがコントロールするクリーチャーの総数に等しい。」を持つ緑であり白であるエレメンタル・クリーチャー・トークンを１体生成する。</card>
     <card name="Voice of the Provinces" jaName="州民の声" type="クリーチャー ― 天使" pt="3/3">飛行
-州民の声が戦場に出たとき、白の1/1の人間(Human)・クリーチャー・トークンを１体生成する。</card>
-    <card name="Voice of the Woods" jaName="森林の声" type="クリーチャー ― エルフ" pt="2/2">あなたがコントロールするアンタップ状態のエルフ(Elf)５つをタップする：トランプルを持つ緑の7/7のエレメンタル(Elemental)・クリーチャー・トークンを１体生成する。</card>
+州民の声が戦場に出たとき、白の1/1の人間・クリーチャー・トークンを１体生成する。</card>
+    <card name="Voice of the Woods" jaName="森林の声" type="クリーチャー ― エルフ" pt="2/2">あなたがコントロールするアンタップ状態のエルフ５つをタップする：トランプルを持つ緑の7/7のエレメンタル・クリーチャー・トークンを１体生成する。</card>
     <card name="Void Attendant" jaName="虚空の従者" type="クリーチャー ― エルドラージ・昇華者" pt="2/3">欠色（このカードは無色である。）
-(１)(緑),追放領域から対戦相手がオーナーであるカードを１枚そのプレイヤーの墓地に置く：無色の1/1のエルドラージ(Eldrazi)・末裔(Scion)・クリーチャー・トークンを１体生成する。それは「このクリーチャーを生け贄に捧げる：あなたのマナ・プールに(◇)を加える。」を持つ。</card>
+(１)(緑),追放領域から対戦相手がオーナーであるカードを１枚そのプレイヤーの墓地に置く：無色の1/1のエルドラージ・末裔・クリーチャー・トークンを１体生成する。それは「このクリーチャーを生け贄に捧げる：あなたのマナ・プールに(◇)を加える。」を持つ。</card>
     <card name="Volrath's Laboratory" jaName="ヴォルラスの研究室" type="アーティファクト">ヴォルラスの研究室が戦場に出るに際し、色１色とクリーチャー・タイプを１つ選ぶ。
 (５),(Ｔ)：2/2の選ばれた色とタイプのクリーチャー・トークンを１体生成する。</card>
     <card name="Vraska the Unseen" jaName="見えざる者、ヴラスカ" type="プレインズウォーカー ― ヴラスカ" pt="5">[+1]：あなたの次のターンまで、クリーチャー１体が見えざる者、ヴラスカに戦闘ダメージを与えるたび、そのクリーチャーを破壊する。
 [-3]：土地でないパーマネント１つを対象とし、それを破壊する。
-[-7]：「このクリーチャーがプレイヤー１人に戦闘ダメージを与えるたび、そのプレイヤーはこのゲームに敗北する。」を持つ黒の1/1の暗殺者(Assassin)・クリーチャー・トークンを３体生成する。</card>
-    <card name="Waiting in the Weeds" jaName="草陰の待ち伏せ" type="ソーサリー">各プレイヤーは、自分がコントロールするアンタップ状態の森(Forest)１つにつき緑の1/1の猫(Cat)・クリーチャー・トークンを１体生成する。</card>
+[-7]：「このクリーチャーがプレイヤー１人に戦闘ダメージを与えるたび、そのプレイヤーはこのゲームに敗北する。」を持つ黒の1/1の暗殺者・クリーチャー・トークンを３体生成する。</card>
+    <card name="Waiting in the Weeds" jaName="草陰の待ち伏せ" type="ソーサリー">各プレイヤーは、自分がコントロールするアンタップ状態の森１つにつき緑の1/1の猫・クリーチャー・トークンを１体生成する。</card>
     <card name="Wake the Reflections" jaName="反射起こし" type="ソーサリー">居住を行う。（あなたがコントロールするクリーチャー・トークン１体のコピーであるトークンを１体生成する。）</card>
-    <card name="Wakedancer" jaName="覚醒舞い" type="クリーチャー ― 人間・シャーマン" pt="2/2">陰鬱 ― 覚醒舞いが戦場に出たとき、このターン、クリーチャーが死亡していた場合、黒の2/2のゾンビ(Zombie)・クリーチャー・トークンを１体生成する。</card>
-    <card name="Walker of the Grove" jaName="木立を歩むもの" type="クリーチャー ― エレメンタル" pt="7/7">木立を歩むものが戦場を離れたとき、緑の4/4のエレメンタル(Elemental)・クリーチャー・トークンを１体生成する。
+    <card name="Wakedancer" jaName="覚醒舞い" type="クリーチャー ― 人間・シャーマン" pt="2/2">陰鬱 ― 覚醒舞いが戦場に出たとき、このターン、クリーチャーが死亡していた場合、黒の2/2のゾンビ・クリーチャー・トークンを１体生成する。</card>
+    <card name="Walker of the Grove" jaName="木立を歩むもの" type="クリーチャー ― エレメンタル" pt="7/7">木立を歩むものが戦場を離れたとき、緑の4/4のエレメンタル・クリーチャー・トークンを１体生成する。
 想起(４)(緑)（あなたはこの呪文を、その想起コストを支払うことで唱えてもよい。そうした場合、戦場に出たときにこれを生け贄に捧げる。）</card>
     <card name="Wall of Kelp" jaName="海藻の壁" type="クリーチャー ― 植物・壁" pt="0/3">防衛（このクリーチャーは攻撃できない。）
-(青)(青),(Ｔ)：《ケルプ/Kelp》という名前の、防衛を持つ青の0/1の植物(Plant)・壁(Wall)・クリーチャー・トークンを１体生成する。</card>
-    <card name="Wand of the Elements" jaName="精霊のワンド" type="アーティファクト">(Ｔ),島(Island)を１つ生け贄に捧げる：飛行を持つ青の2/2のエレメンタル(Elemental)・クリーチャー・トークンを１体生成する。
-(Ｔ),山(Mountain)を１つ生け贄に捧げる：赤の3/3のエレメンタル・クリーチャー・トークンを１体生成する。</card>
+(青)(青),(Ｔ)：《ケルプ/Kelp》という名前の、防衛を持つ青の0/1の植物・壁・クリーチャー・トークンを１体生成する。</card>
+    <card name="Wand of the Elements" jaName="精霊のワンド" type="アーティファクト">(Ｔ),島を１つ生け贄に捧げる：飛行を持つ青の2/2のエレメンタル・クリーチャー・トークンを１体生成する。
+(Ｔ),山を１つ生け贄に捧げる：赤の3/3のエレメンタル・クリーチャー・トークンを１体生成する。</card>
     <card name="Warbreak Trumpeter" jaName="開戦のラッパ吹き" type="クリーチャー ― ゴブリン" pt="1/1">変異(Ｘ)(Ｘ)(赤)（あなたはこのカードを、(３)で2/2クリーチャーとして裏向きに唱えてもよい。これの変異コストで、これをいつでも表向きにしてもよい。）
-開戦のラッパ吹きが表向きになったとき、赤の1/1のゴブリン(Goblin)・クリーチャー・トークンをＸ体生成する。</card>
+開戦のラッパ吹きが表向きになったとき、赤の1/1のゴブリン・クリーチャー・トークンをＸ体生成する。</card>
     <card name="Warchief Giant" jaName="戦長の巨人" type="クリーチャー ― 巨人・戦士" pt="5/3">速攻
 無尽（このクリーチャーが攻撃するたび、このクリーチャーのコピーであるトークンを、防御プレイヤー以外の対戦相手１人につき１体、タップ状態でそのプレイヤーまたはそのプレイヤーがコントロールしているプレインズウォーカーを攻撃している状態で生成してもよい。戦闘終了時に、それらのトークンを追放する。）</card>
     <card name="Warping Wail" jaName="歪める嘆き" type="インスタント">（(◇)は無色マナを表す。）
 以下から１つを選ぶ。
 ・パワーかタフネスが１以下のクリーチャー１体を対象とし、それを追放する。
-・ソーサリー呪文１つを対象とし、それを打ち消す。
-・無色の1/1のエルドラージ(Eldrazi)・末裔(Scion)・クリーチャー・トークンを１体生成する。それは「このクリーチャーを生け贄に捧げる：あなたのマナ・プールに(◇)を加える。」を持つ。</card>
-    <card name="Warren Weirding" jaName="巣穴の運命支配" type="部族ソーサリー ― ゴブリン">プレイヤー１人を対象とする。そのプレイヤーはクリーチャーを１体生け贄に捧げる。これによりゴブリン(Goblin)が生け贄に捧げられた場合、そのプレイヤーは黒の1/1のゴブリン・ならず者(Rogue)・クリーチャー・トークンを２体生成する。ターン終了時まで、それらのトークンは速攻を得る。</card>
-    <card name="Waste Not" jaName="無駄省き" type="エンチャント">対戦相手１人がクリーチャー・カードを１枚捨てるたび、黒の2/2のゾンビ(Zombie)・クリーチャー・トークンを１体生成する。
+・ソーサリー・呪文１つを対象とし、それを打ち消す。
+・無色の1/1のエルドラージ・末裔・クリーチャー・トークンを１体生成する。それは「このクリーチャーを生け贄に捧げる：あなたのマナ・プールに(◇)を加える。」を持つ。</card>
+    <card name="Warren Weirding" jaName="巣穴の運命支配" type="部族ソーサリー ― ゴブリン">プレイヤー１人を対象とする。そのプレイヤーはクリーチャーを１体生け贄に捧げる。これによりゴブリンが生け贄に捧げられた場合、そのプレイヤーは黒の1/1のゴブリン・ならず者・クリーチャー・トークンを２体生成する。ターン終了時まで、それらのトークンは速攻を得る。</card>
+    <card name="Waste Not" jaName="無駄省き" type="エンチャント">対戦相手１人がクリーチャー・カードを１枚捨てるたび、黒の2/2のゾンビ・クリーチャー・トークンを１体生成する。
 対戦相手１人が土地・カードを１枚捨てるたび、あなたのマナ・プールに(黒)(黒)を加える。
 対戦相手１人がクリーチャーでも土地でもないカードを１枚捨てるたび、カードを１枚引く。</card>
     <card name="Wayfaring Temple" jaName="旅する寺院" type="クリーチャー ― エレメンタル" pt="*/*">旅する寺院のパワーとタフネスはそれぞれ、あなたがコントロールするクリーチャーの数に等しい。
 旅する寺院がプレイヤー１人に戦闘ダメージを与えるたび、居住を行う。（あなたがコントロールするクリーチャー・トークン１体のコピーであるトークンを１体生成する。）</card>
-    <card name="Waylay" jaName="要撃" type="インスタント">白の2/2の騎士(Knight)・クリーチャー・トークンを３体生成する。次のクリンナップ・ステップの開始時に、それらを追放する。</card>
-    <card name="Weirding Shaman" jaName="運命支配のシャーマン" type="クリーチャー ― ゴブリン・シャーマン" pt="2/1">(３)(黒),ゴブリン(Goblin)を１つ生け贄に捧げる：黒の1/1のゴブリン・ならず者(Rogue)・クリーチャー・トークンを２体生成する。</card>
+    <card name="Waylay" jaName="要撃" type="インスタント">白の2/2の騎士・クリーチャー・トークンを３体生成する。次のクリンナップ・ステップの開始時に、それらを追放する。</card>
+    <card name="Weirding Shaman" jaName="運命支配のシャーマン" type="クリーチャー ― ゴブリン・シャーマン" pt="2/1">(３)(黒),ゴブリンを１つ生け贄に捧げる：黒の1/1のゴブリン・ならず者・クリーチャー・トークンを２体生成する。</card>
     <card name="Weirding Wood" jaName="奇妙な森" type="エンチャント ― オーラ">エンチャント（土地）
-奇妙な森が戦場に出たとき、調査を行う。（「(２),このアーティファクトを生け贄に捧げる：カードを１枚引く。」を持つ無色の手掛かり(Clue)アーティファクト・トークンを１つ生成する。）
+奇妙な森が戦場に出たとき、調査を行う。（「(２),このアーティファクトを生け贄に捧げる：カードを１枚引く。」を持つ無色の手掛かり・アーティファクト・トークンを１つ生成する。）
 エンチャントされている土地は「(Ｔ)：あなたのマナ・プールに、好きな色１色のマナ２点を加える。」を持つ。</card>
     <card name="Westvale Abbey" jaName="ウェストヴェイルの修道院" type="土地" related="Ormendahl, Profane Prince">(Ｔ)：あなたのマナ・プールに(◇)を加える。
-(５),(Ｔ),ライフを１点支払う：白であり黒である1/1の人間(Human)・クレリック(Cleric)・クリーチャー・トークンを１体生成する。
+(５),(Ｔ),ライフを１点支払う：白であり黒である1/1の人間・クレリック・クリーチャー・トークンを１体生成する。
 (５),(Ｔ),クリーチャー５体を生け贄に捧げる：ウェストヴェイルの修道院を変身させ、その後これをアンタップする。</card>
     <card name="Westvale Cult Leader" jaName="ウェストヴェイル教団の指導者" type="クリーチャー ― 人間・クレリック" pt="*/*" related="Hanweir Militia Captain">ウェストヴェイル教団の指導者のパワーとタフネスはそれぞれ、あなたがコントロールするクリーチャーの総数に等しい。
-あなたの終了ステップの開始時に、白であり黒である1/1の人間(Human)・クレリック(Cleric)・クリーチャー・トークンを１体生成する。</card>
+あなたの終了ステップの開始時に、白であり黒である1/1の人間・クレリック・クリーチャー・トークンを１体生成する。</card>
     <card name="Wharf Infiltrator" jaName="波止場の潜入者" type="クリーチャー ― 人間・ホラー" pt="1/1">潜伏（このクリーチャーは、これより大きなパワーを持つクリーチャーによってはブロックされない。）
 波止場の潜入者がプレイヤー１人に戦闘ダメージを与えるたび、あなたはカードを１枚引いてもよい。そうしたなら、カード１枚を捨てる。
-あなたがクリーチャー・カードを１枚捨てるたび、あなたは(２)を支払ってもよい。そうしたなら、無色の3/2のエルドラージ(Eldrazi)・ホラー(Horror)・クリーチャー・トークンを１体生成する。</card>
-    <card name="Whirler Rogue" jaName="つむじ風のならず者" type="クリーチャー ― 人間・ならず者・工匠" pt="2/2">つむじ風のならず者が戦場に出たとき、飛行を持つ無色の1/1の飛行機械(Thopter)・アーティファクト・クリーチャー・トークンを２体生成する。
+あなたがクリーチャー・カードを１枚捨てるたび、あなたは(２)を支払ってもよい。そうしたなら、無色の3/2のエルドラージ・ホラー・クリーチャー・トークンを１体生成する。</card>
+    <card name="Whirler Rogue" jaName="つむじ風のならず者" type="クリーチャー ― 人間・ならず者・工匠" pt="2/2">つむじ風のならず者が戦場に出たとき、飛行を持つ無色の1/1の飛行機械・アーティファクト・クリーチャー・トークンを２体生成する。
 あなたがコントロールするアンタップ状態のアーティファクトを２つタップする：クリーチャー１体を対象とする。このターン、それはブロックされない。</card>
-    <card name="White Sun's Zenith" jaName="白の太陽の頂点" type="インスタント">白の2/2の猫(Cat)・クリーチャー・トークンをＸ体生成する。白の太陽の頂点をオーナーのライブラリーに加えて切り直す。</card>
-    <card name="Wing Splicer" jaName="翼の接合者" type="クリーチャー ― 人間・工匠" pt="1/1">翼の接合者が戦場に出たとき、無色の3/3のゴーレム(Golem)・アーティファクト・クリーチャー・トークンを１体生成する。
+    <card name="White Sun's Zenith" jaName="白の太陽の頂点" type="インスタント">白の2/2の猫・クリーチャー・トークンをＸ体生成する。白の太陽の頂点をオーナーのライブラリーに加えて切り直す。</card>
+    <card name="Wing Splicer" jaName="翼の接合者" type="クリーチャー ― 人間・工匠" pt="1/1">翼の接合者が戦場に出たとき、無色の3/3のゴーレム・アーティファクト・クリーチャー・トークンを１体生成する。
 あなたがコントロールするゴーレム・クリーチャーは飛行を持つ。</card>
     <card name="Wingmate Roc" jaName="風番いのロック" type="クリーチャー ― 鳥" pt="3/4">飛行
-強襲 ― 風番いのロックが戦場に出たとき、このターンにあなたがクリーチャーで攻撃していた場合、飛行を持つ白の3/4の鳥(Bird)・クリーチャー・トークンを１体生成する。
+強襲 ― 風番いのロックが戦場に出たとき、このターンにあなたがクリーチャーで攻撃していた場合、飛行を持つ白の3/4の鳥・クリーチャー・トークンを１体生成する。
 風番いのロックが攻撃するたび、あなたは攻撃クリーチャー１体につき１点のライフを得る。</card>
-    <card name="Wirefly Hive" jaName="針金バエの巣" type="アーティファクト">(３),(Ｔ)：コインを１枚投げる。あなたがコイン投げに勝った場合、《針金バエ/Wirefly》という名前の、飛行を持つ無色の2/2の昆虫(Insect)・アーティファクト・クリーチャー・トークンを１体生成する。あなたがコイン投げに負けた場合、《針金バエ/Wirefly》という名前のすべてのパーマネントを破壊する。</card>
-    <card name="Wirewood Hivemaster" jaName="ワイアウッドの養虫人" type="クリーチャー ― エルフ" pt="1/1">他にトークンでないエルフ(Elf)が戦場に出るたび、緑の1/1の昆虫(Insect)・クリーチャー・トークンを１体生成してもよい。</card>
-    <card name="Wolf-Skull Shaman" jaName="狼骨のシャーマン" type="クリーチャー ― エルフ・シャーマン" pt="2/2">族系 ― あなたのアップキープの開始時に、あなたはあなたのライブラリーの一番上のカードを見てもよい。それが狼骨のシャーマンと共通のクリーチャー・タイプを持つ場合、あなたはそれを公開してもよい。そうした場合、緑の2/2の狼(Wolf)・クリーチャー・トークンを１体生成する。</card>
+    <card name="Wirefly Hive" jaName="針金バエの巣" type="アーティファクト">(３),(Ｔ)：コインを１枚投げる。あなたがコイン投げに勝った場合、《針金バエ/Wirefly》という名前の、飛行を持つ無色の2/2の昆虫・アーティファクト・クリーチャー・トークンを１体生成する。あなたがコイン投げに負けた場合、《針金バエ/Wirefly》という名前のすべてのパーマネントを破壊する。</card>
+    <card name="Wirewood Hivemaster" jaName="ワイアウッドの養虫人" type="クリーチャー ― エルフ" pt="1/1">他にトークンでないエルフが戦場に出るたび、緑の1/1の昆虫・クリーチャー・トークンを１体生成してもよい。</card>
+    <card name="Wolf-Skull Shaman" jaName="狼骨のシャーマン" type="クリーチャー ― エルフ・シャーマン" pt="2/2">族系 ― あなたのアップキープの開始時に、あなたはあなたのライブラリーの一番上のカードを見てもよい。それが狼骨のシャーマンと共通のクリーチャー・タイプを持つ場合、あなたはそれを公開してもよい。そうした場合、緑の2/2の狼・クリーチャー・トークンを１体生成する。</card>
     <card name="Wolfbriar Elemental" jaName="狼茨の精霊" type="クリーチャー ― エレメンタル" pt="4/4">多重キッカー(緑)（あなたがこの呪文を唱えるに際し、あなたは追加の(緑)を望む回数支払ってもよい。）
-狼茨の精霊が戦場に出たとき、それがキッカーされている１回につき緑の2/2の狼(Wolf)・クリーチャー・トークンを１体生成する。</card>
-    <card name="Wolfcaller's Howl" jaName="狼呼びの雄叫び" type="エンチャント">あなたのアップキープの開始時に、緑の2/2の狼(Wolf)・クリーチャー・トークンをＸ体生成する。Ｘは、手札を４枚以上持つ対戦相手の総数である。</card>
+狼茨の精霊が戦場に出たとき、それがキッカーされている１回につき緑の2/2の狼・クリーチャー・トークンを１体生成する。</card>
+    <card name="Wolfcaller's Howl" jaName="狼呼びの雄叫び" type="エンチャント">あなたのアップキープの開始時に、緑の2/2の狼・クリーチャー・トークンをＸ体生成する。Ｘは、手札を４枚以上持つ対戦相手の総数である。</card>
     <card name="Wolfkin Bond" jaName="狼族の絆" type="エンチャント ― オーラ">エンチャント（クリーチャー）
-狼族の絆が戦場に出たとき、緑の2/2の狼(Wolf)・クリーチャー・トークンを１体生成する。
+狼族の絆が戦場に出たとき、緑の2/2の狼・クリーチャー・トークンを１体生成する。
 エンチャントされているクリーチャーは+2/+2の修整を受ける。</card>
-    <card name="Words of Wilding" jaName="野生の言葉" type="エンチャント">(１)：このターン、次にあなたがカードを引く代わりに、緑の2/2の熊(Bear)・クリーチャー・トークンを１体生成する。</card>
+    <card name="Words of Wilding" jaName="野生の言葉" type="エンチャント">(１)：このターン、次にあなたがカードを引く代わりに、緑の2/2の熊・クリーチャー・トークンを１体生成する。</card>
     <card name="Worldspine Wurm" jaName="世界棘のワーム" type="クリーチャー ― ワーム" pt="15/15">トランプル
-世界棘のワームが死亡したとき、トランプルを持つ緑の5/5のワーム(Wurm)・クリーチャー・トークンを３体生成する。
+世界棘のワームが死亡したとき、トランプルを持つ緑の5/5のワーム・クリーチャー・トークンを３体生成する。
 世界棘のワームがいずれかの領域からいずれかの墓地に置かれたとき、これをオーナーのライブラリーに加えて切り直す。</card>
-    <card name="Worm Harvest" jaName="蟲の収穫" type="ソーサリー">あなたの墓地にある土地・カード１枚につき、黒であり緑である1/1の蟲(Worm)・クリーチャー・トークンを１体生成する。
+    <card name="Worm Harvest" jaName="蟲の収穫" type="ソーサリー">あなたの墓地にある土地・カード１枚につき、黒であり緑である1/1の蟲・クリーチャー・トークンを１体生成する。
 回顧（あなたはこのカードを、それの他のコストの支払いに加えて土地・カードを１枚捨てることで、このカードをあなたの墓地から唱えてもよい。）</card>
-    <card name="Wort, the Raidmother" jaName="略奪の母、汁婆" type="伝説のクリーチャー ― ゴブリン・シャーマン" pt="3/3">略奪の母、汁婆が戦場に出たとき、赤であり緑である1/1のゴブリン(Goblin)・戦士(Warrior)・クリーチャー・トークンを２体生成する。
-あなたが唱える赤か緑の各インスタント呪文か各ソーサリー呪文は共謀を持つ。（あなたがその呪文を唱えるに際し、あなたはあなたがコントロールする、その呪文と共通の色を持つアンタップ状態のクリーチャーを２体タップしてもよい。そうした場合、その呪文をコピーし、あなたはそのコピーの新たな対象を選んでもよい。）</card>
-    <card name="Wren's Run Packmaster" jaName="レンの地の群れ使い" type="クリーチャー ― エルフ・戦士" pt="5/5">覇権（エルフ(Elf)）（このクリーチャーが戦場に出たとき、あなたがコントロールする他のエルフ１つを追放しないかぎり、これを生け贄に捧げる。このクリーチャーが戦場を離れたとき、そのカードは戦場に戻る。）
-(２)(緑)：緑の2/2の狼(Wolf)・クリーチャー・トークンを１体生成する。
+    <card name="Wort, the Raidmother" jaName="略奪の母、汁婆" type="伝説のクリーチャー ― ゴブリン・シャーマン" pt="3/3">略奪の母、汁婆が戦場に出たとき、赤であり緑である1/1のゴブリン・戦士・クリーチャー・トークンを２体生成する。
+あなたが唱える赤か緑の各インスタント・呪文か各ソーサリー・呪文は共謀を持つ。（あなたがその呪文を唱えるに際し、あなたはあなたがコントロールする、その呪文と共通の色を持つアンタップ状態のクリーチャーを２体タップしてもよい。そうした場合、その呪文をコピーし、あなたはそのコピーの新たな対象を選んでもよい。）</card>
+    <card name="Wren's Run Packmaster" jaName="レンの地の群れ使い" type="クリーチャー ― エルフ・戦士" pt="5/5">覇権（エルフ）（このクリーチャーが戦場に出たとき、あなたがコントロールする他のエルフ１つを追放しないかぎり、これを生け贄に捧げる。このクリーチャーが戦場を離れたとき、そのカードは戦場に戻る。）
+(２)(緑)：緑の2/2の狼・クリーチャー・トークンを１体生成する。
 あなたがコントロールする狼は接死を持つ。</card>
     <card name="Wurmcalling" jaName="ワーム呼び" type="ソーサリー">バイバック(２)(緑)（あなたがこの呪文を唱えるに際し、あなたは追加の(２)(緑)を支払ってもよい。そうした場合、その解決に際し、このカードをあなたの手札に加える。）
-緑のX/Xのワーム(Wurm)・クリーチャー・トークンを１体生成する。</card>
+緑のX/Xのワーム・クリーチャー・トークンを１体生成する。</card>
     <card name="Wurmcoil Engine" jaName="ワームとぐろエンジン" type="アーティファクト・クリーチャー ― ワーム" pt="6/6">接死、絆魂
-ワームとぐろエンジンが死亡したとき、接死を持つ無色の3/3のワーム(Wurm)・アーティファクト・クリーチャー・トークンを１体と、絆魂を持つ無色の3/3のワーム・アーティファクト・クリーチャー・トークンを１体生成する。</card>
+ワームとぐろエンジンが死亡したとき、接死を持つ無色の3/3のワーム・アーティファクト・クリーチャー・トークンを１体と、絆魂を持つ無色の3/3のワーム・アーティファクト・クリーチャー・トークンを１体生成する。</card>
     <card name="Wurmweaver Coil" jaName="ワーム編みのとぐろ" type="エンチャント ― オーラ">エンチャント（緑のクリーチャー）
 エンチャントされているクリーチャーは+6/+6の修整を受ける。
-(緑)(緑)(緑),ワーム編みのとぐろを生け贄に捧げる：緑の6/6のワーム(Wurm)・クリーチャー・トークンを１体生成する。</card>
-    <card name="Xathrid Necromancer" jaName="ザスリッドの屍術師" type="クリーチャー ― 人間・ウィザード" pt="2/2">ザスリッドの屍術師かあなたがコントロールする他の人間(Human)クリーチャーが１体死亡するたび、黒の2/2のゾンビ(Zombie)・クリーチャー・トークンを１体タップ状態で生成する。</card>
+(緑)(緑)(緑),ワーム編みのとぐろを生け贄に捧げる：緑の6/6のワーム・クリーチャー・トークンを１体生成する。</card>
+    <card name="Xathrid Necromancer" jaName="ザスリッドの屍術師" type="クリーチャー ― 人間・ウィザード" pt="2/2">ザスリッドの屍術師かあなたがコントロールする他の人間クリーチャーが１体死亡するたび、黒の2/2のゾンビ・クリーチャー・トークンを１体タップ状態で生成する。</card>
     <card name="Xenagos, the Reveler" jaName="歓楽者ゼナゴス" type="プレインズウォーカー ― ゼナゴス" pt="3">[+1]：あなたのマナ・プールに、(赤)および(緑)の好きな組み合わせのマナＸ点を加える。Ｘは、あなたがコントロールするクリーチャーの総数である。
-[0]：速攻を持つ赤であり緑である2/2のサテュロス(Satyr)・クリーチャー・トークンを１体生成する。
+[0]：速攻を持つ赤であり緑である2/2のサテュロス・クリーチャー・トークンを１体生成する。
 [-6]：あなたのライブラリーの一番上から７枚のカードを追放する。あなたはそれらのカードの中から望む枚数のクリーチャー・カードおよび土地・カードを戦場に出してもよい。</card>
-    <card name="Young Pyromancer" jaName="若き紅蓮術士" type="クリーチャー ― 人間・シャーマン" pt="2/1">あなたがインスタント・呪文かソーサリー・呪文を１つ唱えるたび、赤の1/1のエレメンタル(Elemental)・クリーチャー・トークンを１体生成する。</card>
-    <card name="Zektar Shrine Expedition" jaName="ゼクター祭殿の探検" type="エンチャント">上陸 ― 土地が１つあなたのコントロール下で戦場に出るたび、ゼクター祭殿の探検の上に探索(quest)カウンターを１個置く。
-ゼクター祭殿の探検から探索カウンターを３個取り除くとともに、それを生け贄に捧げる：トランプルと速攻を持つ赤の7/1のエレメンタル(Elemental)・クリーチャー・トークンを１体生成する。次の終了ステップの開始時に、それを追放する。</card>
-    <card name="Zendikar's Roil" jaName="ゼンディカーの乱動" type="エンチャント">土地が１つあなたのコントロール下で戦場に出るたび、緑の2/2のエレメンタル(Elemental)・クリーチャー・トークンを１体生成する。</card>
-    <card name="Zombie Infestation" jaName="ゾンビの横行" type="エンチャント">カードを２枚捨てる：黒の2/2のゾンビ(Zombie)・クリーチャー・トークンを１体生成する。</card>
+    <card name="Young Pyromancer" jaName="若き紅蓮術士" type="クリーチャー ― 人間・シャーマン" pt="2/1">あなたがインスタント・呪文かソーサリー・呪文を１つ唱えるたび、赤の1/1のエレメンタル・クリーチャー・トークンを１体生成する。</card>
+    <card name="Zektar Shrine Expedition" jaName="ゼクター祭殿の探検" type="エンチャント">上陸 ― 土地が１つあなたのコントロール下で戦場に出るたび、ゼクター祭殿の探検の上に探索カウンターを１個置く。
+ゼクター祭殿の探検から探索カウンターを３個取り除くとともに、それを生け贄に捧げる：トランプルと速攻を持つ赤の7/1のエレメンタル・クリーチャー・トークンを１体生成する。次の終了ステップの開始時に、それを追放する。</card>
+    <card name="Zendikar's Roil" jaName="ゼンディカーの乱動" type="エンチャント">土地が１つあなたのコントロール下で戦場に出るたび、緑の2/2のエレメンタル・クリーチャー・トークンを１体生成する。</card>
+    <card name="Zombie Infestation" jaName="ゾンビの横行" type="エンチャント">カードを２枚捨てる：黒の2/2のゾンビ・クリーチャー・トークンを１体生成する。</card>
   </replace>
   <remove>
     <card name="1996 World Champion" />
