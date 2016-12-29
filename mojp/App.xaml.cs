@@ -167,5 +167,12 @@ namespace Mojp
 				Settings.Default.UpgradeRequired = false;
 			}
 		}
+
+		protected override void OnExit(ExitEventArgs e)
+		{
+			Settings.Default.Save();
+
+			base.OnExit(e);
+		}
 	}
 }

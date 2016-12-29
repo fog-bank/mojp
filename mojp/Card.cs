@@ -110,20 +110,11 @@ namespace Mojp
 				PT == other.PT && RelatedCardName == other.RelatedCardName && WikiLink == other.WikiLink;
 		}
 
-		public override bool Equals(object obj)
-		{
-			return Equals(obj as Card);
-		}
+		public override bool Equals(object obj) => Equals(obj as Card);
 
-		public override int GetHashCode()
-		{
-			return Name == null ? 0 : Name.GetHashCode();
-		}
+		public override int GetHashCode() => Name == null ? 0 : Name.GetHashCode();
 
-		public override string ToString()
-		{
-			return Name;
-		}
+		public override string ToString() => Name;
 
 		/// <summary>
 		/// 後で復元できるように XML ノードに変換します。
@@ -296,15 +287,15 @@ namespace Mojp
 
 			string wikilink = card.HasJapaneseName ? card.JapaneseName + "/" + card.Name : card.Name;
 
-			// AE 合字処理
+			// AE 合字処理 (Wiki は AE のままなので、リンクもそのようにする)
 			string processed = card.Name.Replace("AE", "Ae");
 			if (card.Name != processed)
 			{
-				card.WikiLink = wikilink;
 				card.Name = processed;
+				card.WikiLink = wikilink;
 			}
 
-			// 次元
+			// 次元 (次元カードのページ URL には接尾辞で " (次元カード)" がつく)
 			if (card.Type.StartsWith("次元"))
 			{
 				if (card.WikiLink == null)

@@ -23,7 +23,6 @@ namespace Mojp
 		protected override void OnClosing(CancelEventArgs e)
 		{
 			ViewModel.Release();
-			Settings.Default.Save();
 
 			base.OnClosing(e);
 		}
