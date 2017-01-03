@@ -72,6 +72,49 @@ namespace Mojp
 		{
 			var doc = XDocument.Load(file);
 
+			// カードの追加
+			foreach (var node in doc.Root.Element("add").Elements("card"))
+			{
+				var card = Card.FromXml(node);
+
+				if (cards.ContainsKey(card.Name))
+				{
+					Debug.WriteLine(card.Name + " には既に同名カードが存在します。");
+				}
+				else
+					cards.Add(card.Name, card);
+			}
+
+			// P/T だけ追加
+			foreach (var node in doc.Root.Element("add").Elements("pt"))
+			{
+				string name = (string)node.Attribute("name");
+
+				Card card;
+				if (cards.TryGetValue(name, out card))
+				{
+					Debug.WriteLineIf(card.PT != null, card.Name + " には既に P/T の情報があります。");
+					card.PT = (string)node.Attribute("pt");
+				}
+				else
+					Debug.WriteLine("P/T 情報の追加先となる " + name + " のカード情報がありません。");
+			}
+
+			// Wiki へのリンクだけ追加
+			foreach (var node in doc.Root.Element("add").Elements("wikilink"))
+			{
+				string name = (string)node.Attribute("name");
+
+				Card card;
+				if (cards.TryGetValue(name, out card))
+				{
+					Debug.WriteLineIf(card.WikiLink != null, card.Name + " には既に wiki へのリンク情報があります。");
+					card.WikiLink = (string)node.Attribute("wikilink");
+				}
+				else
+					Debug.WriteLine("リンク情報の追加先となる " + name + " のカード情報がありません。");
+			}
+
 			// カードデータの差し替え
 			var replacedNodes = new XElement("replace");
 			var identicalNodes = new XElement("identical");
@@ -95,46 +138,13 @@ namespace Mojp
 						cards[card.Name] = card;
 					}
 				}
+				else
+					Debug.WriteLine("置換先となる " + card.Name + " のカード情報がありません。");
 			}
 
 			var root = new XElement("mojp", replacedNodes, identicalNodes);
 			var result = new XDocument(new XDeclaration("1.0", "utf-8", "yes"), root);
 			result.Save("appendix_result.xml");
-
-			// カードの追加
-			foreach (var node in doc.Root.Element("add").Elements("card"))
-			{
-				var card = Card.FromXml(node);
-
-				if (cards.ContainsKey(card.Name))
-				{
-					Debug.WriteLineIf(!card.EqualsStrict(cards[card.Name]), card.Name + " には既に別種の同名カードが存在します。");
-					continue;
-				}
-				cards.Add(card.Name, card);
-			}
-
-			// P/T だけ追加
-			foreach (var node in doc.Root.Element("add").Elements("pt"))
-			{
-				Card card;
-				if (cards.TryGetValue((string)node.Attribute("name"), out card))
-				{
-					Debug.WriteLineIf(card.PT != null, card.Name + " には既に P/T の情報があります。");
-					card.PT = (string)node.Attribute("pt");
-				}
-			}
-
-			// Wiki へのリンクだけ追加
-			foreach (var node in doc.Root.Element("add").Elements("wikilink"))
-			{
-				Card card;
-				if (cards.TryGetValue((string)node.Attribute("name"), out card))
-				{
-					Debug.WriteLineIf(card.WikiLink != null, card.Name + " には既に wiki へのリンク情報があります。");
-					card.WikiLink = (string)node.Attribute("wikilink");
-				}
-			}
 
 			// カードの削除
 			foreach (var node in doc.Root.Elements("remove").Elements("card"))
@@ -151,7 +161,10 @@ namespace Mojp
 
 				Card card;
 				if (cards.TryGetValue(name, out card))
+				{
+					Debug.WriteLineIf(card.Name == card.JapaneseName, name + " には既に日本語名がありません。");
 					card.JapaneseName = card.Name;
+				}
 				else
 					Debug.WriteLine(name + " は既にカードリストに含まれていません。");
 			}

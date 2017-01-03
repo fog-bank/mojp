@@ -356,6 +356,7 @@
     <pt name="Aradara Express" pt="8/6" />
     <pt name="Ballista Charger" pt="6/6" />
     <pt name="Bomat Bazaar Barge" pt="5/5" />
+    <pt name="Consulate Dreadnought" pt="7/11" />
     <pt name="Cultivator's Caravan" pt="5/5" />
     <pt name="Demolition Stomper" pt="10/7" />
     <pt name="Fleetwheel Cruiser" pt="5/3" />
@@ -365,6 +366,7 @@
     <pt name="Sky Skiff" pt="2/3" />
     <pt name="Skysovereign, Consul Flagship" pt="6/5" />
     <pt name="Smuggler's Copter" pt="3/3" />
+    <pt name="Untethered Express" pt="4/4" />
     <!-- 分割カードのwikiページ -->
     <wikilink name="Stand" wikilink="抵抗+救難/Stand+Deliver" />
     <wikilink name="Deliver" wikilink="抵抗+救難/Stand+Deliver" />
