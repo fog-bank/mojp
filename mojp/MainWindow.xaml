@@ -15,21 +15,24 @@
 			<RowDefinition Height="Auto" />
 			<RowDefinition />
 		</Grid.RowDefinitions>
-		<TabControl Grid.RowSpan="2" FontFamily="{Binding FontFamily}" FontSize="{Binding FontSize}" HorizontalContentAlignment="Left"
+		<TabControl Grid.RowSpan="2" FontFamily="{Binding FontFamily}" FontSize="{Binding FontSize}"
+					BorderThickness="0,1,0,0" HorizontalContentAlignment="Left"
 					ItemsSource="{Binding Cards}" SelectedIndex="{Binding SelectedIndex}">
 			<TabControl.ItemContainerStyle>
 				<Style TargetType="TabItem">
 					<Style.Triggers>
 						<DataTrigger Binding="{Binding Name}" Value="{x:Null}">
-							<Setter Property="Width" Value="42" />
+							<Setter Property="Width" Value="46" />
 							<Setter Property="Visibility" Value="Hidden" />
 						</DataTrigger>
 					</Style.Triggers>
+					<Setter Property="Padding" Value="6,2,5,0" />
+					<Setter Property="MinHeight" Value="23" />
 				</Style>
 			</TabControl.ItemContainerStyle>
 			<TabControl.ItemTemplate>
 				<DataTemplate DataType="local:Card">
-					<TextBlock Padding="2" MinHeight="15" Text="{Binding JapaneseName}" ToolTip="{Binding FullName}" />
+					<TextBlock Text="{Binding JapaneseName}" ToolTip="{Binding FullName}" />
 				</DataTemplate>
 			</TabControl.ItemTemplate>
 			<TabControl.ContentTemplate>
