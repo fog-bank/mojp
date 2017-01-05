@@ -11,8 +11,15 @@ namespace Mojp
 	/// </summary>
 	public class Card : IEquatable<Card>
 	{
+		private string[] lines;
+
 		public Card()
+		{ }
+
+		public Card(string message)
 		{
+			Text = message;
+			lines = new[] { message };
 		}
 
 		/// <summary>
@@ -34,6 +41,20 @@ namespace Mojp
 		/// カードのテキストを取得または設定します。
 		/// </summary>
 		public string Text { get; set; }
+
+		/// <summary>
+		/// カードのテキストを行で分割したものを取得します。
+		/// </summary>
+		public string[] TextLines
+		{
+			get
+			{
+				if (lines == null)
+					lines = Text?.Split('\n');
+
+				return lines;
+			}
+		}
 
 		/// <summary>
 		/// カードの P/T を取得または設定します。
@@ -106,7 +127,7 @@ namespace Mojp
 		/// </summary>
 		public bool EqualsStrict(Card other)
 		{
-			return Equals(other) && JapaneseName == other.JapaneseName && Type == other.Type && Text == other.Text && 
+			return Equals(other) && JapaneseName == other.JapaneseName && Type == other.Type && Text == other.Text &&
 				PT == other.PT && RelatedCardName == other.RelatedCardName && WikiLink == other.WikiLink;
 		}
 
