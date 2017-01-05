@@ -275,7 +275,7 @@ namespace Mojp
 		/// </summary>
 		public void SetMessage(string text)
 		{
-			var card = new Card { Text = text };
+			var card = new Card(text);
 
 			if (Cards.Count > 0)
 			{

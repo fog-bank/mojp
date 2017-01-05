@@ -29,7 +29,7 @@
 			</TabControl.ItemContainerStyle>
 			<TabControl.ItemTemplate>
 				<DataTemplate DataType="local:Card">
-					<TextBlock Margin="2" MinHeight="15" Text="{Binding JapaneseName}" ToolTip="{Binding FullName}" />
+					<TextBlock Padding="2" MinHeight="15" Text="{Binding JapaneseName}" ToolTip="{Binding FullName}" />
 				</DataTemplate>
 			</TabControl.ItemTemplate>
 			<TabControl.ContentTemplate>
@@ -52,7 +52,13 @@
 							</TextBlock.Style>
 						</TextBlock>
 						<ScrollViewer Grid.Row="1" Padding="2" VerticalScrollBarVisibility="Auto">
-							<TextBlock Text="{Binding Text}" TextWrapping="Wrap" />
+							<ItemsControl ItemsSource="{Binding TextLines, Mode=OneTime}">
+								<ItemsControl.ItemTemplate>
+									<DataTemplate>
+										<TextBlock Margin="0,2" Text="{Binding}" TextWrapping="Wrap" />
+									</DataTemplate>
+								</ItemsControl.ItemTemplate>
+							</ItemsControl>
 						</ScrollViewer>
 						<TextBlock Grid.Row="2" Margin="2,2,2,0" Text="{Binding PT}" TextTrimming="CharacterEllipsis">
 							<TextBlock.Style>
