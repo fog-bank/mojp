@@ -362,6 +362,7 @@
     <pt name="Fleetwheel Cruiser" pt="5/3" />
     <pt name="Heart of Kiran" pt="4/4" />
     <pt name="Ovalchase Dragster" pt="6/1" />
+    <pt name="Peacewalker Colossus" pt="6/6" />
     <pt name="Renegade Freighter" pt="4/3" />
     <pt name="Sky Skiff" pt="2/3" />
     <pt name="Skysovereign, Consul Flagship" pt="6/5" />
@@ -468,6 +469,7 @@
 (Ｔ)：あなたのマナ・プールに(◇)(◇)を加える。このマナは、無色のエルドラージ・呪文を唱えるためか、無色のエルドラージの能力を起動するためにのみ使用できる。</card>
     <card name="Emeria Shepherd" jaName="エメリアの番人" type="クリーチャー ― 天使" pt="4/4">飛行
 上陸 ― 土地が１つあなたのコントロール下で戦場に出るたび、あなたの墓地から土地でないパーマネント・カード１枚を対象とする。あなたはそれをあなたの手札に戻してもよい。その土地が平地であるなら、あなたはその土地でないパーマネント・カードを代わりに戦場に戻してもよい。</card>
+    <card name="Entrapment Maneuver" jaName="偽計" type="インスタント">プレイヤー１人を対象とする。そのプレイヤーは攻撃クリーチャー１体を生け贄に捧げる。あなたは白の1/1の兵士・クリーチャー・トークンをＸ体生成する。Ｘは、そのクリーチャーのタフネスに等しい。</card>
     <card name="Midnight Oil" jaName="夜更かし" type="エンチャント">夜更かしは時刻カウンターが７個置かれた状態で戦場に出る。
 あなたのドロー・ステップの開始時に、あなたはカードを追加で１枚引き、夜更かしの上から時刻カウンターを２個取り除く。
 あなたの手札の上限は、夜更かしの上に置かれている時刻カウンターの数に等しい。
