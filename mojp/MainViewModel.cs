@@ -373,7 +373,7 @@ namespace Mojp
 						new PropertyCondition(AutomationElement.ClassNameProperty, "Window"),
 						new PropertyCondition(AutomationElement.NameProperty, "Preview")));
 			}
-			catch { }
+			catch { Debug.WriteLine("Preview Pane の取得に失敗しました。"); }
 
 			if (currentPrevWnd == null)
 			{
@@ -517,12 +517,12 @@ namespace Mojp
 			{
 				name = element?.Cached.Name;
 			}
-			catch { Debug.WriteLine("Exception in calling GetCurrentPropertyValue method."); }
+			catch { Debug.WriteLine("キャッシュされた Name プロパティ値の取得に失敗しました。"); }
 
 			if (name == null)
 				return string.Empty;
 
-			// 特殊文字を置き換える
+			// 特殊文字を置き換える (アキュート・アクセントつきの文字など)
 			var sb = new StringBuilder(name.Length + 1);
 			bool replaced = false;
 
@@ -531,15 +531,35 @@ namespace Mojp
 				switch (c)
 				{
 					// Æther Vial など
+					// カラデシュ発売時のオラクル更新でほとんどの Æ は Ae に置換された。ただし WHISPER や wiki では AE のまま
 					//case 'Æ':
 					//	sb.Append("AE");
 					//	replaced = true;
 					//	break;
 
-					// Márton Stromgald や Dandân など
+					// Márton Stromgald や Dandân や Déjà Vu など
 					case 'á':
 					case 'â':
+					case 'à':
 						sb.Append("a");
+						replaced = true;
+						break;
+
+					// Ifh-Bíff Efreet
+					case 'í':
+						sb.Append("i");
+						replaced = true;
+						break;
+
+					// Junún Efreet
+					case 'ú':
+						sb.Append("u");
+						replaced = true;
+						break;
+
+					// Séance など
+					case 'é':
+						sb.Append("e");
 						replaced = true;
 						break;
 
