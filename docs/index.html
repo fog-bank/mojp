@@ -7,7 +7,24 @@
   <meta name="keywords" content="mtg,mo,日本語,カードテキスト,表示" />
   <link rel="stylesheet" type="text/css" href="style.css" />
   <script type="application/javascript" src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
-  <script type="text/javascript" src="script.js"></script>
+  <script>
+"use strict";
+
+$(function () {
+    var nav = $("#menu");
+    var navTop = nav.offset().top;
+
+    $(window).scroll(function (e) {
+        var winTop = $(this).scrollTop();
+
+        if (winTop >= navTop) {
+            nav.addClass("fixed");
+        } else if (winTop <= navTop) {
+            nav.removeClass("fixed");
+        }
+    });
+});
+  </script>
 </head>
 <body>
   <h1 id="top">mojp</h1>
