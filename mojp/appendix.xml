@@ -20,6 +20,7 @@
 終了ステップの開始時に、このクリーチャーを生け贄に捧げる。</card>
     <card name="Marit Lage" jaName="マリット・レイジ" type="トークン・伝説のクリーチャー — アバター" pt="20/20" related="Dark Depths">飛行、破壊不能</card>
     <card name="Minor Demon" jaName="マイナー・デーモン" type="トークン・クリーチャー ― デーモン" pt="1/1" related="Boris Devilboon"></card>
+    <card name="Ragavan" jaName="ラガバン" type="トークン・伝説のクリーチャー — 猿" pt="2/1" related="Kari Zev, Skyship Raider"></card>
     <card name="Stangg Twin" jaName="スタングの双子" type="トークン・伝説のクリーチャー ― 人間・戦士" pt="3/4" related="Stangg"></card>
     <card name="Tombspawn" jaName="屍鬼" type="トークン・クリーチャー ― ゾンビ" pt="2/2" related="Tombstone Stairwell">速攻</card>
     <card name="Tuktuk the Returned" jaName="復活のタクタク" type="トークン・伝説のアーティファクト・クリーチャー ― ゴブリン・ゴーレム" pt="5/5" related="Tuktuk the Explorer"></card>
@@ -353,14 +354,18 @@
     <card name="Tember City" jaName="Tember City" type="次元 ― キンシャラ" wikilink="Tember City (次元カード)">プレイヤーがマナを引き出す目的で土地を１つタップするたび、Tember Cityはそのプレイヤーに１点のダメージを与える。
 あなたがカオス・シンボルを出すたび、他の各プレイヤーは土地でないパーマネントを１つ生け贄に捧げる。</card>
     <!-- 機体のP/T -->
+    <pt name="Aethersphere Harvester" pt="3/5" />
     <pt name="Aradara Express" pt="8/6" />
     <pt name="Ballista Charger" pt="6/6" />
     <pt name="Bomat Bazaar Barge" pt="5/5" />
     <pt name="Consulate Dreadnought" pt="7/11" />
     <pt name="Cultivator's Caravan" pt="5/5" />
+    <pt name="Daredevil Dragster" pt="4/4" />
     <pt name="Demolition Stomper" pt="10/7" />
     <pt name="Fleetwheel Cruiser" pt="5/3" />
     <pt name="Heart of Kiran" pt="4/4" />
+    <pt name="Irontread Crusher" pt="6/6" />
+    <pt name="Mobile Garrison" pt="3/4" />
     <pt name="Ovalchase Dragster" pt="6/1" />
     <pt name="Peacewalker Colossus" pt="6/6" />
     <pt name="Renegade Freighter" pt="4/3" />
