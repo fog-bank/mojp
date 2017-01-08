@@ -32,7 +32,7 @@
 			</TabControl.ItemContainerStyle>
 			<TabControl.ItemTemplate>
 				<DataTemplate DataType="local:Card">
-					<TextBlock Text="{Binding JapaneseName}" ToolTip="{Binding FullName}" />
+					<TextBlock Text="{Binding JapaneseName, Mode=OneTime}" ToolTip="{Binding FullName, Mode=OneTime}" />
 				</DataTemplate>
 			</TabControl.ItemTemplate>
 			<TabControl.ContentTemplate>
@@ -43,7 +43,7 @@
 							<RowDefinition />
 							<RowDefinition Height="Auto" />
 						</Grid.RowDefinitions>
-						<TextBlock Margin="2" Text="{Binding Type}" ToolTip="{Binding Type}" TextTrimming="CharacterEllipsis">
+						<TextBlock Margin="2" Text="{Binding Type, Mode=OneTime}" ToolTip="{Binding Type, Mode=OneTime}" TextTrimming="CharacterEllipsis">
 							<TextBlock.Style>
 								<Style TargetType="TextBlock">
 									<Style.Triggers>
@@ -63,7 +63,7 @@
 								</ItemsControl.ItemTemplate>
 							</ItemsControl>
 						</ScrollViewer>
-						<TextBlock Grid.Row="2" Margin="2,2,2,0" Text="{Binding PT}" TextTrimming="CharacterEllipsis">
+						<TextBlock Grid.Row="2" Margin="2,2,2,0" Text="{Binding PT, Mode=OneTime}" TextTrimming="CharacterEllipsis">
 							<TextBlock.Style>
 								<Style TargetType="TextBlock">
 									<Style.Triggers>
