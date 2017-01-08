@@ -7,12 +7,9 @@ using System.Windows;
 // アセンブリに関連付けられている情報を変更するには、
 // これらの属性値を変更してください。
 [assembly: AssemblyTitle("MTGO Japanese Card Text Preview")]
-[assembly: AssemblyDescription("")]
-[assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("co3366353")]
 [assembly: AssemblyProduct("mojp")]
-[assembly: AssemblyCopyright("Copyright © 2016 fog-bank. Some rights reserved.")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCopyright("Copyright © 2017 fog-bank. Some rights reserved.")]
 [assembly: NeutralResourcesLanguage("ja-JP")]
 
 // Icon 1: https://www.iconfinder.com/icons/6000/book_dictionary_learn_school_translate_icon#size=128
@@ -55,4 +52,4 @@ using System.Windows;
 // 既定値にすることができます:
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.3.0.0")]
-[assembly: AssemblyFileVersion("1.3.20105.4")]
+[assembly: AssemblyFileVersion("1.3.20107.5")]
