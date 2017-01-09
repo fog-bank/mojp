@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls.Primitives;
 using System.Windows.Input;
 
 namespace Mojp
@@ -31,8 +32,9 @@ namespace Mojp
 		protected override void OnMouseMove(MouseEventArgs e)
 		{
 			base.OnMouseMove(e);
-
-			if (e.LeftButton == MouseButtonState.Pressed)
+			
+			// スクロールバーがある所はドラッグを開始しない
+			if (!e.Handled && e.LeftButton == MouseButtonState.Pressed && !(e.OriginalSource is Thumb))
 				DragMove();
 		}
 
