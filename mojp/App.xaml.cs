@@ -76,6 +76,7 @@ namespace Mojp
 			foreach (var node in doc.Root.Element("add").Elements("card"))
 			{
 				var card = Card.FromXml(node);
+				Debug.WriteLineIf(card.RelatedCardName != null && !cards.ContainsKey(card.RelatedCardName), card.Name + " の関連カードが見つかりません。");
 
 				if (cards.ContainsKey(card.Name))
 				{
@@ -122,6 +123,7 @@ namespace Mojp
 			foreach (var node in doc.Root.Element("replace").Elements("card"))
 			{
 				var card = Card.FromXml(node);
+				Debug.WriteLineIf(card.RelatedCardName != null && !cards.ContainsKey(card.RelatedCardName), card.Name + " の関連カードが見つかりません。");
 
 				if (cards.ContainsKey(card.Name))
 				{
@@ -140,6 +142,31 @@ namespace Mojp
 				}
 				else
 					Debug.WriteLine("置換先となる " + card.Name + " のカード情報がありません。");
+			}
+
+			// カードタイプだけ書き換え
+			foreach (var node in doc.Root.Element("replace").Elements("type"))
+			{
+				string name = (string)node.Attribute("name");
+
+				Card card;
+				if (cards.TryGetValue(name, out card))
+				{
+					string type = (string)node.Attribute("type");
+
+					if (card.Type == type)
+					{
+						identicalNodes.Add(node);
+						Debug.WriteLine(card.Name + " のカードタイプは置換する必要がありません。");
+					}
+					else
+					{
+						replacedNodes.Add(new XElement("type", new XAttribute("name", name), new XAttribute("type", cards[card.Name].Type)));
+						cards[card.Name].Type = type;
+					}
+				}
+				else
+					Debug.WriteLine("カードタイプの置換先となる " + name + " のカード情報がありません。");
 			}
 
 			var root = new XElement("mojp", replacedNodes, identicalNodes);
