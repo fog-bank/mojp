@@ -1,10 +1,10 @@
 # MTGO Japanese Card Text Preview
 [Magic: The Gathering Online](http://www.mtgo.com/) で表示されているカードに対応して、日本語テキストを自動で表示するアプリです。
 
-![Screenshot v1.2.1](https://github.com/fog-bank/mojp/blob/master/images/screenshot.png)
+![Screenshot v1.3.0](https://github.com/fog-bank/mojp/blob/master/images/screenshot.png)
 
 ## 必要条件
-.NET Framework 4.6（Windows 10 なら標準でインストール済みです）
+.NET Framework 4.6 以上（Windows 10 なら標準でインストール済みです）
 
 ## 使い方
 1. MO を起動し、COLLECTION 画面や対戦・トレード中に Preview Pane を表示するようにします（最小化しても OK）。
