@@ -207,6 +207,7 @@ namespace Mojp
 		{
 			var card = new Card();
 			var texts = new List<string>();
+			bool lvCard = false;
 			int emptyLines = 0;
 			Card prevCard = null;
 
@@ -227,6 +228,10 @@ namespace Mojp
 					prevCard = null;
 				}
 
+				// Lv 系カードかどうかチェック
+				if (line.StartsWith("Ｌｖアップ"))
+					lvCard = true;
+
 				// 各行をコロンで区切り、各項目を探す
 				var tokens = line.Split('：');
 
@@ -246,6 +251,7 @@ namespace Mojp
 							card = new Card();
 							card.Name = tokens[1].Trim();
 							texts.Clear();
+							lvCard = false;
 
 							if (prevCard != null)
 							{
@@ -272,8 +278,8 @@ namespace Mojp
 							// 両面 PW カードの裏の忠誠度が空白の場合があるので、そのときは設定しない
 							if (!string.IsNullOrWhiteSpace(tokens[1]))
 							{
-								// Lv アップクリーチャーは P/T 行が複数あるので、Lv アップ後の P/T は通常テキストに加える
-								if (card.PT == null)
+								// Lv アップクリーチャーは P/T 行が複数あるので、各 P/T は通常テキストに加える
+								if (card.PT == null && !lvCard)
 									card.PT = tokens[1];
 								else
 									texts.Add(tokens[1]);
