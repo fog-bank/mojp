@@ -19,13 +19,27 @@
   </ul>
   <div id="content">
     <h2>MO 日本語テキストプレビュー</h2>
-    <p><a href="http://www.mtgo.com/">Magic: The Gathering Online</a> で表示されているカードに対応して、日本語テキストを自動で表示するアプリです。</p>
-    <p><img src="images/screenshot.png" width="316" height="253" /></p>
+    <div>
+      <p><a href="http://www.mtgo.com/">Magic: The Gathering Online</a> で表示されているカードに対応して、日本語テキストを自動で表示するアプリです。</p>
+      <table>
+        <tr>
+          <td><img id="screenshot" src="images/screenshot.png" width="316" height="253" /></td>
+          <td>
+            <h4><span class="underline">主な機能</span></h4>
+            <ul>
+              <li>マウスカーソルの下にあるカードの日本語テキストを表示</li>
+              <li>カード名（日本語または英語）をコピー</li>
+              <li><a href="http://mtgwiki.com/">MTG Wiki</a> の解説ページをブラウザで開く</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </div>
     <h3 id="download">ダウンロード</h3>
     <div>
       <h4><span class="underline">最新版 v1.2.0（統率者 2016 対応）</span></h4>
       <p><a href="https://github.com/fog-bank/mojp/releases/download/v1.2.0/mojp.zip">ダウンロード</a>　<a href="https://github.com/fog-bank/mojp/releases/tag/v1.2.0">リリースノート</a></p>
-      <h4><span class="underline">開発版 v1.3.0 Beta（霊気紛争 対応）</span></h4>
+      <h4><span class="underline">開発版 v1.3.0 Beta（霊気紛争 仮対応）</span></h4>
       <p><a href="https://github.com/fog-bank/mojp/releases/download/v1.3.0-beta/mojp.zip">ダウンロード</a>　<a href="https://github.com/fog-bank/mojp/releases/tag/v1.3.0-beta">リリースノート</a></p>
     </div>
     <h3 id="howtouse">使い方</h3>
@@ -52,11 +66,20 @@
         <li>右クリックメニューからカード名をコピーしたり、MTG Wiki のカード評価ページに移動したりできます。</li>
         <li>右上の歯車アイコンのボタンから、このアプリで使用するフォントとそのサイズを設定できます。その他、ウィンドウサイズなどの設定は、%LocalAppData%\co3366353 フォルダに保存されます。</li>
       </ul>
-      <p>詳しい説明や既知の不具合については <a href="https://github.com/fog-bank/mojp/wiki">Wiki</a> をご確認ください。</p>
+      <p>詳しい説明や既知の不具合については <a href="https://github.com/fog-bank/mojp/wiki">GitHub 内の Wiki</a> をご確認ください。</p>
     </div>
     <h3 id="resource">リソース</h3>
     <div>
       <p>このアプリで表示する日本語テキストは、<a href="http://whisper.wisdom-guild.net/">WHISPER</a> の検索結果をテキストファイルに保存したものに基づいています。</p>
+      <h4><span class="underline">手動でカードデータを更新する方法</span></h4>
+      <ol>
+        <li>GitHub のリポジトリから <a href="https://github.com/fog-bank/mojp/raw/master/mojp/appendix.xml" type="text/xml">appendix.xml</a>（ファイル名固定）をダウンロードして、アプリケーション フォルダ（mojp.exe があるフォルダ）に保存しておく。</li>
+        <li>Wisdom Guild さんのカード検索で、 次元、現象、計略、策略以外のカードタイプにチェックを入れ、さらに一番下の出力形式をテキストにして検索する。</li>
+        <li>表示されたテキストを、エンコード形式を Shift-JIS にして保存する。</li>
+        <li>本アプリの設定画面を開き、一番下の開発用メニューから「検索結果テキストの読み込み」ボタンで保存したテキストを読み込む。</li>
+        <li>チェックマークが表示されたら完了。アプリケーション フォルダにある cards.xml が変更されているはずです。</li>
+      </ol>
+      <p>カードセットを絞らない場合、1.6 万件以上のカードがヒットし、テキストのサイズは 6 MB を超えますので、この方法で頻繁に検索しないでください。Wisdom Guild さんのサーバーに対し著しく負荷をかける行為は禁止されています。</p>
     </div>
     <h3 id="comment">コメント</h3>
     <div>
