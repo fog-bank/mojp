@@ -26,3 +26,12 @@
 ## リソース
 * このアプリで表示する日本語テキストは、[WHISPER](http://whisper.wisdom-guild.net/) の検索結果をテキストファイルに保存したものに基づいています。
 * アイコンの一部は Iconfinder \[[1](https://www.iconfinder.com/icons/6000/book_dictionary_learn_school_translate_icon#size=128), [2](https://www.iconfinder.com/icons/285680/camera_icon#size=16)\] を利用しています。
+
+### 手動でカードデータを更新する方法
+1. リポジトリから [appendix.xml](https://github.com/fog-bank/mojp/blob/master/mojp/appendix.xml) をダウンロードして、アプリケーション フォルダに保存しておく。
+2. Wisdom Guild さんのカード検索で、 次元、現象、計略、策略以外のカードタイプにチェックを入れ、さらに一番下の出力形式をテキストにして検索する。
+3. 表示されたテキストを、エンコード形式を Shift-JIS にして保存する。
+4. 本アプリの設定画面を開き、一番下の開発用メニューから「検索結果テキストの読み込み」ボタンで保存したテキストを読み込む。
+5. チェックマークが表示されたら完了。アプリケーション フォルダにある cards.xml が変更されているはずです。
+
+カードセットを絞らない場合、1.6 万件以上のカードがヒットし、テキストのサイズは 6 MB を超えますので、この方法で頻繁に検索しないでください。Wisdom Guild さんのサーバーに対し著しく負荷をかける行為は禁止されています。
