@@ -582,8 +582,6 @@
     <!-- 最新オラクル未対応：AE -->
     <card name="Aerathi Berserker" jaName="Aerathi Berserker" type="クリーチャー ― 人間・狂戦士" pt="2/4" wikilink="AErathi Berserker">ランページ３（このクリーチャーがブロックされるたび、それをブロックしている２体目以降のクリーチャー１体につき+3/+3の修整を受ける。）</card>
     <card name="Aether Burst" jaName="霊気の噴出" type="インスタント" wikilink="霊気の噴出/AEther Burst">クリーチャーをＸ体まで対象とし、それらをオーナーの手札に戻す。Ｘは、あなたが霊気の噴出を唱える際の、すべての墓地にある名前が《霊気の噴出/Aether Burst》であるカードの枚数に１を足した数である。</card>
-    <card name="Aether Searcher" jaName="霊気探知機" type="アーティファクト・クリーチャー ― 構築物" pt="6/4" wikilink="霊気探知機/AEther Searcher">霊気探知機をドラフトするに際し、これを公開する。あなたが次にドラフトしたカードを公開し、その名前を記録する。
-霊気探知機が戦場に出たとき、あなたの手札およびライブラリーから、《霊気探知機/Aether Searcher》という名前のカードをドラフトした際に記録した名前を持つカードを１枚探してもよい。あなたはそれをそのマナ・コストを支払うことなく唱えてもよい。あなたがこれによりあなたのライブラリーからカードを探した場合、それを切り直す。</card>
     <!-- 最新オラクル未対応：生成 -->
     <card name="Alive" jaName="生存" type="ソーサリー" related="Well" wikilink="生存+存命/Alive+Well">緑の3/3のケンタウルス・クリーチャー・トークンを１体生成する。
 融合（あなたはこのカードの片方の半分または両方の半分をあなたの手札から唱えてもよい。）</card>
@@ -870,6 +868,34 @@ Thallid Devourerから胞子カウンターを３個取り除く：緑の1/1の�
   </replace>
   <remove>
     <card name="1996 World Champion" />
+    <!-- ドラフト能力を持つカード -->
+    <card name="Aether Searcher" />
+    <card name="Agent of Acquisitions" />
+    <card name="Animus of Predation" />
+    <card name="Arcane Savant" />
+    <card name="Archdemon of Paliano" />
+    <card name="Caller of the Untamed" />
+    <card name="Canal Dredger" />
+    <card name="Cogwork Grinder" />
+    <card name="Cogwork Librarian" />
+    <card name="Cogwork Spy" />
+    <card name="Cogwork Tracker" />
+    <card name="Custodi Peacekeeper" />
+    <card name="Deal Broker" />
+    <card name="Garbage Fire" />
+    <card name="Illusionary Informant" />
+    <card name="Leovold's Operative" />
+    <card name="Lore Seeker" />
+    <card name="Lurking Automaton" />
+    <card name="Noble Banneret" />
+    <card name="Paliano Vanguard" />
+    <card name="Paliano, the High City" />
+    <card name="Pyretic Hunter" />
+    <card name="Regicide" />
+    <card name="Smuggler Captain" />
+    <card name="Spire Phantasm" />
+    <card name="Volatile Chimera" />
+    <card name="Whispergear Sneak" />
     <!-- ジョーク・エキスパンション -->
     <card name="_____" />
     <card name="&quot;Ach! Hans, Run!&quot;" />
