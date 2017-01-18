@@ -14,22 +14,26 @@
 		<Grid.RowDefinitions>
 			<RowDefinition Height="Auto" />
 			<RowDefinition />
+			<RowDefinition Height="Auto" />
 		</Grid.RowDefinitions>
-		<TabControl Grid.RowSpan="2" FontFamily="{Binding FontFamily}" FontSize="{Binding FontSize}" HorizontalContentAlignment="Left"
+		<TabControl Grid.RowSpan="2" FontFamily="{Binding FontFamily}" FontSize="{Binding FontSize}"
+					BorderThickness="0,1,0,0" HorizontalContentAlignment="Left"
 					ItemsSource="{Binding Cards}" SelectedIndex="{Binding SelectedIndex}">
 			<TabControl.ItemContainerStyle>
 				<Style TargetType="TabItem">
 					<Style.Triggers>
 						<DataTrigger Binding="{Binding Name}" Value="{x:Null}">
-							<Setter Property="Width" Value="42" />
+							<Setter Property="Width" Value="46" />
 							<Setter Property="Visibility" Value="Hidden" />
 						</DataTrigger>
 					</Style.Triggers>
+					<Setter Property="Padding" Value="6,2,5,0" />
+					<Setter Property="MinHeight" Value="23" />
 				</Style>
 			</TabControl.ItemContainerStyle>
 			<TabControl.ItemTemplate>
 				<DataTemplate DataType="local:Card">
-					<TextBlock Margin="2" MinHeight="15" Text="{Binding JapaneseName}" ToolTip="{Binding FullName}" />
+					<TextBlock Text="{Binding JapaneseName, Mode=OneTime}" ToolTip="{Binding FullName, Mode=OneTime}" />
 				</DataTemplate>
 			</TabControl.ItemTemplate>
 			<TabControl.ContentTemplate>
@@ -40,7 +44,7 @@
 							<RowDefinition />
 							<RowDefinition Height="Auto" />
 						</Grid.RowDefinitions>
-						<TextBlock Margin="2" Text="{Binding Type}" ToolTip="{Binding Type}" TextTrimming="CharacterEllipsis">
+						<TextBlock Margin="2" Text="{Binding Type, Mode=OneTime}" ToolTip="{Binding Type, Mode=OneTime}" TextTrimming="CharacterEllipsis">
 							<TextBlock.Style>
 								<Style TargetType="TextBlock">
 									<Style.Triggers>
@@ -51,10 +55,16 @@
 								</Style>
 							</TextBlock.Style>
 						</TextBlock>
-						<ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
-							<TextBlock Margin="2" Text="{Binding Text}" TextWrapping="Wrap" />
+						<ScrollViewer Grid.Row="1" Padding="2" VerticalScrollBarVisibility="Auto">
+							<ItemsControl ItemsSource="{Binding TextLines, Mode=OneTime}">
+								<ItemsControl.ItemTemplate>
+									<DataTemplate>
+										<TextBlock Margin="0,2" Text="{Binding}" TextWrapping="Wrap" />
+									</DataTemplate>
+								</ItemsControl.ItemTemplate>
+							</ItemsControl>
 						</ScrollViewer>
-						<TextBlock Grid.Row="2" Margin="2" Text="{Binding PT}" TextTrimming="CharacterEllipsis">
+						<TextBlock Grid.Row="2" Margin="2,2,2,0" Text="{Binding PT, Mode=OneTime}" TextTrimming="CharacterEllipsis">
 							<TextBlock.Style>
 								<Style TargetType="TextBlock">
 									<Style.Triggers>
@@ -69,6 +79,24 @@
 				</DataTemplate>
 			</TabControl.ContentTemplate>
 		</TabControl>
+		<Grid Name="notifier" Grid.Row="2" Visibility="Collapsed">
+			<Separator Height="1" VerticalAlignment="Top" />
+			<Grid Margin="4,6,4,4">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="Auto" />
+					<ColumnDefinition />
+					<ColumnDefinition Width="Auto" />
+				</Grid.ColumnDefinitions>
+				<Image Source="Resources/Alerts.png" Height="16" />
+				<TextBlock Grid.Column="1" Margin="4,0,0,0" TextTrimming="CharacterEllipsis">
+					<Hyperlink ToolTip="https://fog-bank.github.io/mojp/" Click="OnGoToNewRelease">新しいバージョンがあります。</Hyperlink>
+				</TextBlock>
+				<Button Grid.Column="2" BorderBrush="{x:Null}" Background="{x:Null}"
+						ToolTip="この通知を消します。設定で自動的に確認しないようにできます。" Click="OnCloseNotifier">
+					<Image Source="Resources/Disable.png" Height="14" />
+				</Button>
+			</Grid>
+		</Grid>
 		<ToolBar Margin="0,2,2,0" HorizontalAlignment="Right">
 			<ToolBar.Template>
 				<ControlTemplate TargetType="ToolBar">
@@ -80,10 +108,12 @@
 					<StackPanel Orientation="Horizontal" />
 				</ItemsPanelTemplate>
 			</ToolBar.ItemsPanel>
-			<Button FontFamily="Segoe MDL2 Assets" Content="&#xe114;" FontSize="14" ToolTip="MO をキャプチャ" Click="OnCapture" />
-			<Button FontFamily="Segoe MDL2 Assets" Content="&#xe713;" FontSize="14" ToolTip="設定" Click="OnOption" />
-			<!--<Button FontFamily="Marlett" Content="q" FontSize="14" ToolTip="最小化" Click="OnWindowMinimize" />-->
-			<!--<Button FontFamily="Marlett" Content="r" FontSize="14" ToolTip="閉じる" Click="OnWindowClose" />-->
+			<Button ToolTip="MO を探す" Click="OnCapture">
+				<Image Source="Resources\Camera.png" Height="16" />
+			</Button>
+			<Button ToolTip="設定" Click="OnOption">
+				<Image Source="Resources\Gears.png" Height="16" />
+			</Button>
 		</ToolBar>
 		<Grid Name="imgLoading" Grid.RowSpan="2" Background="#7Fffffff" Visibility="Collapsed">
 			<Path Stroke="#7f505096" HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -126,7 +156,7 @@
 	</Grid>
 	<Window.ContextMenu>
 		<ContextMenu>
-			<MenuItem Header="MO をキャプチャ" Click="OnCapture" />
+			<MenuItem Header="MO を探す" Click="OnCapture" />
 			<MenuItem Header="カード名をコピー" IsEnabled="{Binding CanCopyJapaneseName}" Click="OnCopyCardName">
 				<MenuItem.Icon>
 					<Image Source="Resources\Copy.png" />

@@ -25,6 +25,8 @@ namespace Mojp
 		private bool showBasicLands = Settings.Default.ShowBasicLands;
 		private bool autoRefresh = Settings.Default.AutoRefresh;
 		private TimeSpan refreshInterval = Settings.Default.RefreshInterval;
+		private bool autoVersionCheck = Settings.Default.AutoVersionCheck;
+		private bool acceptsPrerelease = Settings.Default.AcceptsPrerelease;
 
 		private ObservableCollection<Card> cards = new ObservableCollection<Card>();
 		private int selectedIndex = -1;
@@ -36,14 +38,15 @@ namespace Mojp
 
 		public MainViewModel()
 		{
-			cacheReq.TreeScope = TreeScope.Element;
+			// UI 要素の名前だけキャッシュする
 			cacheReq.Add(AutomationElement.NameProperty);
 			cacheReq.AutomationElementMode = AutomationElementMode.None;
 
+			// テキストが空でなく、特定の UI 要素でない TextBlock をすべて拾う
 			condition = new AndCondition(
-						new PropertyCondition(AutomationElement.ClassNameProperty, "TextBlock"),
-						new NotCondition(new PropertyCondition(AutomationElement.NameProperty, string.Empty)),
-						new PropertyCondition(AutomationElement.AutomationIdProperty, string.Empty));
+				new PropertyCondition(AutomationElement.ClassNameProperty, "TextBlock"),
+				new NotCondition(new PropertyCondition(AutomationElement.NameProperty, string.Empty)),
+				new PropertyCondition(AutomationElement.AutomationIdProperty, string.Empty));
 
 			SetMessage(AutoRefresh ? 
 				"MO の Preview Pane を探しています" :
@@ -199,6 +202,34 @@ namespace Mojp
 		}
 
 		/// <summary>
+		/// 自動的に更新を確認するかどうかを示す値を取得または設定します。
+		/// </summary>
+		public bool AutoVersionCheck
+		{
+			get { return autoVersionCheck; }
+			set
+			{
+				autoVersionCheck = value;
+				OnPropertyChanged();
+				Settings.Default.AutoVersionCheck = value;
+			}
+		}
+
+		/// <summary>
+		/// 開発版の更新も確認するかどうかを示す値を取得または設定します。
+		/// </summary>
+		public bool AcceptsPrerelease
+		{
+			get { return acceptsPrerelease; }
+			set
+			{
+				acceptsPrerelease = value;
+				OnPropertyChanged();
+				Settings.Default.AcceptsPrerelease = value;
+			}
+		}
+
+		/// <summary>
 		/// 表示中のカードのコレクションを取得します。
 		/// </summary>
 		public ObservableCollection<Card> Cards => cards;
@@ -230,7 +261,7 @@ namespace Mojp
 				{
 					var card = Cards[SelectedIndex];
 
-					if (card != null && !string.IsNullOrEmpty(card.Name))
+					if (!string.IsNullOrEmpty(card?.Name))
 						return card;
 				}
 				return null;
@@ -261,6 +292,7 @@ namespace Mojp
 					if (card.WikiLink != null)
 						return true;
 
+					// トークンで該当するページとなると、クリーチャータイプの解説ページがあるが、ややこしいパターンもあるのでリンクを無効にする
 					if (!card.Type.StartsWith("トークン"))
 						return true;
 				}
@@ -273,7 +305,7 @@ namespace Mojp
 		/// </summary>
 		public void SetMessage(string text)
 		{
-			var card = new Card { Text = text };
+			var card = new Card(text);
 
 			if (Cards.Count > 0)
 			{
@@ -296,7 +328,10 @@ namespace Mojp
 			if (timer == null)
 			{
 				if (AutoRefresh)
+				{
+					CapturePreviewPane();
 					timer = new DispatcherTimer(RefreshInterval, DispatcherPriority.Normal, OnCapture, dispatcher);
+				}
 			}
 			else
 			{
@@ -359,11 +394,16 @@ namespace Mojp
 			}
 
 			// "Preview" という名前のウィンドウを探す (なぜかルートの子で見つかる)
-			var currentPrevWnd = AutomationElement.RootElement.FindFirst(TreeScope.Children,
-				new AndCondition(
-					new PropertyCondition(AutomationElement.ProcessIdProperty, proc[0].Id),
-					new PropertyCondition(AutomationElement.ClassNameProperty, "Window"),
-					new PropertyCondition(AutomationElement.NameProperty, "Preview")));
+			AutomationElement currentPrevWnd = null;
+			try
+			{
+				currentPrevWnd = AutomationElement.RootElement.FindFirst(TreeScope.Children,
+					new AndCondition(
+						new PropertyCondition(AutomationElement.ProcessIdProperty, proc[0].Id),
+						new PropertyCondition(AutomationElement.ClassNameProperty, "Window"),
+						new PropertyCondition(AutomationElement.NameProperty, "Preview")));
+			}
+			catch { Debug.WriteLine("Preview Pane の取得に失敗しました。"); }
 
 			if (currentPrevWnd == null)
 			{
@@ -378,35 +418,41 @@ namespace Mojp
 				ReleaseAutomationElement();
 				prevWnd = currentPrevWnd;
 
+				// とりあえずカード名を探す
+				SearchCardName();
+
 				// UI テキストの変化を追う
+				// 対戦中、カード情報は Preview Pane の直接の子ではなく、ZoomCard_View というカスタムコントロールの下にくるので、スコープは子孫にしないとダメ
 				using (cacheReq.Activate())
 					Automation.AddAutomationPropertyChangedEventHandler(prevWnd, TreeScope.Descendants, OnAutomaionNamePropertyChanged, AutomationElement.NameProperty);
 
-				SetMessage("準備完了");
+				if (SelectedCard == null)
+					SetMessage("準備完了");
 			}
 		}
 
-		/// <remarks>
-		/// AutomationPropertyChangedEventHandler は UI スレッドとは別スレッドで動いている
-		/// </remarks>
+		/// <summary>
+		/// 変更された要素名がカード名かどうかを調べます。
+		/// </summary>
+		/// <remarks>AutomationPropertyChangedEventHandler は UI スレッドとは別スレッドで動いている</remarks>
 		private void OnAutomaionNamePropertyChanged(object sender, AutomationPropertyChangedEventArgs e)
 		{
 			if (prevWnd == null)
 				return;
 			
-			string srcName = GetNamePropertyValue(sender as AutomationElement);
-			Debug.WriteLineIf(!string.IsNullOrWhiteSpace(srcName), srcName);
+			string name = GetNamePropertyValue(sender as AutomationElement);
+			//Debug.WriteLineIf(!string.IsNullOrWhiteSpace(name), name);
 
 			// 新しいテキストがカード名かどうかを調べ、そうでないなら不必要な検索をしないようにする
 			// トークンの場合は、カード名を含むとき (= コピートークン) と含まないとき (→ 空表示にする) とがあるので検索を続行する
-			if (!App.Cards.ContainsKey(srcName) && !srcName.StartsWith("Token"))
+			if (!App.Cards.ContainsKey(name) && !name.StartsWith("Token"))
 			{
 				string cardType = null;
 
 				// 紋章やヴァンガードの場合は確定で空表示にする
-				if (srcName.StartsWith("Emblem"))
+				if (name.StartsWith("Emblem"))
 					cardType = "紋章";
-				else if (srcName == "Vanguard")
+				else if (name == "Vanguard")
 					cardType = "ヴァンガード";
 
 				if (cardType != null)
@@ -414,18 +460,29 @@ namespace Mojp
 
 				return;
 			}
+			Debug.WriteLine(name);
+			
+			SearchCardName();
+		}
 
-			// テキストが空でなく、特定の UI 要素でない TextBlock をすべて拾う
-			AutomationElementCollection texts;
+		/// <summary>
+		/// 現在の Preview Pane 内のテキストからカード名を取得し、表示します。
+		/// </summary>
+		private void SearchCardName()
+		{
+			AutomationElementCollection elements;
 			using (cacheReq.Activate())
-				texts = prevWnd.FindAll(TreeScope.Descendants, condition);
+				elements = prevWnd?.FindAll(TreeScope.Descendants, condition);
+
+			if (elements == null)
+				return;
 
 			// 一連のテキストからカード名を探す (両面カードなど複数のカード名にヒットする場合があるので一通り探し直す必要がある)
 			var foundCards = new List<Card>();
 
-			foreach (AutomationElement text in texts)
+			foreach (AutomationElement element in elements)
 			{
-				string name = GetNamePropertyValue(text);
+				string name = GetNamePropertyValue(element);
 
 				// WHISPER データベースからカード情報を取得
 				Card card;
@@ -483,19 +540,19 @@ namespace Mojp
 		/// <summary>
 		/// UI テキストからカード名の候補となる文字列を取得します。
 		/// </summary>
-		private static string GetNamePropertyValue(AutomationElement src)
+		private static string GetNamePropertyValue(AutomationElement element)
 		{
 			string name = null;
 			try
 			{
-				name = src?.Cached.Name;
+				name = element?.Cached.Name;
 			}
-			catch { Debug.WriteLine("Exception in calling GetCurrentPropertyValue method."); }
+			catch { Debug.WriteLine("キャッシュされた Name プロパティ値の取得に失敗しました。"); }
 
 			if (name == null)
 				return string.Empty;
 
-			// 特殊文字を置き換える
+			// 特殊文字を置き換える (アキュート・アクセントつきの文字など)
 			var sb = new StringBuilder(name.Length + 1);
 			bool replaced = false;
 
@@ -504,15 +561,35 @@ namespace Mojp
 				switch (c)
 				{
 					// Æther Vial など
+					// カラデシュ発売時のオラクル更新でほとんどの Æ は Ae に置換された。ただし WHISPER や wiki では AE のまま
 					//case 'Æ':
 					//	sb.Append("AE");
 					//	replaced = true;
 					//	break;
 
-					// Márton Stromgald や Dandân など
+					// Márton Stromgald や Dandân や Déjà Vu など
 					case 'á':
 					case 'â':
+					case 'à':
 						sb.Append("a");
+						replaced = true;
+						break;
+
+					// Ifh-Bíff Efreet
+					case 'í':
+						sb.Append("i");
+						replaced = true;
+						break;
+
+					// Junún Efreet
+					case 'ú':
+						sb.Append("u");
+						replaced = true;
+						break;
+
+					// Séance など
+					case 'é':
+						sb.Append("e");
 						replaced = true;
 						break;
 

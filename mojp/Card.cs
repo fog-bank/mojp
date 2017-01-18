@@ -11,14 +11,21 @@ namespace Mojp
 	/// </summary>
 	public class Card : IEquatable<Card>
 	{
+		private string[] lines;
+
 		public Card()
+		{ }
+
+		public Card(string message)
 		{
+			Text = message;
+			lines = new[] { message };
 		}
 
 		/// <summary>
 		/// カードの英語名を取得または設定します。
 		/// </summary>
-		public string Name { get; set; }
+		public string Name { get; private set; }
 
 		/// <summary>
 		/// カードの日本語名を取得または設定します。
@@ -34,6 +41,20 @@ namespace Mojp
 		/// カードのテキストを取得または設定します。
 		/// </summary>
 		public string Text { get; set; }
+
+		/// <summary>
+		/// カードのテキストを行で分割したものを取得します。
+		/// </summary>
+		public string[] TextLines
+		{
+			get
+			{
+				if (lines == null)
+					lines = Text?.Split('\n');
+
+				return lines;
+			}
+		}
 
 		/// <summary>
 		/// カードの P/T を取得または設定します。
@@ -86,10 +107,10 @@ namespace Mojp
 		/// <summary>
 		/// 公式のカード名日本語訳があるかどうかを示す値を取得します。
 		/// </summary>
-		public bool HasJapaneseName => JapaneseName != null && Name != JapaneseName;
+		public bool HasJapaneseName => JapaneseName != null && Name != JapaneseName && Type != "ヴァンガード";
 
 		/// <summary>
-		/// 空のオブジェクトを取得します。オブジェクト自身は読み取り専用になっていませんではないですが、変更しないでください。
+		/// 空のオブジェクトを取得します。オブジェクト自身は読み取り専用になっていませんが、変更しないでください。
 		/// </summary>
 		public static Card Empty { get; } = new Card();
 
@@ -106,24 +127,15 @@ namespace Mojp
 		/// </summary>
 		public bool EqualsStrict(Card other)
 		{
-			return Equals(other) && JapaneseName == other.JapaneseName && Type == other.Type && Text == other.Text && 
+			return Equals(other) && JapaneseName == other.JapaneseName && Type == other.Type && Text == other.Text &&
 				PT == other.PT && RelatedCardName == other.RelatedCardName && WikiLink == other.WikiLink;
 		}
 
-		public override bool Equals(object obj)
-		{
-			return Equals(obj as Card);
-		}
+		public override bool Equals(object obj) => Equals(obj as Card);
 
-		public override int GetHashCode()
-		{
-			return Name == null ? 0 : Name.GetHashCode();
-		}
+		public override int GetHashCode() => Name == null ? 0 : Name.GetHashCode();
 
-		public override string ToString()
-		{
-			return Name;
-		}
+		public override string ToString() => Name;
 
 		/// <summary>
 		/// 後で復元できるように XML ノードに変換します。
@@ -195,6 +207,7 @@ namespace Mojp
 		{
 			var card = new Card();
 			var texts = new List<string>();
+			bool lvCard = false;
 			int emptyLines = 0;
 			Card prevCard = null;
 
@@ -215,12 +228,16 @@ namespace Mojp
 					prevCard = null;
 				}
 
+				// Lv 系カードかどうかチェック
+				if (line.StartsWith("Ｌｖアップ"))
+					lvCard = true;
+
 				// 各行をコロンで区切り、各項目を探す
 				var tokens = line.Split('：');
 
 				if (tokens.Length == 1)
 				{
-					texts.Add(line);
+					texts.Add(RemoveParenthesis(line));
 				}
 				else
 				{
@@ -229,20 +246,12 @@ namespace Mojp
 						case "　英語名":
 							// 新しいカードの行に入った
 							if (card.Name != null)
-							{
-								// AE 合字処理
-								string processed = card.Name.Replace("AE", "Ae");
-								if (card.Name != processed)
-								{
-									card.WikiLink = card.HasJapaneseName ? card.JapaneseName + "/" + card.Name : card.Name;
-									card.Name = processed;
-								}
-								card.Text = string.Join(Environment.NewLine, texts);
-								yield return card;
-							}
+								yield return ProcessCard(card, texts);
+
 							card = new Card();
 							card.Name = tokens[1].Trim();
 							texts.Clear();
+							lvCard = false;
 
 							if (prevCard != null)
 							{
@@ -269,8 +278,8 @@ namespace Mojp
 							// 両面 PW カードの裏の忠誠度が空白の場合があるので、そのときは設定しない
 							if (!string.IsNullOrWhiteSpace(tokens[1]))
 							{
-								// Lv アップクリーチャーは P/T 行が複数あるので、Lv アップ後の P/T は通常テキストに加える
-								if (card.PT == null)
+								// Lv アップクリーチャーは P/T 行が複数あるので、各 P/T は通常テキストに加える
+								if (card.PT == null && !lvCard)
 									card.PT = tokens[1];
 								else
 									texts.Add(tokens[1]);
@@ -278,30 +287,7 @@ namespace Mojp
 							break;
 
 						case "　タイプ":
-							var sb = new StringBuilder(tokens[1].Length);
-							bool parenthesis = false;
-
-							foreach (char c in tokens[1])
-							{
-								switch (c)
-								{
-									case '(':
-										parenthesis = true;
-										break;
-
-									case ')':
-										parenthesis = false;
-										break;
-
-									default:
-										// 読みがついているなら、取り除く
-										if (!parenthesis)
-											sb.Append(c);
-										break;
-								}
-							}
-							sb.Replace("---", "―");
-							card.Type = sb.ToString();
+							card.Type = RemoveParenthesis(tokens[1]).Replace("---", "―");
 							break;
 
 						case "　コスト":
@@ -312,24 +298,106 @@ namespace Mojp
 							break;
 
 						default:
-							texts.Add(line);
+							texts.Add(RemoveParenthesis(line));
 							break;
 					}
 				}
 			}
 
 			if (card.Name != null)
+				yield return ProcessCard(card, texts);
+		}
+
+		private static Card ProcessCard(Card card, IEnumerable<string> texts)
+		{
+			card.Text = string.Join(Environment.NewLine, texts);
+
+			string wikilink = card.HasJapaneseName ? card.JapaneseName + "/" + card.Name : card.Name;
+
+			// AE 合字処理 (Wiki は AE のままなので、リンクもそのようにする)
+			string processed = card.Name.Replace("AE", "Ae");
+			if (card.Name != processed)
 			{
-				// AE 合字処理
-				string processed = card.Name.Replace("AE", "Ae");
-				if (card.Name != processed)
-				{
-					card.WikiLink = card.HasJapaneseName ? card.JapaneseName + "/" + card.Name : card.Name;
-					card.Name = processed;
-				}
-				card.Text = string.Join(Environment.NewLine, texts);
-				yield return card;
+				card.Name = processed;
+				card.WikiLink = wikilink;
 			}
+
+			// 次元 (次元カードのページ URL には接尾辞で " (次元カード)" がつく)
+			if (card.Type.StartsWith("次元"))
+			{
+				if (card.WikiLink == null)
+					card.WikiLink = wikilink + " (次元カード)";
+				else
+					card.WikiLink += " (次元カード)";
+			}
+
+			return card;
+		}
+
+		/// <summary>
+		/// サブタイプの英語名を削除した文字列にします。
+		/// </summary>
+		private static string RemoveParenthesis(string line)
+		{
+			var text = new StringBuilder(line.Length);
+			var parenthesis = new StringBuilder();
+			var sb = text;
+
+			for (int i = 0; i < line.Length; i++)
+			{
+				char c = line[i];
+				switch (c)
+				{
+					case '(':
+						sb = parenthesis;
+						break;
+
+					case ')':
+						bool english = parenthesis.Length >= 2;
+
+						for (int j = 0; j < parenthesis.Length; j++)
+						{
+							char parChr = parenthesis[j];
+
+							if (parChr >= 'a' && parChr <= 'z')
+								continue;
+
+							if (parChr >= 'A' && parChr <= 'Z')
+								continue;
+
+							// 「Bolas’s Meditation Realm」「Urza’s」「Power-Plant」
+							if (parChr == ' ' || parChr == '\'' || parChr == '-')
+								continue;
+
+							english = false;
+							break;
+						}
+						sb = text;
+
+						if (english)
+						{
+							// サブタイプとタイプの間にあるべき中点が抜けている場合を修正
+							if (i + 1 < line.Length && line[i + 1] != '・')
+							{
+								string follow = line.Substring(i + 1);
+
+								if (follow.StartsWith("クリーチャー") || follow.StartsWith("アーティファクト") || follow.StartsWith("土地") ||
+									follow.StartsWith("呪文") || follow.StartsWith("パーマネント") || follow.StartsWith("カード"))
+									sb.Append('・');
+							}
+						}
+						else
+							sb.Append('(').Append(parenthesis.ToString()).Append(')');
+
+						parenthesis.Clear();
+						break;
+
+					default:
+						sb.Append(c);
+						break;
+				}
+			}
+			return text.ToString();
 		}
 	}
 }
