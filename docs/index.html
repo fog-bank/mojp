@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>mojp - MO 日本語テキストプレビュー</title>
+  <meta name="keywords" content="mtg,mo,日本語,カード,テキスト,自動,表示" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  <script type="application/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script type="application/javascript" src="script.js"></script>
+</head>
+<body>
+  <h1 id="top">mojp</h1>
+  <ul id="menu">
+    <li><a href="#top">TOP</a></li>
+    <li><a href="#download">ダウンロード</a></li>
+    <li><a href="#howtouse">使い方</a></li>
+    <li><a href="#comment">コメント</a></li>
+    <li><a href="https://github.com/fog-bank/mojp">View on GitHub</a></li>
+  </ul>
+  <div id="content">
+    <h2>MO 日本語テキストプレビュー</h2>
+    <div>
+      <p><a href="http://www.mtgo.com/">Magic: The Gathering Online</a> で表示されているカードに対応して、日本語テキストを自動で表示するアプリです。</p>
+      <table>
+        <tr>
+          <td><img id="screenshot" src="images/screenshot.png" width="316" height="253" /></td>
+          <td>
+            <h4><span class="underline">主な機能</span></h4>
+            <ul>
+              <li>マウスカーソルの下にあるカードの日本語テキストを表示</li>
+              <li>カード名（日本語または英語）をコピー</li>
+              <li><a href="http://mtgwiki.com/">MTG Wiki</a> の解説ページをブラウザで開く</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <h3 id="download">ダウンロード</h3>
+    <div>
+      <h4><span class="underline">最新版 v1.3.0（霊気紛争 対応）</span></h4>
+      <p><a href="https://github.com/fog-bank/mojp/releases/download/v1.3.0/mojp.zip">ダウンロード</a>　<a href="https://github.com/fog-bank/mojp/releases/tag/v1.3.0">リリースノート</a></p>
+    </div>
+    <h3 id="howtouse">使い方</h3>
+    <div>
+      <h4><span class="underline">必要条件</span></h4>
+      <p>.NET Framework 4.6 以上（Windows 10 の場合は標準でインストール済みです）</p>
+      <h4><span class="underline">手順</span></h4>
+      <ol>
+        <li>MO を起動し、COLLECTION 画面や対戦・トレード中に Preview Pane を表示するようにします（最小化しても OK）。</li>
+        <li>MO 上で調べたいカードにマウスカーソルを移動させます。</li>
+        <li>このアプリの表示が変わり、そのカードの日本語テキストが表示されます。</li>
+      </ol>
+      <h4><span class="underline">補足</span></h4>
+      <ul>
+        <li>
+          Preview Pane を表示するには、ACCOUNT 画面の「Display & Sound Settings」内の右下にある「Display Card Preview Window」にチェックを入れます。
+          詳細は<a href="https://github.com/fog-bank/mojp/wiki/Preview-Pane-%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%95%E3%81%9B%E3%82%8B%E6%96%B9%E6%B3%95">こちら</a>。
+        </li>
+        <li>トークンや紋章などには対応しておらず、何も表示されません。詳細は<a href="https://github.com/fog-bank/mojp/wiki/%E4%B8%8D%E5%85%B7%E5%90%88">こちら</a>。</li>
+        <li>あくまで参考程度のご利用でお願い致します。このアプリを原因とするプレイミスには責任を負いかねます。</li>
+      </ul>
+      <h4><span class="underline">その他の機能</span></h4>
+      <ul>
+        <li>右クリックメニューからカード名をコピーしたり、MTG Wiki のカード評価ページに移動したりできます。</li>
+        <li>右上の歯車アイコンのボタンから、このアプリで使用するフォントとそのサイズを設定できます。その他、ウィンドウサイズなどの設定は、%LocalAppData%\co3366353 フォルダに保存されます。</li>
+      </ul>
+      <p>詳しい説明や既知の不具合については <a href="https://github.com/fog-bank/mojp/wiki">GitHub 内の Wiki</a> をご確認ください。</p>
+    </div>
+    <h3 id="resource">リソース</h3>
+    <div>
+      <p>このアプリで表示する日本語テキストは、<a href="http://whisper.wisdom-guild.net/">WHISPER</a> の検索結果をテキストファイルに保存したものに基づいています。</p>
+      <h4><span class="underline">手動でカードデータを更新する方法</span></h4>
+      <ol>
+        <li>GitHub のリポジトリから <a href="https://github.com/fog-bank/mojp/raw/master/mojp/appendix.xml" type="text/xml">appendix.xml</a>（ファイル名固定）をダウンロードして、アプリケーション フォルダ（mojp.exe があるフォルダ）に保存しておく。</li>
+        <li>Wisdom Guild さんのカード検索で、 次元、現象、計略、策略以外のカードタイプにチェックを入れ、さらに一番下の出力形式をテキストにして検索する。</li>
+        <li>表示されたテキストを、エンコード形式を Shift-JIS にして保存する。</li>
+        <li>本アプリの設定画面を開き、一番下の開発用メニューから「検索結果テキストの読み込み」ボタンで保存したテキストを読み込む。</li>
+        <li>チェックマークが表示されたら完了。アプリケーション フォルダにある cards.xml が変更されているはずです。</li>
+      </ol>
+      <p>カードセットを絞らない場合、1.6 万件以上のカードがヒットし、テキストのサイズは 6 MB を超えますので、この方法で頻繁に検索しないでください。Wisdom Guild さんのサーバーに対し著しく負荷をかける行為は禁止されています。</p>
+    </div>
+    <h3 id="comment">コメント</h3>
+    <div>
+      <p>匿名のコメントが可能です。（コメントと名前、仮のメールアドレスを記入後、ゲストとして投稿するにチェック）</p>
+      <div id="comment_body">
+        <div id="disqus_thread"></div>
+        <script>
+var disqus_config = function () {
+  this.page.url = 'https://fog-bank.github.io/mojp/';
+  this.page.identifier = 'index';
+};
+(function () {
+  var d = document, s = d.createElement('script');
+  s.src = '//mojp.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+})();
+        </script>
+        <noscript><a href="https://disqus.com/?ref_noscript">Disqus を利用したコメント</a>を見るには、JavaScript を有効にしてください。</noscript>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
