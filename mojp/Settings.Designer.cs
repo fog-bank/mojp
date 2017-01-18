@@ -154,5 +154,29 @@ namespace Mojp {
                 this["ShowBasicLands"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool AutoVersionCheck {
+            get {
+                return ((bool)(this["AutoVersionCheck"]));
+            }
+            set {
+                this["AutoVersionCheck"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool AcceptsPrerelease {
+            get {
+                return ((bool)(this["AcceptsPrerelease"]));
+            }
+            set {
+                this["AcceptsPrerelease"] = value;
+            }
+        }
     }
 }

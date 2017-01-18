@@ -4,6 +4,8 @@ using System.Diagnostics;
 using System.IO;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls.Primitives;
+using System.Windows.Documents;
 using System.Windows.Input;
 
 namespace Mojp
@@ -23,7 +25,6 @@ namespace Mojp
 		protected override void OnClosing(CancelEventArgs e)
 		{
 			ViewModel.Release();
-			Settings.Default.Save();
 
 			base.OnClosing(e);
 		}
@@ -33,7 +34,8 @@ namespace Mojp
 		{
 			base.OnMouseMove(e);
 
-			if (e.LeftButton == MouseButtonState.Pressed)
+			// スクロールバーやリンクがある所はドラッグを開始しない（ボタンは処理済みと思われる）
+			if (!e.Handled && e.LeftButton == MouseButtonState.Pressed && !(e.OriginalSource is Thumb || e.OriginalSource is Hyperlink))
 				DragMove();
 		}
 
@@ -51,6 +53,9 @@ namespace Mojp
 				imgLoading.Visibility = Visibility.Hidden;
 			}
 			ViewModel.SetRefreshTimer(Dispatcher);
+
+			if (ViewModel.AutoVersionCheck && await App.IsLatestRelease(ViewModel.AcceptsPrerelease))
+				notifier.Visibility = Visibility.Visible;
 		}
 
 		private void OnCapture(object sender, RoutedEventArgs e)
@@ -65,7 +70,13 @@ namespace Mojp
 
 		private void OnCopyEnglishName(object sender, RoutedEventArgs e)
 		{
-			Clipboard.SetText(ViewModel.SelectedCard.Name);
+			// MO ヴァンガードは MO 上ではカード名が "Avatar - ..." となっている。
+			//（ただしゲーム上ではカード名に "Avatar - " を含まない。例：Necropotence Avatar のカードテキスト）
+			// そこで、日本語名の代わりにオラクルでのカード名である "... Avatar" を表示し、それをコピーするようにする
+			if (ViewModel.SelectedCard.Type != "ヴァンガード")
+				Clipboard.SetText(ViewModel.SelectedCard.Name);
+			else
+				Clipboard.SetText(ViewModel.SelectedCard.JapaneseName);
 		}
 
 		private void OnGoToWiki(object sender, RoutedEventArgs e)
@@ -88,7 +99,7 @@ namespace Mojp
 			Process.Start("http://mtgwiki.com/wiki/" + link);
 		}
 
-		private void OnOption(object sender, RoutedEventArgs e)
+		private async void OnOption(object sender, RoutedEventArgs e)
 		{
 			// 設定画面を上にする
 			Topmost = false;
@@ -100,6 +111,20 @@ namespace Mojp
 
 			// Preview Pane の自動探索の設定を反映
 			ViewModel.SetRefreshTimer(Dispatcher);
+
+			notifier.Visibility = ViewModel.AutoVersionCheck && 
+				await App.IsLatestRelease(ViewModel.AcceptsPrerelease) ? Visibility.Visible : Visibility.Collapsed;
+		}
+
+		private void OnGoToNewRelease(object sender, RoutedEventArgs e)
+		{
+			notifier.Visibility = Visibility.Collapsed;
+			Process.Start((sender as Hyperlink).ToolTip.ToString());
+		}
+
+		private void OnCloseNotifier(object sender, RoutedEventArgs e)
+		{
+			notifier.Visibility = Visibility.Collapsed;
 		}
 
 		private async void OnHide(object sender, RoutedEventArgs e)
