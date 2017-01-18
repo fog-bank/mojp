@@ -5,6 +5,7 @@ using System.IO;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls.Primitives;
+using System.Windows.Documents;
 using System.Windows.Input;
 
 namespace Mojp
@@ -32,9 +33,9 @@ namespace Mojp
 		protected override void OnMouseMove(MouseEventArgs e)
 		{
 			base.OnMouseMove(e);
-			
-			// スクロールバーがある所はドラッグを開始しない
-			if (!e.Handled && e.LeftButton == MouseButtonState.Pressed && !(e.OriginalSource is Thumb))
+
+			// スクロールバーやリンクがある所はドラッグを開始しない（ボタンは処理済みと思われる）
+			if (!e.Handled && e.LeftButton == MouseButtonState.Pressed && !(e.OriginalSource is Thumb || e.OriginalSource is Hyperlink))
 				DragMove();
 		}
 
@@ -52,6 +53,9 @@ namespace Mojp
 				imgLoading.Visibility = Visibility.Hidden;
 			}
 			ViewModel.SetRefreshTimer(Dispatcher);
+
+			if (ViewModel.AutoVersionCheck && await App.IsLatestRelease(ViewModel.AcceptsPrerelease))
+				notifier.Visibility = Visibility.Visible;
 		}
 
 		private void OnCapture(object sender, RoutedEventArgs e)
@@ -95,7 +99,7 @@ namespace Mojp
 			Process.Start("http://mtgwiki.com/wiki/" + link);
 		}
 
-		private void OnOption(object sender, RoutedEventArgs e)
+		private async void OnOption(object sender, RoutedEventArgs e)
 		{
 			// 設定画面を上にする
 			Topmost = false;
@@ -107,6 +111,20 @@ namespace Mojp
 
 			// Preview Pane の自動探索の設定を反映
 			ViewModel.SetRefreshTimer(Dispatcher);
+
+			notifier.Visibility = ViewModel.AutoVersionCheck && 
+				await App.IsLatestRelease(ViewModel.AcceptsPrerelease) ? Visibility.Visible : Visibility.Collapsed;
+		}
+
+		private void OnGoToNewRelease(object sender, RoutedEventArgs e)
+		{
+			notifier.Visibility = Visibility.Collapsed;
+			Process.Start((sender as Hyperlink).ToolTip.ToString());
+		}
+
+		private void OnCloseNotifier(object sender, RoutedEventArgs e)
+		{
+			notifier.Visibility = Visibility.Collapsed;
 		}
 
 		private async void OnHide(object sender, RoutedEventArgs e)

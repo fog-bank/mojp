@@ -36,6 +36,8 @@
 			<Grid.RowDefinitions>
 				<RowDefinition Height="Auto" />
 				<RowDefinition Height="Auto" />
+				<RowDefinition Height="Auto" />
+				<RowDefinition Height="Auto" />
 			</Grid.RowDefinitions>
 			<TextBlock>リリース バージョン</TextBlock>
 			<TextBlock Grid.Column="2">1.3.0</TextBlock>
@@ -44,6 +46,15 @@
 			</TextBlock>
 			<TextBlock Grid.Row="1">対応最新セット</TextBlock>
 			<TextBlock Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2">霊気紛争</TextBlock>
+			<CheckBox Grid.Row="2" Grid.ColumnSpan="4" Margin="0,4" IsChecked="{Binding AutoVersionCheck}"
+					  ToolTip="起動時とこのダイアログを閉じた時に更新があるかどうかを確認します。">
+				<StackPanel Orientation="Horizontal">
+					<TextBlock>最新バージョンを自動的に確認する</TextBlock>
+					<Image Source="Resources/Information.png" Height="16" Margin="5,0,0,0" />
+				</StackPanel>
+			</CheckBox>
+			<CheckBox Grid.Row="3" Grid.ColumnSpan="4" Margin="10,0,0,0" 
+					  IsChecked="{Binding AcceptsPrerelease}" IsEnabled="{Binding AutoVersionCheck}">開発版も確認する</CheckBox>
 		</Grid>
 		<Grid Margin="0,15,0,5">
 			<Grid.ColumnDefinitions>

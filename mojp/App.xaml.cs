@@ -1,6 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Net.Http;
+using System.Reflection;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Xml.Linq;
 
@@ -12,6 +16,7 @@ namespace Mojp
 	public partial class App : Application
 	{
 		private static readonly Dictionary<string, Card> cards = new Dictionary<string, Card>();
+		private static readonly Lazy<HttpClient> httpClient = new Lazy<HttpClient>();
 
 		/// <summary>
 		/// カードの英語名から、英語カード名・日本語カード名・日本語カードテキストを検索します。
@@ -197,6 +202,37 @@ namespace Mojp
 			}
 		}
 
+		/// <summary>
+		/// このアプリのバージョンが最新かどうかを確認します。
+		/// </summary>
+		/// <param name="acceptsPrerelease">開発版も含めて確認する場合は true 。</param>
+		/// <returns>これより上のバージョンが無い場合は true 。</returns>
+		public static async Task<bool> IsLatestRelease(bool acceptsPrerelease)
+		{
+			string response = null;
+			try
+			{
+				response = await httpClient.Value.GetStringAsync("https://fog-bank.github.io/mojp/version.txt");
+			}
+			catch { Debug.WriteLine("HTTPS アクセスに失敗しました。"); }
+
+			if (response != null)
+			{
+				var attr = typeof(App).Assembly.GetCustomAttribute<AssemblyFileVersionAttribute>();
+				var currentVersion = new Version(attr.Version);
+
+				// 行ごとにバージョン番号を記載し、第一行は安定版の番号にする
+				var versions = response.Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+
+				if (acceptsPrerelease && versions.Length >= 2)
+					return new Version(versions[1]) > currentVersion;
+
+				if (versions.Length >= 1)
+					return new Version(versions[0]) > currentVersion;
+			}
+			return false;
+		}
+
 		protected override void OnStartup(StartupEventArgs e)
 		{
 			base.OnStartup(e);
@@ -212,6 +248,9 @@ namespace Mojp
 		{
 			Settings.Default.Save();
 
+			if (httpClient.IsValueCreated)
+				httpClient.Value.Dispose();
+			
 			base.OnExit(e);
 		}
 	}
