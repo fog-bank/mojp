@@ -14,6 +14,7 @@
 		<Grid.RowDefinitions>
 			<RowDefinition Height="Auto" />
 			<RowDefinition />
+			<RowDefinition Height="Auto" />
 		</Grid.RowDefinitions>
 		<TabControl Grid.RowSpan="2" FontFamily="{Binding FontFamily}" FontSize="{Binding FontSize}"
 					BorderThickness="0,1,0,0" HorizontalContentAlignment="Left"
@@ -78,6 +79,24 @@
 				</DataTemplate>
 			</TabControl.ContentTemplate>
 		</TabControl>
+		<Grid Name="notifier" Grid.Row="2" Visibility="Collapsed">
+			<Separator Height="1" VerticalAlignment="Top" />
+			<Grid Margin="4,6,4,4">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="Auto" />
+					<ColumnDefinition />
+					<ColumnDefinition Width="Auto" />
+				</Grid.ColumnDefinitions>
+				<Image Source="Resources/Alerts.png" Height="16" />
+				<TextBlock Grid.Column="1" Margin="4,0,0,0" TextTrimming="CharacterEllipsis">
+					<Hyperlink ToolTip="https://fog-bank.github.io/mojp/" Click="OnGoToNewRelease">新しいバージョンがあります。</Hyperlink>
+				</TextBlock>
+				<Button Grid.Column="2" BorderBrush="{x:Null}" Background="{x:Null}"
+						ToolTip="この通知を消します。設定で自動的に確認しないようにできます。" Click="OnCloseNotifier">
+					<Image Source="Resources/Disable.png" Height="14" />
+				</Button>
+			</Grid>
+		</Grid>
 		<ToolBar Margin="0,2,2,0" HorizontalAlignment="Right">
 			<ToolBar.Template>
 				<ControlTemplate TargetType="ToolBar">

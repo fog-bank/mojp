@@ -25,6 +25,8 @@ namespace Mojp
 		private bool showBasicLands = Settings.Default.ShowBasicLands;
 		private bool autoRefresh = Settings.Default.AutoRefresh;
 		private TimeSpan refreshInterval = Settings.Default.RefreshInterval;
+		private bool autoVersionCheck = Settings.Default.AutoVersionCheck;
+		private bool acceptsPrerelease = Settings.Default.AcceptsPrerelease;
 
 		private ObservableCollection<Card> cards = new ObservableCollection<Card>();
 		private int selectedIndex = -1;
@@ -196,6 +198,34 @@ namespace Mojp
 				refreshInterval = TimeSpan.FromMilliseconds(value);
 				OnPropertyChanged();
 				Settings.Default.RefreshInterval = refreshInterval;
+			}
+		}
+
+		/// <summary>
+		/// 自動的に更新を確認するかどうかを示す値を取得または設定します。
+		/// </summary>
+		public bool AutoVersionCheck
+		{
+			get { return autoVersionCheck; }
+			set
+			{
+				autoVersionCheck = value;
+				OnPropertyChanged();
+				Settings.Default.AutoVersionCheck = value;
+			}
+		}
+
+		/// <summary>
+		/// 開発版の更新も確認するかどうかを示す値を取得または設定します。
+		/// </summary>
+		public bool AcceptsPrerelease
+		{
+			get { return acceptsPrerelease; }
+			set
+			{
+				acceptsPrerelease = value;
+				OnPropertyChanged();
+				Settings.Default.AcceptsPrerelease = value;
 			}
 		}
 
