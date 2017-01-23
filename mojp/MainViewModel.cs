@@ -516,7 +516,7 @@ namespace Mojp
 			}
 
 			// ツールバーと重ならないようにするためのダミー項目
-			foundCards.Add(Card.Empty);
+			//foundCards.Add(Card.Empty);
 
 			App.Current.Dispatcher.Invoke(() =>
 			{
