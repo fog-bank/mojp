@@ -477,7 +477,7 @@ namespace Mojp
 			if (elements == null)
 				return;
 
-			// 一連のテキストからカード名を探す (両面カードなど複数のカード名にヒットする場合があるので一通り探し直す必要がある)
+			// 一連のテキストからカード名を探す (合体カードなど複数のカード名にヒットする場合があるので一通り探し直す必要がある)
 			var foundCards = new List<Card>();
 
 			foreach (AutomationElement element in elements)
@@ -493,7 +493,8 @@ namespace Mojp
 					// 両面カードの場合に、Preview Pane に片面だけ表示されていても、もう一方の面を表示するようにする
 					if (card.RelatedCardName != null)
 					{
-						var card2 = App.Cards[card.RelatedCardName];
+						Card card2;
+						App.Cards.TryGetValue(card.RelatedCardName, out card2);
 
 						if (!foundCards.Contains(card2))
 							foundCards.Add(card2);

@@ -77,34 +77,6 @@ namespace Mojp
 		public string FullName => HasJapaneseName ? JapaneseName + " / " + Name : Name;
 
 		/// <summary>
-		/// カードの各情報をまとめた文字列を生成します。
-		/// </summary>
-		public string Summary
-		{
-			get
-			{
-				var sb = new StringBuilder();
-
-				if (Name != null)
-					sb.AppendLine(FullName);
-
-				if (!string.IsNullOrEmpty(Type))
-					sb.AppendLine(Type);
-
-				if (!string.IsNullOrEmpty(Text))
-					sb.AppendLine(Text);
-
-				if (!string.IsNullOrEmpty(PT))
-					sb.AppendLine(PT);
-
-				if (sb.Length > 0)
-					sb.Length -= Environment.NewLine.Length;
-
-				return sb.ToString();
-			}
-		}
-
-		/// <summary>
 		/// 公式のカード名日本語訳があるかどうかを示す値を取得します。
 		/// </summary>
 		public bool HasJapaneseName => JapaneseName != null && Name != JapaneseName && Type != "ヴァンガード";
@@ -146,12 +118,8 @@ namespace Mojp
 			var xml = new XElement("card");
 
 			xml.Add(new XAttribute("name", Name));
-
-			if (JapaneseName != null)
-				xml.Add(new XAttribute("jaName", JapaneseName));
-
-			if (Type != null)
-				xml.Add(new XAttribute("type", Type));
+			xml.Add(new XAttribute("jaName", JapaneseName));
+			xml.Add(new XAttribute("type", Type));
 
 			if (PT != null)
 				xml.Add(new XAttribute("pt", PT));
