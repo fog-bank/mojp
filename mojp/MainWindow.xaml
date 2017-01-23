@@ -6,29 +6,55 @@
 		Width="{Binding WindowWidth, Mode=TwoWay}" Height="{Binding WindowHeight, Mode=TwoWay}" 
 		Left="{Binding WindowLeft, Mode=TwoWay}" Top="{Binding WindowTop, Mode=TwoWay}"
 		Icon="Resources/dictionary.ico" SnapsToDevicePixels="True" Initialized="OnInitialized">
-		<!-- WindowStyle="None" AllowsTransparency="True" Background="Transparent" -->
+	<!-- WindowStyle="None" AllowsTransparency="True" Background="Transparent" -->
 	<Window.DataContext>
 		<local:MainViewModel />
 	</Window.DataContext>
-	<Grid>
+	<Grid Grid.IsSharedSizeScope="True">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition />
+			<ColumnDefinition Width="Auto" SharedSizeGroup="SecondColumn" />
+		</Grid.ColumnDefinitions>
 		<Grid.RowDefinitions>
-			<RowDefinition Height="Auto" />
+			<RowDefinition Height="Auto" SharedSizeGroup="FirstRow" />
 			<RowDefinition />
 			<RowDefinition Height="Auto" />
 		</Grid.RowDefinitions>
-		<TabControl Grid.RowSpan="2" FontFamily="{Binding FontFamily}" FontSize="{Binding FontSize}"
+		<TabControl Grid.RowSpan="2" Grid.ColumnSpan="2" FontFamily="{Binding FontFamily}" FontSize="{Binding FontSize}"
 					BorderThickness="0,1,0,0" HorizontalContentAlignment="Left"
 					ItemsSource="{Binding Cards}" SelectedIndex="{Binding SelectedIndex}">
+			<TabControl.Template>
+				<ControlTemplate TargetType="TabControl">
+					<Grid Name="templateRoot" ClipToBounds="True" SnapsToDevicePixels="True" KeyboardNavigation.TabNavigation="Local">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition />
+							<ColumnDefinition Width="Auto" SharedSizeGroup="SecondColumn" />
+						</Grid.ColumnDefinitions>
+						<Grid.RowDefinitions>
+							<RowDefinition Height="Auto" SharedSizeGroup="FirstRow" />
+							<RowDefinition />
+						</Grid.RowDefinitions>
+						<TabPanel Name="HeaderPanel" Margin="2,2,2,0" Background="Transparent" IsItemsHost="True" KeyboardNavigation.TabIndex="1" Panel.ZIndex="1" />
+						<Border Name="ContentPanel" Grid.Row="1" Grid.ColumnSpan="2" 
+								Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" 
+								KeyboardNavigation.DirectionalNavigation="Contained" KeyboardNavigation.TabIndex="2" KeyboardNavigation.TabNavigation="Local">
+							<ContentPresenter Name="PART_SelectedContentHost" Margin="{TemplateBinding Padding}"
+											  Content="{TemplateBinding SelectedContent}" ContentTemplate="{TemplateBinding SelectedContentTemplate}" 
+											  ContentStringFormat="{TemplateBinding SelectedContentStringFormat}" 
+											  ContentSource="SelectedContent" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+						</Border>
+					</Grid>
+				</ControlTemplate>
+			</TabControl.Template>
 			<TabControl.ItemContainerStyle>
 				<Style TargetType="TabItem">
 					<Style.Triggers>
 						<DataTrigger Binding="{Binding Name}" Value="{x:Null}">
-							<Setter Property="Width" Value="46" />
 							<Setter Property="Visibility" Value="Hidden" />
 						</DataTrigger>
 					</Style.Triggers>
 					<Setter Property="Padding" Value="6,2,5,0" />
-					<Setter Property="MinHeight" Value="23" />
+					<Setter Property="MinHeight" Value="22" />
 				</Style>
 			</TabControl.ItemContainerStyle>
 			<TabControl.ItemTemplate>
@@ -79,7 +105,7 @@
 				</DataTemplate>
 			</TabControl.ContentTemplate>
 		</TabControl>
-		<Grid Name="notifier" Grid.Row="2" Visibility="Collapsed">
+		<Grid Name="notifier" Grid.Row="2" Grid.ColumnSpan="2" Visibility="Collapsed">
 			<Separator Height="1" VerticalAlignment="Top" />
 			<Grid Margin="4,6,4,4">
 				<Grid.ColumnDefinitions>
@@ -97,7 +123,7 @@
 				</Button>
 			</Grid>
 		</Grid>
-		<ToolBar Margin="0,2,2,0" HorizontalAlignment="Right">
+		<ToolBar Grid.Column="1" Margin="1" VerticalAlignment="Bottom">
 			<ToolBar.Template>
 				<ControlTemplate TargetType="ToolBar">
 					<ItemsPresenter />
@@ -115,7 +141,7 @@
 				<Image Source="Resources\Gears.png" Height="16" />
 			</Button>
 		</ToolBar>
-		<Grid Name="imgLoading" Grid.RowSpan="2" Background="#7Fffffff" Visibility="Collapsed">
+		<Grid Name="imgLoading" Grid.RowSpan="2" Grid.ColumnSpan="2" Background="#7Fffffff" Visibility="Collapsed">
 			<Path Stroke="#7f505096" HorizontalAlignment="Center" VerticalAlignment="Center">
 				<!-- http://blogs.microsoft.co.il/blogs/maxim/archive/2008/03/08/wpf-daily-tip-simple-wait-progress-control-continuous-animation.aspx -->
 				<Path.Data>
