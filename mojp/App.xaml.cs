@@ -216,21 +216,26 @@ namespace Mojp
 			}
 			catch { Debug.WriteLine("HTTPS アクセスに失敗しました。"); }
 
-			if (response != null)
-			{
-				var attr = typeof(App).Assembly.GetCustomAttribute<AssemblyFileVersionAttribute>();
-				var currentVersion = new Version(attr.Version);
+			if (response == null)
+				return false;
 
-				// 行ごとにバージョン番号を記載し、第一行は安定版の番号にする
-				var versions = response.Split(Environment.NewLine.ToCharArray(), StringSplitOptions.RemoveEmptyEntries);
+			var attr = typeof(App).Assembly.GetCustomAttribute<AssemblyFileVersionAttribute>();
+			var current = new Version(attr.Version);
 
-				if (acceptsPrerelease && versions.Length >= 2)
-					return new Version(versions[1]) > currentVersion;
+			// 行ごとにバージョン番号を記載し、第一行は安定版の番号にしておく
+			var versions = response.Split(Environment.NewLine.ToCharArray(), 3, StringSplitOptions.RemoveEmptyEntries);
+			string version = null;
 
-				if (versions.Length >= 1)
-					return new Version(versions[0]) > currentVersion;
-			}
-			return false;
+			if (acceptsPrerelease && versions.Length >= 2)
+				version = versions[1];
+
+			if (versions.Length >= 1)
+				version = versions[0];
+
+			Version latest;
+			Version.TryParse(version, out latest);
+
+			return current < latest;
 		}
 
 		protected override void OnStartup(StartupEventArgs e)
