@@ -278,7 +278,7 @@ namespace Mojp
 
 		private static Card ProcessCard(Card card, IEnumerable<string> texts)
 		{
-			card.Text = string.Join(Environment.NewLine, texts);
+			card.Text = string.Join("\n", texts);
 
 			string wikilink = card.HasJapaneseName ? card.JapaneseName + "/" + card.Name : card.Name;
 
