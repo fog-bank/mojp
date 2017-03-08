@@ -37,10 +37,8 @@
 						<TabPanel Name="HeaderPanel" Margin="2,2,2,0" Background="Transparent" IsItemsHost="True" KeyboardNavigation.TabIndex="1" Panel.ZIndex="1" />
 						<Border Name="ContentPanel" Grid.Row="1" Grid.ColumnSpan="2" 
 								Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" 
-								KeyboardNavigation.DirectionalNavigation="Contained" KeyboardNavigation.TabIndex="2" KeyboardNavigation.TabNavigation="Local">
+								KeyboardNavigation.TabIndex="2" KeyboardNavigation.TabNavigation="Local" KeyboardNavigation.DirectionalNavigation="Contained">
 							<ContentPresenter Name="PART_SelectedContentHost" Margin="{TemplateBinding Padding}"
-											  Content="{TemplateBinding SelectedContent}" ContentTemplate="{TemplateBinding SelectedContentTemplate}" 
-											  ContentStringFormat="{TemplateBinding SelectedContentStringFormat}" 
 											  ContentSource="SelectedContent" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
 						</Border>
 					</Grid>
