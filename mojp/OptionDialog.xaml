@@ -54,7 +54,7 @@
 				</StackPanel>
 			</CheckBox>
 			<CheckBox Grid.Row="3" Grid.ColumnSpan="4" Margin="10,0,0,0" 
-					  IsChecked="{Binding AcceptsPrerelease}" IsEnabled="{Binding AutoVersionCheck}">開発版も含めて確認する</CheckBox>
+					  IsChecked="{Binding AcceptsPrerelease}" IsEnabled="{Binding AutoVersionCheck}">オラクル更新版や開発版も含めて確認する</CheckBox>
 		</Grid>
 		<Grid Margin="0,15,0,5">
 			<Grid.ColumnDefinitions>

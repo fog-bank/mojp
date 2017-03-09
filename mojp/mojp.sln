@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mojp", "mojp.csproj", "{52DA943C-0989-48E7-A145-E41FEBC23D24}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FD2DC161-0BA9-44F7-99F5-385DE15BDC1C}"
 	ProjectSection(SolutionItems) = preProject
+		..\docs\index.html = ..\docs\index.html
 		..\README.md = ..\README.md
+		..\docs\version.txt = ..\docs\version.txt
 	EndProjectSection
 EndProject
 Global
