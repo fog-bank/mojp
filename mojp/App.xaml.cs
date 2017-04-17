@@ -226,16 +226,13 @@ namespace Mojp
 			var versions = response.Split(Environment.NewLine.ToCharArray(), 3, StringSplitOptions.RemoveEmptyEntries);
 			string version = null;
 
-			if (acceptsPrerelease && versions.Length >= 2)
+            if (versions.Length >= 1)
+                version = versions[0];
+
+            if (acceptsPrerelease && versions.Length >= 2)
 				version = versions[1];
 
-			if (versions.Length >= 1)
-				version = versions[0];
-
-			Version latest;
-			Version.TryParse(version, out latest);
-
-			return current < latest;
+            return Version.TryParse(version, out var latest) && current < latest;
 		}
 
 		protected override void OnStartup(StartupEventArgs e)
