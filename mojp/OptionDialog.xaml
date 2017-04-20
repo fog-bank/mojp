@@ -40,7 +40,7 @@
 				<RowDefinition Height="Auto" />
 			</Grid.RowDefinitions>
 			<TextBlock>リリース バージョン</TextBlock>
-			<TextBlock Grid.Column="2">1.4.0 Beta</TextBlock>
+			<TextBlock Grid.Column="2">1.4.0</TextBlock>
 			<TextBlock Grid.Column="3">
 				<Hyperlink ToolTip="https://github.com/fog-bank/mojp/releases" Click="OnClickHyperlink">GitHub に移動</Hyperlink>
 			</TextBlock>
