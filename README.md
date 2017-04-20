@@ -3,6 +3,11 @@
 
 ![Screenshot v1.3.0](https://github.com/fog-bank/mojp/blob/master/images/screenshot.png)
 
+## 主な機能
+* マウスカーソルの下にあるカードの日本語テキストを表示
+* カード名（日本語または英語）をコピー
+* [MTG Wiki](http://mtgwiki.com/) の解説ページをブラウザで開く
+
 ## 必要条件
 .NET Framework 4.6 以上（Windows 10 なら標準でインストール済みです）
 
@@ -19,6 +24,7 @@
 ### その他の機能
 * 右クリックメニューからカード名をコピーしたり、[MTG Wiki](http://mtgwiki.com/) のカード評価ページに移動したりできます。
 * 右上の歯車アイコンのボタンから、このアプリで使用するフォントとそのサイズを設定できます。その他、ウィンドウサイズなどの設定は、%LocalAppData%\co3366353 フォルダに保存されます。
+* 起動時に、新しいバージョンがリリースされているかどうかを自動で確認します（ダウンロードまではしません）。不要な場合は設定から無効にしてください。
 
 ## 仕組み
 [UI Automation](https://msdn.microsoft.com/ja-jp/library/ms753388.aspx) API を利用して、Preview Pane 内のテキストを検索しています。メインロジックは [MainViewModel.cs](https://github.com/fog-bank/mojp/blob/master/mojp/MainViewModel.cs#L385) 内の OnCapture メソッド以下です。

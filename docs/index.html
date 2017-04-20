@@ -36,10 +36,8 @@
     </div>
     <h3 id="download">ダウンロード</h3>
     <div>
-      <h4><span class="underline">最新版 v1.3.1（霊気紛争 対応）</span></h4>
-      <p><a href="https://github.com/fog-bank/mojp/releases/download/v1.3.1/mojp.zip">ダウンロード</a>　<a href="https://github.com/fog-bank/mojp/releases/tag/v1.3.1">リリースノート</a></p>
-      <h4><span class="underline">開発版 v1.4.0 Beta（アモンケット 対応）</span></h4>
-      <p><a href="https://github.com/fog-bank/mojp/releases/download/v1.4.0-beta/mojp.zip">ダウンロード</a>　<a href="https://github.com/fog-bank/mojp/releases/tag/v1.4.0-beta">リリースノート</a></p>
+      <h4><span class="underline">最新版 v1.4.0（アモンケット 対応）</span></h4>
+      <p><a href="https://github.com/fog-bank/mojp/releases/download/v1.4.0/mojp.zip">ダウンロード</a>　<a href="https://github.com/fog-bank/mojp/releases/tag/v1.4.0">リリースノート</a></p>
       <p>余波カードに関しては、従来の分割カードと同様に対応できていると思いますが、予期しない動作になる可能性もありますのでご注意ください。</p>
     </div>
     <h3 id="howtouse">使い方</h3>
@@ -65,12 +63,21 @@
       <ul>
         <li>右クリックメニューからカード名をコピーしたり、MTG Wiki のカード評価ページに移動したりできます。</li>
         <li>右上の歯車アイコンのボタンから、このアプリで使用するフォントとそのサイズを設定できます。その他、ウィンドウサイズなどの設定は、%LocalAppData%\co3366353 フォルダに保存されます。</li>
+        <li>起動時に、新しいバージョンがリリースされているかどうかを自動で確認します（ダウンロードまではしません）。不要な場合は設定から無効にしてください。</li>
       </ul>
       <p>詳しい説明や既知の不具合については <a href="https://github.com/fog-bank/mojp/wiki">GitHub 内の Wiki</a> をご確認ください。</p>
+    </div>
+    <h3 id="mechanism">仕組み</h3>
+    <div>
+      <p>
+        <a href="https://msdn.microsoft.com/ja-jp/library/ms753388.aspx">UI Automation</a> API を利用して、Preview Pane 内のテキストを検索しています。
+        メインロジックは <a href="https://github.com/fog-bank/mojp/blob/master/mojp/MainViewModel.cs#L385">MainViewModel.cs</a> 内の OnCapture メソッド以下です。
+      </p>
     </div>
     <h3 id="resource">リソース</h3>
     <div>
       <p>このアプリで表示する日本語テキストは、<a href="http://whisper.wisdom-guild.net/">WHISPER</a> の検索結果をテキストファイルに保存したものに基づいています。</p>
+      <p>アイコンの一部は Iconfinder の作品 [<a href="https://www.iconfinder.com/icons/6000/book_dictionary_learn_school_translate_icon#size=128">1</a>, <a href="https://www.iconfinder.com/icons/285680/camera_icon#size=16">2</a>] を利用しています。</p>
       <h4><span class="underline">手動でカードデータを更新する方法</span></h4>
       <ol>
         <li>GitHub のリポジトリから <a href="https://github.com/fog-bank/mojp/raw/master/mojp/appendix.xml" type="text/xml">appendix.xml</a>（ファイル名固定）をダウンロードして、アプリケーション フォルダ（mojp.exe があるフォルダ）に保存しておく。</li>
