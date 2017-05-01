@@ -497,13 +497,8 @@
     <card name="Snow-Covered Plains" jaName="冠雪の平地" type="基本氷雪土地 ― 平地">（(Ｔ)：あなたのマナ・プールに(白)を加える。）</card>
     <card name="Snow-Covered Swamp" jaName="冠雪の沼" type="基本氷雪土地 ― 沼">（(Ｔ)：あなたのマナ・プールに(黒)を加える。）</card>
     <!-- テキストが正常でないカード -->
-    <card name="Aether Meltdown" jaName="霊気溶融" type="エンチャント ― オーラ">瞬速（あなたはこの呪文を、あなたがインスタントを唱えられるときならいつでも唱えてよい。）
-エンチャント（クリーチャーか機体）
-霊気溶融が戦場に出たとき、あなたは(Ｅ)(Ｅ)（エネルギー・カウンター２個）を得る。
-エンチャントされているパーマネントは-4/-0の修整を受ける。</card>
     <card name="As Foretold" jaName="予言により" type="エンチャント">あなたのアップキープの開始時に、予言によりの上に時間カウンターを１個置く。
 毎ターン１回、あなたは点数で見たマナ・コストがＸ以下の呪文を、それのマナ・コストではなく(０)を支払って唱えてもよい。Ｘは予言によりの上に置かれている時間カウンターの総数に等しい。</card>
-    <card name="Bitter Revelation" jaName="苦々しい天啓" type="ソーサリー">あなたのライブラリーの一番上からカードを４枚見る。そのうち２枚をあなたの手札に加え、残りをあなたの墓地に置く。あなたは２点のライフを失う。</card>
     <card name="Deem Worthy" jaName="蓋世の誉れ" type="インスタント">クリーチャー１体を対象とする。蓋世の誉れはそれに７点のダメージを与える。
 サイクリング(３)(赤)（(３)(赤),このカードを捨てる：カードを１枚引く。）
 あなたが蓋世の誉れをサイクリングしたとき、クリーチャー１体を対象とする。あなたは「蓋世の誉れはそれに２点のダメージを与える。」を選んでもよい。</card>
@@ -517,9 +512,6 @@
     <card name="Grenzo, Havoc Raiser" jaName="騒乱の発端、グレンゾ" type="伝説のクリーチャー ― ゴブリン・ならず者" pt="2/2">あなたがコントロールするクリーチャー１体がプレイヤー１人に戦闘ダメージを与えるたび、以下から１つを選ぶ。
 ・そのプレイヤーがコントロールするクリーチャー１体を対象とし、それを使嗾する。
 ・そのプレイヤーのライブラリーの一番上のカードを追放する。ターン終了時まで、あなたは任意のマナを望む色のマナであるかのように支払ってそのカードを唱えてもよい。</card>
-  <card name="Liliana, Death Wielder" jaName="死の使い手、リリアナ" type="プレインズウォーカー ― リリアナ" pt="5">[+2]：クリーチャー最大１体を対象とし、それの上に-1/-1カウンターを１個置く。
-[-3]：-1/-1カウンターが置かれているクリーチャー１体を対象とし、それを破壊する。
-[-10]：あなたの墓地からすべてのクリーチャー・カードを戦場に戻す。</card>
     <card name="Magma Jet" jaName="マグマの噴流" type="インスタント">クリーチャー１体かプレイヤー１人を対象とする。マグマの噴流はそれに２点のダメージを与える。占術２を行う。</card>
     <card name="Prepare" jaName="枕戈" type="インスタント" related="Fight" wikilink="枕戈+待旦/Prepare+Fight">クリーチャー１体を対象とし、それをアンタップする。ターン終了時まで、それは+2/+2の修整を受けるとともに絆魂を得る。</card>
     <card name="Rhonas's Monument" jaName="ロナスの碑" type="伝説のアーティファクト">あなたが緑のクリーチャー・呪文を唱えるためのコストは(１)少なくなる。
@@ -549,8 +541,6 @@
 あなたがカードを１枚捨てるたび、あなたは１点のライフを失う。</card>
     <card name="Quarantine Field" jaName="隔離の場" type="エンチャント">隔離の場は、孤立カウンターがＸ個置かれた状態で戦場に出る。
 隔離の場が戦場に出たとき、これの上に置かれている孤立カウンター１個につき、対戦相手がコントロールする土地でないパーマネント最大１つを対象とし、隔離の場が戦場を離れるまでそれらを追放する。</card>
-    <card name="Trial of Knowledge" jaName="知識の試練" type="エンチャント">知識の試練が戦場に出たとき、カードを３枚引き、その後カード１枚を捨てる。
-カルトーシュが１つあなたのコントロール下で戦場に出たとき、知識の試練をオーナーの手札に戻す。</card>
     <!-- テキストが正常でないカード：テンプレート外の表現 -->
     <card name="An-Havva Inn" jaName="An-Havva Inn" type="ソーサリー">あなたはＸに１を足した点数のライフを得る。Ｘは戦場に出ている緑のクリーチャーの総数に等しい。</card>
     <card name="Arachnus Spinner" jaName="アラクナスの紡ぎ手" type="クリーチャー ― 蜘蛛" pt="5/7">到達
@@ -607,6 +597,7 @@
     <card name="Unburial Rites" jaName="掘葬の儀式" type="ソーサリー">あなたの墓地からクリーチャー・カード１枚を対象とし、それを戦場に戻す。
 フラッシュバック(３)(白)（あなたはあなたの墓地から、このカードをこれのフラッシュバック・コストで唱えてもよい。その後、これを追放する。）</card>
     <!-- テキストが正常でないカード：テンプレート外の表現 (カードの枚数) -->
+    <card name="Bitter Revelation" jaName="苦々しい天啓" type="ソーサリー">あなたのライブラリーの一番上からカードを４枚見る。そのうち２枚をあなたの手札に加え、残りをあなたの墓地に置く。あなたは２点のライフを失う。</card>
     <card name="Lay Bare the Heart" jaName="心臓露呈" type="ソーサリー">対戦相手１人を対象とする。そのプレイヤーは自分の手札を公開する。あなたはその中から伝説でも土地でもないカード１枚を選ぶ。そのプレイヤーはそのカードを捨てる。</card>
     <card name="Sea Gate Oracle" jaName="海門の神官" type="クリーチャー ― 人間・ウィザード" pt="1/3">海門の神官が戦場に出たとき、あなたのライブラリーの一番上からカードを２枚見る。そのうち１枚をあなたの手札に加え、もう１枚をあなたのライブラリーの一番下に置く。</card>
     <card name="Tormenting Voice" jaName="苦しめる声" type="ソーサリー">苦しめる声を唱えるための追加コストとして、カード１枚を捨てる。
@@ -1129,7 +1120,227 @@ Thallid Devourerから胞子カウンターを３個取り除く：緑の1/1の�
     <card name="Volatile Chimera" />
     <card name="Whispergear Sneak" />
     <!-- ジョーク・エキスパンション -->
+    <card name="_____" />
+    <card name="&quot;Ach! Hans, Run!&quot;" />
+    <card name="Aesthetic Consultation" />
+    <card name="Ambiguity" />
+    <card name="Artful Looter" />
+    <card name="Ashnod's Coupon" />
+    <card name="Ass Whuppin'" />
+    <card name="Assquatch" />
+    <card name="Avatar of Me" />
+    <card name="AWOL" />
+    <card name="B-I-N-G-O" />
+    <card name="Bad Ass" />
+    <card name="Blacker Lotus" />
+    <card name="Blast from the Past" />
+    <card name="Bloodletter" />
+    <card name="Booster Tutor" />
+    <card name="Bosom Buddy" />
+    <card name="Bronze Calendar" />
+    <card name="Brushstroke Paintermage" />
+    <card name="Bureaucracy" />
+    <card name="Burning Cinder Fury of Crimson Chaos Fire" />
+    <card name="Bursting Beebles" />
+    <card name="Cardboard Carapace" />
+    <card name="Cardpecker" />
+    <card name="Carnivorous Death-Parrot" />
+    <card name="Censorship" />
+    <card name="Chaos Confetti" />
+    <card name="Cheap Ass" />
+    <card name="Cheatyface" />
+    <card name="Checks and Balances" />
+    <card name="Circle of Protection: Art" />
+    <card name="City of Ass" />
+    <card name="Clay Pigeon" />
+    <card name="Collector Protector" />
+    <card name="Common Courtesy" />
+    <card name="Creature Guy" />
+    <card name="Curse of the Fire Penguin" />
+    <card name="Deal Damage" />
+    <card name="Double Cross" />
+    <card name="Double Deal" />
+    <card name="Double Dip" />
+    <card name="Double Header" />
+    <card name="Double Play" />
+    <card name="Double Take" />
+    <card name="Drawn Together" />
+    <card name="Duh" />
+    <card name="Dumb Ass" />
+    <card name="Elvish House Party" />
+    <card name="Emcee" />
+    <card name="Enter the Dungeon" />
+    <card name="Erase (Not the Urza's Legacy One)" />
+    <card name="Eye to Eye" />
+    <card name="Face to Face" />
+    <card name="Farewell to Arms" />
+    <card name="Fascist Art Director" />
+    <card name="Fat Ass" />
+    <card name="First Come, First Served" />
+    <card name="Flaccify" />
+    <card name="Flock of Rabid Sheep" />
+    <card name="Form of the Squirrel" />
+    <card name="Fowl Play" />
+    <card name="Fraction Jackson" />
+    <card name="Framed!" />
+    <card name="Frankie Peanuts" />
+    <card name="Frazzled Editor" />
+    <card name="Free-for-All" />
+    <card name="Gerrymandering" />
+    <card name="Get a Life" />
+    <card name="Giant Fan" />
+    <card name="Gleemax" />
+    <card name="Gluetius Maximus" />
     <card name="Goblin" />
+    <card name="Goblin Mime" />
+    <card name="Goblin S.W.A.T. Team" />
+    <card name="Goblin Secret Agent" />
+    <card name="Goblin Tutor" />
+    <card name="Granny's Payback" />
+    <card name="Graphic Violence" />
+    <card name="Greater Morphling" />
+    <card name="Growth Spurt" />
+    <card name="Handcuffs" />
+    <card name="Head to Head" />
+    <card name="I'm Rubber, You're Glue" />
+    <card name="Incoming!" />
+    <card name="Infernal Spawn of Infernal Spawn of Evil" />
+    <card name="Jack-in-the-Mox" />
+    <card name="Jester's Sombrero" />
+    <card name="Johnny, Combo Player" />
+    <card name="Keeper of the Sacred Word" />
+    <card name="Kill! Destroy!" />
+    <card name="Ladies' Knight" />
+    <card name="Land Aid '04" />
+    <card name="Landfill" />
+    <card name="Laughing Hyena" />
+    <card name="Letter Bomb" />
+    <card name="Little Girl" />
+    <card name="Look at Me, I'm R&amp;D" />
+    <card name="Look at Me, I'm the DCI" />
+    <card name="Loose Lips" />
+    <card name="Magical Hacker" />
+    <card name="Man of Measure" />
+    <card name="Mana Flair" />
+    <card name="Mana Screw" />
+    <card name="Meddling Kids" />
+    <card name="Mine, Mine, Mine!" />
+    <card name="Mirror Mirror" />
+    <card name="Mise" />
+    <card name="Moniker Mage" />
+    <card name="Monkey Monkey Monkey" />
+    <card name="Mons's Goblin Waiters" />
+    <card name="Mother of Goons" />
+    <card name="Mouth to Mouth" />
+    <card name="Mox Lotus" />
+    <card name="My First Tome" />
+    <card name="Name Dropping" />
+    <card name="Necro-Impotence" />
+    <card name="Now I Know My ABC's" />
+    <card name="Number Crunch" />
+    <card name="Once More with Feeling" />
+    <card name="Orcish Paratroopers" />
+    <card name="Organ Harvest" />
+    <card name="Our Market Research Shows That Players Like Really Long Card Names So We Made this Card to Have the Absolute Longest Card Name Ever Elemental" />
+    <card name="Ow" />
+    <card name="Paper Tiger" />
+    <card name="Persecute Artist" />
+    <card name="Phyrexian Librarian" />
+    <card name="Pointy Finger of Doom" />
+    <card name="Prismatic Wardrobe" />
+    <card name="Psychic Network" />
+    <card name="Punctuate" />
+    <card name="Pygmy Giant" />
+    <card name="Question Elemental?" />
+    <card name="R&amp;D's Secret Lair" />
+    <card name="Rare-B-Gone" />
+    <card name="Red-Hot Hottie" />
+    <card name="Remodel" />
+    <card name="Richard Garfield, Ph.D." />
+    <card name="Ricochet" />
+    <card name="Rock Lobster" />
+    <card name="Rocket-Powered Turbo Slug" />
+    <card name="Rod of Spanking" />
+    <card name="S.N.O.T." />
+    <card name="Saute" />
+    <card name="Save Life" />
+    <card name="Scissors Lizard" />
+    <card name="Sex Appeal" />
+    <card name="Shoe Tree" />
+    <card name="Side to Side" />
+    <card name="Six-y Beast" />
+    <card name="Smart Ass" />
+    <card name="Soldier" />
+    <card name="Sorry" />
+    <card name="Spatula of the Ages" />
+    <card name="Spell Counter" />
+    <card name="Squirrel Farm" />
+    <card name="Standing Army" />
+    <card name="Staying Power" />
+    <card name="Stone-Cold Basilisk" />
+    <card name="Stop That" />
+    <card name="Strategy, Schmategy" />
+    <card name="Super Secret Tech" />
+    <card name="Supersize" />
+    <card name="Symbol Status" />
+    <card name="Tainted Monkey" />
+    <card name="Team Spirit" />
+    <card name="The Cheese Stands Alone" />
+    <card name="The Fallen Apart" />
+    <card name="The Ultimate Nightmare of Wizards of the Coast Customer Service" />
+    <card name="Time Machine" />
+    <card name="Togglodyte" />
+    <card name="Topsy Turvy" />
+    <card name="Touch and Go" />
+    <card name="Toy Boat" />
+    <card name="Uktabi Kong" />
+    <card name="Urza's Contact Lenses" />
+    <card name="Urza's Hot Tub" />
+    <card name="Urza's Science Fair Project" />
+    <card name="Vile Bile" />
+    <card name="Water Gun Balloon Game" />
+    <card name="Wet Willie of the Damned" />
+    <card name="When Fluffy Bunnies Attack" />
+    <card name="Who" />
+    <card name="What" />
+    <card name="When" />
+    <card name="Where" />
+    <card name="Why" />
+    <card name="Wordmail" />
+    <card name="Working Stiff" />
+    <card name="World-Bottling Kit" />
+    <card name="Yet Another Aether Vortex" />
+    <card name="Zombie" />
+    <card name="Zombie Fanboy" />
+    <card name="Zzzyxas's Abyss" />
+    <!-- アストラルセットなど -->
+    <card name="1996 World Champion" />
+    <card name="Arden Angel" />
+    <card name="Ashuzar's Breath" />
+    <card name="Aswan Jaguar" />
+    <card name="Call from the Grave" />
+    <card name="Camatal Scout" />
+    <card name="Faerie Dragon" />
+    <card name="Fraternal Exaltation" />
+    <card name="Gem Bazaar" />
+    <card name="Goblin Polka Band" />
+    <card name="Hepatu's Might" />
+    <card name="Lydari Druid" />
+    <card name="Lydari Elephant" />
+    <card name="Murgish's Cemetery" />
+    <card name="Necropolis of Azar" />
+    <card name="Orcish Catapult" />
+    <card name="Pandora's Box" />
+    <card name="Power Struggle" />
+    <card name="Prismatic Dragon" />
+    <card name="Proposal" />
+    <card name="Rainbow Knights" />
+    <card name="Sadzi's Torrent" />
+    <card name="Shichifukujin Dragon" />
+    <card name="Splendid Genesis" />
+    <card name="Tornellan Protecter" />
+    <card name="Vellukan Dragon" />
+    <card name="Whimsy" />
     <!-- 公式日本語カード名が無いカード -->
     <jaName name="Abbey Matron" />
     <jaName name="Acid Rain" />
@@ -1139,7 +1350,7 @@ Thallid Devourerから胞子カウンターを３個取り除く：緑の1/1の�
     <jaName name="Adventurers' Guildhouse" />
     <jaName name="Aegis of the Meek" />
     <jaName name="Aeolipile" />
-    <!--<jaName name="Aerathi Berserker" />-->
+    <jaName name="Aerathi Berserker" />
     <jaName name="Aesthir Glider" />
     <jaName name="Agent of Stromgald" />
     <jaName name="Aggression" />
@@ -1159,7 +1370,7 @@ Thallid Devourerから胞子カウンターを３個取り除く：緑の1/1の�
     <jaName name="Ancestral Recall" />
     <jaName name="Angel of Light" />
     <jaName name="Angus Mackenzie" />
-    <!--<jaName name="An-Havva Inn" />-->
+    <jaName name="An-Havva Inn" />
     <jaName name="An-Havva Township" />
     <jaName name="An-Zerrin Ruins" />
     <jaName name="Apocalypse Chime" />
@@ -1248,7 +1459,7 @@ Thallid Devourerから胞子カウンターを３個取り除く：緑の1/1の�
     <jaName name="Chromatic Armor" />
     <jaName name="Cinder Storm" />
     <jaName name="Citanul Druid" />
-    <!--<jaName name="City in a Bottle" />-->
+    <jaName name="City in a Bottle" />
     <jaName name="City of Shadows" />
     <jaName name="Clairvoyance" />
     <jaName name="Cleanse" />
@@ -1600,7 +1811,7 @@ Thallid Devourerから胞子カウンターを３個取り除く：緑の1/1の�
     <jaName name="Merchant Ship" />
     <jaName name="Merseine" />
     <jaName name="Mesmeric Trance" />
-    <!--<jaName name="Meteor Shower" />-->
+    <jaName name="Meteor Shower" />
     <jaName name="Mightstone" />
     <jaName name="Mijae Djinn" />
     <jaName name="Mind Whip" />
@@ -1834,7 +2045,7 @@ Thallid Devourerから胞子カウンターを３個取り除く：緑の1/1の�
     <jaName name="Tawnos's Coffin" />
     <jaName name="Telekinesis" />
     <jaName name="Tetsuo Umezawa" />
-    <!--<jaName name="Thallid Devourer" />-->
+    <jaName name="Thallid Devourer" />
     <jaName name="Thawing Glaciers" />
     <jaName name="The Abyss" />
     <jaName name="The Lady of the Mountain" />
@@ -1857,7 +2068,7 @@ Thallid Devourerから胞子カウンターを３個取り除く：緑の1/1の�
     <jaName name="Timberline Ridge" />
     <jaName name="Time Vault" />
     <jaName name="Time Walk" />
-    <!--<jaName name="Timetwister" />-->
+    <jaName name="Timetwister" />
     <jaName name="Timmerian Fiends" />
     <jaName name="Tivadar's Crusade" />
     <jaName name="Tolaria" />
@@ -1933,7 +2144,7 @@ Thallid Devourerから胞子カウンターを３個取り除く：緑の1/1の�
     <jaName name="Willow Satyr" />
     <jaName name="Winter Sky" />
     <jaName name="Winter's Chill" />
-    <!--<jaName name="Winter's Night" />-->
+    <jaName name="Winter's Night" />
     <jaName name="Withering Wisps" />
     <jaName name="Wizards' School" />
     <jaName name="Wood Elemental" />
