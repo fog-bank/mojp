@@ -91,7 +91,7 @@
     <card name="Avatar - Etched Oracle" jaName="Etched Oracle Avatar" type="ヴァンガード" pt="手札 +1/ライフ -4" wikilink="Etched Oracle Avatar">あなたは、あなたが唱える呪文のマナ・コストを支払うのではなく、(白)(青)(黒)(赤)(緑)を支払ってもよい。</card>
     <card name="Avatar - Fallen Angel" jaName="Fallen Angel Avatar" type="ヴァンガード" pt="手札 +0/ライフ -5" wikilink="Fallen Angel Avatar">あなたがコントロールするクリーチャーが１体死亡するたび、対戦相手１人を対象とする。そのプレイヤーは１点のライフを失い、あなたは１点のライフを得る。</card>
     <card name="Avatar - Figure of Destiny" jaName="Figure of Destiny Avatar" type="ヴァンガード" pt="手札 +0/ライフ +3" wikilink="Figure of Destiny Avatar">(Ｘ)：Ｘ個未満の+1/+1カウンターが置かれているクリーチャー１体を対象とする。それの上に+1/+1カウンターを１個置く。</card>
-    <card name="Avatar - Flametongue Kavu" jaName="Flametongue Kavu Avatar" type="ヴァンガード" pt="手札 +0/ライフ -6" wikilink="Flametongue Kavu Avatar">トークンでないクリーチャーが１体あなたのコントロール下で戦場に出るたび、クリーチャー１体を対象とする。前者は後者にＸ点のダメージを与える。Ｘは０から４のうち無作為に選ばれた数である。</card>
+    <card name="Avatar - Flametongue Kavu" jaName="Flametongue Kavu Avatar" type="ヴァンガード" pt="手札 +0/ライフ -6" wikilink="Flametongue Kavu Avatar">トークンでないクリーチャーが１体あなたのコントロール下で戦場に出るたび、クリーチャー１体を対象とする。前者は後者にＸ点のダメージを与える。Ｘは０から４のうち無作為に選ばれた数に等しい。</card>
     <card name="Avatar - Frenetic Efreet" jaName="Frenetic Efreet Avatar" type="ヴァンガード" pt="手札 -1/ライフ -3" wikilink="Frenetic Efreet Avatar">あなたがコントロールするパーマネントはフェイジングを持つ。（それはあなたの各アンタップ・ステップの間であなたがアンタップする前にフェイズ・インまたはフェイズ・アウトする。それがフェイズ・アウトされている間、それはそれが存在しないかのように扱う。）
 あなたの終了ステップの開始時に、コイン投げをする。あなたがコイン投げに勝った場合、このターンに続いて追加の１ターンを行う。</card>
     <card name="Avatar - Goblin Warchief" jaName="Goblin Warchief Avatar" type="ヴァンガード" pt="手札 +1/ライフ +2" wikilink="Goblin Warchief Avatar">あなたがコントロールする攻撃クリーチャーは+1/+0の修整を受ける。</card>
@@ -114,7 +114,7 @@
     <card name="Avatar - Jhoira of the Ghitu" jaName="Jhoira of the Ghitu Avatar" type="ヴァンガード" pt="手札 +1/ライフ +0" wikilink="Jhoira of the Ghitu Avatar">(３),カードを１枚捨てる：無作為に選ばれたインスタント・カード３枚をコピーする。あなたはそれらのコピーのうちの１つをマナ・コストを支払わずに唱えてもよい。
 (３),カードを１枚捨てる：無作為に選ばれたソーサリー・カード３枚をコピーする。あなたはそれらのコピーのうちの１つをマナ・コストを支払わずに唱えてもよい。この能力は、あなたがソーサリーを唱えられるときにのみ起動できる。</card>
     <card name="Avatar - Karona, False God" jaName="Karona, False God Avatar" type="ヴァンガード" pt="手札 -1/ライフ +8" wikilink="Karona, False God Avatar">あなたのアップキープの開始時に、対戦相手１人を対象とする。無作為に選んだあなたがコントロールするパーマネント１つと、無作為に選んだそのプレイヤーがコントロールするパーマネント１つのコントロールを交換する。</card>
-    <card name="Avatar - Kresh the Bloodbraided" jaName="Kresh the Bloodbraided Avatar" type="ヴァンガード" pt="手札 +1/ライフ -3" wikilink="Kresh the Bloodbraided Avatar">あなたがコントロールするクリーチャーが１体貪食されるたび、緑のX/Xのウーズ・クリーチャー・トークンを１体生成する。Ｘはその貪食されたクリーチャーのパワーである。</card>
+    <card name="Avatar - Kresh the Bloodbraided" jaName="Kresh the Bloodbraided Avatar" type="ヴァンガード" pt="手札 +1/ライフ -3" wikilink="Kresh the Bloodbraided Avatar">あなたがコントロールするクリーチャーが１体貪食されるたび、緑のX/Xのウーズ・クリーチャー・トークンを１体生成する。Ｘはその貪食されたクリーチャーのパワーに等しい。</card>
     <card name="Avatar - Loxodon Hierarch" jaName="Loxodon Hierarch Avatar" type="ヴァンガード" pt="手札 +0/ライフ +12" wikilink="Loxodon Hierarch Avatar">パーマネント１つを生け贄に捧げる：あなたがコントロールするクリーチャー１体を対象とし、それを再生する。</card>
     <card name="Avatar - Lyzolda, the Blood Witch" jaName="Lyzolda, the Blood Witch Avatar" type="ヴァンガード" pt="手札 -1/ライフ -1" wikilink="Lyzolda, the Blood Witch Avatar">暴勇 ― あなたの手札にカードがない限り、あなたがコントロールする発生源がいずれかのクリーチャーかプレイヤーにダメージを与える場合、代わりにそれはそのクリーチャーかプレイヤーにその２倍のダメージを与える。
 暴勇 ― あなたの終了ステップの開始時に、あなたの手札にカードがない場合、各対戦相手はそれぞれ、カードを１枚捨てる。</card>
@@ -778,6 +778,8 @@
 [-7]：カードを３枚引く。あなたは「あなたは、あなたの手札から呪文を、それらのマナ・コストを支払うことなく唱えてもよい。」を持つ紋章を得る。</card>
     <card name="Winding Canyons" jaName="七曲がりの峡谷" type="土地">(Ｔ)：あなたのマナ・プールに(◇)を加える。
 (２),(Ｔ)：ターン終了時まで、あなたはクリーチャー・呪文を、それが瞬速を持っているかのように唱えてもよい。</card>
+    <card name="Wrexial, the Risen Deep" jaName="目覚めし深海、レクシャル" type="伝説のクリーチャー ― クラーケン" pt="5/8">島渡り、沼渡り（このクリーチャーは、防御プレイヤーが島か沼をコントロールしているかぎりブロックされない。）
+目覚めし深海、レクシャルがプレイヤー１人に戦闘ダメージを与えるたび、そのプレイヤーの墓地からインスタント・カード１枚かソーサリー・カード１枚を対象とする。あなたはそれを、そのマナ・コストを支払うことなく唱えてもよい。このターン、そのカードが墓地に置かれる場合、代わりにそれを追放する。</card>
     <!-- 最新オラクル未対応(AKH)：カードを唱えらない/プレイできない -->
     <card name="Circu, Dimir Lobotomist" jaName="ディミーアの脳外科医、シアクー" type="伝説のクリーチャー ― 人間・ウィザード" pt="2/3">あなたが青の呪文を唱えるたび、ライブラリー１つを対象とし、その一番上のカードを追放する。
 あなたが黒の呪文を唱えるたび、ライブラリー１つを対象とし、その一番上のカードを追放する。
@@ -1069,7 +1071,7 @@ Thallid Devourerから胞子カウンターを３個取り除く：緑の1/1の�
 エンチャントされているクリーチャーは+6/+6の修整を受ける。
 (緑)(緑)(緑),ワーム編みのとぐろを生け贄に捧げる：緑の6/6のワーム・クリーチャー・トークンを１体生成する。</card>
     <card name="Xathrid Necromancer" jaName="ザスリッドの屍術師" type="クリーチャー ― 人間・ウィザード" pt="2/2">ザスリッドの屍術師かあなたがコントロールする他の人間・クリーチャーが１体死亡するたび、黒の2/2のゾンビ・クリーチャー・トークンを１体タップ状態で生成する。</card>
-    <card name="Xenagos, the Reveler" jaName="歓楽者ゼナゴス" type="プレインズウォーカー ― ゼナゴス" pt="3">[+1]：あなたのマナ・プールに、(赤)および(緑)の好きな組み合わせのマナＸ点を加える。Ｘは、あなたがコントロールするクリーチャーの総数である。
+    <card name="Xenagos, the Reveler" jaName="歓楽者ゼナゴス" type="プレインズウォーカー ― ゼナゴス" pt="3">[+1]：あなたのマナ・プールに、(赤)および(緑)の好きな組み合わせのマナＸ点を加える。Ｘは、あなたがコントロールするクリーチャーの総数に等しい。
 [0]：速攻を持つ赤であり緑である2/2のサテュロス・クリーチャー・トークンを１体生成する。
 [-6]：あなたのライブラリーの一番上からカードを７枚追放する。あなたはそれらのカードの中から望む枚数のクリーチャー・カードおよび土地・カードを戦場に出してもよい。</card>
     <card name="Young Pyromancer" jaName="若き紅蓮術士" type="クリーチャー ― 人間・シャーマン" pt="2/1">あなたがインスタント・呪文かソーサリー・呪文を１つ唱えるたび、赤の1/1のエレメンタル・クリーチャー・トークンを１体生成する。</card>
