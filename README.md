@@ -24,7 +24,7 @@
 ### その他の機能
 * 右クリックメニューからカード名をコピーしたり、[MTG Wiki](http://mtgwiki.com/) のカード評価ページに移動したりできます。
 * 右上の歯車アイコンのボタンから、このアプリで使用するフォントとそのサイズを設定できます。その他、ウィンドウサイズなどの設定は、%LocalAppData%\co3366353 フォルダに保存されます。
-* 起動時に、新しいバージョンがリリースされているかどうかを自動で確認します（ダウンロードまではしません）。不要な場合は設定から無効にしてください。
+* 起動時に、https://fog-bank.github.io/mojp/ にアクセスして、新しいバージョンがリリースされているかどうかを自動で確認します（ダウンロードまではしません）。不要な場合は設定から無効にしてください。
 
 ## 仕組み
 [UI Automation](https://msdn.microsoft.com/ja-jp/library/ms753388.aspx) API を利用して、Preview Pane 内のテキストを検索しています。メインロジックは [MainViewModel.cs](https://github.com/fog-bank/mojp/blob/master/mojp/MainViewModel.cs#L385) 内の OnCapture メソッド以下です。
