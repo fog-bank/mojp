@@ -280,25 +280,24 @@ namespace Mojp
 		{
 			card.Text = string.Join("\n", texts);
 
-			string wikilink = card.HasJapaneseName ? card.JapaneseName + "/" + card.Name : card.Name;
+            string wikilink = card.HasJapaneseName ? card.JapaneseName + "/" + card.Name : card.Name;
 
-			// AE 合字処理 (Wiki は AE のままなので、リンクもそのようにする)
-			string processed = card.Name.Replace("AE", "Ae");
-			if (card.Name != processed)
-			{
-				card.Name = processed;
-				card.WikiLink = wikilink;
-			}
+            // AE 合字処理
+            string processed = card.Name.Replace("AE", "Ae");
+            if (card.Name != processed)
+            {
+                card.Name = processed;
+                //card.WikiLink = wikilink;     // Wiki も Ae に統一された
+            }
 
-			// 次元 (次元カードのページ URL には接尾辞で " (次元カード)" がつく)
-			if (card.Type.StartsWith("次元"))
+            // 次元 (次元カードのページ URL には接尾辞で " (次元カード)" がつく)
+            if (card.Type.StartsWith("次元"))
 			{
 				if (card.WikiLink == null)
-					card.WikiLink = wikilink + " (次元カード)";
+                    card.WikiLink = wikilink + " (次元カード)";
 				else
 					card.WikiLink += " (次元カード)";
 			}
-
 			return card;
 		}
 
