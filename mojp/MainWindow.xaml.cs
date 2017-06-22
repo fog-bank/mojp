@@ -10,140 +10,138 @@ using System.Windows.Input;
 
 namespace Mojp
 {
-	public partial class MainWindow : Window
-	{
-		public MainWindow()
-		{
-			InitializeComponent();
-		}
+    public partial class MainWindow : Window
+    {
+        public MainWindow()
+        {
+            InitializeComponent();
+        }
 
-		public MainViewModel ViewModel
-		{
-			get { return DataContext as MainViewModel; }
-		}
+        public MainViewModel ViewModel
+        {
+            get { return DataContext as MainViewModel; }
+        }
 
-		protected override void OnClosing(CancelEventArgs e)
-		{
-			ViewModel.Release();
+        protected override void OnClosing(CancelEventArgs e)
+        {
+            ViewModel.Release();
 
-			base.OnClosing(e);
-		}
+            base.OnClosing(e);
+        }
 
-		// ウィンドウ全体でドラッグ可能にする
-		protected override void OnMouseMove(MouseEventArgs e)
-		{
-			base.OnMouseMove(e);
+        // ウィンドウ全体でドラッグ可能にする
+        protected override void OnMouseMove(MouseEventArgs e)
+        {
+            base.OnMouseMove(e);
 
-			// スクロールバーやリンクがある所はドラッグを開始しない（ボタンは処理済みと思われる）
-			if (!e.Handled && e.LeftButton == MouseButtonState.Pressed && !(e.OriginalSource is Thumb || e.OriginalSource is Hyperlink))
-				DragMove();
-		}
+            // スクロールバーやリンクがある所はドラッグを開始しない（ボタンは処理済みと思われる）
+            if (!e.Handled && e.LeftButton == MouseButtonState.Pressed && !(e.OriginalSource is Thumb || e.OriginalSource is Hyperlink))
+                DragMove();
+        }
 
-		private async void OnInitialized(object sender, EventArgs e)
-		{
-			if (File.Exists("cards.xml"))
-			{
-				imgLoading.Visibility = Visibility.Visible;
+        private async void OnInitialized(object sender, EventArgs e)
+        {
+            if (File.Exists("cards.xml"))
+            {
+                imgLoading.Visibility = Visibility.Visible;
 
-				await Task.Run(() =>
-				{
-					App.SetCardInfosFromXml("cards.xml");
-				});
+                await Task.Run(() =>
+                {
+                    App.SetCardInfosFromXml("cards.xml");
+                });
 
-				imgLoading.Visibility = Visibility.Hidden;
-			}
-			ViewModel.SetRefreshTimer(Dispatcher);
+                imgLoading.Visibility = Visibility.Hidden;
+            }
+            ViewModel.SetRefreshTimer(Dispatcher);
 
-			if (ViewModel.AutoVersionCheck && await App.IsLatestRelease(ViewModel.AcceptsPrerelease))
-				notifier.Visibility = Visibility.Visible;
-		}
+            if (ViewModel.AutoVersionCheck && await App.IsLatestRelease(ViewModel.AcceptsPrerelease))
+                notifier.Visibility = Visibility.Visible;
+        }
 
-		private void OnCapture(object sender, RoutedEventArgs e)
-		{
-			ViewModel.CapturePreviewPane();
-		}
+        private void OnCapture(object sender, RoutedEventArgs e)
+        {
+            ViewModel.CapturePreviewPane();
+        }
 
-		private void OnCopyCardName(object sender, RoutedEventArgs e)
-		{
-			Clipboard.SetText(ViewModel.SelectedCard.JapaneseName);
-		}
+        private void OnCopyCardName(object sender, RoutedEventArgs e)
+        {
+            Clipboard.SetText(ViewModel.SelectedCard.JapaneseName);
+        }
 
-		private void OnCopyEnglishName(object sender, RoutedEventArgs e)
-		{
-			// MO ヴァンガードは MO 上ではカード名が "Avatar - ..." となっている。
-			//（ただしゲーム上ではカード名に "Avatar - " を含まない。例：Necropotence Avatar のカードテキスト）
-			// そこで、日本語名の代わりにオラクルでのカード名である "... Avatar" を表示し、それをコピーするようにする
-			if (ViewModel.SelectedCard.Type != "ヴァンガード")
-				Clipboard.SetText(ViewModel.SelectedCard.Name);
-			else
-				Clipboard.SetText(ViewModel.SelectedCard.JapaneseName);
-		}
+        private void OnCopyEnglishName(object sender, RoutedEventArgs e)
+        {
+            // MO ヴァンガードは MO 上ではカード名が "Avatar - ..." となっている。
+            //（ただしゲーム上ではカード名に "Avatar - " を含まない。例：Necropotence Avatar のカードテキスト）
+            // そこで、日本語名の代わりにオラクルでのカード名である "... Avatar" を表示し、それをコピーするようにする
+            if (ViewModel.SelectedCard.Type != "ヴァンガード")
+                Clipboard.SetText(ViewModel.SelectedCard.Name);
+            else
+                Clipboard.SetText(ViewModel.SelectedCard.JapaneseName);
+        }
 
-		private void OnGoToWiki(object sender, RoutedEventArgs e)
-		{
-			var card = ViewModel.SelectedCard;
-			string link = card.WikiLink;
+        private void OnGoToWiki(object sender, RoutedEventArgs e)
+        {
+            var card = ViewModel.SelectedCard;
+            string link = card.WikiLink;
 
-			if (link == null)
-			{
-				if (card.HasJapaneseName)
-				{
-					link = Uri.EscapeUriString(card.JapaneseName) + "/" + card.Name.Replace(' ', '_');
-				}
-				else
-					link = card.Name.Replace(' ', '_');
-			}
-			else
-				link = Uri.EscapeUriString(link);
+            if (link == null)
+            {
+                if (card.HasJapaneseName)
+                {
+                    link = Uri.EscapeUriString(card.JapaneseName) + "/" + card.Name.Replace(' ', '_');
+                }
+                else
+                    link = card.Name.Replace(' ', '_');
+            }
+            else
+                link = Uri.EscapeUriString(link);
 
-			Process.Start("http://mtgwiki.com/wiki/" + link);
-		}
+            Process.Start("http://mtgwiki.com/wiki/" + link);
+        }
 
-		private async void OnOption(object sender, RoutedEventArgs e)
-		{
-			// 設定画面を上にする
-			Topmost = false;
+        private async void OnOption(object sender, RoutedEventArgs e)
+        {
+            var dlg = new OptionDialog(DataContext);
+            dlg.Owner = this;
+            dlg.ShowDialog();
 
-			var dlg = new OptionDialog(DataContext);
-			dlg.ShowDialog();
+            Topmost = ViewModel.TopMost;
 
-			Topmost = ViewModel.TopMost;
+            // Preview Pane の自動探索の設定を反映
+            ViewModel.SetRefreshTimer(Dispatcher);
 
-			// Preview Pane の自動探索の設定を反映
-			ViewModel.SetRefreshTimer(Dispatcher);
+            notifier.Visibility = ViewModel.AutoVersionCheck &&
+                await App.IsLatestRelease(ViewModel.AcceptsPrerelease) ? Visibility.Visible : Visibility.Collapsed;
+        }
 
-			notifier.Visibility = ViewModel.AutoVersionCheck && 
-				await App.IsLatestRelease(ViewModel.AcceptsPrerelease) ? Visibility.Visible : Visibility.Collapsed;
-		}
+        private void OnGoToNewRelease(object sender, RoutedEventArgs e)
+        {
+            notifier.Visibility = Visibility.Collapsed;
+            Process.Start((sender as Hyperlink).ToolTip.ToString());
+        }
 
-		private void OnGoToNewRelease(object sender, RoutedEventArgs e)
-		{
-			notifier.Visibility = Visibility.Collapsed;
-			Process.Start((sender as Hyperlink).ToolTip.ToString());
-		}
+        private void OnCloseNotifier(object sender, RoutedEventArgs e)
+        {
+            notifier.Visibility = Visibility.Collapsed;
+        }
 
-		private void OnCloseNotifier(object sender, RoutedEventArgs e)
-		{
-			notifier.Visibility = Visibility.Collapsed;
-		}
+        private async void OnHide(object sender, RoutedEventArgs e)
+        {
+            Visibility = Visibility.Hidden;
 
-		private async void OnHide(object sender, RoutedEventArgs e)
-		{
-			Visibility = Visibility.Hidden;
+            await Task.Delay(5000);
 
-			await Task.Delay(5000);
+            Visibility = Visibility.Visible;
+        }
 
-			Visibility = Visibility.Visible;
-		}
+        private void OnWindowMinimize(object sender, RoutedEventArgs e)
+        {
+            SystemCommands.MinimizeWindow(this);
+        }
 
-		private void OnWindowMinimize(object sender, RoutedEventArgs e)
-		{
-			SystemCommands.MinimizeWindow(this);
-		}
-
-		private void OnWindowClose(object sender, RoutedEventArgs e)
-		{
-			SystemCommands.CloseWindow(this);
-		}
-	}
+        private void OnWindowClose(object sender, RoutedEventArgs e)
+        {
+            SystemCommands.CloseWindow(this);
+        }
+    }
 }

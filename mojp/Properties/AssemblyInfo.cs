@@ -32,12 +32,12 @@ using System.Windows;
 
 
 [assembly: ThemeInfo(
-	ResourceDictionaryLocation.None, //テーマ固有のリソース ディクショナリが置かれている場所
-									 //(リソースがページ、
-									 //またはアプリケーション リソース ディクショナリに見つからない場合に使用されます)
-	ResourceDictionaryLocation.SourceAssembly //汎用リソース ディクショナリが置かれている場所
-											  //(リソースがページ、
-											  //アプリケーション、またはいずれのテーマ固有のリソース ディクショナリにも見つからない場合に使用されます)
+    ResourceDictionaryLocation.None, //テーマ固有のリソース ディクショナリが置かれている場所
+                                     //(リソースがページ、
+                                     //またはアプリケーション リソース ディクショナリに見つからない場合に使用されます)
+    ResourceDictionaryLocation.SourceAssembly //汎用リソース ディクショナリが置かれている場所
+                                              //(リソースがページ、
+                                              //アプリケーション、またはいずれのテーマ固有のリソース ディクショナリにも見つからない場合に使用されます)
 )]
 
 
@@ -52,4 +52,4 @@ using System.Windows;
 // 既定値にすることができます:
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.4.0.0")]
-[assembly: AssemblyFileVersion("1.4.20620.10")]
+[assembly: AssemblyFileVersion("1.4.20623.10")]
