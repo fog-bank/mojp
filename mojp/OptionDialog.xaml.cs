@@ -3,78 +3,111 @@ using System.Diagnostics;
 using System.IO;
 using System.Text;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Documents;
+using System.Windows.Input;
 using System.Windows.Media;
 using Microsoft.Win32;
 
 namespace Mojp
 {
-	/// <summary>
-	/// このアプリケーションの設定ダイアログを表します。
-	/// </summary>
-	public partial class OptionDialog : Window
-	{
-		public OptionDialog(object viewModel)
-		{
-			InitializeComponent();
+    /// <summary>
+    /// このアプリケーションの設定ダイアログを表します。
+    /// </summary>
+    public partial class OptionDialog : Window
+    {
+        public OptionDialog(object viewModel)
+        {
+            InitializeComponent();
 
-			var vm = viewModel as MainViewModel;
-			var fonts = Fonts.SystemFontFamilies;
-			var fontNames = new List<string>(fonts.Count);
-			var lang = this.Language;
+            var vm = viewModel as MainViewModel;
+            var fonts = Fonts.SystemFontFamilies;
+            var fontNames = new List<string>(fonts.Count);
+            var lang = this.Language;
 
-			foreach (var font in fonts)
-			{
-				// フォント名に日本語があるなら、それを使う
-				string source;
-				if (!font.FamilyNames.TryGetValue(lang, out source))
-					source = font.Source;
+            foreach (var font in fonts)
+            {
+                // フォント名に日本語があるなら、それを使う
+                string source;
+                if (!font.FamilyNames.TryGetValue(lang, out source))
+                    source = font.Source;
 
-				fontNames.Add(source);
+                fontNames.Add(source);
 
-				// フォント名を日本語で表示する前のバージョンのための措置 (~ 1.2.11030.7)
-				if (font.Source == vm.FontFamily)
-					vm.FontFamily = source;
-			}
-			fontNames.Sort();
-			this.cmbFonts.ItemsSource = fontNames;
-			
-			this.DataContext = vm;
-		}
+                // フォント名を日本語で表示する前のバージョンのための措置 (~ 1.2.11030.7)
+                if (font.Source == vm.FontFamily)
+                    vm.FontFamily = source;
+            }
+            fontNames.Sort();
+            this.cmbFonts.ItemsSource = fontNames;
 
-		/// <summary>
-		/// WHISPER の検索結果を格納したテキストファイルからカードテキストデータを構築します。必要なら永続化します。
-		/// </summary>
-		private void OnBrowseSearchTxt(object sender, RoutedEventArgs e)
-		{
-			imgLoaded.Visibility = Visibility.Collapsed;
+            this.DataContext = vm;
+        }
 
-			var dlg = new OpenFileDialog();
-			dlg.FileName = "search.txt";
-			dlg.CheckFileExists = true;
-			dlg.Filter = "すべてのファイル (*.*)|*.*";
+        /// <summary>
+        /// WHISPER の検索結果を格納したテキストファイルからカードテキストデータを構築します。必要なら永続化します。
+        /// </summary>
+        private void OnBrowseSearchTxt(object sender, RoutedEventArgs e)
+        {
+            imgLoaded.Visibility = Visibility.Collapsed;
 
-			if (dlg.ShowDialog(this) == true)
-			{
-				using (var stream = dlg.OpenFile())
-				using (var sr = new StreamReader(stream, Encoding.GetEncoding("shift-jis")))
-				{
-					App.SetCardInfosFromWhisper(sr);
+            var dlg = new OpenFileDialog();
+            dlg.FileName = "search.txt";
+            dlg.CheckFileExists = true;
+            dlg.Filter = "すべてのファイル (*.*)|*.*";
 
-					if (File.Exists("appendix.xml"))
-						App.FixCardInfo("appendix.xml");
+            if (dlg.ShowDialog(this) == true)
+            {
+                using (var stream = dlg.OpenFile())
+                using (var sr = new StreamReader(stream, Encoding.GetEncoding("shift-jis")))
+                {
+                    App.SetCardInfosFromWhisper(sr);
 
-					if (cbxSaveDb.IsChecked == true)
-						App.SaveAsXml("cards.xml");
+                    if (File.Exists("appendix.xml"))
+                        App.FixCardInfo("appendix.xml");
 
-					imgLoaded.Visibility = Visibility.Visible;
-				}
-			}
-		}
+                    if (cbxSaveDb.IsChecked == true)
+                        App.SaveAsXml("cards.xml");
 
-		private void OnClickHyperlink(object sender, RoutedEventArgs e)
-		{
-			Process.Start((sender as Hyperlink).ToolTip.ToString());
-		}
-	}
+                    imgLoaded.Visibility = Visibility.Visible;
+                }
+            }
+        }
+
+        private void OnClickHyperlink(object sender, RoutedEventArgs e)
+        {
+            Process.Start((sender as Hyperlink).ToolTip.ToString());
+        }
+
+        private void OnTestBoxKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key != Key.Enter)
+                return;
+
+            var tbx = sender as TextBox;
+
+            if (tbx.Text == null)
+                return;
+
+            if (!App.Cards.TryGetValue(tbx.Text, out var target))
+            {
+                foreach (var card in App.Cards.Values)
+                {
+                    if (card.JapaneseName == tbx.Text)
+                    {
+                        target = card;
+                        break;
+                    }
+                }
+            }
+
+            if (target != null)
+            {
+                var vm = DataContext as MainViewModel;
+                vm.Cards.Clear();
+                vm.Cards.Add(target);
+                vm.SelectedIndex = 0;
+            }
+        }
+    }
 }
