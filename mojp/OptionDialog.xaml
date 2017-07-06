@@ -40,7 +40,7 @@
 				<RowDefinition Height="Auto" />
 			</Grid.RowDefinitions>
 			<TextBlock>リリース バージョン</TextBlock>
-			<TextBlock Grid.Column="2">1.5.0 Beta</TextBlock>
+			<TextBlock Grid.Column="2">1.5.0</TextBlock>
 			<TextBlock Grid.Column="3">
 				<Hyperlink ToolTip="https://github.com/fog-bank/mojp/releases" Click="OnClickHyperlink">GitHub に移動</Hyperlink>
 			</TextBlock>
@@ -188,7 +188,7 @@
                 </Grid.ColumnDefinitions>
                 <TextBlock Margin="0,0,10,0">テスト</TextBlock>
                 <TextBox Grid.Column="1" VerticalContentAlignment="Center" 
-                         Text="{Binding SelectedCard.Name, Mode=OneWay}" KeyDown="OnTestBoxKeyDown" />
+                         Text="{Binding SelectedCard.Name, Mode=OneTime}" KeyDown="OnTestBoxKeyDown" />
             </Grid>
 		</Grid>
 		<Button Margin="0,10,0,0" Padding="10,2" HorizontalAlignment="Right" IsCancel="True">OK</Button>
