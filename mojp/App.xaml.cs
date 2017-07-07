@@ -138,7 +138,7 @@ namespace Mojp
                     if (card.EqualsStrict(cards[card.Name]))
                     {
                         // WHISPER が対応した場合に appendix.xml から外したい
-                        identicalNodes.Add(node);
+                        identicalNodes.Add(new XElement("card", new XAttribute("name", card.Name)));
                         Debug.WriteLine(card.Name + " は置換する必要がありません。");
                     }
                     else
