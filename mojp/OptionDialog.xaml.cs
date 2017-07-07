@@ -64,7 +64,7 @@ namespace Mojp
                     App.SetCardInfosFromWhisper(sr);
 
                     if (File.Exists("appendix.xml"))
-                        App.FixCardInfo("appendix.xml");
+                        Card.FixCardInfo("appendix.xml");
 
                     if (cbxSaveDb.IsChecked == true)
                         App.SaveAsXml("cards.xml");

@@ -506,6 +506,14 @@
     <wikilink name="Despair" wikilink="悪戦+苦闘/Driven+Despair" />
   </add>
   <replace>
+    <regex target="name" pattern="’" value="\'" />
+    <regex target="text" pattern="修正" value="修整" />
+    <regex target="text" pattern="対象都市" value="対象とし" />
+    <regex target="text" pattern="(クリーチャー|アーティファクト|エンチャント|インスタント|ソーサリー|土地)(カード|呪文)" value="$1・$2" />
+    <regex target="text" pattern="砂漠カード" value="砂漠・カード" />
+    <regex target="text" pattern="あなたがスピリットか秘儀・呪文を(１つ)?唱えるたび、" value="あなたがスピリット・呪文か秘儀・呪文を１つ唱えるたび、" />
+    <regex target="text" pattern="トークンを([１-９]+)体戦場に出す。" value="トークンを$1体生成する。" />
+    <regex target="text" pattern="(?m)^(不朽|永遠)(.+)であることを除き、これのコピーであるトークンを１体生成する。(.+)はソーサリーとしてのみ行う。）$" value="$1$2であることを除きこれのコピーであるトークンを１体生成する。$1はソーサリーとしてのみ行う。）" />
     <!-- 基本土地 -->
     <card name="Forest" jaName="森" type="基本土地 ― 森">（(Ｔ)：あなたのマナ・プールに(緑)を加える。）</card>
     <card name="Island" jaName="島" type="基本土地 ― 島">（(Ｔ)：あなたのマナ・プールに(青)を加える。）</card>

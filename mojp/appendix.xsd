@@ -41,6 +41,13 @@
         <xs:element name="replace" minOccurs="0" maxOccurs="1">
           <xs:complexType>
             <xs:sequence>
+              <xs:element name="regex" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="target" type="xs:string" use="required" />
+                  <xs:attribute name="pattern" type="xs:string" use="required" />
+                  <xs:attribute name="value" type="xs:string" use="required" />
+                </xs:complexType>
+              </xs:element>
               <xs:element name="card" minOccurs="0" maxOccurs="unbounded">
                 <xs:complexType>
                   <xs:simpleContent>
