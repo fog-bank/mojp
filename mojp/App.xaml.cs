@@ -99,8 +99,7 @@ namespace Mojp
             {
                 string name = (string)node.Attribute("name");
 
-                Card card;
-                if (cards.TryGetValue(name, out card))
+                if (cards.TryGetValue(name, out var card))
                 {
                     Debug.WriteLineIf(card.PT != null, card.Name + " には既に P/T の情報があります。");
                     card.PT = (string)node.Attribute("pt");
@@ -114,8 +113,7 @@ namespace Mojp
             {
                 string name = (string)node.Attribute("name");
 
-                Card card;
-                if (cards.TryGetValue(name, out card))
+                if (cards.TryGetValue(name, out var card))
                 {
                     Debug.WriteLineIf(card.WikiLink != null, card.Name + " には既に wiki へのリンク情報があります。");
                     card.WikiLink = (string)node.Attribute("wikilink");
@@ -157,8 +155,7 @@ namespace Mojp
             {
                 string name = (string)node.Attribute("name");
 
-                Card card;
-                if (cards.TryGetValue(name, out card))
+                if (cards.TryGetValue(name, out var card))
                 {
                     string type = (string)node.Attribute("type");
 
@@ -194,8 +191,7 @@ namespace Mojp
             {
                 string name = (string)node.Attribute("name");
 
-                Card card;
-                if (cards.TryGetValue(name, out card))
+                if (cards.TryGetValue(name, out var card))
                 {
                     Debug.WriteLineIf(card.Name == card.JapaneseName, name + " には既に日本語名がありません。");
                     card.JapaneseName = card.Name;
