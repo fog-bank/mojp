@@ -81,7 +81,7 @@
     <card name="Avatar - Chronatog" jaName="Chronatog Avatar" type="ヴァンガード" pt="手札 -1/ライフ +1" wikilink="Chronatog Avatar">あなたの手札の上限はなくなる。
 (０)：カードを３枚引く。あなたはあなたの次のターンを飛ばす。この能力は、毎ターン１回のみ起動できる。</card>
     <card name="Avatar - Dakkon Blackblade" jaName="Dakkon Blackblade Avatar" type="ヴァンガード" pt="手札 +1/ライフ +0" wikilink="Dakkon Blackblade Avatar">あなたは、あなたの手札から有色のカード１枚を、そのカードの色のうち１色のマナを生み出すことのできる、無作為に選ばれた基本土地・カード１枚のコピーとしてプレイしてもよい。</card>
-    <card name="Avatar - Dauntless Escort" jaName="Dauntless Escort Avatar" type="ヴァンガード" pt="手札 +1/ライフ +1" wikilink="Dauntless Escort Avatar">あなたがコントロールするクリーチャーは賛美を持つ。（あなたがコントロールするいずれかのクリーチャーが単独で攻撃するたび、あなたがコントロールするパーマネントの中にある賛美１つにつき、それはターン終了時まで+1/+1の修整を受ける。）</card>
+    <card name="Avatar - Dauntless Escort" jaName="Dauntless Escort Avatar" type="ヴァンガード" pt="手札 +1/ライフ +1" wikilink="Dauntless Escort Avatar">あなたがコントロールするクリーチャーは賛美を持つ。（あなたがコントロールするいずれかのクリーチャーが単独で攻撃するたび、ターン終了時まで、それはあなたがコントロールするパーマネントの中にある賛美１つにつき+1/+1の修整を受ける。）</card>
     <card name="Avatar - Diamond Faerie" jaName="Diamond Faerie Avatar" type="ヴァンガード" pt="手札 +0/ライフ +5" wikilink="Diamond Faerie Avatar">(氷)：あなたがコントロールするクリーチャー１体を対象とする。ターン終了時まで、それは+1/+1の修整を受ける。</card>
     <card name="Avatar - Eight-and-a-Half-Tails" jaName="Eight-and-a-Half-Tails Avatar" type="ヴァンガード" pt="手札 +2/ライフ -3" wikilink="Eight-and-a-Half-Tails Avatar">(１)：あなたがコントロールするパーマネント１つを対象とする。それが持つプロテクションに記述されていない色から１色を無作為に選ぶ。ターン終了時まで、それはプロテクション（選ばれた色）を得る。</card>
     <card name="Avatar - Eladamri, Lord of Leaves" jaName="Eladamri, Lord of Leaves Avatar" type="ヴァンガード" pt="手札 -1/ライフ +2" wikilink="Eladamri, Lord of Leaves Avatar">各プレイヤーの戦闘前メイン・フェイズの開始時に、そのプレイヤーは自分のマナ・プールに(緑)(緑)を加える。</card>
@@ -506,18 +506,19 @@
     <wikilink name="Despair" wikilink="悪戦+苦闘/Driven+Despair" />
   </add>
   <replace>
-    <regex target="name" pattern="’" value="\'" />
     <regex target="name|text" pattern="AE" value="Ae" nodebug="true" />
     <regex target="jaName" pattern="（.+）$" value="" nodebug="true" />
     <regex target="type" pattern="\s\-\-\-\s" value=" ― " nodebug="true" />
     <regex target="type|text" pattern="\([a-zA-Z'\-\s]+\)・?(クリーチャー|アーティファクト|土地|カード|呪文|パーマネント)" value="・$1" nodebug="true" />
     <regex target="type|text" pattern="\([a-zA-Z'\-\s]+\)" value="" nodebug="true" />
+    <regex target="name" pattern="’" value="\'" />
     <regex target="text" pattern="修正" value="修整" />
     <regex target="text" pattern="対象都市" value="対象とし" />
     <regex target="text" pattern="(クリーチャー|アーティファクト|エンチャント|インスタント|ソーサリー|プレインズウォーカー|土地)(カード|呪文)" value="$1・$2" nodebug="true" />
-    <regex target="text" pattern="(平地|島|沼|山|森|砂漠)カード" value="$1・カード" />
+    <regex target="text" pattern="(平地|島|沼|山|森|砂漠)カード" value="$1・カード" nodebug="true" />
     <regex target="text" pattern="スピリットか秘儀・呪文を唱えるたび、" value="スピリット・呪文か秘儀・呪文を１つ唱えるたび、" nodebug="true" />
     <regex target="text" pattern="その後、あなたのライブラリーを切り直" value="その後あなたのライブラリーを切り直" nodebug="true" />
+    <regex target="text" pattern="(。|たび、|とき、|「)それはターン終了時まで、?" value="$1ターン終了時まで、それは" nodebug="true" />
     <regex target="text" pattern="一番上から([１-９Ｘ]+)枚のカードを見" value="一番上からカードを$1枚見" nodebug="true" />
     <regex target="text" pattern="カードを([１-９Ｘ]+)枚(探|捨て)" value="カード$1枚を$2" nodebug="true" />
     <regex target="text" pattern="カードを最大([１-９Ｘ]+)枚探" value="カード最大$1枚を探" nodebug="true" />
@@ -776,6 +777,8 @@
 対戦相手がライブラリーからカードを探すなら、代わりにそのプレイヤーはそのライブラリーの一番上から４枚のカードの中から探す。</card>
     <card name="Dreamcatcher" jaName="夢捉え" type="クリーチャー ― スピリット" pt="1/1">あなたがスピリット・呪文か秘儀・呪文を１つ唱えるたび、あなたは夢捉えを生け贄に捧げてもよい。そうしたなら、カードを１枚引く。</card>
     <card name="Ranger of Eos" jaName="イーオスのレインジャー" type="クリーチャー ― 人間・兵士" pt="3/2">イーオスのレインジャーが戦場に出たとき、あなたはあなたのライブラリーから点数で見たマナ・コストが１以下のクリーチャー・カード最大２枚を探してもよい。そうしたなら、それらを公開してあなたの手札に加え、その後あなたのライブラリーを切り直す。</card>
+    <card name="Tragic Slip" jaName="悲劇的な過ち" type="インスタント">クリーチャー１体を対象とする。ターン終了時まで、それは-1/-1の修整を受ける。
+陰鬱 ― このターンにクリーチャーが死亡していたなら、代わりに、ターン終了時まで、それは-13/-13の修整を受ける。</card>
     <card name="Wolf-Skull Shaman" jaName="狼骨のシャーマン" type="クリーチャー ― エルフ・シャーマン" pt="2/2">族系 ― あなたのアップキープの開始時に、あなたはあなたのライブラリーの一番上のカードを見てもよい。それが狼骨のシャーマンと共通のクリーチャー・タイプを持つなら、あなたはそれを公開してもよい。そうしたなら、緑の2/2の狼・クリーチャー・トークンを１体生成する。</card>
     <!-- テンプレートの変更：コスト軽減 -->
     <card name="Goblin Electromancer" jaName="ゴブリンの電術師" type="クリーチャー ― ゴブリン・ウィザード" pt="2/2">あなたがインスタント・呪文やソーサリー・呪文を唱えるためのコストは(１)少なくなる。</card>
@@ -790,13 +793,6 @@
 古木のヴァーデロスが戦場に出たとき、それがキッカーされていた場合、緑の1/1の苗木・クリーチャー・トークンをＸ体生成する。</card>
     <!-- テンプレートの変更：最大 -->
     <card name="Terastodon" jaName="テラストドン" type="クリーチャー ― 象" pt="9/9">テラストドンが戦場に出たとき、クリーチャーでないパーマネント最大３つを対象とする。あなたはそれらを破壊してもよい。これにより墓地に置かれたパーマネント１つにつき、それのコントローラーは緑の3/3の象・クリーチャー・トークンを１体生成する。</card>
-    <!-- テンプレートの変更：ターン終了時まで -->
-    <card name="Tragic Slip" jaName="悲劇的な過ち" type="インスタント">クリーチャー１体を対象とする。ターン終了時まで、それは-1/-1の修整を受ける。
-陰鬱 ― このターンにクリーチャーが死亡していたなら、代わりに、ターン終了時まで、それは-13/-13の修整を受ける。</card>
-    <card name="Vitality Charm" jaName="活力の魔除け" type="インスタント">以下から１つを選ぶ。
-・緑の1/1の昆虫・クリーチャー・トークンを１体生成する。
-・クリーチャー１体を対象とする。ターン終了時まで、それは+1/+1の修整を受けるとともにトランプルを得る。
-・ビースト１つを対象とし、それを再生する。</card>
     <!-- テンプレートの変更：カード枚数 -->
     <card name="Conflux" jaName="衝合" type="ソーサリー">あなたのライブラリーから、白のカード１枚と青のカード１枚と黒のカード１枚と赤のカード１枚と緑のカード１枚を探す。それらのカードを公開し、あなたの手札に加える。その後あなたのライブラリーを切り直す。</card>
     <card name="Farseek" jaName="遥か見" type="ソーサリー">あなたのライブラリーから、平地・カード１枚か島・カード１枚か沼・カード１枚か山・カード１枚を探し、それをタップ状態で戦場に出す。その後あなたのライブラリーを切り直す。</card>
