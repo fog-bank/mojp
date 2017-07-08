@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
 using System.Xml.Linq;
 
@@ -63,7 +62,8 @@ namespace Mojp
 
                 if (tokens.Length == 1)
                 {
-                    texts.Add(RemoveParenthesis(line));
+                    //texts.Add(RemoveParenthesis(line));
+                    texts.Add(line);
                 }
                 else
                 {
@@ -89,14 +89,15 @@ namespace Mojp
                             break;
 
                         case "日本語名":
-                            string jaName = tokens[1];
+                            //string jaName = tokens[1];
 
                             // 読みがついているなら、取り除く
-                            int hiragana = jaName.IndexOf('（');
-                            if (hiragana >= 0)
-                                jaName = jaName.Substring(0, hiragana);
+                            //int hiragana = jaName.IndexOf('（');
+                            //if (hiragana >= 0)
+                            //    jaName = jaName.Substring(0, hiragana);
 
-                            card.JapaneseName = jaName.Trim();
+                            //card.JapaneseName = jaName.Trim();
+                            card.JapaneseName = tokens[1];
                             break;
 
                         case "　Ｐ／Ｔ":
@@ -113,7 +114,8 @@ namespace Mojp
                             break;
 
                         case "　タイプ":
-                            card.Type = RemoveParenthesis(tokens[1]).Replace("---", "―");
+                            //card.Type = RemoveParenthesis(tokens[1]).Replace("---", "―");
+                            card.Type = tokens[1];
                             break;
 
                         case "　コスト":
@@ -124,7 +126,8 @@ namespace Mojp
                             break;
 
                         default:
-                            texts.Add(RemoveParenthesis(line));
+                            //texts.Add(RemoveParenthesis(line));
+                            texts.Add(line);
                             break;
                     }
                 }
@@ -141,12 +144,12 @@ namespace Mojp
             string wikilink = card.HasJapaneseName ? card.JapaneseName + "/" + card.Name : card.Name;
 
             // AE 合字処理
-            string processed = card.Name.Replace("AE", "Ae");
-            if (card.Name != processed)
-            {
-                card.Name = processed;
-                //card.WikiLink = wikilink;     // Wiki も Ae に統一された
-            }
+            //string processed = card.Name.Replace("AE", "Ae");
+            //if (card.Name != processed)
+            //{
+            //    card.Name = processed;
+            //    //card.WikiLink = wikilink;     // Wiki も Ae に統一された
+            //}
 
             // 次元 (次元カードのページ URL には接尾辞で " (次元カード)" がつく)
             if (card.Type.StartsWith("次元"))
@@ -157,72 +160,6 @@ namespace Mojp
                     card.WikiLink += " (次元カード)";
             }
             return card;
-        }
-
-        /// <summary>
-        /// サブタイプの英語名を削除した文字列にします。
-        /// </summary>
-        private static string RemoveParenthesis(string line)
-        {
-            var text = new StringBuilder(line.Length);
-            var parenthesis = new StringBuilder();
-            var sb = text;
-
-            for (int i = 0; i < line.Length; i++)
-            {
-                char c = line[i];
-                switch (c)
-                {
-                    case '(':
-                        sb = parenthesis;
-                        break;
-
-                    case ')':
-                        bool english = parenthesis.Length >= 2;
-
-                        for (int j = 0; j < parenthesis.Length; j++)
-                        {
-                            char parChr = parenthesis[j];
-
-                            if (parChr >= 'a' && parChr <= 'z')
-                                continue;
-
-                            if (parChr >= 'A' && parChr <= 'Z')
-                                continue;
-
-                            // 「Bolas’s Meditation Realm」「Urza’s」「Power-Plant」
-                            if (parChr == ' ' || parChr == '\'' || parChr == '-')
-                                continue;
-
-                            english = false;
-                            break;
-                        }
-                        sb = text;
-
-                        if (english)
-                        {
-                            // サブタイプとタイプの間にあるべき中点が抜けている場合を修正
-                            if (i + 1 < line.Length && line[i + 1] != '・')
-                            {
-                                string follow = line.Substring(i + 1);
-
-                                if (follow.StartsWith("クリーチャー") || follow.StartsWith("アーティファクト") || follow.StartsWith("土地") ||
-                                    follow.StartsWith("呪文") || follow.StartsWith("パーマネント") || follow.StartsWith("カード"))
-                                    sb.Append('・');
-                            }
-                        }
-                        else
-                            sb.Append('(').Append(parenthesis.ToString()).Append(')');
-
-                        parenthesis.Clear();
-                        break;
-
-                    default:
-                        sb.Append(c);
-                        break;
-                }
-            }
-            return text.ToString();
         }
 
         /// <summary>
@@ -284,7 +221,7 @@ namespace Mojp
             var identicalNodes = new XElement("identical");
 
             // 正規表現による置換
-            var regexes = new List<Tuple<string[], Regex, string>>();
+            var regexes = new List<Tuple<string[], Regex, string, bool>>();
 
             foreach (var node in doc.Root.Element("replace").Elements("regex"))
             {
@@ -298,8 +235,9 @@ namespace Mojp
                 {
                     var regex = new Regex(pattern);
                     string value = (string)node.Attribute("value");
+                    bool? nodebug = (bool?)node.Attribute("nodebug");
 
-                    regexes.Add(Tuple.Create(targets.Split('|'), regex, value));
+                    regexes.Add(Tuple.Create(targets.Split('|'), regex, value, nodebug.GetValueOrDefault()));
                 }
                 catch { Debug.WriteLine("正規表現の構築に失敗しました。パターン：" + pattern); }
             }
@@ -308,12 +246,13 @@ namespace Mojp
             {
                 var xml = card.ToXml();
                 bool replaced = false;
+                bool nodebug = true;
 
                 foreach (var tuple in regexes)
                 {
                     var targets = tuple.Item1;
                     var regex = tuple.Item2;
-                    var value = tuple.Item3;
+                    string value = tuple.Item3;
 
                     foreach (string target in targets)
                     {
@@ -328,6 +267,7 @@ namespace Mojp
                                     card.Name = name;
                                     cards.Add(name, card);
                                     replaced = true;
+                                    nodebug &= tuple.Item4;
                                 }
                                 break;
 
@@ -338,6 +278,7 @@ namespace Mojp
                                 {
                                     card.JapaneseName = jaName;
                                     replaced = true;
+                                    nodebug &= tuple.Item4;
                                 }
                                 break;
 
@@ -348,6 +289,7 @@ namespace Mojp
                                 {
                                     card.Type = type;
                                     replaced = true;
+                                    nodebug &= tuple.Item4;
                                 }
                                 break;
 
@@ -358,6 +300,7 @@ namespace Mojp
                                 {
                                     card.PT = pt;
                                     replaced = true;
+                                    nodebug &= tuple.Item4;
                                 }
                                 break;
 
@@ -368,6 +311,7 @@ namespace Mojp
                                 {
                                     card.RelatedCardName = related;
                                     replaced = true;
+                                    nodebug &= tuple.Item4;
                                 }
                                 break;
 
@@ -378,6 +322,7 @@ namespace Mojp
                                 {
                                     card.WikiLink = wikilink;
                                     replaced = true;
+                                    nodebug &= tuple.Item4;
                                 }
                                 break;
 
@@ -389,13 +334,14 @@ namespace Mojp
                                     card.Text = text;
                                     card.lines = null;
                                     replaced = true;
+                                    nodebug &= tuple.Item4;
                                 }
                                 break;
                         }
                     }
                 }
 
-                if (replaced)
+                if (replaced && !nodebug)
                 {
                     beforeNodes.Add(xml);
                     replacedNodes.Add(card.ToXml());
@@ -482,5 +428,71 @@ namespace Mojp
                     Debug.WriteLine(name + " は既にカードリストに含まれていません。");
             }
         }
+
+        ///// <summary>
+        ///// サブタイプの英語名を削除した文字列にします。
+        ///// </summary>
+        //private static string RemoveParenthesis(string line)
+        //{
+        //    var text = new StringBuilder(line.Length);
+        //    var parenthesis = new StringBuilder();
+        //    var sb = text;
+
+        //    for (int i = 0; i < line.Length; i++)
+        //    {
+        //        char c = line[i];
+        //        switch (c)
+        //        {
+        //            case '(':
+        //                sb = parenthesis;
+        //                break;
+
+        //            case ')':
+        //                bool english = parenthesis.Length >= 2;
+
+        //                for (int j = 0; j < parenthesis.Length; j++)
+        //                {
+        //                    char parChr = parenthesis[j];
+
+        //                    if (parChr >= 'a' && parChr <= 'z')
+        //                        continue;
+
+        //                    if (parChr >= 'A' && parChr <= 'Z')
+        //                        continue;
+
+        //                    // 「Bolas's Meditation Realm」「Urza's」「Power-Plant」
+        //                    if (parChr == ' ' || parChr == '\'' || parChr == '-')
+        //                        continue;
+
+        //                    english = false;
+        //                    break;
+        //                }
+        //                sb = text;
+
+        //                if (english)
+        //                {
+        //                    // サブタイプとタイプの間にあるべき中点が抜けている場合を修正
+        //                    if (i + 1 < line.Length && line[i + 1] != '・')
+        //                    {
+        //                        string follow = line.Substring(i + 1);
+
+        //                        if (follow.StartsWith("クリーチャー") || follow.StartsWith("アーティファクト") || follow.StartsWith("土地") ||
+        //                            follow.StartsWith("呪文") || follow.StartsWith("パーマネント") || follow.StartsWith("カード"))
+        //                            sb.Append('・');
+        //                    }
+        //                }
+        //                else
+        //                    sb.Append('(').Append(parenthesis.ToString()).Append(')');
+
+        //                parenthesis.Clear();
+        //                break;
+
+        //            default:
+        //                sb.Append(c);
+        //                break;
+        //        }
+        //    }
+        //    return text.ToString();
+        //}
     }
 }
