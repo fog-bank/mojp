@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text.RegularExpressions;
+using System.Xml;
 using System.Xml.Linq;
 
 namespace Mojp
@@ -227,7 +228,7 @@ namespace Mojp
             {
                 string targets = (string)node.Attribute("target");
 
-                if (targets == "all")
+                if (targets.Contains("all"))
                     targets = "name|jaName|type|pt|related|wikilink|text";
 
                 string pattern = (string)node.Attribute("pattern");
@@ -242,6 +243,7 @@ namespace Mojp
                 catch { Debug.WriteLine("正規表現の構築に失敗しました。パターン：" + pattern); }
             }
 
+            // 英語カード名を変えることがあるので、静的リストにしてから列挙
             foreach (var card in cards.Values.ToList())
             {
                 var xml = card.ToXml();
@@ -348,8 +350,16 @@ namespace Mojp
                 }
             }
 
+            // 個々のカードの書き換え
             foreach (var node in doc.Root.Element("replace").Elements("card"))
             {
+                // 変更理由を記したコメントを挿入
+                if (node.PreviousNode.NodeType == XmlNodeType.Comment)
+                {
+                    beforeNodes.Add(node.PreviousNode);
+                    replacedNodes.Add(node.PreviousNode);
+                }
+
                 var card = FromXml(node);
                 Debug.WriteLineIf(card.RelatedCardName != null && !cards.ContainsKey(card.RelatedCardName), card.Name + " の関連カードが見つかりません。");
 
