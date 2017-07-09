@@ -541,9 +541,6 @@
     <!-- テキストが正常でないカード -->
     <card name="As Foretold" jaName="予言により" type="エンチャント">あなたのアップキープの開始時に、予言によりの上に時間カウンターを１個置く。
 毎ターン１回、あなたは点数で見たマナ・コストがＸ以下の呪文を、それのマナ・コストではなく(０)を支払って唱えてもよい。Ｘは予言によりの上に置かれている時間カウンターの総数に等しい。</card>
-    <card name="Crypt of the Eternals" jaName="永遠衆の墓所" type="土地 ― 砂漠">永遠衆の墓所が戦場に出たとき、あなたは１点のライフを得る。
-(Ｔ)：あなたのマナ・プールに(◇)を加える。
-(１),(Ｔ)：あなたのマナ・プールに(青)か(黒)か(赤)を加える。</card>
     <card name="Entrapment Maneuver" jaName="偽計" type="インスタント">プレイヤー１人を対象とする。そのプレイヤーは攻撃クリーチャー１体を生け贄に捧げる。あなたは白の1/1の兵士・クリーチャー・トークンをＸ体生成する。Ｘはそのクリーチャーのタフネスに等しい。</card>
     <card name="Grenzo, Havoc Raiser" jaName="騒乱の発端、グレンゾ" type="伝説のクリーチャー ― ゴブリン・ならず者" pt="2/2">あなたがコントロールするクリーチャー１体がプレイヤー１人に戦闘ダメージを与えるたび、以下から１つを選ぶ。
 ・そのプレイヤーがコントロールするクリーチャー１体を対象とし、それを使嗾する。
@@ -804,13 +801,6 @@
     <type name="Urza's Mine" type="土地 ― ウルザの・鉱山" />
     <type name="Urza's Power Plant" type="土地 ― ウルザの・魔力炉" />
     <type name="Urza's Tower" type="土地 ― ウルザの・塔" />
-    <!-- 最新オラクル未対応：サブタイプ -->
-    <type name="Dauthi Jackal" type="クリーチャー ― ダウスィー・ジャッカル" />
-    <type name="Goblin Test Pilot" type="クリーチャー ― ゴブリン・操縦士・ウィザード" />
-    <type name="Jackal Familiar" type="クリーチャー ― ジャッカル" />
-    <type name="Jackal Pup" type="クリーチャー ― ジャッカル" />
-    <type name="Hurr Jackal" type="クリーチャー ― ジャッカル" />
-    <type name="Trained Jackal" type="クリーチャー ― ジャッカル" />
   </replace>
   <remove>
     <!-- ドラフト能力を持つカード -->
