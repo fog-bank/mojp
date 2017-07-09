@@ -4,7 +4,7 @@
 ![Screenshot v1.3.0](https://github.com/fog-bank/mojp/blob/master/images/screenshot.png)
 
 ## 主な機能
-* マウスカーソルの下にあるカードの日本語テキストを表示
+* MO の Preview Pane に表示されているカードの日本語テキストを表示
 * カード名（日本語または英語）をコピー
 * [MTG Wiki](http://mtgwiki.com/) の解説ページをブラウザで開く
 
@@ -13,7 +13,7 @@
 
 ## 使い方
 1. MO を起動し、COLLECTION 画面や対戦・トレード中に Preview Pane を表示するようにします（最小化しても OK）。
-2. MO 上で調べたいカードにマウスカーソルを移動させます。
+2. MO 上で調べたいカードにマウスカーソルを移動させます。Preview Pane にそのカードが表示されます。
 3. このアプリの表示が変わり、そのカードの日本語テキストが表示されます。
 
 ### 補足
