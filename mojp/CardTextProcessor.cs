@@ -242,6 +242,7 @@ namespace Mojp
                 }
                 catch { Debug.WriteLine("正規表現の構築に失敗しました。パターン：" + pattern); }
             }
+            var appliedCount = new int[regexes.Count];
 
             // 英語カード名を変えることがあるので、静的リストにしてから列挙
             foreach (var card in cards.Values.ToList())
@@ -250,11 +251,12 @@ namespace Mojp
                 bool replaced = false;
                 bool nodebug = true;
 
-                foreach (var tuple in regexes)
+                for (int i = 0; i < regexes.Count; i++)
                 {
-                    var targets = tuple.Item1;
-                    var regex = tuple.Item2;
-                    string value = tuple.Item3;
+                    var targets = regexes[i].Item1;
+                    var regex = regexes[i].Item2;
+                    string value = regexes[i].Item3;
+                    bool applied = false;
 
                     foreach (string target in targets)
                     {
@@ -269,7 +271,8 @@ namespace Mojp
                                     card.Name = name;
                                     cards.Add(name, card);
                                     replaced = true;
-                                    nodebug &= tuple.Item4;
+                                    applied = true;
+                                    nodebug &= regexes[i].Item4;
                                 }
                                 break;
 
@@ -280,7 +283,8 @@ namespace Mojp
                                 {
                                     card.JapaneseName = jaName;
                                     replaced = true;
-                                    nodebug &= tuple.Item4;
+                                    applied = true;
+                                    nodebug &= regexes[i].Item4;
                                 }
                                 break;
 
@@ -291,7 +295,8 @@ namespace Mojp
                                 {
                                     card.Type = type;
                                     replaced = true;
-                                    nodebug &= tuple.Item4;
+                                    applied = true;
+                                    nodebug &= regexes[i].Item4;
                                 }
                                 break;
 
@@ -302,7 +307,8 @@ namespace Mojp
                                 {
                                     card.PT = pt;
                                     replaced = true;
-                                    nodebug &= tuple.Item4;
+                                    applied = true;
+                                    nodebug &= regexes[i].Item4;
                                 }
                                 break;
 
@@ -313,7 +319,8 @@ namespace Mojp
                                 {
                                     card.RelatedCardName = related;
                                     replaced = true;
-                                    nodebug &= tuple.Item4;
+                                    applied = true;
+                                    nodebug &= regexes[i].Item4;
                                 }
                                 break;
 
@@ -324,7 +331,8 @@ namespace Mojp
                                 {
                                     card.WikiLink = wikilink;
                                     replaced = true;
-                                    nodebug &= tuple.Item4;
+                                    applied = true;
+                                    nodebug &= regexes[i].Item4;
                                 }
                                 break;
 
@@ -336,11 +344,15 @@ namespace Mojp
                                     card.Text = text;
                                     card.lines = null;
                                     replaced = true;
-                                    nodebug &= tuple.Item4;
+                                    applied = true;
+                                    nodebug &= regexes[i].Item4;
                                 }
                                 break;
                         }
                     }
+
+                    if (applied)
+                        appliedCount[i]++;
                 }
 
                 if (replaced && !nodebug)
@@ -349,6 +361,9 @@ namespace Mojp
                     replacedNodes.Add(card.ToXml());
                 }
             }
+
+            for (int i = 0; i < regexes.Count; i++)
+                Debug.WriteLine("Regex applied: " + appliedCount[i] + " cards, pattern: " + regexes[i].Item2);
 
             // 個々のカードの書き換え
             foreach (var node in doc.Root.Element("replace").Elements("card"))
