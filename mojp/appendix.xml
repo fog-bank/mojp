@@ -518,8 +518,9 @@
     <regex target="text" pattern="その後、あなたのライブラリーを切り直" value="その後あなたのライブラリーを切り直" nodebug="true" />
     <regex target="text" pattern="(。|たび、|とき、|「)それはターン終了時まで、?" value="$1ターン終了時まで、それは" nodebug="true" />
     <regex target="text" pattern="一番上から([１-９Ｘ]+)枚のカードを見" value="一番上からカードを$1枚見" nodebug="true" />
-    <regex target="text" pattern="カードを([１-９Ｘ]+)枚(探|捨て)" value="カード$1枚を$2" nodebug="true" />
-    <regex target="text" pattern="カードを最大([１-９Ｘ]+)枚探" value="カード最大$1枚を探" nodebug="true" />
+    <regex target="text" pattern="カードを([１-９Ｘ]+)枚(探|選|捨て|追放)" value="カード$1枚を$2" nodebug="true" />
+    <regex target="text" pattern="カードを最大([１-９Ｘ]+)枚(まで)?探" value="カード最大$1枚を探" nodebug="true" />
+    <regex target="text" pattern="カード名を([１-９Ｘ]+)つ選ぶ。" value="カード名$1つを選ぶ。" nodebug="true" />
     <regex target="text" pattern="クリーチャーを([１-９Ｘ]+)体生け贄" value="クリーチャー$1体を生け贄" nodebug="true" />
     <regex target="text" pattern="パーマネントを([１-９Ｘ]+)つ生け贄" value="パーマネント$1つを生け贄" nodebug="true" />
     <regex target="text" pattern="トークンを([１-９Ｘ]+)体戦場に出す。" value="トークンを$1体生成する。" nodebug="true" />
