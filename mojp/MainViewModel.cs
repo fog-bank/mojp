@@ -422,9 +422,11 @@ namespace Mojp
                 SearchCardName();
 
                 // UI テキストの変化を追う
-                // 対戦中、カード情報は Preview Pane の直接の子ではなく、ZoomCard_View というカスタムコントロールの下にくるので、スコープは子孫にしないとダメ
+                // 対戦中、カード情報は Preview Pane の直接の子ではなく、
+                // ZoomCard_View というカスタムコントロールの下にくるので、スコープは子孫にしないとダメ
                 using (cacheReq.Activate())
-                    Automation.AddAutomationPropertyChangedEventHandler(prevWnd, TreeScope.Descendants, OnAutomaionNamePropertyChanged, AutomationElement.NameProperty);
+                    Automation.AddAutomationPropertyChangedEventHandler(
+                        prevWnd, TreeScope.Descendants, OnAutomaionNamePropertyChanged, AutomationElement.NameProperty);
 
                 if (SelectedCard == null)
                     SetMessage("準備完了");
@@ -443,16 +445,16 @@ namespace Mojp
             string name = GetNamePropertyValue(sender as AutomationElement);
             //Debug.WriteLineIf(!string.IsNullOrWhiteSpace(name), name);
 
-            // 新しいテキストがカード名かどうかを調べ、そうでないなら不必要な検索をしないようにする
+            // 新しいテキストがカード名かどうかを調べ、そうでないなら不必要な全体検索をしないようにする
             // トークンの場合は、カード名を含むとき (= コピートークン) と含まないとき (→ 空表示にする) とがあるので検索を続行する
             if (!App.Cards.ContainsKey(name) && !name.StartsWith("Token"))
             {
                 string cardType = null;
 
-                // 紋章やヴァンガードの場合は確定で空表示にする
-                if (name.StartsWith("Emblem"))
+                // 統治者以外の紋章やテキストレスのヴァンガードの場合は、確定で空表示にする
+                if (name.StartsWith("Emblem") && name != "Emblem - ")
                     cardType = "紋章";
-                else if (name == "Vanguard")
+                else if (name.StartsWith("Avatar - "))
                     cardType = "ヴァンガード";
 
                 if (cardType != null)
@@ -479,30 +481,37 @@ namespace Mojp
 
             // 一連のテキストからカード名を探す (合体カードなど複数のカード名にヒットする場合があるので一通り探し直す必要がある)
             var foundCards = new List<Card>();
+            bool isToken = false;
 
             foreach (AutomationElement element in elements)
             {
                 string name = GetNamePropertyValue(element);
 
+                if (name == null)
+                    continue;
+
                 // WHISPER データベースからカード情報を取得
-                Card card;
-                if (name != null && App.Cards.TryGetValue(name, out card) && !foundCards.Contains(card))
+                if (App.Cards.TryGetValue(name, out var card))
                 {
-                    foundCards.Add(card);
-
-                    // 両面カードの場合に、Preview Pane に片面だけ表示されていても、もう一方の面を表示するようにする
-                    if (card.RelatedCardName != null)
+                    if (!foundCards.Contains(card))
                     {
-                        Card card2;
-                        App.Cards.TryGetValue(card.RelatedCardName, out card2);
+                        foundCards.Add(card);
 
-                        if (!foundCards.Contains(card2))
-                            foundCards.Add(card2);
+                        // 両面カードの場合に、Preview Pane に片面だけ表示されていても、もう一方の面を表示するようにする
+                        if (card.RelatedCardName != null)
+                        {
+                            App.Cards.TryGetValue(card.RelatedCardName, out var card2);
+
+                            if (!foundCards.Contains(card2))
+                                foundCards.Add(card2);
+                        }
                     }
                 }
+                else if (!isToken && name.StartsWith("Token"))
+                    isToken = true;
             }
 
-            // 設定によっては基本土地 5 種の場合は表示を変えないようにする
+            // 設定によっては基本土地 5 種の場合に表示を変えないようにする
             if (!ShowBasicLands && foundCards.Count == 1)
             {
                 switch (foundCards[0].Name)
@@ -514,6 +523,13 @@ namespace Mojp
                     case "Forest":
                         return;
                 }
+            }
+
+            // 汎用のトークン
+            if (foundCards.Count == 0 && isToken)
+            {
+                App.Current.Dispatcher.Invoke(() => SetMessage("トークン"));
+                return;
             }
 
             // ツールバーと重ならないようにするためのダミー項目
