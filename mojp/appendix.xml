@@ -11,8 +11,8 @@
     <card name="Stoneforged Blade" jaName="石鍛冶製の剣" type="トークン・アーティファクト ― 装備品" related="Nahiri, the Lithomancer">破壊不能
 装備しているクリーチャーは+5/+5の修整を受けるとともに二段攻撃を持つ。
 装備(０)</card>
-    <card name="The Monarch" jaName="統治者" type="">あなたの終了ステップの開始時に、あなたはカードを１枚引く。
-クリーチャーが１体あなたに戦闘ダメージを与えるたび、それのコントローラーが統治者になる。</card>
+    <card name="The Monarch" jaName="統治者" type="" wikilink="統治者">あなたの終了ステップの開始時に、あなたはカードを１枚引く。
+クリーチャー１体があなたに戦闘ダメージを与えるたび、それのコントローラーが統治者になる。</card>
     <!-- 特定の名前を持つトークン -->
     <card name="Ashaya, the Awoken World" jaName="目覚めし世界、アシャヤ" type="トークン・伝説のクリーチャー ― エレメンタル" pt="4/4" related="Nissa, Sage Animist"></card>
     <card name="Butterfly" jaName="蝶" type="トークン・クリーチャー ― 昆虫" pt="1/1" related="Giant Caterpillar">飛行</card>
