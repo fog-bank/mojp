@@ -508,15 +508,24 @@
     <wikilink name="Despair" wikilink="悪戦+苦闘/Driven+Despair" />
   </add>
   <replace>
-    <regex target="name|text" pattern="AE" value="Ae" nodebug="true" />
+    <!-- 誤字修正 -->
+    <regex target="name|text" pattern="AE" value="Ae" />
+    <regex target="text" pattern="X(は|枚)" value="Ｘ$1" />
+    <regex target="text" pattern="修正" value="修整" />
+    <regex target="text" pattern="対象都市" value="対象とし" />
+    <regex target="text" pattern="そうたいなら" value="そうしたなら" />
+    <regex target="text" pattern="コントール" value="コントロール" />
+    <!-- 基本 -->
     <regex target="jaName" pattern="（.+）$" value="" nodebug="true" />
     <regex target="type" pattern="\s\-\-\-\s" value=" ― " nodebug="true" />
     <regex target="type|text" pattern="\([a-zA-Z'\-\s]+\)・?(クリーチャー|アーティファクト|土地|カード|呪文|パーマネント)" value="・$1" nodebug="true" />
     <regex target="type|text" pattern="\([a-zA-Z'\-\s]+\)" value="" nodebug="true" />
+    <!-- 中丸追加 -->
     <regex target="text" pattern="(クリーチャー|アーティファクト|エンチャント|インスタント|ソーサリー|プレインズウォーカー|土地)(カード|呪文)" value="$1・$2" nodebug="true" />
     <regex target="text" pattern="(平地|島|沼|山|森|砂漠)カード" value="$1・カード" nodebug="true" />
     <regex target="text" pattern="(苗木|猫|馬)クリーチャー・トークン" value="$1・クリーチャー・トークン" nodebug="true" />
     <regex target="text" pattern="スピリットか秘儀・呪文を唱えるたび、" value="スピリット・呪文か秘儀・呪文を１つ唱えるたび、" nodebug="true" />
+    <!-- テンプレート変更 -->
     <regex target="text" pattern="その後、あなたのライブラリーを切り直" value="その後あなたのライブラリーを切り直" nodebug="true" />
     <regex target="text" pattern="(。|たび、|とき、|「)それはターン終了時まで、?" value="$1ターン終了時まで、それは" nodebug="true" />
     <regex target="text" pattern="カードを([１-９Ｘ]+)枚(探|選|捨て|追放)" value="カード$1枚を$2" nodebug="true" />
@@ -527,8 +536,9 @@
     <regex target="text" pattern="パーマネントを([１-９Ｘ]+)つ生け贄" value="パーマネント$1つを生け贄" nodebug="true" />
     <regex target="text" pattern="トークンを([１-９Ｘ]+)体戦場に出す。" value="トークンを$1体生成する。" nodebug="true" />
     <regex target="text" pattern="選ばれた名前の(呪文|土地|発生源)" value="選ばれた名前を持つ$1" nodebug="true" />
-    <regex target="text" pattern="修正" value="修整" />
-    <regex target="text" pattern="対象都市" value="対象とし" />
+    <regex target="text" pattern="Ｘは、" value="Ｘは" nodebug="true" />
+    <regex target="text" pattern="Ｘは([^。Ｙ]+)である。" value="Ｘは$1に等しい。" nodebug="true" />
+    <!-- 注釈文 -->
     <regex target="text" pattern="（あなたはあなたの墓地にあるこのカードを、そのフラッシュバック・コストで唱えてもよい。その後それを追放する。）" value="（あなたはあなたの墓地から、このカードをこれのフラッシュバック・コストで唱えてもよい。その後、これを追放する。）" nodebug="true" />
     <regex target="text" pattern="(?m)^(不朽|永遠)(.+)であることを除き、これのコピーであるトークンを１体生成する。.+はソーサリーとしてのみ行う。）$" value="$1$2であることを除きこれのコピーであるトークンを１体生成する。$1はソーサリーとしてのみ行う。）" />
     <!-- 基本土地 -->
@@ -545,6 +555,7 @@
     <!-- テキストが正常でないカード -->
     <card name="As Foretold" jaName="予言により" type="エンチャント">あなたのアップキープの開始時に、予言によりの上に時間カウンターを１個置く。
 毎ターン１回、あなたは点数で見たマナ・コストがＸ以下の呪文を、それのマナ・コストではなく(０)を支払って唱えてもよい。Ｘは予言によりの上に置かれている時間カウンターの総数に等しい。</card>
+    <card name="Bludgeon Brawl" jaName="棍棒での殴り合い" type="エンチャント">クリーチャーでも装備品でもない各アーティファクトは、装備(Ｘ)と「装備しているクリーチャーは+X/+0の修整を受ける。」を持つ装備品である。Ｘはそのアーティファクトの点数で見たマナ・コストに等しい。</card>
     <card name="Entrapment Maneuver" jaName="偽計" type="インスタント">プレイヤー１人を対象とする。そのプレイヤーは攻撃クリーチャー１体を生け贄に捧げる。あなたは白の1/1の兵士・クリーチャー・トークンをＸ体生成する。Ｘはそのクリーチャーのタフネスに等しい。</card>
     <card name="Grenzo, Havoc Raiser" jaName="騒乱の発端、グレンゾ" type="伝説のクリーチャー ― ゴブリン・ならず者" pt="2/2">あなたがコントロールするクリーチャー１体がプレイヤー１人に戦闘ダメージを与えるたび、以下から１つを選ぶ。
 ・そのプレイヤーがコントロールするクリーチャー１体を対象とし、それを使嗾する。
@@ -573,10 +584,6 @@
 あなたが蓋世の誉れをサイクリングしたとき、クリーチャー１体を対象とする。あなたは「蓋世の誉れはそれに２点のダメージを与える。」を選んでもよい。</card>
     <card name="Guardian of the Great Conduit" jaName="大導路の守護者" type="クリーチャー ― エレメンタル" pt="2/4">到達（このクリーチャーは飛行を持つクリーチャーをブロックできる。）
 あなたがニッサ・プレインズウォーカーをコントロールしているかぎり、大導路の守護者は+2/+0の修整を受けるとともに警戒を持つ。（これは攻撃してもタップしない。）</card>
-    <card name="Soul-Scar Mage" jaName="損魂魔道士" type="クリーチャー ― 人間・ウィザード" pt="1/2">果敢
-あなたがコントロールする発生源が対戦相手がコントロールするクリーチャーに戦闘ダメージでないダメージを与えるなら、代わりにその点数に等しい数の-1/-1カウンターをそのクリーチャーの上に置く。</card>
-    <card name="Wasp of the Bitter End" jaName="苦々しい結末の蜂" type="クリーチャー ― 昆虫・ホラー" pt="2/1">飛行
-あなたがボーラス・プレインズウォーカー・呪文を１つ唱えるたび、あなたは苦々しい結末の蜂を生け贄に捧げてもよい。そうしたなら、クリーチャー１体を対象とし、それを破壊する。</card>
     <!-- テキストが正常でないカード：サブタイプやカウンター名 -->
     <card name="Caught in the Brights" jaName="光に目が眩む" type="エンチャント ― オーラ">エンチャント（クリーチャー）
 エンチャントされているクリーチャーでは攻撃したりブロックしたりできない。
@@ -671,7 +678,6 @@
     <card name="The Rack" jaName="拷問台" type="アーティファクト">拷問台が戦場に出るに際し、対戦相手を１人選ぶ。
 選ばれたプレイヤーのアップキープの開始時に、拷問台はそのプレイヤーにＸ点のダメージを与える。Ｘは３からそのプレイヤーの手札にあるカードの枚数を引いた数に等しい。</card>
     <card name="Vitalizing Cascade" jaName="活力の滝" type="インスタント">あなたはＸに３を足した数に等しい点数のライフを得る。</card>
-    <card name="Wolfcaller's Howl" jaName="狼呼びの雄叫び" type="エンチャント">あなたのアップキープの開始時に、緑の2/2の狼・クリーチャー・トークンをＸ体生成する。Ｘは手札を４枚以上持つ対戦相手の総数に等しい。</card>
     <!-- テキストが正常でないカード：テンプレート外の表現 (カンマ抜け) -->
     <card name="Cartouche of Ambition" jaName="野望のカルトーシュ" type="エンチャント ― オーラ・カルトーシュ">エンチャント（あなたがコントロールするクリーチャー）
 野望のカルトーシュが戦場に出たとき、クリーチャー１体を対象とする。あなたはそれの上に-1/-1カウンターを１個置いてもよい。
@@ -694,17 +700,10 @@
     <card name="Tormenting Voice" jaName="苦しめる声" type="ソーサリー">苦しめる声を唱えるための追加コストとして、カード１枚を捨てる。
 カードを２枚引く。</card>
     <!-- テキストが正常でないカード：テンプレート外の表現 (余剰カンマ) -->
-    <card name="Appeal" jaName="旗幟" type="ソーサリー" related="Authority" wikilink="旗幟+鮮明/Appeal+Authority">クリーチャー１体を対象とする。ターン終了時まで、それはトランプルを得るとともに+X/+Xの修整を受ける。Ｘはあなたがコントロールするクリーチャーの総数に等しい。</card>
-    <card name="Fraying Sanity" jaName="正気減らし" type="エンチャント ― オーラ・呪い">エンチャント（プレイヤー）
-各終了ステップの開始時に、エンチャントされているプレイヤーは自分のライブラリーの一番上からカードをＸ枚自分の墓地に置く。Ｘはこのターンにいずれかの領域からその墓地に置かれたカードの枚数に等しい。</card>
     <card name="Gate to the Afterlife" jaName="来世への門" type="アーティファクト">あなたがコントロールするトークンでないクリーチャーが１体死亡するたび、あなたは１点のライフを得る。その後あなたはカードを１枚引いてもよい。そうしたなら、カード１枚を捨てる。
 (２),(Ｔ),来世への門を生け贄に捧げる：あなたの墓地やあなたの手札やあなたのライブラリーから《王神の贈り物/God-Pharaoh's Gift》という名前のカード１枚を探し、それを戦場に出す。これによりあなたのライブラリーからカードを探したなら、あなたのライブラリーを切り直す。この能力は、あなたの墓地にクリーチャー・カードが６枚以上あるときにのみ起動できる。</card>
-    <card name="Harvest Season" jaName="収穫期" type="ソーサリー">あなたのライブラリーから基本土地・カード最大Ｘ枚を探し、それらのカードをタップ状態で戦場に出す。Ｘはあなたがコントロールするタップ状態のクリーチャーの総数に等しい。その後あなたのライブラリーを切り直す。</card>
     <card name="Magma Jet" jaName="マグマの噴流" type="インスタント">クリーチャー１体かプレイヤー１人を対象とする。マグマの噴流はそれに２点のダメージを与える。占術２を行う。</card>
     <card name="Oashra Cultivator" jaName="オアシュラの耕作者" type="クリーチャー ― 人間・ドルイド" pt="0/3">(２)(緑),(Ｔ),オアシュラの耕作者を生け贄に捧げる：あなたのライブラリーから基本土地・カード１枚を探してそれをタップ状態で戦場に出す。その後あなたのライブラリーを切り直す。</card>
-    <card name="Onward" jaName="先手" type="インスタント" related="Victory" wikilink="先手+必勝/Onward+Victory">クリーチャー１体を対象とする。ターン終了時まで、それは+X/+0の修整を受ける。Ｘはそれのパワーに等しい。</card>
-    <card name="Resilient Khenra" jaName="立て直しのケンラ" type="クリーチャー ― ジャッカル・ウィザード" pt="2/2">立て直しのケンラが戦場に出たとき、クリーチャー１体を対象とする。あなたは「ターン終了時まで、それは+X/+Xの修整を受ける。Ｘは立て直しのケンラのパワーに等しい。」を選んでもよい。
-永遠(４)(緑)(緑)（(４)(緑)(緑),あなたの墓地からこのカードを追放する：マナ・コストと永遠を持たない黒の4/4のゾンビ・ジャッカル・ウィザードであることを除きこれのコピーであるトークンを１体生成する。永遠はソーサリーとしてのみ行う。）</card>
     <card name="Twilight Drover" jaName="黄昏の群れ操り" type="クリーチャー ― スピリット" pt="1/1">クリーチャー・トークンが戦場を離れるたび、黄昏の群れ操りの上に+1/+1カウンターを１個置く。
 (２)(白),黄昏の群れ操りから+1/+1カウンターを１個取り除く：飛行を持つ白の1/1のスピリット・クリーチャー・トークンを２体生成する。</card>
     <card name="Violet Pall" jaName="スミレの棺" type="部族インスタント ― フェアリー">黒でないクリーチャー１体を対象とし、それを破壊する。飛行を持つ黒の1/1のフェアリー・ならず者・クリーチャー・トークンを１体生成する。</card>
