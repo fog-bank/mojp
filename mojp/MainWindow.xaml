@@ -20,9 +20,8 @@
 			<RowDefinition />
 			<RowDefinition Height="Auto" />
 		</Grid.RowDefinitions>
-		<TabControl Grid.RowSpan="2" Grid.ColumnSpan="2" FontFamily="{Binding FontFamily}" FontSize="{Binding FontSize}"
-					BorderThickness="0,1,0,0" HorizontalContentAlignment="Left"
-					ItemsSource="{Binding Cards}" SelectedIndex="{Binding SelectedIndex}">
+        <TabControl Grid.RowSpan="2" Grid.ColumnSpan="2" FontFamily="{Binding FontFamily}" FontSize="{Binding FontSize}"
+					BorderThickness="0,1,0,0" ItemsSource="{Binding Cards}" SelectedIndex="{Binding SelectedIndex}">
 			<TabControl.Template>
 				<ControlTemplate TargetType="TabControl">
 					<Grid Name="templateRoot" ClipToBounds="True" SnapsToDevicePixels="True" KeyboardNavigation.TabNavigation="Local">
@@ -53,7 +52,41 @@
 					</Style.Triggers>
 					<Setter Property="Padding" Value="6,2,5,0" />
 					<Setter Property="MinHeight" Value="22" />
-				</Style>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="TabItem">
+                                <Grid Name="templateRoot" SnapsToDevicePixels="True">
+                                    <Border Name="mainBorder" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1,1,1,0">
+                                        <Border Name="innerBorder" BorderBrush="#acacac" BorderThickness="1,1,1,0" Background="White" Margin="-1" Visibility="Hidden" />
+                                    </Border>
+                                    <ContentPresenter Name="contentPresenter" Content="{TemplateBinding Header}" 
+                                                      ContentTemplate="{TemplateBinding HeaderTemplate}" ContentStringFormat="{TemplateBinding HeaderStringFormat}"
+                                                      Margin="{TemplateBinding Padding}" HorizontalAlignment="Left" VerticalAlignment="Center"
+                                                      RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+                                </Grid>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background">
+                                            <Setter.Value>
+                                                <LinearGradientBrush EndPoint="0,1">
+                                                    <GradientStop Color="#ecf4fc" />
+                                                    <GradientStop Color="#dcecfc" Offset="1" />
+                                                </LinearGradientBrush>
+                                            </Setter.Value>
+                                        </Setter>
+                                        <Setter Property="BorderBrush" Value="#7eb4ea" />
+                                    </Trigger>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter Property="Margin" Value="-2,-2,-2,0" />
+                                        <Setter Property="Padding" Value="6,2,2,0" />
+                                        <Setter Property="Panel.ZIndex" Value="1" />
+                                        <Setter TargetName="innerBorder" Property="Visibility" Value="Visible" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
 			</TabControl.ItemContainerStyle>
 			<TabControl.ItemTemplate>
 				<DataTemplate DataType="local:Card">
@@ -83,7 +116,7 @@
 							<ItemsControl ItemsSource="{Binding TextLines, Mode=OneTime}">
 								<ItemsControl.ItemTemplate>
 									<DataTemplate>
-										<TextBlock Margin="0,2" Text="{Binding}" TextWrapping="Wrap" />
+										<TextBlock Margin="0,2" Text="{Binding Mode=OneTime}" TextWrapping="Wrap" />
 									</DataTemplate>
 								</ItemsControl.ItemTemplate>
 							</ItemsControl>
@@ -139,7 +172,7 @@
 				<Image Source="Resources\Gears.png" Height="16" />
 			</Button>
 		</ToolBar>
-		<Grid Name="imgLoading" Grid.RowSpan="2" Grid.ColumnSpan="2" Background="#7Fffffff" Visibility="Collapsed">
+		<Grid Name="imgLoading" Grid.RowSpan="2" Grid.ColumnSpan="2" Background="#7fffffff" Visibility="Collapsed">
 			<Path Stroke="#7f505096" HorizontalAlignment="Center" VerticalAlignment="Center">
 				<!-- http://blogs.microsoft.co.il/blogs/maxim/archive/2008/03/08/wpf-daily-tip-simple-wait-progress-control-continuous-animation.aspx -->
 				<Path.Data>
@@ -150,8 +183,8 @@
 				</Path.Data>
 				<Path.Fill>
 					<LinearGradientBrush EndPoint="0,1">
-						<GradientStop Color="#ff4dd5ce" />
-						<GradientStop Offset="1" Color="#ff499692" />
+						<GradientStop Color="#4dd5ce" />
+                        <GradientStop Color="#499692" Offset="1" />
 					</LinearGradientBrush>
 				</Path.Fill>
 				<Path.RenderTransform>
