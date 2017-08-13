@@ -64,7 +64,7 @@ namespace Mojp
                 if (tokens.Length == 1)
                 {
                     //texts.Add(RemoveParenthesis(line));
-                    texts.Add(line);
+                    texts.Add(line.TrimEnd());
                 }
                 else
                 {
@@ -128,7 +128,7 @@ namespace Mojp
 
                         default:
                             //texts.Add(RemoveParenthesis(line));
-                            texts.Add(line);
+                            texts.Add(line.TrimEnd());
                             break;
                     }
                 }
