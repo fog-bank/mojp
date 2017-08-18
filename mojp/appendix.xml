@@ -563,6 +563,7 @@
     <regex target="text" pattern="対戦相手１人がコントロールするクリーチャー１体を対象" value="対戦相手がコントロールするクリーチャー１体を対象" nodebug="true" />
     <regex target="text" pattern="そうした場合、" value="そうしたなら、" nodebug="true" />
     <regex target="text" pattern="。あなたがこの呪文をあなたのメイン・フェイズの間に唱えた場合、" value="。あなたがこの呪文をあなたのメイン・フェイズ中に唱えたなら、" nodebug="true" />
+    <regex target="text" pattern="それ?の上に(、それを唱えるために使われたマナの色１色につき)?(\+1/\+1|-1/-1|\+1/\+0|\w{1,2}|オーメン・|ポリープ・)カウンターが([１-９Ｘ]+)個置かれた状態で(、タップ状態で)?戦場に出る" value="$1$2カウンターが$3個置かれた状態で$4戦場に出る" nodebug="true" />
     <regex target="text" pattern="。(そのプレイヤーが)?そうしたなら、そのプレイヤーはこの呪文をコピーし、そのコピーの新しい対象を選んでもよい。" value="。そうしたなら、そのプレイヤーはこの呪文をコピーしてもよい。そのプレイヤーはそのコピーの新しい対象を選んでもよい。" nodebug="true" />
     <regex target="text" pattern="(?m)(?&lt;=^族系.+)共通のクリーチャー・タイプを持つ場合、" value="共通のクリーチャー・タイプを持つなら、" nodebug="true" />
     <!-- A or B -->
