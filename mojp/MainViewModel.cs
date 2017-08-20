@@ -350,7 +350,8 @@ namespace Mojp
         /// </summary>
         public void Release()
         {
-            ReleaseAutomationElement();
+            //ReleaseAutomationElement();
+            prevWnd = null;
             cacheReq = null;
             condition = null;
 

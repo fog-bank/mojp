@@ -17,14 +17,11 @@ namespace Mojp
             InitializeComponent();
         }
 
-        public MainViewModel ViewModel
-        {
-            get { return DataContext as MainViewModel; }
-        }
+        public MainViewModel ViewModel => DataContext as MainViewModel;
 
         protected override void OnClosing(CancelEventArgs e)
         {
-            ViewModel.Release();
+            ViewModel?.Release();
 
             base.OnClosing(e);
         }
