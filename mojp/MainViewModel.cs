@@ -350,17 +350,16 @@ namespace Mojp
         /// </summary>
         public void Release()
         {
-            //ReleaseAutomationElement();
-            prevWnd = null;
-            cacheReq = null;
-            condition = null;
-
             if (timer != null)
             {
                 timer.Stop();
                 timer.Tick -= OnCapture;
                 timer = null;
             }
+            cacheReq = null;
+            condition = null;
+
+            App.Current.Dispatcher.BeginInvoke((Action)ReleaseAutomationElement);
         }
 
         /// <summary>
@@ -370,8 +369,9 @@ namespace Mojp
         {
             if (prevWnd != null)
             {
-                Automation.RemoveAllEventHandlers();
                 prevWnd = null;
+                Automation.RemoveAllEventHandlers();
+                Debug.WriteLine("Removed automation event handlers.");
             }
         }
 
@@ -532,9 +532,6 @@ namespace Mojp
                 App.Current.Dispatcher.Invoke(() => SetMessage("トークン"));
                 return;
             }
-
-            // ツールバーと重ならないようにするためのダミー項目
-            //foundCards.Add(Card.Empty);
 
             App.Current.Dispatcher.Invoke(() =>
             {
