@@ -558,6 +558,7 @@
     <regex target="text" pattern="新たな対象" value="新しい対象" nodebug="true" />
     <regex target="text" pattern="次のアンタップ・ステップの間に" value="次のアンタップ・ステップに" nodebug="true" />
     <regex target="text" pattern="(?m)(?&lt;=^|[・：。、])攻撃しているクリーチャー" value="攻撃クリーチャー" nodebug="true" />
+    <regex target="text" pattern="名前が(《[^《/》]+/[^《/》]+》)であるカード" value="$1という名前のカード" nodebug="true" />
     <regex target="text" pattern="選ばれた名前の(呪文|土地|発生源)" value="選ばれた名前を持つ$1" nodebug="true" />
     <regex target="text" pattern="あなたの墓地にあるクリーチャー・カード([１-９Ｘ]+)枚を対象" value="あなたの墓地からクリーチャー・カード$1枚を対象" nodebug="true" />
     <regex target="text" pattern="Ｘは([^。Ｙ]+)である。" value="Ｘは$1に等しい。" nodebug="true" />
@@ -1045,6 +1046,8 @@ Knowledge Vaultが戦場を離れたとき、Knowledge Vaultにより追放さ�
 皇帝ヘルカイトが表向きになったとき、あなたはあなたのライブラリーからドラゴン・カード１枚を探してもよい。そうしたなら、それを公開してあなたの手札に加え、あなたのライブラリーを切り直す。</card>
     <card name="Path to Exile" jaName="流刑への道" type="インスタント">クリーチャー１体を対象とし、それを追放する。それのコントローラーは自分のライブラリーから基本土地・カード１枚を探してもよい。そうしたなら、そのプレイヤーはそのカードをタップ状態で戦場に出し、その後自分のライブラリーを切り直す。</card>
     <card name="Sylvan Ranger" jaName="森のレインジャー" type="クリーチャー ― エルフ・スカウト" pt="1/1">森のレインジャーが戦場に出たとき、あなたはあなたのライブラリーから基本土地・カード１枚を探してもよい。そうしたなら、それを公開してあなたの手札に加え、その後あなたのライブラリーを切り直す。</card>
+    <card name="Welkin Hawk" jaName="天空の鷹" type="クリーチャー ― 鳥" pt="1/1">飛行
+天空の鷹が死亡したとき、あなたはあなたのライブラリーから《天空の鷹/Welkin Hawk》という名前のカード１枚を探してもよい。そうしたなら、それを公開してあなたの手札に加え、その後あなたのライブラリーを切り直す。</card>
     <!-- テンプレートの変更：すべての -->
     <card name="Bojuka Bog" jaName="ボジューカの沼" type="土地">ボジューカの沼はタップ状態で戦場に出る。
 ボジューカの沼が戦場に出たとき、プレイヤー１人を対象とする。そのプレイヤーの墓地からカードをすべて追放する。
