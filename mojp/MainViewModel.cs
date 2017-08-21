@@ -501,10 +501,13 @@ namespace Mojp
                         // 両面カードの場合に、Preview Pane に片面だけ表示されていても、もう一方の面を表示するようにする
                         if (card.RelatedCardName != null)
                         {
-                            App.Cards.TryGetValue(card.RelatedCardName, out var card2);
+                            foreach (string relatedName in card.RelatedCardNames)
+                            {
+                                App.Cards.TryGetValue(relatedName, out var card2);
 
-                            if (!foundCards.Contains(card2))
-                                foundCards.Add(card2);
+                                if (!foundCards.Contains(card2))
+                                    foundCards.Add(card2);
+                            }
                         }
                     }
                 }

@@ -378,6 +378,46 @@
     <pt name="Skysovereign, Consul Flagship" pt="6/5" />
     <pt name="Smuggler's Copter" pt="3/3" />
     <pt name="Untethered Express" pt="4/4" />
+    <!-- 参照カード -->
+    <related name="Ajani's Aid" related="Ajani, Valiant Protector" />
+    <related name="Angel's Herald" related="Empyrial Archangel" />
+    <related name="Arachnus Spinner" related="Arachnus Web" />
+    <related name="Behemoth's Herald" related="Godsire" />
+    <related name="Bogbrew Witch" related="Festering Newt|Bubbling Cauldron" />
+    <related name="Bubbling Cauldron" related="Festering Newt|Bogbrew Witch" />
+    <related name="Festering Newt" related="Bogbrew Witch|Bubbling Cauldron" />
+    <related name="Crown of Empires" related="Scepter of Empires|Throne of Empires" />
+    <related name="Scepter of Empires" related="Crown of Empires|Throne of Empires" />
+    <related name="Throne of Empires" related="Crown of Empires|Scepter of Empires" />
+    <related name="Dark Supplicant" related="Scion of Darkness" />
+    <related name="Demon's Herald" related="Prince of Thralls" />
+    <related name="Diligent Farmhand" related="Muscle Burst" />
+    <related name="Dragon's Herald" related="Hellkite Overlord" />
+    <related name="Gate to the Afterlife" related="God-Pharaoh's Gift" />
+    <related name="Gideon's Resolve" related="Gideon, Martial Paragon" />
+    <related name="Helm of Kaldra" related="Sword of Kaldra|Shield of Kaldra|Helm of Kaldra" />
+    <related name="Shield of Kaldra" related="Sword of Kaldra|Shield of Kaldra|Helm of Kaldra" />
+    <related name="Kookus" related="Keeper of Kookus" />
+    <related name="Kyscu Drake" related="Spitting Drake|Viashivan Dragon" />
+    <related name="Liberating Combustion" related="Chandra, Pyrogenius" />
+    <related name="Liliana's Influence" related="Liliana, Death Wielder" />
+    <related name="Liu Bei, Lord of Shu" related="Guan Yu, Sainted Warrior|Zhang Fei, Fierce Warrior" />
+    <related name="Nazahn, Revered Bladesmith" related="Hammer of Nazahn" />
+    <related name="Nissa Revane" related="Nissa's Chosen" />
+    <related name="Nissa's Encouragement" related="Forest|Brambleweft Behemoth|Nissa, Genesis Mage" />
+    <related name="Pardic Firecat" related="Flame Burst" />
+    <related name="Pious Kitsune" related="Eight-and-a-Half-Tails" />
+    <related name="Renowned Weaponsmith" related="Heart-Piercer Bow|Vial of Dragonfire" />
+    <related name="Rohgahh of Kher Keep" related="Kobolds of Kher Keep" />
+    <related name="Ruin in Their Wake" related="Wastes" />
+    <related name="Sift Through Sands" related="Peer Through Depths|Reach Through Mists|The Unspeakable" />
+    <related name="Sphinx's Herald" related="Sphinx Sovereign" />
+    <related name="Tezzeret's Betrayal" related="Tezzeret, Master of Metal" />
+    <related name="Urborg Panther" related="Feral Shadow|Breathstealer|Spirit of the Night" />
+    <related name="Verdant Crescendo" related="Nissa, Nature's Artisan" />
+    <related name="Visage of Bolas" related="Nicol Bolas, the Deceiver" />
+    <related name="Marauding Maulhorn" related="Advocate of the Beast" />
+    <related name="Walker of the Wastes" related="Wastes" />
     <!-- 分割カードのwikiページ -->
     <wikilink name="Stand" wikilink="抵抗+救難/Stand+Deliver" />
     <wikilink name="Deliver" wikilink="抵抗+救難/Stand+Deliver" />
@@ -807,6 +847,7 @@
     <card name="Thalakos Deceiver" jaName="サラカスの詐欺師" type="クリーチャー ― サラカス・ウィザード" pt="1/1">シャドー（このクリーチャーは、シャドーを持つクリーチャーのみブロックでき、シャドーを持つクリーチャーによってのみブロックされる。）
 サラカスの詐欺師が攻撃してブロックされないたび、クリーチャー１体を対象とする。あなたはサラカスの詐欺師を生け贄に捧げてもよい。そうしたなら、それのコントロールを得る。（この効果は永続する。）</card>
     <!-- テキストが正常でないカード：誤字脱字 -->
+    <card name="Angel's Herald" jaName="天使の伝令" type="クリーチャー ― 人間・クレリック" pt="1/1" related="Empyrial Archangel">(２)(白),(Ｔ),緑のクリーチャー１体と白のクリーチャー１体と青のクリーチャー１体を生け贄に捧げる：あなたのライブラリーから《浄火の大天使/Empyrial Archangel》という名前のカード１枚を探し、それを戦場に出す。その後あなたのライブラリーを切り直す。</card>
     <card name="As Foretold" jaName="予言により" type="エンチャント">あなたのアップキープの開始時に、予言によりの上に時間カウンターを１個置く。
 毎ターン１回、あなたは点数で見たマナ・コストがＸ以下の呪文を、それのマナ・コストではなく(０)を支払って唱えてもよい。Ｘは予言によりの上に置かれている時間カウンターの総数に等しい。</card>
     <card name="Cloudhoof Kirin" jaName="雲蹄の麒麟" type="伝説のクリーチャー ― 麒麟・スピリット" pt="4/4">飛行
@@ -816,6 +857,8 @@
     <card name="Hungry Lynx" jaName="飢えたオオヤマネコ" type="クリーチャー ― 猫" pt="2/2">あなたがコントロールする猫はプロテクション（ネズミ）を持つ。（それらはネズミによっては、ブロックされず、対象にならず、ダメージを与えられない。）
 あなたの終了ステップの開始時に、対戦相手１人を対象とする。そのプレイヤーは接死を持つ黒の1/1のネズミ・クリーチャー・トークンを１体生成する。
 ネズミが１体死亡するたび、あなたがコントロールする各猫の上にそれぞれ+1/+1カウンターを１個置く。</card>
+    <card name="Liu Bei, Lord of Shu" jaName="蜀主 劉備" type="伝説のクリーチャー ― 人間・兵士" pt="2/4" related="Guan Yu, Sainted Warrior|Zhang Fei, Fierce Warrior">馬術（このクリーチャーは、馬術を持たないクリーチャーによってはブロックされない。）
+あなたが、名前が《列聖の武将 関羽/Guan Yu, Sainted Warrior》であるパーマネントか、名前が《猛将 張飛/Zhang Fei, Fierce Warrior》であるパーマネントをコントロールしているかぎり、蜀主 劉備は+2/+2の修整を受ける。</card>
     <card name="Rubble" jaName="砕身" type="ソーサリー" related="Reduce" wikilink="粉骨+砕身/Reduce+Rubble">余波（この呪文はあなたの墓地からのみ唱えられる。その後、これを追放する。）
 土地最大３つを対象とする。それらはそれらのコントローラーの次のアンタップ・ステップにアンタップしない。</card>
     <card name="Vizier of Many Faces" jaName="多面相の侍臣" type="クリーチャー ― 多相の戦士・クレリック" pt="0/0">多面相の侍臣が不朽を行われていたなら、あなたはそのトークンを、マナ・コストを持たず、白であり、それの他のタイプに加えてゾンビであることを除き、戦場にある他のクリーチャー１体のコピーとして戦場に出してもよい。そうでないなら、あなたはこれを戦場にある他のクリーチャー１体のコピーとして戦場に出してもよい。
@@ -925,7 +968,7 @@ Knowledge Vaultが戦場を離れたとき、Knowledge Vaultにより追放さ�
 ・カン ― あなたのドロー・ステップの開始時に、カードを追加で１枚引き、その後カード１枚を捨てる。
 ・龍 ― 対戦相手が、あなたやあなたがコントロールするパーマネントを対象とする呪文を唱えるためのコストは、(２)多くなる。</card>
     <!-- テンプレートの変更：if節ルールでないif -->
-    <card name="Arachnus Spinner" jaName="アラクナスの紡ぎ手" type="クリーチャー ― 蜘蛛" pt="5/7">到達
+    <card name="Arachnus Spinner" jaName="アラクナスの紡ぎ手" type="クリーチャー ― 蜘蛛" pt="5/7" related="Arachnus Web">到達
 あなたがコントロールするアンタップ状態の蜘蛛１体をタップする：クリーチャー１体を対象とする。あなたの墓地やライブラリーから《アラクナスの蜘蛛の巣/Arachnus Web》という名前のカード１枚を探し、それをそのクリーチャーにつけた状態で戦場に出す。これによりあなたのライブラリーからカードを探したなら、あなたのライブラリーを切り直す。</card>
     <card name="Aven Mindcensor" jaName="エイヴンの思考検閲者" type="クリーチャー ― 鳥・ウィザード" pt="2/1">瞬速
 飛行
@@ -1117,7 +1160,7 @@ Knowledge Vaultが戦場を離れたとき、Knowledge Vaultにより追放さ�
 カードを２枚引く。</card>
     <!-- 余剰カンマ -->
     <card name="Earthquake" jaName="地震" type="ソーサリー">地震は飛行を持たない各クリーチャーと各プレイヤーにそれぞれＸ点のダメージを与える。</card>
-    <card name="Gate to the Afterlife" jaName="来世への門" type="アーティファクト">あなたがコントロールするトークンでないクリーチャーが１体死亡するたび、あなたは１点のライフを得る。その後あなたはカードを１枚引いてもよい。そうしたなら、カード１枚を捨てる。
+    <card name="Gate to the Afterlife" jaName="来世への門" type="アーティファクト" related="God-Pharaoh's Gift">あなたがコントロールするトークンでないクリーチャーが１体死亡するたび、あなたは１点のライフを得る。その後あなたはカードを１枚引いてもよい。そうしたなら、カード１枚を捨てる。
 (２),(Ｔ),来世への門を生け贄に捧げる：あなたの墓地やあなたの手札やあなたのライブラリーから《王神の贈り物/God-Pharaoh's Gift》という名前のカード１枚を探し、それを戦場に出す。これによりあなたのライブラリーからカードを探したなら、あなたのライブラリーを切り直す。この能力は、あなたの墓地にクリーチャー・カードが６枚以上あるときにのみ起動できる。</card>
     <card name="Krosan Verge" jaName="クローサの境界" type="土地">クローサの境界はタップ状態で戦場に出る。
 (Ｔ)：あなたのマナ・プールに(◇)を加える。

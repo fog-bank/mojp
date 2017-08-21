@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Xml.Linq;
 
 namespace Mojp
@@ -62,6 +63,11 @@ namespace Mojp
         /// 両面カードのもう一方の面など、関連するカードの名前を取得または設定します。
         /// </summary>
         public string RelatedCardName { get; set; }
+
+        /// <summary>
+        /// 関連するカードの名前のリストを取得します。
+        /// </summary>
+        public IEnumerable<string> RelatedCardNames => RelatedCardName.Split('|');
 
         /// <summary>
         /// 日本語名/英語名 で MTG Wiki に移動できない場合の、http://mtgwiki.com/wiki/ 以下の代替リンクを取得または設定します。

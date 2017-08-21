@@ -175,7 +175,7 @@ namespace Mojp
             foreach (var node in doc.Root.Element("add").Elements("card"))
             {
                 var card = Card.FromXml(node);
-                Debug.WriteLineIf(card.RelatedCardName != null && !cards.ContainsKey(card.RelatedCardName), card.Name + " の関連カードが見つかりません。");
+                Debug.WriteLineIf(card.RelatedCardName != null && !card.RelatedCardNames.All(cards.ContainsKey), card.Name + " の関連カードが見つかりません。");
 
                 if (cards.ContainsKey(card.Name))
                 {
@@ -200,6 +200,22 @@ namespace Mojp
                 }
                 else
                     Debug.WriteLine("P/T 情報の追加先となる " + name + " のカード情報がありません。");
+            }
+
+            // 関連カードだけ追加
+            foreach (var node in doc.Root.Element("add").Elements("related"))
+            {
+                string name = (string)node.Attribute("name");
+
+                if (cards.TryGetValue(name, out var card))
+                {
+                    Debug.WriteLineIf(card.RelatedCardName != null, card.Name + " には既に関連カードの情報があります。");
+                    card.RelatedCardName = (string)node.Attribute("related");
+
+                    Debug.WriteLineIf(card.RelatedCardName != null && !card.RelatedCardNames.All(cards.ContainsKey), card.Name + " に追加される関連カードが見つかりません。");
+                }
+                else
+                    Debug.WriteLine("関連カード情報の追加先となる " + name + " のカード情報がありません。");
             }
 
             // Wiki へのリンクだけ追加
@@ -376,7 +392,7 @@ namespace Mojp
                 }
 
                 var card = FromXml(node);
-                Debug.WriteLineIf(card.RelatedCardName != null && !cards.ContainsKey(card.RelatedCardName), card.Name + " の関連カードが見つかりません。");
+                Debug.WriteLineIf(card.RelatedCardName != null && !card.RelatedCardNames.All(cards.ContainsKey), card.Name + " の関連カードが見つかりません。");
 
                 if (cards.ContainsKey(card.Name))
                 {
