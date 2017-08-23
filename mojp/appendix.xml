@@ -89,7 +89,7 @@
     <card name="Avatar - Eight-and-a-Half-Tails" jaName="Eight-and-a-Half-Tails Avatar" type="ヴァンガード" pt="手札 +2/ライフ -3" wikilink="Eight-and-a-Half-Tails Avatar">(１)：あなたがコントロールするパーマネント１つを対象とする。それが持つプロテクションに記述されていない色から１色を無作為に選ぶ。ターン終了時まで、それはプロテクション（選ばれた色）を得る。</card>
     <card name="Avatar - Eladamri, Lord of Leaves" jaName="Eladamri, Lord of Leaves Avatar" type="ヴァンガード" pt="手札 -1/ライフ +2" wikilink="Eladamri, Lord of Leaves Avatar">各プレイヤーの戦闘前メイン・フェイズの開始時に、そのプレイヤーは自分のマナ・プールに(緑)(緑)を加える。</card>
     <card name="Avatar - Elvish Champion" jaName="Elvish Champion Avatar" type="ヴァンガード" pt="手札 +0/ライフ -5" wikilink="Elvish Champion Avatar">あなたは、「(Ｔ)：あなたのマナ・プールに(緑)を加える。」を持つ、緑の1/1のエルフ・クリーチャー・トークンを１体生成した状態でゲームを始める。</card>
-    <card name="Avatar - Enigma Sphinx" jaName="Enigma Sphinx Avatar" type="ヴァンガード" pt="手札 -1/ライフ +0" wikilink="Enigma Sphinx Avatar">あなたがいずれかのターンに最初に有色のアーティファクト・呪文を唱えるたび、あなたのライブラリーから点数で見たマナ・コストがその呪文より小さい、無作為に選ばれた有色のアーティファクト・カード１枚を探す。あなたはそのカードをそれのマナ・コストを支払うことなく唱えてもよい。そうしなかった場合、そのカードをあなたのライブラリーの一番下に置く。</card>
+    <card name="Avatar - Enigma Sphinx" jaName="Enigma Sphinx Avatar" type="ヴァンガード" pt="手札 -1/ライフ +0" wikilink="Enigma Sphinx Avatar">あなたがいずれかのターンに最初に有色のアーティファクト・呪文を唱えるたび、あなたのライブラリーから点数で見たマナ・コストがその呪文より小さい、無作為に選ばれた有色のアーティファクト・カード１枚を探す。あなたはそのカードをそれのマナ・コストを支払うことなく唱えてもよい。そうしないなら、そのカードをあなたのライブラリーの一番下に置く。</card>
     <card name="Avatar - Erhnam Djinn" jaName="Erhnam Djinn Avatar" type="ヴァンガード" pt="手札 +0/ライフ +3" wikilink="Erhnam Djinn Avatar">あなたがクリーチャー・呪文を１つ唱えるたび、緑の1/1の苗木・クリーチャー・トークンを１体生成する。</card>
     <card name="Avatar - Etched Oracle" jaName="Etched Oracle Avatar" type="ヴァンガード" pt="手札 +1/ライフ -4" wikilink="Etched Oracle Avatar">あなたは、あなたが唱える呪文のマナ・コストを支払うのではなく、(白)(青)(黒)(赤)(緑)を支払ってもよい。</card>
     <card name="Avatar - Fallen Angel" jaName="Fallen Angel Avatar" type="ヴァンガード" pt="手札 +0/ライフ -5" wikilink="Fallen Angel Avatar">あなたがコントロールするクリーチャーが１体死亡するたび、対戦相手１人を対象とする。そのプレイヤーは１点のライフを失い、あなたは１点のライフを得る。</card>
@@ -596,6 +596,7 @@
     <!-- テンプレート変更 -->
     <regex target="text" pattern="トークンを([１-９Ｘ]+)体戦場に出す。" value="トークンを$1体生成する。" nodebug="true" />
     <regex target="text" pattern="そうした場合、" value="そうしたなら、" nodebug="true" />
+    <regex target="text" pattern="そうしない場合、|そうしなかった場合、|そうしなかったなら、|(?&lt;=そうしたなら、[^。]+。)そうでない場合、" value="そうしないなら、" nodebug="true" />
     <regex target="text" pattern="新たな対象" value="新しい対象" nodebug="true" />
     <regex target="text" pattern="次のアンタップ・ステップの間に" value="次のアンタップ・ステップに" nodebug="true" />
     <regex target="text" pattern="(?m)(?&lt;=^|[・：。、])攻撃しているクリーチャー" value="攻撃クリーチャー" nodebug="true" />
@@ -629,7 +630,7 @@
     <regex target="text" pattern="黒でもアーティファクトでもないクリーチャーによってはブロックされない。）" value="アーティファクトでも黒でもないクリーチャーによってはブロックされない。）" nodebug="true" />
     <regex target="text" pattern="（あなたはあなたの墓地にあるこのカードを、そのフラッシュバック・コストで唱えてもよい。その後それを追放する。）" value="（あなたはあなたの墓地から、このカードをこれのフラッシュバック・コストで唱えてもよい。その後、これを追放する。）" nodebug="true" />
     <regex target="text" pattern="（あなたが秘儀呪文を唱えるに際し、あなたはこのカードを手札から公開して連繋コストを支払ってもよい。そうしたなら、このカードの効果をその呪文に追加する。）" value="（あなたが秘儀・呪文を唱えるに際し、あなたはあなたの手札からこのカードを公開してもよい。そうしたなら、これの連繋コストを支払い、このカードの効果をその呪文に加える。）" nodebug="true" />
-    <regex target="text" pattern="（あなたがカードを引く場合、代わりにあなたはあなたのライブラリーのカードを上からちょうど([１-９])枚、あなたの墓地に置いてもよい。そうしたなら、あなたの墓地にあるこのカードをあなたの手札に戻す。そうしなかった場合、カードを１枚引く。）" value="（あなたがカードを引くなら、代わりにあなたはあなたのライブラリーの一番上からちょうど$1枚のカードをあなたの墓地に置いてもよい。そうしたなら、あなたの墓地からこのカードをあなたの手札に戻す。そうしないなら、カードを１枚引く。）" nodebug="true" />
+    <regex target="text" pattern="（あなたがカードを引く場合、代わりにあなたはあなたのライブラリーのカードを上からちょうど([１-９])枚、あなたの墓地に置いてもよい。そうしたなら、あなたの墓地にあるこのカードをあなたの手札に戻す。そうしないなら、カードを１枚引く。）" value="（あなたがカードを引くなら、代わりにあなたはあなたのライブラリーの一番上からちょうど$1枚のカードをあなたの墓地に置いてもよい。そうしたなら、あなたの墓地からこのカードをあなたの手札に戻す。そうしないなら、カードを１枚引く。）" nodebug="true" />
     <regex target="text" pattern="：このカードを戦場に戻す。そのクリーチャーは速攻を得る。次の(ターン)?終了ステップの開始時に?か、?それが戦場を離れる場合に、それを追放する。蘇生はソーサリーとしてのみ行う。）" value="：このカードをあなたの墓地から戦場に戻す。これは速攻を得る。次の終了ステップの開始時に、またはこれが戦場を離れるなら、これを追放する。蘇生はソーサリーとしてのみ行う。）" nodebug="true" />
     <regex target="text" pattern="（あなたが(この|その)呪文を唱えるに際し、あなたはあなたがコントロールする、(?:この|その)呪文と共通の色を持つアンタップ状態のクリーチャーを２体タップしてもよい。そうしたなら、(?:この|その)呪文をコピー(?:する。|し、)(あなたはそのコピーの新しい対象を選んでもよい。)?）" value="（あなたが$1呪文を唱えるに際し、あなたはあなたがコントロールする$1呪文と共通の色を持つアンタップ状態のクリーチャー２体をタップしてもよい。そうしたとき、$1呪文をコピーする。$2）" nodebug="true" />
     <regex target="text" pattern="（あなたがこのカードを引いたとき、これがこのターンに最初に引いたカードだった場合、あなたはこれの奇跡コストを支払うことでこれを唱えてもよい。）" value="（あなたがこのターンに最初に引いたカードとしてこのカードを引き、すぐに公開したとき、あなたはこれの奇跡コストを支払うことでこれを唱えてもよい。）" nodebug="true" />
