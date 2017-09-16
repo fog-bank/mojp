@@ -106,6 +106,15 @@ namespace Mojp
                 var vm = DataContext as MainViewModel;
                 vm.Cards.Clear();
                 vm.Cards.Add(target);
+
+                if (target.RelatedCardName != null)
+                {
+                    foreach (string relatedName in target.RelatedCardNames)
+                    {
+                        App.Cards.TryGetValue(relatedName, out var card2);
+                        vm.Cards.Add(card2);
+                    }
+                }
                 vm.SelectedIndex = 0;
             }
         }
