@@ -13,7 +13,7 @@
     <li><a href="#top">TOP</a></li>
     <li><a href="#download">ダウンロード</a></li>
     <li><a href="#howtouse">使い方</a></li>
-    <li><a href="#comment">コメント</a></li>
+    <li><a href="#contact">連絡先</a></li>
     <li><a href="https://github.com/fog-bank/mojp">View on GitHub</a></li>
   </ul>
   <div id="content">
@@ -36,10 +36,10 @@
     </div>
     <h3 id="download">ダウンロード</h3>
     <div>
-      <h4><span class="underline">最新版 v1.5.1（破滅の刻 対応）</span></h4>
-      <p><a href="https://github.com/fog-bank/mojp/releases/download/v1.5.1/mojp.zip">ダウンロード</a>　<a href="https://github.com/fog-bank/mojp/releases/tag/v1.5.1">リリースノート</a></p>
-      <h4><span class="underline">特殊セット対応版 v1.5.3（統率者 2017 対応）</span></h4>
-      <p><a href="https://github.com/fog-bank/mojp/releases/download/v1.5.3/mojp.zip">ダウンロード</a>　<a href="https://github.com/fog-bank/mojp/releases/tag/v1.5.3">リリースノート</a></p>
+      <h4><span class="underline">最新版 v1.5.2（破滅の刻 対応）</span></h4>
+      <p><a href="https://github.com/fog-bank/mojp/releases/download/v1.5.2/mojp.zip">ダウンロード</a>　<a href="https://github.com/fog-bank/mojp/releases/tag/v1.5.2">リリースノート</a></p>
+      <h4><span class="underline">開発版 v1.6.0 Beta（イクサラン &amp; 統率者 2017 &amp; アイコニックマスターズ 仮対応）</span></h4>
+      <p><a href="https://github.com/fog-bank/mojp/releases/download/v1.6.0-beta/mojp.zip">ダウンロード</a>　<a href="https://github.com/fog-bank/mojp/releases/tag/v1.6.0-beta">リリースノート</a></p>
     </div>
     <h3 id="howtouse">使い方</h3>
     <div>
@@ -53,10 +53,9 @@
       </ol>
       <h4><span class="underline">補足</span></h4>
       <ul>
-        <li>
-          Preview Pane を表示するには、ACCOUNT 画面の「Display &amp; Sound Settings」内の右下にある「Display Card Preview Window」にチェックを入れます。
-          詳細は<a href="https://github.com/fog-bank/mojp/wiki/Preview-Pane-%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%95%E3%81%9B%E3%82%8B%E6%96%B9%E6%B3%95">こちら</a>。
-        </li>
+        <li>Preview Pane を表示するには、ACCOUNT 画面の「Display &amp; Sound Settings」内の右下にある「Display Card Preview 
+          Window」にチェックを入れます。詳細は<a href="https://github.com/fog-bank/mojp/wiki/Preview-Pane-%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%95%E3%81%9B%E3%82%8B%E6%96%B9%E6%B3%95">こちら</a>。</li>
+        <li>カードをズームしたままマウスカーソルを移動した場合や、素早くマウスカーソルを移動した場合に、表示が変わらないことがあります。</li>
         <li>トークンや紋章などには対応しておらず、何も表示されません。詳細は<a href="https://github.com/fog-bank/mojp/wiki/%E4%B8%8D%E5%85%B7%E5%90%88">こちら</a>。</li>
         <li>あくまで参考程度のご利用でお願い致します。このアプリを原因とするプレイミスには責任を負いかねます。</li>
       </ul>
@@ -70,15 +69,14 @@
     </div>
     <h3 id="mechanism">仕組み</h3>
     <div>
-      <p>
-        <a href="https://msdn.microsoft.com/ja-jp/library/ms753388.aspx">UI Automation</a> API を利用して、Preview Pane 内のテキストを検索しています。
-        メインロジックは <a href="https://github.com/fog-bank/mojp/blob/master/mojp/MainViewModel.cs#L385">MainViewModel.cs</a> 内の OnCapture メソッド以下です。
-      </p>
+      <p><a href="https://msdn.microsoft.com/ja-jp/library/ms753388.aspx">UI Automation</a> API を利用して、Preview Pane 内のテキストを検索しています。メインロジックは
+      <a href="https://github.com/fog-bank/mojp/blob/master/mojp/MainViewModel.cs#L386">MainViewModel.cs</a> 内の OnCapture メソッド以下です。</p>
     </div>
     <h3 id="resource">リソース</h3>
     <div>
       <p>このアプリで表示する日本語テキストは、<a href="http://whisper.wisdom-guild.net/">WHISPER</a> の検索結果をテキストファイルに保存したものに基づいています。</p>
-      <p>アイコンの一部は Iconfinder の作品 [<a href="https://www.iconfinder.com/icons/6000/book_dictionary_learn_school_translate_icon#size=128">1</a>, <a href="https://www.iconfinder.com/icons/285680/camera_icon#size=16">2</a>] を利用しています。</p>
+      <p>アイコンの一部は Iconfinder の作品 [<a href="https://www.iconfinder.com/icons/6000/book_dictionary_learn_school_translate_icon#size=128">1</a>,
+        <a href="https://www.iconfinder.com/icons/285680/camera_icon#size=16">2</a>] を利用しています。</p>
       <h4><span class="underline">手動でカードデータを更新する方法</span></h4>
       <ol>
         <li>GitHub のリポジトリから <a href="https://github.com/fog-bank/mojp/raw/master/mojp/appendix.xml" type="text/xml">appendix.xml</a>（ファイル名固定）をダウンロードして、アプリケーション フォルダ（mojp.exe があるフォルダ）に保存しておく。</li>
@@ -87,11 +85,12 @@
         <li>本アプリの設定画面を開き、一番下の開発用メニューから「検索結果テキストの読み込み」ボタンで保存したテキストを読み込む。</li>
         <li>チェックマークが表示されたら完了。アプリケーション フォルダにある cards.xml が変更されているはずです。</li>
       </ol>
-      <p>カードセットを絞らない場合、1.6 万件以上のカードがヒットし、テキストのサイズは 6 MB を超えますので、この方法で頻繁に検索しないでください。Wisdom Guild さんのサーバーに対し著しく負荷をかける行為は禁止されています。</p>
+      <p>カードセットを絞らない場合、1.6 万件以上のカードがヒットし、テキストのサイズは 6 MB を超えますので、この方法で頻繁に検索しないでください。</p>
     </div>
-    <h3 id="comment">コメント</h3>
+    <h3 id="contact">連絡先</h3>
     <div>
-      <p>匿名のコメントが可能です。（コメントと名前、仮のメールアドレスを記入後、ゲストとして投稿するにチェック）</p>
+      <p>Twitter: <a href="https://twitter.com/bank_fog">@bank_fog</a></p>
+      <p>または、以下のフォームで匿名のコメントが可能です。（コメントと名前、仮のメールアドレスを記入後、ゲストとして投稿するにチェック）</p>
       <div id="comment_body">
         <div id="disqus_thread"></div>
         <script>

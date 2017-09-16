@@ -1,4 +1,4 @@
-# MTGO Japanese Card Text Preview
+# MO 日本語カードテキスト表示ツール
 [Magic: The Gathering Online](http://www.mtgo.com/) で表示されているカードに対応して、日本語テキストを自動で表示するアプリです。
 
 ![Screenshot v1.3.0](https://github.com/fog-bank/mojp/blob/master/images/screenshot.png)
@@ -18,6 +18,7 @@
 
 ### 補足
 * Preview Pane を表示するには、ACCOUNT 画面の「Display & Sound Settings」内の右下にある「Display Card Preview Window」にチェックを入れます。詳細は[こちら](https://github.com/fog-bank/mojp/wiki/Preview-Pane-%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%95%E3%81%9B%E3%82%8B%E6%96%B9%E6%B3%95)。
+* カードをズームしたままマウスカーソルを移動した場合や、素早くマウスカーソルを移動した場合に、表示が変わらないことがあります。
 * トークンや紋章などには対応しておらず、何も表示されません。詳細は[こちら](https://github.com/fog-bank/mojp/wiki/%E4%B8%8D%E5%85%B7%E5%90%88)。
 * あくまで参考程度のご利用でお願い致します。このアプリを原因とするプレイミスには責任を負いかねます。
 
@@ -40,4 +41,7 @@
 4. 本アプリの設定画面を開き、一番下の開発用メニューから「検索結果テキストの読み込み」ボタンで保存したテキストを読み込む。
 5. チェックマークが表示されたら完了。アプリケーション フォルダにある cards.xml が変更されているはずです。
 
-カードセットを絞らない場合、1.6 万件以上のカードがヒットし、テキストのサイズは 6 MB を超えますので、この方法で頻繁に検索しないでください。Wisdom Guild さんのサーバーに対し著しく負荷をかける行為は禁止されています。
+カードセットを絞らない場合、1.6 万件以上のカードがヒットし、テキストのサイズは 6 MB を超えますので、この方法で頻繁に検索しないでください。
+
+## 連絡先
+Twitter: [@bank_fog](https://twitter.com/bank_fog)
