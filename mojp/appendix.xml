@@ -2420,6 +2420,8 @@ Knowledge Vaultが戦場を離れたとき、Knowledge Vaultにより追放さ�
     <card name="Aswan Jaguar" />
     <card name="Call from the Grave" />
     <card name="Camatal Scout" />
+    <card name="Dakmor Ghoul" />
+    <card name="Devout Monk" />
     <card name="Faerie Dragon" />
     <card name="Fraternal Exaltation" />
     <card name="Gem Bazaar" />
@@ -2435,8 +2437,11 @@ Knowledge Vaultが戦場を離れたとき、Knowledge Vaultにより追放さ�
     <card name="Prismatic Dragon" />
     <card name="Proposal" />
     <card name="Rainbow Knights" />
+    <card name="Royal Falcon" />
     <card name="Sadzi's Torrent" />
     <card name="Shichifukujin Dragon" />
+    <card name="Shrieking Specter" />
+    <card name="Stream of Acid" />
     <card name="Splendid Genesis" />
     <card name="Tornellan Protecter" />
     <card name="Vellukan Dragon" />
@@ -2582,7 +2587,6 @@ Knowledge Vaultが戦場を離れたとき、Knowledge Vaultにより追放さ�
     <jaName name="Curse Artifact" />
     <jaName name="Curse of Marit Lage" />
     <jaName name="Cyclopean Tomb" />
-    <jaName name="Dakmor Ghoul" />
     <jaName name="Damping Field" />
     <jaName name="Dance of the Dead" />
     <jaName name="Dark Sphere" />
@@ -2601,7 +2605,6 @@ Knowledge Vaultが戦場を離れたとき、Knowledge Vaultにより追放さ�
     <jaName name="Desert Nomads" />
     <jaName name="Despotic Scepter" />
     <jaName name="Devouring Deep" />
-    <jaName name="Devout Monk" />
     <jaName name="Diabolic Vision" />
     <jaName name="Diamond Valley" />
     <jaName name="Didgeridoo" />
@@ -2668,7 +2671,6 @@ Knowledge Vaultが戦場を離れたとき、Knowledge Vaultにより追放さ�
     <jaName name="Fastbond" />
     <jaName name="Fasting" />
     <jaName name="Fatal Lore" />
-    <jaName name="Feast or Famine" />
     <jaName name="Feint" />
     <jaName name="Feral Thallid" />
     <jaName name="Festival" />
@@ -3073,7 +3075,6 @@ Knowledge Vaultが戦場を離れたとき、Knowledge Vaultにより追放さ�
     <jaName name="Sheltered Valley" />
     <jaName name="Shield of the Ages" />
     <jaName name="Shield Sphere" />
-    <jaName name="Shrieking Specter" />
     <jaName name="Shyft" />
     <jaName name="Silhouette" />
     <jaName name="Silver Erne" />
@@ -3122,7 +3123,6 @@ Knowledge Vaultが戦場を離れたとき、Knowledge Vaultにより追放さ�
     <jaName name="Stone-Throwing Devils" />
     <jaName name="Storm Spirit" />
     <jaName name="Storm World" />
-    <jaName name="Stream of Acid" />
     <jaName name="Stromgald Spy" />
     <jaName name="Stunted Growth" />
     <jaName name="Subdue" />
