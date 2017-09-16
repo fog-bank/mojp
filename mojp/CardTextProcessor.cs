@@ -171,21 +171,55 @@ namespace Mojp
             var cards = App.Cards;
             var doc = XDocument.Load(file);
 
+            // 正規表現の構築
+            var regexes = new List<Tuple<string[], Regex, string, bool>>();
+
+            foreach (var node in doc.Root.Element("replace").Elements("regex"))
+            {
+                string targets = (string)node.Attribute("target");
+
+                if (targets.Contains("all"))
+                    targets = "name|jaName|type|pt|related|wikilink|text";
+
+                string pattern = (string)node.Attribute("pattern");
+                try
+                {
+                    var regex = new Regex(pattern);
+                    string value = (string)node.Attribute("value");
+                    bool? nodebug = (bool?)node.Attribute("nodebug");
+
+                    regexes.Add(Tuple.Create(targets.Split('|'), regex, value, nodebug.GetValueOrDefault()));
+                }
+                catch { Debug.WriteLine("正規表現の構築に失敗しました。パターン：" + pattern); }
+            }
+
             // カードの追加
             foreach (var node in doc.Root.Element("add").Elements("card"))
             {
-                var card = Card.FromXml(node);
+                var card = FromXml(node);
                 Debug.WriteLineIf(card.RelatedCardName != null && !card.RelatedCardNames.All(cards.ContainsKey), card.Name + " の関連カードが見つかりません。");
 
                 if (cards.ContainsKey(card.Name))
                 {
-                    if (card.EqualsStrict(cards[card.Name]))
+                    var mofidiedCard = cards[card.Name].Clone();
+
+                    foreach (var tup in regexes)
+                        ReplaceByRegex(mofidiedCard, tup.Item1, tup.Item2, tup.Item3);
+
+                    if (card.EqualsStrict(mofidiedCard))
                         Debug.WriteLine(card.Name + " には既に同名カードが存在します。");
                     else
                         Debug.WriteLine(card.Name + " には既に同名カードが存在しますが、カード情報が一致しません。");
                 }
                 else
+                {
                     cards.Add(card.Name, card);
+
+                    var cloneCard = card.Clone();
+                    foreach (var tup in regexes)
+                        Debug.WriteLineIf(ReplaceByRegex(cloneCard, tup.Item1, tup.Item2, tup.Item3),
+                            card.Name + " には正規表現による検索（" + tup.Item2 + "）に一致する箇所があります。");
+                }
             }
 
             // P/T だけ追加
@@ -236,28 +270,6 @@ namespace Mojp
             var beforeNodes = new XElement("cards");
             var replacedNodes = new XElement("replace");
             var identicalNodes = new XElement("identical");
-
-            // 正規表現による置換
-            var regexes = new List<Tuple<string[], Regex, string, bool>>();
-
-            foreach (var node in doc.Root.Element("replace").Elements("regex"))
-            {
-                string targets = (string)node.Attribute("target");
-
-                if (targets.Contains("all"))
-                    targets = "name|jaName|type|pt|related|wikilink|text";
-
-                string pattern = (string)node.Attribute("pattern");
-                try
-                {
-                    var regex = new Regex(pattern);
-                    string value = (string)node.Attribute("value");
-                    bool? nodebug = (bool?)node.Attribute("nodebug");
-
-                    regexes.Add(Tuple.Create(targets.Split('|'), regex, value, nodebug.GetValueOrDefault()));
-                }
-                catch { Debug.WriteLine("正規表現の構築に失敗しました。パターン：" + pattern); }
-            }
             var appliedCount = new int[regexes.Count];
 
             // 英語カード名を変えることがあるので、静的リストにしてから列挙
@@ -269,106 +281,22 @@ namespace Mojp
 
                 for (int i = 0; i < regexes.Count; i++)
                 {
-                    var targets = regexes[i].Item1;
-                    var regex = regexes[i].Item2;
-                    string value = regexes[i].Item3;
-                    bool applied = false;
+                    string prevCardName = card.Name;
+                    bool applied = ReplaceByRegex(card, regexes[i].Item1, regexes[i].Item2, regexes[i].Item3);
 
-                    foreach (string target in targets)
+                    // 英語カード名が変わった場合は、キーが変わったことになるので再追加
+                    if (card.Name != prevCardName)
                     {
-                        switch (target)
-                        {
-                            case "name":
-                                string name = regex.Replace(card.Name, value);
-
-                                if (card.Name != name)
-                                {
-                                    cards.Remove(card.Name);
-                                    card.Name = name;
-                                    cards.Add(name, card);
-                                    replaced = true;
-                                    applied = true;
-                                    nodebug &= regexes[i].Item4;
-                                }
-                                break;
-
-                            case "jaName":
-                                string jaName = regex.Replace(card.JapaneseName, value);
-
-                                if (card.JapaneseName != jaName)
-                                {
-                                    card.JapaneseName = jaName;
-                                    replaced = true;
-                                    applied = true;
-                                    nodebug &= regexes[i].Item4;
-                                }
-                                break;
-
-                            case "type":
-                                string type = regex.Replace(card.Type, value);
-
-                                if (card.Type != type)
-                                {
-                                    card.Type = type;
-                                    replaced = true;
-                                    applied = true;
-                                    nodebug &= regexes[i].Item4;
-                                }
-                                break;
-
-                            case "pt":
-                                string pt = regex.Replace(card.PT, value);
-
-                                if (card.PT != pt)
-                                {
-                                    card.PT = pt;
-                                    replaced = true;
-                                    applied = true;
-                                    nodebug &= regexes[i].Item4;
-                                }
-                                break;
-
-                            case "related":
-                                string related = regex.Replace(card.RelatedCardName, value);
-
-                                if (card.RelatedCardName != related)
-                                {
-                                    card.RelatedCardName = related;
-                                    replaced = true;
-                                    applied = true;
-                                    nodebug &= regexes[i].Item4;
-                                }
-                                break;
-
-                            case "wikilink":
-                                string wikilink = regex.Replace(card.WikiLink, value);
-
-                                if (card.WikiLink != wikilink)
-                                {
-                                    card.WikiLink = wikilink;
-                                    replaced = true;
-                                    applied = true;
-                                    nodebug &= regexes[i].Item4;
-                                }
-                                break;
-
-                            case "text":
-                                string text = regex.Replace(card.Text, value);
-
-                                if (card.Text != text)
-                                {
-                                    card.Text = text;
-                                    card.lines = null;
-                                    replaced = true;
-                                    applied = true;
-                                    nodebug &= regexes[i].Item4;
-                                }
-                                break;
-                        }
+                        cards.Remove(prevCardName);
+                        cards.Add(card.Name, card);
                     }
 
                     if (applied)
+                    {
+                        replaced = true;
+                        nodebug &= regexes[i].Item4;
                         appliedCount[i]++;
+                    }
                 }
 
                 if (replaced && !nodebug)
@@ -382,6 +310,8 @@ namespace Mojp
                 Debug.WriteLine("Regex applied: " + appliedCount[i] + " cards, pattern: " + regexes[i].Item2);
 
             // 個々のカードの書き換え
+            var cardNamesToReplace = new HashSet<string>();
+
             foreach (var node in doc.Root.Element("replace").Elements("card"))
             {
                 // 変更理由を記したコメントを挿入
@@ -393,6 +323,7 @@ namespace Mojp
 
                 var card = FromXml(node);
                 Debug.WriteLineIf(card.RelatedCardName != null && !card.RelatedCardNames.All(cards.ContainsKey), card.Name + " の関連カードが見つかりません。");
+                Debug.WriteLineIf(!cardNamesToReplace.Add(card.Name), card.Name + " のテキスト置換を複数回行おうとしています。");
 
                 if (cards.ContainsKey(card.Name))
                 {
@@ -408,6 +339,11 @@ namespace Mojp
                         beforeNodes.Add(cards[card.Name].ToXml());
                         replacedNodes.Add(node);
                         cards[card.Name] = card;
+
+                        var cloneCard = card.Clone();
+                        foreach (var tup in regexes)
+                            Debug.WriteLineIf(ReplaceByRegex(cloneCard, tup.Item1, tup.Item2, tup.Item3), 
+                                card.Name + " には正規表現による検索（" + tup.Item2 + "）に一致する箇所があります。");
                     }
                 }
                 else
@@ -468,6 +404,93 @@ namespace Mojp
                 else
                     Debug.WriteLine(name + " は既にカードリストに含まれていません。");
             }
+        }
+
+        /// <summary>
+        /// <see cref="Card"/> オブジェクト内の指定した対象に対して、<see cref="Regex"/> で一致したテキストを置換します。
+        /// </summary>
+        /// <returns>実際に 1 か所以上で置換されたかどうかを示す値。</returns>
+        private static bool ReplaceByRegex(Card card, string[] targets, Regex regex, string value)
+        {
+            bool applied = false;
+
+            foreach (string target in targets)
+            {
+                switch (target)
+                {
+                    case "name":
+                        string name = regex.Replace(card.Name, value);
+
+                        if (card.Name != name)
+                        {
+                            card.Name = name;
+                            applied = true;
+                        }
+                        break;
+
+                    case "jaName":
+                        string jaName = regex.Replace(card.JapaneseName, value);
+
+                        if (card.JapaneseName != jaName)
+                        {
+                            card.JapaneseName = jaName;
+                            applied = true;
+                        }
+                        break;
+
+                    case "type":
+                        string type = regex.Replace(card.Type, value);
+
+                        if (card.Type != type)
+                        {
+                            card.Type = type;
+                            applied = true;
+                        }
+                        break;
+
+                    case "pt":
+                        string pt = regex.Replace(card.PT, value);
+
+                        if (card.PT != pt)
+                        {
+                            card.PT = pt;
+                            applied = true;
+                        }
+                        break;
+
+                    case "related":
+                        string related = regex.Replace(card.RelatedCardName, value);
+
+                        if (card.RelatedCardName != related)
+                        {
+                            card.RelatedCardName = related;
+                            applied = true;
+                        }
+                        break;
+
+                    case "wikilink":
+                        string wikilink = regex.Replace(card.WikiLink, value);
+
+                        if (card.WikiLink != wikilink)
+                        {
+                            card.WikiLink = wikilink;
+                            applied = true;
+                        }
+                        break;
+
+                    case "text":
+                        string text = regex.Replace(card.Text, value);
+
+                        if (card.Text != text)
+                        {
+                            card.Text = text;
+                            card.lines = null;
+                            applied = true;
+                        }
+                        break;
+                }
+            }
+            return applied;
         }
 
         ///// <summary>

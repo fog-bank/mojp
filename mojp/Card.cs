@@ -112,6 +112,20 @@ namespace Mojp
 
         public override string ToString() => Name;
 
+        public Card Clone()
+        {
+            return new Card()
+            {
+                Name = Name,
+                JapaneseName = JapaneseName,
+                Type = Type,
+                Text = Text,
+                PT = PT,
+                RelatedCardName = RelatedCardName,
+                WikiLink = WikiLink
+            };
+        }
+
         /// <summary>
         /// 後で復元できるように XML ノードに変換します。
         /// </summary>
