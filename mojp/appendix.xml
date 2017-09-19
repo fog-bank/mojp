@@ -1043,7 +1043,7 @@
     <regex target="text" pattern="対戦相手を１人選ぶ。" value="対戦相手１人を選ぶ。" nodebug="true" />
     <regex target="text" pattern="トークン([１-９Ｘ]+)体を生成する。" value="トークンを$1体生成する。" nodebug="true" />
     <regex target="text" pattern="クリーチャー１体が死亡するたび、" value="クリーチャーが１体死亡するたび、" nodebug="true" />
-    <regex target="text" pattern="(クリーチャー|コウモリ)を([１-９Ｘ]+)体生け贄" value="$1$2体を生け贄" nodebug="true" />
+    <regex target="text" pattern="(クリーチャー|コウモリ)を([１-９Ｘ]+)体、?生け贄" value="$1$2体を生け贄" nodebug="true" />
     <regex target="text" pattern="パーマネントを([１-９Ｘ]+)つ生け贄" value="パーマネント$1つを生け贄" nodebug="true" />
     <regex target="text" pattern="あなた[がの]コントロールする土地を?([１-９Ｘ]+)つ、?オーナーの手札に戻" value="あなたがコントロールしている土地$1つをオーナーの手札に戻" nodebug="true" />
     <regex target="text" pattern="ライフを([０-９Ｘ]+)点支払" value="$1点のライフを支払" nodebug="true" />
@@ -1056,10 +1056,11 @@
     <regex target="text" pattern="新たな対象" value="新しい対象" nodebug="true" />
     <regex target="text" pattern="次のアンタップ・ステップの間に" value="次のアンタップ・ステップに" nodebug="true" />
     <regex target="text" pattern="(?:各|１)ターンに１回(?:のみ|だけ)" value="毎ターン１回のみ" nodebug="true" />
+    <regex target="text" pattern="しかプレイでき" value="しか起動でき" nodebug="true" />
     <regex target="text" pattern="(?m)(?&lt;=^|[・：。、])攻撃しているクリーチャー" value="攻撃クリーチャー" nodebug="true" />
     <regex target="text" pattern="攻撃(?:クリーチャー)?(?:１体)?かブロックしているクリーチャー１体を対象" value="攻撃クリーチャー１体かブロック・クリーチャー１体を対象" nodebug="true" />
     <regex target="text" pattern="(?m)(?&lt;=^|：|か、|飛行を持つ)ブロックしているクリーチャー１体を対象" value="ブロック・クリーチャー１体を対象" nodebug="true" />
-    <regex target="text" pattern="名前が(《[^《/》]+/[^《/》]+》)であるカード" value="$1という名前のカード" nodebug="true" />
+    <regex target="text" pattern="名前が(《[^《/》]+/[^《/》]+》)である" value="$1という名前の" nodebug="true" />
     <regex target="text" pattern="選ばれた名前の(呪文|土地|発生源)" value="選ばれた名前を持つ$1" nodebug="true" />
     <regex target="text" pattern="あなたの墓地にあるクリーチャー・カード([１-９Ｘ]+)枚を対象" value="あなたの墓地からクリーチャー・カード$1枚を対象" nodebug="true" />
     <regex target="text" pattern="以下から１つまたは複数を選ぶ。" value="以下から１つ以上を選ぶ。" nodebug="true" />
@@ -1113,8 +1114,6 @@
     <card name="Snow-Covered Plains" jaName="冠雪の平地" type="基本氷雪土地 ― 平地">（(Ｔ)：あなたのマナ・プールに(白)を加える。）</card>
     <card name="Snow-Covered Swamp" jaName="冠雪の沼" type="基本氷雪土地 ― 沼">（(Ｔ)：あなたのマナ・プールに(黒)を加える。）</card>
     <!-- テキストが正常でないカード -->
-    <card name="Ashen Ghoul" jaName="灰燼のグール" type="クリーチャー ― ゾンビ" pt="3/1">速攻
-(黒)：あなたの墓地から灰燼のグールを戦場に戻す。この能力は、あなたのアップキープの間にのみ、灰燼のグールの上にクリーチャー・カードが３枚以上あるときにのみ起動できる。</card>
     <card name="Bludgeon Brawl" jaName="棍棒での殴り合い" type="エンチャント">クリーチャーでも装備品でもない各アーティファクトは、装備(Ｘ)と「装備しているクリーチャーは+X/+0の修整を受ける。」を持つ装備品である。Ｘはそのアーティファクトの点数で見たマナ・コストに等しい。</card>
     <card name="Deep Wood" jaName="深い森" type="インスタント">深い森は、攻撃クリーチャー指定ステップの間で、あなたがこのステップで攻撃されているならば唱えられる。
 このターン、攻撃クリーチャーがあなたに与えるすべてのダメージを軽減する。</card>
@@ -1163,7 +1162,7 @@
 あなたの終了ステップの開始時に、対戦相手１人を対象とする。そのプレイヤーは接死を持つ黒の1/1のネズミ・クリーチャー・トークンを１体生成する。
 ネズミが１体死亡するたび、あなたがコントロールする各猫の上にそれぞれ+1/+1カウンターを１個置く。</card>
     <card name="Liu Bei, Lord of Shu" jaName="蜀主 劉備" type="伝説のクリーチャー ― 人間・兵士" pt="2/4" related="Guan Yu, Sainted Warrior|Zhang Fei, Fierce Warrior">馬術（このクリーチャーは、馬術を持たないクリーチャーによってはブロックされない。）
-あなたが、名前が《列聖の武将 関羽/Guan Yu, Sainted Warrior》であるパーマネントか、名前が《猛将 張飛/Zhang Fei, Fierce Warrior》であるパーマネントをコントロールしているかぎり、蜀主 劉備は+2/+2の修整を受ける。</card>
+あなたが《列聖の武将 関羽/Guan Yu, Sainted Warrior》か《猛将 張飛/Zhang Fei, Fierce Warrior》という名前のパーマネントをコントロールしているかぎり、蜀主 劉備は+2/+2の修整を受ける。</card>
     <card name="Master of Arms" jaName="武芸の達人" type="クリーチャー ― 人間・兵士" pt="2/2">先制攻撃
 (１)(白)：武芸の達人をブロックしているクリーチャー１体を対象とし、それをタップする。</card>
     <card name="Rubble" jaName="砕身" type="ソーサリー" related="Reduce" wikilink="粉骨+砕身/Reduce+Rubble">余波（この呪文はあなたの墓地からのみ唱えられる。その後、これを追放する。）
