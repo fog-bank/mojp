@@ -556,7 +556,7 @@
 （０）：プレイヤーを１人選ぶ。そのプレイヤーは自分のライブラリーを公開し、その中から望む枚数のカードを選ぶ。そのプレイヤーはそれらのカードを手札に加える。
 （０）：プレイヤーを１人選ぶ。そのプレイヤーがコントロールする全てのパーマネントをアンタップする。
 （０）：パーマネントか呪文か戦場に無いカードを１つ選び、それをオーナーの手札に戻す。</card>
-    <card name="Avatar - Jaya Ballard" jaName="Jaya Ballard Avatar" type="ヴァンガード" pt="手札 +0/ライフ +1" wikilink="Jaya Ballard Avatar">(Ｘ)：クリーチャー１体かプレイヤー１人を対象とする。Jaya Balard Avatarはそれに０からＸまでの無作為に選ばれた点数のダメージを与える。この能力は、各ターンに１回しか起動できない。</card>
+    <card name="Avatar - Jaya Ballard" jaName="Jaya Ballard Avatar" type="ヴァンガード" pt="手札 +0/ライフ +1" wikilink="Jaya Ballard Avatar">(Ｘ)：クリーチャー１体かプレイヤー１人を対象とする。Jaya Balard Avatarはそれに０からＸまでの無作為に選ばれた点数のダメージを与える。この能力は、毎ターン１回のみ起動できる。</card>
     <card name="Avatar - Jhoira of the Ghitu" jaName="Jhoira of the Ghitu Avatar" type="ヴァンガード" pt="手札 +1/ライフ +0" wikilink="Jhoira of the Ghitu Avatar">(３),カード１枚を捨てる：無作為に選ばれたインスタント・カード３枚をコピーする。あなたはそれらのコピーのうちの１つをマナ・コストを支払わずに唱えてもよい。
 (３),カード１枚を捨てる：無作為に選ばれたソーサリー・カード３枚をコピーする。あなたはそれらのコピーのうちの１つをマナ・コストを支払わずに唱えてもよい。この能力は、あなたがソーサリーを唱えられるときにのみ起動できる。</card>
     <card name="Avatar - Karona, False God" jaName="Karona, False God Avatar" type="ヴァンガード" pt="手札 -1/ライフ +8" wikilink="Karona, False God Avatar">あなたのアップキープの開始時に、対戦相手１人を対象とする。無作為に選んだあなたがコントロールするパーマネント１つと、無作為に選んだそのプレイヤーがコントロールするパーマネント１つのコントロールを交換する。</card>
@@ -575,8 +575,8 @@
     <card name="Avatar - Mayael the Anima" jaName="Mayael the Anima Avatar" type="ヴァンガード" pt="手札 +1/ライフ +5" wikilink="Mayael the Anima Avatar">あなたのアップキープの開始時に、あなたのライブラリーの一番上のカードを公開する。それがパワーが５以上のクリーチャー・カードである場合、それをあなたの手札に加える。そうでない場合、それをあなたのライブラリーの一番下に置いてもよい。</card>
     <card name="Avatar - Mirri the Cursed" jaName="Mirri the Cursed Avatar" type="ヴァンガード" pt="手札 -2/ライフ -3" wikilink="Mirri the Cursed Avatar">あなたがコントロールするクリーチャーは「(Ｔ)：他のクリーチャー１体を対象とする。ターン終了時まで、それは-1/-1の修整を受ける。このクリーチャーの上に+1/+1カウンターを置く。」を持つ。</card>
     <card name="Avatar - Mirror Entity" jaName="Mirror Entity Avatar" type="ヴァンガード" pt="手札 +1/ライフ -1" wikilink="Mirror Entity Avatar">(Ｘ)：クリーチャー・タイプ１つを選ぶ。ターン終了時まで、あなたがコントロールする、その選ばれたタイプのクリーチャーは基本のパワーとタフネスがX/Xになるとともにすべてのクリーチャー・タイプを得る。</card>
-    <card name="Avatar - Momir Vig, Simic Visionary" jaName="Momir Vig, Simic Visionary Avatar" type="ヴァンガード" pt="手札 +0/ライフ +4" wikilink="Momir Vig, Simic Visionary Avatar">(Ｘ),カード１枚を捨てる：点数で見たマナ・コストがＸである、無作為に選ばれたクリーチャー・カード１枚のコピーであるトークンを１体生成する。この能力は、あなたがソーサリーを唱えられるときにのみ起動でき、各ターンに１回しか起動できない。</card>
-    <card name="Avatar - Momir Vig, Simic Visionary (Alt.)" jaName="Momir Vig, Simic Visionary Avatar" type="ヴァンガード" pt="手札 +0/ライフ +4" wikilink="Momir Vig, Simic Visionary Avatar">(Ｘ),カード１枚を捨てる：点数で見たマナ・コストがＸである、無作為に選ばれたクリーチャー・カード１枚のコピーであるトークンを１体生成する。この能力は、あなたがソーサリーを唱えられるときにのみ起動でき、各ターンに１回しか起動できない。</card>
+    <card name="Avatar - Momir Vig, Simic Visionary" jaName="Momir Vig, Simic Visionary Avatar" type="ヴァンガード" pt="手札 +0/ライフ +4" wikilink="Momir Vig, Simic Visionary Avatar">(Ｘ),カード１枚を捨てる：点数で見たマナ・コストがＸである、無作為に選ばれたクリーチャー・カード１枚のコピーであるトークンを１体生成する。この能力は、あなたがソーサリーを唱えられるときにのみ、毎ターン１回のみ起動できる。</card>
+    <card name="Avatar - Momir Vig, Simic Visionary (Alt.)" jaName="Momir Vig, Simic Visionary Avatar" type="ヴァンガード" pt="手札 +0/ライフ +4" wikilink="Momir Vig, Simic Visionary Avatar">(Ｘ),カード１枚を捨てる：点数で見たマナ・コストがＸである、無作為に選ばれたクリーチャー・カード１枚のコピーであるトークンを１体生成する。この能力は、あなたがソーサリーを唱えられるときにのみ、毎ターン１回のみ起動できる。</card>
     <card name="Avatar - Morinfen" jaName="Morinfen Avatar" type="ヴァンガード" pt="手札 +0/ライフ +30" wikilink="Morinfen Avatar">あなたのアップキープの開始時に、あなたは、あなたがコントロールするパーマネント１つにつき１点のライフを失う。</card>
     <card name="Avatar - Murderous Redcap" jaName="Murderous Redcap Avatar" type="ヴァンガード" pt="手札 +0/ライフ -2" wikilink="Murderous Redcap Avatar">クリーチャーが１体カウンターが置かれた状態であなたのコントロール下で戦場に出るたび、クリーチャー１体かプレイヤー１人を対象とする。あなたは「前者は、後者に、その前者のパワーに等しいダメージを与える。」を選んでもよい。</card>
     <card name="Avatar - Necropotence" jaName="Necropotence Avatar" type="ヴァンガード" pt="手札 +0/ライフ +4" wikilink="Necropotence Avatar">あなたのドロー・ステップを飛ばす。
@@ -606,7 +606,7 @@
     <card name="Avatar - Squee, Goblin Nabob" jaName="Squee, Goblin Nabob Avatar" type="ヴァンガード" pt="手札 +3/ライフ -4" wikilink="Squee, Goblin Nabob Avatar">(１)：あなたがコントロールするクリーチャー１体を対象とする。このターン、それに与えられる次のダメージを１点軽減する。</card>
     <card name="Avatar - Stalking Tiger" jaName="Stalking Tiger Avatar" type="ヴァンガード" pt="手札 +0/ライフ +2" wikilink="Stalking Tiger Avatar">あなたがクリーチャー・呪文を１つ唱えるたび、あなたは(１)を支払ってもよい。そうしたなら、カードを１枚引く。</card>
     <card name="Avatar - Stonehewer Giant" jaName="Stonehewer Giant Avatar" type="ヴァンガード" pt="手札 +1/ライフ -5" wikilink="Stonehewer Giant Avatar">クリーチャーが１体あなたのコントロール下で戦場に出るたび、点数で見たマナ・コストが、そのクリーチャーの点数で見たマナ・コスト以下の無作為に選ばれた装備品カード１枚のコピーであるトークンを１つ生成する。その装備品をそのクリーチャーにつける。</card>
-    <card name="Avatar - Stuffy Doll" jaName="Stuffy Doll Avatar" type="ヴァンガード" pt="手札 +0/ライフ -6" wikilink="Stuffy Doll Avatar">(０):対戦相手１人を対象とする。このターン、あなたが選んだ発生源１つからあなたにダメージが与えられるなら、そのダメージを軽減する。Stuffy Doll Avatarはあなたとそのプレイヤーに、これにより軽減されたダメージの端数を切り上げた半分に等しいダメージを与える。この能力は、各ターンに１回しか起動できない。</card>
+    <card name="Avatar - Stuffy Doll" jaName="Stuffy Doll Avatar" type="ヴァンガード" pt="手札 +0/ライフ -6" wikilink="Stuffy Doll Avatar">(０):対戦相手１人を対象とする。このターン、あなたが選んだ発生源１つからあなたにダメージが与えられるなら、そのダメージを軽減する。Stuffy Doll Avatarはあなたとそのプレイヤーに、これにより軽減されたダメージの端数を切り上げた半分に等しいダメージを与える。この能力は、毎ターン１回のみ起動できる。</card>
     <card name="Avatar - Teysa, Orzhov Scion" jaName="Teysa, Orzhov Scion Avatar" type="ヴァンガード" pt="手札 +0/ライフ -2" wikilink="Teysa, Orzhov Scion Avatar">トークンでないクリーチャーが１体死亡するたび、飛行を持つ白の1/1のスピリット・クリーチャー・トークンを１体生成する。</card>
     <card name="Avatar - The Avenger" jaName="報復者" type="ヴァンガード" wikilink="報復者/The Avenger">(３),(Ｔ)：あなたがコントロールするクリーチャー１体を対象とする。ターン終了時まで、それは接死を得る。</card>
     <card name="Avatar - The Harvester" jaName="収穫者" type="ヴァンガード" wikilink="収穫者/The Harvester">(Ｔ)：カードを１枚引き、その後カード１枚を捨てる。</card>
@@ -1054,8 +1054,10 @@
     <regex target="text" pattern="そうしない場合、|そうしなかった場合、|そうしなかったなら、|(?&lt;=そうしたなら、[^。]+。)そうでない場合、" value="そうしないなら、" nodebug="true" />
     <regex target="text" pattern="新たな対象" value="新しい対象" nodebug="true" />
     <regex target="text" pattern="次のアンタップ・ステップの間に" value="次のアンタップ・ステップに" nodebug="true" />
+    <regex target="text" pattern="(?:各|１)ターンに１回(?:のみ|だけ)" value="毎ターン１回のみ" nodebug="true" />
     <regex target="text" pattern="(?m)(?&lt;=^|[・：。、])攻撃しているクリーチャー" value="攻撃クリーチャー" nodebug="true" />
     <regex target="text" pattern="攻撃(?:クリーチャー)?(?:１体)?かブロックしているクリーチャー１体を対象" value="攻撃クリーチャー１体かブロック・クリーチャー１体を対象" nodebug="true" />
+    <regex target="text" pattern="(?m)(?&lt;=^|：|か、|飛行を持つ)ブロックしているクリーチャー１体を対象" value="ブロック・クリーチャー１体を対象" nodebug="true" />
     <regex target="text" pattern="名前が(《[^《/》]+/[^《/》]+》)であるカード" value="$1という名前のカード" nodebug="true" />
     <regex target="text" pattern="選ばれた名前の(呪文|土地|発生源)" value="選ばれた名前を持つ$1" nodebug="true" />
     <regex target="text" pattern="あなたの墓地にあるクリーチャー・カード([１-９Ｘ]+)枚を対象" value="あなたの墓地からクリーチャー・カード$1枚を対象" nodebug="true" />
@@ -1065,7 +1067,7 @@
     <regex target="text" pattern="あなたは「(?:あなたの|あなたは、自分の|あなたは、)ライブラリーから([^「」]+)カード１枚を探(?:す。|し、|して)(それ|そのカード)を(タップ状態で)?戦場に出(?:す。|し、)その後あなたのライブラリーを切り直す。」を選んでもよい。" value="あなたはあなたのライブラリーから$1カード１枚を探してもよい。そうしたなら、$2を$3戦場に出し、その後あなたのライブラリーを切り直す。" nodebug="true" />
     <regex target="text" pattern="Ｘは([^。Ｙ]+)である。" value="Ｘは$1に等しい。" nodebug="true" />
     <regex target="text" pattern="(クリーチャー|ドラゴン)の数に等しい。" value="$1の総数に等しい。" nodebug="true" />
-    <regex target="text" pattern="ライブラリーの一番上のカード１枚を" value="ライブラリーの一番上のカードを" nodebug="true" />
+    <regex target="text" pattern="ライブラリーの一番上のカード(?:１枚)?を(?:１枚、?)?" value="ライブラリーの一番上のカードを" nodebug="true" />
     <regex target="text" pattern="がプレイヤーに戦闘ダメージを与えるたび、" value="がプレイヤー１人に戦闘ダメージを与えるたび、" nodebug="true" />
     <regex target="text" pattern="クリーチャーでない呪文を１つ唱えるたび、" value="クリーチャーでない呪文を唱えるたび、" nodebug="true" />
     <regex target="text" pattern="対戦相手１人がコントロールするクリーチャー１体を対象" value="対戦相手がコントロールするクリーチャー１体を対象" nodebug="true" />
@@ -2036,8 +2038,8 @@ Knowledge Vaultが戦場を離れたとき、Knowledge Vaultにより追放さ�
     <card name="Vorinclex, Voice of Hunger" jaName="飢餓の声、ヴォリンクレックス" type="伝説のクリーチャー ― 法務官" pt="7/6">トランプル
 あなたがマナを引き出す目的で土地をタップするたび、その土地が生み出したいずれかのタイプのマナ１点をあなたのマナ・プールに加える。
 対戦相手がマナを引き出す目的で土地をタップするたび、その土地はそれのコントローラーの次のアンタップ・ステップにアンタップしない。</card>
-    <card name="Wall of Roots" jaName="根の壁" type="クリーチャー ― 植物・壁" pt="0/5">防衛
-根の壁の上に-0/-1カウンターを１個置く：あなたのマナ・プールに(緑)を加える。この能力は、毎ターン１回のみ起動できる。</card>
+    <!--<card name="Wall of Roots" jaName="根の壁" type="クリーチャー ― 植物・壁" pt="0/5">防衛
+根の壁の上に-0/-1カウンターを１個置く：あなたのマナ・プールに(緑)を加える。この能力は、毎ターン１回のみ起動できる。</card>-->
     <!--<card name="Wildsize" jaName="野生の寸法" type="インスタント">クリーチャー１体を対象とする。ターン終了時まで、それは+2/+2の修整を受けるとともにトランプルを得る。
 カードを１枚引く。</card>-->
     <card name="Azorius Charm" jaName="アゾリウスの魔除け" type="インスタント">以下から１つを選ぶ。
