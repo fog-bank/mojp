@@ -605,8 +605,8 @@
     <card name="Avatar - Sliver Queen" jaName="Sliver Queen Avatar" type="ヴァンガード" pt="手札 +0/ライフ +7" wikilink="Sliver Queen Avatar">あなたがスリヴァーでないクリーチャー・呪文を１つ唱えるたび、その呪文を追放する。そうしたなら、その呪文と同じ点数で見たマナ・コストを持つ、無作為に選ばれた多相の戦士ではないスリヴァー・クリーチャー・カードのコピーであるトークンを１体生成する。</card>
     <card name="Avatar - Squee, Goblin Nabob" jaName="Squee, Goblin Nabob Avatar" type="ヴァンガード" pt="手札 +3/ライフ -4" wikilink="Squee, Goblin Nabob Avatar">(１)：あなたがコントロールするクリーチャー１体を対象とする。このターン、それに与えられる次のダメージを１点軽減する。</card>
     <card name="Avatar - Stalking Tiger" jaName="Stalking Tiger Avatar" type="ヴァンガード" pt="手札 +0/ライフ +2" wikilink="Stalking Tiger Avatar">あなたがクリーチャー・呪文を１つ唱えるたび、あなたは(１)を支払ってもよい。そうしたなら、カードを１枚引く。</card>
-    <card name="Avatar - Stonehewer Giant" jaName="Stonehewer Giant Avatar" type="ヴァンガード" pt="手札 +1/ライフ -5" wikilink="Stonehewer Giant Avatar">クリーチャーが１体あなたのコントロール下で戦場に出るたび、点数で見たマナ・コストが、そのクリーチャーの点数で見たマナ・コスト以下の無作為に選ばれた装備品カード１枚のコピーであるトークンを１つ生成する。その装備品をそのクリーチャーにつける。</card>
-    <card name="Avatar - Stuffy Doll" jaName="Stuffy Doll Avatar" type="ヴァンガード" pt="手札 +0/ライフ -6" wikilink="Stuffy Doll Avatar">(０):対戦相手１人を対象とする。このターン、あなたが選んだ発生源１つからあなたにダメージが与えられるなら、そのダメージを軽減する。Stuffy Doll Avatarはあなたとそのプレイヤーに、これにより軽減されたダメージの端数を切り上げた半分に等しいダメージを与える。この能力は、毎ターン１回のみ起動できる。</card>
+    <card name="Avatar - Stonehewer Giant" jaName="Stonehewer Giant Avatar" type="ヴァンガード" pt="手札 +1/ライフ -5" wikilink="Stonehewer Giant Avatar">クリーチャーが１体あなたのコントロール下で戦場に出るたび、点数で見たマナ・コストが、そのクリーチャーの点数で見たマナ・コスト以下の無作為に選ばれた装備品・カード１枚のコピーであるトークンを１つ生成する。その装備品をそのクリーチャーにつける。</card>
+    <card name="Avatar - Stuffy Doll" jaName="Stuffy Doll Avatar" type="ヴァンガード" pt="手札 +0/ライフ -6" wikilink="Stuffy Doll Avatar">(０)：対戦相手１人を対象とする。このターン、あなたが選んだ発生源１つからあなたにダメージが与えられるなら、そのダメージを軽減する。Stuffy Doll Avatarはあなたとそのプレイヤーに、これにより軽減されたダメージの端数を切り上げた半分に等しいダメージを与える。この能力は、毎ターン１回のみ起動できる。</card>
     <card name="Avatar - Teysa, Orzhov Scion" jaName="Teysa, Orzhov Scion Avatar" type="ヴァンガード" pt="手札 +0/ライフ -2" wikilink="Teysa, Orzhov Scion Avatar">トークンでないクリーチャーが１体死亡するたび、飛行を持つ白の1/1のスピリット・クリーチャー・トークンを１体生成する。</card>
     <card name="Avatar - The Avenger" jaName="報復者" type="ヴァンガード" wikilink="報復者/The Avenger">(３),(Ｔ)：あなたがコントロールするクリーチャー１体を対象とする。ターン終了時まで、それは接死を得る。</card>
     <card name="Avatar - The Harvester" jaName="収穫者" type="ヴァンガード" wikilink="収穫者/The Harvester">(Ｔ)：カードを１枚引き、その後カード１枚を捨てる。</card>
@@ -1003,11 +1003,14 @@
     <!-- 誤字修正 -->
     <regex target="name|text" pattern="AE" value="Ae" nodebug="true" />
     <regex target="text" pattern="X(は|枚)" value="Ｘ$1" />
+    <regex target="text" pattern="\)\:" value=")：" />
     <regex target="text" pattern="修正" value="修整" />
     <regex target="text" pattern="呪文化" value="呪文か" />
     <regex target="text" pattern="対象都市" value="対象とし" />
     <regex target="text" pattern="そうたいなら" value="そうしたなら" />
     <regex target="text" pattern="コントール" value="コントロール" />
+    <regex target="text" pattern="ライフ総量を公開する" value="ライフ総量を交換する" />
+    <regex target="text" pattern="エンチャント\(クリーチャー\)" value="エンチャント（クリーチャー）" />
     <regex target="text" pattern="([１-９Ｘ]+)店" value="$1点" />
     <regex target="name" pattern="’" value="'" />
     <regex target="type" pattern="\s\-\s" value=" ― " />
@@ -1025,7 +1028,7 @@
     <regex target="text" pattern="(?:毎ターン|各ターンに)(?=[^。]*可能なら)" value="各戦闘で" nodebug="true" />
     <!-- 中丸追加 -->
     <regex target="text" pattern="(クリーチャー|アーティファクト|エンチャント|インスタント|ソーサリー|プレインズウォーカー|土地)(カード|呪文)" value="$1・$2" nodebug="true" />
-    <regex target="text" pattern="(平地|島|沼|山|森|砂漠)カード" value="$1・カード" nodebug="true" />
+    <regex target="text" pattern="(平地|島|沼|山|森|砂漠|恐竜|同盟者|機体|装備品)カード" value="$1・カード" nodebug="true" />
     <regex target="text" pattern="(猫|馬|熊|狼|蛇|苗木|兵士|反射|吸血鬼|同盟者|落とし子|ならず者)クリーチャー・トークン" value="$1・クリーチャー・トークン" nodebug="true" />
     <regex target="text" pattern="(飛行機械|霊気装置|手掛かり|装備品)アーティファクト・(クリーチャー・)?トークン" value="$1・アーティファクト・$2トークン" nodebug="true" />
     <!-- カンマ追加削減 -->
