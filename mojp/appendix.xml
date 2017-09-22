@@ -1041,8 +1041,9 @@
     <regex target="text" pattern="(?&lt;=。|「|たび、|とき、)それはターン終了時まで、?" value="ターン終了時まで、それは" nodebug="true" />
     <regex target="text" pattern="(?&lt;!上から)カードを([０-９Ｘ]+)枚(探|選|捨て(?!るたび)|公開|追放)" value="カード$1枚を$2" nodebug="true" />
     <regex target="text" pattern="一番上から([０-９Ｘ]{2,}|[０２-９Ｘ])枚のカードを(見|公開|追放|あなたの墓地|自分の墓地|そのプレイヤーの墓地|予示)" value="一番上からカードを$1枚$2" nodebug="true" />
-    <regex target="text" pattern="カードを最大([０-９Ｘ]+)枚(まで)?探" value="カード最大$1枚を探" nodebug="true" />
-    <regex target="text" pattern="クリーチャーを最大([０-９Ｘ]+)体(まで)?対象" value="クリーチャー最大$1体を対象" nodebug="true" />
+    <regex target="text" pattern="カードを最大([０-９Ｘ]+)枚(?:まで)?探" value="カード最大$1枚を探" nodebug="true" />
+    <regex target="text" pattern="クリーチャーを最大([０-９Ｘ]+)体(?:まで)?対象" value="クリーチャー最大$1体を対象" nodebug="true" />
+    <regex target="text" pattern="(?&lt;!と|や)(アーティファクト|土地|沼|森|パーマネント|呪文)を最大([０-９Ｘ]+)つ(?:まで)?対象" value="$1最大$2つを対象" nodebug="true" />
     <regex target="text" pattern="(カード名|タイプ)を([０-９Ｘ]+)つ選" value="$1$2つを選" nodebug="true" />
     <regex target="text" pattern="色を(１|２)(色|つ)選" value="色$1色を選" nodebug="true" />
     <regex target="text" pattern="対戦相手を１人選ぶ。" value="対戦相手１人を選ぶ。" nodebug="true" />
@@ -1067,6 +1068,7 @@
     <regex target="text" pattern="(?m)(?&lt;=^|[・：。、])攻撃しているクリーチャー" value="攻撃クリーチャー" nodebug="true" />
     <regex target="text" pattern="攻撃(?:クリーチャー)?(?:１体)?かブロックしているクリーチャー１体を対象" value="攻撃クリーチャー１体かブロック・クリーチャー１体を対象" nodebug="true" />
     <regex target="text" pattern="(?m)(?&lt;=^|：|か、|飛行を持つ)ブロックしているクリーチャー１体を対象" value="ブロック・クリーチャー１体を対象" nodebug="true" />
+    <regex target="text" pattern="のブロックしているクリーチャー１体を対象" value="をブロックしているクリーチャー１体を対象" nodebug="true" />
     <regex target="text" pattern="名前が(《[^《/》]+/[^《/》]+》)である" value="$1という名前の" nodebug="true" />
     <regex target="text" pattern="選ばれた名前の(呪文|土地|発生源)" value="選ばれた名前を持つ$1" nodebug="true" />
     <regex target="text" pattern="あなたの墓地にあるクリーチャー・カード([１-９Ｘ]+)枚を対象" value="あなたの墓地からクリーチャー・カード$1枚を対象" nodebug="true" />
@@ -1174,8 +1176,6 @@
 ネズミが１体死亡するたび、あなたがコントロールする各猫の上にそれぞれ+1/+1カウンターを１個置く。</card>
     <card name="Liu Bei, Lord of Shu" jaName="蜀主 劉備" type="伝説のクリーチャー ― 人間・兵士" pt="2/4" related="Guan Yu, Sainted Warrior|Zhang Fei, Fierce Warrior">馬術（このクリーチャーは、馬術を持たないクリーチャーによってはブロックされない。）
 あなたが《列聖の武将 関羽/Guan Yu, Sainted Warrior》か《猛将 張飛/Zhang Fei, Fierce Warrior》という名前のパーマネントをコントロールしているかぎり、蜀主 劉備は+2/+2の修整を受ける。</card>
-    <card name="Master of Arms" jaName="武芸の達人" type="クリーチャー ― 人間・兵士" pt="2/2">先制攻撃
-(１)(白)：武芸の達人をブロックしているクリーチャー１体を対象とし、それをタップする。</card>
     <card name="Rubble" jaName="砕身" type="ソーサリー" related="Reduce" wikilink="粉骨+砕身/Reduce+Rubble">余波（この呪文はあなたの墓地からのみ唱えられる。その後、これを追放する。）
 土地最大３つを対象とする。それらはそれらのコントローラーの次のアンタップ・ステップにアンタップしない。</card>
     <card name="Vizier of Many Faces" jaName="多面相の侍臣" type="クリーチャー ― 多相の戦士・クレリック" pt="0/0">多面相の侍臣が不朽を行われていたなら、あなたはそのトークンを、マナ・コストを持たず、白であり、それの他のタイプに加えてゾンビであることを除き、戦場にある他のクリーチャー１体のコピーとして戦場に出してもよい。そうでないなら、あなたはこれを戦場にある他のクリーチャー１体のコピーとして戦場に出してもよい。
@@ -1512,7 +1512,6 @@ Knowledge Vaultが戦場を離れたとき、Knowledge Vaultにより追放さ�
     <!-- テンプレートの変更：最大 -->
     <card name="Aether Burst" jaName="霊気の噴出" type="インスタント">クリーチャー最大Ｘ体を対象とし、それらをオーナーの手札に戻す。Ｘはあなたが霊気の噴出を唱える際の、すべての墓地にある《霊気の噴出/Aether Burst》という名前のカードの枚数に１を足した数に等しい。</card>
     <card name="Return to Dust" jaName="塵への帰結" type="インスタント">アーティファクト１つかエンチャント１つを対象とし、それを追放する。あなたがこの呪文をあなたのメイン・フェイズ中に唱えたなら、あなたは他のアーティファクトかエンチャント最大１つを対象とし、それを追放してもよい。</card>
-    <card name="Terastodon" jaName="テラストドン" type="クリーチャー ― 象" pt="9/9">テラストドンが戦場に出たとき、クリーチャーでないパーマネント最大３つを対象とする。あなたはそれらを破壊してもよい。これにより墓地に置かれたパーマネント１つにつき、それのコントローラーは緑の3/3の象・クリーチャー・トークンを１体生成する。</card>
     <!-- テンプレートの変更：手札/墓地から -->
     <card name="Battlefield Scrounger" jaName="戦場のたかり屋" type="クリーチャー ― ケンタウルス" pt="3/3">スレッショルド ― あなたの墓地からカード３枚をあなたのライブラリーの一番下に置く：ターン終了時まで、戦場のたかり屋は+3/+3の修整を受ける。この能力は、毎ターン１回のみ、あなたの墓地にカードが７枚以上あるときのみ起動できる。</card>
     <card name="Rotfeaster Maggot" jaName="腐敗喰いの蛆" type="クリーチャー ― 昆虫" pt="3/5">腐敗喰いの蛆が戦場に出たとき、墓地からクリーチャー・カード１枚を対象とし、それを追放する。あなたはそのカードのタフネスに等しい点数のライフを得る。</card>
