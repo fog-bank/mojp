@@ -1038,7 +1038,7 @@
     <regex target="text" pattern="(?&lt;=たび、)ターン終了時まで(?!、)" value="ターン終了時まで、" nodebug="true" />
     <regex target="text" pattern="(?&lt;=そうしたなら、|とともに、)次の終了ステップの開始時に(?!、)" value="次の終了ステップの開始時に、" nodebug="true" />
     <!-- 順序変更 -->
-    <regex target="text" pattern="(?&lt;=。|「|たび、|とき、)それはターン終了時まで、?" value="ターン終了時まで、それは" nodebug="true" />
+    <regex target="text" pattern="(?&lt;=。|「|たび、|とき、|場合、)(それ|これ|それら)はターン終了時まで、?" value="ターン終了時まで、$1は" nodebug="true" />
     <regex target="text" pattern="(?&lt;!上から)カードを([０-９Ｘ]+)枚(探|選|捨て(?!るたび)|公開|追放)" value="カード$1枚を$2" nodebug="true" />
     <regex target="text" pattern="一番上から([０-９Ｘ]{2,}|[０２-９Ｘ])枚のカードを(見|公開|追放|あなたの墓地|自分の墓地|そのプレイヤーの墓地|予示)" value="一番上からカードを$1枚$2" nodebug="true" />
     <regex target="text" pattern="カードを最大([０-９Ｘ]+)枚(?:まで)?探" value="カード最大$1枚を探" nodebug="true" />
@@ -1084,6 +1084,7 @@
     <regex target="text" pattern="クリーチャーでない呪文を１つ唱えるたび、" value="クリーチャーでない呪文を唱えるたび、" nodebug="true" />
     <regex target="text" pattern="対戦相手１人がコントロールするクリーチャー１体を対象" value="対戦相手がコントロールするクリーチャー１体を対象" nodebug="true" />
     <regex target="text" pattern="あなたのマナ・プールに(?:、好きな色|好きな色(?:１色)?)のマナ([０-９Ｘ]+)点を加え" value="あなたのマナ・プールに、好きな色１色のマナ$1点を加え" nodebug="true" />
+    <regex target="text" pattern="を対象とし、それはターン終了時まで" value="を対象とする。ターン終了時まで、それは" nodebug="true" />
     <regex target="text" pattern="(?&lt;!の上)から(\+1/\+1|-1/-1|氷|蓄積|貯蔵|水晶)カウンターを([０-９Ｘ]+)個取り除く" value="の上から$1カウンターを$2個取り除く" nodebug="true" />
     <regex target="text" pattern="それ?の上に(、それを唱えるために使われたマナの色１色につき)?(\+1/\+1|-1/-1|\+1/\+0|\w{1,2}|オーメン・|ポリープ・)カウンターが([０-９Ｘ]+)個置かれた状態で(、タップ状態で)?戦場に出る" value="$1$2カウンターが$3個置かれた状態で$4戦場に出る" nodebug="true" />
     <regex target="text" pattern="。(そのプレイヤーが)?そうしたなら、そのプレイヤーはこの呪文をコピーし、そのコピーの新しい対象を選んでもよい。" value="。そうしたなら、そのプレイヤーはこの呪文をコピーしてもよい。そのプレイヤーはそのコピーの新しい対象を選んでもよい。" nodebug="true" />
@@ -1540,8 +1541,6 @@ Knowledge Vaultが戦場を離れたとき、Knowledge Vaultにより追放さ�
     <card name="Sunspear Shikari" jaName="太陽の槍のシカール" type="クリーチャー ― 猫・兵士" pt="2/2">太陽の槍のシカールが装備しているかぎり、これは先制攻撃と絆魂を持つ。</card>
     <card name="Swords to Plowshares" jaName="剣を鍬に" type="インスタント">クリーチャー１体を対象とし、それを追放する。それのコントローラーは、それのパワーに等しい点数のライフを得る。</card>
     <!-- ターン終了時まで -->
-    <card name="Borderland Marauder" jaName="国境地帯の匪賊" type="クリーチャー ― 人間・戦士" pt="1/2">国境地帯の匪賊が攻撃するたび、ターン終了時まで、これは+2/+0の修整を受ける。</card>
-    <card name="Coordinated Assault" jaName="統率の取れた突撃" type="インスタント">クリーチャー最大２体を対象とする。ターン終了時まで、それらはそれぞれ+1/+0の修整を受けるとともに先制攻撃を得る。</card>
     <card name="Dragon Egg" jaName="ドラゴンの卵" type="クリーチャー ― ドラゴン" pt="0/2">防衛（このクリーチャーでは攻撃できない。）
 ドラゴンの卵が死亡したとき、飛行を持つ赤の2/2のドラゴン・クリーチャー・トークンを１体生成する。それは「(赤)：ターン終了時まで、このクリーチャーは+1/+0の修整を受ける。」を持つ。</card>
     <card name="Drana, Kalastria Bloodchief" jaName="カラストリアの血の長、ドラーナ" type="伝説のクリーチャー ― 吸血鬼・シャーマン" pt="4/4">飛行
@@ -1551,8 +1550,6 @@ Knowledge Vaultが戦場を離れたとき、Knowledge Vaultにより追放さ�
 (２)：あなたのライブラリーからドラゴン・パーマネント・カード１枚を探し、それをあなたの墓地に置く。そうしたなら、ターン終了時まで、始祖ドラゴンの末裔はそのカードのコピーになる。その後あなたのライブラリーを切り直す。</card>
     <card name="Spellbound Dragon" jaName="呪文縛りのドラゴン" type="クリーチャー ― ドラゴン" pt="3/5">飛行
 呪文縛りのドラゴンが攻撃するたび、カードを１枚引き、その後カード１枚を捨てる。ターン終了時まで、呪文縛りのドラゴンは+X/+0の修整を受ける。Ｘはその捨てたカードの点数で見たマナ・コストに等しい。</card>
-    <card name="Sustainer of the Realm" jaName="世界を支える者" type="クリーチャー ― 天使" pt="2/3">飛行
-世界を支える者がブロックするたび、ターン終了時まで、これは+0/+2の修整を受ける。</card>
     <card name="Trumpet Blast" jaName="ラッパの一吹き" type="インスタント">ターン終了時まで、攻撃クリーチャーは+2/+0の修整を受ける。</card>
     <!-- それぞれ -->
     <card name="Anowon, the Ruin Sage" jaName="遺跡の賢者、アノワン" type="伝説のクリーチャー ― 吸血鬼・シャーマン" pt="4/3">あなたのアップキープの開始時に、各プレイヤーはそれぞれ、吸血鬼でないクリーチャー１体を生け贄に捧げる。</card>
