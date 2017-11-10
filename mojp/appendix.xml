@@ -599,7 +599,7 @@
     <regex target="text" pattern="(?&lt;=たび、)ターン終了時まで(?!、)" value="ターン終了時まで、" nodebug="true" />
     <regex target="text" pattern="(?&lt;=そうしたなら、|とともに、)次の終了ステップの開始時に(?!、)" value="次の終了ステップの開始時に、" nodebug="true" />
     <!-- 順序変更 -->
-    <regex target="text" pattern="(?&lt;=。|：|「|たび、|とき、|場合、|なら、)(それ|これ|それら|そのクリーチャー|あなたがコントロールするクリーチャー)はターン終了時まで、?" value="ターン終了時まで、$1は" nodebug="true" />
+    <regex target="text" pattern="(?&lt;=。|：|「|たび、|とき、|場合、|なら、)(それ|これ|それら|そのクリーチャー|あなたがコントロールするクリーチャー)は、?ターン終了時まで、?" value="ターン終了時まで、$1は" nodebug="true" />
     <regex target="text" pattern="それはこのターン、?(?!の)" value="このターン、それは" nodebug="true" />
     <regex target="text" pattern="(?&lt;!上から)カードを([０-９Ｘ]+)枚(探|選|捨て(?!るたび)|公開|追放)" value="カード$1枚を$2" nodebug="true" />
     <regex target="text" pattern="一番上から([０-９Ｘ]{2,}|[０２-９Ｘ])枚のカードを(見|公開|追放|あなたの墓地|自分の墓地|そのプレイヤーの墓地|予示)" value="一番上からカードを$1枚$2" nodebug="true" />
