@@ -142,8 +142,8 @@
     <card name="Avatar - Necropotence" jaName="Necropotence Avatar" type="ヴァンガード" pt="手札 +0/ライフ +4" wikilink="Necropotence Avatar">あなたのドロー・ステップを飛ばす。
 あなたの終了ステップの開始時に、それがこのゲームの最初のターンでない場合、Necropotence Avatarの上に死亡カウンターを１個置く。あなたはカードをＸ枚引き、Ｘ点のライフを失う。ＸはNecropotence Avatarの上に置かれている死亡カウンターの数に等しい。</card>
     <card name="Avatar - Nekrataal" jaName="Nekrataal Avatar" type="ヴァンガード" pt="手札 -1/ライフ -4" wikilink="Nekrataal Avatar">あなたが唱えるクリーチャー・呪文を唱えるためのコストは(黒)少なくなる。この効果は、あなたが支払う色マナの数のみを減らす。</card>
-    <card name="Avatar - Oni of Wild Places" jaName="Oni of Wild Places Avatar" type="ヴァンガード" pt="手札 +0/ライフ -2" wikilink="Oni of Wild Places Avatar">あなたがコントロールするクリーチャーは速攻を持つ。
-あなたのアップキープの開始時に、あなたがコントロールするクリーチャー１体をオーナーの手札に戻す。</card>
+    <card name="Avatar - Oni of Wild Places" jaName="Oni of Wild Places Avatar" type="ヴァンガード" pt="手札 +0/ライフ -2" wikilink="Oni of Wild Places Avatar">あなたがコントロールしているクリーチャーは速攻を持つ。
+あなたのアップキープの開始時に、あなたがコントロールしているクリーチャー１体をオーナーの手札に戻す。</card>
     <card name="Avatar - Orcish Squatters" jaName="Orcish Squatters Avatar" type="ヴァンガード" pt="手札 -1/ライフ -1" wikilink="Orcish Squatters Avatar">あなたの戦闘前メイン・フェイズの開始時に、対戦相手１人を対象とする。あなたのマナ・プールに(Ｘ)を加える。Ｘはそのプレイヤーがコントロールする土地の数に等しい。</card>
     <card name="Avatar - Peacekeeper" jaName="Peacekeeper Avatar" type="ヴァンガード" pt="手札 +0/ライフ +9" related="Arrest" wikilink="Peacekeeper Avatar">(３)：クリーチャーをコントロールしている対戦相手１人につき、それぞれ《拘引/Arrest》という名前のカードのコピーであるトークンを１つ生成し、無作為に選んだそのプレイヤーがコントロールするクリーチャー１体にそれをつける。</card>
     <card name="Avatar - Phage the Untouchable" jaName="Phage the Untouchable Avatar" type="ヴァンガード" pt="手札 +0/ライフ -5" wikilink="Phage the Untouchable Avatar">１点のライフを支払う：ターン終了時まで、クリーチャー１体があなたに戦闘ダメージを与えるたび、そのクリーチャーを破壊する。
@@ -176,8 +176,8 @@
     <card name="Avatar - The Slayer" jaName="殺害者" type="ヴァンガード" wikilink="殺害者/The Slayer">あなたは追加で７点のライフを得た状態でゲームを開始する。</card>
     <card name="Avatar - The Warrior" jaName="戦士" type="ヴァンガード" wikilink="戦士/The Warrior">(Ｔ)：あなたがコントロールするクリーチャー１体を対象とする。ターン終了時まで、それは速攻を得る。</card>
     <card name="Avatar - Tradewind Rider" jaName="Tradewind Rider Avatar" type="ヴァンガード" pt="手札 +1/ライフ +4" wikilink="Tradewind Rider Avatar">(３)：各プレイヤーは、そのプレイヤーが２点のライフを支払わない限り、そのプレイヤーがコントロールするパーマネント１つをオーナーの手札に戻す。</card>
-    <card name="Avatar - Two-Headed Giant of Foriys" jaName="Two-Headed Giant of Foriys Avatar" type="ヴァンガード" pt="手札 +1/ライフ -4" wikilink="Two-Headed Giant of Foriys Avatar">あなたがコントロールするクリーチャーは威迫を持つ。（それらは２体以上のクリーチャーによってしかブロックされない。）
-あなたがコントロールする各クリーチャーは、各戦闘で追加で１体のクリーチャーをブロックできる。</card>
+    <card name="Avatar - Two-Headed Giant of Foriys" jaName="Two-Headed Giant of Foriys Avatar" type="ヴァンガード" pt="手札 +1/ライフ -4" wikilink="Two-Headed Giant of Foriys Avatar">あなたがコントロールしているクリーチャーは威迫を持つ。（それらは２体以上のクリーチャーによってしかブロックされない。）
+あなたがコントロールしている各クリーチャーは、各戦闘で追加で１体のクリーチャーをブロックできる。</card>
     <card name="Avatar - Vampire Nocturnus" jaName="Vampire Nocturnus Avatar" type="ヴァンガード" pt="手札 -1/ライフ -2" wikilink="Vampire Nocturnus Avatar">あなたのライブラリーの一番上のカードを公開した状態でプレイする。
 あなたのライブラリーの一番上のカードが黒である限り、あなたがコントロールする黒のクリーチャーは+2/+1の修整を受ける。</card>
     <card name="Avatar - Viridian Zealot" jaName="Viridian Zealot Avatar" type="ヴァンガード" pt="手札 +0/ライフ +2" wikilink="Viridian Zealot Avatar">(２),クリーチャー１体を生け贄に捧げる：アーティファクト１つかエンチャント１つを対象とし、それを破壊する。あなたのライブラリーから生け贄に捧げたクリーチャーと同じ名前のカード１枚を探し、そのカードを公開し、それをあなたの手札に加える。その後あなたのライブラリーを切り直す。</card>
@@ -269,8 +269,8 @@
 あなたがカオス・シンボルを出すたび、あなたの墓地にあるカード１枚を対象とし、それをあなたの手札に戻す。</card>
     <card name="Norn's Dominion" jaName="ノーンの領地" type="次元 ― 新ファイレクシア" wikilink="ノーンの領地/Norn's Dominion (次元カード)">あなたがノーンの領地からプレインズウォークしたとき、運命カウンターが置かれていない土地でない各パーマネントを破壊し、その後、パーマネントすべての上から運命カウンターをすべて取り除く。
 あなたがカオス・シンボルを出すたび、パーマネント１つを対象とする。あなたはそれの上に運命カウンターを１個置いてもよい。</card>
-    <card name="Onakke Catacomb" jaName="オナッケの地下墓地" type="次元 ― シャンダラー" wikilink="オナッケの地下墓地/Onakke Catacomb (次元カード)">すべてのクリーチャーは黒であるとともに接死を持つ。
-あなたがカオス・シンボルを出すたび、ターン終了時まで、あなたがコントロールするクリーチャーは+1/+0の修整を受けるとともに先制攻撃を得る。</card>
+    <card name="Onakke Catacomb" jaName="オナッケの地下墓地" type="次元 ― シャンダラー" wikilink="オナッケの地下墓地/Onakke Catacomb (次元カード)">クリーチャーはすべて黒であるとともに接死を持つ。
+あなたがカオス・シンボルを出すたび、ターン終了時まで、あなたがコントロールしているクリーチャーは+1/+0の修整を受けるとともに先制攻撃を得る。</card>
     <card name="Orochi Colony" jaName="大蛇の集落" type="次元 ― 神河" wikilink="大蛇の集落/Orochi Colony (次元カード)">あなたがコントロールするクリーチャー１体がプレイヤー１人に戦闘ダメージを与えるたび、あなたはあなたのライブラリーから基本土地・カード１枚を探してもよい。そうしたなら、それをタップ状態で戦場に出し、その後あなたのライブラリーを切り直す。
 あなたがカオス・シンボルを出すたび、クリーチャー１体を対象とする。このターン、それはブロックされない。</card>
     <card name="Orzhova" jaName="オルゾヴァ" type="次元 ― ラヴニカ" wikilink="オルゾヴァ/Orzhova (次元カード)">あなたがオルゾヴァからプレインズウォークしたとき、各プレイヤーは自分の墓地にあるすべてのクリーチャー・カードを戦場に戻す。
@@ -330,7 +330,7 @@
     <card name="The Fourth Sphere" jaName="第四球層" type="次元 ― ファイレクシア" wikilink="第四球層/The Fourth Sphere (次元カード)">あなたのアップキープの開始時に、黒でないクリーチャー１体を生け贄に捧げる。
 あなたがカオス・シンボルを出すたび、黒の2/2のゾンビ・クリーチャー・トークンを１体生成する。</card>
     <card name="The Great Forest" jaName="偉大なる森" type="次元 ― ローウィン" wikilink="偉大なる森/The Great Forest (次元カード)">各クリーチャーは、パワーではなくタフネスに等しい点数の戦闘ダメージを割り振る。
-あなたがカオス・シンボルを出すたび、ターン終了時まで、あなたがコントロールするクリーチャーは+0/+2の修整を受けるとともにトランプルを得る。</card>
+あなたがカオス・シンボルを出すたび、ターン終了時まで、あなたがコントロールしているクリーチャーは+0/+2の修整を受けるとともにトランプルを得る。</card>
     <card name="The Hippodrome" jaName="ヒッポドローム" type="次元 ― セゴビア" wikilink="ヒッポドローム/The Hippodrome (次元カード)">クリーチャーはすべて-5/-0の修整を受ける。
 あなたがカオス・シンボルを出すたび、クリーチャー１体を対象とする。それのパワーが０以下なら、あなたはそれを破壊してもよい。</card>
     <card name="The Maelstrom" jaName="大渦" type="次元 ― アラーラ" wikilink="大渦/The Maelstrom (次元カード)">あなたが大渦にプレインズウォークしたときか、あなたのアップキープの開始時に、あなたはあなたのライブラリーの一番上のカードを公開してもよい。それがパーマネント・カードである場合、あなたはそれを戦場に出してもよい。あなたがカードを公開し、それが戦場に出されなかった場合、それをあなたのライブラリーの一番下に置く。
@@ -624,7 +624,7 @@
     <regex target="text" pattern="がコントロールする基本土地" value="がコントロールしている基本土地" nodebug="true" />
     <regex target="text" pattern="(?&lt;!を持つ、あなた)がコントロールする他の(クリーチャー|パーマネント)は(?=[^。]+を持つ。)" value="がコントロールしている他の$1は" nodebug="true" />
     <regex target="text" pattern="(?&lt;!を持つ、あなた)がコントロールする(他の)?(ドラゴン・|エレメンタル・|マーフォーク・)?クリーチャーは(\+\d/\+\d)の修整を受ける。" value="がコントロールしている$1$2クリーチャーは$3の修整を受ける。" nodebug="true" />
-    <regex target="text" pattern="がコントロールするクリーチャーは(.{2,5})を得る。" value="がコントロールしているクリーチャーは$1を得る。" nodebug="true" />
+    <regex target="text" pattern="がコントロールするクリーチャーは、?(\+\d/\+\dの修整を受けるとともに)?(.{2,5})を(得る|持つ)。" value="がコントロールしているクリーチャーは$1$2を$3。" nodebug="true" />
     <regex target="text" pattern="がコントロール(?:する|している)、?望む数のクリーチャー" value="がコントロールしている望む数のクリーチャー" nodebug="true" />
     <regex target="text" pattern="がコントロールするクリーチャーの総数に等しい" value="がコントロールしているクリーチャーの総数に等しい" nodebug="true" />
     <regex target="text" pattern="がコントロールするタップ状態のクリーチャー" value="がコントロールしていてタップ状態のクリーチャー" nodebug="true" />
@@ -871,7 +871,7 @@
     <card name="Tombstone Stairwell" jaName="墓石の階段" type="ワールド・エンチャント">累加アップキープ(１)(黒)（あなたのアップキープの開始時に、このパーマネントの上に経年カウンターを１個置く。その後あなたがこの上に置かれている経年カウンター１個につきアップキープ・コストを１回支払わないかぎり、それを生け贄に捧げる。）
 各ターンのアップキープの開始時に、墓石の階段が戦場に出ている場合、各プレイヤーは自分の墓地にあるクリーチャー・カード１枚につき、《屍鬼/Tombspawn》という名前の、速攻を持つ黒の2/2のゾンビ・クリーチャー・トークンを１体生成する。
 各終了ステップの開始時か、墓石の階段が戦場を離れたとき、それによって生成されたトークンをすべて破壊する。それらは再生できない。</card>
-    <card name="Torrent of Souls" jaName="魂魄流" type="ソーサリー">あなたの墓地からクリーチャー・カード最大１枚と、プレイヤー１人を対象とする。魂魄流を唱えるために(黒)が支払われていたなら、そのカードを戦場に戻す。魂魄流を唱えるために(赤)が支払われていたなら、ターン終了時まで、そのプレイヤーがコントロールするクリーチャーは+2/+0の修整を受けるとともに速攻を得る。（(黒)(赤)が支払われていたなら、両方を行う。）</card>
+    <card name="Torrent of Souls" jaName="魂魄流" type="ソーサリー">あなたの墓地からクリーチャー・カード最大１枚と、プレイヤー１人を対象とする。魂魄流を唱えるために(黒)が支払われていたなら、そのカードを戦場に戻す。魂魄流を唱えるために(赤)が支払われていたなら、ターン終了時まで、そのプレイヤーがコントロールしているクリーチャーは+2/+0の修整を受けるとともに速攻を得る。（(黒)(赤)が支払われていたなら、両方を行う。）</card>
     <card name="Ulasht, the Hate Seed" jaName="憎悪の種、ウラシュト" type="伝説のクリーチャー ― ヘリオン・ハイドラ" pt="0/0">憎悪の種、ウラシュトは、あなたがコントロールする他の赤のクリーチャー１体につき１個の+1/+1カウンターと、あなたがコントロールする他の緑のクリーチャー１体につき１個の+1/+1カウンターが置かれた状態で戦場に出る。
 (１),憎悪の種、ウラシュトの上から+1/+1カウンターを１個取り除く：以下から１つを選ぶ。
 ・クリーチャー１体を対象とする。憎悪の種、ウラシュトはそれに１点のダメージを与える。
