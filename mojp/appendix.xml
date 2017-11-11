@@ -81,9 +81,9 @@
     <card name="Avatar - Ashling, the Extinguisher" jaName="Ashling, the Extinguisher Avatar" type="ヴァンガード" pt="手札 +1/ライフ -3" wikilink="Ashling, the Extinguisher Avatar">(５)：土地でないパーマネントをすべて破壊する。この能力は１回しか起動できず、あなたのターンの間にしか起動できない。</card>
     <card name="Avatar - Birds of Paradise" jaName="Birds of Paradise Avatar" type="ヴァンガード" pt="手札 +0/ライフ -3" wikilink="Birds of Paradise Avatar">あなたがコントロールする土地は「(Ｔ)：あなたのマナ・プールに、好きな色１色のマナ１点を加える。」を持つ。</card>
     <card name="Avatar - Bosh, Iron Golem" jaName="Bosh, Iron Golem Avatar" type="ヴァンガード" pt="手札 +0/ライフ -2" wikilink="Bosh, Iron Golem Avatar">(Ｘ),点数で見たマナ・コストがＸのアーティファクト１つを生け贄に捧げる：クリーチャー１体かプレイヤー１人を対象とする。Bosh, Iron Golem AvatarはそれにＸ点のダメージを与える。</card>
-    <card name="Avatar - Braids, Conjurer Adept" jaName="Braids, Conjurer Adept Avatar" type="ヴァンガード" pt="手札 +0/ライフ +3" wikilink="Braids, Conjurer Adept Avatar">(２)：各プレイヤーはそれぞれ、自分の手札から土地・カードを１枚タップ状態で戦場に出してもよい。
-(３)：各プレイヤーはそれぞれ、自分の手札からクリーチャーでないアーティファクト・カードを１枚戦場に出してもよい。
-(４)：各プレイヤーはそれぞれ、自分の手札からクリーチャー・カードを１枚戦場に出してもよい。この能力は、あなたがソーサリーを唱えられるときのみ起動できる。</card>
+    <card name="Avatar - Braids, Conjurer Adept" jaName="Braids, Conjurer Adept Avatar" type="ヴァンガード" pt="手札 +0/ライフ +3" wikilink="Braids, Conjurer Adept Avatar">(２)：各プレイヤーはそれぞれ、自分の手札から土地・カード１枚をタップ状態で戦場に出してもよい。
+(３)：各プレイヤーはそれぞれ、自分の手札からクリーチャーでないアーティファクト・カード１枚を戦場に出してもよい。
+(４)：各プレイヤーはそれぞれ、自分の手札からクリーチャー・カード１枚を戦場に出してもよい。この能力は、あなたがソーサリーを唱えられるときのみ起動できる。</card>
     <card name="Avatar - Chronatog" jaName="Chronatog Avatar" type="ヴァンガード" pt="手札 -1/ライフ +1" wikilink="Chronatog Avatar">あなたの手札の上限はなくなる。
 (０)：カードを３枚引く。あなたはあなたの次のターンを飛ばす。この能力は、毎ターン１回のみ起動できる。</card>
     <card name="Avatar - Dakkon Blackblade" jaName="Dakkon Blackblade Avatar" type="ヴァンガード" pt="手札 +1/ライフ +0" wikilink="Dakkon Blackblade Avatar">あなたは、あなたの手札から有色のカード１枚を、そのカードの色のうち１色のマナを生み出すことのできる、無作為に選ばれた基本土地・カード１枚のコピーとしてプレイしてもよい。</card>
@@ -290,7 +290,7 @@
 あなたがカオス・シンボルを出すたび、あなたのライブラリーの一番上のカードを公開する。あなたはそれのマナ・コストを支払うことなくプレイしてもよい。</card>
     <card name="Raven's Run" jaName="レイヴンの地" type="次元 ― シャドウムーア" wikilink="レイヴンの地/Raven's Run (次元カード)">すべてのクリーチャーは萎縮を持つ。（それらはクリーチャーに-1/-1カウンターの形でダメージを与える。）
 あなたがカオス・シンボルを出すたび、クリーチャー１体と他のクリーチャー１体とさらに他のクリーチャー１体を対象とする。その第一者に-1/-1カウンターを１個置き、その第二者の上に-1/-1カウンターを２個置き、その第三者の上に-1/-1カウンターを３個置く。</card>
-    <card name="Reality Shaping" jaName="現実の造形" type="現象">あなたが現実の造形に遭遇したとき、あなたから始めて、各プレイヤーは自分の手札からパーマネント・カードを１枚戦場に出してもよい。（その後、この現象からプレインズウォークする。）</card>
+    <card name="Reality Shaping" jaName="現実の造形" type="現象">あなたが現実の造形に遭遇したとき、あなたから始めて、各プレイヤーは自分の手札からパーマネント・カード１枚を戦場に出してもよい。（その後、この現象からプレインズウォークする。）</card>
     <card name="Sanctum of Serra" jaName="セラの聖所" type="次元 ― セラの領土" wikilink="セラの聖所/Sanctum of Serra (次元カード)">あなたがセラの聖所からプレインズウォークしたとき、土地でないパーマネントをすべて破壊する。
 あなたがカオス・シンボルを出すたび、あなたはあなたのライフの総量を20点にしてもよい。</card>
     <card name="Sea of Sand" jaName="砂の海" type="次元 ― ラバイア" wikilink="砂の海/Sea of Sand (次元カード)">プレイヤーは自分が引くカードを公開する。
@@ -617,12 +617,12 @@
     <regex target="text" pattern="ライフを([０-９Ｘ]+)点支払" value="$1点のライフを支払" nodebug="true" />
     <regex target="text" pattern="(?m)(?&lt;=^|[・：])すべての(クリーチャー|アーティファクト|エンチャント|プレインズウォーカー)を(破壊|追放|タップ|アンタップ)する。" value="$1をすべて$2する。" nodebug="true" />
     <regex target="text" pattern="(?m)(?&lt;=^|・| ― |：|。|とき、|場合、)ターン終了時まで、?すべてのクリーチャーは" value="ターン終了時まで、クリーチャーはすべて" nodebug="true" />
-    <regex target="text" pattern="これにより公開されたすべての(クリーチャー・|アーティファクト・|土地・|土地でないパーマネント・|島・|兵士・|エルフ・|カヴー・|ゾンビ・|ゴブリン・)?カードをあなたの手札に加え" value="これにより公開された$1カードをすべてあなたの手札に加え" nodebug="true" />
+    <regex target="text" pattern="これにより公開されたすべての([^と。]*)カードをあなたの手札に加え" value="これにより公開された$1カードをすべてあなたの手札に加え" nodebug="true" />
     <regex target="text" pattern="(?m)^(.+)は、あなたが(平地|島|沼|山|森)か(平地|島|沼|山|森)をコントロールしていないかぎり、タップ状態で戦場に出る。$" value="あなたが$2か$3をコントロールしていないかぎり、$1はタップ状態で戦場に出る。" nodebug="true" />
     <regex target="text" pattern="タイプや色" value="色やタイプ" />
     <!-- テンプレート変更 -->
     <regex target="text" pattern="がコントロールする基本土地" value="がコントロールしている基本土地" nodebug="true" />
-    <regex target="text" pattern="がコントロールする他のパーマネントは、?(.{2,4})を持つ。" value="がコントロールしている他のパーマネントは$1を持つ。" nodebug="true" />
+    <regex target="text" pattern="がコントロールする他のパーマネントは、?(.{2,4})を持つ。" value="がコントロールしている他のパーマネントは$1を持つ。" />
     <regex target="text" pattern="がコントロールする(他の)?クリーチャーは、?(\+./\+.の修整を受けるとともに)?(.{2,5})を(得る|持つ)。" value="がコントロールしている$1クリーチャーは$2$3を$4。" nodebug="true" />
     <regex target="text" pattern="がコントロールする(他の)?(ドラゴン・|エレメンタル・|マーフォーク・)?クリーチャーは(\+\d/\+\d)の修整を受ける。" value="がコントロールしている$1$2クリーチャーは$3の修整を受ける。" nodebug="true" />
     <regex target="text" pattern="がコントロール(?:する|している)、?望む数のクリーチャー" value="がコントロールしている望む数のクリーチャー" nodebug="true" />
@@ -646,6 +646,8 @@
     <regex target="text" pattern="名前が(《[^《/》]+/[^《/》]+》)である" value="$1という名前の" nodebug="true" />
     <regex target="text" pattern="選ばれた名前の(呪文|土地|発生源)" value="選ばれた名前を持つ$1" nodebug="true" />
     <regex target="text" pattern="あなたの墓地にあるクリーチャー・カード([０-９Ｘ]+)枚を対象" value="あなたの墓地からクリーチャー・カード$1枚を対象" nodebug="true" />
+    <regex target="text" pattern="手札(?:から|にある)([^か。]*)カードを１枚、?(タップ状態で)?戦場に出" value="手札から$1カード１枚を$2戦場に出" nodebug="true" />
+    <regex target="text" pattern="手札にある([^か。]*)カード１枚を戦場に出" value="手札から$1カード１枚を戦場に出" nodebug="true" />
     <regex target="text" pattern="以下から１つまたは複数を選ぶ。" value="以下から１つ以上を選ぶ。" />
     <regex target="text" pattern="。?」ことを選んでもよい。" value="。」を選んでもよい。" nodebug="true" />
     <regex target="text" pattern="あなたは「(?:あなたの|あなたは、自分の|あなたは、)ライブラリーから([^「」]*)カード１枚を探(?:す。|し、|して)(それ|そのカード)を公開し(?:て|た上で|たうえで|、)あなたの手札に加え(?:、|る。)その後あなたのライブラリーを切り直す。」を選んでもよい。" value="あなたはあなたのライブラリーから$1カード１枚を探してもよい。そうしたなら、$2を公開してあなたの手札に加え、その後あなたのライブラリーを切り直す。" nodebug="true" />
@@ -1058,9 +1060,6 @@ Knowledge Vaultが戦場を離れたとき、Knowledge Vaultにより追放さ�
     <card name="Nevinyrral's Disk" jaName="ネビニラルの円盤" type="アーティファクト">ネビニラルの円盤はタップ状態で戦場に出る。
 (１),(Ｔ)：アーティファクトとクリーチャーとエンチャントをすべて破壊する。</card>
     <!-- テンプレートの変更：枚数/個数 -->
-    <card name="Cauldron Dance" jaName="大釜のダンス" type="インスタント">大釜のダンスは戦闘中にのみ唱えられる。
-あなたの墓地からクリーチャー・カード１枚を対象とし、それを戦場に戻す。そのクリーチャーは速攻を得る。次の終了ステップの開始時に、それをあなたの手札に戻す。
-あなたは、あなたの手札からクリーチャー・カード１枚を戦場に出してもよい。そのクリーチャーは速攻を得る。次の終了ステップの開始時に、それのコントローラーはそれを生け贄に捧げる。</card>
     <card name="Conflux" jaName="衝合" type="ソーサリー">あなたのライブラリーから、白のカード１枚と青のカード１枚と黒のカード１枚と赤のカード１枚と緑のカード１枚を探す。それらのカードを公開し、あなたの手札に加える。その後あなたのライブラリーを切り直す。</card>
     <card name="Forbidden Alchemy" jaName="禁忌の錬金術" type="インスタント">あなたのライブラリーの一番上からカードを４枚見る。そのうち１枚をあなたの手札に加え、残りをあなたの墓地に置く。
 フラッシュバック(６)(黒)（あなたはあなたの墓地から、このカードをこれのフラッシュバック・コストで唱えてもよい。その後、これを追放する。）</card>
@@ -1086,8 +1085,6 @@ Knowledge Vaultが戦場を離れたとき、Knowledge Vaultにより追放さ�
     <card name="Shaman's Trance" jaName="シャーマンの恍惚" type="インスタント">このターン、他のプレイヤーは自分の墓地から呪文を唱えられず、土地をプレイできない。このターン、あなたは他のプレイヤーの墓地からカードを、それらがあなたの墓地にあるかのようにプレイしてもよい。</card>
     <card name="Surreal Memoir" jaName="現実離れした回顧" type="ソーサリー">あなたの墓地からインスタント・カード１枚を無作為に選び、それをあなたの手札に戻す。
 反復（この呪文があなたの手札から唱えられたなら、これの解決に際し、これを追放する。あなたの次のアップキープの開始時に、あなたは追放領域からこのカードをこれのマナ・コストを支払うことなく唱えてもよい。）</card>
-    <card name="Warren Instigator" jaName="巣穴の煽動者" type="クリーチャー ― ゴブリン・狂戦士" pt="1/1">二段攻撃
-巣穴の煽動者が対戦相手１人にダメージを与えるたび、あなたはあなたの手札からゴブリン・クリーチャー・カード１枚を戦場に出してもよい。</card>
     <!-- テンプレートの変更：あなたの対戦相手 -->
     <card name="Blind Obedience" jaName="盲従" type="エンチャント">強請（あなたが呪文を１つ唱えるたび、あなたは(白/黒)を支払ってもよい。そうしたなら、各対戦相手はそれぞれ１点のライフを失い、あなたはその点数分のライフを得る。）
 対戦相手がコントロールするアーティファクトとクリーチャーはタップ状態で戦場に出る。</card>
