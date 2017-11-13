@@ -601,7 +601,7 @@
     <!-- 順序変更 -->
     <regex target="text" pattern="(?m)(?&lt;=^|・| ― |：|「|。|たび、|とき、|場合、|なら、)(それ|これ|それら|そのクリーチャー|このクリーチャー|すべてのクリーチャー|あなたがコントロールするクリーチャー)は、?ターン終了時まで、?" value="ターン終了時まで、$1は" nodebug="true" />
     <regex target="text" pattern="それはこのターン、?(?!の)" value="このターン、それは" nodebug="true" />
-    <regex target="text" pattern="(?&lt;!上から)カードを([０-９Ｘ]+)枚(探|選|捨て(?!るたび)|公開|追放)" value="カード$1枚を$2" nodebug="true" />
+    <regex target="text" pattern="(?&lt;!上から)カードを([０-９Ｘ]+)枚、?(探|選|捨て(?!るたび)|公開|追放)" value="カード$1枚を$2" nodebug="true" />
     <regex target="text" pattern="一番上から([０-９Ｘ]{2,}|[０２-９Ｘ])枚のカードを(見|公開|追放|あなたの墓地|自分の墓地|そのプレイヤーの墓地|予示)" value="一番上からカードを$1枚$2" nodebug="true" />
     <regex target="text" pattern="カードを最大([０-９Ｘ]+)枚(?:まで)?探" value="カード最大$1枚を探" nodebug="true" />
     <regex target="text" pattern="クリーチャーを最大([０-９Ｘ]+)体(?:まで)?対象" value="クリーチャー最大$1体を対象" nodebug="true" />
@@ -648,10 +648,9 @@
     <regex target="text" pattern="名前が(《[^《/》]+/[^《/》]+》)である" value="$1という名前の" nodebug="true" />
     <regex target="text" pattern="選ばれた名前の(呪文|土地|発生源)" value="選ばれた名前を持つ$1" nodebug="true" />
     <regex target="text" pattern="あなたの墓地にあるクリーチャー・カード([０-９Ｘ]+)枚を対象" value="あなたの墓地からクリーチャー・カード$1枚を対象" nodebug="true" />
-    <regex target="text" pattern="(墓地|手札)にある([^。]*)カード([０-９Ｘ]+)枚を追放" value="$1から$2カード$3枚を追放" nodebug="true" />
+    <regex target="text" pattern="(墓地|手札)にある(?!場合)([^。]*)カード([０-９Ｘ]+)枚を追放" value="$1から$2カード$3枚を追放" nodebug="true" />
     <regex target="text" pattern="手札(?:から|にある)([^か。]*)カードを１枚、?(タップ状態で)?戦場に出" value="手札から$1カード１枚を$2戦場に出" nodebug="true" />
     <regex target="text" pattern="手札にある([^か。]*)カード１枚を戦場に出" value="手札から$1カード１枚を戦場に出" nodebug="true" />
-    <!--<regex target="text" pattern="支払うのではなく、([^。]*)あなたの手札にある" value="支払うのではなく、$1あなたの手札から" nodebug="true" />-->
     <regex target="text" pattern="以下から１つまたは複数を選ぶ。" value="以下から１つ以上を選ぶ。" />
     <regex target="text" pattern="。?」ことを選んでもよい。" value="。」を選んでもよい。" nodebug="true" />
     <!--<regex target="text" pattern="(?&lt;=戻|追放|公開|タップ)する?ことを選んでもよい。" value="してもよい。" nodebug="true" />-->
