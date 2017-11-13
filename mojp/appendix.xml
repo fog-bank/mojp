@@ -653,7 +653,7 @@
     <regex target="text" pattern="手札にある([^か。]*)カード１枚を戦場に出" value="手札から$1カード１枚を戦場に出" nodebug="true" />
     <regex target="text" pattern="以下から１つまたは複数を選ぶ。" value="以下から１つ以上を選ぶ。" />
     <regex target="text" pattern="。?」ことを選んでもよい。" value="。」を選んでもよい。" nodebug="true" />
-    <!--<regex target="text" pattern="(?&lt;=戻|追放|公開|タップ)する?ことを選んでもよい。" value="してもよい。" nodebug="true" />-->
+    <regex target="text" pattern="(?&lt;=戻|追放|公開|タップ)する?ことを選んでもよい。" value="してもよい。" nodebug="true" />
     <regex target="text" pattern="あなたは「(?:あなたの|あなたは、自分の|あなたは、)ライブラリーから([^「」]*)カード１枚を探(?:す。|し、|して)(それ|そのカード)を公開し(?:て|た上で|たうえで|、)あなたの手札に加え(?:、|る。)その後あなたのライブラリーを切り直す。」を選んでもよい。" value="あなたはあなたのライブラリーから$1カード１枚を探してもよい。そうしたなら、$2を公開してあなたの手札に加え、その後あなたのライブラリーを切り直す。" nodebug="true" />
     <regex target="text" pattern="あなたは「(?:あなたの|あなたは、自分の|あなたは、)ライブラリーから([^「」]+)カード１枚を探(?:す。|し、|して)(それ|そのカード)を(タップ状態で)?戦場に出(?:す。|し、)その後あなたのライブラリーを切り直す。」を選んでもよい。" value="あなたはあなたのライブラリーから$1カード１枚を探してもよい。そうしたなら、$2を$3戦場に出し、その後あなたのライブラリーを切り直す。" nodebug="true" />
     <regex target="text" pattern="Ｘは([^。Ｙ]+)である。" value="Ｘは$1に等しい。" nodebug="true" />
@@ -674,7 +674,7 @@
     <regex target="text" pattern="(?m)(?&lt;=^族系.+)共通のクリーチャー・タイプを持つ場合、" value="共通のクリーチャー・タイプを持つなら、" nodebug="true" />
     <!-- A or B -->
     <regex target="text" pattern="アーティファクトかエンチャント１つを対象" value="アーティファクト１つかエンチャント１つを対象" />
-    <regex target="text" pattern="墓地(?:にある|から)インスタント・カード１枚かソーサリー・カード１枚を対象" value="墓地からインスタントかソーサリーであるカード１枚を対象" nodebug="true" />
+    <regex target="text" pattern="墓地(?:にある|から)インスタント・カード１枚かソーサリー・カード１枚を" value="墓地からインスタントかソーサリーであるカード１枚を" nodebug="true" />
     <regex target="text" pattern="あなたの墓地にインスタント・カードやソーサリー・カードが合わせて２枚以上あるなら、" value="あなたの墓地にインスタントかソーサリーであるカードが２枚以上あるなら、" nodebug="true" />
     <regex target="text" pattern="インスタント・カードとソーサリー・カードの総数" value="インスタントかソーサリーであるカードの総数" nodebug="true" />
     <regex target="text" pattern="(?&lt;!か)インスタント・呪文１つかソーサリー・呪文１つを対象" value="インスタントかソーサリーである呪文１つを対象" nodebug="true" />
