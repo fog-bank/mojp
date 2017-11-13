@@ -74,7 +74,7 @@
     <card name="Weird" jaName="奇魔" type="トークン・クリーチャー ― 奇魔" pt="3/3" related="Thunderheads">防衛、飛行</card>
     <!-- Vanguard -->
     <card name="Avatar - Akroma, Angel of Wrath" jaName="Akroma, Angel of Wrath Avatar" type="ヴァンガード" pt="手札 +1/ライフ +7" wikilink="Akroma, Angel of Wrath Avatar">クリーチャーが１体あなたのコントロール下で戦場に出るたび、それは飛行、先制攻撃、トランプル、速攻、プロテクション(黒)、プロテクション(赤)、警戒のうち無作為に選ばれた２つの能力を得る。</card>
-    <card name="Avatar - Arcanis, the Omnipotent" jaName="Arcanis, the Omnipotent Avatar" type="ヴァンガード" pt="手札 +1/ライフ -3" wikilink="Arcanis, the Omnipotent Avatar">(Ｘ),あなたがコントロールする点数で見たマナ・コストがＸのクリーチャーを１体オーナーの手札に戻す：０からＸまでの無作為に選ばれた枚数のカードを引く。Ｘは０にできない。</card>
+    <card name="Avatar - Arcanis, the Omnipotent" jaName="Arcanis, the Omnipotent Avatar" type="ヴァンガード" pt="手札 +1/ライフ -3" wikilink="Arcanis, the Omnipotent Avatar">(Ｘ),あなたがコントロールしていて点数で見たマナ・コストがＸであるクリーチャー１体をオーナーの手札に戻す：０からＸまでの無作為に選ばれた枚数のカードを引く。Ｘは０にできない。</card>
     <card name="Avatar - Arcbound Overseer" jaName="Arcbound Overseer Avatar" type="ヴァンガード" pt="手札 +0/ライフ +3" wikilink="Arcbound Overseer Avatar">あなたのアップキープの開始時に、あなたがコントロールするクリーチャー１体を対象とし、その上に+1/+1カウンターを１個置いてもよい。
 あなたのアップキープの開始時に、あなたがコントロールするパーマネント１つを対象とし、その上に蓄積カウンターを１個置いてもよい。</card>
     <card name="Avatar - Ashling the Pilgrim" jaName="Ashling the Pilgrim Avatar" type="ヴァンガード" pt="手札 -1/ライフ +6" wikilink="Ashling the Pilgrim Avatar">(２)：Ashling the Pilgrim Avatarは、各クリーチャーと各プレイヤーにそれぞれ１点のダメージを与える。</card>
@@ -175,7 +175,7 @@
     <card name="Avatar - The Protector" jaName="庇護者" type="ヴァンガード" wikilink="庇護者/The Protector">(Ｔ)：クリーチャー１体かプレイヤー１人を対象とする。このターン、次にそれに与えられるダメージを１点軽減する。</card>
     <card name="Avatar - The Slayer" jaName="殺害者" type="ヴァンガード" wikilink="殺害者/The Slayer">あなたは追加で７点のライフを得た状態でゲームを開始する。</card>
     <card name="Avatar - The Warrior" jaName="戦士" type="ヴァンガード" wikilink="戦士/The Warrior">(Ｔ)：あなたがコントロールするクリーチャー１体を対象とする。ターン終了時まで、それは速攻を得る。</card>
-    <card name="Avatar - Tradewind Rider" jaName="Tradewind Rider Avatar" type="ヴァンガード" pt="手札 +1/ライフ +4" wikilink="Tradewind Rider Avatar">(３)：各プレイヤーは、そのプレイヤーが２点のライフを支払わない限り、そのプレイヤーがコントロールするパーマネント１つをオーナーの手札に戻す。</card>
+    <card name="Avatar - Tradewind Rider" jaName="Tradewind Rider Avatar" type="ヴァンガード" pt="手札 +1/ライフ +4" wikilink="Tradewind Rider Avatar">(３)：各プレイヤーは、そのプレイヤーが２点のライフを支払わないかぎり、そのプレイヤーがコントロールしているパーマネント１つをオーナーの手札に戻す。</card>
     <card name="Avatar - Two-Headed Giant of Foriys" jaName="Two-Headed Giant of Foriys Avatar" type="ヴァンガード" pt="手札 +1/ライフ -4" wikilink="Two-Headed Giant of Foriys Avatar">あなたがコントロールしているクリーチャーは威迫を持つ。（それらは２体以上のクリーチャーによってしかブロックされない。）
 あなたがコントロールしている各クリーチャーは、各戦闘で追加で１体のクリーチャーをブロックできる。</card>
     <card name="Avatar - Vampire Nocturnus" jaName="Vampire Nocturnus Avatar" type="ヴァンガード" pt="手札 -1/ライフ -2" wikilink="Vampire Nocturnus Avatar">あなたのライブラリーの一番上のカードを公開した状態でプレイする。
@@ -613,7 +613,7 @@
     <regex target="text" pattern="クリーチャー１体が死亡するたび、" value="クリーチャーが１体死亡するたび、" nodebug="true" />
     <regex target="text" pattern="(クリーチャー|コウモリ|ゴブリン)を([０-９Ｘ]+)体、?生け贄" value="$1$2体を生け贄" nodebug="true" />
     <regex target="text" pattern="(土地|パーマネント)を([０-９Ｘ]+)つ生け贄" value="$1$2つを生け贄" nodebug="true" />
-    <regex target="text" pattern="あなた[がの]コントロールする土地を?([０-９Ｘ]+)つ、?オーナーの手札に戻" value="あなたがコントロールしている土地$1つをオーナーの手札に戻" nodebug="true" />
+    <regex target="text" pattern="を([１-３][体つ])、?オーナーの手札に戻" value="$1をオーナーの手札に戻" nodebug="true" />
     <regex target="text" pattern="ライフを([０-９Ｘ]+)点支払" value="$1点のライフを支払" nodebug="true" />
     <regex target="text" pattern="(?m)(?&lt;=^|[・：])すべての(クリーチャー|アーティファクト|エンチャント|プレインズウォーカー)を(破壊|追放|タップ|アンタップ)する。" value="$1をすべて$2する。" nodebug="true" />
     <regex target="text" pattern="(?m)(?&lt;=^|・| ― |：|。|とき、|場合、)ターン終了時まで、?すべてのクリーチャーは" value="ターン終了時まで、クリーチャーはすべて" nodebug="true" />
@@ -627,11 +627,13 @@
     <regex target="text" pattern="がコントロールする(他の)?(ドラゴン・|エレメンタル・|マーフォーク・)?クリーチャーは(\+\d/\+\d)の修整を受ける。" value="がコントロールしている$1$2クリーチャーは$3の修整を受ける。" nodebug="true" />
     <regex target="text" pattern="がコントロール(?:する|している)、?望む数のクリーチャー" value="がコントロールしている望む数のクリーチャー" nodebug="true" />
     <regex target="text" pattern="がコントロールするクリーチャーの総数に等しい" value="がコントロールしているクリーチャーの総数に等しい" nodebug="true" />
+    <regex target="text" pattern="(?&lt;!持つ[^。]+)[がの]コントロールする(他の)?(クリーチャー|アーティファクト|エンチャント|土地|パーマネント|島|森|鳥|エルフ)([１-３][つ体])を?オーナーの手札に戻" value="がコントロールしている$1$2$3をオーナーの手札に戻" nodebug="true" />
+    <regex target="text" pattern="がコントロール(?:する|している)、?(基本|棲み家)でない土地" value="がコントロールしていて$1でない土地" nodebug="true" />
+    <regex target="text" pattern="がコントロール(?:する|している)、?土地でない(各)?パーマネント" value="がコントロールしていて土地でない$1パーマネント" nodebug="true" />
+    <regex target="text" pattern="がコントロールする(.か.)の(クリーチャー|エンチャント|パーマネント)" value="がコントロールしていて$1である$2" nodebug="true" />
     <regex target="text" pattern="がコントロールするタップ状態のクリーチャー" value="がコントロールしていてタップ状態のクリーチャー" nodebug="true" />
     <regex target="text" pattern="がコントロール(?:する|している)、?(飛行|防衛|その選ばれたタイプ)を持つ(各)?クリーチャー" value="がコントロールしていて$1を持つ$2クリーチャー" nodebug="true" />
     <regex target="text" pattern="がコントロール(?:する|している)、?\+1/\+1カウンターが置かれている(各)?クリーチャー" value="がコントロールしていて+1/+1カウンターが置かれている$1クリーチャー" nodebug="true" />
-    <regex target="text" pattern="がコントロール(?:する|している)、?基本でない土地" value="がコントロールしていて基本でない土地" nodebug="true" />
-    <regex target="text" pattern="がコントロール(?:する|している)、?土地でない(各)?パーマネント" value="がコントロールしていて土地でない$1パーマネント" nodebug="true" />
     <regex target="text" pattern="そうした場合、" value="そうしたなら、" nodebug="true" />
     <regex target="text" pattern="そうしない場合、|そうしなかった場合、|そうしなかったなら、|(?&lt;=そうしたなら、[^。]+。)そうでない場合、" value="そうしないなら、" nodebug="true" />
     <regex target="text" pattern="新たな対象" value="新しい対象" nodebug="true" />
@@ -858,7 +860,6 @@
     <card name="Leonin Arbiter" jaName="レオニンの裁き人" type="クリーチャー ― 猫・クレリック" pt="2/2">プレイヤーはライブラリーから探せない。どのプレイヤーも(２)を支払ってもよい。そうしたなら、ターン終了時まで、そのプレイヤーはこの効果を無視する。</card>
     <card name="Lure" jaName="寄せ餌" type="エンチャント ― オーラ">エンチャント（クリーチャー）
 エンチャントされているクリーチャーをブロックできるクリーチャーはすべて、それをブロックする。</card>
-    <card name="Mana Tithe" jaName="マナの税収" type="インスタント">呪文１つを対象とする。それのコントローラーが(１)を支払わないかぎり、それを打ち消す。</card>
     <card name="Mathas, Fiend Seeker" jaName="悪鬼追い、マシス" type="伝説のクリーチャー ― 吸血鬼" pt="3/3">威迫
 あなたの終了ステップの開始時に、対戦相手がコントロールするクリーチャー１体を対象とし、それの上に賞金カウンターを１個置く。そのクリーチャーの上に賞金カウンターが置かれ続けているかぎり、それは「このクリーチャーが死亡したとき、各対戦相手はそれぞれ、カードを１枚引き２点のライフを得る。」を持つ。</card>
     <card name="Pit Keeper" jaName="奈落の守り手" type="クリーチャー ― 人間・ウィザード" pt="2/1">奈落の守り手が戦場に出たとき、あなたの墓地に４枚以上のクリーチャー・カードがある場合、あなたの墓地からクリーチャー・カード１枚を対象とする。あなたはそれをあなたの手札に戻してもよい。</card>
@@ -948,6 +949,11 @@ Knowledge Vaultが戦場を離れたとき、Knowledge Vaultにより追放さ�
     <card name="Monastery Siege" jaName="僧院の包囲" type="エンチャント">僧院の包囲が戦場に出るに際し、カンか龍かを選ぶ。
 ・カン ― あなたのドロー・ステップの開始時に、カードを追加で１枚引き、その後カード１枚を捨てる。
 ・龍 ― 対戦相手が、あなたやあなたがコントロールするパーマネントを対象とする呪文を唱えるためのコストは、(２)多くなる。</card>
+    <!-- テンプレートの変更：マナを要求する打ち消し -->
+    <card name="Condescend" jaName="卑下" type="インスタント">呪文１つを対象とする。それのコントローラーが(Ｘ)を支払わないかぎり、それを打ち消す。占術２を行う。（あなたのライブラリーの一番上からカードを２枚見て、そのうちの望む枚数のカードを望む順番であなたのライブラリーの一番下に置き、残りを望む順番で一番上に置く。）</card>
+    <card name="Daze" jaName="目くらまし" type="インスタント">あなたは目くらましのマナ・コストを支払うのではなく、あなたがコントロールしている島１つをオーナーの手札に戻してもよい。
+呪文１つを対象とする。それのコントローラーが(１)を支払わないかぎり、それを打ち消す。</card>
+    <card name="Mana Tithe" jaName="マナの税収" type="インスタント">呪文１つを対象とする。それのコントローラーが(１)を支払わないかぎり、それを打ち消す。</card>
     <!-- テンプレートの変更：Ｘは/に等しい -->
     <card name="Black Vise" jaName="黒の万力" type="アーティファクト">黒の万力が戦場に出るに際し、対戦相手１人を選ぶ。
 選ばれたプレイヤーのアップキープの開始時に、黒の万力はそのプレイヤーにＸ点のダメージを与える。Ｘはそのプレイヤーの手札にあるカードの枚数から４を引いた数に等しい。</card>
@@ -1279,7 +1285,7 @@ Knowledge Vaultが戦場を離れたとき、Knowledge Vaultにより追放さ�
     <card name="Kodama's Reach" jaName="木霊の手の内" type="ソーサリー ― 秘儀">あなたのライブラリーから基本土地・カード最大２枚を探し、それらのカードを公開し、１枚をタップ状態で戦場に出し、もう１枚をあなたの手札に加える。その後あなたのライブラリーを切り直す。</card>
     <card name="Nissa's Pilgrimage" jaName="ニッサの巡礼" type="ソーサリー">あなたのライブラリーから基本森・カード最大２枚を探し、それらのカードを公開し、１枚をタップ状態で戦場に出し、残りをあなたの手札に加える。その後あなたのライブラリーを切り直す。
 魔巧 ― あなたの墓地にインスタントかソーサリーであるカードが２枚以上あるなら、あなたのライブラリーから基本森・カード最大２枚の代わりに最大３枚を探す。</card>
-    <card name="Temur Sabertooth" jaName="ティムールの剣歯虎" type="クリーチャー ― 猫" pt="4/3">(１)(緑)：あなたはあなたがコントロールする他のクリーチャー１体をオーナーの手札に戻してもよい。そうしたなら、ターン終了時まで、ティムールの剣歯虎は破壊不能を得る。</card>
+    <card name="Temur Sabertooth" jaName="ティムールの剣歯虎" type="クリーチャー ― 猫" pt="4/3">(１)(緑)：あなたはあなたがコントロールしている他のクリーチャー１体をオーナーの手札に戻してもよい。そうしたなら、ターン終了時まで、ティムールの剣歯虎は破壊不能を得る。</card>
     <card name="Crackling Doom" jaName="はじける破滅" type="インスタント">はじける破滅は各対戦相手にそれぞれ２点のダメージを与える。各対戦相手はそれぞれ、自分がコントロールするクリーチャーの中で最大のパワーを持つクリーチャー１体を生け贄に捧げる。</card>
     <card name="Crosis, the Purger" jaName="粛清するものクローシス" type="伝説のクリーチャー ― ドラゴン" pt="6/6">飛行
 粛清するものクローシスがプレイヤー１人に戦闘ダメージを与えるたび、あなたは(２)(黒)を支払ってもよい。そうしたなら、色１色を選び、その後そのプレイヤーは自分の手札を公開してその色のカードをすべて捨てる。</card>
@@ -1360,7 +1366,6 @@ Knowledge Vaultが戦場を離れたとき、Knowledge Vaultにより追放さ�
     <card name="Amass the Components" jaName="材料集め" type="ソーサリー">カードを３枚引く。その後、あなたの手札からカード１枚をあなたのライブラリーの一番下に置く。</card>
     <card name="Ancestral Vision" jaName="祖先の幻視" type="ソーサリー">待機４ ― (青)（あなたの手札からこのカードを唱えるのではなく、(青)を支払うとともに時間カウンターを４個置いた状態でこれを追放する。あなたのアップキープの開始時に、時間カウンターを１個取り除く。最後の１個を取り除いたとき、これをこれのマナ・コストを支払うことなく唱える。）
 プレイヤー１人を対象とする。そのプレイヤーはカードを３枚引く。</card>
-    <card name="Condescend" jaName="卑下" type="インスタント">呪文１つを対象とする。それのコントローラーが(Ｘ)を支払わないかぎり、それを打ち消す。占術２を行う。（あなたのライブラリーの一番上からカードを２枚見て、そのうちの望む枚数のカードを望む順番であなたのライブラリーの一番下に置き、残りを望む順番で一番上に置く。）</card>
     <card name="Day of the Dragons" jaName="ドラゴンの日" type="エンチャント">ドラゴンの日が戦場に出たとき、あなたがコントロールしているクリーチャーをすべて追放する。その後その総数に等しい数の、飛行を持つ赤の5/5のドラゴン・クリーチャー・トークンを生成する。
 ドラゴンの日が戦場を離れたとき、あなたがコントロールしているドラゴンをすべて生け贄に捧げる。その後これにより追放されたカードをあなたのコントロール下で戦場に戻す。</card>
     <card name="Diminish" jaName="縮退" type="インスタント">クリーチャー１体を対象とする。ターン終了時まで、それの基本のパワーとタフネスは1/1になる。</card>
@@ -1461,10 +1466,6 @@ Knowledge Vaultが戦場を離れたとき、Knowledge Vaultにより追放さ�
     <card name="Bladewing the Risen" jaName="帰ってきた刃の翼" type="伝説のクリーチャー ― ゾンビ・ドラゴン" pt="4/4">飛行
 帰ってきた刃の翼が戦場に出たとき、あなたの墓地からドラゴン・パーマネント・カード１枚を対象とする。あなたはそれを戦場に戻してもよい。
 (黒)(赤)：ターン終了時まで、ドラゴン・クリーチャーは+1/+1の修整を受ける。</card>
-    <card name="Blizzard Specter" jaName="吹雪の死霊" type="氷雪クリーチャー ― スペクター" pt="2/3">飛行
-吹雪の死霊がプレイヤー１人に戦闘ダメージを与えるたび、以下から１つを選ぶ。
-・そのプレイヤーは自分がコントロールしているパーマネント１つをオーナーの手札に戻す。
-・そのプレイヤーはカード１枚を捨てる。</card>
     <card name="Blood Baron of Vizkopa" jaName="ヴィズコーパの血男爵" type="クリーチャー ― 吸血鬼" pt="4/4">絆魂、プロテクション（白）、プロテクション（黒）
 あなたのライフが３０点以上で、いずれかの対戦相手のライフが１０点以下であるかぎり、ヴィズコーパの血男爵は+6/+6の修整を受けるとともに飛行を持つ。</card>
     <card name="Chronicler of Heroes" jaName="英雄の記録者" type="クリーチャー ― ケンタウルス・ウィザード" pt="3/3">英雄の記録者が戦場に出たとき、あなたが+1/+1カウンターが置かれたクリーチャーをコントロールしているならカードを１枚引く。</card>
