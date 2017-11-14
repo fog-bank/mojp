@@ -598,6 +598,7 @@
     <regex target="text" pattern="その後、居住を行う。" value="その後居住を行う。" nodebug="true" />
     <regex target="text" pattern="(?&lt;=たび、)ターン終了時まで(?!、)" value="ターン終了時まで、" nodebug="true" />
     <regex target="text" pattern="(?&lt;=そうしたなら、|とともに、)次の終了ステップの開始時に(?!、)" value="次の終了ステップの開始時に、" nodebug="true" />
+    <regex target="text" pattern="追加コストとして(?!、)" value="追加コストとして、" nodebug="true" />
     <!-- 順序変更 -->
     <regex target="text" pattern="(?m)(?&lt;=^|・| ― |：|「|。|たび、|とき、|場合、|なら、)(それ|これ|それら|そのクリーチャー|このクリーチャー|すべてのクリーチャー|あなたがコントロールするクリーチャー)は、?ターン終了時まで、?" value="ターン終了時まで、$1は" nodebug="true" />
     <regex target="text" pattern="それはこのターン、?(?!の)" value="このターン、それは" nodebug="true" />
@@ -615,12 +616,13 @@
     <regex target="text" pattern="(土地|パーマネント)を([０-９Ｘ]+)つ生け贄" value="$1$2つを生け贄" nodebug="true" />
     <regex target="text" pattern="を([１-３][体つ])、?オーナーの手札に戻" value="$1をオーナーの手札に戻" nodebug="true" />
     <regex target="text" pattern="ライフを([０-９Ｘ]+)点支払" value="$1点のライフを支払" nodebug="true" />
+    <regex target="text" pattern="(?m)^(.+)は、あなたが(平地|島|沼|山|森)か(平地|島|沼|山|森)をコントロールしていないかぎり、タップ状態で戦場に出る。$" value="あなたが$2か$3をコントロールしていないかぎり、$1はタップ状態で戦場に出る。" nodebug="true" />
+    <regex target="text" pattern="タイプや色" value="色やタイプ" />
+    <!-- 順序変更：すべて -->
     <regex target="text" pattern="(?m)(?&lt;=^|[・：])すべての(クリーチャー|アーティファクト|エンチャント|プレインズウォーカー)を(破壊|追放|タップ|アンタップ)する。" value="$1をすべて$2する。" nodebug="true" />
     <regex target="text" pattern="(?m)(?&lt;=^|・| ― |：|。|とき、|場合、)ターン終了時まで、?すべてのクリーチャーは" value="ターン終了時まで、クリーチャーはすべて" nodebug="true" />
     <regex target="text" pattern="これにより公開されたすべての([^と。]*)カードをあなたの手札に加え" value="これにより公開された$1カードをすべてあなたの手札に加え" nodebug="true" />
-    <regex target="text" pattern="(?m)^(.+)は、あなたが(平地|島|沼|山|森)か(平地|島|沼|山|森)をコントロールしていないかぎり、タップ状態で戦場に出る。$" value="あなたが$2か$3をコントロールしていないかぎり、$1はタップ状態で戦場に出る。" nodebug="true" />
-    <regex target="text" pattern="タイプや色" value="色やタイプ" />
-    <!-- テンプレート変更 -->
+    <!-- テンプレート変更：コントロールする -->
     <regex target="text" pattern="がコントロールする基本土地" value="がコントロールしている基本土地" nodebug="true" />
     <regex target="text" pattern="がコントロールする他のパーマネントは、?(.{2,4})を持つ。" value="がコントロールしている他のパーマネントは$1を持つ。" />
     <regex target="text" pattern="がコントロールする(他の)?クリーチャーは、?(\+./\+.の修整を受けるとともに)?(.{2,5})を(得る|持つ)。" value="がコントロールしている$1クリーチャーは$2$3を$4。" nodebug="true" />
@@ -628,14 +630,25 @@
     <regex target="text" pattern="がコントロール(?:する|している)、?望む数のクリーチャー" value="がコントロールしている望む数のクリーチャー" nodebug="true" />
     <regex target="text" pattern="がコントロールするクリーチャーの総数に等しい" value="がコントロールしているクリーチャーの総数に等しい" nodebug="true" />
     <regex target="text" pattern="(?&lt;!持つ[^。]+)[がの]コントロールする(他の)?(クリーチャー|アーティファクト|エンチャント|土地|パーマネント|島|森|鳥|エルフ)([１-３][つ体])を?オーナーの手札に戻" value="がコントロールしている$1$2$3をオーナーの手札に戻" nodebug="true" />
+    <regex target="text" pattern="対戦相手１人がコントロールするクリーチャー１体を対象" value="対戦相手がコントロールしているクリーチャー１体を対象" nodebug="true" />
     <regex target="text" pattern="がコントロール(?:する|している)、?(基本|棲み家)でない土地" value="がコントロールしていて$1でない土地" nodebug="true" />
     <regex target="text" pattern="がコントロール(?:する|している)、?土地でない(各)?パーマネント" value="がコントロールしていて土地でない$1パーマネント" nodebug="true" />
     <regex target="text" pattern="がコントロールする(.か.)の(クリーチャー|エンチャント|パーマネント)" value="がコントロールしていて$1である$2" nodebug="true" />
     <regex target="text" pattern="がコントロールするタップ状態のクリーチャー" value="がコントロールしていてタップ状態のクリーチャー" nodebug="true" />
     <regex target="text" pattern="がコントロール(?:する|している)、?(飛行|防衛|その選ばれたタイプ)を持つ(各)?クリーチャー" value="がコントロールしていて$1を持つ$2クリーチャー" nodebug="true" />
     <regex target="text" pattern="がコントロール(?:する|している)、?\+1/\+1カウンターが置かれている(各)?クリーチャー" value="がコントロールしていて+1/+1カウンターが置かれている$1クリーチャー" nodebug="true" />
+    <!-- テンプレート変更：手札/墓地から -->
+    <regex target="text" pattern="あなたの墓地にあるクリーチャー・カード([０-９Ｘ]+)枚を対象" value="あなたの墓地からクリーチャー・カード$1枚を対象" nodebug="true" />
+    <regex target="text" pattern="(墓地|手札)にある(?!場合)([^。]*)カード([０-９Ｘ]+)枚を追放" value="$1から$2カード$3枚を追放" nodebug="true" />
+    <regex target="text" pattern="手札(?:から|にある)([^か。]*)カードを１枚、?(タップ状態で)?戦場に出" value="手札から$1カード１枚を$2戦場に出" nodebug="true" />
+    <regex target="text" pattern="手札にある([^か。]*)カード１枚を戦場に出" value="手札から$1カード１枚を戦場に出" nodebug="true" />
+    <regex target="text" pattern="あなたの手札にあるドラゴン・カード１枚を公開してもよい。" value="あなたはあなたの手札からドラゴン・カード１枚を公開してもよい。" nodebug="true" />
+    <!-- テンプレート変更：if節 -->
     <regex target="text" pattern="そうした場合、" value="そうしたなら、" nodebug="true" />
     <regex target="text" pattern="そうしない場合、|そうしなかった場合、|そうしなかったなら、|(?&lt;=そうしたなら、[^。]+。)そうでない場合、" value="そうしないなら、" nodebug="true" />
+    <regex target="text" pattern="。あなたがこの呪文をあなたのメイン・フェイズの間に唱えた場合、" value="。あなたがこの呪文をあなたのメイン・フェイズ中に唱えたなら、" nodebug="true" />
+    <regex target="text" pattern="(?m)(?&lt;=^族系.+)共通のクリーチャー・タイプを持つ場合、" value="共通のクリーチャー・タイプを持つなら、" nodebug="true" />
+    <!-- テンプレート変更 -->
     <regex target="text" pattern="新たな対象" value="新しい対象" nodebug="true" />
     <regex target="text" pattern="次のアンタップ・ステップの間に" value="次のアンタップ・ステップに" nodebug="true" />
     <regex target="text" pattern="(?:各|１)ターンに１回(?:のみ|だけ)" value="毎ターン１回のみ" nodebug="true" />
@@ -647,10 +660,6 @@
     <regex target="text" pattern="のブロックしているクリーチャー１体を対象" value="をブロックしているクリーチャー１体を対象" />
     <regex target="text" pattern="名前が(《[^《/》]+/[^《/》]+》)である" value="$1という名前の" nodebug="true" />
     <regex target="text" pattern="選ばれた名前の(呪文|土地|発生源)" value="選ばれた名前を持つ$1" nodebug="true" />
-    <regex target="text" pattern="あなたの墓地にあるクリーチャー・カード([０-９Ｘ]+)枚を対象" value="あなたの墓地からクリーチャー・カード$1枚を対象" nodebug="true" />
-    <regex target="text" pattern="(墓地|手札)にある(?!場合)([^。]*)カード([０-９Ｘ]+)枚を追放" value="$1から$2カード$3枚を追放" nodebug="true" />
-    <regex target="text" pattern="手札(?:から|にある)([^か。]*)カードを１枚、?(タップ状態で)?戦場に出" value="手札から$1カード１枚を$2戦場に出" nodebug="true" />
-    <regex target="text" pattern="手札にある([^か。]*)カード１枚を戦場に出" value="手札から$1カード１枚を戦場に出" nodebug="true" />
     <regex target="text" pattern="以下から１つまたは複数を選ぶ。" value="以下から１つ以上を選ぶ。" />
     <regex target="text" pattern="。?」ことを選んでもよい。" value="。」を選んでもよい。" nodebug="true" />
     <regex target="text" pattern="(?&lt;=戻|追放|公開|タップ)する?ことを選んでもよい。" value="してもよい。" nodebug="true" />
@@ -662,7 +671,6 @@
     <regex target="text" pattern="ライブラリーのカードを上から([０-９Ｘ]{2,}|[０２-９Ｘ])枚、?" value="ライブラリーの一番上からカードを$1枚" nodebug="true" />
     <regex target="text" pattern="がプレイヤーに戦闘ダメージを与えるたび、" value="がプレイヤー１人に戦闘ダメージを与えるたび、" nodebug="true" />
     <regex target="text" pattern="クリーチャーでない呪文を１つ唱えるたび、" value="クリーチャーでない呪文を唱えるたび、" nodebug="true" />
-    <regex target="text" pattern="対戦相手１人がコントロールするクリーチャー１体を対象" value="対戦相手がコントロールするクリーチャー１体を対象" nodebug="true" />
     <regex target="text" pattern="あなたのマナ・プールに(?:、好きな色|好きな色(?:１色)?)のマナ([０-９Ｘ]+)点を加え" value="あなたのマナ・プールに、好きな色１色のマナ$1点を加え" nodebug="true" />
     <regex target="text" pattern="を対象とし、それはターン終了時まで" value="を対象とする。ターン終了時まで、それは" nodebug="true" />
     <regex target="text" pattern="を対象とし、それを、?([^。]+)かぎり、?" value="を対象とする。$1かぎり、それを" nodebug="true" />
@@ -670,10 +678,7 @@
     <regex target="text" pattern="(?&lt;!の上)から(.\d/.\d|氷|蓄積|貯蔵|水晶)カウンターを([０-９Ｘ]+)個取り除く" value="の上から$1カウンターを$2個取り除く" nodebug="true" />
     <regex target="text" pattern="それ?の上に(、それを唱えるために使われたマナの色１色につき)?(.\d/.\d|\w{1,2}|オーメン・|ポリープ・)カウンターが([０-９Ｘ]+)個置かれた状態で(、タップ状態で)?戦場に出る" value="$1$2カウンターが$3個置かれた状態で$4戦場に出る" nodebug="true" />
     <regex target="text" pattern="。(そのプレイヤーが)?そうしたなら、そのプレイヤーはこの呪文をコピーし、そのコピーの新しい対象を選んでもよい。" value="。そうしたなら、そのプレイヤーはこの呪文をコピーしてもよい。そのプレイヤーはそのコピーの新しい対象を選んでもよい。" nodebug="true" />
-    <regex target="text" pattern="。あなたがこの呪文をあなたのメイン・フェイズの間に唱えた場合、" value="。あなたがこの呪文をあなたのメイン・フェイズ中に唱えたなら、" nodebug="true" />
-    <regex target="text" pattern="あなたの手札にあるドラゴン・カード１枚を公開してもよい。" value="あなたはあなたの手札からドラゴン・カード１枚を公開してもよい。" nodebug="true" />
-    <regex target="text" pattern="(?m)(?&lt;=^族系.+)共通のクリーチャー・タイプを持つ場合、" value="共通のクリーチャー・タイプを持つなら、" nodebug="true" />
-    <!-- A or B -->
+    <!-- テンプレート変更：A or B -->
     <regex target="text" pattern="アーティファクトかエンチャント１つを対象" value="アーティファクト１つかエンチャント１つを対象" />
     <regex target="text" pattern="墓地(?:にある|から)インスタント・カード１枚かソーサリー・カード１枚を" value="墓地からインスタントかソーサリーであるカード１枚を" nodebug="true" />
     <regex target="text" pattern="あなたの墓地にインスタント・カードやソーサリー・カードが合わせて２枚以上あるなら、" value="あなたの墓地にインスタントかソーサリーであるカードが２枚以上あるなら、" nodebug="true" />
@@ -1160,8 +1165,6 @@ Knowledge Vaultが戦場を離れたとき、Knowledge Vaultにより追放さ�
 (２)(青)(赤)：あなたがコントロールする、インスタントかソーサリーである呪文１つを対象とし、それをコピーする。あなたはそのコピーの新しい対象を選んでもよい。</card>
     <card name="Staff of Nin" jaName="ニンの杖" type="アーティファクト">あなたのアップキープの開始時に、カードを１枚引く。
 (Ｔ)：クリーチャー１体かプレイヤー１人を対象とする。ニンの杖はそれに１点のダメージを与える。</card>
-    <card name="Tormenting Voice" jaName="苦しめる声" type="ソーサリー">苦しめる声を唱えるための追加コストとして、カード１枚を捨てる。
-カードを２枚引く。</card>
     <!-- 余剰カンマ -->
     <card name="Duress" jaName="強迫" type="ソーサリー">対戦相手１人を対象とする。そのプレイヤーは自分の手札を公開する。あなたはその中からクリーチャーでも土地でもないカード１枚を選ぶ。そのプレイヤーはそのカードを捨てる。</card>
     <card name="Earthquake" jaName="地震" type="ソーサリー">地震は飛行を持たない各クリーチャーと各プレイヤーにそれぞれＸ点のダメージを与える。</card>
