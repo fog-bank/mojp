@@ -54,7 +54,7 @@ namespace Mojp
             var dlg = new OpenFileDialog();
             dlg.FileName = "search.txt";
             dlg.CheckFileExists = true;
-            dlg.Filter = "すべてのファイル (*.*)|*.*";
+            dlg.Filter = "テキスト ファイル (*.txt)|*.txt|すべてのファイル (*.*)|*.*";
 
             if (dlg.ShowDialog(this) == true)
             {
