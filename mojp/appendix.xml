@@ -604,22 +604,25 @@
     <regex target="text" pattern="追加コストとして(?!、)" value="追加コストとして、" nodebug="true" />
     <!-- 順序変更 -->
     <regex target="text" pattern="それはこのターン、?(?!の)" value="このターン、それは" nodebug="true" />
-    <regex target="text" pattern="(?&lt;!上から)カードを([０-９Ｘ]+)枚、?(探|選|捨て(?!るたび)|公開|追放)" value="カード$1枚を$2" nodebug="true" />
-    <regex target="text" pattern="一番上から([０-９Ｘ]{2,}|[０２-９Ｘ])枚のカードを(見|公開|追放|あなたの墓地|自分の墓地|そのプレイヤーの墓地|予示)" value="一番上からカードを$1枚$2" nodebug="true" />
+    <regex target="text" pattern="タイプや色" value="色やタイプ" />
+    <regex target="text" pattern="(あなた|対戦相手)のコントロール下で([^。]+)が(１体|１つ)?戦場に出るたび、" value="$2が$3$1のコントロール下で戦場に出るたび、" nodebug="true" />
+    <!-- 順序変更：数字を前に移動 -->
+    <regex target="text" pattern="(?&lt;!上から)カードを([０-９Ｘ]+)枚、?(?=探|選|捨て(?!るたび)|公開|追放)" value="カード$1枚を" nodebug="true" />
     <regex target="text" pattern="カードを最大([０-９Ｘ]+)枚(?:まで)?探" value="カード最大$1枚を探" nodebug="true" />
     <regex target="text" pattern="クリーチャーを最大([０-９Ｘ]+)体(?:まで)?対象" value="クリーチャー最大$1体を対象" nodebug="true" />
     <regex target="text" pattern="(?&lt;!と|や)(アーティファクト|土地|沼|森|パーマネント|呪文)を最大([０-９Ｘ]+)つ(?:まで)?対象" value="$1最大$2つを対象" nodebug="true" />
-    <regex target="text" pattern="(カード名|タイプ)を([０-９Ｘ]+)つ選" value="$1$2つを選" nodebug="true" />
+    <regex target="text" pattern="(?&lt;=カード名|タイプ)を([０-９Ｘ]+)つ選" value="$1つを選" nodebug="true" />
     <regex target="text" pattern="色を(１|２)(?:色|つ)選" value="色$1色を選" nodebug="true" />
     <regex target="text" pattern="対戦相手を１人選ぶ。" value="対戦相手１人を選ぶ。" nodebug="true" />
-    <regex target="text" pattern="トークン([０-９Ｘ]+)体を生成する。" value="トークンを$1体生成する。" nodebug="true" />
-    <regex target="text" pattern="クリーチャー１体が死亡するたび、" value="クリーチャーが１体死亡するたび、" nodebug="true" />
-    <regex target="text" pattern="(あなた|対戦相手)のコントロール下で([^。]+)が(１体|１つ)?戦場に出るたび、" value="$2が$3$1のコントロール下で戦場に出るたび、" nodebug="true" />
-    <regex target="text" pattern="(クリーチャー|コウモリ|ゴブリン)を([０-９Ｘ]+)体、?生け贄" value="$1$2体を生け贄" nodebug="true" />
-    <regex target="text" pattern="(アーティファクト|エンチャント|土地|パーマネント)を([０-９Ｘ]+)つ生け贄" value="$1$2つを生け贄" nodebug="true" />
+    <regex target="text" pattern="(?&lt;=クリーチャー|コウモリ|ゴブリン)を([０-９Ｘ]+)体、?生け贄" value="$1体を生け贄" nodebug="true" />
+    <regex target="text" pattern="(?&lt;=アーティファクト|エンチャント|土地|パーマネント)を([０-９Ｘ]+)つ生け贄" value="$1つを生け贄" nodebug="true" />
     <regex target="text" pattern="を([１-３][体つ])、?オーナーの手札に戻" value="$1をオーナーの手札に戻" nodebug="true" />
     <regex target="text" pattern="ライフを([０-９Ｘ]+)点支払" value="$1点のライフを支払" nodebug="true" />
-    <regex target="text" pattern="タイプや色" value="色やタイプ" />
+    <!-- 順序変更：数字を後に移動 -->
+    <regex target="text" pattern="一番上から([０-９Ｘ]{2,}|[０２-９Ｘ])枚のカードを(?=見|公開|追放|あなたの墓地|自分の墓地|そのプレイヤーの墓地|予示)" value="一番上からカードを$1枚" nodebug="true" />
+    <regex target="text" pattern="トークン([０-９Ｘ]+)体を生成する。" value="トークンを$1体生成する。" nodebug="true" />
+    <regex target="text" pattern="(１体|１つ)が(あなたのコントロール下で)?戦場に出るたび、" value="が$1$2戦場に出るたび、" nodebug="true" />
+    <regex target="text" pattern="クリーチャー１体が死亡するたび、" value="クリーチャーが１体死亡するたび、" nodebug="true" />
     <!-- 順序変更：であるかぎり -->
     <regex target="text" pattern="(?m)(?&lt;=^| ― |「|。)([^\n―：「（。]+)は、((?:(?!。|、|それ|その|自身).)+)かぎり、?それ(?=で?は)" value="$2かぎり、$1" nodebug="true" />
     <regex target="text" pattern="(?m)(?&lt;=^| ― |「|。)(その後)?([^\n―：「（。]+)は、((?:(?!。|、|それ|その|これ|自身|自分).)+[はが](?:(?!。|、|その).)+)かぎり、?(?=(?:(?!。|かぎり).)+。)" value="$1$3かぎり、$2は" nodebug="true" />
@@ -637,7 +640,7 @@
     <regex target="text" pattern="がコントロールする(他の)?クリーチャーは、?(\+./\+.の修整を受けるとともに)?(.{2,5})を(得る|持つ)。" value="がコントロールしている$1クリーチャーは$2$3を$4。" nodebug="true" />
     <regex target="text" pattern="がコントロールする(他の)?(ドラゴン・|エレメンタル・|マーフォーク・)?クリーチャーは(\+\d/\+\d)の修整を受ける。" value="がコントロールしている$1$2クリーチャーは$3の修整を受ける。" nodebug="true" />
     <regex target="text" pattern="がコントロール(?:する|している)、?望む数のクリーチャー" value="がコントロールしている望む数のクリーチャー" nodebug="true" />
-    <regex target="text" pattern="がコントロールするクリーチャーの総数に等しい" value="がコントロールしているクリーチャーの総数に等しい" nodebug="true" />
+    <regex target="text" pattern="がコントロールするクリーチャーの総?数に等しい" value="がコントロールしているクリーチャーの総数に等しい" nodebug="true" />
     <regex target="text" pattern="(?&lt;!持つ[^。]+)[がの]コントロールする(他の)?(クリーチャー|アーティファクト|エンチャント|土地|パーマネント|島|森|鳥|エルフ)([１-３][つ体])を?オーナーの手札に戻" value="がコントロールしている$1$2$3をオーナーの手札に戻" nodebug="true" />
     <regex target="text" pattern="対戦相手１人がコントロールするクリーチャー１体を対象" value="対戦相手がコントロールしているクリーチャー１体を対象" nodebug="true" />
     <regex target="text" pattern="がコントロール(?:する|している)、?(基本|棲み家)でない土地" value="がコントロールしていて$1でない土地" nodebug="true" />
@@ -1132,8 +1135,6 @@ Knowledge Vaultが戦場を離れたとき、Knowledge Vaultにより追放さ�
 あなたがコントロールしていて+1/+1カウンターが置かれている各クリーチャーはそれぞれ接死を持つ。</card>
     <card name="Runed Servitor" jaName="ルーンの苦役者" type="アーティファクト・クリーチャー ― 構築物" pt="2/2">ルーンの苦役者が死亡したとき、各プレイヤーはそれぞれカードを１枚引く。</card>
     <!-- コントロールしている -->
-    <card name="Battle Squadron" jaName="戦闘飛翔艇隊" type="クリーチャー ― ゴブリン" pt="*/*">飛行
-戦闘飛翔艇隊のパワーとタフネスは、それぞれあなたがコントロールしているクリーチャーの総数に等しい。</card>
     <card name="Cavalry Master" jaName="騎兵戦の達人" type="クリーチャー ― 人間・騎士" pt="3/3">側面攻撃（側面攻撃を持たないクリーチャーがこのクリーチャーをブロックするたび、ターン終了時まで、ブロックしているクリーチャーは-1/-1の修整を受ける。）
 あなたがコントロールしている他の側面攻撃を持つクリーチャーは側面攻撃を持つ。（各側面攻撃は独立に誘発する。）</card>
     <card name="Frost Lynx" jaName="霜のオオヤマネコ" type="クリーチャー ― エレメンタル・猫" pt="2/2">霜のオオヤマネコが戦場に出たとき、対戦相手がコントロールしているクリーチャー１体を対象とし、それをタップする。そのクリーチャーは、それのコントローラーの次のアンタップ・ステップにアンタップしない。</card>
@@ -1223,7 +1224,6 @@ Knowledge Vaultが戦場を離れたとき、Knowledge Vaultにより追放さ�
     <card name="The Unspeakable" jaName="語られざるもの、忌話図" type="伝説のクリーチャー ― スピリット" pt="6/7">飛行、トランプル
 語られざるもの、忌話図がプレイヤー１人に戦闘ダメージを与えるたび、あなたの墓地から秘儀・カード１枚を対象とする。あなたはそれをあなたの手札に戻してもよい。</card>
     <card name="Volcanic Vision" jaName="火山の幻視" type="ソーサリー">あなたの墓地からインスタントかソーサリーであるカード１枚を対象とし、それをあなたの手札に戻す。火山の幻視は対戦相手がコントロールする各クリーチャーにそれぞれ、そのカードの点数で見たマナ・コストに等しい点数のダメージを与える。火山の幻視を追放する。</card>
-    <card name="Zo-Zu the Punisher" jaName="罰する者、ゾーズー" type="伝説のクリーチャー ― ゴブリン・戦士" pt="2/2">土地が１つ戦場に出るたび、罰する者、ゾーズーはその土地のコントローラーに２点のダメージを与える。</card>
     <!-- AKH -->
     <card name="Angel of Sanctions" jaName="賞罰の天使" type="クリーチャー ― 天使" pt="3/4">飛行
 賞罰の天使が戦場に出たとき、対戦相手がコントロールしていて土地でないパーマネント１つを対象とする。あなたはそれを賞罰の天使が戦場を離れるまで追放してもよい。
