@@ -614,6 +614,7 @@
     <regex target="text" pattern="対戦相手を１人選ぶ。" value="対戦相手１人を選ぶ。" nodebug="true" />
     <regex target="text" pattern="トークン([０-９Ｘ]+)体を生成する。" value="トークンを$1体生成する。" nodebug="true" />
     <regex target="text" pattern="クリーチャー１体が死亡するたび、" value="クリーチャーが１体死亡するたび、" nodebug="true" />
+    <regex target="text" pattern="(あなた|対戦相手)のコントロール下で([^。]+)が(１体|１つ)?戦場に出るたび、" value="$2が$3$1のコントロール下で戦場に出るたび、" nodebug="true" />
     <regex target="text" pattern="(クリーチャー|コウモリ|ゴブリン)を([０-９Ｘ]+)体、?生け贄" value="$1$2体を生け贄" nodebug="true" />
     <regex target="text" pattern="(アーティファクト|エンチャント|土地|パーマネント)を([０-９Ｘ]+)つ生け贄" value="$1$2つを生け贄" nodebug="true" />
     <regex target="text" pattern="を([１-３][体つ])、?オーナーの手札に戻" value="$1をオーナーの手札に戻" nodebug="true" />
@@ -681,7 +682,7 @@
     <regex target="text" pattern="ライブラリーの一番上(?:から１枚)?のカード(?:１枚)?を(?:１枚、?)?" value="ライブラリーの一番上のカードを" nodebug="true" />
     <regex target="text" pattern="ライブラリーのカードを上から([０-９Ｘ]{2,}|[０２-９Ｘ])枚、?" value="ライブラリーの一番上からカードを$1枚" nodebug="true" />
     <regex target="text" pattern="がプレイヤーに戦闘ダメージを与えるたび、" value="がプレイヤー１人に戦闘ダメージを与えるたび、" nodebug="true" />
-    <regex target="text" pattern="(?&lt;=アーティファクト|土地|森|パーマネント)が戦場に出るたび、" value="が１つ戦場に出るたび、" nodebug="true" />
+    <regex target="text" pattern="(?&lt;=アーティファクト|土地|森|パーマネント)が(あなたのコントロール下で)?戦場に出るたび、" value="が１つ$1戦場に出るたび、" nodebug="true" />
     <regex target="text" pattern="(?&lt;=クリーチャー|クリーチャー・トークン)が戦場を離れるたび、" value="が１体戦場を離れるたび、" />
     <regex target="text" pattern="クリーチャーでない呪文を１つ唱えるたび、" value="クリーチャーでない呪文を唱えるたび、" nodebug="true" />
     <regex target="text" pattern="あなたのマナ・プールに(?:、好きな色|好きな色(?:１色)?)のマナ([０-９Ｘ]+)点を加え" value="あなたのマナ・プールに、好きな色１色のマナ$1点を加え" nodebug="true" />
