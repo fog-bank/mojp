@@ -564,7 +564,7 @@
   <replace>
     <!-- 誤字修正 -->
     <regex target="name|text" pattern="AE" value="Ae" nodebug="true" />
-    <regex target="text" pattern="X(は|枚)" value="Ｘ$1" nodebug="true" />
+    <regex target="text" pattern="X(?=は|枚)" value="Ｘ" nodebug="true" />
     <regex target="text" pattern="\)\:" value=")：" nodebug="true" />
     <regex target="text" pattern="対象都市" value="対象とし" />
     <regex target="text" pattern="修正" value="修整" />
@@ -574,7 +574,7 @@
     <regex target="text" pattern="コントール" value="コントロール" />
     <regex target="text" pattern="ライフ総量を公開する" value="ライフ総量を交換する" />
     <regex target="text" pattern="エンチャント\(クリーチャー\)" value="エンチャント（クリーチャー）" />
-    <regex target="text" pattern="([０-９Ｘ]+)店" value="$1点" />
+    <regex target="text" pattern="(?&lt;=[０-９Ｘ]+)店" value="点" />
     <regex target="name" pattern="’" value="'" />
     <regex target="type" pattern=" - " value=" ― " />
     <regex target="text" pattern="\(T\)" value="(Ｔ)" />
@@ -583,18 +583,18 @@
     <!-- 基本 -->
     <regex target="jaName" pattern="（.+）$" value="" nodebug="true" />
     <regex target="type" pattern=" \-\-\- " value=" ― " nodebug="true" />
-    <regex target="text" pattern="\([a-zA-Z'\- ]+\)・?(クリーチャー|アーティファクト|土地|カード|呪文|パーマネント)" value="・$1" nodebug="true" />
+    <regex target="text" pattern="\([a-zA-Z'\- ]+\)・?(?=クリーチャー|アーティファクト|土地|カード|呪文|パーマネント)" value="・" nodebug="true" />
     <regex target="type|text" pattern="\([a-zA-Z'\- ]+\)" value="" nodebug="true" />
     <!-- オラクル更新 -->
     <regex target="text" pattern="トークンを([０-９Ｘ]+)体戦場に出す。" value="トークンを$1体生成する。" nodebug="true" />
     <regex target="text" pattern="可能なら毎ターン" value="可能なら各戦闘で" />
     <!-- 中丸追加 -->
-    <regex target="type" pattern="部族(アーティファクト|エンチャント|インスタント|ソーサリー)" value="部族・$1" nodebug="true" />
-    <regex target="text" pattern="(クリーチャー|アーティファクト|エンチャント|インスタント|ソーサリー|プレインズウォーカー|土地)(カード|呪文)" value="$1・$2" nodebug="true" />
-    <regex target="text" pattern="(平地|島|沼|山|森|砂漠|恐竜|同盟者|機体|装備品)カード" value="$1・カード" nodebug="true" />
-    <regex target="text" pattern="(オーラ|ゾンビ|クレリック|スピリット|エレメンタル|マーフォーク|ミノタウルス)呪文" value="$1・呪文" nodebug="true" />
-    <regex target="text" pattern="(猫|馬|熊|狼|蛇|苗木|兵士|恐竜|海賊|反射|吸血鬼|同盟者|落とし子|ならず者)クリーチャー" value="$1・クリーチャー" nodebug="true" />
-    <regex target="text" pattern="(飛行機械|霊気装置|手掛かり|装備品)アーティファクト" value="$1・アーティファクト" nodebug="true" />
+    <regex target="type" pattern="部族(?=アーティファクト|エンチャント|インスタント|ソーサリー)" value="部族・" nodebug="true" />
+    <regex target="text" pattern="(?&lt;=クリーチャー|アーティファクト|エンチャント|インスタント|ソーサリー|プレインズウォーカー|土地)(?=カード|呪文)" value="・" nodebug="true" />
+    <regex target="text" pattern="(?&lt;=平地|島|沼|山|森|砂漠|恐竜|同盟者|機体|装備品)カード" value="・カード" nodebug="true" />
+    <regex target="text" pattern="(?&lt;=オーラ|ゾンビ|クレリック|スピリット|エレメンタル|マーフォーク|ミノタウルス)呪文" value="・呪文" nodebug="true" />
+    <regex target="text" pattern="(?&lt;=猫|馬|熊|狼|蛇|苗木|兵士|恐竜|海賊|反射|吸血鬼|同盟者|落とし子|ならず者)クリーチャー" value="・クリーチャー" nodebug="true" />
+    <regex target="text" pattern="(?&lt;=飛行機械|霊気装置|手掛かり|装備品)アーティファクト" value="・アーティファクト" nodebug="true" />
     <!-- カンマ追加削減 -->
     <regex target="text" pattern="Ｘは、" value="Ｘは" nodebug="true" />
     <regex target="text" pattern="その後、あなたのライブラリーを切り直" value="その後あなたのライブラリーを切り直" nodebug="true" />
@@ -644,14 +644,14 @@
     <regex target="text" pattern="(?&lt;!持つ[^。]+)[がの]コントロールする(他の)?(クリーチャー|アーティファクト|エンチャント|土地|パーマネント|島|森|鳥|エルフ)([１-３][つ体])を?オーナーの手札に戻" value="がコントロールしている$1$2$3をオーナーの手札に戻" nodebug="true" />
     <regex target="text" pattern="対戦相手１人がコントロールするクリーチャー１体を対象" value="対戦相手がコントロールしているクリーチャー１体を対象" nodebug="true" />
     <regex target="text" pattern="がコントロール(?:する|している)、?(基本|棲み家)でない土地" value="がコントロールしていて$1でない土地" nodebug="true" />
-    <regex target="text" pattern="がコントロール(?:する|している)、?土地でない(各)?パーマネント" value="がコントロールしていて土地でない$1パーマネント" nodebug="true" />
-    <regex target="text" pattern="がコントロールする(.か.)の(クリーチャー|エンチャント|パーマネント)" value="がコントロールしていて$1である$2" nodebug="true" />
+    <regex target="text" pattern="がコントロール(?:する|している)、?土地でない(?=各?パーマネント)" value="がコントロールしていて土地でない" nodebug="true" />
+    <regex target="text" pattern="がコントロールする(.か.)の(?=クリーチャー|エンチャント|パーマネント)" value="がコントロールしていて$1である" nodebug="true" />
     <regex target="text" pattern="がコントロールするタップ状態のクリーチャー" value="がコントロールしていてタップ状態のクリーチャー" nodebug="true" />
-    <regex target="text" pattern="がコントロール(?:する|している)、?(飛行|防衛|その選ばれたタイプ)を持つ(各)?クリーチャー" value="がコントロールしていて$1を持つ$2クリーチャー" nodebug="true" />
-    <regex target="text" pattern="がコントロール(?:する|している)、?\+1/\+1カウンターが置かれている(各)?クリーチャー" value="がコントロールしていて+1/+1カウンターが置かれている$1クリーチャー" nodebug="true" />
+    <regex target="text" pattern="がコントロール(?:する|している)、?(飛行|防衛|その選ばれたタイプ)を持つ(?=各?クリーチャー)" value="がコントロールしていて$1を持つ" nodebug="true" />
+    <regex target="text" pattern="がコントロール(?:する|している)、?\+1/\+1カウンターが置かれている(?=各?クリーチャー)" value="がコントロールしていて+1/+1カウンターが置かれている" nodebug="true" />
     <!-- テンプレート変更：手札/墓地から -->
     <regex target="text" pattern="あなたの墓地にあるクリーチャー・カード([０-９Ｘ]+)枚を対象" value="あなたの墓地からクリーチャー・カード$1枚を対象" nodebug="true" />
-    <regex target="text" pattern="(墓地|手札)にある(?!場合)([^。]*)カード([０-９Ｘ]+)枚を追放" value="$1から$2カード$3枚を追放" nodebug="true" />
+    <regex target="text" pattern="(?&lt;=墓地|手札)にある(?!場合)([^。]*)カード(?=[０-９Ｘ]+枚を追放)" value="から$1カード" nodebug="true" />
     <regex target="text" pattern="手札(?:から|にある)([^か。]*)カードを１枚、?(タップ状態で)?戦場に出" value="手札から$1カード１枚を$2戦場に出" nodebug="true" />
     <regex target="text" pattern="手札にある([^か。]*)カード１枚を戦場に出" value="手札から$1カード１枚を戦場に出" nodebug="true" />
     <regex target="text" pattern="あなたの手札にあるドラゴン・カード１枚を公開してもよい。" value="あなたはあなたの手札からドラゴン・カード１枚を公開してもよい。" nodebug="true" />
@@ -672,16 +672,16 @@
     <regex target="text" pattern="(?m)(?&lt;=^|：|か、|飛行を持つ)ブロックしているクリーチャー１体を対象" value="ブロック・クリーチャー１体を対象" nodebug="true" />
     <regex target="text" pattern="のブロックしているクリーチャー１体を対象" value="をブロックしているクリーチャー１体を対象" />
     <regex target="text" pattern="名前が(《[^《/》]+/[^《/》]+》)である" value="$1という名前の" nodebug="true" />
-    <regex target="text" pattern="選ばれた名前の(呪文|土地|発生源)" value="選ばれた名前を持つ$1" nodebug="true" />
+    <regex target="text" pattern="選ばれた名前の(?=呪文|土地|発生源)" value="選ばれた名前を持つ" nodebug="true" />
     <regex target="text" pattern="以下から１つまたは複数を選ぶ。" value="以下から１つ以上を選ぶ。" />
     <regex target="text" pattern="。?」ことを選んでもよい。" value="。」を選んでもよい。" nodebug="true" />
     <regex target="text" pattern="(?&lt;=戻|追放|公開|タップ)する?ことを選んでもよい。" value="してもよい。" nodebug="true" />
     <regex target="text" pattern="あなたは「(?:あなたの|あなたは、自分の|あなたは、)ライブラリーから([^「」]*)カード１枚を探(?:す。|し、|して)(それ|そのカード)を公開し(?:て|た上で|たうえで|、)あなたの手札に加え(?:、|る。)その後あなたのライブラリーを切り直す。」を選んでもよい。" value="あなたはあなたのライブラリーから$1カード１枚を探してもよい。そうしたなら、$2を公開してあなたの手札に加え、その後あなたのライブラリーを切り直す。" nodebug="true" />
     <regex target="text" pattern="あなたは「(?:あなたの|あなたは、自分の|あなたは、)ライブラリーから([^「」]+)カード１枚を探(?:す。|し、|して)(それ|そのカード)を(タップ状態で)?戦場に出(?:す。|し、)その後あなたのライブラリーを切り直す。」を選んでもよい。" value="あなたはあなたのライブラリーから$1カード１枚を探してもよい。そうしたなら、$2を$3戦場に出し、その後あなたのライブラリーを切り直す。" nodebug="true" />
     <regex target="text" pattern="Ｘは([^。Ｙ]+)である。" value="Ｘは$1に等しい。" nodebug="true" />
-    <regex target="text" pattern="(クリーチャー|ドラゴン)の数に等しい。" value="$1の総数に等しい。" nodebug="true" />
+    <regex target="text" pattern="(?&lt;=クリーチャー|ドラゴン)の数に等しい。" value="の総数に等しい。" nodebug="true" />
     <regex target="text" pattern="戦場に出ている([^。]+)の総?数に等しい。" value="戦場にある$1の総数に等しい。" nodebug="true" />
-    <regex target="text" pattern="(?&lt;!このターン[^。]+)戦場に出ている(場合|かぎり|他の|アーティファクト)" value="戦場にある$1" nodebug="true" />
+    <regex target="text" pattern="(?&lt;!このターン[^。]+)戦場に出ている(?=場合|かぎり|他の|アーティファクト)" value="戦場にある" nodebug="true" />
     <regex target="text" pattern="ライブラリーの一番上(?:から１枚)?のカード(?:１枚)?を(?:１枚、?)?" value="ライブラリーの一番上のカードを" nodebug="true" />
     <regex target="text" pattern="ライブラリーのカードを上から([０-９Ｘ]{2,}|[０２-９Ｘ])枚、?" value="ライブラリーの一番上からカードを$1枚" nodebug="true" />
     <regex target="text" pattern="がプレイヤーに戦闘ダメージを与えるたび、" value="がプレイヤー１人に戦闘ダメージを与えるたび、" nodebug="true" />
@@ -1006,7 +1006,6 @@ Knowledge Vaultが戦場を離れたとき、Knowledge Vaultにより追放さ�
     <card name="Haven of the Spirit Dragon" jaName="精霊龍の安息地" type="土地">(Ｔ)：あなたのマナ・プールに(◇)を加える。
 (Ｔ)：あなたのマナ・プールに、好きな色１色のマナ１点を加える。このマナは、ドラゴン・クリーチャー・呪文を唱えるためにのみ使用できる。
 (２),(Ｔ),精霊龍の安息地を生け贄に捧げる：あなたの墓地からドラゴン・クリーチャーかウギン・プレインズウォーカーであるカード１枚を対象とし、それをあなたの手札に戻す。</card>
-    <card name="Memory Plunder" jaName="記憶の略取" type="インスタント">対戦相手の墓地からインスタントかソーサリーであるカード１枚を対象とする。あなたはそれを、それのマナ・コストを支払うことなく唱えてもよい。</card>
     <card name="Psychic Spear" jaName="精神の槍" type="ソーサリー">プレイヤー１人を対象とする。そのプレイヤーは自分の手札を公開する。あなたはその中からスピリットか秘儀であるカード１枚を選ぶ。そのプレイヤーはそのカードを捨てる。</card>
     <card name="Relic Crush" jaName="秘宝の破壊" type="インスタント">アーティファクトかエンチャント１つと、他のアーティファクトかエンチャント最大１つを対象とし、それらを破壊する。</card>
     <card name="Safewright Quest" jaName="守美者の探索" type="ソーサリー">あなたのライブラリーから森か平地であるカード１枚を探し、それを公開してあなたの手札に加える。その後あなたのライブラリーを切り直す。</card>
@@ -1067,13 +1066,14 @@ Knowledge Vaultが戦場を離れたとき、Knowledge Vaultにより追放さ�
     <card name="Night of Souls' Betrayal" jaName="魂の裏切りの夜" type="伝説のエンチャント">クリーチャーはすべて-1/-1の修整を受ける。</card>
     <card name="Nevinyrral's Disk" jaName="ネビニラルの円盤" type="アーティファクト">ネビニラルの円盤はタップ状態で戦場に出る。
 (１),(Ｔ)：アーティファクトとクリーチャーとエンチャントをすべて破壊する。</card>
-    <!-- テンプレートの変更：枚数/個数 -->
+    <!-- テンプレートの変更：枚数/個数/人数 -->
     <card name="Conflux" jaName="衝合" type="ソーサリー">あなたのライブラリーから、白のカード１枚と青のカード１枚と黒のカード１枚と赤のカード１枚と緑のカード１枚を探す。それらのカードを公開し、あなたの手札に加える。その後あなたのライブラリーを切り直す。</card>
     <card name="Ertai, the Corrupted" jaName="堕落した者アーテイ" type="伝説のクリーチャー ― 人間・ウィザード" pt="3/4">(青),(Ｔ),クリーチャー１体かエンチャント１つを生け贄に捧げる：呪文１つを対象とし、それを打ち消す。</card>
     <card name="Forbidden Alchemy" jaName="禁忌の錬金術" type="インスタント">あなたのライブラリーの一番上からカードを４枚見る。そのうち１枚をあなたの手札に加え、残りをあなたの墓地に置く。
 フラッシュバック(６)(黒)（あなたはあなたの墓地から、このカードをこれのフラッシュバック・コストで唱えてもよい。その後、これを追放する。）</card>
     <card name="Gatecreeper Vine" jaName="門を這う蔦" type="クリーチャー ― 植物" pt="0/2">防衛
 門を這う蔦が戦場に出たとき、あなたはあなたのライブラリーから基本土地・カード１枚か門・カード１枚を探してもよい。そうしたなら、それを公開してあなたの手札に加え、その後あなたのライブラリーを切り直す。</card>
+    <card name="Memory Plunder" jaName="記憶の略取" type="インスタント">対戦相手の墓地からインスタントかソーサリーであるカード１枚を対象とする。あなたはそれを、それのマナ・コストを支払うことなく唱えてもよい。</card>
     <card name="Mystical Teachings" jaName="神秘の指導" type="インスタント">あなたのライブラリーからインスタント・カード１枚か瞬速を持つカード１枚を探し、それを公開してあなたの手札に加える。その後あなたのライブラリーを切り直す。
 フラッシュバック(５)(黒)（あなたはあなたの墓地から、このカードをこれのフラッシュバック・コストで唱えてもよい。その後、これを追放する。）</card>
     <card name="Sea Gate Oracle" jaName="海門の神官" type="クリーチャー ― 人間・ウィザード" pt="1/3">海門の神官が戦場に出たとき、あなたのライブラリーの一番上からカードを２枚見る。そのうち１枚をあなたの手札に加え、もう１枚をあなたのライブラリーの一番下に置く。</card>
