@@ -635,6 +635,8 @@
     <regex target="text" pattern="(?m)(?&lt;=^|・|：)すべての(クリーチャー|アーティファクト|エンチャント|プレインズウォーカー)を(破壊|追放|タップ|アンタップ)する。" value="$1をすべて$2する。" nodebug="true" />
     <regex target="text" pattern="(?m)(?&lt;=^|・| ― |：|。|とき、|場合、)ターン終了時まで、?すべてのクリーチャーは" value="ターン終了時まで、クリーチャーはすべて" nodebug="true" />
     <regex target="text" pattern="これにより公開されたすべての([^と。]*)カードをあなたの手札に加え" value="これにより公開された$1カードをすべてあなたの手札に加え" nodebug="true" />
+    <regex target="text" pattern="すべての(クリーチャー|アーティファクト|土地|パーマネント)(?:の上)?からすべての([^。]{1,6})カウンターを取り除く" value="$1すべての上から$2カウンターをすべて取り除く" nodebug="true" />
+    <regex target="text" pattern="(?:の上)?からすべての([^。]{1,5})カウンターを取り除く" value="の上から$1カウンターをすべて取り除く" nodebug="true" />
     <!-- テンプレート変更：コントロールする -->
     <regex target="text" pattern="がコントロールする基本土地" value="がコントロールしている基本土地" nodebug="true" />
     <regex target="text" pattern="がコントロールする他のパーマネントは、?(.{2,4})を持つ。" value="がコントロールしている他のパーマネントは$1を持つ。" />
@@ -689,12 +691,12 @@
     <regex target="text" pattern="(?&lt;=アーティファクト|土地|森|パーマネント)が(あなたのコントロール下で)?戦場に出るたび、" value="が１つ$1戦場に出るたび、" nodebug="true" />
     <regex target="text" pattern="(?&lt;=クリーチャー|クリーチャー・トークン)が戦場を離れるたび、" value="が１体戦場を離れるたび、" />
     <regex target="text" pattern="呪文を１つ唱えるたび、" value="呪文を唱えるたび、" nodebug="true" />
-    <regex target="text" pattern="あなたのマナ・プールに(?:、好きな色|好きな色(?:１色)?)のマナ([０-９Ｘ]+)点を加え" value="あなたのマナ・プールに、好きな色１色のマナ$1点を加え" nodebug="true" />
+    <regex target="text" pattern="あなたのマナ・プールに(?:、好きな色|好きな色(?:１色)?)のマナ(?=[０-９Ｘ]+点を加え)" value="あなたのマナ・プールに、好きな色１色のマナ" nodebug="true" />
     <regex target="text" pattern="を対象とし、それはターン終了時まで" value="を対象とする。ターン終了時まで、それは" nodebug="true" />
     <regex target="text" pattern="を対象とし、それを、?([^。]+)かぎり、?" value="を対象とする。$1かぎり、それを" nodebug="true" />
-    <regex target="text" pattern="その(上から|コントローラー)" value="それの$1" nodebug="true" />
-    <regex target="text" pattern="(?&lt;!の上)から(.\d/.\d|氷|蓄積|貯蔵|水晶)カウンターを([０-９Ｘ]+)個取り除く" value="の上から$1カウンターを$2個取り除く" nodebug="true" />
-    <regex target="text" pattern="それ?の上に(、それを唱えるために使われたマナの色１色につき)?(.\d/.\d|\w{1,2}|オーメン・|ポリープ・)カウンターが([０-９Ｘ]+)個置かれた状態で(、タップ状態で)?戦場に出る" value="$1$2カウンターが$3個置かれた状態で$4戦場に出る" nodebug="true" />
+    <regex target="text" pattern="その(?=上から|コントローラー)" value="それの" nodebug="true" />
+    <regex target="text" pattern="(?&lt;!の上)から(?=(?:.\d/.\d|氷|蓄積|貯蔵|水晶)カウンターを[０-９Ｘ]+個取り除く)" value="の上から" nodebug="true" />
+    <regex target="text" pattern="それ?の上に(?=(?:、それを唱えるために使われたマナの色１色につき)?(?:.\d/.\d|\w{1,2}|オーメン・|ポリープ・)カウンターが[０-９Ｘ]+個置かれた状態で(?:、タップ状態で)?戦場に出る)" value="" nodebug="true" />
     <regex target="text" pattern="。(そのプレイヤーが)?そうしたなら、そのプレイヤーはこの呪文をコピーし、そのコピーの新しい対象を選んでもよい。" value="。そうしたなら、そのプレイヤーはこの呪文をコピーしてもよい。そのプレイヤーはそのコピーの新しい対象を選んでもよい。" nodebug="true" />
     <regex target="text" pattern="が唱える(、?)([^。]*)呪文は、それを唱えるためのコストが" value="が$1$2呪文を唱えるためのコストは$1" nodebug="true" />
     <regex target="text" pattern="(?&lt;=が、?[^。]+)[の・]呪文[とや]([^。]+)[の・]呪文を唱えるためのコストは" value="か$1である呪文を唱えるためのコストは" nodebug="true" />
