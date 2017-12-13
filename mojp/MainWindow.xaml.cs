@@ -12,10 +12,7 @@ namespace Mojp
 {
     public partial class MainWindow : Window
     {
-        public MainWindow()
-        {
-            InitializeComponent();
-        }
+        public MainWindow() => InitializeComponent();
 
         public MainViewModel ViewModel => DataContext as MainViewModel;
 
@@ -55,15 +52,9 @@ namespace Mojp
                 notifier.Visibility = Visibility.Visible;
         }
 
-        private void OnCapture(object sender, RoutedEventArgs e)
-        {
-            ViewModel.CapturePreviewPane();
-        }
+        private void OnCapture(object sender, RoutedEventArgs e) => ViewModel.CapturePreviewPane();
 
-        private void OnCopyCardName(object sender, RoutedEventArgs e)
-        {
-            Clipboard.SetText(ViewModel.SelectedCard.JapaneseName);
-        }
+        private void OnCopyCardName(object sender, RoutedEventArgs e) => Clipboard.SetText(ViewModel.SelectedCard.JapaneseName);
 
         private void OnCopyEnglishName(object sender, RoutedEventArgs e)
         {
@@ -98,8 +89,10 @@ namespace Mojp
 
         private async void OnOption(object sender, RoutedEventArgs e)
         {
-            var dlg = new OptionDialog(DataContext);
-            dlg.Owner = this;
+            var dlg = new OptionDialog(DataContext)
+            {
+                Owner = this
+            };
             dlg.ShowDialog();
 
             Topmost = ViewModel.TopMost;
@@ -117,10 +110,7 @@ namespace Mojp
             Process.Start((sender as Hyperlink).ToolTip.ToString());
         }
 
-        private void OnCloseNotifier(object sender, RoutedEventArgs e)
-        {
-            notifier.Visibility = Visibility.Collapsed;
-        }
+        private void OnCloseNotifier(object sender, RoutedEventArgs e) => notifier.Visibility = Visibility.Collapsed;
 
         private async void OnHide(object sender, RoutedEventArgs e)
         {
@@ -131,14 +121,8 @@ namespace Mojp
             Visibility = Visibility.Visible;
         }
 
-        private void OnWindowMinimize(object sender, RoutedEventArgs e)
-        {
-            SystemCommands.MinimizeWindow(this);
-        }
+        private void OnWindowMinimize(object sender, RoutedEventArgs e) => SystemCommands.MinimizeWindow(this);
 
-        private void OnWindowClose(object sender, RoutedEventArgs e)
-        {
-            SystemCommands.CloseWindow(this);
-        }
+        private void OnWindowClose(object sender, RoutedEventArgs e) => SystemCommands.CloseWindow(this);
     }
 }

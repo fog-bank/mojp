@@ -58,7 +58,7 @@ namespace Mojp
         /// </summary>
         public string FontFamily
         {
-            get { return fontFamily; }
+            get => fontFamily;
             set
             {
                 fontFamily = value;
@@ -72,7 +72,7 @@ namespace Mojp
         /// </summary>
         public int FontSize
         {
-            get { return fontSize; }
+            get => fontSize;
             set
             {
                 fontSize = value;
@@ -86,7 +86,7 @@ namespace Mojp
         /// </summary>
         public bool TopMost
         {
-            get { return topMost; }
+            get => topMost;
             set
             {
                 topMost = value;
@@ -100,7 +100,7 @@ namespace Mojp
         /// </summary>
         public double WindowWidth
         {
-            get { return width; }
+            get => width;
             set
             {
                 width = value;
@@ -114,7 +114,7 @@ namespace Mojp
         /// </summary>
         public double WindowHeight
         {
-            get { return height; }
+            get => height;
             set
             {
                 height = value;
@@ -128,7 +128,7 @@ namespace Mojp
         /// </summary>
         public double WindowLeft
         {
-            get { return left; }
+            get => left;
             set
             {
                 left = value;
@@ -142,7 +142,7 @@ namespace Mojp
         /// </summary>
         public double WindowTop
         {
-            get { return top; }
+            get => top;
             set
             {
                 top = value;
@@ -156,7 +156,7 @@ namespace Mojp
         /// </summary>
         public bool ShowBasicLands
         {
-            get { return showBasicLands; }
+            get => showBasicLands;
             set
             {
                 showBasicLands = value;
@@ -170,7 +170,7 @@ namespace Mojp
         /// </summary>
         public bool AutoRefresh
         {
-            get { return autoRefresh; }
+            get => autoRefresh;
             set
             {
                 autoRefresh = value;
@@ -189,7 +189,7 @@ namespace Mojp
         /// </summary>
         public int RefreshIntervalMilliseconds
         {
-            get { return (int)refreshInterval.TotalMilliseconds; }
+            get => (int)refreshInterval.TotalMilliseconds;
             set
             {
                 if (value <= 0)
@@ -206,7 +206,7 @@ namespace Mojp
         /// </summary>
         public bool AutoVersionCheck
         {
-            get { return autoVersionCheck; }
+            get => autoVersionCheck;
             set
             {
                 autoVersionCheck = value;
@@ -220,7 +220,7 @@ namespace Mojp
         /// </summary>
         public bool AcceptsPrerelease
         {
-            get { return acceptsPrerelease; }
+            get => acceptsPrerelease;
             set
             {
                 acceptsPrerelease = value;
@@ -239,7 +239,7 @@ namespace Mojp
         /// </summary>
         public int SelectedIndex
         {
-            get { return selectedIndex; }
+            get => selectedIndex;
             set
             {
                 selectedIndex = value;
@@ -375,10 +375,8 @@ namespace Mojp
             }
         }
 
-        protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
+        protected void OnPropertyChanged([CallerMemberName] string propertyName = null) 
+            => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 
         /// <summary>
         /// MO のプレビューウィンドウを探し、UI テキストの変化イベントが発生するようにします。

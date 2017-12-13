@@ -92,10 +92,7 @@ namespace Mojp
         /// <summary>
         /// カードの英語名が一致しているかどうかを調べます。
         /// </summary>
-        public bool Equals(Card other)
-        {
-            return !string.IsNullOrWhiteSpace(Name) && string.Equals(Name, other?.Name);
-        }
+        public bool Equals(Card other) => !string.IsNullOrWhiteSpace(Name) && string.Equals(Name, other?.Name);
 
         /// <summary>
         /// <see cref="Card"/> オブジェクトの各メンバの値が一致しているかどうかを調べます。
@@ -157,17 +154,16 @@ namespace Mojp
         /// </summary>
         public static Card FromXml(XElement cardElement)
         {
-            var card = new Card();
-
-            card.Name = (string)cardElement.Attribute("name");
-            card.JapaneseName = (string)cardElement.Attribute("jaName");
-            card.Type = (string)cardElement.Attribute("type");
-            card.PT = (string)cardElement.Attribute("pt");
-            card.RelatedCardName = (string)cardElement.Attribute("related");
-            card.WikiLink = (string)cardElement.Attribute("wikilink");
-            card.Text = cardElement.Value;
-
-            return card;
+            return new Card
+            {
+                Name = (string)cardElement.Attribute("name"),
+                JapaneseName = (string)cardElement.Attribute("jaName"),
+                Type = (string)cardElement.Attribute("type"),
+                PT = (string)cardElement.Attribute("pt"),
+                RelatedCardName = (string)cardElement.Attribute("related"),
+                WikiLink = (string)cardElement.Attribute("wikilink"),
+                Text = cardElement.Value
+            };
         }
     }
 }

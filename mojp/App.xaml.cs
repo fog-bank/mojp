@@ -65,10 +65,7 @@ namespace Mojp
         /// <summary>
         /// XML ファイルからカードテキストデータを構築します。
         /// </summary>
-        public static void SetCardInfosFromXml(string file)
-        {
-            SetCardInfosFromXml(XDocument.Load(file));
-        }
+        public static void SetCardInfosFromXml(string file) => SetCardInfosFromXml(XDocument.Load(file));
 
         /// <summary>
         /// このアプリのバージョンが最新かどうかを確認します。
