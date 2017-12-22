@@ -121,17 +121,26 @@
 								</ItemsControl.ItemTemplate>
 							</ItemsControl>
 						</ScrollViewer>
-						<TextBlock Grid.Row="2" Margin="2,2,2,0" Text="{Binding PT, Mode=OneTime}" TextTrimming="CharacterEllipsis">
-							<TextBlock.Style>
-								<Style TargetType="TextBlock">
-									<Style.Triggers>
-										<DataTrigger Binding="{Binding PT}" Value="{x:Null}">
-											<Setter Property="Visibility" Value="Collapsed" />
-										</DataTrigger>
-									</Style.Triggers>
-								</Style>
-							</TextBlock.Style>
-						</TextBlock>
+                        <Grid Grid.Row="2" Margin="2,2,2,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{Binding PT, Mode=OneTime}" TextTrimming="CharacterEllipsis">
+                                <TextBlock.Style>
+                                    <Style TargetType="TextBlock">
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding PT}" Value="{x:Null}">
+                                                <Setter Property="Visibility" Value="Collapsed" />
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </TextBlock.Style>
+                            </TextBlock>
+                            <TextBlock Grid.Column="1" Margin="4,0" local:CardPrice.TargetCard="{Binding}" />
+                            <TextBlock Grid.Column="2">tix</TextBlock>
+                        </Grid>
 					</Grid>
 				</DataTemplate>
 			</TabControl.ContentTemplate>

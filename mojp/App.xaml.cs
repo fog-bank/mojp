@@ -17,6 +17,8 @@ namespace Mojp
     {
         private static readonly Dictionary<string, Card> cards = new Dictionary<string, Card>();
         private static readonly Lazy<HttpClient> httpClient = new Lazy<HttpClient>();
+        private static bool usingScryfall = false;
+        private static DateTime requestTime = DateTime.Now - TimeSpan.FromMilliseconds(100);
 
         /// <summary>
         /// カードの英語名から、英語カード名・日本語カード名・日本語カードテキストを検索します。
@@ -98,6 +100,38 @@ namespace Mojp
                 version = versions[1];
 
             return Version.TryParse(version, out var latest) && current < latest;
+        }
+
+        public static async Task<string> GetCardPrice(string cardName)
+        {
+            if (DateTime.Now - requestTime < TimeSpan.FromMilliseconds(100) || usingScryfall)
+                return null;
+
+            string response = null;
+            try
+            {
+                usingScryfall = true;
+                Debug.WriteLine("Request to scryfall.com for: " + cardName);
+
+                response = await httpClient.Value.GetStringAsync("https://api.scryfall.com/cards/named?exact=" + cardName.Replace(' ', '+'));
+
+                requestTime = DateTime.Now;
+                usingScryfall = false;
+            }
+            catch { Debug.WriteLine("HTTPS アクセスに失敗しました。"); }
+
+            if (response == null)
+                return string.Empty;
+
+            const string Attr = "\"tix\":";
+            int startIndex = response.IndexOf(Attr);
+
+            if (startIndex == -1)
+                return string.Empty;
+
+            startIndex = response.IndexOf('"', startIndex + Attr.Length) + 1;
+            int endIndex = response.IndexOf('"', startIndex);
+            return response.Substring(startIndex, endIndex - startIndex);
         }
 
         protected override void OnStartup(StartupEventArgs e)
