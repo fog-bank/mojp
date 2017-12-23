@@ -113,7 +113,7 @@ namespace Mojp
                 usingScryfall = true;
                 Debug.WriteLine("Request to scryfall.com for: " + cardName);
 
-                response = await httpClient.Value.GetStringAsync("https://api.scryfall.com/cards/named?exact=" + cardName.Replace(' ', '+'));
+                response = await httpClient.Value.GetStringAsync("https://api.scryfall.com/cards/search?order=tix&q=" + Uri.EscapeUriString(cardName));
 
                 requestTime = DateTime.Now;
                 usingScryfall = false;
@@ -121,7 +121,7 @@ namespace Mojp
             catch { Debug.WriteLine("HTTPS アクセスに失敗しました。"); }
 
             if (response == null)
-                return string.Empty;
+                return null;
 
             const string Attr = "\"tix\":";
             int startIndex = response.IndexOf(Attr);
@@ -143,10 +143,13 @@ namespace Mojp
                 Settings.Default.Upgrade();
                 Settings.Default.UpgradeRequired = false;
             }
+            CardPrice.OpenCacheData();
         }
 
         protected override void OnExit(ExitEventArgs e)
         {
+            CardPrice.SaveCacheData();
+
             Settings.Default.Save();
 
             if (httpClient.IsValueCreated)

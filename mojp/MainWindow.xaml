@@ -138,8 +138,7 @@
                                     </Style>
                                 </TextBlock.Style>
                             </TextBlock>
-                            <TextBlock Grid.Column="1" Margin="4,0" local:CardPrice.TargetCard="{Binding}" />
-                            <TextBlock Grid.Column="2">tix</TextBlock>
+                            <TextBlock Grid.Column="1" Margin="4,0,0,0" local:CardPrice.TargetCard="{Binding}" />
                         </Grid>
 					</Grid>
 				</DataTemplate>
