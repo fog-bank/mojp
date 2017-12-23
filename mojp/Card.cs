@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Xml.Linq;
 
 namespace Mojp
@@ -7,7 +8,7 @@ namespace Mojp
     /// <summary>
     /// MTG のカードを表します。
     /// </summary>
-    public partial class Card : IEquatable<Card>
+    public partial class Card : IEquatable<Card>, INotifyPropertyChanged
     {
         private string[] lines;
 
@@ -165,5 +166,11 @@ namespace Mojp
                 Text = cardElement.Value
             };
         }
+
+        public string Price => CardPrice.GetPrice(this);
+
+        public void OnUpdatePrice() => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Price)));
+
+        public event PropertyChangedEventHandler PropertyChanged;
     }
 }

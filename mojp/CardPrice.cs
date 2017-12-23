@@ -1,22 +1,22 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections.Concurrent;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Threading;
 
 namespace Mojp
 {
-    public class CardPrice
+    public static class CardPrice
     {
         public static readonly DependencyProperty TargetCardProperty 
             = DependencyProperty.RegisterAttached("TargetCard", typeof(Card), typeof(CardPrice), 
-                new FrameworkPropertyMetadata(Card.Empty, FrameworkPropertyMetadataOptions.AffectsRender, OnTargetCardChanged));
+                new FrameworkPropertyMetadata(Card.Empty, FrameworkPropertyMetadataOptions.AffectsMeasure, OnTargetCardChanged));
 
         // card_name -> (tix_info, expire_time)
-        private static readonly Dictionary<string, Tuple<string, DateTime>> prices = new Dictionary<string, Tuple<string, DateTime>>();
+        private static readonly ConcurrentDictionary<string, Tuple<string, DateTime>> prices 
+            = new ConcurrentDictionary<string, Tuple<string, DateTime>>();
         private const string CacheFileName = "price_list.txt";
 
         [AttachedPropertyBrowsableForType(typeof(TextBlock))]
@@ -24,6 +24,17 @@ namespace Mojp
 
         [AttachedPropertyBrowsableForType(typeof(TextBlock))]
         public static void SetTargetCard(TextBlock element, Card value) => element.SetValue(TargetCardProperty, value);
+
+        public static string GetPrice(Card card)
+        {
+            if (IsSpecialCard(card))
+                return string.Empty;
+
+            if (prices.TryGetValue(card.Name, out var value) && value?.Item1 != null)
+                return value.Item1;
+            else
+                return "価格取得中";
+        }
 
         public static void OpenCacheData()
         {
@@ -38,7 +49,7 @@ namespace Mojp
                     string tix = sr.ReadLine();
                     string expire = sr.ReadLine();
 
-                    prices[name] = Tuple.Create(tix, DateTime.Parse(expire));
+                    prices.TryAdd(name, Tuple.Create(tix, DateTime.Parse(expire)));
                 }
             }
         }
@@ -48,7 +59,7 @@ namespace Mojp
             using (var sw = File.CreateText(CacheFileName))
             {
                 var now = DateTime.Now;
-                var pairs = prices.Where(pair => pair.Value.Item2 >= now).ToList();
+                var pairs = prices.Where(pair => !string.IsNullOrEmpty(pair.Value?.Item1) && pair.Value.Item2 >= now).ToList();
 
                 foreach (var pair in pairs)
                 {
@@ -61,37 +72,44 @@ namespace Mojp
 
         private static async void OnTargetCardChanged(DependencyObject sender, DependencyPropertyChangedEventArgs e)
         {
-            var element = sender as TextBlock;
             var card = e.NewValue as Card;
 
-            if (element == null || card == null || string.IsNullOrEmpty(card.Name))
-            {
-                element.Text = string.Empty;
+            if (IsSpecialCard(card))
                 return;
-            }
 
-            if (card.Type != null && (card.Type.Length == 0 || card.Type.StartsWith("トークン") || card.Type.StartsWith("ヴァンガード") ||
-                card.Type.StartsWith("次元") || card.Type.StartsWith("現象")))
+            if (prices.TryGetValue(card.Name, out var value))
             {
-                element.Text = string.Empty;
-                return;
-            }
-
-            if (!prices.TryGetValue(card.Name, out var value) || value.Item1 == null || value.Item2 <= DateTime.Now)
-            {
-                element.Text = "価格取得中";
-
-                string tix = await App.GetCardPrice(card.WikiLink != null && card.WikiLink.Contains("/") ? card.WikiLink.Split('/')[1] : card.Name);
-
-                if (tix == null)
+                // まだ有効期限内
+                if (value != null && value.Item2 > DateTime.Now)
                     return;
-
-                Debug.WriteLine(tix + " tix for: " + card.Name);
-
-                value = Tuple.Create(tix, DateTime.Now + TimeSpan.FromDays(1));
-                prices[card.Name] = value;
             }
-            element.Text = value.Item1 + " tix";
+            else
+                prices.TryAdd(card.Name, null);
+            
+            // scryfall.com に問い合わせ（分割カード名は補正をかける）
+            string tix = await App.GetCardPrice(
+                card.WikiLink != null && card.WikiLink.Contains("/") ? card.WikiLink.Split('/')[1] : card.Name);
+
+            if (tix == null)
+                return;
+            
+            Debug.WriteLine(card.Name + " | " + tix + " (" + DateTime.Now.TimeOfDay + ")");
+
+            value = Tuple.Create(tix == string.Empty ? "― tix" : tix + " tix", DateTime.Now + TimeSpan.FromDays(1));
+            prices.TryUpdate(card.Name, value, null);
+            card.OnUpdatePrice();
+        }
+
+        private static bool IsSpecialCard(Card card)
+        {
+            if (card == null || string.IsNullOrEmpty(card.Name))
+                return true;
+
+            if (card.Type != null && (card.Type.Length == 0 || card.Type.StartsWith("トークン") ||
+                card.Type.StartsWith("ヴァンガード") || card.Type.StartsWith("次元") || card.Type.StartsWith("現象")))
+                return true;
+
+            return false;
         }
     }
 }

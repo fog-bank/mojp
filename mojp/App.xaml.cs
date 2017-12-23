@@ -17,7 +17,7 @@ namespace Mojp
     {
         private static readonly Dictionary<string, Card> cards = new Dictionary<string, Card>();
         private static readonly Lazy<HttpClient> httpClient = new Lazy<HttpClient>();
-        private static bool usingScryfall = false;
+        private static volatile bool usingScryfall = false;
         private static DateTime requestTime = DateTime.Now - TimeSpan.FromMilliseconds(100);
 
         /// <summary>
@@ -102,29 +102,43 @@ namespace Mojp
             return Version.TryParse(version, out var latest) && current < latest;
         }
 
+        /// <summary>
+        /// scryfall.com からカード価格を取得します。
+        /// </summary>
+        /// <returns>取得前のエラーは <see langword="null"/> 。取得時や取得後のエラーは <see cref="string.Empty"/> 。</returns>
         public static async Task<string> GetCardPrice(string cardName)
         {
-            if (DateTime.Now - requestTime < TimeSpan.FromMilliseconds(100) || usingScryfall)
+            if (usingScryfall || DateTime.Now - requestTime < TimeSpan.FromMilliseconds(200) || usingScryfall)
+            {
+                Debug.WriteLine("× " + cardName + " (" + DateTime.Now.TimeOfDay + ")");
                 return null;
+            }
+            usingScryfall = true;
+
+            string uri = "https://api.scryfall.com/cards/search?order=tix&q=" + Uri.EscapeUriString(cardName.Replace("'", null));
+            Debug.WriteLine(uri + " (" + DateTime.Now.TimeOfDay + ")");
 
             string response = null;
             try
             {
-                usingScryfall = true;
-                Debug.WriteLine("Request to scryfall.com for: " + cardName);
-
-                response = await httpClient.Value.GetStringAsync("https://api.scryfall.com/cards/search?order=tix&q=" + Uri.EscapeUriString(cardName));
-
-                requestTime = DateTime.Now;
-                usingScryfall = false;
+                response = await httpClient.Value.GetStringAsync(uri);
             }
             catch { Debug.WriteLine("HTTPS アクセスに失敗しました。"); }
 
+            requestTime = DateTime.Now;
+            usingScryfall = false;
+
             if (response == null)
-                return null;
+                return string.Empty;
+
+            // exact サーチじゃないので、複数ヒットする可能性がある
+            int startIndex = response.IndexOf(cardName);
+
+            if (startIndex == -1)
+                return string.Empty;
 
             const string Attr = "\"tix\":";
-            int startIndex = response.IndexOf(Attr);
+            startIndex = response.IndexOf(Attr, startIndex);
 
             if (startIndex == -1)
                 return string.Empty;
