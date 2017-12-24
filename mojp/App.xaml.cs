@@ -132,7 +132,7 @@ namespace Mojp
                 return string.Empty;
 
             // exact サーチじゃないので、複数ヒットする可能性がある
-            int startIndex = response.IndexOf(cardName);
+            int startIndex = response.IndexOf("\"" + cardName + "\"");
 
             if (startIndex == -1)
                 return string.Empty;
