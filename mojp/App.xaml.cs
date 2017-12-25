@@ -108,6 +108,8 @@ namespace Mojp
         /// <returns>取得前のエラーは <see langword="null"/> 。取得時や取得後のエラーは <see cref="string.Empty"/> 。</returns>
         public static async Task<string> GetCardPrice(string cardName)
         {
+            const string NoPrice = "― tix";
+
             if (usingScryfall || DateTime.Now - requestTime < TimeSpan.FromMilliseconds(200) || usingScryfall)
             {
                 Debug.WriteLine("× " + cardName + " (" + DateTime.Now.TimeOfDay + ")");
@@ -129,23 +131,40 @@ namespace Mojp
             usingScryfall = false;
 
             if (response == null)
-                return string.Empty;
+                return NoPrice;
 
             // exact サーチじゃないので、複数ヒットする可能性がある
-            int startIndex = response.IndexOf("\"" + cardName + "\"");
+            const string TotalCardsTag = "\"total_cards\":";
+            int startIndex = response.IndexOf(TotalCardsTag);
 
             if (startIndex == -1)
-                return string.Empty;
+                return NoPrice;
 
-            const string Attr = "\"tix\":";
-            startIndex = response.IndexOf(Attr, startIndex);
+            if (response[startIndex + TotalCardsTag.Length] != '1')
+            {
+                const string CardTag = "\"name\":";
+                startIndex = response.IndexOf(CardTag + "\"" + cardName.Replace("+", " // ") + "\"");
+
+                if (startIndex == -1)
+                    return NoPrice;
+            }
+            const string RelatedTag = "\"related_uris\":";
+            int endIndex = response.IndexOf(RelatedTag, startIndex);
+
+            const string PDLegalityTag = "\"penny\":";
+            const string LegalValue = "\"legal\"";
+            int regalityIndex = response.IndexOf(PDLegalityTag, startIndex, endIndex - startIndex);
+            string isPDRegal = response.IndexOf(LegalValue, regalityIndex, PDLegalityTag.Length + LegalValue.Length) != -1 ? "[PD] " : string.Empty;
+
+            const string TixTag = "\"tix\":";
+            startIndex = response.IndexOf(TixTag, startIndex, endIndex - startIndex);
 
             if (startIndex == -1)
-                return string.Empty;
+                return isPDRegal + NoPrice;
 
-            startIndex = response.IndexOf('"', startIndex + Attr.Length) + 1;
-            int endIndex = response.IndexOf('"', startIndex);
-            return response.Substring(startIndex, endIndex - startIndex);
+            startIndex = response.IndexOf('"', startIndex + TixTag.Length) + 1;
+            endIndex = response.IndexOf('"', startIndex);
+            return isPDRegal + response.Substring(startIndex, endIndex - startIndex) + " tix";
         }
 
         protected override void OnStartup(StartupEventArgs e)

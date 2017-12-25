@@ -95,7 +95,7 @@ namespace Mojp
             
             Debug.WriteLine(card.Name + " | " + tix + " (" + DateTime.Now.TimeOfDay + ")");
 
-            value = Tuple.Create(tix == string.Empty ? "― tix" : tix + " tix", DateTime.Now + TimeSpan.FromDays(1));
+            value = Tuple.Create(tix, DateTime.Now + TimeSpan.FromDays(1));
             prices.TryUpdate(card.Name, value, null);
             card.OnUpdatePrice();
         }
