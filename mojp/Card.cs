@@ -86,6 +86,13 @@ namespace Mojp
         public bool HasJapaneseName => JapaneseName != null && Name != JapaneseName && Type != "ヴァンガード";
 
         /// <summary>
+        /// このカードの価格情報を取得します。
+        /// </summary>
+        public string Price => CardPrice.GetPrice(this);
+
+        public bool IsObserved => PropertyChanged != null;
+
+        /// <summary>
         /// 空のオブジェクトを取得します。オブジェクト自身は読み取り専用になっていませんが、変更しないでください。
         /// </summary>
         public static Card Empty { get; } = new Card();
@@ -151,6 +158,11 @@ namespace Mojp
         }
 
         /// <summary>
+        /// 価格情報を取得し終わったときに呼び出します。
+        /// </summary>
+        public void OnUpdatePrice() => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Price)));
+
+        /// <summary>
         /// XML ノードからカード情報を復元します。
         /// </summary>
         public static Card FromXml(XElement cardElement)
@@ -166,10 +178,6 @@ namespace Mojp
                 Text = cardElement.Value
             };
         }
-
-        public string Price => CardPrice.GetPrice(this);
-
-        public void OnUpdatePrice() => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Price)));
 
         public event PropertyChangedEventHandler PropertyChanged;
     }

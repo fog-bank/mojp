@@ -138,9 +138,9 @@
                                     </Style>
                                 </TextBlock.Style>
                             </TextBlock>
-                            <Image Grid.Column="1" Source="Resources/pd.png" Height="18" Margin="4,0" VerticalAlignment="Center"
-                                   Visibility="Collapsed" local:CardPrice.Legality="{Binding}" ToolTip="Penny Dreadful リーガル" />
-                            <TextBlock Grid.Column="2" Margin="4,0,0,0" VerticalAlignment="Center" Text="{Binding Price}" local:CardPrice.TargetCard="{Binding}" />
+                            <Image Grid.Column="1" Source="Resources/pd.png" Height="18" Margin="6,0" VerticalAlignment="Center"
+                                   Visibility="Collapsed" local:CardPrice.LegalTarget="{Binding}" ToolTip="Penny Dreadful リーガル" />
+                            <TextBlock Grid.Column="2" VerticalAlignment="Center" Text="{Binding Price}" local:CardPrice.PriceTarget="{Binding}" />
                         </Grid>
                     </Grid>
                 </DataTemplate>

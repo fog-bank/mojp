@@ -35,17 +35,18 @@ namespace Mojp
 
         private async void OnInitialized(object sender, EventArgs e)
         {
-            if (File.Exists("cards.xml"))
+            imgLoading.Visibility = Visibility.Visible;
+
+            await Task.Run(() =>
             {
-                imgLoading.Visibility = Visibility.Visible;
-
-                await Task.Run(() =>
-                {
+                if (File.Exists("cards.xml"))
                     App.SetCardInfosFromXml("cards.xml");
-                });
+                
+                CardPrice.OpenCacheData();
+            });
+            await CardPrice.GetOrOpenPDLegalFile();
 
-                imgLoading.Visibility = Visibility.Hidden;
-            }
+            imgLoading.Visibility = Visibility.Hidden;
             ViewModel.SetRefreshTimer(Dispatcher);
 
             if (ViewModel.AutoVersionCheck && await App.IsOutdatedRelease(ViewModel.AcceptsPrerelease))

@@ -359,7 +359,7 @@ namespace Mojp
             cacheReq = null;
             condition = null;
 
-            App.Current.Dispatcher.BeginInvoke((Action)ReleaseAutomationElement);
+            App.CurrentDispatcher.BeginInvoke((Action)ReleaseAutomationElement);
         }
 
         /// <summary>
@@ -444,6 +444,10 @@ namespace Mojp
             string name = GetNamePropertyValue(sender as AutomationElement);
             //Debug.WriteLineIf(!string.IsNullOrWhiteSpace(name), name);
 
+            // キャッシュ無効化時
+            if (name == null)
+                return;
+
             // 新しいテキストがカード名かどうかを調べ、そうでないなら不必要な全体検索をしないようにする
             // トークンの場合は、カード名を含むとき (= コピートークン) と含まないとき (→ 空表示にする) とがあるので検索を続行する
             if (!App.Cards.ContainsKey(name) && !name.StartsWith("Token"))
@@ -457,7 +461,7 @@ namespace Mojp
                     cardType = "ヴァンガード";
 
                 if (cardType != null)
-                    App.Current.Dispatcher.Invoke(() => SetMessage(cardType));
+                    App.CurrentDispatcher.Invoke(() => SetMessage(cardType));
 
                 return;
             }
@@ -486,8 +490,9 @@ namespace Mojp
             {
                 string name = GetNamePropertyValue(element);
 
+                // キャッシュ無効化時
                 if (name == null)
-                    continue;
+                    return;
 
                 // WHISPER データベースからカード情報を取得
                 if (App.Cards.TryGetValue(name, out var card))
@@ -530,11 +535,11 @@ namespace Mojp
             // 汎用のトークン
             if (foundCards.Count == 0 && isToken)
             {
-                App.Current.Dispatcher.Invoke(() => SetMessage("トークン"));
+                App.CurrentDispatcher.Invoke(() => SetMessage("トークン"));
                 return;
             }
 
-            App.Current.Dispatcher.Invoke(() =>
+            App.CurrentDispatcher.Invoke(() =>
             {
                 int j = 0;
 
@@ -563,7 +568,11 @@ namespace Mojp
             {
                 name = element?.Cached.Name;
             }
-            catch { Debug.WriteLine("キャッシュされた Name プロパティ値の取得に失敗しました。"); }
+            catch
+            {
+                Debug.WriteLine("キャッシュされた Name プロパティ値の取得に失敗しました。");
+                return null;
+            }
 
             if (name == null)
                 return string.Empty;
