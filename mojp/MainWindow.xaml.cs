@@ -48,7 +48,7 @@ namespace Mojp
             }
             ViewModel.SetRefreshTimer(Dispatcher);
 
-            if (ViewModel.AutoVersionCheck && await App.IsLatestRelease(ViewModel.AcceptsPrerelease))
+            if (ViewModel.AutoVersionCheck && await App.IsOutdatedRelease(ViewModel.AcceptsPrerelease))
                 notifier.Visibility = Visibility.Visible;
         }
 
@@ -101,7 +101,7 @@ namespace Mojp
             ViewModel.SetRefreshTimer(Dispatcher);
 
             notifier.Visibility = ViewModel.AutoVersionCheck &&
-                await App.IsLatestRelease(ViewModel.AcceptsPrerelease) ? Visibility.Visible : Visibility.Collapsed;
+                await App.IsOutdatedRelease(ViewModel.AcceptsPrerelease) ? Visibility.Visible : Visibility.Collapsed;
         }
 
         private void OnGoToNewRelease(object sender, RoutedEventArgs e)

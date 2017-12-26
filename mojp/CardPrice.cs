@@ -14,6 +14,10 @@ namespace Mojp
             = DependencyProperty.RegisterAttached("TargetCard", typeof(Card), typeof(CardPrice), 
                 new FrameworkPropertyMetadata(Card.Empty, FrameworkPropertyMetadataOptions.AffectsMeasure, OnTargetCardChanged));
 
+        public static readonly DependencyProperty LegalityProperty
+            = DependencyProperty.RegisterAttached("Legality", typeof(Card), typeof(CardPrice),
+                new FrameworkPropertyMetadata(Card.Empty, FrameworkPropertyMetadataOptions.AffectsMeasure, OnLegalityChanged));
+
         // card_name -> (tix_info, expire_time)
         private static readonly ConcurrentDictionary<string, Tuple<string, DateTime>> prices 
             = new ConcurrentDictionary<string, Tuple<string, DateTime>>();
@@ -24,6 +28,12 @@ namespace Mojp
 
         [AttachedPropertyBrowsableForType(typeof(TextBlock))]
         public static void SetTargetCard(TextBlock element, Card value) => element.SetValue(TargetCardProperty, value);
+
+        [AttachedPropertyBrowsableForType(typeof(UIElement))]
+        public static Card GetLegality(UIElement element) => element.GetValue(TargetCardProperty) as Card;
+
+        [AttachedPropertyBrowsableForType(typeof(UIElement))]
+        public static void SetLegality(UIElement element, Card value) => element.SetValue(TargetCardProperty, value);
 
         public static string GetPrice(Card card)
         {
@@ -100,7 +110,18 @@ namespace Mojp
             card.OnUpdatePrice();
         }
 
-        private static bool IsSpecialCard(Card card)
+        private static void OnLegalityChanged(DependencyObject sender, DependencyPropertyChangedEventArgs e)
+        {
+            var element = sender as UIElement;
+            var card = e.NewValue as Card;
+
+            if (element == null)
+                return;
+
+            element.Visibility = App.IsPDLegal(card) ? Visibility.Visible : Visibility.Collapsed;
+        }
+
+            private static bool IsSpecialCard(Card card)
         {
             if (card == null || string.IsNullOrEmpty(card.Name))
                 return true;

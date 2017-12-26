@@ -19,6 +19,7 @@ namespace Mojp
         private static readonly Lazy<HttpClient> httpClient = new Lazy<HttpClient>();
         private static volatile bool usingScryfall = false;
         private static DateTime requestTime = DateTime.Now - TimeSpan.FromMilliseconds(100);
+        private static HashSet<string> pdLegalCards = null;
 
         /// <summary>
         /// カードの英語名から、英語カード名・日本語カード名・日本語カードテキストを検索します。
@@ -74,7 +75,7 @@ namespace Mojp
         /// </summary>
         /// <param name="acceptsPrerelease">開発版も含めて確認する場合は true 。</param>
         /// <returns>これより上のバージョンが無い場合は true 。</returns>
-        public static async Task<bool> IsLatestRelease(bool acceptsPrerelease)
+        public static async Task<bool> IsOutdatedRelease(bool acceptsPrerelease)
         {
             string response = null;
             try
@@ -140,7 +141,7 @@ namespace Mojp
             if (startIndex == -1)
                 return NoPrice;
 
-            if (response[startIndex + TotalCardsTag.Length] != '1')
+            if (response.Substring(startIndex + TotalCardsTag.Length, 2) != "1,")
             {
                 const string CardTag = "\"name\":";
                 startIndex = response.IndexOf(CardTag + "\"" + cardName.Replace("+", " // ") + "\"");
@@ -151,21 +152,52 @@ namespace Mojp
             const string RelatedTag = "\"related_uris\":";
             int endIndex = response.IndexOf(RelatedTag, startIndex);
 
-            const string PDLegalityTag = "\"penny\":";
-            const string LegalValue = "\"legal\"";
-            int regalityIndex = response.IndexOf(PDLegalityTag, startIndex, endIndex - startIndex);
-            string isPDRegal = response.IndexOf(LegalValue, regalityIndex, PDLegalityTag.Length + LegalValue.Length) != -1 ? "[PD] " : string.Empty;
+            //const string PDLegalityTag = "\"penny\":";
+            //const string LegalValue = "\"legal\"";
+            //int regalityIndex = response.IndexOf(PDLegalityTag, startIndex, endIndex - startIndex);
+            //string isPDRegal = response.IndexOf(LegalValue, regalityIndex, PDLegalityTag.Length + LegalValue.Length) != -1 ? "[PD] " : string.Empty;
 
             const string TixTag = "\"tix\":";
             startIndex = response.IndexOf(TixTag, startIndex, endIndex - startIndex);
 
             if (startIndex == -1)
-                return isPDRegal + NoPrice;
+                return NoPrice;
 
             startIndex = response.IndexOf('"', startIndex + TixTag.Length) + 1;
             endIndex = response.IndexOf('"', startIndex);
-            return isPDRegal + response.Substring(startIndex, endIndex - startIndex) + " tix";
+            return response.Substring(startIndex, endIndex - startIndex) + " tix";
         }
+
+        public static async void GetPDLegalFile()
+        {
+            const string PDLegalFileName = "legal_cards.txt";
+
+            if (!File.Exists(PDLegalFileName) || DateTime.Now - File.GetLastWriteTime(PDLegalFileName) > TimeSpan.FromDays(1))
+            {
+                Stream response = null;
+                try
+                {
+                    response = await httpClient.Value.GetStreamAsync("http://pdmtgo.com/legal_cards.txt");
+                }
+                catch { Debug.WriteLine("HTTPS アクセスに失敗しました。"); }
+
+                using (var file = File.Create(PDLegalFileName))
+                    await response.CopyToAsync(file);
+            }
+
+            pdLegalCards = new HashSet<string>();
+            var split = new[] { " // " };
+
+            foreach (string line in File.ReadLines(PDLegalFileName))
+            {
+                if (line.Contains(" // "))
+                    pdLegalCards.UnionWith(line.Split(split, StringSplitOptions.RemoveEmptyEntries));
+                else
+                    pdLegalCards.Add(line);
+            }
+        }
+
+        public static bool IsPDLegal(Card card) => pdLegalCards != null && pdLegalCards.Contains(card?.Name);
 
         protected override void OnStartup(StartupEventArgs e)
         {
@@ -177,6 +209,8 @@ namespace Mojp
                 Settings.Default.UpgradeRequired = false;
             }
             CardPrice.OpenCacheData();
+
+            GetPDLegalFile();
         }
 
         protected override void OnExit(ExitEventArgs e)
