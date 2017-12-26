@@ -6,52 +6,52 @@
 		Width="{Binding WindowWidth, Mode=TwoWay}" Height="{Binding WindowHeight, Mode=TwoWay}" 
 		Left="{Binding WindowLeft, Mode=TwoWay}" Top="{Binding WindowTop, Mode=TwoWay}"
 		Icon="Resources/dictionary.ico" SnapsToDevicePixels="True" Initialized="OnInitialized">
-	<!-- WindowStyle="None" AllowsTransparency="True" Background="Transparent" -->
-	<Window.DataContext>
-		<local:MainViewModel />
-	</Window.DataContext>
-	<Grid Grid.IsSharedSizeScope="True">
-		<Grid.ColumnDefinitions>
-			<ColumnDefinition />
-			<ColumnDefinition Width="Auto" SharedSizeGroup="SecondColumn" />
-		</Grid.ColumnDefinitions>
-		<Grid.RowDefinitions>
-			<RowDefinition Height="Auto" SharedSizeGroup="FirstRow" />
-			<RowDefinition />
-			<RowDefinition Height="Auto" />
-		</Grid.RowDefinitions>
+    <!-- WindowStyle="None" AllowsTransparency="True" Background="Transparent" -->
+    <Window.DataContext>
+        <local:MainViewModel />
+    </Window.DataContext>
+    <Grid Grid.IsSharedSizeScope="True">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="Auto" SharedSizeGroup="SecondColumn" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" SharedSizeGroup="FirstRow" />
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
         <TabControl Grid.RowSpan="2" Grid.ColumnSpan="2" FontFamily="{Binding FontFamily}" FontSize="{Binding FontSize}"
 					BorderThickness="0,1,0,0" ItemsSource="{Binding Cards}" SelectedIndex="{Binding SelectedIndex}">
-			<TabControl.Template>
-				<ControlTemplate TargetType="TabControl">
-					<Grid Name="templateRoot" ClipToBounds="True" SnapsToDevicePixels="True" KeyboardNavigation.TabNavigation="Local">
-						<Grid.ColumnDefinitions>
-							<ColumnDefinition />
-							<ColumnDefinition Width="Auto" SharedSizeGroup="SecondColumn" />
-						</Grid.ColumnDefinitions>
-						<Grid.RowDefinitions>
-							<RowDefinition Height="Auto" SharedSizeGroup="FirstRow" />
-							<RowDefinition />
-						</Grid.RowDefinitions>
-						<TabPanel Name="HeaderPanel" Margin="2,2,2,0" Background="Transparent" IsItemsHost="True" KeyboardNavigation.TabIndex="1" Panel.ZIndex="1" />
-						<Border Name="ContentPanel" Grid.Row="1" Grid.ColumnSpan="2" 
+            <TabControl.Template>
+                <ControlTemplate TargetType="TabControl">
+                    <Grid Name="templateRoot" ClipToBounds="True" SnapsToDevicePixels="True" KeyboardNavigation.TabNavigation="Local">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition Width="Auto" SharedSizeGroup="SecondColumn" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" SharedSizeGroup="FirstRow" />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <TabPanel Name="HeaderPanel" Margin="2,2,2,0" Background="Transparent" IsItemsHost="True" KeyboardNavigation.TabIndex="1" Panel.ZIndex="1" />
+                        <Border Name="ContentPanel" Grid.Row="1" Grid.ColumnSpan="2" 
 								Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" 
 								KeyboardNavigation.TabIndex="2" KeyboardNavigation.TabNavigation="Local" KeyboardNavigation.DirectionalNavigation="Contained">
-							<ContentPresenter Name="PART_SelectedContentHost" Margin="{TemplateBinding Padding}"
+                            <ContentPresenter Name="PART_SelectedContentHost" Margin="{TemplateBinding Padding}"
 											  ContentSource="SelectedContent" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
-						</Border>
-					</Grid>
-				</ControlTemplate>
-			</TabControl.Template>
-			<TabControl.ItemContainerStyle>
-				<Style TargetType="TabItem">
-					<Style.Triggers>
-						<DataTrigger Binding="{Binding Name}" Value="{x:Null}">
-							<Setter Property="Visibility" Value="Hidden" />
-						</DataTrigger>
-					</Style.Triggers>
-					<Setter Property="Padding" Value="6,2,5,0" />
-					<Setter Property="MinHeight" Value="22" />
+                        </Border>
+                    </Grid>
+                </ControlTemplate>
+            </TabControl.Template>
+            <TabControl.ItemContainerStyle>
+                <Style TargetType="TabItem">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
+                            <Setter Property="Visibility" Value="Hidden" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                    <Setter Property="Padding" Value="6,2,5,0" />
+                    <Setter Property="MinHeight" Value="22" />
                     <Setter Property="Template">
                         <Setter.Value>
                             <ControlTemplate TargetType="TabItem">
@@ -87,149 +87,169 @@
                         </Setter.Value>
                     </Setter>
                 </Style>
-			</TabControl.ItemContainerStyle>
-			<TabControl.ItemTemplate>
-				<DataTemplate DataType="local:Card">
-					<TextBlock Text="{Binding JapaneseName, Mode=OneTime}" ToolTip="{Binding FullName, Mode=OneTime}" />
-				</DataTemplate>
-			</TabControl.ItemTemplate>
-			<TabControl.ContentTemplate>
-				<DataTemplate DataType="local:Card">
-					<Grid Margin="2">
-						<Grid.RowDefinitions>
-							<RowDefinition Height="Auto" />
-							<RowDefinition />
-							<RowDefinition Height="Auto" />
-						</Grid.RowDefinitions>
-						<TextBlock Margin="2" Text="{Binding Type, Mode=OneTime}" ToolTip="{Binding Type, Mode=OneTime}" TextTrimming="CharacterEllipsis">
-							<TextBlock.Style>
-								<Style TargetType="TextBlock">
-									<Style.Triggers>
-										<DataTrigger Binding="{Binding Type}" Value="{x:Null}">
-											<Setter Property="Visibility" Value="Collapsed" />
-										</DataTrigger>
-									</Style.Triggers>
-								</Style>
-							</TextBlock.Style>
-						</TextBlock>
-						<ScrollViewer Grid.Row="1" Padding="2" VerticalScrollBarVisibility="Auto">
-							<ItemsControl ItemsSource="{Binding TextLines, Mode=OneTime}">
-								<ItemsControl.ItemTemplate>
-									<DataTemplate>
-										<TextBlock Margin="0,2" Text="{Binding Mode=OneTime}" TextWrapping="Wrap" />
-									</DataTemplate>
-								</ItemsControl.ItemTemplate>
-							</ItemsControl>
-						</ScrollViewer>
-						<TextBlock Grid.Row="2" Margin="2,2,2,0" Text="{Binding PT, Mode=OneTime}" TextTrimming="CharacterEllipsis">
-							<TextBlock.Style>
-								<Style TargetType="TextBlock">
-									<Style.Triggers>
-										<DataTrigger Binding="{Binding PT}" Value="{x:Null}">
-											<Setter Property="Visibility" Value="Collapsed" />
-										</DataTrigger>
-									</Style.Triggers>
-								</Style>
-							</TextBlock.Style>
-						</TextBlock>
-					</Grid>
-				</DataTemplate>
-			</TabControl.ContentTemplate>
-		</TabControl>
-		<Grid Name="notifier" Grid.Row="2" Grid.ColumnSpan="2" Visibility="Collapsed">
-			<Separator Height="1" VerticalAlignment="Top" />
-			<Grid Margin="4,6,4,4">
-				<Grid.ColumnDefinitions>
-					<ColumnDefinition Width="Auto" />
-					<ColumnDefinition />
-					<ColumnDefinition Width="Auto" />
-				</Grid.ColumnDefinitions>
-				<Image Source="Resources/Alerts.png" Height="16" />
-				<TextBlock Grid.Column="1" Margin="4,0,0,0" TextTrimming="CharacterEllipsis">
+            </TabControl.ItemContainerStyle>
+            <TabControl.ItemTemplate>
+                <DataTemplate DataType="local:Card">
+                    <TextBlock Text="{Binding JapaneseName, Mode=OneTime}" ToolTip="{Binding FullName, Mode=OneTime}" />
+                </DataTemplate>
+            </TabControl.ItemTemplate>
+            <TabControl.ContentTemplate>
+                <DataTemplate DataType="local:Card">
+                    <Grid Margin="2">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <TextBlock Margin="2" Text="{Binding Type, Mode=OneTime}" ToolTip="{Binding Type, Mode=OneTime}" TextTrimming="CharacterEllipsis">
+                            <TextBlock.Style>
+                                <Style TargetType="TextBlock">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding Type}" Value="{x:Null}">
+                                            <Setter Property="Visibility" Value="Collapsed" />
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </TextBlock.Style>
+                        </TextBlock>
+                        <ScrollViewer Grid.Row="1" Padding="2" VerticalScrollBarVisibility="Auto">
+                            <ItemsControl ItemsSource="{Binding TextLines, Mode=OneTime}">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Margin="0,2" Text="{Binding Mode=OneTime}" TextWrapping="Wrap" />
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </ScrollViewer>
+                        <Grid Grid.Row="2" Margin="2,2,2,0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{Binding PT, Mode=OneTime}" TextTrimming="CharacterEllipsis" VerticalAlignment="Center">
+                                <TextBlock.Style>
+                                    <Style TargetType="TextBlock">
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding PT}" Value="{x:Null}">
+                                                <Setter Property="Visibility" Value="Collapsed" />
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </TextBlock.Style>
+                            </TextBlock>
+                            <Image Grid.Column="1" Source="Resources/pd.png" Height="18" Margin="6,0,0,0" VerticalAlignment="Center"
+                                   Visibility="Collapsed" local:CardPrice.LegalTarget="{Binding}" ToolTip="Penny Dreadful リーガル" />
+                            <TextBlock Grid.Column="2" Margin="6,0,0,0" VerticalAlignment="Center" Text="{Binding Price}" local:CardPrice.PriceTarget="{Binding}">
+                                <TextBlock.Style>
+                                    <Style TargetType="TextBlock">
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Price}" Value="">
+                                                <Setter Property="Visibility" Value="Collapsed" />
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </TextBlock.Style>
+                            </TextBlock>
+                        </Grid>
+                    </Grid>
+                </DataTemplate>
+            </TabControl.ContentTemplate>
+        </TabControl>
+        <Grid Name="notifier" Grid.Row="2" Grid.ColumnSpan="2" Visibility="Collapsed">
+            <Separator Height="1" VerticalAlignment="Top" />
+            <Grid Margin="4,6,4,4">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Image Source="Resources/Alerts.png" Height="16" />
+                <TextBlock Grid.Column="1" Margin="4,0,0,0" TextTrimming="CharacterEllipsis">
 					<Hyperlink ToolTip="https://fog-bank.github.io/mojp/" Click="OnGoToNewRelease">新しいバージョンがあります。</Hyperlink>
-				</TextBlock>
-				<Button Grid.Column="2" BorderBrush="{x:Null}" Background="{x:Null}"
+                </TextBlock>
+                <Button Grid.Column="2" BorderBrush="{x:Null}" Background="{x:Null}"
 						ToolTip="この通知を消します。設定で自動的に確認しないようにできます。" Click="OnCloseNotifier">
-					<Image Source="Resources/Disable.png" Height="14" />
-				</Button>
-			</Grid>
-		</Grid>
-		<ToolBar Grid.Column="1" Margin="1" VerticalAlignment="Bottom">
-			<ToolBar.Template>
-				<ControlTemplate TargetType="ToolBar">
-					<ItemsPresenter />
-				</ControlTemplate>
-			</ToolBar.Template>
-			<ToolBar.ItemsPanel>
-				<ItemsPanelTemplate>
-					<StackPanel Orientation="Horizontal" />
-				</ItemsPanelTemplate>
-			</ToolBar.ItemsPanel>
-			<Button ToolTip="MO を探す" Click="OnCapture">
-				<Image Source="Resources\Camera.png" Height="16" />
-			</Button>
-			<Button ToolTip="設定" Click="OnOption">
-				<Image Source="Resources\Gears.png" Height="16" />
-			</Button>
-		</ToolBar>
-		<Grid Name="imgLoading" Grid.RowSpan="2" Grid.ColumnSpan="2" Background="#7fffffff" Visibility="Collapsed">
-			<Path Stroke="#7f505096" HorizontalAlignment="Center" VerticalAlignment="Center">
-				<!-- http://blogs.microsoft.co.il/blogs/maxim/archive/2008/03/08/wpf-daily-tip-simple-wait-progress-control-continuous-animation.aspx -->
-				<Path.Data>
-					<GeometryGroup>
-						<EllipseGeometry Center="34,34" RadiusX="32" RadiusY="32" />
-						<EllipseGeometry Center="34,34" RadiusX="20" RadiusY="20" />
-					</GeometryGroup>
-				</Path.Data>
-				<Path.Fill>
-					<LinearGradientBrush EndPoint="0,1">
-						<GradientStop Color="#4dd5ce" />
+                    <Image Source="Resources/Disable.png" Height="14" />
+                </Button>
+            </Grid>
+        </Grid>
+        <ToolBar Grid.Column="1" Margin="1" VerticalAlignment="Bottom">
+            <ToolBar.Template>
+                <ControlTemplate TargetType="ToolBar">
+                    <ItemsPresenter />
+                </ControlTemplate>
+            </ToolBar.Template>
+            <ToolBar.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel Orientation="Horizontal" />
+                </ItemsPanelTemplate>
+            </ToolBar.ItemsPanel>
+            <Button ToolTip="MO を探す" Click="OnCapture">
+                <Image Source="Resources\Camera.png" Height="16" />
+            </Button>
+            <Button ToolTip="設定" Click="OnOption">
+                <Image Source="Resources\Gears.png" Height="16" />
+            </Button>
+        </ToolBar>
+        <Grid Name="imgLoading" Grid.RowSpan="2" Grid.ColumnSpan="2" Background="#7fffffff" Visibility="Collapsed">
+            <Path Stroke="#7f505096" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <!-- http://blogs.microsoft.co.il/blogs/maxim/archive/2008/03/08/wpf-daily-tip-simple-wait-progress-control-continuous-animation.aspx -->
+                <Path.Data>
+                    <GeometryGroup>
+                        <EllipseGeometry Center="34,34" RadiusX="32" RadiusY="32" />
+                        <EllipseGeometry Center="34,34" RadiusX="20" RadiusY="20" />
+                    </GeometryGroup>
+                </Path.Data>
+                <Path.Fill>
+                    <LinearGradientBrush EndPoint="0,1">
+                        <GradientStop Color="#4dd5ce" />
                         <GradientStop Color="#499692" Offset="1" />
-					</LinearGradientBrush>
-				</Path.Fill>
-				<Path.RenderTransform>
-					<RotateTransform CenterX="34" CenterY="34" />
-				</Path.RenderTransform>
-				<Path.Style>
-					<Style TargetType="Path">
-						<Style.Triggers>
-							<DataTrigger Binding="{Binding Visibility, ElementName=imgLoading}" Value="Visible">
-								<DataTrigger.EnterActions>
-									<BeginStoryboard Name="startWaitRing">
-										<Storyboard RepeatBehavior="Forever">
-											<DoubleAnimation Storyboard.TargetProperty="RenderTransform.Angle" Duration="0:0:1" From="0" To="360" />
-										</Storyboard>
-									</BeginStoryboard>
-								</DataTrigger.EnterActions>
-								<DataTrigger.ExitActions>
-									<StopStoryboard BeginStoryboardName="startWaitRing" />
-								</DataTrigger.ExitActions>
-							</DataTrigger>
-						</Style.Triggers>
-					</Style>
-				</Path.Style>
-			</Path>
-		</Grid>
-	</Grid>
-	<Window.ContextMenu>
-		<ContextMenu>
-			<MenuItem Header="MO を探す" Click="OnCapture" />
-			<MenuItem Header="カード名をコピー" IsEnabled="{Binding CanCopyJapaneseName}" Click="OnCopyCardName">
-				<MenuItem.Icon>
-					<Image Source="Resources\Copy.png" Height="16" />
-				</MenuItem.Icon>
-			</MenuItem>
-			<MenuItem Header="カード名 (英語) をコピー" IsEnabled="{Binding CanCopyEnglishName}" Click="OnCopyEnglishName" />
-			<MenuItem Header="カードを MTG Wiki で調べる" IsEnabled="{Binding CanBrowseWiki}" Click="OnGoToWiki">
-				<MenuItem.Icon>
-					<Image Source="Resources\Web.png" Height="16" />
-				</MenuItem.Icon>
-			</MenuItem>
-			<Separator />
-			<MenuItem Header="5 秒間隠す" Click="OnHide" />
-			<MenuItem Header="設定" Click="OnOption" />
-			<MenuItem Header="最小化" Click="OnWindowMinimize" />
-			<MenuItem Header="終了" Click="OnWindowClose" />
-		</ContextMenu>
-	</Window.ContextMenu>
+                    </LinearGradientBrush>
+                </Path.Fill>
+                <Path.RenderTransform>
+                    <RotateTransform CenterX="34" CenterY="34" />
+                </Path.RenderTransform>
+                <Path.Style>
+                    <Style TargetType="Path">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Visibility, ElementName=imgLoading}" Value="Visible">
+                                <DataTrigger.EnterActions>
+                                    <BeginStoryboard Name="startWaitRing">
+                                        <Storyboard RepeatBehavior="Forever">
+                                            <DoubleAnimation Storyboard.TargetProperty="RenderTransform.Angle" Duration="0:0:1" From="0" To="360" />
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </DataTrigger.EnterActions>
+                                <DataTrigger.ExitActions>
+                                    <StopStoryboard BeginStoryboardName="startWaitRing" />
+                                </DataTrigger.ExitActions>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Path.Style>
+            </Path>
+        </Grid>
+    </Grid>
+    <Window.ContextMenu>
+        <ContextMenu>
+            <MenuItem Header="MO を探す" Click="OnCapture" />
+            <MenuItem Header="カード名をコピー" IsEnabled="{Binding CanCopyJapaneseName}" Click="OnCopyCardName">
+                <MenuItem.Icon>
+                    <Image Source="Resources\Copy.png" Height="16" />
+                </MenuItem.Icon>
+            </MenuItem>
+            <MenuItem Header="カード名 (英語) をコピー" IsEnabled="{Binding CanCopyEnglishName}" Click="OnCopyEnglishName" />
+            <MenuItem Header="カードを MTG Wiki で調べる" IsEnabled="{Binding CanBrowseWiki}" Click="OnGoToWiki">
+                <MenuItem.Icon>
+                    <Image Source="Resources\Web.png" Height="16" />
+                </MenuItem.Icon>
+            </MenuItem>
+            <Separator />
+            <MenuItem Header="5 秒間隠す" Click="OnHide" />
+            <MenuItem Header="設定" Click="OnOption" />
+            <MenuItem Header="最小化" Click="OnWindowMinimize" />
+            <MenuItem Header="終了" Click="OnWindowClose" />
+        </ContextMenu>
+    </Window.ContextMenu>
 </Window>

@@ -23,13 +23,12 @@ namespace Mojp
             var vm = viewModel as MainViewModel;
             var fonts = Fonts.SystemFontFamilies;
             var fontNames = new List<string>(fonts.Count);
-            var lang = this.Language;
+            var lang = Language;
 
             foreach (var font in fonts)
             {
                 // フォント名に日本語があるなら、それを使う
-                string source;
-                if (!font.FamilyNames.TryGetValue(lang, out source))
+                if (!font.FamilyNames.TryGetValue(lang, out string source))
                     source = font.Source;
 
                 fontNames.Add(source);
@@ -39,9 +38,9 @@ namespace Mojp
                     vm.FontFamily = source;
             }
             fontNames.Sort();
-            this.cmbFonts.ItemsSource = fontNames;
+            cmbFonts.ItemsSource = fontNames;
 
-            this.DataContext = vm;
+            DataContext = vm;
         }
 
         /// <summary>
@@ -51,10 +50,12 @@ namespace Mojp
         {
             imgLoaded.Visibility = Visibility.Collapsed;
 
-            var dlg = new OpenFileDialog();
-            dlg.FileName = "search.txt";
-            dlg.CheckFileExists = true;
-            dlg.Filter = "テキスト ファイル (*.txt)|*.txt|すべてのファイル (*.*)|*.*";
+            var dlg = new OpenFileDialog
+            {
+                FileName = "search.txt",
+                CheckFileExists = true,
+                Filter = "テキスト ファイル (*.txt)|*.txt|すべてのファイル (*.*)|*.*"
+            };
 
             if (dlg.ShowDialog(this) == true)
             {
@@ -74,10 +75,8 @@ namespace Mojp
             }
         }
 
-        private void OnClickHyperlink(object sender, RoutedEventArgs e)
-        {
-            Process.Start((sender as Hyperlink).ToolTip.ToString());
-        }
+        private void OnClickHyperlink(object sender, RoutedEventArgs e) 
+            => Process.Start((sender as Hyperlink).ToolTip.ToString());
 
         private void OnTestBoxKeyDown(object sender, KeyEventArgs e)
         {

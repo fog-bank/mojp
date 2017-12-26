@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Net.Http;
 using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Threading;
 using System.Xml.Linq;
 
 namespace Mojp
@@ -15,13 +17,20 @@ namespace Mojp
     /// </summary>
     public partial class App : Application
     {
-        private static readonly Dictionary<string, Card> cards = new Dictionary<string, Card>();
-        private static readonly Lazy<HttpClient> httpClient = new Lazy<HttpClient>();
-
         /// <summary>
         /// カードの英語名から、英語カード名・日本語カード名・日本語カードテキストを検索します。
         /// </summary>
-        public static Dictionary<string, Card> Cards => cards;
+        public static Dictionary<string, Card> Cards { get; } = new Dictionary<string, Card>();
+
+        /// <summary>
+        /// このアプリで共有する <see cref="System.Net.Http.HttpClient"/> を取得します。
+        /// </summary>
+        public static Lazy<HttpClient> HttpClient { get; } = new Lazy<HttpClient>();
+
+        /// <summary>
+        /// <see cref="App"/> に関連付けられている <see cref="Dispatcher"/> を取得します。
+        /// </summary>
+        public static Dispatcher CurrentDispatcher => Current.Dispatcher;
 
         /// <summary>
         /// カードテキストデータを XML に保存します。
@@ -30,7 +39,7 @@ namespace Mojp
         {
             var cardsElem = new XElement("cards");
 
-            foreach (var card in cards.Values)
+            foreach (var card in Cards.Values)
                 cardsElem.Add(card.ToXml());
 
             var doc = new XDocument(new XDeclaration("1.0", "utf-8", "yes"), cardsElem);
@@ -42,10 +51,10 @@ namespace Mojp
         /// </summary>
         public static void SetCardInfosFromWhisper(StreamReader sr)
         {
-            cards.Clear();
+            Cards.Clear();
 
             foreach (var card in Card.ParseWhisper(sr))
-                cards.Add(card.Name, card);
+                Cards.Add(card.Name, card);
         }
 
         /// <summary>
@@ -53,34 +62,31 @@ namespace Mojp
         /// </summary>
         public static void SetCardInfosFromXml(XDocument doc)
         {
-            cards.Clear();
+            Cards.Clear();
 
             foreach (var xml in doc.Descendants("card"))
             {
                 var card = Card.FromXml(xml);
-                cards.Add(card.Name, card);
+                Cards.Add(card.Name, card);
             }
         }
 
         /// <summary>
         /// XML ファイルからカードテキストデータを構築します。
         /// </summary>
-        public static void SetCardInfosFromXml(string file)
-        {
-            SetCardInfosFromXml(XDocument.Load(file));
-        }
+        public static void SetCardInfosFromXml(string file) => SetCardInfosFromXml(XDocument.Load(file));
 
         /// <summary>
         /// このアプリのバージョンが最新かどうかを確認します。
         /// </summary>
         /// <param name="acceptsPrerelease">開発版も含めて確認する場合は true 。</param>
         /// <returns>これより上のバージョンが無い場合は true 。</returns>
-        public static async Task<bool> IsLatestRelease(bool acceptsPrerelease)
+        public static async Task<bool> IsOutdatedRelease(bool acceptsPrerelease)
         {
             string response = null;
             try
             {
-                response = await httpClient.Value.GetStringAsync("https://fog-bank.github.io/mojp/version.txt");
+                response = await HttpClient.Value.GetStringAsync("https://fog-bank.github.io/mojp/version.txt");
             }
             catch { Debug.WriteLine("HTTPS アクセスに失敗しました。"); }
 
@@ -116,10 +122,15 @@ namespace Mojp
 
         protected override void OnExit(ExitEventArgs e)
         {
+            if (Settings.Default.GetCardPrice)
+                CardPrice.SaveCacheData();
+
             Settings.Default.Save();
 
-            if (httpClient.IsValueCreated)
-                httpClient.Value.Dispose();
+            if (HttpClient.IsValueCreated)
+                HttpClient.Value.Dispose();
+
+            Debug.WriteLine("#cards handling PropertyChanged = " + Cards.Values.Count(card => card.IsObserved));
 
             base.OnExit(e);
         }

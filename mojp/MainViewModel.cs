@@ -27,6 +27,8 @@ namespace Mojp
         private TimeSpan refreshInterval = Settings.Default.RefreshInterval;
         private bool autoVersionCheck = Settings.Default.AutoVersionCheck;
         private bool acceptsPrerelease = Settings.Default.AcceptsPrerelease;
+        private bool getCardPrice = Settings.Default.GetCardPrice;
+        private bool getPDList = Settings.Default.GetPDList;
 
         private ObservableCollection<Card> cards = new ObservableCollection<Card>();
         private int selectedIndex = -1;
@@ -58,12 +60,11 @@ namespace Mojp
         /// </summary>
         public string FontFamily
         {
-            get { return fontFamily; }
+            get => fontFamily;
             set
             {
                 fontFamily = value;
                 OnPropertyChanged();
-                Settings.Default.CardTextFontFamily = value;
             }
         }
 
@@ -72,12 +73,11 @@ namespace Mojp
         /// </summary>
         public int FontSize
         {
-            get { return fontSize; }
+            get => fontSize;
             set
             {
                 fontSize = value;
                 OnPropertyChanged();
-                Settings.Default.CardTextFontSize = value;
             }
         }
 
@@ -86,12 +86,11 @@ namespace Mojp
         /// </summary>
         public bool TopMost
         {
-            get { return topMost; }
+            get => topMost;
             set
             {
                 topMost = value;
                 OnPropertyChanged();
-                Settings.Default.TopMost = value;
             }
         }
 
@@ -100,12 +99,11 @@ namespace Mojp
         /// </summary>
         public double WindowWidth
         {
-            get { return width; }
+            get => width;
             set
             {
                 width = value;
                 OnPropertyChanged();
-                Settings.Default.WindowWidth = value;
             }
         }
 
@@ -114,12 +112,11 @@ namespace Mojp
         /// </summary>
         public double WindowHeight
         {
-            get { return height; }
+            get => height;
             set
             {
                 height = value;
                 OnPropertyChanged();
-                Settings.Default.WindowHeight = value;
             }
         }
 
@@ -128,12 +125,11 @@ namespace Mojp
         /// </summary>
         public double WindowLeft
         {
-            get { return left; }
+            get => left;
             set
             {
                 left = value;
                 OnPropertyChanged();
-                Settings.Default.WindowLeft = value;
             }
         }
 
@@ -142,12 +138,11 @@ namespace Mojp
         /// </summary>
         public double WindowTop
         {
-            get { return top; }
+            get => top;
             set
             {
                 top = value;
                 OnPropertyChanged();
-                Settings.Default.WindowTop = value;
             }
         }
 
@@ -156,12 +151,11 @@ namespace Mojp
         /// </summary>
         public bool ShowBasicLands
         {
-            get { return showBasicLands; }
+            get => showBasicLands;
             set
             {
                 showBasicLands = value;
                 OnPropertyChanged();
-                Settings.Default.ShowBasicLands = value;
             }
         }
 
@@ -170,12 +164,11 @@ namespace Mojp
         /// </summary>
         public bool AutoRefresh
         {
-            get { return autoRefresh; }
+            get => autoRefresh;
             set
             {
                 autoRefresh = value;
                 OnPropertyChanged();
-                Settings.Default.AutoRefresh = value;
             }
         }
 
@@ -189,7 +182,7 @@ namespace Mojp
         /// </summary>
         public int RefreshIntervalMilliseconds
         {
-            get { return (int)refreshInterval.TotalMilliseconds; }
+            get => (int)refreshInterval.TotalMilliseconds;
             set
             {
                 if (value <= 0)
@@ -197,7 +190,6 @@ namespace Mojp
 
                 refreshInterval = TimeSpan.FromMilliseconds(value);
                 OnPropertyChanged();
-                Settings.Default.RefreshInterval = refreshInterval;
             }
         }
 
@@ -206,12 +198,11 @@ namespace Mojp
         /// </summary>
         public bool AutoVersionCheck
         {
-            get { return autoVersionCheck; }
+            get => autoVersionCheck;
             set
             {
                 autoVersionCheck = value;
                 OnPropertyChanged();
-                Settings.Default.AutoVersionCheck = value;
             }
         }
 
@@ -220,12 +211,38 @@ namespace Mojp
         /// </summary>
         public bool AcceptsPrerelease
         {
-            get { return acceptsPrerelease; }
+            get => acceptsPrerelease;
             set
             {
                 acceptsPrerelease = value;
                 OnPropertyChanged();
-                Settings.Default.AcceptsPrerelease = value;
+            }
+        }
+
+        /// <summary>
+        /// カード価格を scryfall.com に問い合わせるかどうかを示す値を取得または設定します。
+        /// </summary>
+        public bool GetCardPrice
+        {
+            get => getCardPrice;
+            set
+            {
+                getCardPrice = value;
+                OnPropertyChanged();
+                CardPrice.EnableCardPrice = value;
+            }
+        }
+
+        /// <summary>
+        /// Penny Dreadful のカードリストを取得するかどうかを示す値を取得または設定します。
+        /// </summary>
+        public bool GetPDList
+        {
+            get => getPDList;
+            set
+            {
+                getPDList = value;
+                OnPropertyChanged();
             }
         }
 
@@ -239,7 +256,7 @@ namespace Mojp
         /// </summary>
         public int SelectedIndex
         {
-            get { return selectedIndex; }
+            get => selectedIndex;
             set
             {
                 selectedIndex = value;
@@ -321,6 +338,11 @@ namespace Mojp
         }
 
         /// <summary>
+        /// 画面を更新するように要求します。
+        /// </summary>
+        public void RefreshTab() => SearchCardName();
+
+        /// <summary>
         /// Preview Pane を自動的に探索するためのタイマーを必要なら設定します。
         /// </summary>
         public void SetRefreshTimer(Dispatcher dispatcher)
@@ -346,6 +368,27 @@ namespace Mojp
         public void CapturePreviewPane() => OnCapture(null, EventArgs.Empty);
 
         /// <summary>
+        /// 現在の設定を <see cref="Settings"/> に書き戻します。
+        /// </summary>
+        public void SaveSettings()
+        {
+            Settings.Default.AcceptsPrerelease = AcceptsPrerelease;
+            Settings.Default.AutoRefresh = AutoRefresh;
+            Settings.Default.AutoVersionCheck = AutoVersionCheck;
+            Settings.Default.CardTextFontFamily = FontFamily;
+            Settings.Default.CardTextFontSize = FontSize;
+            Settings.Default.GetCardPrice = GetCardPrice;
+            Settings.Default.GetPDList = GetPDList;
+            Settings.Default.RefreshInterval = TimeSpan.FromMilliseconds(RefreshIntervalMilliseconds);
+            Settings.Default.ShowBasicLands = ShowBasicLands;
+            Settings.Default.TopMost = TopMost;
+            Settings.Default.WindowHeight = WindowHeight;
+            Settings.Default.WindowLeft = WindowLeft;
+            Settings.Default.WindowTop = WindowTop;
+            Settings.Default.WindowWidth = WindowWidth;
+        }
+
+        /// <summary>
         /// 各リソースを解放します。
         /// </summary>
         public void Release()
@@ -359,7 +402,7 @@ namespace Mojp
             cacheReq = null;
             condition = null;
 
-            App.Current.Dispatcher.BeginInvoke((Action)ReleaseAutomationElement);
+            App.CurrentDispatcher.BeginInvoke((Action)ReleaseAutomationElement);
         }
 
         /// <summary>
@@ -375,10 +418,8 @@ namespace Mojp
             }
         }
 
-        protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
+        protected void OnPropertyChanged([CallerMemberName] string propertyName = null) 
+            => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 
         /// <summary>
         /// MO のプレビューウィンドウを探し、UI テキストの変化イベントが発生するようにします。
@@ -446,6 +487,10 @@ namespace Mojp
             string name = GetNamePropertyValue(sender as AutomationElement);
             //Debug.WriteLineIf(!string.IsNullOrWhiteSpace(name), name);
 
+            // キャッシュ無効化時
+            if (name == null)
+                return;
+
             // 新しいテキストがカード名かどうかを調べ、そうでないなら不必要な全体検索をしないようにする
             // トークンの場合は、カード名を含むとき (= コピートークン) と含まないとき (→ 空表示にする) とがあるので検索を続行する
             if (!App.Cards.ContainsKey(name) && !name.StartsWith("Token"))
@@ -459,7 +504,7 @@ namespace Mojp
                     cardType = "ヴァンガード";
 
                 if (cardType != null)
-                    App.Current.Dispatcher.Invoke(() => SetMessage(cardType));
+                    App.CurrentDispatcher.Invoke(() => SetMessage(cardType));
 
                 return;
             }
@@ -488,8 +533,9 @@ namespace Mojp
             {
                 string name = GetNamePropertyValue(element);
 
+                // キャッシュ無効化時
                 if (name == null)
-                    continue;
+                    return;
 
                 // WHISPER データベースからカード情報を取得
                 if (App.Cards.TryGetValue(name, out var card))
@@ -532,11 +578,11 @@ namespace Mojp
             // 汎用のトークン
             if (foundCards.Count == 0 && isToken)
             {
-                App.Current.Dispatcher.Invoke(() => SetMessage("トークン"));
+                App.CurrentDispatcher.Invoke(() => SetMessage("トークン"));
                 return;
             }
 
-            App.Current.Dispatcher.Invoke(() =>
+            App.CurrentDispatcher.Invoke(() =>
             {
                 int j = 0;
 
@@ -565,7 +611,11 @@ namespace Mojp
             {
                 name = element?.Cached.Name;
             }
-            catch { Debug.WriteLine("キャッシュされた Name プロパティ値の取得に失敗しました。"); }
+            catch
+            {
+                Debug.WriteLine("キャッシュされた Name プロパティ値の取得に失敗しました。");
+                return null;
+            }
 
             if (name == null)
                 return string.Empty;

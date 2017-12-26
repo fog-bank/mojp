@@ -75,8 +75,10 @@ namespace Mojp
                             if (card.Name != null)
                                 yield return ProcessCard(card, texts);
 
-                            card = new Card();
-                            card.Name = tokens[1].Trim();
+                            card = new Card
+                            {
+                                Name = tokens[1].Trim()
+                            };
                             texts.Clear();
                             lvCard = false;
 

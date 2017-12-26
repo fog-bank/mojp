@@ -12,15 +12,13 @@ namespace Mojp
 {
     public partial class MainWindow : Window
     {
-        public MainWindow()
-        {
-            InitializeComponent();
-        }
+        public MainWindow() => InitializeComponent();
 
         public MainViewModel ViewModel => DataContext as MainViewModel;
 
         protected override void OnClosing(CancelEventArgs e)
         {
+            ViewModel?.SaveSettings();
             ViewModel?.Release();
 
             base.OnClosing(e);
@@ -38,32 +36,31 @@ namespace Mojp
 
         private async void OnInitialized(object sender, EventArgs e)
         {
-            if (File.Exists("cards.xml"))
+            imgLoading.Visibility = Visibility.Visible;
+            CardPrice.EnableCardPrice = ViewModel.GetCardPrice;
+
+            await Task.Run(() =>
             {
-                imgLoading.Visibility = Visibility.Visible;
-
-                await Task.Run(() =>
-                {
+                if (File.Exists("cards.xml"))
                     App.SetCardInfosFromXml("cards.xml");
-                });
+                
+                if (CardPrice.EnableCardPrice)
+                    CardPrice.OpenCacheData();
+            });
 
-                imgLoading.Visibility = Visibility.Hidden;
-            }
+            if (ViewModel.GetPDList)
+                await CardPrice.GetOrOpenPDLegalFile();
+
+            imgLoading.Visibility = Visibility.Hidden;
             ViewModel.SetRefreshTimer(Dispatcher);
 
-            if (ViewModel.AutoVersionCheck && await App.IsLatestRelease(ViewModel.AcceptsPrerelease))
+            if (ViewModel.AutoVersionCheck && await App.IsOutdatedRelease(ViewModel.AcceptsPrerelease))
                 notifier.Visibility = Visibility.Visible;
         }
 
-        private void OnCapture(object sender, RoutedEventArgs e)
-        {
-            ViewModel.CapturePreviewPane();
-        }
+        private void OnCapture(object sender, RoutedEventArgs e) => ViewModel.CapturePreviewPane();
 
-        private void OnCopyCardName(object sender, RoutedEventArgs e)
-        {
-            Clipboard.SetText(ViewModel.SelectedCard.JapaneseName);
-        }
+        private void OnCopyCardName(object sender, RoutedEventArgs e) => Clipboard.SetText(ViewModel.SelectedCard.JapaneseName);
 
         private void OnCopyEnglishName(object sender, RoutedEventArgs e)
         {
@@ -98,8 +95,13 @@ namespace Mojp
 
         private async void OnOption(object sender, RoutedEventArgs e)
         {
-            var dlg = new OptionDialog(DataContext);
-            dlg.Owner = this;
+            var dlg = new OptionDialog(DataContext)
+            {
+                Owner = this
+            };
+            bool price = ViewModel.GetCardPrice;
+            bool pd = ViewModel.GetPDList;
+
             dlg.ShowDialog();
 
             Topmost = ViewModel.TopMost;
@@ -108,7 +110,34 @@ namespace Mojp
             ViewModel.SetRefreshTimer(Dispatcher);
 
             notifier.Visibility = ViewModel.AutoVersionCheck &&
-                await App.IsLatestRelease(ViewModel.AcceptsPrerelease) ? Visibility.Visible : Visibility.Collapsed;
+                await App.IsOutdatedRelease(ViewModel.AcceptsPrerelease) ? Visibility.Visible : Visibility.Collapsed;
+
+            // カード価格関連の変更を反映
+            imgLoading.Visibility = Visibility.Visible;
+
+            if (ViewModel.GetCardPrice != price)
+            {
+                await Task.Run(() =>
+                {
+                    if (CardPrice.EnableCardPrice)
+                        CardPrice.OpenCacheData();
+                    else
+                        CardPrice.ClearCacheData();
+                });
+            }
+
+            if (ViewModel.GetPDList != pd)
+            {
+                if (ViewModel.GetPDList)
+                    await CardPrice.GetOrOpenPDLegalFile();
+                else
+                    await Task.Run(() => { CardPrice.ClearPDLegalList(); });
+            }
+
+            if (ViewModel.GetCardPrice != price || ViewModel.GetPDList != pd)
+                ViewModel.RefreshTab();
+
+            imgLoading.Visibility = Visibility.Hidden;
         }
 
         private void OnGoToNewRelease(object sender, RoutedEventArgs e)
@@ -117,10 +146,7 @@ namespace Mojp
             Process.Start((sender as Hyperlink).ToolTip.ToString());
         }
 
-        private void OnCloseNotifier(object sender, RoutedEventArgs e)
-        {
-            notifier.Visibility = Visibility.Collapsed;
-        }
+        private void OnCloseNotifier(object sender, RoutedEventArgs e) => notifier.Visibility = Visibility.Collapsed;
 
         private async void OnHide(object sender, RoutedEventArgs e)
         {
@@ -131,14 +157,8 @@ namespace Mojp
             Visibility = Visibility.Visible;
         }
 
-        private void OnWindowMinimize(object sender, RoutedEventArgs e)
-        {
-            SystemCommands.MinimizeWindow(this);
-        }
+        private void OnWindowMinimize(object sender, RoutedEventArgs e) => SystemCommands.MinimizeWindow(this);
 
-        private void OnWindowClose(object sender, RoutedEventArgs e)
-        {
-            SystemCommands.CloseWindow(this);
-        }
+        private void OnWindowClose(object sender, RoutedEventArgs e) => SystemCommands.CloseWindow(this);
     }
 }
