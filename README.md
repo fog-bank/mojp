@@ -7,6 +7,8 @@
 * MO の Preview Pane に表示されているカードの日本語テキストを表示
 * カード名（日本語または英語）をコピー
 * [MTG Wiki](http://mtgwiki.com/) の解説ページをブラウザで開く
+* カードが [Penny Dreadful](http://pdmtgo.com/) で使用可能かどうかを調べる
+* MO での相場を [Scryfall](https://scryfall.com/) で調べる
 
 ## 必要条件
 .NET Framework 4.6 以上（Windows 10 なら標準でインストール済みです）
@@ -25,7 +27,10 @@
 ### その他の機能
 * 右クリックメニューから、カード名をコピーしたり、[MTG Wiki](http://mtgwiki.com/) のカード評価ページに移動したりできます。
 * 右上の歯車アイコンのボタンから、このアプリで使用するフォントとそのサイズを設定できます。その他、ウィンドウサイズなどの設定は `%LocalAppData%\co3366353` フォルダに保存されます。
-* 起動時に https://fog-bank.github.io/mojp/ にアクセスして、新しいバージョンがリリースされているかどうかを自動で確認します（ダウンロードまではしません）。不要な場合は設定から無効にしてください。
+* 以下の機能はインターネットにバックグラウンドで接続します。不要な場合は設定から無効にしてください。
+  * 起動時に https://fog-bank.github.io/mojp/ にアクセスして、新しいバージョンがリリースされているかどうかを自動で確認します（ダウンロードまではしません）。
+  * 起動時に [Penny Dreadful のカードリスト](http://pdmtgo.com/legal_cards.txt) をダウンロードします (1 日 1 回まで) 。
+  * カードを表示するたび [Scryfall の検索 API](https://scryfall.com/docs/api/cards/search) にアクセスします (1 秒に 5 枚まで、各カード 1 日 1 回まで) 。
 
 ## 開発環境
 Windows 10 Fall Creators Update  

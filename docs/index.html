@@ -29,6 +29,8 @@
               <li>MO の Preview Pane に表示されているカードの日本語テキストを表示</li>
               <li>カード名（日本語または英語）をコピー</li>
               <li><a href="http://mtgwiki.com/">MTG Wiki</a> の解説ページをブラウザで開く</li>
+              <li>カードが <a href="http://pdmtgo.com/">Penny Dreadful</a> で使用可能かどうかを調べる</li>
+              <li>MO での相場を <a href="https://scryfall.com/">Scryfall</a> で調べる</li>
             </ul>
           </td>
         </tr>
@@ -36,7 +38,7 @@
     </div>
     <h3 id="download">ダウンロード</h3>
     <div>
-      <h4><span class="underline">開発版 v1.7.0 Beta（イクサランの相克 仮対応）</span></h4>
+      <h4><span class="underline">開発版 v1.7.0 Beta（PD リーガルチェック機能 &amp; カード相場取得機能）</span></h4>
       <p><a href="https://github.com/fog-bank/mojp/releases/download/v1.7.0-beta/mojp.zip">ダウンロード</a>　<a href="https://github.com/fog-bank/mojp/releases/tag/v1.7.0-beta">リリースノート</a></p>
       <h4><span class="underline">最新版 v1.6.0（イクサラン &amp; 統率者 2017 &amp; アイコニックマスターズ 対応）</span></h4>
       <p><a href="https://github.com/fog-bank/mojp/releases/download/v1.6.0/mojp.zip">ダウンロード</a>　<a href="https://github.com/fog-bank/mojp/releases/tag/v1.6.0">リリースノート</a></p>
@@ -63,8 +65,16 @@
       <ul>
         <li>右クリックメニューから、カード名をコピーしたり、MTG Wiki のカード評価ページに移動したりできます。</li>
         <li>右上の歯車アイコンのボタンから、このアプリで使用するフォントとそのサイズを設定できます。その他、ウィンドウサイズなどの設定は、%LocalAppData%\co3366353 フォルダに保存されます。</li>
-        <li>起動時に <a href="https://fog-bank.github.io/mojp/">https://fog-bank.github.io/mojp/</a> 
-          にアクセスして、新しいバージョンがリリースされているかどうかを自動で確認します（ダウンロードまではしません）。不要な場合は設定から無効にしてください。</li>
+        <li>以下の機能はインターネットにバックグラウンドで接続します。不要な場合は設定から無効にしてください。
+          <ul>
+            <li>
+              起動時に <a href="https://fog-bank.github.io/mojp/">https://fog-bank.github.io/mojp/</a> 
+              にアクセスして、新しいバージョンがリリースされているかどうかを自動で確認します（ダウンロードまではしません）。
+            </li>
+            <li>起動時に <a href="http://pdmtgo.com/legal_cards.txt">Penny Dreadful のカードリスト</a> をダウンロードします (1 日 1 回まで) 。</li>
+            <li>カードを表示するたび <a href="https://scryfall.com/docs/api/cards/search">Scryfall の検索 API</a> にアクセスします (1 秒に 5 枚まで、各カード 1 日 1 回まで) 。</li>
+          </ul>
+        </li>
       </ul>
       <p>詳しい説明や既知の不具合については <a href="https://github.com/fog-bank/mojp/wiki">GitHub 内の Wiki</a> をご確認ください。</p>
     </div>
