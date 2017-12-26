@@ -18,6 +18,7 @@ namespace Mojp
 
         protected override void OnClosing(CancelEventArgs e)
         {
+            ViewModel?.SaveSettings();
             ViewModel?.Release();
 
             base.OnClosing(e);
@@ -36,15 +37,19 @@ namespace Mojp
         private async void OnInitialized(object sender, EventArgs e)
         {
             imgLoading.Visibility = Visibility.Visible;
+            CardPrice.EnableCardPrice = ViewModel.GetCardPrice;
 
             await Task.Run(() =>
             {
                 if (File.Exists("cards.xml"))
                     App.SetCardInfosFromXml("cards.xml");
                 
-                CardPrice.OpenCacheData();
+                if (CardPrice.EnableCardPrice)
+                    CardPrice.OpenCacheData();
             });
-            await CardPrice.GetOrOpenPDLegalFile();
+
+            if (ViewModel.GetPDList)
+                await CardPrice.GetOrOpenPDLegalFile();
 
             imgLoading.Visibility = Visibility.Hidden;
             ViewModel.SetRefreshTimer(Dispatcher);
@@ -94,6 +99,9 @@ namespace Mojp
             {
                 Owner = this
             };
+            bool price = ViewModel.GetCardPrice;
+            bool pd = ViewModel.GetPDList;
+
             dlg.ShowDialog();
 
             Topmost = ViewModel.TopMost;
@@ -103,6 +111,33 @@ namespace Mojp
 
             notifier.Visibility = ViewModel.AutoVersionCheck &&
                 await App.IsOutdatedRelease(ViewModel.AcceptsPrerelease) ? Visibility.Visible : Visibility.Collapsed;
+
+            // カード価格関連の変更を反映
+            imgLoading.Visibility = Visibility.Visible;
+
+            if (ViewModel.GetCardPrice != price)
+            {
+                await Task.Run(() =>
+                {
+                    if (CardPrice.EnableCardPrice)
+                        CardPrice.OpenCacheData();
+                    else
+                        CardPrice.ClearCacheData();
+                });
+            }
+
+            if (ViewModel.GetPDList != pd)
+            {
+                if (ViewModel.GetPDList)
+                    await CardPrice.GetOrOpenPDLegalFile();
+                else
+                    await Task.Run(() => { CardPrice.ClearPDLegalList(); });
+            }
+
+            if (ViewModel.GetCardPrice != price || ViewModel.GetPDList != pd)
+                ViewModel.RefreshTab();
+
+            imgLoading.Visibility = Visibility.Hidden;
         }
 
         private void OnGoToNewRelease(object sender, RoutedEventArgs e)

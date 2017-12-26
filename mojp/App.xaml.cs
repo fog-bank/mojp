@@ -122,7 +122,8 @@ namespace Mojp
 
         protected override void OnExit(ExitEventArgs e)
         {
-            CardPrice.SaveCacheData();
+            if (Settings.Default.GetCardPrice)
+                CardPrice.SaveCacheData();
 
             Settings.Default.Save();
 

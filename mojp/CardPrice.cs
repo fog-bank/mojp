@@ -29,7 +29,12 @@ namespace Mojp
         private static HashSet<string> pdLegalCards = null;
 
         private const string CacheFileName = "price_list.txt";
-        private const string PDLegalFileName = "legal_cards.txt";
+        private const string PDLegalFileName = "pd_legal_cards.txt";
+
+        /// <summary>
+        /// カード価格取得を有効にするかどうかを示す値を取得または設定します。
+        /// </summary>
+        public static bool EnableCardPrice { get; set; }
 
         [AttachedPropertyBrowsableForType(typeof(TextBlock))]
         public static Card GetPriceTarget(TextBlock element) => element.GetValue(PriceTargetProperty) as Card;
@@ -49,7 +54,7 @@ namespace Mojp
         /// <returns>既にキャッシュ済みの場合はその値。そうでない場合は、プレースホルダの文字列。</returns>
         public static string GetPrice(Card card)
         {
-            if (IsSpecialCard(card))
+            if (!EnableCardPrice || IsSpecialCard(card))
                 return string.Empty;
 
             if (prices.TryGetValue(card.Name, out var value) && value?.Item1 != null)
@@ -71,6 +76,8 @@ namespace Mojp
             if (!File.Exists(CacheFileName))
                 return;
 
+            var now = DateTime.Now;
+
             using (var sr = File.OpenText(CacheFileName))
             {
                 while (!sr.EndOfStream)
@@ -79,7 +86,7 @@ namespace Mojp
                     string tix = sr.ReadLine();
                     string expire = sr.ReadLine();
 
-                    if (DateTime.TryParse(expire, out var expireTime))
+                    if (DateTime.TryParse(expire, out var expireTime) && expireTime > now)
                         prices.TryAdd(name, Tuple.Create(tix, expireTime));
                 }
             }
@@ -90,6 +97,9 @@ namespace Mojp
         /// </summary>
         public static void SaveCacheData()
         {
+            if (prices == null)
+                return;
+
             var now = DateTime.Now;
 
             using (var sw = File.CreateText(CacheFileName))
@@ -101,6 +111,15 @@ namespace Mojp
                     sw.WriteLine(pair.Value.Item2.ToString("o"));
                 }
             }
+        }
+
+        /// <summary>
+        /// カード価格のキャッシュデータをメモリから削除します。
+        /// </summary>
+        public static void ClearCacheData()
+        {
+            prices.Clear();
+            //File.Delete(CacheFileName);
         }
 
         /// <summary>
@@ -136,13 +155,22 @@ namespace Mojp
         }
 
         /// <summary>
+        /// Penny Dreadful のカードリストをメモリから削除します。
+        /// </summary>
+        public static void ClearPDLegalList()
+        {
+            pdLegalCards = null;
+            //File.Delete(PDLegalFileName);
+        }
+
+        /// <summary>
         /// <see cref="PriceTargetProperty"/> 添付プロパティの値が変更されたときに、カード価格情報の取得を行います。
         /// </summary>
         private static async void OnPriceTargetChanged(DependencyObject sender, DependencyPropertyChangedEventArgs e)
         {
             var card = e.NewValue as Card;
 
-            if (IsSpecialCard(card))
+            if (!EnableCardPrice || IsSpecialCard(card))
                 return;
 
             if (prices.TryGetValue(card.Name, out var value))

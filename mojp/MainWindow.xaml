@@ -138,9 +138,19 @@
                                     </Style>
                                 </TextBlock.Style>
                             </TextBlock>
-                            <Image Grid.Column="1" Source="Resources/pd.png" Height="18" Margin="6,0" VerticalAlignment="Center"
+                            <Image Grid.Column="1" Source="Resources/pd.png" Height="18" Margin="6,0,0,0" VerticalAlignment="Center"
                                    Visibility="Collapsed" local:CardPrice.LegalTarget="{Binding}" ToolTip="Penny Dreadful リーガル" />
-                            <TextBlock Grid.Column="2" VerticalAlignment="Center" Text="{Binding Price}" local:CardPrice.PriceTarget="{Binding}" />
+                            <TextBlock Grid.Column="2" Margin="6,0,0,0" VerticalAlignment="Center" Text="{Binding Price}" local:CardPrice.PriceTarget="{Binding}">
+                                <TextBlock.Style>
+                                    <Style TargetType="TextBlock">
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding Price}" Value="">
+                                                <Setter Property="Visibility" Value="Collapsed" />
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </TextBlock.Style>
+                            </TextBlock>
                         </Grid>
                     </Grid>
                 </DataTemplate>

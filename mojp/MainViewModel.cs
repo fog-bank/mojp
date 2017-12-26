@@ -27,6 +27,8 @@ namespace Mojp
         private TimeSpan refreshInterval = Settings.Default.RefreshInterval;
         private bool autoVersionCheck = Settings.Default.AutoVersionCheck;
         private bool acceptsPrerelease = Settings.Default.AcceptsPrerelease;
+        private bool getCardPrice = Settings.Default.GetCardPrice;
+        private bool getPDList = Settings.Default.GetPDList;
 
         private ObservableCollection<Card> cards = new ObservableCollection<Card>();
         private int selectedIndex = -1;
@@ -63,7 +65,6 @@ namespace Mojp
             {
                 fontFamily = value;
                 OnPropertyChanged();
-                Settings.Default.CardTextFontFamily = value;
             }
         }
 
@@ -77,7 +78,6 @@ namespace Mojp
             {
                 fontSize = value;
                 OnPropertyChanged();
-                Settings.Default.CardTextFontSize = value;
             }
         }
 
@@ -91,7 +91,6 @@ namespace Mojp
             {
                 topMost = value;
                 OnPropertyChanged();
-                Settings.Default.TopMost = value;
             }
         }
 
@@ -105,7 +104,6 @@ namespace Mojp
             {
                 width = value;
                 OnPropertyChanged();
-                Settings.Default.WindowWidth = value;
             }
         }
 
@@ -119,7 +117,6 @@ namespace Mojp
             {
                 height = value;
                 OnPropertyChanged();
-                Settings.Default.WindowHeight = value;
             }
         }
 
@@ -133,7 +130,6 @@ namespace Mojp
             {
                 left = value;
                 OnPropertyChanged();
-                Settings.Default.WindowLeft = value;
             }
         }
 
@@ -147,7 +143,6 @@ namespace Mojp
             {
                 top = value;
                 OnPropertyChanged();
-                Settings.Default.WindowTop = value;
             }
         }
 
@@ -161,7 +156,6 @@ namespace Mojp
             {
                 showBasicLands = value;
                 OnPropertyChanged();
-                Settings.Default.ShowBasicLands = value;
             }
         }
 
@@ -175,7 +169,6 @@ namespace Mojp
             {
                 autoRefresh = value;
                 OnPropertyChanged();
-                Settings.Default.AutoRefresh = value;
             }
         }
 
@@ -197,7 +190,6 @@ namespace Mojp
 
                 refreshInterval = TimeSpan.FromMilliseconds(value);
                 OnPropertyChanged();
-                Settings.Default.RefreshInterval = refreshInterval;
             }
         }
 
@@ -211,7 +203,6 @@ namespace Mojp
             {
                 autoVersionCheck = value;
                 OnPropertyChanged();
-                Settings.Default.AutoVersionCheck = value;
             }
         }
 
@@ -225,7 +216,33 @@ namespace Mojp
             {
                 acceptsPrerelease = value;
                 OnPropertyChanged();
-                Settings.Default.AcceptsPrerelease = value;
+            }
+        }
+
+        /// <summary>
+        /// カード価格を scryfall.com に問い合わせるかどうかを示す値を取得または設定します。
+        /// </summary>
+        public bool GetCardPrice
+        {
+            get => getCardPrice;
+            set
+            {
+                getCardPrice = value;
+                OnPropertyChanged();
+                CardPrice.EnableCardPrice = value;
+            }
+        }
+
+        /// <summary>
+        /// Penny Dreadful のカードリストを取得するかどうかを示す値を取得または設定します。
+        /// </summary>
+        public bool GetPDList
+        {
+            get => getPDList;
+            set
+            {
+                getPDList = value;
+                OnPropertyChanged();
             }
         }
 
@@ -321,6 +338,11 @@ namespace Mojp
         }
 
         /// <summary>
+        /// 画面を更新するように要求します。
+        /// </summary>
+        public void RefreshTab() => SearchCardName();
+
+        /// <summary>
         /// Preview Pane を自動的に探索するためのタイマーを必要なら設定します。
         /// </summary>
         public void SetRefreshTimer(Dispatcher dispatcher)
@@ -344,6 +366,27 @@ namespace Mojp
         /// MO のプレビューウィンドウを探します。
         /// </summary>
         public void CapturePreviewPane() => OnCapture(null, EventArgs.Empty);
+
+        /// <summary>
+        /// 現在の設定を <see cref="Settings"/> に書き戻します。
+        /// </summary>
+        public void SaveSettings()
+        {
+            Settings.Default.AcceptsPrerelease = AcceptsPrerelease;
+            Settings.Default.AutoRefresh = AutoRefresh;
+            Settings.Default.AutoVersionCheck = AutoVersionCheck;
+            Settings.Default.CardTextFontFamily = FontFamily;
+            Settings.Default.CardTextFontSize = FontSize;
+            Settings.Default.GetCardPrice = GetCardPrice;
+            Settings.Default.GetPDList = GetPDList;
+            Settings.Default.RefreshInterval = TimeSpan.FromMilliseconds(RefreshIntervalMilliseconds);
+            Settings.Default.ShowBasicLands = ShowBasicLands;
+            Settings.Default.TopMost = TopMost;
+            Settings.Default.WindowHeight = WindowHeight;
+            Settings.Default.WindowLeft = WindowLeft;
+            Settings.Default.WindowTop = WindowTop;
+            Settings.Default.WindowWidth = WindowWidth;
+        }
 
         /// <summary>
         /// 各リソースを解放します。
