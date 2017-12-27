@@ -136,6 +136,10 @@ namespace Mojp
                 }
                 catch { Debug.WriteLine("HTTPS アクセスに失敗しました。"); }
 
+                if (response == null)
+                    return;
+
+                using (response)
                 using (var file = File.Create(PDLegalFileName))
                     await response.CopyToAsync(file);
             }
