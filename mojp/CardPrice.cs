@@ -153,9 +153,11 @@ namespace Mojp
                 if (line.Contains(split[0]))
                     pdLegalCards.UnionWith(line.Split(split, StringSplitOptions.RemoveEmptyEntries));
                 else
-                    pdLegalCards.Add(line);
+                    pdLegalCards.Add(Card.NormalizeName(line));
             }
             CardPrice.pdLegalCards = pdLegalCards;
+
+            Debug.Assert(!pdLegalCards.Except(App.Cards.Keys).Any());
         }
 
         /// <summary>

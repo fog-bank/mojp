@@ -621,57 +621,7 @@ namespace Mojp
                 return string.Empty;
 
             // 特殊文字を置き換える (アキュート・アクセントつきの文字など)
-            var sb = new StringBuilder(name.Length + 1);
-            bool replaced = false;
-
-            foreach (char c in name)
-            {
-                switch (c)
-                {
-                    // Æther Vial など
-                    // カラデシュ発売時のオラクル更新でほとんどの Æ は Ae に置換された。ただし WHISPER や wiki では AE のまま
-                    //case 'Æ':
-                    //	sb.Append("AE");
-                    //	replaced = true;
-                    //	break;
-
-                    // Márton Stromgald や Dandân や Déjà Vu など
-                    case 'á':
-                    case 'â':
-                    case 'à':
-                        sb.Append("a");
-                        replaced = true;
-                        break;
-
-                    // Ifh-Bíff Efreet
-                    case 'í':
-                        sb.Append("i");
-                        replaced = true;
-                        break;
-
-                    // Junún Efreet や Lim-Dûl the Necromancer など
-                    case 'ú':
-                    case 'û':
-                        sb.Append("u");
-                        replaced = true;
-                        break;
-
-                    // Séance など
-                    case 'é':
-                        sb.Append("e");
-                        replaced = true;
-                        break;
-
-                    default:
-                        sb.Append(c);
-                        break;
-                }
-            }
-
-            if (replaced)
-                name = sb.ToString();
-
-            return name;
+            return Card.NormalizeName(name);
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

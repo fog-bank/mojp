@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Text.RegularExpressions;
 using System.Xml;
 using System.Xml.Linq;
@@ -11,6 +12,69 @@ namespace Mojp
 {
     partial class Card
     {
+        /// <summary>
+        /// アクセント記号付きのカード名などを修正します。
+        /// </summary>
+        public static string NormalizeName(string name)
+        {
+            if (name == null)
+                return null;
+
+            var sb = new StringBuilder(name.Length);
+            bool replaced = false;
+
+            foreach (char c in name)
+            {
+                switch (c)
+                {
+                    // Æther Vial など
+                    // カラデシュ発売時のオラクル更新でほとんどの Æ は Ae に置換された。ただし WHISPER や wiki では AE のまま
+                    //case 'Æ':
+                    //	sb.Append("AE");
+                    //	replaced = true;
+                    //	break;
+
+                    // Márton Stromgald や Dandân や Déjà Vu など
+                    case 'á':
+                    case 'â':
+                    case 'à':
+                        sb.Append("a");
+                        replaced = true;
+                        break;
+
+                    // Ifh-Bíff Efreet
+                    case 'í':
+                        sb.Append("i");
+                        replaced = true;
+                        break;
+
+                    // Junún Efreet や Lim-Dûl the Necromancer など
+                    case 'ú':
+                    case 'û':
+                        sb.Append("u");
+                        replaced = true;
+                        break;
+
+                    // Séance など
+                    case 'é':
+                        sb.Append("e");
+                        replaced = true;
+                        break;
+
+                    // Jötun Owl Keeper など (PD カードリスト用)
+                    case 'ö':
+                        sb.Append("o");
+                        replaced = true;
+                        break;
+
+                    default:
+                        sb.Append(c);
+                        break;
+                }
+            }
+            return replaced ? sb.ToString() : name;
+        }
+
         /// <summary>
         /// WHISPER の検索結果テキストを解析し、カード情報を列挙します。
         /// </summary>
