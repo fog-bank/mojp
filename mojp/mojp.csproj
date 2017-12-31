@@ -109,9 +109,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Resources\Close.png" />
+    <Resource Include="Resources\Warning.png" />
     <Resource Include="Resources\pd.png" />
     <Resource Include="Resources\Alerts.png" />
-    <Resource Include="Resources\Disable.png" />
     <Resource Include="Resources\Camera.png" />
     <Resource Include="Resources\Gears.png" />
     <Resource Include="Resources\Checkmark.png" />

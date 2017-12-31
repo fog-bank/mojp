@@ -49,8 +49,12 @@ namespace Mojp
             });
 
             if (ViewModel.GetPDList)
-                await CardPrice.GetOrOpenPDLegalFile();
+            {
+                bool successPd = await CardPrice.GetOrOpenPDLegalFile();
 
+                if (!successPd)
+                    pdError.Visibility = Visibility.Visible;
+            }
             imgLoading.Visibility = Visibility.Hidden;
             ViewModel.SetRefreshTimer(Dispatcher);
 
@@ -99,8 +103,8 @@ namespace Mojp
             {
                 Owner = this
             };
-            bool price = ViewModel.GetCardPrice;
-            bool pd = ViewModel.GetPDList;
+            bool oldPrice = ViewModel.GetCardPrice;
+            bool oldPd = ViewModel.GetPDList;
 
             dlg.ShowDialog();
 
@@ -112,10 +116,10 @@ namespace Mojp
             notifier.Visibility = ViewModel.AutoVersionCheck &&
                 await App.IsOutdatedRelease(ViewModel.AcceptsPrerelease) ? Visibility.Visible : Visibility.Collapsed;
 
-            // カード価格関連の変更を反映
+            // カード価格関連の変更を反映するために await
             imgLoading.Visibility = Visibility.Visible;
 
-            if (ViewModel.GetCardPrice != price)
+            if (ViewModel.GetCardPrice != oldPrice)
             {
                 await Task.Run(() =>
                 {
@@ -126,15 +130,21 @@ namespace Mojp
                 });
             }
 
-            if (ViewModel.GetPDList != pd)
+            if (ViewModel.GetPDList != oldPd)
             {
                 if (ViewModel.GetPDList)
-                    await CardPrice.GetOrOpenPDLegalFile();
+                {
+                    bool successPd = await CardPrice.GetOrOpenPDLegalFile();
+                    pdError.Visibility = successPd ? Visibility.Collapsed : Visibility.Visible;
+                }
                 else
-                    await Task.Run(() => { CardPrice.ClearPDLegalList(); });
+                {
+                    CardPrice.ClearPDLegalList();
+                    pdError.Visibility = Visibility.Collapsed;
+                }
             }
 
-            if (ViewModel.GetCardPrice != price || ViewModel.GetPDList != pd)
+            if (ViewModel.GetCardPrice != oldPrice || ViewModel.GetPDList != oldPd)
                 ViewModel.RefreshTab();
 
             imgLoading.Visibility = Visibility.Hidden;
@@ -147,6 +157,8 @@ namespace Mojp
         }
 
         private void OnCloseNotifier(object sender, RoutedEventArgs e) => notifier.Visibility = Visibility.Collapsed;
+
+        private void OnClosePdError(object sender, RoutedEventArgs e) => pdError.Visibility = Visibility.Collapsed;
 
         private async void OnHide(object sender, RoutedEventArgs e)
         {

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -30,6 +31,7 @@ namespace Mojp
 
         private const string CacheFileName = "price_list.txt";
         private const string PDLegalFileName = "pd_legal_cards.txt";
+        private const string HttpErrorMsg = "取得失敗";
 
         /// <summary>
         /// カード価格取得を有効にするかどうかを示す値を取得または設定します。
@@ -104,8 +106,16 @@ namespace Mojp
 
             using (var sw = File.CreateText(CacheFileName))
             {
-                foreach (var pair in prices.Where(pair => !string.IsNullOrEmpty(pair.Value?.Item1) && pair.Value.Item2 > now))
+                foreach (var pair in prices)
                 {
+                    // 取得中 or 取得失敗のデータは破棄
+                    if (string.IsNullOrEmpty(pair.Value?.Item1) || pair.Value.Item1 == HttpErrorMsg)
+                        continue;
+
+                    // 有効期限切れの価格情報は破棄
+                    if (pair.Value.Item2 < now)
+                        continue;
+
                     sw.WriteLine(pair.Key);
                     sw.WriteLine(pair.Value.Item1);
                     sw.WriteLine(pair.Value.Item2.ToString("o"));
@@ -125,23 +135,27 @@ namespace Mojp
         /// <summary>
         /// Penny Dreadful のカードリストを取得するか、取得済みのファイルを開き、カードリストを準備します。
         /// </summary>
-        public static async Task GetOrOpenPDLegalFile()
+        public static async Task<bool> GetOrOpenPDLegalFile()
         {
             if (!File.Exists(PDLegalFileName) || DateTime.Now - File.GetLastWriteTime(PDLegalFileName) > TimeSpan.FromDays(1))
             {
-                Stream response = null;
                 try
                 {
-                    response = await App.HttpClient.Value.GetStreamAsync("http://pdmtgo.com/legal_cards.txt");
+                    using (var response = await App.HttpClient.Value.GetAsync(
+                        "http://pdmtgo.com/legal_cards.txt", HttpCompletionOption.ResponseHeadersRead))
+                    {
+                        if (!response.IsSuccessStatusCode)
+                            return false;
+
+                        using (var file = File.Create(PDLegalFileName))
+                            await response.Content.CopyToAsync(file);
+                    }
                 }
-                catch { Debug.WriteLine("HTTPS アクセスに失敗しました。"); }
-
-                if (response == null)
-                    return;
-
-                using (response)
-                using (var file = File.Create(PDLegalFileName))
-                    await response.CopyToAsync(file);
+                catch
+                {
+                    Debug.WriteLine("PD カードリストのダウンロードに失敗しました。");
+                    return false;
+                }
             }
 
             var pdLegalCards = new HashSet<string>();
@@ -157,7 +171,9 @@ namespace Mojp
             }
             CardPrice.pdLegalCards = pdLegalCards;
 
+            // デバッグ時は全カード名をチェック。リリース時は枚数のみチェック (少なくとも基本土地5枚は入る)
             Debug.Assert(!pdLegalCards.Except(App.Cards.Keys).Any());
+            return pdLegalCards.Count >= 5;
         }
 
         /// <summary>
@@ -252,11 +268,11 @@ namespace Mojp
         /// <summary>
         /// scryfall.com からカード価格を取得します。
         /// </summary>
-        /// <returns>取得前のエラーは <see langword="null"/> 。取得時や取得後のエラーは <see cref="string.Empty"/> 。</returns>
         private static async Task<string> GetCardPrice(string cardName)
         {
             const string NoPrice = "― tix";
 
+            // 前回アクセスから 200 ms 以上空ける
             if (usingScryfall || DateTime.Now - requestTime < TimeSpan.FromMilliseconds(200) || usingScryfall)
             {
                 Debug.WriteLine("× " + cardName + " (" + DateTime.Now.TimeOfDay + ")");
@@ -267,51 +283,59 @@ namespace Mojp
             string uri = "https://api.scryfall.com/cards/search?order=tix&q=" + Uri.EscapeUriString(cardName.Replace("'", null));
             Debug.WriteLine(uri + " (" + DateTime.Now.TimeOfDay + ")");
 
-            string response = null;
+            string json = null;
             try
             {
-                response = await App.HttpClient.Value.GetStringAsync(uri);
+                using (var response = await App.HttpClient.Value.GetAsync(uri, HttpCompletionOption.ResponseHeadersRead))
+                {
+                    if (response.IsSuccessStatusCode)
+                        json = await response.Content.ReadAsStringAsync();
+                }
             }
-            catch { Debug.WriteLine("HTTPS アクセスに失敗しました。"); }
+            catch { Debug.WriteLine("Scryfall へのアクセスに失敗しました。"); }
 
             requestTime = DateTime.Now;
             usingScryfall = false;
 
-            if (response == null)
-                return NoPrice;
+            if (json == null)
+                return HttpErrorMsg;
 
-            // exact サーチじゃないので、複数ヒットする可能性がある
+            // ヒット件数の確認
             const string TotalCardsTag = "\"total_cards\":";
-            int startIndex = response.IndexOf(TotalCardsTag);
+            int startIndex = json.IndexOf(TotalCardsTag);
 
             if (startIndex == -1)
                 return NoPrice;
 
-            if (response.Substring(startIndex + TotalCardsTag.Length, 2) != "1,")
+            if (json.Substring(startIndex + TotalCardsTag.Length, 2) != "1,")
             {
+                // exact サーチじゃないので、複数ヒットする可能性がある
                 const string CardTag = "\"name\":";
-                startIndex = response.IndexOf(CardTag + "\"" + cardName.Replace("+", " // ") + "\"");
+                startIndex = json.IndexOf(CardTag + "\"" + cardName.Replace("+", " // ") + "\"");
 
                 if (startIndex == -1)
                     return NoPrice;
             }
-            const string RelatedTag = "\"related_uris\":";
-            int endIndex = response.IndexOf(RelatedTag, startIndex);
 
+            // tix 情報を探す範囲をカード 1 種類分に絞る
+            const string RelatedTag = "\"related_uris\":";
+            int endIndex = json.IndexOf(RelatedTag, startIndex);
+
+            // PD リーガル情報
             //const string PDLegalityTag = "\"penny\":";
             //const string LegalValue = "\"legal\"";
             //int regalityIndex = response.IndexOf(PDLegalityTag, startIndex, endIndex - startIndex);
             //string isPDRegal = response.IndexOf(LegalValue, regalityIndex, PDLegalityTag.Length + LegalValue.Length) != -1 ? "[PD] " : string.Empty;
 
             const string TixTag = "\"tix\":";
-            startIndex = response.IndexOf(TixTag, startIndex, endIndex - startIndex);
+            startIndex = json.IndexOf(TixTag, startIndex, endIndex - startIndex);
 
             if (startIndex == -1)
                 return NoPrice;
 
-            startIndex = response.IndexOf('"', startIndex + TixTag.Length) + 1;
-            endIndex = response.IndexOf('"', startIndex);
-            return response.Substring(startIndex, endIndex - startIndex) + " tix";
+            startIndex = json.IndexOf('"', startIndex + TixTag.Length) + 1;
+            endIndex = json.IndexOf('"', startIndex);
+            return json.Substring(startIndex, endIndex - startIndex) + " tix";
         }
     }
 }

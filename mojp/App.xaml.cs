@@ -122,13 +122,13 @@ namespace Mojp
 
         protected override void OnExit(ExitEventArgs e)
         {
-            if (Settings.Default.GetCardPrice)
-                CardPrice.SaveCacheData();
+            if (HttpClient.IsValueCreated)
+                HttpClient.Value.Dispose();
 
             Settings.Default.Save();
 
-            if (HttpClient.IsValueCreated)
-                HttpClient.Value.Dispose();
+            if (Settings.Default.GetCardPrice)
+                CardPrice.SaveCacheData();
 
             Debug.WriteLine("#cards handling PropertyChanged = " + Cards.Values.Count(card => card.IsObserved));
 

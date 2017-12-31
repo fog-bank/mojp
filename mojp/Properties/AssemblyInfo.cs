@@ -9,7 +9,7 @@ using System.Windows;
 [assembly: AssemblyTitle("MTGO Japanese Card Text Preview")]
 [assembly: AssemblyCompany("co3366353")]
 [assembly: AssemblyProduct("mojp")]
-[assembly: AssemblyCopyright("Copyright © 2017 fog-bank. Some rights reserved.")]
+[assembly: AssemblyCopyright("Copyright © 2018 fog-bank. Some rights reserved.")]
 [assembly: NeutralResourcesLanguage("ja-JP")]
 
 // Icon 1: https://www.iconfinder.com/icons/6000/book_dictionary_learn_school_translate_icon#size=128
@@ -52,4 +52,4 @@ using System.Windows;
 // 既定値にすることができます:
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.7.0.0")]
-[assembly: AssemblyFileVersion("1.7.21228.75")]
+[assembly: AssemblyFileVersion("1.7.30101.76")]

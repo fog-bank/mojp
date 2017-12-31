@@ -228,8 +228,8 @@ namespace Mojp
             set
             {
                 getCardPrice = value;
-                OnPropertyChanged();
                 CardPrice.EnableCardPrice = value;
+                OnPropertyChanged();
             }
         }
 
