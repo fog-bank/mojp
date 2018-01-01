@@ -7,17 +7,35 @@
 クリーチャー１体があなたに戦闘ダメージを与えるたび、それのコントローラーが統治者になる。</card>
     <card name="City's Blessing" jaName="都市の承認" type="" wikilink="都市の承認"></card>
     <!-- RIX -->
-    <card name="Silvergill Adept" jaName="銀エラの達人" type="クリーチャー ― マーフォーク・ウィザード" pt="2/1">銀エラの達人を唱えるための追加コストとして、あなたの手札にあるマーフォーク・カード１枚を公開するか(３)を支払う。
+    <card name="Silvergill Adept" jaName="銀エラの達人" type="クリーチャー ― マーフォーク・ウィザード" pt="2/1">銀エラの達人を唱えるための追加コストとして、あなたの手札からマーフォーク・カード１枚を公開するか(３)を支払う。
 銀エラの達人が戦場に出たとき、カードを１枚引く。</card>
 
+    <card name="Tetzimoc, Primal Death" jaName="原初の死、テジマク" type="伝説のクリーチャー ― エルダー・恐竜" pt="6/6">接死
+(黒),あなたの手札から原初の死、テジマクを公開する：クリーチャー１体を対象とし、それの上に餌食カウンターを１個置く。この能力は、あなたのターンの間にのみ起動できる。
+原初の死、テジマクが戦場に出たとき、対戦相手がコントロールしていて餌食カウンターが置かれている各クリーチャーを破壊する。</card>
+
+    <card name="Vona's Hunger" jaName="ヴォーナの飢え" type="インスタント">昇殿（あなたがパーマネントを１０個以上コントロールしているなら、このゲームの間、あなたは都市の承認を得る。）
+各対戦相手はそれぞれクリーチャー１体を生け贄に捧げる。あなたが都市の承認を持っているなら、代わりに、各対戦相手はそれぞれ、自分がコントロールしているクリーチャーのうち端数を切り上げた半分を生け贄に捧げる。</card>
+    
     <card name="Brass's Bounty" jaName="鉄面提督の報奨" type="ソーサリー">あなたがコントロールしている土地１つにつき、「(Ｔ),このアーティファクトを生け贄に捧げる：あなたのマナ・プールに、好きな色１色のマナ１点を加える。」を持つ無色の宝物・アーティファクト・トークンを１つ生成する。</card>
     
     <card name="Ghalta, Primal Hunger" jaName="原初の飢え、ガルタ" type="伝説のクリーチャー ― エルダー・恐竜" pt="12/12">原初の飢え、ガルタを唱えるためのコストは(Ｘ)少なくなる。Ｘはあなたがコントロールしているクリーチャーのパワーの合計に等しい。
 トランプル</card>
 
+    <card name="Storm the Vault" jaName="宝物庫襲撃" type="伝説のエンチャント" related="Vault of Catlacan">あなたがコントロールしているクリーチャー１体以上がプレイヤー１人に戦闘ダメージを与えるたび、「(Ｔ),このアーティファクトを生け贄に捧げる：あなたのマナ・プールに、好きな色１色のマナ１点を加える。」を持つ無色の宝物・アーティファクト・トークンを１つ生成する。
+あなたの終了ステップの開始時に、あなたがアーティファクトを５つ以上コントロールしている場合、宝物庫襲撃を変身させる。</card>
+    <card name="Vault of Catlacan" jaName="カトラカンの宝物庫" type="伝説の土地" related="Storm the Vault">（《宝物庫襲撃/Storm the Vault》から変身する。）
+(Ｔ)：あなたのマナ・プールに、好きな色１色のマナ１点を加える。
+(Ｔ)：あなたのマナ・プールに、あなたがコントロールしているアーティファクト１つにつき(青)を加える。</card>
+
     <card name="Captain's Hook" jaName="船長の鉤" type="アーティファクト ― 装備品">装備しているクリーチャーは+2/+0の修整を受けるとともに威迫を持ち、他のクリーチャー・タイプに加えて海賊でもある。
 船長の鉤がパーマネントからはずれた状態になるたび、そのパーマネントを破壊する。
 装備(１)</card>
+
+    <card name="The Immortal Sun" jaName="不滅の太陽" type="伝説のアーティファクト">プレイヤーはプレインズウォーカーの忠誠度能力を起動できない。
+あなたのドロー・ステップの開始時に、カードを追加で１枚引く。
+あなたが呪文を唱えるためのコストは(１)少なくなる。
+あなたがコントロールしているクリーチャーは+1/+1の修整を受ける。</card>
     
     <card name="Evolving Wilds" jaName="進化する未開地" type="土地">(Ｔ),進化する未開地を生け贄に捧げる：あなたのライブラリーから基本土地・カード１枚を探し、それをタップ状態で戦場に出し、その後あなたのライブラリーを切り直す。</card>
     <card name="Vraska, Scheming Gorgon" jaName="ゴルゴンの陰謀家、ヴラスカ" type="伝説のプレインズウォーカー ― ヴラスカ" pt="5">[+2]：ターン終了時まで、あなたがコントロールしているクリーチャーは+1/+0の修整を受ける。
@@ -416,8 +434,7 @@
     <pt name="Fell Flagship" pt="3/3" />
     <pt name="Shadowed Caravel" pt="2/2" />
     <pt name="Sleek Schooner" pt="4/3" />
-    <!-- 参照カード -->
-    <related name="Ajani's Aid" related="Ajani, Valiant Protector" />
+    <!-- 関連カード -->
     <related name="Angel's Herald" related="Empyrial Archangel" />
     <related name="Arachnus Spinner" related="Arachnus Web" />
     <related name="Behemoth's Herald" related="Godsire" />
@@ -432,18 +449,14 @@
     <related name="Diligent Farmhand" related="Muscle Burst" />
     <related name="Dragon's Herald" related="Hellkite Overlord" />
     <related name="Gate to the Afterlife" related="God-Pharaoh's Gift" />
-    <related name="Gideon's Resolve" related="Gideon, Martial Paragon" />
-    <related name="Grasping Current" related="Jace, Ingenious Mind-Mage" />
     <related name="Helm of Kaldra" related="Sword of Kaldra|Shield of Kaldra|Helm of Kaldra" />
     <related name="Shield of Kaldra" related="Sword of Kaldra|Shield of Kaldra|Helm of Kaldra" />
     <related name="Kookus" related="Keeper of Kookus" />
     <related name="Kyscu Drake" related="Spitting Drake|Viashivan Dragon" />
-    <related name="Liberating Combustion" related="Chandra, Pyrogenius" />
-    <related name="Liliana's Influence" related="Liliana, Death Wielder" />
     <related name="Liu Bei, Lord of Shu" related="Guan Yu, Sainted Warrior|Zhang Fei, Fierce Warrior" />
+    <related name="Marauding Maulhorn" related="Advocate of the Beast" />
     <related name="Nazahn, Revered Bladesmith" related="Hammer of Nazahn" />
     <related name="Nissa Revane" related="Nissa's Chosen" />
-    <related name="Nissa's Encouragement" related="Forest|Brambleweft Behemoth|Nissa, Genesis Mage" />
     <related name="Pardic Firecat" related="Flame Burst" />
     <related name="Pious Kitsune" related="Eight-and-a-Half-Tails" />
     <related name="Renowned Weaponsmith" related="Heart-Piercer Bow|Vial of Dragonfire" />
@@ -451,13 +464,21 @@
     <related name="Ruin in Their Wake" related="Wastes" />
     <related name="Sift Through Sands" related="Peer Through Depths|Reach Through Mists|The Unspeakable" />
     <related name="Sphinx's Herald" related="Sphinx Sovereign" />
-    <related name="Sun-Blessed Mount" related="Huatli, Dinosaur Knight" />
-    <related name="Tezzeret's Betrayal" related="Tezzeret, Master of Metal" />
     <related name="Urborg Panther" related="Feral Shadow|Breathstealer|Spirit of the Night" />
-    <related name="Verdant Crescendo" related="Nissa, Nature's Artisan" />
-    <related name="Visage of Bolas" related="Nicol Bolas, the Deceiver" />
-    <related name="Marauding Maulhorn" related="Advocate of the Beast" />
     <related name="Walker of the Wastes" related="Wastes" />
+    <!-- 関連カード（PW デッキ） -->
+    <related name="Liberating Combustion" related="Chandra, Pyrogenius" />
+    <related name="Verdant Crescendo" related="Nissa, Nature's Artisan" />
+    <related name="Tezzeret's Betrayal" related="Tezzeret, Master of Metal" />
+    <related name="Ajani's Aid" related="Ajani, Valiant Protector" />
+    <related name="Gideon's Resolve" related="Gideon, Martial Paragon" />
+    <related name="Liliana's Influence" related="Liliana, Death Wielder" />
+    <related name="Nissa's Encouragement" related="Forest|Brambleweft Behemoth|Nissa, Genesis Mage" />
+    <related name="Visage of Bolas" related="Nicol Bolas, the Deceiver" />
+    <related name="Grasping Current" related="Jace, Ingenious Mind-Mage" />
+    <related name="Sun-Blessed Mount" related="Huatli, Dinosaur Knight" />
+    <related name="Vraska's Scorn" related="Vraska, Scheming Gorgon" />
+    <related name="Angrath's Fury" related="Angrath, Minotaur Pirate" />
     <!-- 分割カードのwikiページ -->
     <wikilink name="Stand" wikilink="抵抗+救難/Stand+Deliver" />
     <wikilink name="Deliver" wikilink="抵抗+救難/Stand+Deliver" />
@@ -1548,7 +1569,7 @@ Knowledge Vaultが戦場を離れたとき、Knowledge Vaultにより追放さ�
     <card name="Triton Tactics" jaName="トリトンの戦術" type="インスタント">クリーチャー最大２体を対象とする。ターン終了時まで、それらはそれぞれ+0/+3の修整を受ける。それらのクリーチャーをアンタップする。このターンの次の戦闘終了時に、このターンにそれらのクリーチャーによってブロックされた各クリーチャーをタップする。それらはそれらのコントローラーの次のアンタップ・ステップにアンタップしない。</card>
     <card name="Wake Thrasher" jaName="航跡の打破者" type="クリーチャー ― マーフォーク・兵士" pt="1/1">あなたがコントロールしているパーマネントが１つアンタップ状態になるたび、ターン終了時まで、航跡の打破者は+1/+1の修整を受ける。</card>
     <!-- RIX -->
-    <card name="Silvergill Adept" jaName="銀エラの達人" type="クリーチャー ― マーフォーク・ウィザード" pt="2/1">銀エラの達人を唱えるための追加コストとして、あなたの手札にあるマーフォーク・カード１枚を公開するか(３)を支払う。
+    <card name="Silvergill Adept" jaName="銀エラの達人" type="クリーチャー ― マーフォーク・ウィザード" pt="2/1">銀エラの達人を唱えるための追加コストとして、あなたの手札からマーフォーク・カード１枚を公開するか(３)を支払う。
 銀エラの達人が戦場に出たとき、カードを１枚引く。</card>
     <card name="Evolving Wilds" jaName="進化する未開地" type="土地">(Ｔ),進化する未開地を生け贄に捧げる：あなたのライブラリーから基本土地・カード１枚を探し、それをタップ状態で戦場に出し、その後あなたのライブラリーを切り直す。</card>
     <!-- サブタイプが正常でないカード -->
