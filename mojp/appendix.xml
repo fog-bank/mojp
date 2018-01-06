@@ -952,7 +952,7 @@
     <regex target="text" pattern="\([a-zA-Z'\- ]+\)・?(?=クリーチャー|アーティファクト|土地|カード|呪文|パーマネント)" value="・" nodebug="true" />
     <regex target="type|text" pattern="\([a-zA-Z'\- ]+\)" value="" nodebug="true" />
     <!-- オラクル更新 -->
-    <regex target="text" pattern="トークンを([０-９Ｘ]+)体戦場に出す。" value="トークンを$1体生成する。" nodebug="true" />
+    <regex target="text" pattern="(?&lt;=トークンを[０-９Ｘ]+体)戦場に出す。" value="生成する。" nodebug="true" />
     <regex target="text" pattern="可能なら毎ターン" value="可能なら各戦闘で" />
     <!-- 中丸追加 -->
     <regex target="type" pattern="部族(?=アーティファクト|エンチャント|インスタント|ソーサリー)" value="部族・" nodebug="true" />
@@ -968,6 +968,7 @@
     <regex target="text" pattern="(?&lt;=たび、)ターン終了時まで(?!、)" value="ターン終了時まで、" nodebug="true" />
     <regex target="text" pattern="(?&lt;=そうしたなら、|とともに、)次の終了ステップの開始時に(?!、)" value="次の終了ステップの開始時に、" nodebug="true" />
     <regex target="text" pattern="追加コストとして(?!、)" value="追加コストとして、" nodebug="true" />
+    <regex target="text" pattern="あなたのマナ・プールに、好きな色１色のマナ(?=[０-９Ｘ]+点を加え)" value="あなたのマナ・プールに好きな色１色のマナ" nodebug="true" />
     <!-- 順序変更 -->
     <regex target="text" pattern="それはこのターン、?(?!の)" value="このターン、それは" nodebug="true" />
     <regex target="text" pattern="タイプや色" value="色やタイプ" />
@@ -1057,7 +1058,7 @@
     <regex target="text" pattern="(?&lt;=アーティファクト|土地|森|パーマネント)が(あなたのコントロール下で)?戦場に出るたび、" value="が１つ$1戦場に出るたび、" nodebug="true" />
     <regex target="text" pattern="(?&lt;=クリーチャー|クリーチャー・トークン)が戦場を離れるたび、" value="が１体戦場を離れるたび、" />
     <regex target="text" pattern="呪文を１つ唱えるたび、" value="呪文を唱えるたび、" nodebug="true" />
-    <regex target="text" pattern="あなたのマナ・プールに(?:、好きな色|好きな色(?:１色)?)のマナ(?=[０-９Ｘ]+点を加え)" value="あなたのマナ・プールに好きな色１色のマナ" nodebug="true" />
+    <regex target="text" pattern="あなたのマナ・プールに、?好きな色のマナ(?=[０-９Ｘ]+点を加え)" value="あなたのマナ・プールに好きな色１色のマナ" nodebug="true" />
     <regex target="text" pattern="を対象とし、それはターン終了時まで" value="を対象とする。ターン終了時まで、それは" nodebug="true" />
     <regex target="text" pattern="を対象とし、それを、?([^。]+)かぎり、?" value="を対象とする。$1かぎり、それを" nodebug="true" />
     <regex target="text" pattern="その(?=上から|コントローラー)" value="それの" nodebug="true" />

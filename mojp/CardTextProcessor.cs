@@ -61,7 +61,7 @@ namespace Mojp
                         replaced = true;
                         break;
 
-                    // Jötun Owl Keeper など (PD カードリスト用)
+                    // Jötun Owl Keeper など (PD カードリスト用。MO では o になっている)
                     case 'ö':
                         sb.Append("o");
                         replaced = true;

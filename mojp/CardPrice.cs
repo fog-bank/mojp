@@ -159,20 +159,24 @@ namespace Mojp
             }
 
             var pdLegalCards = new HashSet<string>();
-            var split = new[] { " // " };
+            var separator = new[] { " // " };
 
             foreach (string line in File.ReadLines(PDLegalFileName))
             {
                 // 分割カードは名前を分ける
-                if (line.Contains(split[0]))
-                    pdLegalCards.UnionWith(line.Split(split, StringSplitOptions.RemoveEmptyEntries));
-                else
-                    pdLegalCards.Add(Card.NormalizeName(line));
+                foreach (string name in line.Split(separator, StringSplitOptions.RemoveEmptyEntries))
+                {
+                    string cardName = Card.NormalizeName(name);
+
+                    if (!App.Cards.ContainsKey(cardName))
+                        return false;
+
+                    pdLegalCards.Add(cardName);
+                }
             }
             CardPrice.pdLegalCards = pdLegalCards;
 
-            // デバッグ時は全カード名をチェック。リリース時は枚数のみチェック (少なくとも基本土地5枚は入る)
-            Debug.Assert(!pdLegalCards.Except(App.Cards.Keys).Any());
+            // 枚数をチェック (少なくとも基本土地5枚は入る)
             return pdLegalCards.Count >= 5;
         }
 
@@ -212,12 +216,12 @@ namespace Mojp
 
             // 分割カード名は修正したうえで scryfall.com に問い合わせ
             string query = card.WikiLink != null && card.WikiLink.Contains("/") ? card.WikiLink.Split('/')[1] : card.Name;
-            string tix = await GetCardPrice(query).ConfigureAwait(false);
+            string tix = await GetCardPrice(query);
             
             if (tix == null)
             {
                 // リクエスト間隔が短すぎたか、ネットワークが遅い場合
-                await Task.Delay(500);
+                await Task.Delay(1000);
 
                 if (!card.IsObserved)
                 {

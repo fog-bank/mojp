@@ -121,13 +121,10 @@ namespace Mojp
 
             if (ViewModel.GetCardPrice != oldPrice)
             {
-                await Task.Run(() =>
-                {
-                    if (CardPrice.EnableCardPrice)
-                        CardPrice.OpenCacheData();
-                    else
-                        CardPrice.ClearCacheData();
-                });
+                if (CardPrice.EnableCardPrice)
+                    await Task.Run(() => CardPrice.OpenCacheData());
+                else
+                    CardPrice.ClearCacheData();
             }
 
             if (ViewModel.GetPDList != oldPd)
