@@ -86,13 +86,12 @@ namespace Mojp
             {
                 if (card.HasJapaneseName)
                 {
-                    link = Uri.EscapeUriString(card.JapaneseName) + "/" + card.Name.Replace(' ', '_');
+                    link = card.JapaneseName + "/" + card.Name.Replace(' ', '_');
                 }
                 else
                     link = card.Name.Replace(' ', '_');
             }
-            else
-                link = Uri.EscapeUriString(link);
+            link = Uri.EscapeUriString(link);
 
             Process.Start("http://mtgwiki.com/wiki/" + link);
         }

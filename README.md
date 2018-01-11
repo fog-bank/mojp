@@ -6,9 +6,9 @@
 ## 主な機能
 * MO の Preview Pane に表示されているカードの日本語テキストを表示する
 * カード名（日本語または英語）をコピーする
-* カードを [MTG Wiki](http://mtgwiki.com/) で調べる
-* カードが [Penny Dreadful](http://pdmtgo.com/) で使用可能かどうかを表示する
-* MO での相場を [Scryfall](https://scryfall.com/) で調べる
+* [MTG Wiki](http://mtgwiki.com/) でカードを調べる
+* カードが [Penny Dreadful](http://pdmtgo.com/) (PD) で使用可能かどうかを表示する
+* [Scryfall](https://scryfall.com/) から日毎の平均価格を取得する
 
 ## 必要条件
 .NET Framework 4.6 以上（Windows 10 なら標準でインストール済みです）

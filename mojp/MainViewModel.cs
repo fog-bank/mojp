@@ -304,16 +304,22 @@ namespace Mojp
             {
                 var card = SelectedCard;
 
-                if (card != null)
-                {
-                    if (card.WikiLink != null)
-                        return true;
+                if (card == null)
+                    return false;
 
-                    // トークンで該当するページとなると、クリーチャータイプの解説ページがあるが、ややこしいパターンもあるのでリンクを無効にする
-                    if (!card.Type.StartsWith("トークン"))
-                        return true;
-                }
-                return false;
+                // 明示的なリンク無効化
+                if (card.WikiLink == string.Empty)
+                    return false;
+
+                // 特殊パターンのリンク指定
+                if (card.WikiLink != null)
+                    return true;
+
+                // トークンで該当するページとなると、クリーチャータイプの解説ページがあるが、ややこしいパターンもあるのでリンクを無効にする
+                if (card.Type.StartsWith("トークン"))
+                    return false;
+
+                return true;
             }
         }
 

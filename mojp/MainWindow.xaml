@@ -141,7 +141,8 @@
                             </TextBlock>
                             <Image Grid.Column="1" Source="Resources/pd.png" Height="18" Margin="6,0,0,0" VerticalAlignment="Center"
                                    Visibility="Collapsed" local:CardPrice.LegalTarget="{Binding}" ToolTip="Penny Dreadful リーガル" />
-                            <TextBlock Grid.Column="2" Margin="6,0,0,0" VerticalAlignment="Center" Text="{Binding Price}" local:CardPrice.PriceTarget="{Binding}">
+                            <TextBlock Grid.Column="2" Margin="6,0,0,0" VerticalAlignment="Center" Text="{Binding Price}"
+                                       local:CardPrice.PriceTarget="{Binding}" ToolTip="Scryfall から取得した日毎の平均価格">
                                 <TextBlock.Style>
                                     <Style TargetType="TextBlock">
                                         <Style.Triggers>
