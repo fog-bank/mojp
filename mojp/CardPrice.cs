@@ -3,7 +3,7 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
+using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Windows;
@@ -137,24 +137,39 @@ namespace Mojp
         /// </summary>
         public static async Task<bool> GetOrOpenPDLegalFile()
         {
-            if (!File.Exists(PDLegalFileName) || DateTime.Now - File.GetLastWriteTime(PDLegalFileName) > TimeSpan.FromDays(1))
-            {
-                try
-                {
-                    using (var response = await App.HttpClient.Value.GetAsync(
-                        "http://pdmtgo.com/legal_cards.txt", HttpCompletionOption.ResponseHeadersRead))
-                    {
-                        if (!response.IsSuccessStatusCode)
-                            return false;
+            bool exists = File.Exists(PDLegalFileName);
+            var lastWrite = exists ? File.GetLastWriteTime(PDLegalFileName) : default;
 
-                        using (var file = File.Create(PDLegalFileName))
-                            await response.Content.CopyToAsync(file);
-                    }
-                }
-                catch
+            // 初回であるか、少なくとも前回から 1 日は経過している
+            if (!exists || DateTime.Now - lastWrite > TimeSpan.FromDays(1))
+            {
+                using (var req = new HttpRequestMessage(HttpMethod.Get, "http://pdmtgo.com/legal_cards.txt"))
                 {
-                    Debug.WriteLine("PD カードリストのダウンロードに失敗しました。");
-                    return false;
+                    // 最終更新日をチェックして通信量を減らす
+                    if (exists)
+                        req.Headers.IfModifiedSince = lastWrite;
+
+                    try
+                    {
+                        using (var resp = await App.HttpClient.Value.SendAsync(req, HttpCompletionOption.ResponseHeadersRead))
+                        {
+                            if (resp.StatusCode != HttpStatusCode.NotModified)
+                            {
+                                if (resp.IsSuccessStatusCode)
+                                {
+                                    using (var file = File.Create(PDLegalFileName))
+                                        await resp.Content.CopyToAsync(file);
+                                }
+                                else
+                                    return false;
+                            }
+                        }
+                    }
+                    catch
+                    {
+                        Debug.WriteLine("PD カードリストのダウンロード中にエラーが発生しました。");
+                        return false;
+                    }
                 }
             }
 
