@@ -202,5 +202,17 @@ namespace Mojp {
                 this["GetPDList"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string PDListLastTimeUtc {
+            get {
+                return ((string)(this["PDListLastTimeUtc"]));
+            }
+            set {
+                this["PDListLastTimeUtc"] = value;
+            }
+        }
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Globalization;
 using System.IO;
 using System.Net;
 using System.Net.Http;
@@ -26,7 +27,7 @@ namespace Mojp
             = new ConcurrentDictionary<string, Tuple<string, DateTime>>();
 
         private static volatile bool usingScryfall = false;
-        private static DateTime requestTime = DateTime.Now - TimeSpan.FromMilliseconds(200);
+        private static DateTime requestTime = DateTime.UtcNow - TimeSpan.FromMilliseconds(200);
         private static HashSet<string> pdLegalCards = null;
 
         private const string CacheFileName = "price_list.txt";
@@ -78,7 +79,8 @@ namespace Mojp
             if (!File.Exists(CacheFileName))
                 return;
 
-            var now = DateTime.Now;
+            var now = DateTime.UtcNow;
+            var culture = CultureInfo.InvariantCulture;
 
             using (var sr = File.OpenText(CacheFileName))
             {
@@ -88,8 +90,14 @@ namespace Mojp
                     string tix = sr.ReadLine();
                     string expire = sr.ReadLine();
 
-                    if (DateTime.TryParse(expire, out var expireTime) && expireTime > now)
-                        prices.TryAdd(name, Tuple.Create(tix, expireTime));
+                    if (DateTime.TryParseExact(expire, "o", culture, DateTimeStyles.RoundtripKind, out var expireTime))
+                    {
+                        // 念のため UTC 時刻に変換
+                        expireTime = expireTime.ToUniversalTime();
+
+                        if (expireTime > now)
+                            prices.TryAdd(name, Tuple.Create(tix, expireTime));
+                    }
                 }
             }
         }
@@ -102,7 +110,8 @@ namespace Mojp
             if (prices == null)
                 return;
 
-            var now = DateTime.Now;
+            var now = DateTime.UtcNow;
+            var culture = CultureInfo.InvariantCulture;
 
             using (var sw = File.CreateText(CacheFileName))
             {
@@ -118,7 +127,7 @@ namespace Mojp
 
                     sw.WriteLine(pair.Key);
                     sw.WriteLine(pair.Value.Item1);
-                    sw.WriteLine(pair.Value.Item2.ToString("o"));
+                    sw.WriteLine(pair.Value.Item2.ToUniversalTime().ToString("o", culture));
                 }
             }
         }
@@ -138,21 +147,34 @@ namespace Mojp
         public static async Task<bool> GetOrOpenPDLegalFile()
         {
             bool exists = File.Exists(PDLegalFileName);
-            var lastWrite = exists ? File.GetLastWriteTime(PDLegalFileName) : default;
+            var culture = CultureInfo.InvariantCulture;
+            DateTime lastTime = default;
+
+            if (exists)
+            {
+                if (!DateTime.TryParseExact(
+                    Settings.Default.PDListLastTimeUtc, "o", culture, DateTimeStyles.RoundtripKind, out lastTime))
+                {
+                    // 設定ファイルに最終確認日時を保存する前のバージョンとの互換性
+                    lastTime = File.GetLastWriteTime(PDLegalFileName).ToUniversalTime();
+                }
+            }
 
             // 初回であるか、少なくとも前回から 1 日は経過している
-            if (!exists || DateTime.Now - lastWrite > TimeSpan.FromDays(1))
+            if (!exists || DateTime.UtcNow - lastTime > TimeSpan.FromDays(1))
             {
                 using (var req = new HttpRequestMessage(HttpMethod.Get, "http://pdmtgo.com/legal_cards.txt"))
                 {
                     // 最終更新日をチェックして通信量を減らす
                     if (exists)
-                        req.Headers.IfModifiedSince = lastWrite;
+                        req.Headers.IfModifiedSince = lastTime;
 
                     try
                     {
                         using (var resp = await App.HttpClient.Value.SendAsync(req, HttpCompletionOption.ResponseHeadersRead))
                         {
+                            Debug.WriteLine("PD カードリストの取得結果：HttpStatusCode." + resp.StatusCode);
+
                             if (resp.StatusCode != HttpStatusCode.NotModified)
                             {
                                 if (resp.IsSuccessStatusCode)
@@ -171,6 +193,7 @@ namespace Mojp
                         return false;
                     }
                 }
+                Settings.Default.PDListLastTimeUtc = DateTime.UtcNow.ToString("o", culture);
             }
 
             var pdLegalCards = new HashSet<string>();
@@ -217,7 +240,7 @@ namespace Mojp
             if (prices.TryGetValue(card.Name, out var value))
             {
                 // 既に取得要請が出ている or まだキャッシュが有効かどうか
-                if (value == null || value.Item2 > DateTime.Now)
+                if (value == null || value.Item2 > DateTime.UtcNow)
                     return;
                 else
                     prices.TryUpdate(card.Name, null, value);
@@ -255,7 +278,7 @@ namespace Mojp
             }
             Debug.WriteLine(card.Name + " | " + tix + " (" + DateTime.Now.TimeOfDay + ")");
 
-            value = Tuple.Create(tix, DateTime.Now + TimeSpan.FromDays(1));
+            value = Tuple.Create(tix, DateTime.UtcNow + TimeSpan.FromDays(1));
             prices.TryUpdate(card.Name, value, null);
             card.OnUpdatePrice();
         }
@@ -292,14 +315,14 @@ namespace Mojp
             const string NoPrice = "― tix";
 
             // 前回アクセスから 200 ms 以上空ける
-            if (usingScryfall || DateTime.Now - requestTime < TimeSpan.FromMilliseconds(200) || usingScryfall)
+            if (usingScryfall || DateTime.UtcNow - requestTime < TimeSpan.FromMilliseconds(200) || usingScryfall)
             {
                 Debug.WriteLine("× " + cardName + " (" + DateTime.Now.TimeOfDay + ")");
                 return null;
             }
             usingScryfall = true;
 
-            string uri = "https://api.scryfall.com/cards/search?order=tix&q=" + Uri.EscapeUriString(cardName.Replace("'", null));
+            string uri = "https://api.scryfall.com/cards/search?order=tix&q=" + Uri.EscapeUriString(cardName);
             Debug.WriteLine(uri + " (" + DateTime.Now.TimeOfDay + ")");
 
             string json = null;
@@ -313,7 +336,7 @@ namespace Mojp
             }
             catch { Debug.WriteLine("Scryfall へのアクセスに失敗しました。"); }
 
-            requestTime = DateTime.Now;
+            requestTime = DateTime.UtcNow;
             usingScryfall = false;
 
             if (json == null)
