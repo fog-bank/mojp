@@ -17,8 +17,9 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" SharedSizeGroup="FirstRow" />
-            <RowDefinition />
-            <RowDefinition Height="Auto" />
+			<RowDefinition />
+			<RowDefinition Height="Auto" />
+			<RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <TabControl Grid.RowSpan="2" Grid.ColumnSpan="2" FontFamily="{Binding FontFamily}" FontSize="{Binding FontSize}"
@@ -157,8 +158,29 @@
                     </Grid>
                 </DataTemplate>
             </TabControl.ContentTemplate>
-        </TabControl>
-        <Grid Name="pdError" Grid.Row="2" Grid.ColumnSpan="2" Visibility="Collapsed">
+		</TabControl>
+		<Grid Grid.Row="2" Grid.ColumnSpan="2">
+			<Grid.Style>
+				<Style TargetType="Grid">
+					<Style.Triggers>
+						<DataTrigger Binding="{Binding Text, ElementName=txtBug}" Value="">
+							<Setter Property="Visibility" Value="Collapsed" />
+						</DataTrigger>
+					</Style.Triggers>
+				</Style>
+			</Grid.Style>
+			<Separator Height="1" Margin="0" VerticalAlignment="Top" />
+			<Grid Margin="4,5,4,4">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="Auto" />
+					<ColumnDefinition />
+				</Grid.ColumnDefinitions>
+				<Image Source="Resources/Warning.png" Height="16" ToolTip="バグ情報" />
+				<TextBlock Name="txtBug" Grid.Column="1" Margin="4,0,0,0" 
+						   TextWrapping="WrapWithOverflow" TextTrimming="CharacterEllipsis" Text="{Binding BugInfo}" />
+			</Grid>
+		</Grid>
+		<Grid Name="pdError" Grid.Row="3" Grid.ColumnSpan="2" Visibility="Collapsed">
             <Separator Height="1" Margin="0" VerticalAlignment="Top" />
             <Grid Margin="4,5,4,4">
                 <Grid.ColumnDefinitions>
@@ -168,13 +190,13 @@
                 </Grid.ColumnDefinitions>
                 <Image Source="Resources/Warning.png" Height="16" />
                 <TextBlock Grid.Column="1" Margin="4,0,0,0" TextTrimming="CharacterEllipsis">Penny Dreadful カードリストの取得に失敗しました。</TextBlock>
-                <Button Grid.Column="2" BorderBrush="{x:Null}" Background="{x:Null}"
+				<Button Grid.Column="2" BorderBrush="{x:Null}" Background="{x:Null}" VerticalAlignment="Center"
 						ToolTip="この通知を消します。Penny Dreadful で使用可能かどうかの判定は表示されません。" Click="OnClosePdError">
                     <Image Source="Resources/Close.png" Height="14" />
                 </Button>
             </Grid>
         </Grid>
-        <Grid Name="notifier" Grid.Row="3" Grid.ColumnSpan="2" Visibility="Collapsed">
+        <Grid Name="notifier" Grid.Row="4" Grid.ColumnSpan="2" Visibility="Collapsed">
             <Separator Height="1" Margin="0" VerticalAlignment="Top" />
             <Grid Margin="4,5,4,4">
                 <Grid.ColumnDefinitions>
@@ -186,7 +208,7 @@
                 <TextBlock Grid.Column="1" Margin="4,0,0,0" TextTrimming="CharacterEllipsis">
 					<Hyperlink ToolTip="https://fog-bank.github.io/mojp/" Click="OnGoToNewRelease">新しいバージョンがあります。</Hyperlink>
                 </TextBlock>
-                <Button Grid.Column="2" BorderBrush="{x:Null}" Background="{x:Null}"
+				<Button Grid.Column="2" BorderBrush="{x:Null}" Background="{x:Null}" VerticalAlignment="Center"
 						ToolTip="この通知を消します。設定で自動的に確認しないようにできます。" Click="OnCloseNotifier">
                     <Image Source="Resources/Close.png" Height="14" />
                 </Button>
@@ -210,7 +232,7 @@
                 <Image Source="Resources\Gears.png" Height="16" />
             </Button>
         </ToolBar>
-        <Grid Name="imgLoading" Grid.RowSpan="4" Grid.ColumnSpan="2" Background="#7fffffff" Visibility="Collapsed">
+        <Grid Name="imgLoading" Grid.RowSpan="5" Grid.ColumnSpan="2" Background="#7fffffff" Visibility="Collapsed">
             <Path Stroke="#7f505096" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <!-- http://blogs.microsoft.co.il/blogs/maxim/archive/2008/03/08/wpf-daily-tip-simple-wait-progress-control-continuous-animation.aspx -->
                 <Path.Data>

@@ -264,6 +264,7 @@ namespace Mojp
                 OnPropertyChanged(nameof(CanCopyJapaneseName));
                 OnPropertyChanged(nameof(CanCopyEnglishName));
                 OnPropertyChanged(nameof(CanBrowseWiki));
+                OnPropertyChanged(nameof(BugInfo));
             }
         }
 
@@ -284,6 +285,9 @@ namespace Mojp
                 return null;
             }
         }
+
+        public static Dictionary<string, string> BugInfos { get; } = new Dictionary<string, string>();
+        public string BugInfo => SelectedCard?.Name != null && BugInfos.TryGetValue(SelectedCard?.Name, out string value) ? value : string.Empty;
 
         /// <summary>
         /// 日本語カード名をコピーできるかどうかを示す値を取得します。

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<bugs>
+  <bug name="Kess, Dissident Mage">対戦相手のターンにも墓地から唱えられる。墓地にある超過呪文を通常コストで超過できる。マナ・コストの無い呪文を (0) で唱えられる。</bug>
+  <bug name="Rimescale Dragon">対象のクリーチャーに氷カウンターを置けない。</bug>
+  <bug name="Goblin Game">対戦相手が数字を選ぶ前に、あなたが選んだ数字が公開される。</bug>
+  <bug name="Tawnos's Coffin">カードを戦場に戻すときに、ゲームが止まることがある。</bug>
+  <bug name="Misdirection">ゲームがリセットされることがある。</bug>
+  <bug name="Riches">対戦相手が統率者を選んだとき、他の対戦相手はクリーチャーを選ぶ必要がない。</bug>
+  <bug name="Profane Command">1 番目のモードに対応してプレイヤーが被覆を得ても、そのまま解決する。クリーチャーがいない状態で 4 番目のモードを選んだとき、X が異常な値になって唱えられない。</bug>
+  <bug name="Ignite Memories">対象のプレイヤーの手札が空のとき、ゲームが再起動する。</bug>
+  <bug name="The Great Aurora">正しく機能しない。</bug>
+  <bug name="Custodi Lich">他のプレイヤーが統治者になったときにも、生け贄の能力が誘発する。</bug>
+  <bug name="Runic Repetition">対象にとれるカードがあっても唱えられない。</bug>
+  <bug name="Synthetic Destiny">公開するカードの枚数を決める際に、追放された統率者を数えない。</bug>
+  <bug name="Mirror Match">一時的にクリーチャーになっている、クリーチャーでないパーマネントが、トークンによってブロックされた状態になる。</bug>
+  <bug name="Mass Polymorph">公開するカードの枚数を決める際に、追放された統率者を数えない。</bug>
+  <bug name="Myriad Landscape">同じ土地タイプを持たない基本土地 2 枚を戦場に出せる。</bug>
+  <bug name="Sylvan Primordial">多人数戦で、ある対戦相手に対して適正な対象がない場合、ゲームが進行しない。</bug>
+  <bug name="Grenzo, Dungeon Warden">墓地に置かれない能力を持つカードが墓地に移動する際、その置換効果が適切に機能しない。</bug>
+  <bug name="Bloodline Keeper">生成したトークンが絆魂を持つと間違って表示される。</bug>
+  <bug name="Rosheen Meanderer">対戦相手に (X) を要求する呪文に対してマナを使えない。</bug>
+  <bug name="Yisan, the Wanderer Bard">能力の起動に対応して詩句カウンターがすべて取り除かれたとき、望むクリーチャーを探すことができる。</bug>
+  <bug name="Austere Command">両面カードの第二面の点数で見たマナ・コストを 0 として扱う。</bug>
+  <bug name="Ashiok, Nightmare Weaver">点数で見たマナ・コストが現在の忠誠度に等しいクリーチャーを戦場に出せない。</bug>
+  <bug name="Thalia, Guardian of Thraben">連繋能力を使うときに間違ってコストが追加される。</bug>
+  <bug name="Vryn Wingmare">連繋能力を使うときに間違ってコストが追加される。</bug>
+  <bug name="Kozilek, the Great Distortion">唱えたときに手札が 7 枚以上の場合でも、能力が不正に誘発する。</bug>
+  <bug name="Commandeer">コントロールを得ることができない。</bug>
+  <bug name="Deceiver of Form">伝説のクリーチャーのコピーになったクリーチャーにレジェンド・ルールが適用されない。</bug>
+  <bug name="Narset, Enlightened Master">能力で追放された分割カードを唱えられない。</bug>
+  <bug name="Kira, Great Glass-Spinner">適切な誘発型能力を与えていない。</bug>
+  <bug name="Fathom Feeder"></bug>
+</bugs>

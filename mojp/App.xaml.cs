@@ -77,10 +77,10 @@ namespace Mojp
         public static void SetCardInfosFromXml(string file) => SetCardInfosFromXml(XDocument.Load(file));
 
         /// <summary>
-        /// このアプリのバージョンが最新かどうかを確認します。
+        /// 新しいバージョンがリリースされているかどうかを確認します。
         /// </summary>
         /// <param name="acceptsPrerelease">開発版も含めて確認する場合は true 。</param>
-        /// <returns>これより上のバージョンが無い場合は true 。</returns>
+        /// <returns>これより上のバージョンが見つかった場合は true 。</returns>
         public static async Task<bool> IsOutdatedRelease(bool acceptsPrerelease)
         {
             string response = null;

@@ -7,6 +7,7 @@ using System.Windows;
 using System.Windows.Controls.Primitives;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.Xml.Linq;
 
 namespace Mojp
 {
@@ -43,6 +44,14 @@ namespace Mojp
             {
                 if (File.Exists("cards.xml"))
                     App.SetCardInfosFromXml("cards.xml");
+
+                if (File.Exists("bugs.xml"))
+                {
+                    var doc = XDocument.Load("bugs.xml");
+
+                    foreach (var node in doc.Descendants("bug"))
+                        MainViewModel.BugInfos[(string)node.Attribute("name")] = node.Value;
+                }
                 
                 if (CardPrice.EnableCardPrice)
                     CardPrice.OpenCacheData();
