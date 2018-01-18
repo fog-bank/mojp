@@ -675,6 +675,7 @@
     <regex target="text" pattern="(?m)(?&lt;=^族系.+)共通のクリーチャー・タイプを持つ場合、" value="共通のクリーチャー・タイプを持つなら、" nodebug="true" />
     <!-- テンプレート変更 -->
     <regex target="text" pattern="新たな対象" value="新しい対象" nodebug="true" />
+    <regex target="text" pattern="クリーチャー・呪文でない呪文" value="クリーチャーでない呪文" nodebug="true" />
     <regex target="text" pattern="次のアンタップ・ステップの間に" value="次のアンタップ・ステップに" nodebug="true" />
     <regex target="text" pattern="(?:各|１)ターンに１回(?:のみ|だけ)" value="毎ターン１回のみ" nodebug="true" />
     <regex target="text" pattern="しかプレイでき" value="しか起動でき" nodebug="true" />
