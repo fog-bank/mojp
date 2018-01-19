@@ -193,7 +193,6 @@ namespace Mojp
                         return false;
                     }
                 }
-                Settings.Default.PDListLastTimeUtc = DateTime.UtcNow.ToString("o", culture);
             }
 
             var pdLegalCards = new HashSet<string>();
@@ -213,6 +212,9 @@ namespace Mojp
                 }
             }
             CardPrice.pdLegalCards = pdLegalCards;
+
+            // ローテ直後はサーバー上のファイルが頻繁に更新される場合があるので、カードリスト全体の確認が取れてから最終確認日時を記録する
+            Settings.Default.PDListLastTimeUtc = DateTime.UtcNow.ToString("o", culture);
 
             // 枚数をチェック (少なくとも基本土地5枚は入る)
             return pdLegalCards.Count >= 5;
