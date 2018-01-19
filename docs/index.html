@@ -1,11 +1,12 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
   <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>mojp - MO 日本語カードテキスト表示ツール</title>
+  <meta name="description" content="MO で表示されているカードに対応して、日本語テキストを自動で表示するアプリを公開しています。">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" type="text/css" href="style.css" />
-  <script type="application/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script type="application/javascript" src="script.js"></script>
 </head>
 <body>
   <h1 id="top">mojp</h1>
@@ -19,7 +20,7 @@
   <div id="content">
     <h2>MO 日本語カードテキスト表示ツール</h2>
     <div>
-      <p><a href="http://www.mtgo.com/">Magic: The Gathering Online</a> で表示されているカードに対応して、日本語テキストを自動で表示するアプリです。</p>
+      <p><a href="http://www.mtgo.com/">Magic: The Gathering Online</a> (MO) で表示されているカードに対応して、日本語テキストを自動で表示するアプリです。</p>
       <table>
         <tr>
           <td><img id="screenshot" src="images/screenshot.png" width="316" height="253" /></td>
@@ -54,8 +55,10 @@
       </ol>
       <h4><span class="underline">補足</span></h4>
       <ul>
-        <li>Preview Pane を表示するには、ACCOUNT 画面の「Display &amp; Sound Settings」内の右下にある「Display Card Preview 
-          Window」にチェックを入れます。詳細は<a href="https://github.com/fog-bank/mojp/wiki/Preview-Pane-%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%95%E3%81%9B%E3%82%8B%E6%96%B9%E6%B3%95">こちら</a>。</li>
+        <li>
+          Preview Pane を表示するには、ACCOUNT 画面の「Display &amp; Sound Settings」内の右下にある「Display Card Preview
+          Window」にチェックを入れます。詳細は<a href="https://github.com/fog-bank/mojp/wiki/Preview-Pane-%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%95%E3%81%9B%E3%82%8B%E6%96%B9%E6%B3%95">こちら</a>。
+        </li>
         <li>カードをズームしたままマウスカーソルを移動した場合や、素早くマウスカーソルを移動した場合に、表示が変わらないことがあります。</li>
         <li>トークンや紋章などには対応しておらず、何も表示されません。詳細は<a href="https://github.com/fog-bank/mojp/wiki/%E4%B8%8D%E5%85%B7%E5%90%88">こちら</a>。</li>
         <li>あくまで参考程度のご利用でお願い致します。このアプリを原因とする敗戦には責任を負いかねます。</li>
@@ -64,10 +67,11 @@
       <ul>
         <li>右クリックメニューから、カード名をコピーしたり、MTG Wiki のカード評価ページに移動したりできます。</li>
         <li>右上の歯車アイコンのボタンから、このアプリで使用するフォントとそのサイズを設定できます。その他、ウィンドウサイズなどの設定は、%LocalAppData%\co3366353 フォルダに保存されます。</li>
-        <li>以下の機能はインターネットにバックグラウンドで接続します。不要な場合は設定から無効にしてください。
+        <li>
+          以下の機能はインターネットにバックグラウンドで接続します。不要な場合は設定から無効にしてください。
           <ul>
             <li>
-              起動時に <a href="https://fog-bank.github.io/mojp/">https://fog-bank.github.io/mojp/</a> 
+              起動時に <a href="https://fog-bank.github.io/mojp/">https://fog-bank.github.io/mojp/</a>
               にアクセスして、新しいバージョンがリリースされているかどうかを自動で確認します（ダウンロードまではしません）。
             </li>
             <li>起動時に <a href="http://pdmtgo.com/legal_cards.txt">Penny Dreadful のカードリスト</a>をダウンロードします (1 日 1 回まで) 。</li>
@@ -79,19 +83,25 @@
     </div>
     <h3 id="mechanism">仕組み</h3>
     <div>
-      <p><a href="https://msdn.microsoft.com/ja-jp/library/ms753388.aspx">UI Automation</a> API を利用して、Preview Pane 内のテキストを検索しています。メインロジックは
-      <a href="https://github.com/fog-bank/mojp/blob/master/mojp/MainViewModel.cs#L424">MainViewModel.cs</a> 内の OnCapture メソッド以下です。</p>
+      <p>
+        <a href="https://docs.microsoft.com/ja-jp/dotnet/framework/ui-automation/">UI Automation</a> API を利用して、Preview Pane 内のテキストを検索しています。メインロジックは
+        <a href="https://github.com/fog-bank/mojp/blob/master/mojp/MainViewModel.cs#L433">MainViewModel.cs</a> 内の OnCapture メソッド以下です。
+      </p>
     </div>
     <h3 id="reference">リファレンス</h3>
     <div>
       <p>MO で日本語テキストを表示する試みとして、<a href="http://www.royalcrab.net/wpx/?page_id=38">Magic Online 日本語化計画</a>の影響を受けています。</p>
       <p>このアプリで表示する日本語テキストは、<a href="http://whisper.wisdom-guild.net/">WHISPER</a> の検索結果をテキストファイルに保存したものに基づいています。</p>
-      <p>アイコンの一部は Iconfinder の作品 [<a href="https://www.iconfinder.com/icons/6000/book_dictionary_learn_school_translate_icon#size=128">1</a>,
-        <a href="https://www.iconfinder.com/icons/285680/camera_icon#size=16">2</a>] を利用しています。</p>
+      <p>
+        アイコンの一部は Iconfinder の作品 [<a href="https://www.iconfinder.com/icons/6000/book_dictionary_learn_school_translate_icon#size=128">1</a>,
+        <a href="https://www.iconfinder.com/icons/285680/camera_icon#size=16">2</a>] を利用しています。
+      </p>
       <h4><span class="underline">手動でカードデータを更新する方法</span></h4>
       <ol>
-        <li>GitHub のリポジトリから <a href="https://github.com/fog-bank/mojp/raw/master/mojp/appendix.xml" type="text/xml">appendix.xml</a>
-          （ファイル名固定）をダウンロードして、アプリケーションフォルダ（mojp.exe があるフォルダ）に保存しておく。</li>
+        <li>
+          GitHub のリポジトリから <a href="https://github.com/fog-bank/mojp/raw/master/mojp/appendix.xml" type="text/xml">appendix.xml</a>
+          （ファイル名固定）をダウンロードして、アプリケーションフォルダ（mojp.exe があるフォルダ）に保存しておく。
+        </li>
         <li><a href="http://whisper.wisdom-guild.net/">WHISPER</a>で、次元・現象・計略・策略以外のカードタイプにチェックを入れ、さらに一番下の出力形式をテキストにして検索する。</li>
         <li>表示されたテキストを、エンコード形式を Shift-JIS にして保存する。</li>
         <li>本アプリの設定画面を開き、一番下の開発用メニューから「検索結果テキストの読み込み」ボタンで保存したテキストを読み込む。</li>
@@ -101,25 +111,28 @@
     </div>
     <h3 id="contact">連絡先</h3>
     <div>
-      <p>Twitter: <a href="https://twitter.com/bank_fog">@bank_fog</a></p>
+      <p>Twitter：<a href="https://twitter.com/bank_fog">@bank_fog</a></p>
+      <p>ニコ動：<a href="http://www.nicovideo.jp/watch/sm29837666">sm29837666</a></p>
       <p>または、以下のフォームで匿名のコメントが可能です。（コメントと名前、仮のメールアドレスを記入後、ゲストとして投稿するにチェック）</p>
       <div id="comment_body">
         <div id="disqus_thread"></div>
-        <script>
-var disqus_config = function () {
-  this.page.url = 'https://fog-bank.github.io/mojp/';
-  this.page.identifier = 'index';
-};
-(function () {
-  var d = document, s = d.createElement('script');
-  s.src = 'https://mojp.disqus.com/embed.js';
-  s.setAttribute('data-timestamp', +new Date());
-  (d.head || d.body).appendChild(s);
-})();
-        </script>
         <noscript><a href="https://disqus.com/?ref_noscript">Disqus を利用したコメント</a>を見るには、JavaScript を有効にしてください。</noscript>
       </div>
     </div>
   </div>
+  <script type="application/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="application/javascript" src="script.js"></script>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'https://fog-bank.github.io/mojp/';
+      this.page.identifier = 'index';
+    };
+    (function () {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://mojp.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
 </body>
 </html>
