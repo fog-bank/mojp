@@ -709,8 +709,11 @@
     <regex target="text" pattern="(?&lt;!の上)から(?=(?:.\d/.\d|氷|蓄積|貯蔵|水晶)カウンターを[０-９Ｘ]+個取り除く)" value="の上から" nodebug="true" />
     <regex target="text" pattern="それ?の上に(?=(?:、それを唱えるために使われたマナの色１色につき)?(?:.\d/.\d|\w{1,2}|オーメン・|ポリープ・)カウンターが[０-９Ｘ]+個置かれた状態で(?:、タップ状態で)?戦場に出る)" value="" nodebug="true" />
     <regex target="text" pattern="。(そのプレイヤーが)?そうしたなら、そのプレイヤーはこの呪文をコピーし、そのコピーの新しい対象を選んでもよい。" value="。そうしたなら、そのプレイヤーはこの呪文をコピーしてもよい。そのプレイヤーはそのコピーの新しい対象を選んでもよい。" nodebug="true" />
+    <regex target="text" pattern="対象として唱える呪文" value="対象とする呪文" nodebug="true" />
     <regex target="text" pattern="が唱える(、?)([^。]*)呪文は、それを唱えるためのコストが" value="が$1$2呪文を唱えるためのコストは$1" nodebug="true" />
-    <regex target="text" pattern="(?&lt;=が、?[^。]+)[の・]呪文[とや]([^。]+)[の・]呪文を唱えるためのコストは" value="か$1である呪文を唱えるためのコストは" nodebug="true" />
+    <regex target="text" pattern="(?m)呪文は、?それを唱えるためのコストが(?=.{1,9}$)" value="呪文を唱えるためのコストは" nodebug="true" />
+    <regex target="text" pattern="呪文は、?それを唱えるためのコストが" value="呪文を唱えるためのコストは、" nodebug="true" />
+    <regex target="text" pattern="起動型能力は、それを起動するためのコストが" value="起動型能力を起動するためのコストは、" nodebug="true" />
     <!-- テンプレート変更：A or B -->
     <regex target="text" pattern="アーティファクトかエンチャント１つを対象" value="アーティファクト１つかエンチャント１つを対象" nodebug="true" />
     <regex target="text" pattern="墓地(?:にある|から)インスタント・カード１枚かソーサリー・カード１枚を" value="墓地からインスタントかソーサリーであるカード１枚を" nodebug="true" />
@@ -719,6 +722,7 @@
     <regex target="text" pattern="(?&lt;!か)インスタント・呪文１つかソーサリー・呪文１つを対象" value="インスタントかソーサリーである呪文１つを対象" nodebug="true" />
     <regex target="text" pattern="インスタント・呪文(?:１つ)?かソーサリー・呪文(?:１つ)?を唱えるたび、" value="インスタントかソーサリーである呪文を唱えるたび、" nodebug="true" />
     <regex target="text" pattern="スピリット(・呪文)?か秘儀・呪文を唱えるたび、" value="スピリットか秘儀である呪文を唱えるたび、" nodebug="true" />
+    <regex target="text" pattern="[の・]呪文[とや]([^。]+)[の・]呪文を唱えるためのコストは" value="か$1である呪文を唱えるためのコストは" nodebug="true" />
     <!-- 注釈文 -->
     <regex target="text" pattern="(?&lt;=呪禁.+)(?:あなたの)?対戦相手がコントロールする呪文や能力の対象にならない。）" value="対戦相手がコントロールしている呪文や能力の対象にならない。）" nodebug="true" />
     <regex target="text" pattern="黒でもアーティファクトでもないクリーチャーによってはブロックされない。）" value="アーティファクトでも黒でもないクリーチャーによってはブロックされない。）" nodebug="true" />
