@@ -5,16 +5,16 @@
 このカードは禁止されている。</card>
     <card name="The Monarch" jaName="統治者" type="" wikilink="統治者">あなたの終了ステップの開始時に、あなたはカードを１枚引く。
 クリーチャー１体があなたに戦闘ダメージを与えるたび、それのコントローラーが統治者になる。</card>
-    <card name="City's Blessing" jaName="都市の承認" type="" wikilink=""></card>
+    <card name="City's Blessing" jaName="都市の承認" type="" wikilink="昇殿"></card>
     <!-- クリーチャーでないトークン -->
-    <card name="Clue" jaName="手掛かり" type="トークン・アーティファクト ― 手掛かり">(２),このアーティファクトを生け贄に捧げる：カードを１枚引く。</card>
+    <card name="Clue" jaName="手掛かり" type="トークン・アーティファクト ― 手掛かり" wikilink="手掛かり">(２),このアーティファクトを生け贄に捧げる：カードを１枚引く。</card>
     <card name="Etherium Cell" jaName="エーテリウム電池" type="トークン・アーティファクト" related="Tezzeret the Schemer">(Ｔ),このアーティファクトを生け贄に捧げる：あなたのマナ・プールに好きな色１色のマナ１点を加える。</card>
     <card name="Gold" jaName="金" type="トークン・アーティファクト">このアーティファクトを生け贄に捧げる：あなたのマナ・プールに好きな色１色のマナ１点を加える。</card>
     <card name="Land Mine" jaName="地雷" type="トークン・アーティファクト">(赤),このアーティファクトを生け贄に捧げる：飛行を持たない攻撃クリーチャー１体を対象とする。このアーティファクトはそれに２点のダメージを与える。</card>
     <card name="Stoneforged Blade" jaName="石鍛冶製の剣" type="トークン・アーティファクト ― 装備品" related="Nahiri, the Lithomancer">破壊不能
 装備しているクリーチャーは+5/+5の修整を受けるとともに二段攻撃を持つ。
 装備(０)</card>
-    <card name="Treasure" jaName="宝物" type="トークン・アーティファクト ― 宝物">(Ｔ),このアーティファクトを生け贄に捧げる：あなたのマナ・プールに好きな色１色のマナ１点を加える。</card>
+    <card name="Treasure" jaName="宝物" type="トークン・アーティファクト ― 宝物" wikilink="宝物">(Ｔ),このアーティファクトを生け贄に捧げる：あなたのマナ・プールに好きな色１色のマナ１点を加える。</card>
     <!-- 特定の名前を持つトークン -->
     <card name="Ashaya, the Awoken World" jaName="目覚めし世界、アシャヤ" type="トークン・伝説のクリーチャー ― エレメンタル" pt="4/4" related="Nissa, Sage Animist"></card>
     <card name="Butterfly" jaName="蝶" type="トークン・クリーチャー ― 昆虫" pt="1/1" related="Giant Caterpillar">飛行</card>
@@ -38,35 +38,35 @@
     <card name="Wolves of the Hunt" jaName="狩人狼" type="トークン・クリーチャー ― 狼" pt="1/1" related="Master of the Hunt">他の《狩人狼》という名前のクリーチャーとのバンド</card>
     <card name="Wood" jaName="木材" type="トークン・クリーチャー ― 壁" pt="0/1" related="Jungle Patrol">防衛</card>
     <!-- 専用のクリーチャータイプを持つトークン -->
-    <card name="Camarid" jaName="カマリッド" type="トークン・クリーチャー ― カマリッド" pt="1/1"></card>
-    <card name="Caribou" jaName="カリブー" type="トークン・クリーチャー ― カリブー" pt="0/1" related="Caribou Range"></card>
-    <card name="Cat Dragon" jaName="猫・ドラゴン" type="トークン・クリーチャー ― 猫・ドラゴン" pt="3/3" related="Wasitora, Nekoru Queen">飛行</card>
-    <card name="Citizen" jaName="市民" type="トークン・クリーチャー ― 市民" pt="1/1"></card>
-    <card name="Deserter" jaName="脱走者" type="トークン・クリーチャー ― 脱走者" pt="0/1" related="Kjeldoran Home Guard"></card>
-    <card name="Eldrazi Scion" jaName="エルドラージ・末裔" type="トークン・クリーチャー ― エルドラージ・末裔" pt="1/1">このクリーチャーを生け贄に捧げる：あなたのマナ・プールに(◇)を加える。</card>
-    <card name="Eldrazi Spawn" jaName="エルドラージ・落とし子" type="トークン・クリーチャー ― エルドラージ・落とし子" pt="0/1">このクリーチャーを生け贄に捧げる：あなたのマナ・プールに(◇)を加える。</card>
-    <card name="Germ" jaName="細菌" type="トークン・クリーチャー ― 細菌" pt="0/0"></card>
-    <card name="Graveborn" jaName="墓生まれ" type="トークン・クリーチャー ― 墓生まれ" pt="3/1">速攻</card>
-    <card name="Orb" jaName="オーブ" type="トークン・クリーチャー ― オーブ" pt="*/*" related="Phantasmal Sphere">飛行</card>
-    <card name="Pentavite" jaName="ペンタバイト" type="トークン・アーティファクト・クリーチャー ― ペンタバイト" pt="1/1" related="Pentavus">飛行</card>
-    <card name="Pincher" jaName="ピンチャー" type="トークン・クリーチャー ― ピンチャー" pt="2/2" related="Summoning Station"></card>
-    <card name="Prism" jaName="プリズム" type="トークン・アーティファクト・クリーチャー ― プリズム" pt="0/1" related="Diamond Kaleidoscope"></card>
+    <card name="Camarid" jaName="カマリッド" type="トークン・クリーチャー ― カマリッド" pt="1/1" wikilink="カマリッド"></card>
+    <card name="Caribou" jaName="カリブー" type="トークン・クリーチャー ― カリブー" pt="0/1" related="Caribou Range" wikilink="カリブー"></card>
+    <card name="Citizen" jaName="市民" type="トークン・クリーチャー ― 市民" pt="1/1" wikilink="市民"></card>
+    <card name="Deserter" jaName="脱走者" type="トークン・クリーチャー ― 脱走者" pt="0/1" related="Kjeldoran Home Guard" wikilink="脱走者"></card>
+    <card name="Eldrazi Scion" jaName="エルドラージ・末裔" type="トークン・クリーチャー ― エルドラージ・末裔" pt="1/1" wikilink="末裔">このクリーチャーを生け贄に捧げる：あなたのマナ・プールに(◇)を加える。</card>
+    <card name="Germ" jaName="細菌" type="トークン・クリーチャー ― 細菌" pt="0/0" wikilink="細菌"></card>
+    <card name="Graveborn" jaName="墓生まれ" type="トークン・クリーチャー ― 墓生まれ" pt="3/1" wikilink="墓生まれ">速攻</card>
+    <card name="Orb" jaName="オーブ" type="トークン・クリーチャー ― オーブ" pt="*/*" related="Phantasmal Sphere" wikilink="オーブ">飛行</card>
+    <card name="Pentavite" jaName="ペンタバイト" type="トークン・アーティファクト・クリーチャー ― ペンタバイト" pt="1/1" related="Pentavus" wikilink="ペンタバイト">飛行</card>
+    <card name="Pincher" jaName="ピンチャー" type="トークン・クリーチャー ― ピンチャー" pt="2/2" related="Summoning Station" wikilink="ピンチャー"></card>
+    <card name="Prism" jaName="プリズム" type="トークン・アーティファクト・クリーチャー ― プリズム" pt="0/1" related="Diamond Kaleidoscope" wikilink="プリズム"></card>
     <card name="Sand" jaName="砂漠の民" type="トークン・クリーチャー ― 砂漠の民" pt="1/1" related="Dune-Brood Nephilim"></card>
     <card name="Sand Warrior" jaName="砂漠の民・戦士" type="トークン・クリーチャー ― 砂漠の民・戦士" pt="1/1" related="Hazezon Tamar"></card>
-    <card name="Serf" jaName="農奴" type="トークン・クリーチャー ― 農奴" pt="0/1" related="Sengir Autocrat"></card>
-    <card name="Servo" jaName="霊気装置" type="トークン・アーティファクト・クリーチャー ― 霊気装置" pt="1/1"></card>
-    <card name="Survivor" jaName="生存者" type="トークン・クリーチャー ― 生存者" pt="1/1" related="Varchild's War-Riders"></card>
-    <card name="Tetravite" jaName="テトラバイト" type="トークン・アーティファクト・クリーチャー ― テトラバイト" pt="1/1" related="Tetravus">飛行
+    <card name="Serf" jaName="農奴" type="トークン・クリーチャー ― 農奴" pt="0/1" related="Sengir Autocrat" wikilink="農奴"></card>
+    <card name="Servo" jaName="霊気装置" type="トークン・アーティファクト・クリーチャー ― 霊気装置" pt="1/1" wikilink="霊気装置"></card>
+    <card name="Survivor" jaName="生存者" type="トークン・クリーチャー ― 生存者" pt="1/1" related="Varchild's War-Riders" wikilink="生存者"></card>
+    <card name="Tetravite" jaName="テトラバイト" type="トークン・アーティファクト・クリーチャー ― テトラバイト" pt="1/1" related="Tetravus" wikilink="テトラバイト">飛行
 テトラバイトはエンチャントされない。</card>
-    <card name="Triskelavite" jaName="トリスケラバイト" type="トークン・アーティファクト・クリーチャー ― トリスケラバイト" pt="1/1" related="Triskelavus">飛行
+    <card name="Triskelavite" jaName="トリスケラバイト" type="トークン・アーティファクト・クリーチャー ― トリスケラバイト" pt="1/1" related="Triskelavus" wikilink="トリスケラバイト">飛行
 このクリーチャーを生け贄に捧げる：クリーチャー１体かプレイヤー１人を対象とする。このクリーチャーはそれに１点のダメージを与える。</card>
     <!-- 単一の特性しかないトークン -->
+    <card name="Cat Dragon" jaName="猫・ドラゴン" type="トークン・クリーチャー ― 猫・ドラゴン" pt="3/3" related="Wasitora, Nekoru Queen">飛行</card>
     <card name="Dinosaur" jaName="恐竜" type="トークン・クリーチャー ― 恐竜" pt="3/3">トランプル（攻撃しているこのクリーチャーは余剰の戦闘ダメージを防御プレイヤーかプレインズウォーカーに与えることができる。）</card>
     <card name="Eldrazi Horror" jaName="エルドラージ・ホラー" type="トークン・クリーチャー ― エルドラージ・ホラー" pt="3/2"></card>
+    <card name="Eldrazi Spawn" jaName="エルドラージ・落とし子" type="トークン・クリーチャー ― エルドラージ・落とし子" pt="0/1">このクリーチャーを生け贄に捧げる：あなたのマナ・プールに(◇)を加える。</card>
     <card name="Faerie Rogue" jaName="フェアリー・ならず者" type="トークン・クリーチャー ― フェアリー・ならず者" pt="1/1">飛行</card>
     <card name="Goat" jaName="ヤギ" type="トークン・クリーチャー ― ヤギ" pt="0/1"></card>
-    <card name="Manifest" jaName="予示" type="クリーチャー" pt="2/2">予示されたクリーチャー・カードは、それのマナ・コストで、いつでも表向きにしてよい。裏向きのカードは、それの変異コストで表向きにしてもよい。</card>
-    <card name="Morph" jaName="変異" type="クリーチャー" pt="2/2">変異を持つカードは、それの変異コストを支払うことで、いつでも表向きにしてよい。</card>
+    <card name="Manifest" jaName="予示" type="クリーチャー" pt="2/2" wikilink="予示">予示されたクリーチャー・カードは、それのマナ・コストで、いつでも表向きにしてよい。裏向きのカードは、それの変異コストで表向きにしてもよい。</card>
+    <card name="Morph" jaName="変異" type="クリーチャー" pt="2/2" wikilink="変異">変異を持つカードは、それの変異コストを支払うことで、いつでも表向きにしてよい。</card>
     <card name="Myr" jaName="マイア" type="トークン・アーティファクト・クリーチャー ― マイア" pt="1/1"></card>
     <card name="Pirate" jaName="海賊" type="トークン・クリーチャー ― 海賊" pt="2/2">威迫（このクリーチャーは２体以上のクリーチャーによってしかブロックされない。）</card>
     <card name="Starfish" jaName="ヒトデ" type="トークン・クリーチャー ― ヒトデ" pt="0/1" related="Spiny Starfish"></card>
@@ -768,9 +768,6 @@
     <card name="Deep Wood" jaName="深い森" type="インスタント">深い森は、攻撃クリーチャー指定ステップの間で、あなたがこのステップで攻撃されているならば唱えられる。
 このターン、攻撃クリーチャーがあなたに与えるダメージをすべて軽減する。</card>
     <card name="Entrapment Maneuver" jaName="偽計" type="インスタント">プレイヤー１人を対象とする。そのプレイヤーは攻撃クリーチャー１体を生け贄に捧げる。あなたは白の1/1の兵士・クリーチャー・トークンをＸ体生成する。Ｘはそのクリーチャーのタフネスに等しい。</card>
-    <card name="Kumena, Tyrant of Orazca" jaName="オラーズカの暴君、クメーナ" type="伝説のクリーチャー ― マーフォーク・シャーマン" pt="2/4">あなたがコントロールしているアンタップ状態の他のマーフォーク１体をタップする：このターン、オラーズカの暴君、クメーナはブロックされない。
-あなたがコントロールしているアンタップ状態のマーフォーク３体をタップする：カードを１枚引く。
-あなたがコントロールしているアンタップ状態のマーフォーク５体をタップする：あなたがコントロールしている各マーフォークの上に+1/+1カウンターをそれぞれ１個置く。</card>
     <card name="Mummy Paramount" jaName="ミイラの大王" type="クリーチャー ― ゾンビ" pt="2/2">他のゾンビが１体あなたのコントロール下で戦場に出るたび、ターン終了時まで、ミイラの大王は+1/+1の修整を受ける。</card>
     <card name="Steamflogger Boss" jaName="蒸気打ちの親分" type="クリーチャー ― ゴブリン・装具工" pt="3/3">あなたがコントロールしている他の装具工・クリーチャーは、+1/+0の修整を受けるとともに速攻を持つ。
 あなたがコントロールしている装具工がからくりを１つ組み立てるなら、代わりにそれはからくりを２つ組み立てる。</card>
@@ -894,13 +891,13 @@
 装備(１)（(１)：あなたがコントロールしているクリーチャー１体を対象とし、これをそれにつける。装備はソーサリーとしてのみ行う。）</card>
     <!-- 最新オラクル未対応：呪文を唱える/土地をプレイする -->
     <card name="Daxos of Meletis" jaName="メレティスのダクソス" type="伝説のクリーチャー ― 人間・兵士" pt="2/2">メレティスのダクソスはパワーが３以上のクリーチャーによってはブロックされない。
-メレティスのダクソスがプレイヤー１人に戦闘ダメージを与えるたび、そのプレイヤーのライブラリーの一番上のカードを追放する。あなたはそのカードの点数で見たマナ・コストに等しい点数のライフを得る。ターン終了時まで、あなたはそのカードを唱えてもよく、その呪文を唱えるのに任意のマナをいずれかの色のマナであるかのように支払ってもよい。</card>
+メレティスのダクソスがプレイヤー１人に戦闘ダメージを与えるたび、そのプレイヤーのライブラリーの一番上のカードを追放する。あなたはそのカードの点数で見たマナ・コストに等しい点数のライフを得る。ターン終了時まで、あなたはそのカードを唱えてもよく、あなたは、その呪文を唱えるために、任意のマナを望む色のマナであるかのように支払ってもよい。</card>
     <card name="Gonti, Lord of Luxury" jaName="豪華の王、ゴンティ" type="伝説のクリーチャー ― 霊基体・ならず者" pt="2/3">接死
-豪華の王、ゴンティが戦場に出たとき、対戦相手１人を対象とする。そのプレイヤーのライブラリーの一番上からカードを４枚見て、そのうち１枚を裏向きに追放し、その後残りをそのライブラリーの一番下に無作為の順番で置く。そのカードが追放され続けているかぎり、あなたはそれを見てもよく、あなたはそれを唱えてもよく、あなたはその呪文を唱えるのに任意のマナを望むタイプのマナであるかのように支払ってもよい。</card>
+豪華の王、ゴンティが戦場に出たとき、対戦相手１人を対象とする。そのプレイヤーのライブラリーの一番上からカードを４枚見て、そのうち１枚を裏向きに追放し、その後残りをそのライブラリーの一番下に無作為の順番で置く。そのカードが追放され続けているかぎり、あなたはそのカードを見てもよく、あなたはそのカードを唱えてもよい。あなたは、その呪文を唱えるために、任意のマナを望むタイプのマナであるかのように支払ってもよい。</card>
     <card name="Winding Canyons" jaName="七曲がりの峡谷" type="土地">(Ｔ)：あなたのマナ・プールに(◇)を加える。
 (２),(Ｔ)：ターン終了時まで、あなたはクリーチャー・呪文を、それが瞬速を持っているかのように唱えてもよい。</card>
     <card name="Wrexial, the Risen Deep" jaName="目覚めし深海、レクシャル" type="伝説のクリーチャー ― クラーケン" pt="5/8">島渡り、沼渡り（このクリーチャーは、防御プレイヤーが島か沼をコントロールしているかぎりブロックされない。）
-目覚めし深海、レクシャルがプレイヤー１人に戦闘ダメージを与えるたび、そのプレイヤーの墓地からインスタントかソーサリーであるカード１枚を対象とする。あなたはそれを、そのマナ・コストを支払うことなく唱えてもよい。このターン、そのカードが墓地に置かれるなら、代わりにそれを追放する。</card>
+目覚めし深海、レクシャルがプレイヤー１人に戦闘ダメージを与えるたび、そのプレイヤーの墓地からインスタントかソーサリーであるカード１枚を対象とする。あなたはそれをそれのマナ・コストを支払うことなく唱えてもよい。このターン、そのカードが墓地に置かれるなら、代わりにそれを追放する。</card>
     <!-- 最新オラクル未対応(AKH)：カードを唱えらない/プレイできない -->
     <card name="City in a Bottle" jaName="City in a Bottle" type="アーティファクト">Arabian Nightsエキスパンションにて最初に印刷された名前を持つ他のトークンでないパーマネントが１つ戦場に出るたび、それのコントローラーはそれを生け贄に捧げる。
 プレイヤーは、Arabian Nightsエキスパンションにて最初に印刷された名前を持つ呪文を唱えられず、Arabian Nightsエキスパンションにて最初に印刷された名前を持つ土地をプレイできない。</card>
@@ -992,7 +989,7 @@ Knowledge Vaultが戦場を離れたとき、Knowledge Vaultにより追放さ�
     <card name="Thunderheads" jaName="いかづち頭" type="インスタント">複製(２)(青)（あなたがこの呪文を唱えたとき、あなたがそれの複製コストを支払った回数１回につき、それをコピーする。）
 防衛と飛行を持つ青の3/3の奇魔・クリーチャー・トークンを１体生成する。次の終了ステップの開始時に、それを追放する。</card>
     <!-- テンプレートの変更：土地が生み出したマナ -->
-    <card name="Extraplanar Lens" jaName="超次元レンズ" type="アーティファクト">刻印 ― 超次元レンズが戦場に出たとき、あなたがコントロールする土地１つを対象とする。あなたはそれを追放してもよい。
+    <card name="Extraplanar Lens" jaName="超次元レンズ" type="アーティファクト">刻印 ― 超次元レンズが戦場に出たとき、あなたがコントロールしている土地１つを対象とする。あなたはそれを追放してもよい。
 その追放されているカードと同じ名前を持つ土地がマナを引き出す目的でタップされるたび、それのコントローラーはその土地が生み出したいずれかのタイプのマナ１点を自分のマナ・プールに加える。</card>
     <card name="Overabundance" jaName="過ぎたる実り" type="エンチャント">プレイヤーがマナを引き出す目的で土地をタップするたび、そのプレイヤーはその土地が生み出したいずれかのタイプのマナ１点を自分のマナ・プールに加え、過ぎたる実りはそのプレイヤーに１点のダメージを与える。</card>
     <card name="Winter's Night" jaName="Winter's Night" type="ワールド・エンチャント">プレイヤー１人が氷雪土地をマナを引き出す目的でタップするたび、そのプレイヤーはその土地が生み出したいずれかのタイプのマナ１点を自分のマナ・プールに加える。その土地は、それのコントローラーの次のアンタップ・ステップにアンタップしない。</card>
