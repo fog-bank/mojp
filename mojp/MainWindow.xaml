@@ -157,8 +157,24 @@
                     </Grid>
                 </DataTemplate>
             </TabControl.ContentTemplate>
-        </TabControl>
-        <Grid Name="pdError" Grid.Row="2" Grid.ColumnSpan="2" Visibility="Collapsed">
+		</TabControl>
+		<Grid Name="pdSuccess" Grid.Row="2" Grid.ColumnSpan="2" Visibility="Collapsed">
+			<Separator Height="1" Margin="0" VerticalAlignment="Top" />
+			<Grid Margin="4,5,4,4">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="Auto" />
+					<ColumnDefinition />
+					<ColumnDefinition Width="Auto" />
+				</Grid.ColumnDefinitions>
+				<Image Source="Resources/Checkmark.png" Height="16" />
+				<TextBlock Grid.Column="1" Margin="4,0,0,0" TextTrimming="CharacterEllipsis">Penny Dreadful カードリストを更新しました。</TextBlock>
+				<Button Grid.Column="2" BorderBrush="{x:Null}" Background="{x:Null}"
+						ToolTip="この通知を消します。" Click="OnClosePdSuccess">
+					<Image Source="Resources/Close.png" Height="14" />
+				</Button>
+			</Grid>
+		</Grid>
+		<Grid Name="pdError" Grid.Row="2" Grid.ColumnSpan="2" Visibility="Collapsed">
             <Separator Height="1" Margin="0" VerticalAlignment="Top" />
             <Grid Margin="4,5,4,4">
                 <Grid.ColumnDefinitions>

@@ -50,10 +50,28 @@ namespace Mojp
 
             if (ViewModel.GetPDList)
             {
-                bool successPd = await CardPrice.GetOrOpenPDLegalFile();
+                var successPd = await CardPrice.GetOrOpenPDLegalFile();
 
-                if (!successPd)
-                    pdError.Visibility = Visibility.Visible;
+                switch (successPd)
+                {
+                    case GetPDListResult.New:
+                    case GetPDListResult.Update:
+                        pdSuccess.Visibility = Visibility.Visible;
+                        pdError.Visibility = Visibility.Collapsed;
+                        break;
+
+                    case GetPDListResult.NotFound:
+                    case GetPDListResult.Error:
+                    case GetPDListResult.Conflict:
+                        pdError.Visibility = Visibility.Visible;
+                        pdSuccess.Visibility = Visibility.Collapsed;
+                        break;
+
+                    default:
+                        pdSuccess.Visibility = Visibility.Collapsed;
+                        pdError.Visibility = Visibility.Collapsed;
+                        break;
+                }
             }
             imgLoading.Visibility = Visibility.Hidden;
             ViewModel.SetRefreshTimer(Dispatcher);
@@ -130,12 +148,33 @@ namespace Mojp
             {
                 if (ViewModel.GetPDList)
                 {
-                    bool successPd = await CardPrice.GetOrOpenPDLegalFile();
-                    pdError.Visibility = successPd ? Visibility.Collapsed : Visibility.Visible;
+                    var successPd = await CardPrice.GetOrOpenPDLegalFile();
+
+                    switch (successPd)
+                    {
+                        case GetPDListResult.New:
+                        case GetPDListResult.Update:
+                            pdSuccess.Visibility = Visibility.Visible;
+                            pdError.Visibility = Visibility.Collapsed;
+                            break;
+
+                        case GetPDListResult.NotFound:
+                        case GetPDListResult.Error:
+                        case GetPDListResult.Conflict:
+                            pdError.Visibility = Visibility.Visible;
+                            pdSuccess.Visibility = Visibility.Collapsed;
+                            break;
+
+                        default:
+                            pdSuccess.Visibility = Visibility.Collapsed;
+                            pdError.Visibility = Visibility.Collapsed;
+                            break;
+                    }
                 }
                 else
                 {
                     CardPrice.ClearPDLegalList();
+                    pdSuccess.Visibility = Visibility.Collapsed;
                     pdError.Visibility = Visibility.Collapsed;
                 }
             }
@@ -153,6 +192,8 @@ namespace Mojp
         }
 
         private void OnCloseNotifier(object sender, RoutedEventArgs e) => notifier.Visibility = Visibility.Collapsed;
+
+        private void OnClosePdSuccess(object sender, RoutedEventArgs e) => pdSuccess.Visibility = Visibility.Collapsed;
 
         private void OnClosePdError(object sender, RoutedEventArgs e) => pdError.Visibility = Visibility.Collapsed;
 

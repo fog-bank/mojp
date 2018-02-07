@@ -144,18 +144,19 @@ namespace Mojp
         /// <summary>
         /// Penny Dreadful のカードリストを取得するか、取得済みのファイルを開き、カードリストを準備します。
         /// </summary>
-        public static async Task<bool> GetOrOpenPDLegalFile()
+        public static async Task<GetPDListResult> GetOrOpenPDLegalFile()
         {
             bool exists = File.Exists(PDLegalFileName);
             var culture = CultureInfo.InvariantCulture;
             DateTime lastTime = default;
+            var result = GetPDListResult.NoCheck;
 
             if (exists)
             {
                 if (!DateTime.TryParseExact(
                     Settings.Default.PDListLastTimeUtc, "o", culture, DateTimeStyles.RoundtripKind, out lastTime))
                 {
-                    // 設定ファイルに最終確認日時を保存する前のバージョンとの互換性
+                    // 設定ファイルに最終確認日時を保存する前のバージョンとの互換性を維持するための代替措置
                     lastTime = File.GetLastWriteTime(PDLegalFileName).ToUniversalTime();
                 }
             }
@@ -181,16 +182,20 @@ namespace Mojp
                                 {
                                     using (var file = File.Create(PDLegalFileName))
                                         await resp.Content.CopyToAsync(file);
+
+                                    result = exists ? GetPDListResult.Update : GetPDListResult.New;
                                 }
                                 else
-                                    return false;
+                                    return GetPDListResult.NotFound;
                             }
+                            else
+                                result = GetPDListResult.NotModified;
                         }
                     }
                     catch
                     {
                         Debug.WriteLine("PD カードリストのダウンロード中にエラーが発生しました。");
-                        return false;
+                        return GetPDListResult.Error;
                     }
                 }
             }
@@ -206,18 +211,20 @@ namespace Mojp
                     string cardName = Card.NormalizeName(name);
 
                     if (!App.Cards.ContainsKey(cardName))
-                        return false;
+                        return GetPDListResult.Conflict;
 
                     pdLegalCards.Add(cardName);
                 }
             }
-            CardPrice.pdLegalCards = pdLegalCards;
+
+            // 枚数をチェック (少なくとも基本土地5枚は入る)
+            if (pdLegalCards.Count < 5)
+                return GetPDListResult.Conflict;
 
             // ローテ直後はサーバー上のファイルが頻繁に更新される場合があるので、カードリスト全体の確認が取れてから最終確認日時を記録する
             Settings.Default.PDListLastTimeUtc = DateTime.UtcNow.ToString("o", culture);
-
-            // 枚数をチェック (少なくとも基本土地5枚は入る)
-            return pdLegalCards.Count >= 5;
+            CardPrice.pdLegalCards = pdLegalCards;
+            return result;
         }
 
         /// <summary>
@@ -381,5 +388,37 @@ namespace Mojp
             endIndex = json.IndexOf('"', startIndex);
             return json.Substring(startIndex, endIndex - startIndex) + " tix";
         }
+    }
+
+    public enum GetPDListResult
+    {
+        /// <summary>
+        /// 確認してから日にちが経っていないので、確認していません。
+        /// </summary>
+        NoCheck,
+        /// <summary>
+        /// ローカルに無かったので、新しくダウンロードしました。
+        /// </summary>
+        New,
+        /// <summary>
+        /// サーバー側のファイルが更新されていました。
+        /// </summary>
+        Update,
+        /// <summary>
+        /// 更新する必要がありません。
+        /// </summary>
+        NotModified,
+        /// <summary>
+        /// HTTP アクセスに失敗しました。
+        /// </summary>
+        NotFound,
+        /// <summary>
+        /// 不明なエラーです。
+        /// </summary>
+        Error,
+        /// <summary>
+        /// ダウンロードしたカードリストに問題があります。
+        /// </summary>
+        Conflict
     }
 }
