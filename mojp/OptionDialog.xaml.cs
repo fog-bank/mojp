@@ -43,11 +43,25 @@ namespace Mojp
             DataContext = vm;
         }
 
+        public MainViewModel ViewModel => DataContext as MainViewModel;
+
+        private async void OnRetryPDList(object sender, RoutedEventArgs e)
+        {
+            imgLoading.Visibility = Visibility.Visible;
+
+            var successPd = await CardPrice.GetOrOpenPDLegalFile(true);
+            (App.Current.MainWindow as MainWindow)?.ShowPDMessage(successPd);
+            ViewModel.RefreshTab();
+
+            imgLoading.Visibility = Visibility.Collapsed;
+        }
+
         /// <summary>
         /// WHISPER の検索結果を格納したテキストファイルからカードテキストデータを構築します。必要なら永続化します。
         /// </summary>
         private void OnBrowseSearchTxt(object sender, RoutedEventArgs e)
         {
+            imgLoading.Visibility = Visibility.Visible;
             imgLoaded.Visibility = Visibility.Collapsed;
 
             var dlg = new OpenFileDialog
@@ -70,13 +84,11 @@ namespace Mojp
                     if (cbxSaveDb.IsChecked == true)
                         App.SaveAsXml("cards.xml");
 
+                    imgLoading.Visibility = Visibility.Collapsed;
                     imgLoaded.Visibility = Visibility.Visible;
                 }
             }
         }
-
-        private void OnClickHyperlink(object sender, RoutedEventArgs e) 
-            => Process.Start((sender as Hyperlink).ToolTip.ToString());
 
         private void OnTestBoxKeyDown(object sender, KeyEventArgs e)
         {
@@ -102,7 +114,7 @@ namespace Mojp
 
             if (target != null)
             {
-                var vm = DataContext as MainViewModel;
+                var vm = ViewModel;
                 vm.Cards.Clear();
                 vm.Cards.Add(target);
 
@@ -117,5 +129,8 @@ namespace Mojp
                 vm.SelectedIndex = 0;
             }
         }
+
+        private void OnClickHyperlink(object sender, RoutedEventArgs e)
+            => Process.Start((sender as Hyperlink).ToolTip.ToString());
     }
 }

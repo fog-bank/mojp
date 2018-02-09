@@ -144,7 +144,8 @@ namespace Mojp
         /// <summary>
         /// Penny Dreadful のカードリストを取得するか、取得済みのファイルを開き、カードリストを準備します。
         /// </summary>
-        public static async Task<GetPDListResult> GetOrOpenPDLegalFile()
+        /// <param name="forceCheck"><see langword="true"/> の場合、最終確認日時に関わらず HTTP アクセスを行います。</param>
+        public static async Task<GetPDListResult> GetOrOpenPDLegalFile(bool forceCheck)
         {
             bool exists = File.Exists(PDLegalFileName);
             var culture = CultureInfo.InvariantCulture;
@@ -162,12 +163,12 @@ namespace Mojp
             }
 
             // 初回であるか、少なくとも前回から 1 日は経過している
-            if (!exists || DateTime.UtcNow - lastTime > TimeSpan.FromDays(1))
+            if (forceCheck || !exists || DateTime.UtcNow - lastTime > TimeSpan.FromDays(1))
             {
                 using (var req = new HttpRequestMessage(HttpMethod.Get, "http://pdmtgo.com/legal_cards.txt"))
                 {
                     // 最終更新日をチェックして通信量を減らす
-                    if (exists)
+                    if (!forceCheck && exists)
                         req.Headers.IfModifiedSince = lastTime;
 
                     try
@@ -211,8 +212,10 @@ namespace Mojp
                     string cardName = Card.NormalizeName(name);
 
                     if (!App.Cards.ContainsKey(cardName))
+                    {
+                        Debug.WriteLine(cardName);
                         return GetPDListResult.Conflict;
-
+                    }
                     pdLegalCards.Add(cardName);
                 }
             }
