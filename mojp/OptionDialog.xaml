@@ -51,7 +51,7 @@
                     <!--<TextBlock Margin="2,0,2,4"></TextBlock>-->
                 </StackPanel>
                 <CheckBox Grid.Row="2" Grid.ColumnSpan="4" Margin="0,4,0,0" IsChecked="{Binding AutoVersionCheck}"
-                          ToolTip="起動時とこのダイアログを閉じた時に更新があるかどうかを確認します。">
+                          ToolTip="起動時とこのダイアログを閉じた時に更新があるかどうかを確認します。" ToolTipService.ShowDuration="60000">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock>最新バージョンを自動的に確認する</TextBlock>
                         <Image Source="Resources/Information.png" Height="16" Margin="5,0,0,0" />
@@ -59,7 +59,7 @@
                 </CheckBox>
                 <CheckBox Grid.Row="3" Grid.ColumnSpan="4" Margin="10,0,0,0"
                           IsChecked="{Binding AcceptsPrerelease}" IsEnabled="{Binding AutoVersionCheck}"
-                          ToolTip="新カードの実装以外に行われる細かい更新も確認するようにします。">
+                          ToolTip="新カードの実装以外に行われる細かい更新も確認するようにします。" ToolTipService.ShowDuration="60000">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock>オラクル更新版や開発版も含めて確認する</TextBlock>
                         <Image Source="Resources/Information.png" Height="16" Margin="5,0,0,0" />
@@ -129,14 +129,14 @@
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <CheckBox IsChecked="{Binding ShowBasicLands}"
-                          ToolTip="チェックを外すと、氷雪土地でない平地、島、沼、山、森には反応しなくなります。">
+                          ToolTip="チェックを外すと、氷雪土地でない平地、島、沼、山、森には反応しなくなります。" ToolTipService.ShowDuration="60000">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock>基本土地 5 種のカードテキストを表示する</TextBlock>
                         <Image Source="Resources/Information.png" Height="16" Margin="5,0,0,0" />
                     </StackPanel>
                 </CheckBox>
                 <CheckBox Grid.Row="1" IsChecked="{Binding AutoRefresh}"
-                          ToolTip="指定された時間ごとに Preview Pane を探します。">
+                          ToolTip="チェックを外した場合は「MO を探す」ボタンを適時クリックしてください。" ToolTipService.ShowDuration="60000">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock>MO の Preview Pane を自動的に探す</TextBlock>
                         <Image Source="Resources/Information.png" Height="16" Margin="5,0,0,0" />
@@ -152,22 +152,33 @@
                     <TextBox Grid.Column="1" MinWidth="100" VerticalContentAlignment="Center" Text="{Binding RefreshIntervalMilliseconds}" />
                     <TextBlock Grid.Column="2">ミリ秒</TextBlock>
                 </Grid>
-                <CheckBox Grid.Row="3" IsChecked="{Binding GetPDList}"
-                          ToolTip="http://pdmtgo.com/legal_cards.txt を 1 日 1 回取得します。">
+                <CheckBox Grid.Row="3" IsChecked="{Binding GetPDList}" ToolTipService.ShowDuration="60000">
+                    <CheckBox.ToolTip>
+                        <TextBlock Margin="0">
+                            新セット発売時の相場が 0.01 チケット (tix) 以下のカードだけが使えるフォーマットです。<LineBreak />
+                            使用可能なカードのリストを 1 日 1 回取得します。
+                        </TextBlock>
+                    </CheckBox.ToolTip>
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock>Penny Dreadful で使用可能かどうかを調べる</TextBlock>
+                        <TextBlock>
+                            <Hyperlink ToolTip="http://pdmtgo.com/" Click="OnClickHyperlink">Penny Dreadful</Hyperlink>
+                            <Run> (PD) で使用可能かどうかを調べる</Run>
+                        </TextBlock>
                         <Image Source="Resources/Information.png" Height="16" Margin="5,0,0,0" />
                     </StackPanel>
                 </CheckBox>
-                <StackPanel Grid.Row="4" Margin="4" Orientation="Horizontal" HorizontalAlignment="Right">
+                <StackPanel Grid.Row="4" Margin="4" Orientation="Horizontal" HorizontalAlignment="Right"
+                            ToolTip="ローテーション後のカードリストの取得に失敗した場合などに、手動で再取得を試みます。" ToolTipService.ShowDuration="60000">
                     <Button IsEnabled="{Binding GetPDList}" Click="OnRetryPDList">カードリストの強制再取得</Button>
-                    <Image Source="Resources/Information.png" Height="16" Margin="5,0,0,0"
-                           ToolTip="ローテーション時にカードリストの取得に失敗した場合などに、手動で再取得を試みます。" />
+                    <Image Source="Resources/Information.png" Height="16" Margin="5,0,0,0" />
                 </StackPanel>
                 <CheckBox Grid.Row="5" IsChecked="{Binding GetCardPrice}"
-                          ToolTip="カード検索サイト Scryfall からカードの平均価格を 1 日 1 回取得します。">
+                          ToolTip="カード検索サイト Scryfall からカードの日毎の平均価格を 1 日 1 回取得します。" ToolTipService.ShowDuration="60000">
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock>MO での相場を調べる</TextBlock>
+                        <TextBlock>
+                            <Hyperlink ToolTip="https://scryfall.com/" Click="OnClickHyperlink">Scryfall</Hyperlink>
+                            <Run> でカード相場を調べる</Run>
+                        </TextBlock>
                         <Image Source="Resources/Information.png" Height="16" Margin="5,0,0,0" />
                     </StackPanel>
                 </CheckBox>
