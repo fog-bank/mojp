@@ -83,11 +83,10 @@ namespace Mojp
 
                     if (cbxSaveDb.IsChecked == true)
                         App.SaveAsXml("cards.xml");
-
-                    imgLoading.Visibility = Visibility.Collapsed;
-                    imgLoaded.Visibility = Visibility.Visible;
                 }
+                imgLoaded.Visibility = Visibility.Visible;
             }
+            imgLoading.Visibility = Visibility.Collapsed;
         }
 
         private void OnTestBoxKeyDown(object sender, KeyEventArgs e)
@@ -95,16 +94,18 @@ namespace Mojp
             if (e.Key != Key.Enter)
                 return;
 
-            var tbx = sender as TextBox;
+            string text = (sender as TextBox)?.Text;
 
-            if (tbx.Text == null)
+            if (text == null)
                 return;
 
-            if (!App.Cards.TryGetValue(tbx.Text, out var target))
+            text = text.Trim();
+
+            if (!App.Cards.TryGetValue(text, out var target))
             {
                 foreach (var card in App.Cards.Values)
                 {
-                    if (card.JapaneseName == tbx.Text)
+                    if (card.JapaneseName == text)
                     {
                         target = card;
                         break;
