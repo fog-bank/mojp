@@ -18,9 +18,13 @@ namespace Mojp
 
         protected override void OnClosing(CancelEventArgs e)
         {
-            ViewModel?.SaveSettings();
-            ViewModel?.Release();
+            var vm = ViewModel;
 
+            if (vm != null)
+            {
+                vm.SaveSettings();
+                vm.Release();
+            }
             base.OnClosing(e);
         }
 
@@ -61,8 +65,10 @@ namespace Mojp
 
         private async void OnInitialized(object sender, EventArgs e)
         {
+            var vm = ViewModel;
+
             imgLoading.Visibility = Visibility.Visible;
-            CardPrice.EnableCardPrice = ViewModel.GetCardPrice;
+            CardPrice.EnableCardPrice = vm.GetCardPrice;
 
             await Task.Run(() =>
             {
@@ -73,36 +79,51 @@ namespace Mojp
                     CardPrice.OpenCacheData();
             });
 
-            if (ViewModel.GetPDList)
+            if (vm.GetPDList)
             {
                 var successPd = await CardPrice.GetOrOpenPDLegalFile(false);
                 ShowPDMessage(successPd);
             }
             imgLoading.Visibility = Visibility.Hidden;
-            ViewModel.SetRefreshTimer(Dispatcher);
+            vm.SetRefreshTimer(Dispatcher);
 
-            if (ViewModel.AutoVersionCheck && await App.IsOutdatedRelease(ViewModel.AcceptsPrerelease))
+            if (vm.AutoVersionCheck && await App.IsOutdatedRelease(vm.AcceptsPrerelease))
                 notifier.Visibility = Visibility.Visible;
         }
 
         private void OnCapture(object sender, RoutedEventArgs e) => ViewModel.CapturePreviewPane();
 
-        private void OnCopyCardName(object sender, RoutedEventArgs e) => Clipboard.SetText(ViewModel.SelectedCard.JapaneseName);
+        private void OnCopyCardName(object sender, RoutedEventArgs e)
+        {
+            string name = ViewModel.SelectedCard?.JapaneseName;
+
+            if (name != null)
+             Clipboard.SetText(name);
+        }
 
         private void OnCopyEnglishName(object sender, RoutedEventArgs e)
         {
+            var card = ViewModel.SelectedCard;
+
+            if (card == null)
+                return;
+
             // MO ヴァンガードは MO 上ではカード名が "Avatar - ..." となっている。
             //（ただしゲーム上ではカード名に "Avatar - " を含まない。例：Necropotence Avatar のカードテキスト）
             // そこで、日本語名の代わりにオラクルでのカード名である "... Avatar" を表示し、それをコピーするようにする
-            if (ViewModel.SelectedCard.Type != "ヴァンガード")
-                Clipboard.SetText(ViewModel.SelectedCard.Name);
-            else
-                Clipboard.SetText(ViewModel.SelectedCard.JapaneseName);
+            string name = card.Type == "ヴァンガード" ? card.JapaneseName : card.Name;
+
+            if (name != null)
+                Clipboard.SetText(name);
         }
 
         private void OnGoToWiki(object sender, RoutedEventArgs e)
         {
-            var card = ViewModel.SelectedCard;
+            var card = ViewModel?.SelectedCard;
+
+            if (card == null)
+                return;
+
             string link = card.WikiLink;
 
             if (link == null)
@@ -121,27 +142,25 @@ namespace Mojp
 
         private async void OnOption(object sender, RoutedEventArgs e)
         {
-            var dlg = new OptionDialog(DataContext)
-            {
-                Owner = this
-            };
-            bool oldPrice = ViewModel.GetCardPrice;
-            bool oldPd = ViewModel.GetPDList;
+            var vm = ViewModel;
+            bool oldPrice = vm.GetCardPrice;
+            bool oldPd = vm.GetPDList;
 
+            var dlg = new OptionDialog(DataContext) { Owner = this };
             dlg.ShowDialog();
 
-            Topmost = ViewModel.TopMost;
+            Topmost = vm.TopMost;
 
             // Preview Pane の自動探索の設定を反映
-            ViewModel.SetRefreshTimer(Dispatcher);
+            vm.SetRefreshTimer(Dispatcher);
 
-            notifier.Visibility = ViewModel.AutoVersionCheck &&
-                await App.IsOutdatedRelease(ViewModel.AcceptsPrerelease) ? Visibility.Visible : Visibility.Collapsed;
+            notifier.Visibility = vm.AutoVersionCheck &&
+                await App.IsOutdatedRelease(vm.AcceptsPrerelease) ? Visibility.Visible : Visibility.Collapsed;
 
             // カード価格関連の変更を反映するために await
             imgLoading.Visibility = Visibility.Visible;
 
-            if (ViewModel.GetCardPrice != oldPrice)
+            if (vm.GetCardPrice != oldPrice)
             {
                 if (CardPrice.EnableCardPrice)
                     await Task.Run(() => CardPrice.OpenCacheData());
@@ -149,9 +168,9 @@ namespace Mojp
                     CardPrice.ClearCacheData();
             }
 
-            if (ViewModel.GetPDList != oldPd)
+            if (vm.GetPDList != oldPd)
             {
-                if (ViewModel.GetPDList)
+                if (vm.GetPDList)
                 {
                     var successPd = await CardPrice.GetOrOpenPDLegalFile(false);
                     ShowPDMessage(successPd);
@@ -164,8 +183,8 @@ namespace Mojp
                 }
             }
 
-            if (ViewModel.GetCardPrice != oldPrice || ViewModel.GetPDList != oldPd)
-                ViewModel.RefreshTab();
+            if (vm.GetCardPrice != oldPrice || vm.GetPDList != oldPd)
+                vm.RefreshTab();
 
             imgLoading.Visibility = Visibility.Hidden;
         }
