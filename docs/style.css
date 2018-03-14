@@ -1,44 +1,50 @@
-﻿body {
+﻿html {
+    font-size: 0.82em;
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
     font-family: 'Segoe UI', Meiryo, Tahoma, Geneva, Verdana, sans-serif;
-	font-size: smaller;
+    font-size: 1em;
     margin: 0;
 }
 
 h1 {
-	background-color: #3399ff;
-	color: White;
-	font-size: larger;
-	font-weight: normal;
-	margin: 0;
-	padding: 10px;
-	vertical-align: bottom;
+    background-color: #3399ff;
+    color: White;
+    font-size: 1.25em;
+    font-weight: normal;
+    margin: 0;
+    padding: 0.5em;
+    vertical-align: bottom;
 }
 
 h2 {
-	font-weight: normal;
+    font-weight: normal;
 }
 
 h3 {
-	font-weight: normal;
-	background: #e0eaf6 url('images/flag.png') no-repeat 10px center;
-	color: Black;
-	padding: 6px 6px 5px 26px;
+    font-weight: normal;
+    background: #e0eaf6 url('images/flag.png') no-repeat 10px center;
+    color: Black;
+    padding: 6px 6px 5px 26px;
 }
 
 h4 {
-	font-size: 100%;
-	font-weight: normal;
-	text-indent: 0.5em;
+    font-size: 1em;
+    font-weight: normal;
+    text-indent: 0.5em;
 }
 
 h5 {
-	font-size: 100%;
-	font-weight: normal;
+    font-size: 1em;
+    font-weight: normal;
 }
 
 p {
-    margin-left: 6px;
-	text-indent: 1em;
+    margin-left: 0.38em;
+    text-indent: 1em;
 }
 
 a {
@@ -50,10 +56,10 @@ a:hover {
 }
 
 #menu {
-	background: #faf9f5 url('images/toolbar.png') repeat-x bottom;
-	color: Black;
-	margin: 0;
-	padding: 5px;
+    background: #faf9f5 url('images/toolbar.png') repeat-x bottom;
+    color: Black;
+    margin: 0;
+    padding: 5px;
 }
 
 #menu li {
@@ -62,18 +68,18 @@ a:hover {
 }
 
 #menu a {
-	background-color: inherit;
-	border: 1px solid Transparent;
-	color: Black;
+    background-color: inherit;
+    border: 1px solid Transparent;
+    color: Black;
     margin: 0 2px 0 0;
-	padding: 0 5px;
-	text-decoration: none;
+    padding: 0 5px;
+    text-decoration: none;
 }
 
 #menu a:hover {
-	background-color: #c1d2ee;
-	border: 1px solid Blue;
-	color: Black;
+    background-color: #c1d2ee;
+    border: 1px solid Blue;
+    color: Black;
 }
 
 #content {
@@ -92,13 +98,6 @@ a:hover {
 }
 
 .underline {
-	border-bottom: dotted 1px black;
-	padding: 2px 6px;
-}
-
-.fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+    border-bottom: dotted 1px black;
+    padding: 2px 6px;
 }
