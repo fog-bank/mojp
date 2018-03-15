@@ -101,3 +101,10 @@ a:hover {
     border-bottom: dotted 1px black;
     padding: 2px 6px;
 }
+
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
