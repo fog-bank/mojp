@@ -461,12 +461,23 @@ III ― あなたがコントロールしている各クリーチャーの上に
 (Ｔ)：(黒)か(緑)を加える。</card>
     <card name="Zhalfirin Void" jaName="ザルファーの虚空" type="土地">ザルファーの虚空が戦場に出たとき、占術１を行う。（あなたのライブラリーの一番上のカードを見る。あなたはそのカードをあなたのライブラリーの一番下に置いてもよい。）
 (Ｔ)：(◇)を加える。</card>
-    
+    <!--<card name="Teferi, Timebender" jaName="時間を曲げる者、テフェリー" type="伝説のプレインズウォーカー ― テフェリー" pt="5">[+2]：アーティファクトかクリーチャー最大１つを対象とし、それをアンタップする。
+[-3]：あなたは２点のライフを得て、カードを２枚引く。
+[-9]：このターンに続いて追加の１ターンを行う。</card>-->
     <!--<card name="Temporal Machinations" jaName="経時的策謀" type="ソーサリー">クリーチャー１体を対象とし、それをオーナーの手札に戻す。あなたがアーティファクトをコントロールしているなら、カードを１枚引く。</card>-->
+    <!--<card name="Niambi, Faithful Healer" jaName="忠実な癒し手、ニアンビ" type="伝説のクリーチャー ― 人間・クレリック" pt="2/2" related="Teferi, Timebender">忠実な癒し手、ニアンビが戦場に出たとき、あなたはあなたのライブラリーやあなたの墓地から《時間を曲げる者、テフェリー》という名前のカード１枚を探し、それを公開してあなたの手札に加えてもよい。あなたがこれによりあなたのライブラリーからカードを探したなら、あなたのライブラリーを切り直す。</card>-->
+    <!--<card name="Teferi's Sentinel" jaName="テフェリーの歩哨" type="アーティファクト・クリーチャー ― ゴーレム" pt="2/6">あなたがテフェリー・プレインズウォーカーをコントロールしているかぎり、テフェリーの歩哨は+4/+0の修整を受ける。</card>-->
+    <!--<card name="Meandering River" jaName="曲がりくねる川" type="土地">曲がりくねる川はタップ状態で戦場に出る。
+(Ｔ)：(白)か(青)を加える。</card>-->
     <!--<card name="Chandra, Bold Pyromancer" jaName="勇敢な紅蓮術師、チャンドラ" type="伝説のプレインズウォーカー ― チャンドラ" pt="5">[+1]：プレイヤー１人を対象とする。(赤)(赤)を加える。勇敢な紅蓮術師、チャンドラはそのプレイヤーに２点のダメージを与える。
 [-3]：クリーチャー１体かプレインズウォーカー１体を対象とする。勇敢な紅蓮術師、チャンドラはそれに３点のダメージを与える。
 [-7]：プレイヤー１人を対象とする。勇敢な紅蓮術師、チャンドラは、そのプレイヤーとそのプレイヤーがコントロールしている各クリーチャーと各プレインズウォーカーに、それぞれ１０点のダメージを与える。</card>-->
-    
+    <!--<card name="Chandra's Outburst" jaName="チャンドラの激高" type="ソーサリー" related="Chandra, Bold Pyromancer">プレイヤー１人かプレインズウォーカー１体を対象とする。チャンドラの激高はそれに４点のダメージを与える。
+あなたのライブラリーやあなたの墓地から《勇敢な紅蓮術師、チャンドラ》という名前のカード１枚を探し、それを公開してあなたの手札に加える。あなたがこれによりあなたのライブラリーからカードを探したなら、あなたのライブラリーを切り直す。</card>-->
+    <!--<card name="Karplusan Hound" jaName="カープルーザンの猟犬" type="クリーチャー ― 猟犬" pt="3/3">カープルーザンの猟犬が攻撃するたび、あなたがチャンドラ・プレインズウォーカーをコントロールしている場合、クリーチャー１体かプレインズウォーカー１体かプレイヤー１人を対象とする。カープルーザンの猟犬はそれに２点のダメージを与える。</card>-->
+    <!--<card name="Pyromantic Pilgrim" jaName="紅蓮の巡礼者" type="クリーチャー ― 人間・ウィザード" pt="3/1">速攻（このクリーチャーは、あなたのコントロール下になってすぐに攻撃したり(Ｔ)したりできる。）</card>-->
+    <!--<card name="Timber Gorge" jaName="森林の地溝" type="土地">森林の地溝はタップ状態で戦場に出る。
+(Ｔ)：(赤)か(緑)を加える。</card>-->
     <!--<card name="Firesong and Sunspeaker" jaName="ファイアソングとサンスピーカー" type="伝説のクリーチャー ― ミノタウルス・クレリック" pt="4/6">あなたがコントロールしていて赤でありインスタントかソーサリーである呪文は絆魂を持つ。
 白でありインスタントかソーサリーである呪文によりあなたがライフを得るたび、クリーチャー１体かプレイヤー１人を対象とする。ファイアソングとサンスピーカーはそれに３点のダメージを与える。</card>-->
     <!-- クリーチャーでないトークン -->
@@ -898,6 +909,8 @@ III ― あなたがコントロールしている各クリーチャーの上に
     <related name="Sun-Blessed Mount" related="Huatli, Dinosaur Knight" />
     <related name="Vraska's Scorn" related="Vraska, Scheming Gorgon" />
     <related name="Angrath's Fury" related="Angrath, Minotaur Pirate" />
+    <related name="Niambi, Faithful Healer" related="Teferi, Timebender" />
+    <related name="Chandra's Outburst" related="Chandra, Bold Pyromancer" />
     <!-- 分割カードのwikiページ -->
     <wikilink name="Stand" wikilink="抵抗+救難/Stand+Deliver" />
     <wikilink name="Deliver" wikilink="抵抗+救難/Stand+Deliver" />
