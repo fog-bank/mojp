@@ -1057,8 +1057,11 @@ III ― あなたがコントロールしている各クリーチャーの上に
     <regex target="text" pattern="ライフ総量を公開する" value="ライフ総量を交換する" nodebug="true" />
     <regex target="text" pattern="(?&lt;=[０-９Ｘ]+)店" value="点" nodebug="true" />
     <regex target="text" pattern="されて続けている" value="され続けている" nodebug="true" />
+    <regex target="text" pattern="クリーチャー死亡" value="クリーチャーが死亡" nodebug="true" />
+    <regex target="text" pattern="対象する" value="対象とする" nodebug="true" />
     <regex target="text" pattern="エンチャント\(クリーチャー\)" value="エンチャント（クリーチャー）" nodebug="true" />
     <regex target="text" pattern="\[T\}" value="(Ｔ)" nodebug="true" />
+    <regex target="text" pattern="\(Ｃ\)" value="(◇)" nodebug="true" />
     <regex target="name" pattern="’" value="'" />
     <regex target="type" pattern=" - " value=" ― " />
     <regex target="text" pattern="\(T\)" value="(Ｔ)" />
@@ -1071,7 +1074,7 @@ III ― あなたがコントロールしている各クリーチャーの上に
     <regex target="text" pattern="(?&lt;=《[^《/》]+)/[^《/》]+(?=》)" value="" nodebug="true" />
     <!-- オラクル更新 -->
     <regex target="name|text" pattern="AE" value="Ae" nodebug="true" />
-    <regex target="text" pattern="(?&lt;=トークンを[０-９Ｘ]+体)戦場に出す。" value="生成する。" nodebug="true" />
+    <regex target="text" pattern="(?&lt;=トークンを[０-９Ｘ]+体)戦場に出す" value="生成する" nodebug="true" />
     <regex target="text" pattern="可能なら毎ターン" value="可能なら各戦闘で" nodebug="true" />
     <!-- 中丸追加 -->
     <regex target="type" pattern="部族(?=アーティファクト|エンチャント|インスタント|ソーサリー)" value="部族・" nodebug="true" />
@@ -1164,6 +1167,7 @@ III ― あなたがコントロールしている各クリーチャーの上に
     <regex target="text" pattern="そうしない場合、|そうしなかった場合、|そうしなかったなら、|(?&lt;=そうしたなら、[^。]+。)そうでない場合、" value="そうしないなら、" nodebug="true" />
     <regex target="text" pattern="場合に?のみ(?=起動できる|唱えられる)" value="ときにのみ" nodebug="true" />
     <regex target="text" pattern="。あなたがこの呪文をあなたのメイン・フェイズの間に唱えた場合、" value="。あなたがこの呪文をあなたのメイン・フェイズ中に唱えたなら、" nodebug="true" />
+    <regex target="text" pattern="(?m)(?&lt;=(?:^|。)[^。、]+)がキッカーされていた場合、" value="がキッカーされていたなら、" nodebug="true" />
     <regex target="text" pattern="(?m)(?&lt;=^族系.+)共通のクリーチャー・タイプを持つ場合、" value="共通のクリーチャー・タイプを持つなら、" nodebug="true" />
     <!-- テンプレート変更：誘発型能力の条件 -->
     <regex target="text" pattern="呪文を１つ唱えるたび、" value="呪文を唱えるたび、" nodebug="true" />
