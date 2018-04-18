@@ -508,6 +508,29 @@ namespace Mojp
                     cardType = "紋章";
                 else if (name.StartsWith("Avatar - "))
                     cardType = "ヴァンガード";
+                else
+                {
+                    // 英雄譚はカード名を Automation で探せない
+                    switch (name)
+                    {
+                        case "Jason Felix":     // Fall of the Thran
+                        case "Noah Bradley":    // History of Benalia
+                        case "Daniel Ljunggren":    // Triumph of Gerrard
+                        case "Mark Tedin":      // The Antiquities War
+                        case "James Arnold":    // The Mirari Conjecture
+                        case "Franz Vohwinkel": // Time of Ice
+                        case "Vincent Proce":   // Chainer's Torment
+                        case "Jenn Ravenna":    // The Eldest Reborn
+                        case "Joseph Meehan":   // Phyrexian Scriptures
+                        case "Seb McKinnon":    // Rite of Belzenlok
+                        case "Steven Belledin": // The First Eruption
+                        case "Lake Hurwitz":    // The Flame of Keld
+                        case "Adam Paquette":   // The Mending of Dominaria
+                        case "Min Yum":         // Song of Freyalise
+                            SearchSagaByArtist(name);
+                            return;
+                    }
+                }
 
                 if (cardType != null)
                     App.CurrentDispatcher.Invoke(() => SetMessage(cardType));
@@ -605,6 +628,102 @@ namespace Mojp
 
                 SelectedIndex = 0;
             });
+        }
+
+        /// <summary>
+        /// 英雄譚のカード名が見つからないため、アーティスト名で無理やり検索します。
+        /// </summary>
+        private void SearchSagaByArtist(string artist)
+        {
+            // 英雄譚かどうかをチェックする
+            AutomationElement element = null;
+            using (cacheReq.Activate())
+            {
+                element = prevWnd?.FindFirst(TreeScope.Descendants,
+                    new PropertyCondition(AutomationElement.AutomationIdProperty, "CardType"));
+            }
+
+            string cardType = GetNamePropertyValue(element);
+
+            if (cardType != "Enchantment — Saga")
+                return;
+
+            Card foundCard = null;
+
+            switch (artist)
+            {
+                case "Jason Felix":
+                    App.Cards.TryGetValue("Fall of the Thran", out foundCard);
+                    break;
+
+                case "Noah Bradley":
+                    App.Cards.TryGetValue("History of Benalia", out foundCard);
+                    break;
+
+                case "Daniel Ljunggren":
+                    App.Cards.TryGetValue("Triumph of Gerrard", out foundCard);
+                    break;
+
+                case "Mark Tedin":
+                    App.Cards.TryGetValue("The Antiquities War", out foundCard);
+                    break;
+
+                case "James Arnold":
+                    App.Cards.TryGetValue("The Mirari Conjecture", out foundCard);
+                    break;
+
+                case "Franz Vohwinkel":
+                    App.Cards.TryGetValue("Time of Ice", out foundCard);
+                    break;
+
+                case "Vincent Proce":
+                    App.Cards.TryGetValue("Chainer's Torment", out foundCard);
+                    break;
+
+                case "Jenn Ravenna":
+                    App.Cards.TryGetValue("The Eldest Reborn", out foundCard);
+                    break;
+
+                case "Joseph Meehan":
+                    App.Cards.TryGetValue("Phyrexian Scriptures", out foundCard);
+                    break;
+
+                case "Seb McKinnon":
+                    App.Cards.TryGetValue("Rite of Belzenlok", out foundCard);
+                    break;
+
+                case "Steven Belledin":
+                    App.Cards.TryGetValue("The First Eruption", out foundCard);
+                    break;
+
+                case "Lake Hurwitz":
+                    App.Cards.TryGetValue("The Flame of Keld", out foundCard);
+                    break;
+
+                case "Adam Paquette":
+                    App.Cards.TryGetValue("The Mending of Dominaria", out foundCard);
+                    break;
+
+                case "Min Yum":
+                    App.Cards.TryGetValue("Song of Freyalise", out foundCard);
+                    break;
+            }
+
+            if (foundCard != null)
+            {
+                App.CurrentDispatcher.Invoke(() =>
+                {
+                    Cards[0] = foundCard;
+
+                        // 項目数が減る場合に末端から削除
+                        for (int i = Cards.Count - 1; i >= 1; i--)
+                        Cards.RemoveAt(i);
+
+                    SelectedIndex = 0;
+                });
+            }
+            else
+                App.CurrentDispatcher.Invoke(() => SetMessage("エンチャント ― 英雄譚"));
         }
 
         /// <summary>
