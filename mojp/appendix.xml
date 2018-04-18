@@ -1077,6 +1077,7 @@ III ― あなたがコントロールしている各クリーチャーの上に
     <regex target="name|text" pattern="AE" value="Ae" nodebug="true" />
     <regex target="text" pattern="(?&lt;=トークンを[０-９Ｘ]+体)戦場に出す" value="生成する" nodebug="true" />
     <regex target="text" pattern="可能なら毎ターン" value="可能なら各戦闘で" nodebug="true" />
+    <regex target="text" pattern="(?&lt;!この能力は、?)、?呪文や能力によっては?(?=打ち消され)" value="" nodebug="true" />
     <!-- 中丸追加 -->
     <regex target="type" pattern="部族(?=アーティファクト|エンチャント|インスタント|ソーサリー)" value="部族・" nodebug="true" />
     <regex target="text" pattern="(?&lt;=クリーチャー|アーティファクト|エンチャント|インスタント|ソーサリー|プレインズウォーカー|土地)(?=カード|呪文)" value="・" nodebug="true" />
@@ -1150,6 +1151,7 @@ III ― あなたがコントロールしている各クリーチャーの上に
     <regex target="text" pattern="(?m)(?&lt;=^| ― |なら、)[^。 、]+(?&lt;!呪文|それ|これ)を唱えるためのコストは" value="この呪文を唱えるためのコストは" nodebug="true" />
     <regex target="text" pattern="(?m)^[^。]+(?&lt;!呪文|伝説のソーサリー)は(?=、?[^。]+のみ唱えられる。)" value="この呪文は" nodebug="true" />
     <regex target="text" pattern="(?&lt;=あなたは、?)[^。、]+(?&lt;!呪文|それ)のマナ・コストを支払うのではなく(?!.*墓地から)" value="この呪文のマナ・コストを支払うのではなく" nodebug="true" />
+    <regex target="text" pattern="(?m)(?&lt;=^|なら、|場合、)[^\n合]+(?&lt;!それ|呪文|呪文１つ|能力|によって)は、?打ち消され" value="この呪文は打ち消され" nodebug="true" />
     <regex target="text" pattern="(?&lt;=。)[^\n。、]+(?&lt;!呪文|それ)がキッカーされていた場合、" value="この呪文がキッカーされていたなら、" nodebug="true" />
     <regex target="text" pattern="あなたが[^。]+(?&lt;!呪文)を唱えた時点でドラゴン・カードを公開したかドラゴンをコントロールしていた" value="この呪文を唱えた時点であなたがドラゴン・カードを公開したかドラゴンをコントロールしていた" nodebug="true" />
     <!-- テンプレート変更：コントロールする -->
@@ -1430,8 +1432,8 @@ III ― あなたがコントロールしている各クリーチャーの上に
     <card name="Hydromorph Gull" jaName="ハイドロモルフのカモメ" type="クリーチャー ― エレメンタル・鳥" pt="3/3">飛行
 (青),ハイドロモルフのカモメを生け贄に捧げる：あなたがコントロールしているクリーチャーを対象とする呪文１つを対象とし、それを打ち消す。</card>
     <!-- 最新オラクル未対応(DOM) -->
-    <card name="Boseiju, Who Shelters All" jaName="すべてを護るもの、母聖樹" type="伝説の土地">すべてを護るもの、母聖樹はタップ状態で戦場に出る。
-(Ｔ),２点のライフを支払う：(◇)を加える。このマナがインスタントかソーサリーである呪文のために使用されたなら、その呪文は打ち消されない。</card>
+    <card name="Gilded Drake" jaName="金粉のドレイク" type="クリーチャー ― ドレイク" pt="3/3">飛行
+金粉のドレイクが戦場に出たとき、対戦相手がコントロールしているクリーチャー最大１体を対象とし、金粉のドレイクとそれのコントロールを交換する。交換しないか交換できないなら、金粉のドレイクを生け贄に捧げる。この能力は、その対象が不適正になっても解決する。</card>
     <card name="Goblin Warchief" jaName="ゴブリンの戦長" type="クリーチャー ― ゴブリン・戦士" pt="2/2">あなたがゴブリン・呪文を唱えるためのコストは(１)少なくなる。
 あなたがコントロールしているゴブリンは速攻を持つ。</card>
     <!-- 最新オラクル未対応(DOM)：マナ・プール -->
