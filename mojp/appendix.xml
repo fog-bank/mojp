@@ -698,8 +698,9 @@
     <regex target="text" pattern="((?:\(.\))+)を加え(る|てもよい)（[^。]+）" value="追加の$1を加え$2" nodebug="true" />
     <regex target="text" pattern="ステップとフェイズが終了することではこのマナは(あなた|そのプレイヤー)のマナ・プールから失われない" value="ステップやフェイズの終了に際して$1はこのマナを失わない" nodebug="true" />
     <regex target="text" pattern="(?m)^[^。]+(?&lt;!呪文)を唱えるための追加コストとして、" value="この呪文を唱えるための追加コストとして、" nodebug="true" />
-    <regex target="text" pattern="(?m)(?&lt;=^| ― |なら、)[^。 、]+(?&lt;!呪文|それ|これ)を唱えるためのコストは" value="この呪文を唱えるためのコストは" nodebug="true" />
+    <regex target="text" pattern="(?m)(?&lt;=^| ― |なら、|場合、)[^。 、]+(?&lt;!呪文|それ|これ)を唱えるためのコストは" value="この呪文を唱えるためのコストは" nodebug="true" />
     <regex target="text" pattern="(?m)^[^。]+(?&lt;!呪文|伝説のソーサリー)は(?=、?[^。]+のみ唱えられる。)" value="この呪文は" nodebug="true" />
+    <regex target="text" pattern="(?m)^.+(?=は、?攻撃クリーチャー[^。]+唱えられる。)" value="この呪文" nodebug="true" />
     <regex target="text" pattern="(?&lt;=あなたは、?)[^。、]+(?&lt;!呪文|それ)のマナ・コストを支払うのではなく(?!.*墓地から)" value="この呪文のマナ・コストを支払うのではなく" nodebug="true" />
     <regex target="text" pattern="(?m)(?&lt;=^|なら、|場合、)[^\n合]+(?&lt;!それ|呪文|呪文１つ|能力|によって)は、?打ち消され" value="この呪文は打ち消され" nodebug="true" />
     <regex target="text" pattern="あなたが[^。]+(?&lt;!呪文|カード)を唱えたとき、" value="あなたがこの呪文を唱えたとき、" nodebug="true" />
@@ -836,7 +837,7 @@
     <card name="Cabal Paladin" jaName="陰謀団の聖騎士" type="クリーチャー ― 人間・騎士" pt="4/2">あなたが歴史的な呪文を唱えるたび、陰謀団の聖騎士は各対戦相手にそれぞれ２点のダメージを与える。（歴史的とは、アーティファクトと伝説と英雄譚のことである。）</card>
     <card name="Chandra's Outburst" jaName="チャンドラの激高" type="ソーサリー" related="Chandra, Bold Pyromancer">プレイヤー１人かプレインズウォーカー１体を対象とする。チャンドラの激高はそれに４点のダメージを与える。
 あなたのライブラリーやあなたの墓地から《勇敢な紅蓮術師、チャンドラ》という名前のカード１枚を探し、それを公開してあなたの手札に加える。あなたがこれによりあなたのライブラリーからカードを探したなら、そのライブラリーを切り直す。</card>
-    <card name="Deep Wood" jaName="深い森" type="インスタント">深い森は、攻撃クリーチャー指定ステップの間で、あなたがこのステップで攻撃されているならば唱えられる。
+    <card name="Deep Wood" jaName="深い森" type="インスタント">この呪文は、攻撃クリーチャー指定ステップの間で、あなたがこのステップで攻撃されているならば唱えられる。
 このターン、攻撃クリーチャーがあなたに与えるダメージをすべて軽減する。</card>
     <card name="Entrapment Maneuver" jaName="偽計" type="インスタント">プレイヤー１人を対象とする。そのプレイヤーは攻撃クリーチャー１体を生け贄に捧げる。あなたは白の1/1の兵士・クリーチャー・トークンをＸ体生成する。Ｘはそのクリーチャーのタフネスに等しい。</card>
     <card name="Grove of the Guardian" jaName="守護者の木立ち" type="土地">(Ｔ)：(◇)を加える。
