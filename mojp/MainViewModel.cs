@@ -530,6 +530,8 @@ namespace Mojp
                             SearchSagaByArtist(name);
                             return;
                     }
+                    if (name == "Enchantment - Saga")
+                        cardType = "エンチャント ― 英雄譚";
                 }
 
                 if (cardType != null)
@@ -645,7 +647,7 @@ namespace Mojp
 
             string cardType = GetNamePropertyValue(element);
 
-            if (cardType != "Enchantment — Saga")
+            if (cardType == null || cardType.EndsWith("Saga"))
                 return;
 
             Card foundCard = null;
