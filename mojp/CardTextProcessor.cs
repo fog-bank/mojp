@@ -76,6 +76,73 @@ namespace Mojp
         }
 
         /// <summary>
+        /// アーティスト名に対応する英雄譚のカード名を取得します。
+        /// </summary>
+        public static bool GetSagaNameByArtist(string artist, out string cardName)
+        {
+            switch (artist)
+            {
+                case "Jason Felix":
+                    cardName = "Fall of the Thran";
+                    return true;
+
+                case "Noah Bradley":
+                    cardName = "History of Benalia";
+                    return true;
+
+                case "Daniel Ljunggren":
+                    cardName = "Triumph of Gerrard";
+                    return true;
+
+                case "Mark Tedin":
+                    cardName = "The Antiquities War";
+                    return true;
+
+                case "James Arnold":
+                    cardName = "The Mirari Conjecture";
+                    return true;
+
+                case "Franz Vohwinkel":
+                    cardName = "Time of Ice";
+                    return true;
+
+                case "Vincent Proce":
+                    cardName = "Chainer's Torment";
+                    return true;
+
+                case "Jenn Ravenna":
+                    cardName = "The Eldest Reborn";
+                    return true;
+
+                case "Joseph Meehan":
+                    cardName = "Phyrexian Scriptures";
+                    return true;
+
+                case "Seb McKinnon":
+                    cardName = "Rite of Belzenlok";
+                    return true;
+
+                case "Steven Belledin":
+                    cardName = "The First Eruption";
+                    return true;
+
+                case "Lake Hurwitz":
+                    cardName = "The Flame of Keld";
+                    return true;
+
+                case "Adam Paquette":
+                    cardName = "The Mending of Dominaria";
+                    return true;
+
+                case "Min Yum":
+                    cardName = "Song of Freyalise";
+                    return true;
+            }
+            cardName = null;
+            return false;
+        }
+
+        /// <summary>
         /// WHISPER の検索結果テキストを解析し、カード情報を列挙します。
         /// </summary>
         /// <remarks>

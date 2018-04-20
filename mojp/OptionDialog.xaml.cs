@@ -114,21 +114,7 @@ namespace Mojp
             }
 
             if (target != null)
-            {
-                var vm = ViewModel;
-                vm.Cards.Clear();
-                vm.Cards.Add(target);
-
-                if (target.RelatedCardName != null)
-                {
-                    foreach (string relatedName in target.RelatedCardNames)
-                    {
-                        App.Cards.TryGetValue(relatedName, out var card2);
-                        vm.Cards.Add(card2);
-                    }
-                }
-                vm.SelectedIndex = 0;
-            }
+                ViewModel?.SetCard(target);
         }
 
         private void OnClickHyperlink(object sender, RoutedEventArgs e)

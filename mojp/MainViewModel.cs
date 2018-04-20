@@ -344,6 +344,36 @@ namespace Mojp
         }
 
         /// <summary>
+        /// 指定したカードを表示します。
+        /// </summary>
+        public void SetCard(Card card)
+        {
+            if (card == null)
+                return;
+
+            if (Cards.Count > 0)
+            {
+                Cards[0] = card;
+
+                // 項目数が減る場合に末端から削除
+                for (int i = Cards.Count - 1; i >= 1; i--)
+                    Cards.RemoveAt(i);
+            }
+            else
+                Cards.Add(card);
+
+            if (card.RelatedCardName != null)
+            {
+                foreach (string relatedName in card.RelatedCardNames)
+                {
+                    App.Cards.TryGetValue(relatedName, out var card2);
+                    Cards.Add(card2);
+                }
+            }
+            SelectedIndex = 0;
+        }
+
+        /// <summary>
         /// 画面を更新するように要求します。
         /// </summary>
         public void RefreshTab() => SearchCardName();
@@ -502,36 +532,29 @@ namespace Mojp
             if (!App.Cards.ContainsKey(name) && !name.StartsWith("Token"))
             {
                 string cardType = null;
+                const string triggerPrefix = "Triggered ability from ";
 
                 // 統治者以外の紋章やテキストレスのヴァンガードの場合は、確定で空表示にする
                 if (name.StartsWith("Emblem") && name != "Emblem - ")
                     cardType = "紋章";
                 else if (name.StartsWith("Avatar - "))
                     cardType = "ヴァンガード";
-                else
+                else if (name.StartsWith(triggerPrefix))
                 {
-                    // 英雄譚はカード名を Automation で探せない
-                    switch (name)
+                    // スタックにのった英雄譚からの誘発型能力
+                    name = name.Substring(triggerPrefix.Length);
+
+                    if (App.Cards.TryGetValue(name, out var card))
                     {
-                        case "Jason Felix":     // Fall of the Thran
-                        case "Noah Bradley":    // History of Benalia
-                        case "Daniel Ljunggren":    // Triumph of Gerrard
-                        case "Mark Tedin":      // The Antiquities War
-                        case "James Arnold":    // The Mirari Conjecture
-                        case "Franz Vohwinkel": // Time of Ice
-                        case "Vincent Proce":   // Chainer's Torment
-                        case "Jenn Ravenna":    // The Eldest Reborn
-                        case "Joseph Meehan":   // Phyrexian Scriptures
-                        case "Seb McKinnon":    // Rite of Belzenlok
-                        case "Steven Belledin": // The First Eruption
-                        case "Lake Hurwitz":    // The Flame of Keld
-                        case "Adam Paquette":   // The Mending of Dominaria
-                        case "Min Yum":         // Song of Freyalise
-                            SearchSagaByArtist(name);
-                            return;
+                        App.CurrentDispatcher.Invoke(() => SetCard(card));
+                        return;
                     }
-                    if (name == "Enchantment - Saga")
-                        cardType = "エンチャント ― 英雄譚";
+                }
+                else if (Card.GetSagaNameByArtist(name, out string saga))
+                {
+                    // 英雄譚はカード名を Automation で探せないため、アーティスト名で 1:1 対応で探す
+                    if (CheckCardTypeForSaga(saga))
+                        return;
                 }
 
                 if (cardType != null)
@@ -567,6 +590,13 @@ namespace Mojp
                 // キャッシュ無効化時
                 if (name == null)
                     return;
+
+                // 英雄譚の絵師かもしれない場合
+                if (Card.GetSagaNameByArtist(name, out string saga))
+                {
+                    if (CheckCardTypeForSaga(saga))
+                        return;
+                }
 
                 // WHISPER データベースからカード情報を取得
                 if (App.Cards.TryGetValue(name, out var card))
@@ -633,99 +663,29 @@ namespace Mojp
         }
 
         /// <summary>
-        /// 英雄譚のカード名が見つからないため、アーティスト名で無理やり検索します。
+        /// 現在のカードのカードタイプが英雄譚であるかどうかをチェックし、そうであるなら、指定したカード名のカードを表示します。
         /// </summary>
-        private void SearchSagaByArtist(string artist)
+        private bool CheckCardTypeForSaga(string cardName)
         {
-            // 英雄譚かどうかをチェックする
-            AutomationElement element = null;
-            using (cacheReq.Activate())
+            if (App.Cards.TryGetValue(cardName, out var foundCard))
             {
-                element = prevWnd?.FindFirst(TreeScope.Descendants,
-                    new PropertyCondition(AutomationElement.AutomationIdProperty, "CardType"));
-            }
-
-            string cardType = GetNamePropertyValue(element);
-
-            if (cardType == null || cardType.EndsWith("Saga"))
-                return;
-
-            Card foundCard = null;
-
-            switch (artist)
-            {
-                case "Jason Felix":
-                    App.Cards.TryGetValue("Fall of the Thran", out foundCard);
-                    break;
-
-                case "Noah Bradley":
-                    App.Cards.TryGetValue("History of Benalia", out foundCard);
-                    break;
-
-                case "Daniel Ljunggren":
-                    App.Cards.TryGetValue("Triumph of Gerrard", out foundCard);
-                    break;
-
-                case "Mark Tedin":
-                    App.Cards.TryGetValue("The Antiquities War", out foundCard);
-                    break;
-
-                case "James Arnold":
-                    App.Cards.TryGetValue("The Mirari Conjecture", out foundCard);
-                    break;
-
-                case "Franz Vohwinkel":
-                    App.Cards.TryGetValue("Time of Ice", out foundCard);
-                    break;
-
-                case "Vincent Proce":
-                    App.Cards.TryGetValue("Chainer's Torment", out foundCard);
-                    break;
-
-                case "Jenn Ravenna":
-                    App.Cards.TryGetValue("The Eldest Reborn", out foundCard);
-                    break;
-
-                case "Joseph Meehan":
-                    App.Cards.TryGetValue("Phyrexian Scriptures", out foundCard);
-                    break;
-
-                case "Seb McKinnon":
-                    App.Cards.TryGetValue("Rite of Belzenlok", out foundCard);
-                    break;
-
-                case "Steven Belledin":
-                    App.Cards.TryGetValue("The First Eruption", out foundCard);
-                    break;
-
-                case "Lake Hurwitz":
-                    App.Cards.TryGetValue("The Flame of Keld", out foundCard);
-                    break;
-
-                case "Adam Paquette":
-                    App.Cards.TryGetValue("The Mending of Dominaria", out foundCard);
-                    break;
-
-                case "Min Yum":
-                    App.Cards.TryGetValue("Song of Freyalise", out foundCard);
-                    break;
-            }
-
-            if (foundCard != null)
-            {
-                App.CurrentDispatcher.Invoke(() =>
+                // 英雄譚かどうかをチェックする
+                AutomationElement element = null;
+                using (cacheReq.Activate())
                 {
-                    Cards[0] = foundCard;
+                    element = prevWnd?.FindFirst(TreeScope.Descendants,
+                        new PropertyCondition(AutomationElement.AutomationIdProperty, "CardType"));
+                }
 
-                        // 項目数が減る場合に末端から削除
-                        for (int i = Cards.Count - 1; i >= 1; i--)
-                        Cards.RemoveAt(i);
+                string cardType = GetNamePropertyValue(element);
 
-                    SelectedIndex = 0;
-                });
+                if (cardType != null && cardType.EndsWith("Saga"))
+                {
+                    App.CurrentDispatcher.Invoke(() => SetCard(foundCard));
+                    return true;
+                }
             }
-            else
-                App.CurrentDispatcher.Invoke(() => SetMessage("エンチャント ― 英雄譚"));
+            return false;
         }
 
         /// <summary>
