@@ -86,6 +86,12 @@ a:hover {
     margin: 10px;
 }
 
+#grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
 #screenshot {
     margin: 0 10px;
 }
