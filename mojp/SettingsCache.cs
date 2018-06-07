@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace Mojp
 {
@@ -103,10 +104,14 @@ namespace Mojp
             CardTextFontSize = opt.CardTextFontSize;
 
             int enumValue = opt.CardDisplayNameType;
-            if (enumValue >= -1 && enumValue <= 4)
+            if (enumValue >= 0 && enumValue <= 4)
                 CardDisplayNameType = (CardDisplayNameType)enumValue;
             else
-                CardDisplayNameType = CardDisplayNameType.Default;
+            {
+                // 現在の OS 表示言語に基づき、既定値を決定し、次からその値を使う
+                CardDisplayNameType = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "ja" ?
+                    CardDisplayNameType.Japanese : CardDisplayNameType.English;
+            }
 
             TopMost = opt.TopMost;
 

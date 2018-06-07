@@ -20,6 +20,7 @@ namespace Mojp
         {
             InitializeComponent();
 
+            // フォントリストの初期化
             var vm = viewModel as MainViewModel;
             var fonts = Fonts.SystemFontFamilies;
             var fontNames = new List<string>(fonts.Count);
@@ -40,10 +41,58 @@ namespace Mojp
             fontNames.Sort();
             cmbFonts.ItemsSource = fontNames;
 
+            // CardDisplayNameType 型リストの設定
+            switch (vm.CardDisplayNameType)
+            {
+                case CardDisplayNameType.JananeseEnglish:
+                    cmbCardDisplayName.SelectedIndex = 1;
+                    break;
+
+                case CardDisplayNameType.EnglishJapanese:
+                    cmbCardDisplayName.SelectedIndex = 2;
+                    break;
+
+                case CardDisplayNameType.English:
+                    cmbCardDisplayName.SelectedIndex = 3;
+                    break;
+
+                default:
+                    cmbCardDisplayName.SelectedIndex = 0;
+                    break;
+            }
+
             DataContext = vm;
         }
 
         public MainViewModel ViewModel => DataContext as MainViewModel;
+
+        private void OnCardDisplayNameChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var vm = ViewModel;
+
+            if (vm == null)
+                return;
+
+            switch (cmbCardDisplayName.SelectedIndex)
+            {
+                case 0:
+                    vm.CardDisplayNameType = CardDisplayNameType.Japanese;
+                    break;
+
+                case 1:
+                    vm.CardDisplayNameType = CardDisplayNameType.JananeseEnglish;
+                    break;
+
+                case 2:
+                    vm.CardDisplayNameType = CardDisplayNameType.EnglishJapanese;
+                    break;
+
+                case 3:
+                    vm.CardDisplayNameType = CardDisplayNameType.English;
+                    break;
+            }
+            vm.SelectedCard?.OnUpdateDisplayName();
+        }
 
         private async void OnRetryPDList(object sender, RoutedEventArgs e)
         {

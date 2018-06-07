@@ -100,15 +100,10 @@ namespace Mojp
 
         private void OnCopyEnglishName(object sender, RoutedEventArgs e)
         {
-            var card = ViewModel.SelectedCard;
-
-            if (card == null)
-                return;
-
             // MO ヴァンガードは MO 上ではカード名が "Avatar - ..." となっている。
             //（ただしゲーム上ではカード名に "Avatar - " を含まない。例：Necropotence Avatar のカードテキスト）
             // そこで、日本語名の代わりにオラクルでのカード名である "... Avatar" を表示し、それをコピーするようにする
-            string name = card.Type == "ヴァンガード" ? card.JapaneseName : card.Name;
+            string name = ViewModel?.SelectedCard?.EnglishName;
 
             if (name != null)
                 Clipboard.SetText(name);

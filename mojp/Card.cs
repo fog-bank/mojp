@@ -22,7 +22,7 @@ namespace Mojp
         }
 
         /// <summary>
-        /// カードの英語名を取得または設定します。
+        /// カードの MO 上での表示名を取得します。ヴァンガード以外はカードの英語名に一致します。
         /// </summary>
         public string Name { get; private set; }
 
@@ -76,9 +76,38 @@ namespace Mojp
         public string WikiLink { get; set; }
 
         /// <summary>
+        /// カードの英語名を取得します。
+        /// </summary>
+        public string EnglishName => Type != "ヴァンガード" ? Name : JapaneseName;
+
+        /// <summary>
         /// 日本語カード名 / 英語カード名、のような表記でカード名を取得します。
         /// </summary>
-        public string FullName => HasJapaneseName ? JapaneseName + " / " + Name : Name;
+        public string FullName => HasJapaneseName ? JapaneseName + " / " + Name : EnglishName;
+
+        /// <summary>
+        /// 設定に合わせた表示書式でカード名を取得します。
+        /// </summary>
+        public string DisplayName
+        {
+            get
+            {
+                switch (App.SettingsCache.CardDisplayNameType)
+                {
+                    case CardDisplayNameType.JananeseEnglish:
+                        return FullName;
+
+                    case CardDisplayNameType.EnglishJapanese:
+                        return HasJapaneseName ? Name + " / " + JapaneseName : EnglishName;
+
+                    case CardDisplayNameType.English:
+                        return EnglishName;
+
+                    default:
+                        return JapaneseName;
+                }
+            }
+        }
 
         /// <summary>
         /// 公式のカード名日本語訳があるかどうかを示す値を取得します。
@@ -161,6 +190,8 @@ namespace Mojp
         /// 価格情報を取得し終わったときに呼び出します。
         /// </summary>
         public void OnUpdatePrice() => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Price)));
+
+        public void OnUpdateDisplayName() => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(DisplayName)));
 
         /// <summary>
         /// XML ノードからカード情報を復元します。

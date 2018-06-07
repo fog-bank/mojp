@@ -79,6 +79,16 @@ namespace Mojp
             }
         }
 
+        public CardDisplayNameType CardDisplayNameType
+        {
+            get => settings.CardDisplayNameType;
+            set
+            {
+                settings.CardDisplayNameType = value;
+                OnPropertyChanged();
+            }
+        }
+
         /// <summary>
         /// このアプリケーションのウィンドウの幅を取得または設定します。
         /// </summary>

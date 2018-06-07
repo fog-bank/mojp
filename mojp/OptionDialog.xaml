@@ -8,6 +8,9 @@
             <Setter Property="Margin" Value="2,4" />
             <Setter Property="VerticalAlignment" Value="Center" />
         </Style>
+        <Style TargetType="Image">
+            <Setter Property="VerticalAlignment" Value="Center" />
+        </Style>
         <Style TargetType="Button">
             <Setter Property="Padding" Value="5,2" />
             <Setter Property="VerticalContentAlignment" Value="Center" />
@@ -84,6 +87,7 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <TextBlock>フォント</TextBlock>
                 <ComboBox Name="cmbFonts" Grid.Column="2" Margin="2" Padding="2"
@@ -109,7 +113,20 @@
                     <Slider Margin="0,4,4,4" Minimum="6" Maximum="72" LargeChange="5" SmallChange="1" Value="{Binding FontSize}" />
                     <TextBlock Grid.Column="1" Text="{Binding FontSize}" />
                 </Grid>
-                <CheckBox Grid.Row="2" Margin="0,10,0,0" IsChecked="{Binding TopMost}">常に手前に表示する</CheckBox>
+                <StackPanel Grid.Row="2" Orientation="Horizontal"
+                            ToolTip="カード名の表示言語を指定します。テキスト本文中は《日本語》で固定です。">
+                    <TextBlock>タブに表示するカード名</TextBlock>
+                    <Image Grid.Column="1" Source="Resources/Information.png" Height="16" Margin="5,0" />
+                </StackPanel>
+                <ComboBox Name="cmbCardDisplayName" Grid.Row="2" Grid.Column="2" Margin="2" Padding="4"
+                          SelectionChanged="OnCardDisplayNameChanged"
+                          ToolTip="カード名の表示言語を指定します。テキスト本文中は《日本語》で固定です。">
+                    <ComboBoxItem Padding="2">日本語</ComboBoxItem>
+                    <ComboBoxItem Padding="2">日本語 / English</ComboBoxItem>
+                    <ComboBoxItem Padding="2">English / 日本語</ComboBoxItem>
+                    <ComboBoxItem Padding="2">English</ComboBoxItem>
+                </ComboBox>
+                <CheckBox Grid.Row="3" Margin="0,8,0,0" IsChecked="{Binding TopMost}">常に手前に表示する</CheckBox>
             </Grid>
             <Grid Margin="0,15,0,5">
                 <Grid.ColumnDefinitions>
@@ -169,7 +186,7 @@
                 </CheckBox>
                 <StackPanel Grid.Row="4" Margin="4" Orientation="Horizontal" HorizontalAlignment="Right"
                             ToolTip="ローテーション後のカードリストの取得に失敗した場合などに、手動で再取得を試みます。" ToolTipService.ShowDuration="60000">
-                    <Button IsEnabled="{Binding GetPDList}" Click="OnRetryPDList">カードリストの強制再取得</Button>
+                    <Button IsEnabled="{Binding GetPDList}" Click="OnRetryPDList">PD カードリストの再取得</Button>
                     <Image Source="Resources/Information.png" Height="16" Margin="5,0,0,0" />
                 </StackPanel>
                 <CheckBox Grid.Row="5" IsChecked="{Binding GetCardPrice}"
@@ -177,7 +194,7 @@
                     <StackPanel Orientation="Horizontal">
                         <TextBlock>
                             <Hyperlink ToolTip="https://scryfall.com/" Click="OnClickHyperlink">Scryfall</Hyperlink>
-                            <Run> でカード相場を調べる</Run>
+                            <Run> を使用してカード相場を調べる</Run>
                         </TextBlock>
                         <Image Source="Resources/Information.png" Height="16" Margin="5,0,0,0" />
                     </StackPanel>

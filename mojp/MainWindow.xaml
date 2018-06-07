@@ -7,6 +7,9 @@
 		Left="{Binding WindowLeft, Mode=TwoWay}" Top="{Binding WindowTop, Mode=TwoWay}"
 		Icon="Resources/dictionary.ico" SnapsToDevicePixels="True" Initialized="OnInitialized">
     <!-- WindowStyle="None" AllowsTransparency="True" Background="Transparent" -->
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="bool2vis" />
+    </Window.Resources>
     <Window.DataContext>
         <local:MainViewModel />
     </Window.DataContext>
@@ -21,7 +24,7 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <TabControl Grid.RowSpan="2" Grid.ColumnSpan="2" FontFamily="{Binding FontFamily}" FontSize="{Binding FontSize}"
+        <TabControl Name="tabControl" Grid.RowSpan="2" Grid.ColumnSpan="2" FontFamily="{Binding FontFamily}" FontSize="{Binding FontSize}"
 					BorderThickness="0,1,0,0" ItemsSource="{Binding Cards}" SelectedIndex="{Binding SelectedIndex}">
             <TabControl.Template>
                 <ControlTemplate TargetType="TabControl">
@@ -91,7 +94,7 @@
             </TabControl.ItemContainerStyle>
             <TabControl.ItemTemplate>
                 <DataTemplate DataType="local:Card">
-                    <TextBlock Text="{Binding JapaneseName, Mode=OneTime}" ToolTip="{Binding FullName, Mode=OneTime}" />
+                    <TextBlock Text="{Binding DisplayName}" ToolTip="{Binding FullName, Mode=OneTime}" />
                 </DataTemplate>
             </TabControl.ItemTemplate>
             <TabControl.ContentTemplate>
@@ -139,42 +142,46 @@
                                     </Style>
                                 </TextBlock.Style>
                             </TextBlock>
-                            <Image Grid.Column="1" Source="Resources/pd.png" Height="18" Margin="6,0,0,0" VerticalAlignment="Center"
-                                   Visibility="Collapsed" local:CardPrice.LegalTarget="{Binding}" ToolTip="Penny Dreadful リーガル" />
-                            <TextBlock Grid.Column="2" Margin="6,0,0,0" VerticalAlignment="Center" Text="{Binding Price}"
+                            <Border Grid.Column="1" Visibility="{Binding DataContext.GetPDList, ElementName=tabControl, Converter={StaticResource bool2vis}}">
+                                <Image Source="Resources/pd.png" Height="18" Margin="6,0,0,0" VerticalAlignment="Center"
+                                       Visibility="Collapsed" local:CardPrice.LegalTarget="{Binding}" ToolTip="Penny Dreadful リーガル" />
+                            </Border>
+                            <Border Grid.Column="2" Visibility="{Binding DataContext.GetCardPrice, ElementName=tabControl, Converter={StaticResource bool2vis}}">
+                                <TextBlock Margin="6,0,0,0" VerticalAlignment="Center" Text="{Binding Price}"
                                        local:CardPrice.PriceTarget="{Binding}" ToolTip="Scryfall から取得した日毎の平均価格">
-                                <TextBlock.Style>
-                                    <Style TargetType="TextBlock">
-                                        <Style.Triggers>
-                                            <DataTrigger Binding="{Binding Price}" Value="">
-                                                <Setter Property="Visibility" Value="Collapsed" />
-                                            </DataTrigger>
-                                        </Style.Triggers>
-                                    </Style>
-                                </TextBlock.Style>
-                            </TextBlock>
+                                    <TextBlock.Style>
+                                        <Style TargetType="TextBlock">
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding Price}" Value="">
+                                                    <Setter Property="Visibility" Value="Collapsed" />
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
+                            </Border>
                         </Grid>
                     </Grid>
                 </DataTemplate>
             </TabControl.ContentTemplate>
-		</TabControl>
-		<Grid Name="pdSuccess" Grid.Row="2" Grid.ColumnSpan="2" Visibility="Collapsed">
-			<Separator Height="1" Margin="0" VerticalAlignment="Top" />
-			<Grid Margin="4,5,4,4">
-				<Grid.ColumnDefinitions>
-					<ColumnDefinition Width="Auto" />
-					<ColumnDefinition />
-					<ColumnDefinition Width="Auto" />
-				</Grid.ColumnDefinitions>
-				<Image Source="Resources/Checkmark.png" Height="16" />
-				<TextBlock Grid.Column="1" Margin="4,0,0,0" TextTrimming="CharacterEllipsis">Penny Dreadful カードリストを更新しました。</TextBlock>
-				<Button Grid.Column="2" BorderBrush="{x:Null}" Background="{x:Null}"
+        </TabControl>
+        <Grid Name="pdSuccess" Grid.Row="2" Grid.ColumnSpan="2" Visibility="Collapsed">
+            <Separator Height="1" Margin="0" VerticalAlignment="Top" />
+            <Grid Margin="4,5,4,4">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Image Source="Resources/Checkmark.png" Height="16" />
+                <TextBlock Grid.Column="1" Margin="4,0,0,0" TextTrimming="CharacterEllipsis">Penny Dreadful カードリストを更新しました。</TextBlock>
+                <Button Grid.Column="2" BorderBrush="{x:Null}" Background="{x:Null}"
 						ToolTip="この通知を消します。" Click="OnClosePdSuccess">
-					<Image Source="Resources/Close.png" Height="14" />
-				</Button>
-			</Grid>
-		</Grid>
-		<Grid Name="pdError" Grid.Row="2" Grid.ColumnSpan="2" Visibility="Collapsed">
+                    <Image Source="Resources/Close.png" Height="14" />
+                </Button>
+            </Grid>
+        </Grid>
+        <Grid Name="pdError" Grid.Row="2" Grid.ColumnSpan="2" Visibility="Collapsed">
             <Separator Height="1" Margin="0" VerticalAlignment="Top" />
             <Grid Margin="4,5,4,4">
                 <Grid.ColumnDefinitions>
