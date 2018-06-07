@@ -3471,5 +3471,36 @@ Knowledge Vaultが戦場を離れたとき、Knowledge Vaultにより追放さ�
     <!-- 公式日本語カード名が無いプロモカード -->
     <jaName name="Sewers of Estark" />
     <jaName name="Windseeker Centaur" />
+    <!-- Global Series: Jiang Yanggu & Mu Yanling -->
+    <!--<jaName name="Colorful Feiyi Sparrow" />
+    <jaName name="Heavenly Qilin" />
+    <jaName name="Earth-Origin Yak" />
+    <jaName name="Ancestor Dragon" />
+    <jaName name="Qilin's Blessing" />
+    <jaName name="Dragon's Presence" />
+    <jaName name="Mu Yanling" />
+    <jaName name="Purple-Crystal Crab" />
+    <jaName name="Vivid Flying Fish" />
+    <jaName name="Armored Whirl Turtle" />
+    <jaName name="Nine-Tail White Fox" />
+    <jaName name="Moon-Eating Dog" />
+    <jaName name="Stormcloud Spirit" />
+    <jaName name="Drown in Shapelessness" />
+    <jaName name="Rhythmic Water Vortex" />
+    <jaName name="Leopard-Spotted Jiao" />
+    <jaName name="Fire-Omen Crane" />
+    <jaName name="Screeching Phoenix" />
+    <jaName name="Breath of Fire" />
+    <jaName name="Cleansing Screech" />
+    <jaName name="Jiang Yanggu" />
+    <jaName name="Feiyi Snake" />
+    <jaName name="Sacred White Deer" />
+    <jaName name="Reckless Pangolin" />
+    <jaName name="Ferocious Zheng" />
+    <jaName name="Earthshaking Si" />
+    <jaName name="Hardened-Scale Armor" />
+    <jaName name="Aggressive Instinct" />
+    <jaName name="Confidence from Strength" />
+    <jaName name="Journey for the Elixir" />-->
   </remove>
 </mojp>
