@@ -91,7 +91,9 @@ namespace Mojp
                     vm.CardDisplayNameType = CardDisplayNameType.English;
                     break;
             }
-            vm.SelectedCard?.OnUpdateDisplayName();
+
+            foreach (var card in vm.Cards)
+                card?.OnUpdateDisplayName();
         }
 
         private async void OnRetryPDList(object sender, RoutedEventArgs e)
