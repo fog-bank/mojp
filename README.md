@@ -34,8 +34,8 @@
 
 ## 開発環境
 Windows 10 Fall Creators Update  
-Visual Studio 2017 v15.5  
-C# 7.2
+Visual Studio 2017 v15.7  
+C# 7.3
 
 ### 仕組み
 [UI Automation](https://msdn.microsoft.com/ja-jp/library/ms753388.aspx) API を利用して、Preview Pane 内のテキストを検索しています。メインロジックは [MainViewModel.cs](https://github.com/fog-bank/mojp/blob/master/mojp/MainViewModel.cs#L424) 内の OnCapture メソッド以下です。

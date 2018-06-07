@@ -23,6 +23,11 @@ namespace Mojp
         public static Dictionary<string, Card> Cards { get; } = new Dictionary<string, Card>();
 
         /// <summary>
+        /// このアプリの設定を取得します。
+        /// </summary>
+        public static SettingsCache SettingsCache { get; } = new SettingsCache();
+
+        /// <summary>
         /// このアプリで共有する <see cref="System.Net.Http.HttpClient"/> を取得します。
         /// </summary>
         public static Lazy<HttpClient> HttpClient { get; } = new Lazy<HttpClient>();
@@ -118,6 +123,7 @@ namespace Mojp
                 Settings.Default.Upgrade();
                 Settings.Default.UpgradeRequired = false;
             }
+            SettingsCache.Read();
         }
 
         protected override void OnExit(ExitEventArgs e)
@@ -125,9 +131,10 @@ namespace Mojp
             if (HttpClient.IsValueCreated)
                 HttpClient.Value.Dispose();
 
+            SettingsCache.Write();
             Settings.Default.Save();
 
-            if (Settings.Default.GetCardPrice)
+            if (SettingsCache.GetCardPrice)
                 CardPrice.SaveCacheData();
 
             Debug.WriteLine("#cards handling PropertyChanged = " + Cards.Values.Count(card => card.IsObserved));

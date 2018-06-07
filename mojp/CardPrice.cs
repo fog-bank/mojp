@@ -37,7 +37,7 @@ namespace Mojp
         /// <summary>
         /// カード価格取得を有効にするかどうかを示す値を取得または設定します。
         /// </summary>
-        public static bool EnableCardPrice { get; set; }
+        public static bool EnableCardPrice => App.SettingsCache.GetCardPrice;
 
         [AttachedPropertyBrowsableForType(typeof(TextBlock))]
         public static Card GetPriceTarget(TextBlock element) => element.GetValue(PriceTargetProperty) as Card;
@@ -155,7 +155,7 @@ namespace Mojp
             if (exists)
             {
                 if (!DateTime.TryParseExact(
-                    Settings.Default.PDListLastTimeUtc, "o", culture, DateTimeStyles.RoundtripKind, out lastTime))
+                    App.SettingsCache.PDListLastTimeUtc, "o", culture, DateTimeStyles.RoundtripKind, out lastTime))
                 {
                     // 設定ファイルに最終確認日時を保存する前のバージョンとの互換性を維持するための代替措置
                     lastTime = File.GetLastWriteTime(PDLegalFileName).ToUniversalTime();
@@ -225,7 +225,7 @@ namespace Mojp
                 return GetPDListResult.Conflict;
 
             // ローテ直後はサーバー上のファイルが頻繁に更新される場合があるので、カードリスト全体の確認が取れてから最終確認日時を記録する
-            Settings.Default.PDListLastTimeUtc = DateTime.UtcNow.ToString("o", culture);
+            App.SettingsCache.PDListLastTimeUtc = DateTime.UtcNow.ToString("o", culture);
             CardPrice.pdLegalCards = pdLegalCards;
             return result;
         }

@@ -21,10 +21,8 @@ namespace Mojp
             var vm = ViewModel;
 
             if (vm != null)
-            {
-                vm.SaveSettings();
                 vm.Release();
-            }
+
             base.OnClosing(e);
         }
 
@@ -68,7 +66,6 @@ namespace Mojp
             var vm = ViewModel;
 
             imgLoading.Visibility = Visibility.Visible;
-            CardPrice.EnableCardPrice = vm.GetCardPrice;
 
             await Task.Run(() =>
             {

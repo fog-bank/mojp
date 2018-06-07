@@ -4,7 +4,6 @@ using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using System.Text;
 using System.Windows.Automation;
 using System.Windows.Threading;
 
@@ -15,22 +14,8 @@ namespace Mojp
     /// </summary>
     public class MainViewModel : INotifyPropertyChanged
     {
-        private string fontFamily = Settings.Default.CardTextFontFamily;
-        private int fontSize = Settings.Default.CardTextFontSize;
-        private bool topMost = Settings.Default.TopMost;
-        private double width = Settings.Default.WindowWidth;
-        private double height = Settings.Default.WindowHeight;
-        private double left = Settings.Default.WindowLeft;
-        private double top = Settings.Default.WindowTop;
-        private bool showBasicLands = Settings.Default.ShowBasicLands;
-        private bool autoRefresh = Settings.Default.AutoRefresh;
-        private TimeSpan refreshInterval = Settings.Default.RefreshInterval;
-        private bool autoVersionCheck = Settings.Default.AutoVersionCheck;
-        private bool acceptsPrerelease = Settings.Default.AcceptsPrerelease;
-        private bool getCardPrice = Settings.Default.GetCardPrice;
-        private bool getPDList = Settings.Default.GetPDList;
+        private readonly SettingsCache settings = App.SettingsCache;
 
-        private ObservableCollection<Card> cards = new ObservableCollection<Card>();
         private int selectedIndex = -1;
 
         private AutomationElement prevWnd;
@@ -60,10 +45,10 @@ namespace Mojp
         /// </summary>
         public string FontFamily
         {
-            get => fontFamily;
+            get => settings.CardTextFontFamily;
             set
             {
-                fontFamily = value;
+                settings.CardTextFontFamily = value;
                 OnPropertyChanged();
             }
         }
@@ -73,10 +58,10 @@ namespace Mojp
         /// </summary>
         public int FontSize
         {
-            get => fontSize;
+            get => settings.CardTextFontSize;
             set
             {
-                fontSize = value;
+                settings.CardTextFontSize = value;
                 OnPropertyChanged();
             }
         }
@@ -86,10 +71,10 @@ namespace Mojp
         /// </summary>
         public bool TopMost
         {
-            get => topMost;
+            get => settings.TopMost;
             set
             {
-                topMost = value;
+                settings.TopMost = value;
                 OnPropertyChanged();
             }
         }
@@ -99,10 +84,10 @@ namespace Mojp
         /// </summary>
         public double WindowWidth
         {
-            get => width;
+            get => settings.WindowWidth;
             set
             {
-                width = value;
+                settings.WindowWidth = value;
                 OnPropertyChanged();
             }
         }
@@ -112,10 +97,10 @@ namespace Mojp
         /// </summary>
         public double WindowHeight
         {
-            get => height;
+            get => settings.WindowHeight;
             set
             {
-                height = value;
+                settings.WindowHeight = value;
                 OnPropertyChanged();
             }
         }
@@ -125,10 +110,10 @@ namespace Mojp
         /// </summary>
         public double WindowLeft
         {
-            get => left;
+            get => settings.WindowLeft;
             set
             {
-                left = value;
+                settings.WindowLeft = value;
                 OnPropertyChanged();
             }
         }
@@ -138,10 +123,10 @@ namespace Mojp
         /// </summary>
         public double WindowTop
         {
-            get => top;
+            get => settings.WindowTop;
             set
             {
-                top = value;
+                settings.WindowTop = value;
                 OnPropertyChanged();
             }
         }
@@ -151,10 +136,10 @@ namespace Mojp
         /// </summary>
         public bool ShowBasicLands
         {
-            get => showBasicLands;
+            get => settings.ShowBasicLands;
             set
             {
-                showBasicLands = value;
+                settings.ShowBasicLands = value;
                 OnPropertyChanged();
             }
         }
@@ -164,10 +149,10 @@ namespace Mojp
         /// </summary>
         public bool AutoRefresh
         {
-            get => autoRefresh;
+            get => settings.AutoRefresh;
             set
             {
-                autoRefresh = value;
+                settings.AutoRefresh = value;
                 OnPropertyChanged();
             }
         }
@@ -175,20 +160,17 @@ namespace Mojp
         /// <summary>
         /// Preview Page の探索を行う間隔を取得します。
         /// </summary>
-        public TimeSpan RefreshInterval => refreshInterval;
+        public TimeSpan RefreshInterval => TimeSpan.FromMilliseconds(RefreshIntervalMilliseconds);
 
         /// <summary>
         /// Preview Page の探索を行う間隔をミリ秒単位で取得または設定します。
         /// </summary>
         public int RefreshIntervalMilliseconds
         {
-            get => (int)refreshInterval.TotalMilliseconds;
+            get => settings.RefreshIntervalMilliseconds;
             set
             {
-                if (value <= 0)
-                    value = 1;
-
-                refreshInterval = TimeSpan.FromMilliseconds(value);
+                settings.RefreshIntervalMilliseconds = value;
                 OnPropertyChanged();
             }
         }
@@ -198,10 +180,10 @@ namespace Mojp
         /// </summary>
         public bool AutoVersionCheck
         {
-            get => autoVersionCheck;
+            get => settings.AutoVersionCheck;
             set
             {
-                autoVersionCheck = value;
+                settings.AutoVersionCheck = value;
                 OnPropertyChanged();
             }
         }
@@ -211,10 +193,10 @@ namespace Mojp
         /// </summary>
         public bool AcceptsPrerelease
         {
-            get => acceptsPrerelease;
+            get => settings.AcceptsPrerelease;
             set
             {
-                acceptsPrerelease = value;
+                settings.AcceptsPrerelease = value;
                 OnPropertyChanged();
             }
         }
@@ -224,11 +206,10 @@ namespace Mojp
         /// </summary>
         public bool GetCardPrice
         {
-            get => getCardPrice;
+            get => settings.GetCardPrice;
             set
             {
-                getCardPrice = value;
-                CardPrice.EnableCardPrice = value;
+                settings.GetCardPrice = value;
                 OnPropertyChanged();
             }
         }
@@ -238,10 +219,10 @@ namespace Mojp
         /// </summary>
         public bool GetPDList
         {
-            get => getPDList;
+            get => settings.GetPDList;
             set
             {
-                getPDList = value;
+                settings.GetPDList = value;
                 OnPropertyChanged();
             }
         }
@@ -249,7 +230,7 @@ namespace Mojp
         /// <summary>
         /// 表示中のカードのコレクションを取得します。
         /// </summary>
-        public ObservableCollection<Card> Cards => cards;
+        public ObservableCollection<Card> Cards { get; } = new ObservableCollection<Card>();
 
         /// <summary>
         /// <see cref="System.Windows.Controls.TabControl"/> で手前に表示しているカードのインデックス番号を取得または設定します。
@@ -402,27 +383,6 @@ namespace Mojp
         /// MO のプレビューウィンドウを探します。
         /// </summary>
         public void CapturePreviewPane() => OnCapture(null, EventArgs.Empty);
-
-        /// <summary>
-        /// 現在の設定を <see cref="Settings"/> に書き戻します。
-        /// </summary>
-        public void SaveSettings()
-        {
-            Settings.Default.AcceptsPrerelease = AcceptsPrerelease;
-            Settings.Default.AutoRefresh = AutoRefresh;
-            Settings.Default.AutoVersionCheck = AutoVersionCheck;
-            Settings.Default.CardTextFontFamily = FontFamily;
-            Settings.Default.CardTextFontSize = FontSize;
-            Settings.Default.GetCardPrice = GetCardPrice;
-            Settings.Default.GetPDList = GetPDList;
-            Settings.Default.RefreshInterval = TimeSpan.FromMilliseconds(RefreshIntervalMilliseconds);
-            Settings.Default.ShowBasicLands = ShowBasicLands;
-            Settings.Default.TopMost = TopMost;
-            Settings.Default.WindowHeight = WindowHeight;
-            Settings.Default.WindowLeft = WindowLeft;
-            Settings.Default.WindowTop = WindowTop;
-            Settings.Default.WindowWidth = WindowWidth;
-        }
 
         /// <summary>
         /// 各リソースを解放します。
