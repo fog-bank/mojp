@@ -94,7 +94,7 @@
             </TabControl.ItemContainerStyle>
             <TabControl.ItemTemplate>
                 <DataTemplate DataType="local:Card">
-                    <TextBlock Text="{Binding DisplayName}" ToolTip="{Binding FullName, Mode=OneTime}" />
+                    <TextBlock Text="{Binding DisplayName}" TextTrimming="CharacterEllipsis" ToolTip="{Binding FullName, Mode=OneTime}" />
                 </DataTemplate>
             </TabControl.ItemTemplate>
             <TabControl.ContentTemplate>

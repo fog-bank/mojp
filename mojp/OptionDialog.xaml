@@ -194,7 +194,7 @@
                     <StackPanel Orientation="Horizontal">
                         <TextBlock>
                             <Hyperlink ToolTip="https://scryfall.com/" Click="OnClickHyperlink">Scryfall</Hyperlink>
-                            <Run> を使用してカード相場を調べる</Run>
+                            <Run> を利用してカード相場を調べる</Run>
                         </TextBlock>
                         <Image Source="Resources/Information.png" Height="16" Margin="5,0,0,0" />
                     </StackPanel>

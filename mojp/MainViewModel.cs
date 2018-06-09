@@ -432,9 +432,21 @@ namespace Mojp
         /// </summary>
         private void OnCapture(object sender, EventArgs e)
         {
-            var proc = Process.GetProcessesByName("mtgo");
+            // MO のプロセス ID を取得する
+            int? mtgoProcessID = null;
 
-            if (proc.Length == 0)
+            foreach (var proc in Process.GetProcesses())
+            {
+                if (string.Equals(proc.ProcessName, "mtgo", StringComparison.OrdinalIgnoreCase))
+                {
+                    mtgoProcessID = proc.Id;
+                    proc.Dispose();
+                    break;
+                }
+                proc.Dispose();
+            }
+
+            if (!mtgoProcessID.HasValue)
             {
                 ReleaseAutomationElement();
                 SetMessage("起動中のプロセスの中に MO が見つかりません。");
@@ -447,7 +459,7 @@ namespace Mojp
             {
                 currentPrevWnd = AutomationElement.RootElement.FindFirst(TreeScope.Children,
                     new AndCondition(
-                        new PropertyCondition(AutomationElement.ProcessIdProperty, proc[0].Id),
+                        new PropertyCondition(AutomationElement.ProcessIdProperty, mtgoProcessID.Value),
                         new PropertyCondition(AutomationElement.ClassNameProperty, "Window"),
                         new PropertyCondition(AutomationElement.NameProperty, "Preview")));
             }
