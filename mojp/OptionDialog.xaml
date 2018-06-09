@@ -18,7 +18,6 @@
         <Style TargetType="CheckBox">
             <Setter Property="VerticalContentAlignment" Value="Center" />
         </Style>
-        <BooleanToVisibilityConverter x:Key="bool2visible" />
     </Window.Resources>
     <Grid>
         <StackPanel Margin="4">
@@ -54,7 +53,13 @@
                     <!--<TextBlock Margin="2,0,2,4"></TextBlock>-->
                 </StackPanel>
                 <CheckBox Grid.Row="2" Grid.ColumnSpan="4" Margin="0,4,0,0" IsChecked="{Binding AutoVersionCheck}"
-                          ToolTip="起動時とこのダイアログを閉じた時に更新があるかどうかを確認します。" ToolTipService.ShowDuration="60000">
+                          ToolTipService.ShowDuration="60000">
+                    <CheckBox.ToolTip>
+                        <TextBlock Margin="0">
+                            起動時とこのダイアログを閉じた時に更新があるかどうかを確認します。<LineBreak />
+                            更新があったときは、ダウンロードサイトへのリンクを表示します。
+                        </TextBlock>
+                    </CheckBox.ToolTip>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock>最新バージョンを自動的に確認する</TextBlock>
                         <Image Source="Resources/Information.png" Height="16" Margin="5,0,0,0" />
@@ -114,13 +119,13 @@
                     <TextBlock Grid.Column="1" Text="{Binding FontSize}" />
                 </Grid>
                 <StackPanel Grid.Row="2" Orientation="Horizontal"
-                            ToolTip="カード名の表示言語を指定します。テキスト本文中は《日本語》で固定です。">
-                    <TextBlock>タブに表示するカード名</TextBlock>
+                            ToolTip="タブに表示されるカード名の書式を指定します。ただしテキスト本文中は《日本語》で固定です。" ToolTipService.ShowDuration="60000">
+                    <TextBlock>カード名の表示方法</TextBlock>
                     <Image Grid.Column="1" Source="Resources/Information.png" Height="16" Margin="5,0" />
                 </StackPanel>
                 <ComboBox Name="cmbCardDisplayName" Grid.Row="2" Grid.Column="2" Margin="2" Padding="4"
                           SelectionChanged="OnCardDisplayNameChanged"
-                          ToolTip="カード名の表示言語を指定します。テキスト本文中は《日本語》で固定です。">
+                          ToolTip="タブに表示されるカード名の書式を指定します。ただしテキスト本文中は《日本語》で固定です。" ToolTipService.ShowDuration="60000">
                     <ComboBoxItem Padding="2">日本語</ComboBoxItem>
                     <ComboBoxItem Padding="2">日本語 / English</ComboBoxItem>
                     <ComboBoxItem Padding="2">English / 日本語</ComboBoxItem>
@@ -146,14 +151,20 @@
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <CheckBox IsChecked="{Binding ShowBasicLands}"
-                          ToolTip="チェックを外すと、氷雪土地でない平地、島、沼、山、森には反応しなくなります。" ToolTipService.ShowDuration="60000">
+                          ToolTip="チェックを外すと、氷雪でない基本の平地、島、沼、山、森には反応しなくなります。" ToolTipService.ShowDuration="60000">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock>基本土地 5 種のカードテキストを表示する</TextBlock>
                         <Image Source="Resources/Information.png" Height="16" Margin="5,0,0,0" />
                     </StackPanel>
                 </CheckBox>
-                <CheckBox Grid.Row="1" IsChecked="{Binding AutoRefresh}"
-                          ToolTip="チェックを外した場合は「MO を探す」ボタンを適時クリックしてください。" ToolTipService.ShowDuration="60000">
+                <CheckBox Grid.Row="1" IsChecked="{Binding AutoRefresh}" ToolTipService.ShowDuration="60000">
+                    <CheckBox.ToolTip>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Margin="0">チェックを外した場合は「MO を探す」ボタン</TextBlock>
+                            <Image Source="Resources\Camera.png" Height="16" Margin="4,0" />
+                            <TextBlock Margin="0">を適時クリックしてください。</TextBlock>
+                        </StackPanel>
+                    </CheckBox.ToolTip>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock>MO の Preview Pane を自動的に探す</TextBlock>
                         <Image Source="Resources/Information.png" Height="16" Margin="5,0,0,0" />

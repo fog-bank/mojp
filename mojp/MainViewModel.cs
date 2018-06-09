@@ -424,7 +424,7 @@ namespace Mojp
             }
         }
 
-        protected void OnPropertyChanged([CallerMemberName] string propertyName = null) 
+        protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
             => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 
         /// <summary>
@@ -433,20 +433,7 @@ namespace Mojp
         private void OnCapture(object sender, EventArgs e)
         {
             // MO のプロセス ID を取得する
-            int? mtgoProcessID = null;
-
-            foreach (var proc in Process.GetProcesses())
-            {
-                if (string.Equals(proc.ProcessName, "mtgo", StringComparison.OrdinalIgnoreCase))
-                {
-                    mtgoProcessID = proc.Id;
-                    proc.Dispose();
-                    break;
-                }
-                proc.Dispose();
-            }
-
-            if (!mtgoProcessID.HasValue)
+            if (!App.GetProcessIDByName("mtgo", out int mtgoProcessID))
             {
                 ReleaseAutomationElement();
                 SetMessage("起動中のプロセスの中に MO が見つかりません。");
@@ -459,7 +446,7 @@ namespace Mojp
             {
                 currentPrevWnd = AutomationElement.RootElement.FindFirst(TreeScope.Children,
                     new AndCondition(
-                        new PropertyCondition(AutomationElement.ProcessIdProperty, mtgoProcessID.Value),
+                        new PropertyCondition(AutomationElement.ProcessIdProperty, mtgoProcessID),
                         new PropertyCondition(AutomationElement.ClassNameProperty, "Window"),
                         new PropertyCondition(AutomationElement.NameProperty, "Preview")));
             }
@@ -532,10 +519,10 @@ namespace Mojp
                         return;
                     }
                 }
-                else if (Card.GetSagaNameByArtist(name, out string saga))
+                else if (Card.GetSagaByArtist(name, out string saga))
                 {
                     // 英雄譚はカード名を Automation で探せないため、アーティスト名で 1:1 対応で探す
-                    if (CheckCardTypeForSaga(saga))
+                    if (CheckAndViewSaga(saga))
                         return;
                 }
 
@@ -574,9 +561,9 @@ namespace Mojp
                     return;
 
                 // 英雄譚の絵師かもしれない場合
-                if (Card.GetSagaNameByArtist(name, out string saga))
+                if (Card.GetSagaByArtist(name, out string saga))
                 {
-                    if (CheckCardTypeForSaga(saga))
+                    if (CheckAndViewSaga(saga))
                         return;
                 }
 
@@ -647,7 +634,7 @@ namespace Mojp
         /// <summary>
         /// 現在のカードのカードタイプが英雄譚であるかどうかをチェックし、そうであるなら、指定したカード名のカードを表示します。
         /// </summary>
-        private bool CheckCardTypeForSaga(string cardName)
+        private bool CheckAndViewSaga(string cardName)
         {
             if (App.Cards.TryGetValue(cardName, out var foundCard))
             {
@@ -658,7 +645,6 @@ namespace Mojp
                     element = prevWnd?.FindFirst(TreeScope.Descendants,
                         new PropertyCondition(AutomationElement.AutomationIdProperty, "CardType"));
                 }
-
                 string cardType = GetNamePropertyValue(element);
 
                 if (cardType != null && cardType.EndsWith("Saga"))

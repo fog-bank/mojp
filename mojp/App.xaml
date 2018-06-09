@@ -3,6 +3,6 @@
              x:Class="Mojp.App" 
 			 StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <BooleanToVisibilityConverter x:Key="bool2visible" />
     </Application.Resources>
 </Application>

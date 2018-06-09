@@ -7,9 +7,6 @@
 		Left="{Binding WindowLeft, Mode=TwoWay}" Top="{Binding WindowTop, Mode=TwoWay}"
 		Icon="Resources/dictionary.ico" SnapsToDevicePixels="True" Initialized="OnInitialized">
     <!-- WindowStyle="None" AllowsTransparency="True" Background="Transparent" -->
-    <Window.Resources>
-        <BooleanToVisibilityConverter x:Key="bool2vis" />
-    </Window.Resources>
     <Window.DataContext>
         <local:MainViewModel />
     </Window.DataContext>
@@ -142,11 +139,11 @@
                                     </Style>
                                 </TextBlock.Style>
                             </TextBlock>
-                            <Border Grid.Column="1" Visibility="{Binding DataContext.GetPDList, ElementName=tabControl, Converter={StaticResource bool2vis}}">
+                            <Border Grid.Column="1" Visibility="{Binding DataContext.GetPDList, ElementName=tabControl, Converter={StaticResource bool2visible}}">
                                 <Image Source="Resources/pd.png" Height="18" Margin="6,0,0,0" VerticalAlignment="Center"
                                        Visibility="Collapsed" local:CardPrice.LegalTarget="{Binding}" ToolTip="Penny Dreadful リーガル" />
                             </Border>
-                            <Border Grid.Column="2" Visibility="{Binding DataContext.GetCardPrice, ElementName=tabControl, Converter={StaticResource bool2vis}}">
+                            <Border Grid.Column="2" Visibility="{Binding DataContext.GetCardPrice, ElementName=tabControl, Converter={StaticResource bool2visible}}">
                                 <TextBlock Margin="6,0,0,0" VerticalAlignment="Center" Text="{Binding Price}"
                                        local:CardPrice.PriceTarget="{Binding}" ToolTip="Scryfall から取得した日毎の平均価格">
                                     <TextBlock.Style>

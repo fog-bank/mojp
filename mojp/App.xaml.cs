@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Reflection;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Threading;
@@ -36,6 +37,26 @@ namespace Mojp
         /// <see cref="App"/> に関連付けられている <see cref="Dispatcher"/> を取得します。
         /// </summary>
         public static Dispatcher CurrentDispatcher => Current.Dispatcher;
+
+        /// <summary>
+        /// Application Entry Point.
+        /// </summary>
+        [STAThread]
+        public static void Main()
+        {
+            const string AppGuid = "{B99B5E4E-C7AA-4D4C-8674-DBAC723D29D5}";
+
+            // 多重起動防止
+            using (var sema = new Semaphore(0, 1, AppGuid, out bool createdNew))
+            {
+                if (createdNew)
+                {
+                    var app = new App();
+                    app.InitializeComponent();
+                    app.Run();
+                }
+            }
+        }
 
         /// <summary>
         /// カードテキストデータを XML に保存します。
@@ -112,6 +133,29 @@ namespace Mojp
                 version = versions[1];
 
             return Version.TryParse(version, out var latest) && current < latest;
+        }
+
+        /// <summary>
+        /// 指定した名前のプロセスを探し、そのプロセス ID を取得します。
+        /// </summary>
+        /// <param name="processName">プロセスの名前。</param>
+        /// <param name="id">取得したプロセス ID 。</param>
+        /// <returns>プロセスが見つかった場合は <see langword="true"/> 。</returns>
+        public static bool GetProcessIDByName(string processName, out int id)
+        {
+            foreach (var proc in Process.GetProcesses())
+            {
+                using (proc)
+                {
+                    if (string.Equals(proc.ProcessName, processName, StringComparison.OrdinalIgnoreCase))
+                    {
+                        id = proc.Id;
+                        return true;
+                    }
+                }
+            }
+            id = 0;
+            return false;
         }
 
         protected override void OnStartup(StartupEventArgs e)

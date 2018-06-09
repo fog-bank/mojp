@@ -78,7 +78,7 @@ namespace Mojp
         /// <summary>
         /// アーティスト名に対応する英雄譚のカード名を取得します。
         /// </summary>
-        public static bool GetSagaNameByArtist(string artist, out string cardName)
+        public static bool GetSagaByArtist(string artist, out string cardName)
         {
             switch (artist)
             {
