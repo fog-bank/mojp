@@ -93,6 +93,7 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <TextBlock>フォント</TextBlock>
                 <ComboBox Name="cmbFonts" Grid.Column="2" Margin="2" Padding="2"
@@ -131,7 +132,14 @@
                     <ComboBoxItem Padding="2">English / 日本語</ComboBoxItem>
                     <ComboBoxItem Padding="2">English</ComboBoxItem>
                 </ComboBox>
-                <CheckBox Grid.Row="3" Margin="0,8,0,0" IsChecked="{Binding TopMost}">常に手前に表示する</CheckBox>
+                <CheckBox Grid.Row="3" Margin="0,2,0,0" IsChecked="{Binding EnableToolbar}"
+                          ToolTip="表示されていたボタンは右クリックメニューから選べます。" ToolTipService.ShowDuration="60000">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock>ツールバーを表示する</TextBlock>
+                        <Image Source="Resources/Information.png" Height="16" Margin="5,0,0,0" />
+                    </StackPanel>
+                </CheckBox>
+                <CheckBox Grid.Row="4" Margin="0,4,0,0" IsChecked="{Binding TopMost}">常に手前に表示する</CheckBox>
             </Grid>
             <Grid Margin="0,15,0,5">
                 <Grid.ColumnDefinitions>
@@ -160,7 +168,7 @@
                 <CheckBox Grid.Row="1" IsChecked="{Binding AutoRefresh}" ToolTipService.ShowDuration="60000">
                     <CheckBox.ToolTip>
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Margin="0">チェックを外した場合は「MO を探す」ボタン</TextBlock>
+                            <TextBlock Margin="0">チェックを外した場合は「MO を探す」</TextBlock>
                             <Image Source="Resources\Camera.png" Height="16" Margin="4,0" />
                             <TextBlock Margin="0">を適時クリックしてください。</TextBlock>
                         </StackPanel>

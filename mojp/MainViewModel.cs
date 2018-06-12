@@ -79,12 +79,28 @@ namespace Mojp
             }
         }
 
+        /// <summary>
+        /// カード名の表示方法を取得または設定します。
+        /// </summary>
         public CardDisplayNameType CardDisplayNameType
         {
             get => settings.CardDisplayNameType;
             set
             {
                 settings.CardDisplayNameType = value;
+                OnPropertyChanged();
+            }
+        }
+
+        /// <summary>
+        /// ツールバーを表示するかどうかを示す値を取得または設定します。
+        /// </summary>
+        public bool EnableToolbar
+        {
+            get => settings.EnableToolbar;
+            set
+            {
+                settings.EnableToolbar = value;
                 OnPropertyChanged();
             }
         }

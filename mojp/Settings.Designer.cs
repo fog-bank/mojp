@@ -226,5 +226,17 @@ namespace Mojp {
                 this["CardDisplayNameType"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool EnableToolbar {
+            get {
+                return ((bool)(this["EnableToolbar"]));
+            }
+            set {
+                this["EnableToolbar"] = value;
+            }
+        }
     }
 }

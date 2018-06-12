@@ -63,6 +63,8 @@ namespace Mojp
 
         public CardDisplayNameType CardDisplayNameType { get; set; }
 
+        public bool EnableToolbar { get; set; }
+
         public bool TopMost { get; set; }
 
         // 動作
@@ -113,6 +115,7 @@ namespace Mojp
                     CardDisplayNameType.Japanese : CardDisplayNameType.English;
             }
 
+            EnableToolbar = opt.EnableToolbar;
             TopMost = opt.TopMost;
 
             ShowBasicLands = opt.ShowBasicLands;
@@ -140,6 +143,7 @@ namespace Mojp
             opt.CardTextFontFamily = CardTextFontFamily;
             opt.CardTextFontSize = CardTextFontSize;
             opt.CardDisplayNameType = (int)CardDisplayNameType;
+            opt.EnableToolbar = EnableToolbar;
             opt.TopMost = TopMost;
 
             opt.ShowBasicLands = ShowBasicLands;
