@@ -37,7 +37,7 @@ namespace Mojp
 
         public sealed override string Image => @"Resources\Camera.png";
 
-        public sealed override void Execute(object parameter) => ViewModel.CapturePreviewPane();
+        public sealed override void Execute(object parameter) => App.CurrentDispatcher.Invoke(() => ViewModel.CapturePreviewPane());
     }
 
     public sealed class CopyCardNameCommand : Command
