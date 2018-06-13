@@ -88,50 +88,6 @@ namespace Mojp
                 notifier.Visibility = Visibility.Visible;
         }
 
-        private void OnCapture(object sender, RoutedEventArgs e) => ViewModel.CapturePreviewPane();
-
-        private void OnCopyCardName(object sender, RoutedEventArgs e)
-        {
-            string name = ViewModel.SelectedCard?.JapaneseName;
-
-            if (name != null)
-             Clipboard.SetText(name);
-        }
-
-        private void OnCopyEnglishName(object sender, RoutedEventArgs e)
-        {
-            // MO ヴァンガードは MO 上ではカード名が "Avatar - ..." となっている。
-            //（ただしゲーム上ではカード名に "Avatar - " を含まない。例：Necropotence Avatar のカードテキスト）
-            // そこで、日本語名の代わりにオラクルでのカード名である "... Avatar" を表示し、それをコピーするようにする
-            string name = ViewModel?.SelectedCard?.EnglishName;
-
-            if (name != null)
-                Clipboard.SetText(name);
-        }
-
-        private void OnGoToWiki(object sender, RoutedEventArgs e)
-        {
-            var card = ViewModel?.SelectedCard;
-
-            if (card == null)
-                return;
-
-            string link = card.WikiLink;
-
-            if (link == null)
-            {
-                if (card.HasJapaneseName)
-                {
-                    link = card.JapaneseName + "/" + card.Name.Replace(' ', '_');
-                }
-                else
-                    link = card.Name.Replace(' ', '_');
-            }
-            link = Uri.EscapeUriString(link);
-
-            Process.Start("http://mtgwiki.com/wiki/" + link);
-        }
-
         private async void OnOption(object sender, RoutedEventArgs e)
         {
             var vm = ViewModel;
@@ -155,7 +111,7 @@ namespace Mojp
             if (vm.GetCardPrice != oldPrice)
             {
                 if (CardPrice.EnableCardPrice)
-                    await Task.Run(() => CardPrice.OpenCacheData());
+                    await Task.Run(CardPrice.OpenCacheData);
                 else
                     CardPrice.ClearCacheData();
             }

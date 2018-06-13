@@ -226,9 +226,6 @@
             <Button Command="{Binding CopyCardNameCommand}" ToolTip="{Binding CopyCardNameCommand.Header}">
                 <Image Source="{Binding CopyCardNameCommand.Image}" Height="16" Style="{StaticResource btnImageStyle}" />
             </Button>
-            <Button Command="{Binding GoToWikiCommand}" ToolTip="{Binding GoToWikiCommand.Header}">
-                <Image Source="{Binding GoToWikiCommand.Image}" Height="16" Style="{StaticResource btnImageStyle}" />
-            </Button>
         </ToolBar>
         <Grid Name="imgLoading" Grid.RowSpan="4" Grid.ColumnSpan="2" Background="#7fffffff" Visibility="Collapsed">
             <Path Stroke="#7f505096" HorizontalAlignment="Center" VerticalAlignment="Center">

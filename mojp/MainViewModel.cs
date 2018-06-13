@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using System.Windows.Automation;
+using System.Threading.Tasks;
 using System.Windows.Threading;
 
 namespace Mojp
@@ -12,29 +11,15 @@ namespace Mojp
     /// <summary>
     /// <see cref="MainWindow"/> のビュー モデルを提供します。
     /// </summary>
-    public sealed class MainViewModel : INotifyPropertyChanged
+    public sealed partial class MainViewModel : INotifyPropertyChanged
     {
         private readonly SettingsCache settings = App.SettingsCache;
-
-        private int selectedIndex = -1;
-
-        private AutomationElement prevWnd;
-        private CacheRequest cacheReq = new CacheRequest();
-        private Condition condition;
+        private AutomationHandler automation;
         private DispatcherTimer timer;
+        private int selectedIndex = -1;
 
         public MainViewModel()
         {
-            // UI 要素の名前だけキャッシュする
-            cacheReq.Add(AutomationElement.NameProperty);
-            cacheReq.AutomationElementMode = AutomationElementMode.None;
-
-            // テキストが空でなく、特定の UI 要素でない TextBlock をすべて拾う
-            condition = new AndCondition(
-                new PropertyCondition(AutomationElement.ClassNameProperty, "TextBlock"),
-                new NotCondition(new PropertyCondition(AutomationElement.NameProperty, string.Empty)),
-                new PropertyCondition(AutomationElement.AutomationIdProperty, string.Empty));
-
             SetMessage(AutoRefresh ?
                 "MO の Preview Pane を探しています" :
                 "MO の Preview Pane を表示させた状態で、右上のカメラアイコンのボタンを押してください");
@@ -43,6 +28,8 @@ namespace Mojp
             CopyCardNameCommand = new CopyCardNameCommand(this);
             CopyEnglishNameCommand = new CopyEnglishNameCommand(this);
             GoToWikiCommand = new GoToWikiCommand(this);
+
+            automation = new AutomationHandler(this);
         }
 
         public CaptureCommand CaptureCommand { get; }
@@ -279,9 +266,6 @@ namespace Mojp
             {
                 selectedIndex = value;
                 OnPropertyChanged();
-                OnPropertyChanged(nameof(CanCopyJapaneseName));
-                OnPropertyChanged(nameof(CanCopyEnglishName));
-                OnPropertyChanged(nameof(CanBrowseWiki));
 
                 CopyCardNameCommand?.OnCanExecuteChanged();
                 CopyEnglishNameCommand?.OnCanExecuteChanged();
@@ -308,44 +292,6 @@ namespace Mojp
         }
 
         /// <summary>
-        /// 日本語カード名をコピーできるかどうかを示す値を取得します。
-        /// </summary>
-        public bool CanCopyJapaneseName => SelectedCard != null && SelectedCard.HasJapaneseName;
-
-        /// <summary>
-        /// 英語カード名をコピーできるかどうかを示す値を取得します。
-        /// </summary>
-        public bool CanCopyEnglishName => SelectedCard != null && SelectedCard.Name != null;
-
-        /// <summary>
-        /// MTG Wiki でカードを調べられるかどうかを示す値を取得します。
-        /// </summary>
-        public bool CanBrowseWiki
-        {
-            get
-            {
-                var card = SelectedCard;
-
-                if (card == null)
-                    return false;
-
-                // 明示的なリンク無効化
-                if (card.WikiLink == string.Empty)
-                    return false;
-
-                // 特殊パターンのリンク指定
-                if (card.WikiLink != null)
-                    return true;
-
-                // トークンで該当するページとなると、クリーチャータイプの解説ページがあるが、ややこしいパターンもあるのでリンクを無効にする
-                if (card.Type.StartsWith("トークン"))
-                    return false;
-
-                return true;
-            }
-        }
-
-        /// <summary>
         /// カードテキストの代わりにメッセージを表示します。
         /// </summary>
         public void SetMessage(string text)
@@ -364,6 +310,11 @@ namespace Mojp
 
             SelectedIndex = 0;
         }
+
+        /// <summary>
+        /// UI スレッド上で、カードテキストの代わりにメッセージを表示します。
+        /// </summary>
+        public void InvokeSetMessage(string text) => App.CurrentDispatcher.Invoke(() => SetMessage(text));
 
         /// <summary>
         /// 指定したカードを表示します。
@@ -388,17 +339,45 @@ namespace Mojp
             {
                 foreach (string relatedName in card.RelatedCardNames)
                 {
-                    App.Cards.TryGetValue(relatedName, out var card2);
-                    Cards.Add(card2);
+                    if (App.Cards.TryGetValue(relatedName, out var card2))
+                        Cards.Add(card2);
                 }
             }
             SelectedIndex = 0;
         }
 
         /// <summary>
+        /// UI スレッド上で、指定したカードを表示します。
+        /// </summary>
+        public void InvokeSetCard(Card card) => App.CurrentDispatcher.Invoke(() => SetCard(card));
+
+        public void InvokeSetCards(List<Card> cards)
+        {
+            App.CurrentDispatcher.Invoke(SetCards);
+
+            void SetCards()
+            {
+                int j = 0;
+
+                for (int i = 0; i < Cards.Count && j < cards.Count; i++, j++)
+                    Cards[i] = cards[j];
+
+                // 項目数が減る場合：末端から削除
+                for (int i = Cards.Count - 1; i >= cards.Count; i--)
+                    Cards.RemoveAt(i);
+
+                // 項目数が増える場合：継続して追加
+                for (; j < cards.Count; j++)
+                    Cards.Add(cards[j]);
+
+                SelectedIndex = 0;
+            }
+        }
+
+        /// <summary>
         /// 画面を更新するように要求します。
         /// </summary>
-        public void RefreshTab() => SearchCardName();
+        public void RefreshTab() => Task.Run(automation.SearchCardName);
 
         /// <summary>
         /// Preview Pane を自動的に探索するためのタイマーを必要なら設定します。
@@ -436,279 +415,18 @@ namespace Mojp
                 timer.Tick -= OnCapture;
                 timer = null;
             }
-            cacheReq = null;
-            condition = null;
+            Cards.Clear();
 
-            App.CurrentDispatcher.BeginInvoke((Action)ReleaseAutomationElement);
+            Task.Run(automation.Release);
         }
-
-        /// <summary>
-        /// UI Automation イベントハンドラーを削除し、<see cref="AutomationElement"/> への参照を解放します。
-        /// </summary>
-        public void ReleaseAutomationElement()
-        {
-            if (prevWnd != null)
-            {
-                prevWnd = null;
-                Automation.RemoveAllEventHandlers();
-                Debug.WriteLine("Removed automation event handlers.");
-            }
-        }
-
-        private void OnPropertyChanged([CallerMemberName] string propertyName = null)
-            => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 
         /// <summary>
         /// MO のプレビューウィンドウを探し、UI テキストの変化イベントが発生するようにします。
         /// </summary>
-        private void OnCapture(object sender, EventArgs e)
-        {
-            // MO のプロセス ID を取得する
-            if (!App.GetProcessIDByName("mtgo", out int mtgoProcessID))
-            {
-                ReleaseAutomationElement();
-                SetMessage("起動中のプロセスの中に MO が見つかりません。");
-                return;
-            }
+        private void OnCapture(object sender, EventArgs e) => Task.Run(automation.CaptureMtgo);
 
-            // "Preview" という名前のウィンドウを探す (なぜかルートの子で見つかる)
-            AutomationElement currentPrevWnd = null;
-            try
-            {
-                currentPrevWnd = AutomationElement.RootElement.FindFirst(TreeScope.Children,
-                    new AndCondition(
-                        new PropertyCondition(AutomationElement.ProcessIdProperty, mtgoProcessID),
-                        new PropertyCondition(AutomationElement.ClassNameProperty, "Window"),
-                        new PropertyCondition(AutomationElement.NameProperty, "Preview")));
-            }
-            catch { Debug.WriteLine("Preview Pane の取得に失敗しました。"); }
-
-            if (currentPrevWnd == null)
-            {
-                ReleaseAutomationElement();
-                SetMessage("MO の Preview Pane が見つかりません。");
-                return;
-            }
-
-            if (currentPrevWnd != prevWnd)
-            {
-                // 新しい Preview Pane が見つかった
-                ReleaseAutomationElement();
-                prevWnd = currentPrevWnd;
-
-                // とりあえずカード名を探す
-                SearchCardName();
-
-                // UI テキストの変化を追う
-                // 対戦中、カード情報は Preview Pane の直接の子ではなく、
-                // ZoomCard_View というカスタムコントロールの下にくるので、スコープは子孫にしないとダメ
-                using (cacheReq.Activate())
-                    Automation.AddAutomationPropertyChangedEventHandler(
-                        prevWnd, TreeScope.Descendants, OnAutomaionNamePropertyChanged, AutomationElement.NameProperty);
-
-                if (SelectedCard == null)
-                    SetMessage("準備完了");
-            }
-        }
-
-        /// <summary>
-        /// 変更された要素名がカード名かどうかを調べます。
-        /// </summary>
-        /// <remarks>AutomationPropertyChangedEventHandler は UI スレッドとは別スレッドで動いている</remarks>
-        private void OnAutomaionNamePropertyChanged(object sender, AutomationPropertyChangedEventArgs e)
-        {
-            if (prevWnd == null)
-                return;
-
-            string name = GetNamePropertyValue(sender as AutomationElement);
-            //Debug.WriteLineIf(!string.IsNullOrWhiteSpace(name), name);
-
-            // キャッシュ無効化時
-            if (name == null)
-                return;
-
-            // 新しいテキストがカード名かどうかを調べ、そうでないなら不必要な全体検索をしないようにする
-            // トークンの場合は、カード名を含むとき (= コピートークン) と含まないとき (→ 空表示にする) とがあるので検索を続行する
-            if (!App.Cards.ContainsKey(name) && !name.StartsWith("Token"))
-            {
-                string cardType = null;
-                const string triggerPrefix = "Triggered ability from ";
-
-                // 統治者以外の紋章やテキストレスのヴァンガードの場合は、確定で空表示にする
-                if (name.StartsWith("Emblem") && name != "Emblem - ")
-                    cardType = "紋章";
-                else if (name.StartsWith("Avatar - "))
-                    cardType = "ヴァンガード";
-                else if (name.StartsWith(triggerPrefix))
-                {
-                    // スタックにのった英雄譚からの誘発型能力
-                    name = name.Substring(triggerPrefix.Length);
-
-                    if (App.Cards.TryGetValue(name, out var card))
-                    {
-                        App.CurrentDispatcher.Invoke(() => SetCard(card));
-                        return;
-                    }
-                }
-                else if (Card.GetSagaByArtist(name, out string saga))
-                {
-                    // 英雄譚はカード名を Automation で探せないため、アーティスト名で 1:1 対応で探す
-                    if (CheckAndViewSaga(saga))
-                        return;
-                }
-
-                if (cardType != null)
-                    App.CurrentDispatcher.Invoke(() => SetMessage(cardType));
-
-                return;
-            }
-            Debug.WriteLine(name);
-
-            SearchCardName();
-        }
-
-        /// <summary>
-        /// 現在の Preview Pane 内のテキストからカード名を取得し、表示します。
-        /// </summary>
-        private void SearchCardName()
-        {
-            AutomationElementCollection elements;
-            using (cacheReq.Activate())
-                elements = prevWnd?.FindAll(TreeScope.Descendants, condition);
-
-            if (elements == null)
-                return;
-
-            // 一連のテキストからカード名を探す (合体カードなど複数のカード名にヒットする場合があるので一通り探し直す必要がある)
-            var foundCards = new List<Card>();
-            bool isToken = false;
-
-            foreach (AutomationElement element in elements)
-            {
-                string name = GetNamePropertyValue(element);
-
-                // キャッシュ無効化時
-                if (name == null)
-                    return;
-
-                // 英雄譚の絵師かもしれない場合
-                if (Card.GetSagaByArtist(name, out string saga))
-                {
-                    if (CheckAndViewSaga(saga))
-                        return;
-                }
-
-                // WHISPER データベースからカード情報を取得
-                if (App.Cards.TryGetValue(name, out var card))
-                {
-                    if (!foundCards.Contains(card))
-                    {
-                        foundCards.Add(card);
-
-                        // 両面カードの場合に、Preview Pane に片面だけ表示されていても、もう一方の面を表示するようにする
-                        if (card.RelatedCardName != null)
-                        {
-                            foreach (string relatedName in card.RelatedCardNames)
-                            {
-                                App.Cards.TryGetValue(relatedName, out var card2);
-
-                                if (!foundCards.Contains(card2))
-                                    foundCards.Add(card2);
-                            }
-                        }
-                    }
-                }
-                else if (!isToken && name.StartsWith("Token"))
-                    isToken = true;
-            }
-
-            // 設定によっては基本土地 5 種の場合に表示を変えないようにする
-            if (!ShowBasicLands && foundCards.Count == 1)
-            {
-                switch (foundCards[0].Name)
-                {
-                    case "Plains":
-                    case "Island":
-                    case "Swamp":
-                    case "Mountain":
-                    case "Forest":
-                        return;
-                }
-            }
-
-            // 汎用のトークン
-            if (foundCards.Count == 0 && isToken)
-            {
-                App.CurrentDispatcher.Invoke(() => SetMessage("トークン"));
-                return;
-            }
-
-            App.CurrentDispatcher.Invoke(() =>
-            {
-                int j = 0;
-
-                for (int i = 0; i < Cards.Count && j < foundCards.Count; i++, j++)
-                    Cards[i] = foundCards[j];
-
-                // 項目数が減る場合：末端から削除
-                for (int i = Cards.Count - 1; i >= foundCards.Count; i--)
-                    Cards.RemoveAt(i);
-
-                // 項目数が増える場合：継続して追加
-                for (; j < foundCards.Count; j++)
-                    Cards.Add(foundCards[j]);
-
-                SelectedIndex = 0;
-            });
-        }
-
-        /// <summary>
-        /// 現在のカードのカードタイプが英雄譚であるかどうかをチェックし、そうであるなら、指定したカード名のカードを表示します。
-        /// </summary>
-        private bool CheckAndViewSaga(string cardName)
-        {
-            if (App.Cards.TryGetValue(cardName, out var foundCard))
-            {
-                // 英雄譚かどうかをチェックする
-                AutomationElement element = null;
-                using (cacheReq.Activate())
-                {
-                    element = prevWnd?.FindFirst(TreeScope.Descendants,
-                        new PropertyCondition(AutomationElement.AutomationIdProperty, "CardType"));
-                }
-                string cardType = GetNamePropertyValue(element);
-
-                if (cardType != null && cardType.EndsWith("Saga"))
-                {
-                    App.CurrentDispatcher.Invoke(() => SetCard(foundCard));
-                    return true;
-                }
-            }
-            return false;
-        }
-
-        /// <summary>
-        /// UI テキストからカード名の候補となる文字列を取得します。
-        /// </summary>
-        private static string GetNamePropertyValue(AutomationElement element)
-        {
-            string name = null;
-            try
-            {
-                name = element?.Cached.Name;
-            }
-            catch
-            {
-                Debug.WriteLine("キャッシュされた Name プロパティ値の取得に失敗しました。");
-                return null;
-            }
-
-            if (name == null)
-                return string.Empty;
-
-            // 特殊文字を置き換える (アキュート・アクセントつきの文字など)
-            return Card.NormalizeName(name);
-        }
+        private void OnPropertyChanged([CallerMemberName] string propertyName = null)
+            => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 
         public event PropertyChangedEventHandler PropertyChanged;
     }
