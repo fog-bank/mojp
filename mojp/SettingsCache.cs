@@ -9,7 +9,7 @@ namespace Mojp
     /// <remarks>
     /// <see cref="PDListLastTimeUtc"/> を除き、プロパティ値の直接の Read/Write は ViewModel 越しに行う。Read のみなら他の場所でも可
     /// </remarks>
-    public class SettingsCache
+    public sealed class SettingsCache
     {
         private double width = 330;
         private double height = 260;

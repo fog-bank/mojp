@@ -12,7 +12,7 @@ namespace Mojp
     /// <summary>
     /// <see cref="MainWindow"/> のビュー モデルを提供します。
     /// </summary>
-    public class MainViewModel : INotifyPropertyChanged
+    public sealed class MainViewModel : INotifyPropertyChanged
     {
         private readonly SettingsCache settings = App.SettingsCache;
 
@@ -38,7 +38,17 @@ namespace Mojp
             SetMessage(AutoRefresh ?
                 "MO の Preview Pane を探しています" :
                 "MO の Preview Pane を表示させた状態で、右上のカメラアイコンのボタンを押してください");
+
+            CaptureCommand = new CaptureCommand(this);
+            CopyCardNameCommand = new CopyCardNameCommand(this);
+            CopyEnglishNameCommand = new CopyEnglishNameCommand(this);
+            GoToWikiCommand = new GoToWikiCommand(this);
         }
+
+        public CaptureCommand CaptureCommand { get; }
+        public CopyCardNameCommand CopyCardNameCommand { get; }
+        public CopyEnglishNameCommand CopyEnglishNameCommand { get; }
+        public GoToWikiCommand GoToWikiCommand { get; }
 
         /// <summary>
         /// このアプリケーションで使用する表示フォントを取得または設定します。
@@ -180,6 +190,7 @@ namespace Mojp
             {
                 settings.AutoRefresh = value;
                 OnPropertyChanged();
+                OnPropertyChanged(nameof(CaptureCommand));
             }
         }
 
@@ -271,6 +282,10 @@ namespace Mojp
                 OnPropertyChanged(nameof(CanCopyJapaneseName));
                 OnPropertyChanged(nameof(CanCopyEnglishName));
                 OnPropertyChanged(nameof(CanBrowseWiki));
+
+                CopyCardNameCommand?.OnCanExecuteChanged();
+                CopyEnglishNameCommand?.OnCanExecuteChanged();
+                GoToWikiCommand?.OnCanExecuteChanged();
             }
         }
 
@@ -440,7 +455,7 @@ namespace Mojp
             }
         }
 
-        protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        private void OnPropertyChanged([CallerMemberName] string propertyName = null)
             => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 
         /// <summary>

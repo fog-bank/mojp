@@ -8,7 +8,7 @@ namespace Mojp
     /// <summary>
     /// MTG のカードを表します。
     /// </summary>
-    public partial class Card : IEquatable<Card>, INotifyPropertyChanged
+    public sealed partial class Card : IEquatable<Card>, INotifyPropertyChanged
     {
         private string[] lines;
 

@@ -223,11 +223,11 @@
                     <StackPanel Orientation="Horizontal" />
                 </ItemsPanelTemplate>
             </ToolBar.ItemsPanel>
-            <Button ToolTip="MO を探す" Click="OnCapture">
-                <Image Source="Resources\Camera.png" Height="16" />
+            <Button Command="{Binding CopyCardNameCommand}" ToolTip="{Binding CopyCardNameCommand.Header}">
+                <Image Source="{Binding CopyCardNameCommand.Image}" Height="16" Style="{StaticResource btnImageStyle}" />
             </Button>
-            <Button ToolTip="設定" Click="OnOption">
-                <Image Source="Resources\Gears.png" Height="16" />
+            <Button Command="{Binding GoToWikiCommand}" ToolTip="{Binding GoToWikiCommand.Header}">
+                <Image Source="{Binding GoToWikiCommand.Image}" Height="16" Style="{StaticResource btnImageStyle}" />
             </Button>
         </ToolBar>
         <Grid Name="imgLoading" Grid.RowSpan="4" Grid.ColumnSpan="2" Background="#7fffffff" Visibility="Collapsed">
@@ -271,36 +271,30 @@
     </Grid>
     <Window.ContextMenu>
         <ContextMenu>
-            <MenuItem Click="OnCapture">
+            <MenuItem Command="{Binding CaptureCommand}" Header="{Binding CaptureCommand.Header}">
                 <MenuItem.Icon>
-                    <Image Source="Resources\Camera.png" Height="16" />
-                </MenuItem.Icon>
-                <MenuItem.Style>
-                    <Style TargetType="MenuItem">
-                        <Setter Property="Header" Value="MO を探す" />
-                        <Style.Triggers>
-                            <DataTrigger Binding="{Binding AutoRefresh}" Value="True">
-                                <Setter Property="Header" Value="MO を探す (自動化中)" />
-                            </DataTrigger>
-                        </Style.Triggers>
-                    </Style>
-                </MenuItem.Style>
-            </MenuItem>
-            <MenuItem Header="カード名をコピー" IsEnabled="{Binding CanCopyJapaneseName}" Click="OnCopyCardName">
-                <MenuItem.Icon>
-                    <Image Source="Resources\Copy.png" Height="16" />
+                    <Image Source="{Binding CaptureCommand.Image}" Height="16" Style="{StaticResource btnImageStyle}" />
                 </MenuItem.Icon>
             </MenuItem>
-            <MenuItem Header="カード名 (英語) をコピー" IsEnabled="{Binding CanCopyEnglishName}" Click="OnCopyEnglishName" />
-            <MenuItem Header="カードを MTG Wiki で調べる" IsEnabled="{Binding CanBrowseWiki}" Click="OnGoToWiki">
+            <MenuItem Command="{Binding CopyCardNameCommand}" Header="{Binding CopyCardNameCommand.Header}">
                 <MenuItem.Icon>
-                    <Image Source="Resources\Web.png" Height="16" />
+                    <Image Source="{Binding CopyCardNameCommand.Image}" Height="16" Style="{StaticResource btnImageStyle}" />
+                </MenuItem.Icon>
+            </MenuItem>
+            <MenuItem Command="{Binding CopyEnglishNameCommand}" Header="{Binding CopyEnglishNameCommand.Header}">
+                <MenuItem.Icon>
+                    <Image Source="{Binding CopyEnglishNameCommand.Image}" Height="16" Style="{StaticResource btnImageStyle}" />
+                </MenuItem.Icon>
+            </MenuItem>
+            <MenuItem Command="{Binding GoToWikiCommand}" Header="{Binding GoToWikiCommand.Header}">
+                <MenuItem.Icon>
+                    <Image Source="{Binding GoToWikiCommand.Image}" Height="16" Style="{StaticResource btnImageStyle}" />
                 </MenuItem.Icon>
             </MenuItem>
             <Separator />
             <MenuItem Header="設定" Click="OnOption">
                 <MenuItem.Icon>
-                    <Image Source="Resources\Gears.png" Height="16" />
+                    <Image Source="Resources\Gears.png" Height="16" Style="{StaticResource btnImageStyle}" />
                 </MenuItem.Icon>
             </MenuItem>
             <MenuItem Header="最小化" Click="OnWindowMinimize" />
