@@ -28,6 +28,7 @@ namespace Mojp
             CopyCardNameCommand = new CopyCardNameCommand(this);
             CopyEnglishNameCommand = new CopyEnglishNameCommand(this);
             GoToWikiCommand = new GoToWikiCommand(this);
+            OptionCommand = new OptionCommand(this);
 
             automation = new AutomationHandler(this);
         }
@@ -36,6 +37,7 @@ namespace Mojp
         public CopyCardNameCommand CopyCardNameCommand { get; }
         public CopyEnglishNameCommand CopyEnglishNameCommand { get; }
         public GoToWikiCommand GoToWikiCommand { get; }
+        public OptionCommand OptionCommand { get; }
 
         /// <summary>
         /// このアプリケーションで使用する表示フォントを取得または設定します。

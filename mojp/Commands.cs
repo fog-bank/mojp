@@ -11,16 +11,28 @@ namespace Mojp
 
         public MainViewModel ViewModel { get; }
 
+        /// <summary>
+        /// シリアライズに使うコマンド名を取得します。
+        /// </summary>
         public abstract string Name { get; }
 
+        /// <summary>
+        /// ユーザーに表示するコマンド名を取得します。
+        /// </summary>
         public abstract string Header { get; }
 
+        /// <summary>
+        /// ユーザーに表示するアイコン画像のパスを取得します。
+        /// </summary>
         public virtual string Image { get; }
 
         public virtual bool CanExecute(object parameter) => true;
 
         public abstract void Execute(object parameter);
 
+        /// <summary>
+        /// このコマンドの有効・無効が切り替わったことを通知します。
+        /// </summary>
         public void OnCanExecuteChanged() => CanExecuteChanged?.Invoke(this, EventArgs.Empty);
 
         public event EventHandler CanExecuteChanged;
@@ -51,10 +63,11 @@ namespace Mojp
 
         public sealed override string Image => @"Resources\Copy.png";
 
-        public sealed override bool CanExecute(object parameter) => ViewModel?.SelectedCard != null && ViewModel.SelectedCard.HasJapaneseName;
+        public sealed override bool CanExecute(object parameter) => ViewModel?.SelectedCard != null;
 
         public sealed override void Execute(object parameter)
         {
+            // 日本語訳が無いカードについては、コピー不可だったが、代わりに英語名をコピーするように仕様変更
             string name = ViewModel?.SelectedCard?.JapaneseName;
 
             if (name != null)
@@ -156,6 +169,8 @@ namespace Mojp
         public sealed override string Image => @"Resources\Gears.png";
 
         public sealed override void Execute(object parameter)
-        { }
+        {
+            (App.Current.MainWindow as MainWindow)?.OnOption(this, null);
+        }
     }
 }

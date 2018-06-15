@@ -88,7 +88,7 @@ namespace Mojp
                 notifier.Visibility = Visibility.Visible;
         }
 
-        private async void OnOption(object sender, RoutedEventArgs e)
+        internal async void OnOption(object sender, RoutedEventArgs e)
         {
             var vm = ViewModel;
             bool oldPrice = vm.GetCardPrice;
