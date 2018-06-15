@@ -112,6 +112,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Resources\CopyEn.png" />
     <Resource Include="Resources\Close.png" />
     <Resource Include="Resources\Warning.png" />
     <Resource Include="Resources\pd.png" />

@@ -30,9 +30,9 @@ namespace Mojp
                     // Æther Vial など
                     // カラデシュ発売時のオラクル更新でほとんどの Æ は Ae に置換された。ただし WHISPER や wiki では AE のまま
                     //case 'Æ':
-                    //	sb.Append("AE");
-                    //	replaced = true;
-                    //	break;
+                    //  sb.Append("AE");
+                    //  replaced = true;
+                    //  break;
 
                     // Márton Stromgald や Dandân や Déjà Vu など
                     case 'á':

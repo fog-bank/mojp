@@ -1,7 +1,7 @@
 ﻿<Application xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             x:Class="Mojp.App" 
-			 StartupUri="MainWindow.xaml">
+             x:Class="Mojp.App"
+             StartupUri="MainWindow.xaml">
     <Application.Resources>
         <BooleanToVisibilityConverter x:Key="bool2visible" />
         <Style x:Key="btnImageStyle" TargetType="Image">

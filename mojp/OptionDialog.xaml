@@ -1,8 +1,8 @@
 ﻿<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-		x:Class="Mojp.OptionDialog" xml:lang="ja-jp"
-		Title="設定" SizeToContent="WidthAndHeight" ResizeMode="NoResize" ShowInTaskbar="False"
-		Icon="Resources/dictionary.ico" SnapsToDevicePixels="True">
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="Mojp.OptionDialog" xml:lang="ja-jp"
+        Title="設定" SizeToContent="WidthAndHeight" ResizeMode="NoResize" ShowInTaskbar="False"
+        Icon="Resources/dictionary.ico" SnapsToDevicePixels="True">
     <Window.Resources>
         <Style TargetType="TextBlock">
             <Setter Property="Margin" Value="2,4" />
@@ -45,7 +45,7 @@
                 <TextBlock>リリース バージョン</TextBlock>
                 <TextBlock Grid.Column="2">1.8.2</TextBlock>
                 <TextBlock Grid.Column="3">
-				<Hyperlink ToolTip="https://github.com/fog-bank/mojp/releases" Click="OnClickHyperlink">GitHub に移動</Hyperlink>
+                    <Hyperlink ToolTip="https://github.com/fog-bank/mojp/releases" Click="OnClickHyperlink">GitHub に移動</Hyperlink>
                 </TextBlock>
                 <TextBlock Grid.Row="1" VerticalAlignment="Top">対応最新セット</TextBlock>
                 <StackPanel Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2">
@@ -238,10 +238,10 @@
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <TextBlock>
-				    <Hyperlink ToolTip="http://whisper.wisdom-guild.net/" Click="OnClickHyperlink">Wisdom Guild</Hyperlink>
-				    <Run> で「出力形式」を「テキスト」にしてカード検索し、</Run>
-				    <LineBreak />
-				    <Run>表示されたテキスト ファイルを shift-jis で保存してください。</Run>
+                    <Hyperlink ToolTip="http://whisper.wisdom-guild.net/" Click="OnClickHyperlink">Wisdom Guild</Hyperlink>
+                    <Run> で「出力形式」を「テキスト」にしてカード検索し、</Run>
+                    <LineBreak />
+                    <Run>表示されたテキスト ファイルを shift-jis で保存してください。</Run>
                 </TextBlock>
                 <CheckBox Name="cbxSaveDb" Grid.Row="1" IsChecked="True"
                           ToolTip="起動時に読み込む cards.xml を編集し、次回起動以降もそれを使用するようにします。">

@@ -29,6 +29,7 @@ namespace Mojp
             CopyEnglishNameCommand = new CopyEnglishNameCommand(this);
             GoToWikiCommand = new GoToWikiCommand(this);
             OptionCommand = new OptionCommand(this);
+            ArrangeToolbarCommands();
 
             automation = new AutomationHandler(this);
         }
@@ -103,6 +104,11 @@ namespace Mojp
                 OnPropertyChanged();
             }
         }
+
+        /// <summary>
+        /// ツールバーに表示するコマンドのコレクションを取得します。
+        /// </summary>
+        public ObservableCollection<Command> ToolbarCommands { get; } = new ObservableCollection<Command>();
 
         /// <summary>
         /// このアプリケーションのウィンドウの幅を取得または設定します。
@@ -407,10 +413,28 @@ namespace Mojp
         public void CapturePreviewPane() => OnCapture(null, EventArgs.Empty);
 
         /// <summary>
+        /// 設定の値を使ってツールバーの配置を変更します。
+        /// </summary>
+        public void ArrangeToolbarCommands()
+        {
+            foreach (string commandName in settings.ToolbarCommands)
+            {
+                if (Command.CommandMap.TryGetValue(commandName, out var command))
+                    ToolbarCommands.Add(command);
+            }
+        }
+
+        /// <summary>
         /// 各リソースを解放します。
         /// </summary>
         public void Release()
         {
+            var commandNames = new List<string>(ToolbarCommands.Count);
+            settings.ToolbarCommands = commandNames;
+
+            foreach (var command in ToolbarCommands)
+                commandNames.Add(command.Name);
+            
             if (timer != null)
             {
                 timer.Stop();

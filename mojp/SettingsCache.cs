@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Globalization;
 
 namespace Mojp
@@ -65,6 +66,8 @@ namespace Mojp
 
         public bool EnableToolbar { get; set; }
 
+        public IList<string> ToolbarCommands { get; set; }
+
         public bool TopMost { get; set; }
 
         // 動作
@@ -116,6 +119,7 @@ namespace Mojp
             }
 
             EnableToolbar = opt.EnableToolbar;
+            ToolbarCommands = new[] { "CopyEnglishName", "Option" };
             TopMost = opt.TopMost;
 
             ShowBasicLands = opt.ShowBasicLands;

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Windows;
 using System.Windows.Input;
@@ -7,14 +8,25 @@ namespace Mojp
 {
     public abstract class Command : ICommand
     {
-        public Command(MainViewModel viewModel) => ViewModel = viewModel;
+        public Command(MainViewModel viewModel, string name)
+        {
+            ViewModel = viewModel;
+            Name = name;
+
+            CommandMap.Add(name, this);
+        }
 
         public MainViewModel ViewModel { get; }
 
         /// <summary>
+        /// シリアライズ化されたコマンド名とインスタンス化されたコマンドを関連付ける <see cref="Dictionary{string,Command}"/> です。
+        /// </summary>
+        public static Dictionary<string, Command> CommandMap { get; } = new Dictionary<string, Command>(5);
+
+        /// <summary>
         /// シリアライズに使うコマンド名を取得します。
         /// </summary>
-        public abstract string Name { get; }
+        public string Name { get; }
 
         /// <summary>
         /// ユーザーに表示するコマンド名を取得します。
@@ -40,10 +52,8 @@ namespace Mojp
 
     public sealed class CaptureCommand : Command
     {
-        public CaptureCommand(MainViewModel viewModel) : base(viewModel)
+        public CaptureCommand(MainViewModel viewModel) : base(viewModel, "Capture")
         { }
-
-        public sealed override string Name => "Capture";
 
         public sealed override string Header => App.SettingsCache.AutoRefresh ? "MO を探す (自動化中)" : "MO を探す";
 
@@ -54,10 +64,8 @@ namespace Mojp
 
     public sealed class CopyCardNameCommand : Command
     {
-        public CopyCardNameCommand(MainViewModel viewModel) : base(viewModel)
+        public CopyCardNameCommand(MainViewModel viewModel) : base(viewModel, "CopyCardName")
         { }
-
-        public sealed override string Name => "CopyCardName";
 
         public sealed override string Header => "カード名をコピー";
 
@@ -77,14 +85,12 @@ namespace Mojp
 
     public sealed class CopyEnglishNameCommand : Command
     {
-        public CopyEnglishNameCommand(MainViewModel viewModel) : base(viewModel)
+        public CopyEnglishNameCommand(MainViewModel viewModel) : base(viewModel, "CopyEnglishName")
         { }
-
-        public sealed override string Name => "CopyEnglishName";
 
         public sealed override string Header => "カード名 (英語) をコピー";
 
-        public sealed override string Image => @"Resources\Copy.png";
+        public sealed override string Image => @"Resources\CopyEn.png";
 
         public sealed override bool CanExecute(object parameter) => ViewModel?.SelectedCard?.EnglishName != null;
 
@@ -102,10 +108,8 @@ namespace Mojp
 
     public sealed class GoToWikiCommand : Command
     {
-        public GoToWikiCommand(MainViewModel viewModel) : base(viewModel)
+        public GoToWikiCommand(MainViewModel viewModel) : base(viewModel, "GoToWiki")
         { }
-
-        public sealed override string Name => "GoToWiki";
 
         public sealed override string Header => "カードを MTG Wiki で調べる";
 
@@ -159,10 +163,8 @@ namespace Mojp
 
     public sealed class OptionCommand : Command
     {
-        public OptionCommand(MainViewModel viewModel) : base(viewModel)
+        public OptionCommand(MainViewModel viewModel) : base(viewModel, "Option")
         { }
-
-        public sealed override string Name => "Option";
 
         public sealed override string Header => "設定";
 

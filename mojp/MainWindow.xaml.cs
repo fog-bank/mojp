@@ -18,10 +18,7 @@ namespace Mojp
 
         protected override void OnClosing(CancelEventArgs e)
         {
-            var vm = ViewModel;
-
-            if (vm != null)
-                vm.Release();
+            ViewModel?.Release();
 
             base.OnClosing(e);
         }
