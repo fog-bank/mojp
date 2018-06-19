@@ -96,6 +96,12 @@ namespace Mojp
                 card?.OnUpdateDisplayName();
         }
 
+        private void OnCustomizeToolbar(object sender, RoutedEventArgs e)
+        {
+            var dlg = new ToolbarDialog(DataContext) { Owner = this };
+            dlg.ShowDialog();
+        }
+
         private async void OnRetryPDList(object sender, RoutedEventArgs e)
         {
             imgLoading.Visibility = Visibility.Visible;

@@ -238,5 +238,17 @@ namespace Mojp {
                 this["EnableToolbar"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Capture,0,CopyCardName,0,CopyEnglishName,0,GoToWiki,1,Option,0")]
+        public string ToolbarCommands {
+            get {
+                return ((string)(this["ToolbarCommands"]));
+            }
+            set {
+                this["ToolbarCommands"] = value;
+            }
+        }
     }
 }

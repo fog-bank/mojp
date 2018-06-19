@@ -119,7 +119,7 @@ namespace Mojp
             }
 
             EnableToolbar = opt.EnableToolbar;
-            ToolbarCommands = new[] { "CopyEnglishName", "Option" };
+            ToolbarCommands = opt.ToolbarCommands?.Split(',') ?? new string[0];
             TopMost = opt.TopMost;
 
             ShowBasicLands = opt.ShowBasicLands;
@@ -148,6 +148,7 @@ namespace Mojp
             opt.CardTextFontSize = CardTextFontSize;
             opt.CardDisplayNameType = (int)CardDisplayNameType;
             opt.EnableToolbar = EnableToolbar;
+            opt.ToolbarCommands = string.Join(",", ToolbarCommands);
             opt.TopMost = TopMost;
 
             opt.ShowBasicLands = ShowBasicLands;

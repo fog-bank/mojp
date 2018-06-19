@@ -226,7 +226,8 @@
             </ToolBar.ItemsPanel>
             <ToolBar.ItemTemplate>
                 <DataTemplate DataType="local:Command">
-                    <Button Command="{Binding}" ToolTip="{Binding Header}" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+                    <Button Command="{Binding}" Visibility="{Binding IsVisible, Converter={StaticResource bool2visible}}" ToolTip="{Binding Header}"
+                            Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
                         <Image Source="{Binding Image}" Height="16" Style="{StaticResource btnImageStyle}" />
                     </Button>
                 </DataTemplate>

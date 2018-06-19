@@ -1,13 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
+using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Windows.Input;
 
 namespace Mojp
 {
-    public abstract class Command : ICommand
+    public abstract class Command : ICommand, INotifyPropertyChanged
     {
+        private bool isVisible = true;
+
         public Command(MainViewModel viewModel, string name)
         {
             ViewModel = viewModel;
@@ -38,6 +42,19 @@ namespace Mojp
         /// </summary>
         public virtual string Image { get; }
 
+        /// <summary>
+        /// このコマンドをツールバーに表示するかどうかを示す値を取得または設定します。
+        /// </summary>
+        public bool IsVisible
+        {
+            get => isVisible;
+            set
+            {
+                isVisible = value;
+                OnPropertyChanged();
+            }
+        }
+
         public virtual bool CanExecute(object parameter) => true;
 
         public abstract void Execute(object parameter);
@@ -47,7 +64,12 @@ namespace Mojp
         /// </summary>
         public void OnCanExecuteChanged() => CanExecuteChanged?.Invoke(this, EventArgs.Empty);
 
+        protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
+            => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+
         public event EventHandler CanExecuteChanged;
+
+        public event PropertyChangedEventHandler PropertyChanged;
     }
 
     public sealed class CaptureCommand : Command
@@ -60,6 +82,11 @@ namespace Mojp
         public sealed override string Image => @"Resources\Camera.png";
 
         public sealed override void Execute(object parameter) => ViewModel.CapturePreviewPane();
+
+        /// <summary>
+        /// <see cref="Settings.AutoRefresh"/> の値が変更されたときに呼び出します。
+        /// </summary>
+        public void OnAutoRefreshChanged() => OnPropertyChanged(nameof(Header));
     }
 
     public sealed class CopyCardNameCommand : Command

@@ -185,7 +185,7 @@ namespace Mojp
             {
                 settings.AutoRefresh = value;
                 OnPropertyChanged();
-                OnPropertyChanged(nameof(CaptureCommand));
+                CaptureCommand.OnAutoRefreshChanged();
             }
         }
 
@@ -417,10 +417,13 @@ namespace Mojp
         /// </summary>
         public void ArrangeToolbarCommands()
         {
-            foreach (string commandName in settings.ToolbarCommands)
+            for (int i = 0; i + 1 < settings.ToolbarCommands.Count; i += 2)
             {
-                if (Command.CommandMap.TryGetValue(commandName, out var command))
+                if (Command.CommandMap.TryGetValue(settings.ToolbarCommands[i], out var command))
+                {
                     ToolbarCommands.Add(command);
+                    command.IsVisible = settings.ToolbarCommands[i + 1] == "1";
+                }
             }
         }
 
@@ -433,7 +436,10 @@ namespace Mojp
             settings.ToolbarCommands = commandNames;
 
             foreach (var command in ToolbarCommands)
+            {
                 commandNames.Add(command.Name);
+                commandNames.Add(command.IsVisible ? "1" : "0");
+            }
             
             if (timer != null)
             {

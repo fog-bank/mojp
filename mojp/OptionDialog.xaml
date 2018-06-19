@@ -132,14 +132,15 @@
                     <ComboBoxItem Padding="2">English / 日本語</ComboBoxItem>
                     <ComboBoxItem Padding="2">English</ComboBoxItem>
                 </ComboBox>
-                <CheckBox Grid.Row="3" Margin="0,2,0,0" IsChecked="{Binding EnableToolbar}"
+                <CheckBox Grid.Row="3" Margin="0,4" IsChecked="{Binding TopMost}">常に手前に表示する</CheckBox>
+                <CheckBox Grid.Row="4" IsChecked="{Binding EnableToolbar}"
                           ToolTip="表示されていたボタンは右クリックメニューから選べます。" ToolTipService.ShowDuration="60000">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock>ツールバーを表示する</TextBlock>
                         <Image Source="Resources/Information.png" Height="16" Margin="5,0,0,0" />
                     </StackPanel>
                 </CheckBox>
-                <CheckBox Grid.Row="4" Margin="0,4,0,0" IsChecked="{Binding TopMost}">常に手前に表示する</CheckBox>
+                <Button Grid.Row="4" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center" Click="OnCustomizeToolbar">カスタマイズ...</Button>
             </Grid>
             <Grid Margin="0,15,0,5">
                 <Grid.ColumnDefinitions>
