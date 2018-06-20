@@ -115,7 +115,7 @@ namespace Mojp
             {
                 // 現在の OS 表示言語に基づき、既定値を決定し、次からその値を使う
                 CardDisplayNameType = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName == "ja" ?
-                    CardDisplayNameType.Japanese : CardDisplayNameType.English;
+                    CardDisplayNameType.JananeseEnglish : CardDisplayNameType.English;
             }
 
             EnableToolbar = opt.EnableToolbar;
