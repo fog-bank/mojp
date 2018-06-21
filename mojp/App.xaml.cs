@@ -181,7 +181,7 @@ namespace Mojp
             if (SettingsCache.GetCardPrice)
                 CardPrice.SaveCacheData();
 
-            Debug.WriteLine("#cards handling PropertyChanged = " + Cards.Values.Count(card => card.IsObserved));
+            Debug.WriteLine("Card.PropertyChanged = { " + string.Join(", ", Cards.Values.Where(card => card.IsObserved)) + " }");
 
             base.OnExit(e);
         }

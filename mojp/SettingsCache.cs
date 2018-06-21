@@ -29,21 +29,13 @@ namespace Mojp
         public double WindowWidth
         {
             get => width;
-            set
-            {
-                if (width > 0)
-                    width = value;
-            }
+            set => width = value >= 1 ? value : 1;
         }
 
         public double WindowHeight
         {
             get => height;
-            set
-            {
-                if (width > 0)
-                    height = value;
-            }
+            set => height = value >= 1 ? value : 1;
         }
 
         public double WindowLeft { get; set; }
@@ -55,11 +47,7 @@ namespace Mojp
         public int CardTextFontSize
         {
             get => fontSize;
-            set
-            {
-                if (value > 0)
-                    fontSize = value;
-            }
+            set => fontSize = value >= 1 ? value : 1;
         }
 
         public CardDisplayNameType CardDisplayNameType { get; set; }
@@ -78,11 +66,7 @@ namespace Mojp
         public int RefreshIntervalMilliseconds
         {
             get => refreshInterval;
-            set
-            {
-                if (value > 0)
-                    refreshInterval = value;
-            }
+            set => refreshInterval = value >= 100 ? value : 100;
         }
 
         public bool GetPDList { get; set; }

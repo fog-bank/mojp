@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using System.Windows.Threading;
@@ -16,6 +17,7 @@ namespace Mojp
         private readonly SettingsCache settings = App.SettingsCache;
         private AutomationHandler automation;
         private DispatcherTimer timer;
+        private List<Card> displayCards;
         private int selectedIndex = -1;
 
         public MainViewModel()
@@ -262,7 +264,15 @@ namespace Mojp
         /// <summary>
         /// 表示中のカードのコレクションを取得します。
         /// </summary>
-        public ObservableCollection<Card> Cards { get; } = new ObservableCollection<Card>();
+        public List<Card> Cards
+        {
+            get => displayCards;
+            set
+            {
+                displayCards = value;
+                OnPropertyChanged();
+            }
+        }
 
         /// <summary>
         /// <see cref="System.Windows.Controls.TabControl"/> で手前に表示しているカードのインデックス番号を取得または設定します。
@@ -288,36 +298,15 @@ namespace Mojp
         {
             get
             {
-                if (SelectedIndex >= 0 && SelectedIndex < Cards.Count)
-                {
-                    var card = Cards[SelectedIndex];
-
-                    if (!string.IsNullOrEmpty(card?.Name))
-                        return card;
-                }
-                return null;
+                var card = Cards?.ElementAtOrDefault(SelectedIndex);
+                return string.IsNullOrEmpty(card?.Name) ? null : card;
             }
         }
 
         /// <summary>
         /// カードテキストの代わりにメッセージを表示します。
         /// </summary>
-        public void SetMessage(string text)
-        {
-            var card = new Card(text);
-
-            if (Cards.Count > 0)
-            {
-                Cards[0] = card;
-
-                for (int i = Cards.Count - 1; i >= 1; i--)
-                    Cards.RemoveAt(i);
-            }
-            else
-                Cards.Add(card);
-
-            SelectedIndex = 0;
-        }
+        public void SetMessage(string text) => SetCard(new Card(text));
 
         /// <summary>
         /// UI スレッド上で、カードテキストの代わりにメッセージを表示します。
@@ -332,26 +321,17 @@ namespace Mojp
             if (card == null)
                 return;
 
-            if (Cards.Count > 0)
-            {
-                Cards[0] = card;
-
-                // 項目数が減る場合に末端から削除
-                for (int i = Cards.Count - 1; i >= 1; i--)
-                    Cards.RemoveAt(i);
-            }
-            else
-                Cards.Add(card);
+            var cards = new List<Card>(card.RelatedCardName == null ? 1 : 4) { card };
 
             if (card.RelatedCardName != null)
             {
                 foreach (string relatedName in card.RelatedCardNames)
                 {
                     if (App.Cards.TryGetValue(relatedName, out var card2))
-                        Cards.Add(card2);
+                        cards.Add(card2);
                 }
             }
-            SelectedIndex = 0;
+            SetCards(cards);
         }
 
         /// <summary>
@@ -359,28 +339,26 @@ namespace Mojp
         /// </summary>
         public void InvokeSetCard(Card card) => App.CurrentDispatcher.Invoke(() => SetCard(card));
 
-        public void InvokeSetCards(List<Card> cards)
+        public void SetCards(List<Card> cards)
         {
-            App.CurrentDispatcher.Invoke(SetCards);
+            //int j = 0;
 
-            void SetCards()
-            {
-                int j = 0;
+            //for (int i = 0; i < Cards.Count && j < cards.Count; i++, j++)
+            //    Cards[i] = cards[j];
 
-                for (int i = 0; i < Cards.Count && j < cards.Count; i++, j++)
-                    Cards[i] = cards[j];
+            //// 項目数が減る場合：末端から削除
+            //for (int i = Cards.Count - 1; i >= cards.Count; i--)
+            //    Cards.RemoveAt(i);
 
-                // 項目数が減る場合：末端から削除
-                for (int i = Cards.Count - 1; i >= cards.Count; i--)
-                    Cards.RemoveAt(i);
+            //// 項目数が増える場合：継続して追加
+            //for (; j < cards.Count; j++)
+            //    Cards.Add(cards[j]);
 
-                // 項目数が増える場合：継続して追加
-                for (; j < cards.Count; j++)
-                    Cards.Add(cards[j]);
-
-                SelectedIndex = 0;
-            }
+            Cards = cards;
+            SelectedIndex = 0;
         }
+
+        public void InvokeSetCards(List<Card> cards) => App.CurrentDispatcher.Invoke(() => SetCards(cards));
 
         /// <summary>
         /// 画面を更新するように要求します。
@@ -447,7 +425,7 @@ namespace Mojp
                 timer.Tick -= OnCapture;
                 timer = null;
             }
-            Cards.Clear();
+            Cards = null;
 
             Task.Run(automation.Release);
         }

@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Diagnostics;
 using System.Reflection;
+using System.Threading;
 using System.Windows.Automation;
 
 namespace Mojp
@@ -12,7 +13,7 @@ namespace Mojp
         /// </summary>
         private class AutomationHandler
         {
-            private AutomationElement prevWnd;
+            private AutomationElement previewWnd;
             private CacheRequest cacheReq = new CacheRequest();
             private Condition condition;
 
@@ -38,6 +39,8 @@ namespace Mojp
             /// </summary>
             public void CaptureMtgo()
             {
+                var currentPreviewWnd = previewWnd;
+
                 // MO のプロセス ID を取得する
                 if (!App.GetProcessIDByName("mtgo", out int mtgoProcessID))
                 {
@@ -47,10 +50,10 @@ namespace Mojp
                 }
 
                 // "Preview" という名前のウィンドウを探す (なぜかルートの子で見つかる)
-                AutomationElement currentPrevWnd = null;
+                AutomationElement newPreviewWnd = null;
                 try
                 {
-                    currentPrevWnd = AutomationElement.RootElement.FindFirst(TreeScope.Children,
+                    newPreviewWnd = AutomationElement.RootElement.FindFirst(TreeScope.Children,
                         new AndCondition(
                             new PropertyCondition(AutomationElement.ProcessIdProperty, mtgoProcessID),
                             new PropertyCondition(AutomationElement.ClassNameProperty, "Window"),
@@ -58,32 +61,42 @@ namespace Mojp
                 }
                 catch { Debug.WriteLine("Preview Pane の取得に失敗しました。"); }
 
-                if (currentPrevWnd == null)
+                // 他のスレッドで処理が先行した
+                if (previewWnd != currentPreviewWnd)
+                    return;
+                
+                if (newPreviewWnd == null)
                 {
                     ReleaseAutomationElement();
                     ViewModel.InvokeSetMessage("MO の Preview Pane が見つかりません。");
                     return;
                 }
 
-                if (currentPrevWnd != prevWnd)
+                if (newPreviewWnd == currentPreviewWnd)
+                    return;
+                
+                // 新しい Preview Pane が見つかった
+                ReleaseAutomationElement();
+                previewWnd = newPreviewWnd;
+
+                // とりあえずカード名を探す
+                SearchCardName();
+
+                // UI テキストの変化を追う
+                // 対戦中、カード情報は Preview Pane の直接の子ではなく、
+                // ZoomCard_View というカスタムコントロールの下にくるので、スコープは子孫にしないとダメ
+                using (cacheReq.Activate())
                 {
-                    // 新しい Preview Pane が見つかった
-                    ReleaseAutomationElement();
-                    prevWnd = currentPrevWnd;
-
-                    // とりあえずカード名を探す
-                    SearchCardName();
-
-                    // UI テキストの変化を追う
-                    // 対戦中、カード情報は Preview Pane の直接の子ではなく、
-                    // ZoomCard_View というカスタムコントロールの下にくるので、スコープは子孫にしないとダメ
-                    using (cacheReq.Activate())
-                        Automation.AddAutomationPropertyChangedEventHandler(
-                            prevWnd, TreeScope.Descendants, OnAutomaionNamePropertyChanged, AutomationElement.NameProperty);
-
-                    if (ViewModel.SelectedCard == null)
-                        ViewModel.InvokeSetMessage("準備完了");
+                    Automation.AddAutomationPropertyChangedEventHandler(newPreviewWnd,
+                        TreeScope.Descendants, OnAutomaionNamePropertyChanged, AutomationElement.NameProperty);
                 }
+
+                if (ViewModel.SelectedCard == null)
+                    ViewModel.InvokeSetMessage("準備完了");
+#if DEBUG
+                Debug.WriteLine("Automation event handlers (after add) = " +
+                    (GetListeners()?.Count).GetValueOrDefault() + " @ T" + Thread.CurrentThread.ManagedThreadId);
+#endif          
             }
 
             /// <summary>
@@ -95,7 +108,7 @@ namespace Mojp
                 try
                 {
                     using (cacheReq.Activate())
-                        elements = prevWnd?.FindAll(TreeScope.Descendants, condition);
+                        elements = previewWnd?.FindAll(TreeScope.Descendants, condition);
                 }
                 catch { Debug.WriteLine("TextBlock 要素の全取得に失敗しました。"); }
 
@@ -184,7 +197,7 @@ namespace Mojp
             /// <remarks>AutomationPropertyChangedEventHandler は UI スレッドとは別スレッドで動いている</remarks>
             private void OnAutomaionNamePropertyChanged(object sender, AutomationPropertyChangedEventArgs e)
             {
-                if (prevWnd == null)
+                if (previewWnd == null)
                     return;
 
                 string name = GetNamePropertyValue(sender as AutomationElement);
@@ -230,6 +243,10 @@ namespace Mojp
                     return;
                 }
                 Debug.WriteLine(name);
+#if DEBUG
+                Debug.WriteLine("Automation event handlers (NameChanged) = " +
+                    (GetListeners()?.Count).GetValueOrDefault() + " @ T" + Thread.CurrentThread.ManagedThreadId);
+#endif
 
                 SearchCardName();
             }
@@ -245,7 +262,7 @@ namespace Mojp
                     AutomationElement element = null;
                     using (cacheReq.Activate())
                     {
-                        element = prevWnd?.FindFirst(TreeScope.Descendants,
+                        element = previewWnd?.FindFirst(TreeScope.Descendants,
                             new PropertyCondition(AutomationElement.AutomationIdProperty, "CardType"));
                     }
                     string cardType = GetNamePropertyValue(element);
@@ -287,15 +304,17 @@ namespace Mojp
             /// </summary>
             private void ReleaseAutomationElement()
             {
-                if (prevWnd != null)
+                if (previewWnd != null)
                 {
-                    prevWnd = null;
+                    previewWnd = null;
                     Automation.RemoveAllEventHandlers();
 #if DEBUG
-                    Debug.WriteLine("Removed automation event handlers: " + (GetListeners()?.Count).GetValueOrDefault());
+                    Debug.WriteLine("Automation event handlers (after remove) = " +
+                        (GetListeners()?.Count).GetValueOrDefault() + " @ T" + Thread.CurrentThread.ManagedThreadId);
 #endif
                 }
             }
+
 #if DEBUG
             private System.Collections.ArrayList GetListeners()
             {
