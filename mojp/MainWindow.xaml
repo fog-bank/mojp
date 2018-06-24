@@ -294,12 +294,12 @@
                     <Image Source="{Binding GoToWikiCommand.Image}" Height="16" Style="{StaticResource btnImageStyle}" />
                 </MenuItem.Icon>
             </MenuItem>
-            <Separator />
             <MenuItem Command="{Binding OptionCommand}" Header="{Binding OptionCommand.Header}">
                 <MenuItem.Icon>
                     <Image Source="{Binding OptionCommand.Image}" Height="16" Style="{StaticResource btnImageStyle}" />
                 </MenuItem.Icon>
             </MenuItem>
+            <Separator />
             <MenuItem Header="最小化" Click="OnWindowMinimize" />
             <MenuItem Header="5 秒間隠す" Click="OnHide" />
             <MenuItem Header="終了" Click="OnWindowClose" />

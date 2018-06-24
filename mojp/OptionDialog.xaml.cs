@@ -169,9 +169,7 @@ namespace Mojp
                     }
                 }
             }
-
-            if (target != null)
-                ViewModel?.SetCard(target);
+            ViewModel?.SetCard(target);
         }
 
         private void OnClickHyperlink(object sender, RoutedEventArgs e)

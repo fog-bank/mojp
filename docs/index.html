@@ -37,11 +37,25 @@
     </div>
     <h3 id="download">ダウンロード</h3>
     <div>
+      <h4><span class="underline">開発版 v2.0.0 Beta（基本セット 2019 &amp; バトルボンド 仮対応）</span></h4>
+      <ul>
+        <li>タブに表示しているカード名の書式を 4 種類の中から選べるようになりました。</li>
+        <li>「MO を探す」ボタンが形骸化していたため、ツールバーを一新しました。非表示化も含めて設定でカスタマイズ可能です。</li>
+        <li>
+          Preview Pane の検索を別スレッドで行うようになりました。また、それに関連して多重起動不可になりました。
+          <ul>
+            <li>これにより、もし MO 側がフリーズしても、このアプリまでフリーズしないようになったはずです。逆にこのアプリと MO どちらもフリーズした場合は、このアプリが想定外の悪さをしている可能性があります。お手数ですがご報告いただければ幸いです。</li>
+          </ul>
+        </li>
+      </ul>
+      <p><a href="https://github.com/fog-bank/mojp/releases/download/v1.9.0-beta/mojp.zip">ダウンロード</a>　<a href="https://github.com/fog-bank/mojp/releases/tag/v1.9.0-beta">リリースノート</a></p>
+      <h4><span class="underline">緊急時用 v1.9.0</span></h4>
+      <p>v2.0 系に不具合があった時です。カードデータは最新版と同じです。</p>
+      <p><a href="https://fog-bank.github.io/mojp/downloads/v1.9.0/mojp.zip">ダウンロード</a></p>
       <h4><span class="underline">最新版 v1.8.1（ドミナリア 対応）</span></h4>
-      <p>対戦中の英雄譚に反応しない不具合を修正しました。</p>
-      <p>なお「プレインズウォーカーへのダメージ移し替えルール」の廃止に伴うオラクル更新については、全カードに対応済みですが、順次 WHISPER のデータと照合して確認をとっております。致命的なミスがあった場合はまた修正リリースを行います。お手数をおかけいたします。</p>
       <p><a href="https://github.com/fog-bank/mojp/releases/download/v1.8.1/mojp.zip">ダウンロード</a>　<a href="https://github.com/fog-bank/mojp/releases/tag/v1.8.1">リリースノート</a></p>
       <h4><span class="underline">更新履歴</span></h4>
+      <p>v2.0.0（基本セット 2019）より、Preview Pane の検索を別スレッドで行うようになり、それに関連して多重起動不可になりました。</p>
       <p>v1.7.0（イクサランの相克）より、カードの追加情報をインターネットから取得するようになりました。不要な場合や処理を軽くしたい場合は、設定から無効にしてください。</p>
       <p>v1.3.0（霊気紛争）より、新バージョンの有無を自動で確認するようになりました。</p>
       <p>v1.1.0 より、Preview Pane の有無を自動的に確認するようになりました。</p>
@@ -49,6 +63,7 @@
     <h3 id="howtouse">使い方</h3>
     <div>
       <h4><span class="underline">必要条件</span></h4>
+      <p>Windows 7 SP1 以降</p>
       <p>.NET Framework 4.6 以上（Windows 10 の場合は標準でインストール済みです）</p>
       <h4><span class="underline">手順</span></h4>
       <ol>
@@ -88,7 +103,7 @@
     <div>
       <p>
         <a href="https://docs.microsoft.com/ja-jp/dotnet/framework/ui-automation/">UI Automation</a> API を利用して、Preview Pane 内のテキストを検索しています。メインロジックは
-        <a href="https://github.com/fog-bank/mojp/blob/master/mojp/MainViewModel.cs#L433">MainViewModel.cs</a> 内の OnCapture メソッド以下です。
+        <a href="https://github.com/fog-bank/mojp/blob/master/mojp/AutomationHandler.cs#L40">AutomationHandler.cs</a> 内の CapturePreviewPane メソッド以下です。
       </p>
     </div>
     <h3 id="reference">リファレンス</h3>

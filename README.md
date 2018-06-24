@@ -1,7 +1,7 @@
 # MO 日本語カードテキスト表示ツール
 [Magic: The Gathering Online](http://www.mtgo.com/) で表示されているカードに対応して、日本語テキストを自動で表示するアプリです。
 
-![Screenshot v1.3.0](https://github.com/fog-bank/mojp/blob/master/images/screenshot.png)
+![Screenshot v2.0.0](https://github.com/fog-bank/mojp/blob/master/images/screenshot.png)
 
 ## 主な機能
 * MO の Preview Pane に表示されているカードの日本語テキストを表示する
@@ -11,6 +11,7 @@
 * [Scryfall](https://scryfall.com/) から日毎の平均価格を取得する
 
 ## 必要条件
+Windows 7 SP1 以降  
 .NET Framework 4.6 以上（Windows 10 なら標準でインストール済みです）
 
 ## 使い方
@@ -38,7 +39,7 @@ Visual Studio 2017 v15.7
 C# 7.3
 
 ### 仕組み
-[UI Automation](https://msdn.microsoft.com/ja-jp/library/ms753388.aspx) API を利用して、Preview Pane 内のテキストを検索しています。メインロジックは [MainViewModel.cs](https://github.com/fog-bank/mojp/blob/master/mojp/MainViewModel.cs#L424) 内の OnCapture メソッド以下です。
+[UI Automation](https://msdn.microsoft.com/ja-jp/library/ms753388.aspx) API を利用して、Preview Pane 内のテキストを検索しています。メインロジックは [AutomationHandler.cs](https://github.com/fog-bank/mojp/blob/master/mojp/AutomationHandler.cs#L40) 内の CapturePreviewPane メソッド以下です。
 
 ## リファレンス
 * MO で日本語テキストを表示する試みとして、[Magic Online 日本語化計画](http://www.royalcrab.net/wpx/?page_id=38)の影響を受けています。

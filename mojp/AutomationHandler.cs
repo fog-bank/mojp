@@ -37,7 +37,7 @@ namespace Mojp
             /// <summary>
             /// MO の Preview Pane を表すオートメーション要素を検索し、プロパティ変更イベントをサブスクライブします。
             /// </summary>
-            public void CaptureMtgo()
+            public void CapturePreviewPane()
             {
                 var currentPreviewWnd = previewWnd;
 

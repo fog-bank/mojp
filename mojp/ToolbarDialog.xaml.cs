@@ -23,6 +23,7 @@ namespace Mojp
 
         private void OnListBoxSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            // ListBox の選択項目の変化に対応して、「上へ」「下へ」ボタンの有効無効を切り替える
             int index = listBox.SelectedIndex;
             btnUp.IsEnabled = index != 0;
             btnDown.IsEnabled = index + 1 < ViewModel.ToolbarCommands.Count;

@@ -8,6 +8,9 @@ using System.Windows.Input;
 
 namespace Mojp
 {
+    /// <summary>
+    /// このアプリ用の <see cref="ICommand"/> の実装です。
+    /// </summary>
     public abstract class Command : ICommand, INotifyPropertyChanged
     {
         private bool isVisible = true;

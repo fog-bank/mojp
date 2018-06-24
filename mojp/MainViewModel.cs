@@ -42,6 +42,8 @@ namespace Mojp
         public GoToWikiCommand GoToWikiCommand { get; }
         public OptionCommand OptionCommand { get; }
 
+        #region Settings property
+
         /// <summary>
         /// このアプリケーションで使用する表示フォントを取得または設定します。
         /// </summary>
@@ -106,11 +108,6 @@ namespace Mojp
                 OnPropertyChanged();
             }
         }
-
-        /// <summary>
-        /// ツールバーに表示するコマンドのコレクションを取得します。
-        /// </summary>
-        public ObservableCollection<Command> ToolbarCommands { get; } = new ObservableCollection<Command>();
 
         /// <summary>
         /// このアプリケーションのウィンドウの幅を取得または設定します。
@@ -192,11 +189,6 @@ namespace Mojp
         }
 
         /// <summary>
-        /// Preview Page の探索を行う間隔を取得します。
-        /// </summary>
-        public TimeSpan RefreshInterval => TimeSpan.FromMilliseconds(RefreshIntervalMilliseconds);
-
-        /// <summary>
         /// Preview Page の探索を行う間隔をミリ秒単位で取得または設定します。
         /// </summary>
         public int RefreshIntervalMilliseconds
@@ -261,6 +253,18 @@ namespace Mojp
             }
         }
 
+        #endregion
+
+        /// <summary>
+        /// Preview Page の探索を行う間隔を取得します。
+        /// </summary>
+        public TimeSpan RefreshInterval => TimeSpan.FromMilliseconds(RefreshIntervalMilliseconds);
+
+        /// <summary>
+        /// ツールバーに表示するコマンドのコレクションを取得します。
+        /// </summary>
+        public ObservableCollection<Command> ToolbarCommands { get; } = new ObservableCollection<Command>();
+
         /// <summary>
         /// 表示中のカードのコレクションを取得します。
         /// </summary>
@@ -319,7 +323,7 @@ namespace Mojp
         public void SetCard(Card card)
         {
             if (card == null)
-                return;
+                card = Card.Empty;
 
             var cards = new List<Card>(card.RelatedCardName == null ? 1 : 4) { card };
 
@@ -339,6 +343,9 @@ namespace Mojp
         /// </summary>
         public void InvokeSetCard(Card card) => App.CurrentDispatcher.Invoke(() => SetCard(card));
 
+        /// <summary>
+        /// 指定した複数のカードを表示します。
+        /// </summary>
         public void SetCards(List<Card> cards)
         {
             //int j = 0;
@@ -358,12 +365,25 @@ namespace Mojp
             SelectedIndex = 0;
         }
 
+        /// <summary>
+        /// UI スレッド上で、指定した複数のカードを表示します。
+        /// </summary>
         public void InvokeSetCards(List<Card> cards) => App.CurrentDispatcher.Invoke(() => SetCards(cards));
 
         /// <summary>
-        /// 画面を更新するように要求します。
+        /// 設定の値を使ってツールバーの配置を変更します。
         /// </summary>
-        public void RefreshTab() => Task.Run(automation.SearchCardName);
+        public void ArrangeToolbarCommands()
+        {
+            for (int i = 0; i + 1 < settings.ToolbarCommands.Count; i += 2)
+            {
+                if (Command.CommandMap.TryGetValue(settings.ToolbarCommands[i], out var command))
+                {
+                    ToolbarCommands.Add(command);
+                    command.IsVisible = settings.ToolbarCommands[i + 1] == "1";
+                }
+            }
+        }
 
         /// <summary>
         /// Preview Pane を自動的に探索するためのタイマーを必要なら設定します。
@@ -386,24 +406,14 @@ namespace Mojp
         }
 
         /// <summary>
-        /// MO のプレビューウィンドウを探します。
+        /// MO のプレビューウィンドウを探し、UI テキストの変化イベントが発生するようにします。
         /// </summary>
-        public void CapturePreviewPane() => OnCapture(null, EventArgs.Empty);
+        public void CapturePreviewPane() => Task.Run(automation.CapturePreviewPane);
 
         /// <summary>
-        /// 設定の値を使ってツールバーの配置を変更します。
+        /// 画面を更新するように要求します。
         /// </summary>
-        public void ArrangeToolbarCommands()
-        {
-            for (int i = 0; i + 1 < settings.ToolbarCommands.Count; i += 2)
-            {
-                if (Command.CommandMap.TryGetValue(settings.ToolbarCommands[i], out var command))
-                {
-                    ToolbarCommands.Add(command);
-                    command.IsVisible = settings.ToolbarCommands[i + 1] == "1";
-                }
-            }
-        }
+        public void RefreshTab() => Task.Run(automation.SearchCardName);
 
         /// <summary>
         /// 各リソースを解放します。
@@ -430,10 +440,7 @@ namespace Mojp
             Task.Run(automation.Release);
         }
 
-        /// <summary>
-        /// MO のプレビューウィンドウを探し、UI テキストの変化イベントが発生するようにします。
-        /// </summary>
-        private void OnCapture(object sender, EventArgs e) => Task.Run(automation.CaptureMtgo);
+        private void OnCapture(object sender, EventArgs e) => CapturePreviewPane();
 
         private void OnPropertyChanged([CallerMemberName] string propertyName = null)
             => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
