@@ -1208,6 +1208,7 @@
     <!-- テンプレート変更：手札/墓地から -->
     <regex target="text" pattern="あなたの墓地にある(?=(?:クリーチャー・|エンチャント・)?カード[０-９Ｘ]+枚を対象)" value="あなたの墓地から" nodebug="true" />
     <regex target="text" pattern="(?&lt;=墓地|手札)にある(?!場合)([^。]*)カード(?=[０-９Ｘ]+枚を追放)" value="から$1カード" nodebug="true" />
+    <regex target="text" pattern="(?m)(?&lt;=^|・|：|とき、|時に、|場合、)いずれかの墓地にある(?=[^。]*カード１枚を対象)" value="墓地から" nodebug="true" />
     <regex target="text" pattern="手札(?:から|にある)([^か。]*)カードを１枚、?(タップ状態で)?戦場に出" value="手札から$1カード１枚を$2戦場に出" nodebug="true" />
     <regex target="text" pattern="手札にある([^か。]*)カード１枚を戦場に出" value="手札から$1カード１枚を戦場に出" nodebug="true" />
     <regex target="text" pattern="あなたの手札にあるドラゴン・カード１枚を公開してもよい。" value="あなたはあなたの手札からドラゴン・カード１枚を公開してもよい。" nodebug="true" />
@@ -1234,6 +1235,7 @@
     <regex target="text" pattern="起動型能力は、それを起動するためのコストが" value="起動型能力を起動するためのコストは、" nodebug="true" />
     <!-- テンプレート変更 -->
     <regex target="text" pattern="新たな対象" value="新しい対象" nodebug="true" />
+    <regex target="text" pattern="(?&lt;!(?:あなた|対戦相手|プレイヤー)は[^。]+)対象として選ぶ。" value="対象とする。" nodebug="true" />
     <regex target="text" pattern="(?&lt;!得た|失われた)ライフの総量|ライフの総数|総ライフ" value="ライフ総量" nodebug="true" />
     <regex target="text" pattern="いずれかの墓地に置かれ" value="墓地に置かれ" nodebug="true" />
     <regex target="text" pattern="対象として唱える呪文" value="対象とする呪文" nodebug="true" />
@@ -1279,6 +1281,7 @@
     <regex target="text" pattern="あなたは「(?:あなたの|あなたは、自分の|あなたは、)ライブラリーから([^「」]+)カード１枚を探(?:す。|し、|して)(それ|そのカード)を(タップ状態で)?戦場に出(?:す。|し、)その後あなたのライブラリーを切り直す。」を選んでもよい。" value="あなたはあなたのライブラリーから$1カード１枚を探してもよい。そうしたなら、$2を$3戦場に出し、その後あなたのライブラリーを切り直す。" nodebug="true" />-->
     <!-- テンプレート変更：A or B -->
     <regex target="text" pattern="アーティファクトかエンチャント１つを対象" value="アーティファクト１つかエンチャント１つを対象" nodebug="true" />
+    <regex target="text" pattern="(?&lt;!か)アーティファクト・カード１枚かエンチャント・カード１枚を" value="アーティファクトかエンチャントであるカード１枚を" nodebug="true" />
     <regex target="text" pattern="墓地(?:にある|から)インスタント・カード１枚かソーサリー・カード１枚を" value="墓地からインスタントかソーサリーであるカード１枚を" nodebug="true" />
     <regex target="text" pattern="あなたの墓地にインスタント・カードやソーサリー・カードが合わせて２枚以上あるなら、" value="あなたの墓地にインスタントかソーサリーであるカードが２枚以上あるなら、" nodebug="true" />
     <regex target="text" pattern="インスタント・カードとソーサリー・カードの総数" value="インスタントかソーサリーであるカードの総数" nodebug="true" />
