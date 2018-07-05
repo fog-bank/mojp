@@ -86,7 +86,7 @@ namespace Mojp
             string response = null;
             try
             {
-                response = await HttpClient.Value.GetStringAsync("https://fog-bank.github.io/mojp/version.txt");
+                response = await HttpClient.Value.GetStringAsync("https://fog-bank.github.io/mojp/version_v1.txt");
             }
             catch { Debug.WriteLine("HTTPS アクセスに失敗しました。"); }
 
