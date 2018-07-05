@@ -43,7 +43,7 @@
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <TextBlock>リリース バージョン</TextBlock>
-                <TextBlock Grid.Column="2">2.0.0 Beta</TextBlock>
+                <TextBlock Grid.Column="2">2.0.0</TextBlock>
                 <TextBlock Grid.Column="3">
                     <Hyperlink ToolTip="https://github.com/fog-bank/mojp/releases" Click="OnClickHyperlink">GitHub に移動</Hyperlink>
                 </TextBlock>
@@ -121,7 +121,7 @@
                 </Grid>
                 <StackPanel Grid.Row="2" Orientation="Horizontal"
                             ToolTip="タブに表示されるカード名の書式を指定します。ただしテキスト本文中は《日本語》で固定です。" ToolTipService.ShowDuration="60000">
-                    <TextBlock>カード名の表示方法</TextBlock>
+                    <TextBlock>カード名の表示言語</TextBlock>
                     <Image Grid.Column="1" Source="Resources/Information.png" Height="16" Margin="5,0" />
                 </StackPanel>
                 <ComboBox Name="cmbCardDisplayName" Grid.Row="2" Grid.Column="2" Margin="2" Padding="4"
@@ -134,7 +134,7 @@
                 </ComboBox>
                 <CheckBox Grid.Row="3" Margin="0,4" IsChecked="{Binding TopMost}">常に手前に表示する</CheckBox>
                 <CheckBox Grid.Row="4" IsChecked="{Binding EnableToolbar}"
-                          ToolTip="表示されていたボタンは右クリックメニューから選べます。" ToolTipService.ShowDuration="60000">
+                          ToolTip="各コマンドは右クリックメニューからも選べます。" ToolTipService.ShowDuration="60000">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock>ツールバーを表示する</TextBlock>
                         <Image Source="Resources/Information.png" Height="16" Margin="5,0,0,0" />
