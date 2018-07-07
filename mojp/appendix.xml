@@ -656,6 +656,8 @@
     <regex target="text" pattern="(?&lt;!か)プレイヤー１人を対象とする。(?=.+ダメージを([０-９Ｘ]+点)?軽減)" value="プレイヤー１人かプレインズウォーカー１体を対象とする。" nodebug="true" />
     <regex target="text" pattern="(?&lt;=(?&lt;!か)プレイヤー１人かプレインズウォーカー１体を対象とする。[^。]+)そのプレイヤー(?!か|がコントロール)" value="それ" nodebug="true" />
     <regex target="text" pattern="(?&lt;=(?&lt;!か)プレイヤー１人かプレインズウォーカー１体を対象とする。.+)そのプレイヤー(?!か|がコントロール|がライフを)" value="そのプレイヤーかプレインズウォーカー" nodebug="true" />
+    <regex target="text" pattern="それを行ったプレイヤー１人につき" value="それを行った対戦相手１人につき" nodebug="true" />
+    <regex target="text" pattern="のままであ(?=る|り)" value="であ" nodebug="true" />
     <!-- 中丸追加 -->
     <regex target="type" pattern="部族(?=アーティファクト|エンチャント|インスタント|ソーサリー)" value="部族・" nodebug="true" />
     <regex target="text" pattern="(?&lt;=クリーチャー|アーティファクト|エンチャント|インスタント|ソーサリー|プレインズウォーカー|土地)(?=カード|呪文)" value="・" nodebug="true" />
@@ -737,6 +739,8 @@
     <regex target="text" pattern="あなたが[^。]+(?&lt;!呪文|カード)を唱えたとき、" value="あなたがこの呪文を唱えたとき、" nodebug="true" />
     <regex target="text" pattern="(?&lt;=。)[^\n。、]+(?&lt;!呪文|それ)がキッカーされていた場合、" value="この呪文がキッカーされていたなら、" nodebug="true" />
     <regex target="text" pattern="あなたが[^。]+(?&lt;!呪文)を唱えた時点でドラゴン・カードを公開したかドラゴンをコントロールしていた" value="この呪文を唱えた時点であなたがドラゴン・カードを公開したかドラゴンをコントロールしていた" nodebug="true" />
+    <regex target="text" pattern="。高まる[^。]+が(?:あなたの)?墓地から唱えられた(?:場合|なら)、" value="。この呪文が墓地から唱えられたなら、" nodebug="true" />
+    <regex target="text" pattern="(?:場合|なら)、あなたは(?!それ|その|あなたの)[^。]+を、?そのマナ・コスト" value="なら、あなたはこの呪文をそのマナ・コスト" nodebug="true" />
     <!-- テンプレート変更：コントロールする -->
     <regex target="text" pattern="がコントロールする基本土地" value="がコントロールしている基本土地" nodebug="true" />
     <regex target="text" pattern="がコントロールする(他の)?パーマネントは、?" value="がコントロールしている$1パーマネントは" nodebug="true" />
@@ -795,6 +799,7 @@
     <regex target="text" pattern="(?:各|１)ターンに１回(?:のみ|だけ)" value="毎ターン１回のみ" nodebug="true" />
     <regex target="text" pattern="しかプレイでき" value="しか起動でき" nodebug="true" />
     <regex target="text" pattern="(?:にのみ|にしか|だけしか)(?:支払|使|用いる)(?:うことができる|える|えない|ことができる)" value="にのみ使用できる" nodebug="true" />
+    <!--<regex target="text" pattern="戦場に出ているクリーチャー１体" value="戦場にあるクリーチャー１体" nodebug="true" />-->
     <regex target="text" pattern="(?m)(?&lt;=^|[・：。、])攻撃しているクリーチャー" value="攻撃クリーチャー" nodebug="true" />
     <regex target="text" pattern="攻撃(?:クリーチャー)?(?:１体)?かブロックしているクリーチャー１体を対象" value="攻撃クリーチャー１体かブロック・クリーチャー１体を対象" nodebug="true" />
     <regex target="text" pattern="(?m)(?&lt;=^|：|か、|飛行を持つ)ブロックしているクリーチャー１体を対象" value="ブロック・クリーチャー１体を対象" nodebug="true" />
@@ -1180,6 +1185,14 @@ Merseineの上に網カウンターが置かれているかぎり、エンチャ
     <card name="Vine Dryad" jaName="ぶどうのドライアド" type="クリーチャー ― ドライアド" pt="1/3">あなたは、この呪文のマナ・コストを支払うのではなく、あなたの手札から緑のカード１枚を追放してもよい。
 瞬速
 森渡り（このクリーチャーは、防御プレイヤーが森をコントロールしているかぎりブロックされない。）</card>
+    <!-- 最新オラクル未対応(M19) -->
+    <card name="Approach of the Second Sun" jaName="副陽の接近" type="ソーサリー">この呪文があなたの手札から唱えられ、かつ、あなたがこのゲームで《副陽の接近》という名前の他の呪文を唱えていたなら、あなたはこのゲームに勝利する。そうでないなら、副陽の接近をオーナーのライブラリーの一番上から７枚目に置き、あなたは７点のライフを得る。</card>
+    <!--<card name="Lazav, Dimir Mastermind" jaName="ディミーアの黒幕ラザーヴ" type="伝説のクリーチャー ― 多相の戦士" pt="3/3">呪禁
+クリーチャー・カードが１枚いずれかの領域から対戦相手の墓地に置かれるたび、あなたは「ディミーアの黒幕ラザーヴは、これの名前がディミーアの黒幕ラザーヴであり、他のタイプに加えて伝説であり、呪禁とこの能力を持つことを除き、そのカードのコピーである。」を選んでもよい。</card>
+    <card name="Quicksilver Gargantuan" jaName="水銀のガルガンチュアン" type="クリーチャー ― 多相の戦士" pt="7/7">あなたは水銀のガルガンチュアンを、これが7/7であることを除き、戦場にあるクリーチャー１体のコピーとして戦場に出してもよい。</card>
+    <card name="Sakashima the Impostor" jaName="騙り者、逆嶋" type="伝説のクリーチャー ― 人間・ならず者" pt="3/1">あなたは騙り者、逆嶋を、これの名前が《騙り者、逆嶋》であり、他のタイプに加えて伝説であり、「(２)(青)(青)：次の終了ステップの開始時に、このクリーチャーをオーナーの手札に戻す。」を持つことを除き、戦場にあるクリーチャー１体のコピーとして戦場に出してもよい。</card>-->
+    <card name="Dream Pillager" jaName="夢の略奪者" type="クリーチャー ― ドラゴン" pt="4/4">飛行
+夢の略奪者がプレイヤー１人に戦闘ダメージを与えるたび、あなたのライブラリーの一番上からその点数に等しい枚数のカードを追放する。ターン終了時まで、あなたはそれらの追放したカードの中から土地でないカードを唱えてもよい。</card>
     <!-- テンプレートの変更 -->
     <card name="Cursed Rack" jaName="呪われた拷問台" type="アーティファクト">呪われた拷問台が戦場に出るに際し、対戦相手１人を選ぶ。
 選ばれたプレイヤーの手札の上限は４である。</card>
@@ -1224,8 +1237,6 @@ Merseineの上に網カウンターが置かれているかぎり、エンチャ
 夢の盗人が戦場に出たとき、このターンにあなたが他の青の呪文を唱えていたなら、カードを１枚引く。</card>
     <card name="Grenzo, Dungeon Warden" jaName="地下牢の管理人、グレンゾ" type="伝説のクリーチャー ― ゴブリン・ならず者" pt="2/2">地下牢の管理人、グレンゾは、+1/+1カウンターがＸ個置かれた状態で戦場に出る。
 (２)：あなたのライブラリーの一番下のカードをあなたの墓地に置く。それが地下牢の管理人、グレンゾのパワー以下のパワーを持つクリーチャー・カードであるなら、それを戦場に出す。</card>
-    <card name="Increasing Savagery" jaName="高まる残虐性" type="ソーサリー">クリーチャー１体を対象とし、それの上に+1/+1カウンターを５個置く。高まる残虐性が墓地から唱えられたなら、代わりにそのクリーチャーの上に+1/+1カウンターを１０個置く。
-フラッシュバック(５)(緑)(緑)（あなたはあなたの墓地から、このカードをこれのフラッシュバック・コストで唱えてもよい。その後、これを追放する。）</card>
     <card name="Into the Roil" jaName="乱動への突入" type="インスタント">キッカー(１)(青)（あなたはこの呪文を唱えるに際し、追加で(１)(青)を支払ってもよい。）
 土地でないパーマネント１つを対象とし、それをオーナーの手札に戻す。乱動への突入がキッカーされているなら、カードを１枚引く。</card>
     <card name="Lord of the Pit" jaName="奈落の王" type="クリーチャー ― デーモン" pt="7/7">飛行、トランプル
@@ -2207,14 +2218,20 @@ Knowledge Vaultが戦場を離れたとき、Knowledge Vaultにより追放さ�
 [-7]：プレイヤー１人を対象とする。勇敢な紅蓮術師、チャンドラは、そのプレイヤーとそのプレイヤーがコントロールしている各クリーチャーと各プレインズウォーカーに、それぞれ１０点のダメージを与える。</card>-->
     <!--<card name="Radiating Lightning" jaName="放射稲妻" type="インスタント">プレイヤー１人を対象とする。放射稲妻はそのプレイヤーに３点と、そのプレイヤーがコントロールしている各クリーチャーにそれぞれ１点のダメージを与える。</card>-->
     <!-- サブタイプが正常でないカード -->
-    <type name="Dragon Egg" type="クリーチャー ― ドラゴン・卵" />
     <type name="Graf Mole" type="クリーチャー ― モグラ・ビースト" />
-    <type name="Prowling Pangolin" type="クリーチャー ― センザンコウ・ビースト" />
     <type name="Shore Keeper" type="クリーチャー ― 三葉虫" />
     <type name="Urza's Factory" type="土地 ― ウルザの" />
     <type name="Urza's Mine" type="土地 ― ウルザの・鉱山" />
     <type name="Urza's Power Plant" type="土地 ― ウルザの・魔力炉" />
     <type name="Urza's Tower" type="土地 ― ウルザの・塔" />
+    <!-- オラクル更新 -->
+    <type name="Dragon Egg" type="クリーチャー ― ドラゴン・卵" />
+    <type name="Ludevic's Test Subject" type="クリーチャー ― トカゲ・卵" />
+    <type name="Roc Egg" type="クリーチャー ― 鳥・卵" />
+    <type name="Rukh Egg" type="クリーチャー ― 鳥・卵" />
+    <type name="Summoner's Egg" type="アーティファクト・クリーチャー ― 卵" />
+    <type name="Prowling Pangolin" type="クリーチャー ― センザンコウ・ビースト" />
+    <type name="Electryte" type="クリーチャー ― 三葉虫・ビースト" />
   </replace>
   <remove>
     <!-- ドラフト能力を持つカード -->
