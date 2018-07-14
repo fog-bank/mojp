@@ -236,7 +236,8 @@ namespace Mojp
                 return GetPDListResult.Conflict;
 
             // ローテ直後はサーバー上のファイルが頻繁に更新される場合があるので、カードリスト全体の確認が取れてから最終確認日時を記録する
-            App.SettingsCache.PDListLastTimeUtc = DateTime.UtcNow.ToString("o", culture);
+            if (result != GetPDListResult.NoCheck)
+                App.SettingsCache.PDListLastTimeUtc = DateTime.UtcNow.ToString("o", culture);
 
             if (result == GetPDListResult.New || result == GetPDListResult.Update)
                 App.SettingsCache.PDServerLastTimeUtc = lastModifiedTime.ToString("o", culture);
