@@ -149,27 +149,37 @@ namespace Mojp
         {
             bool exists = File.Exists(PDLegalFileName);
             var culture = CultureInfo.InvariantCulture;
-            DateTime lastTime = default;
+            DateTime lastCheckTime = default;
+            DateTime lastModifiedTime = default;
             var result = GetPDListResult.NoCheck;
 
             if (exists)
             {
+                // 最終確認日時の取得
                 if (!DateTime.TryParseExact(
-                    App.SettingsCache.PDListLastTimeUtc, "o", culture, DateTimeStyles.RoundtripKind, out lastTime))
+                    App.SettingsCache.PDListLastTimeUtc, "o", culture, DateTimeStyles.RoundtripKind, out lastCheckTime))
                 {
                     // 設定ファイルに最終確認日時を保存する前のバージョンとの互換性を維持するための代替措置
-                    lastTime = File.GetLastWriteTime(PDLegalFileName).ToUniversalTime();
+                    lastCheckTime = File.GetLastWriteTime(PDLegalFileName).ToUniversalTime();
+                }
+
+                // 最終更新日時の取得
+                if (!DateTime.TryParseExact(
+                    App.SettingsCache.PDServerLastTimeUtc, "o", culture, DateTimeStyles.RoundtripKind, out lastModifiedTime))
+                {
+                    // PD S9 更新前時刻
+                    lastModifiedTime = new DateTime(2018, 7, 13, 7, 0, 0, DateTimeKind.Utc);
                 }
             }
 
             // 初回であるか、少なくとも前回から 1 日は経過している
-            if (forceCheck || !exists || DateTime.UtcNow - lastTime > TimeSpan.FromDays(1))
+            if (forceCheck || !exists || DateTime.UtcNow - lastCheckTime > TimeSpan.FromDays(1))
             {
                 using (var req = new HttpRequestMessage(HttpMethod.Get, "http://pdmtgo.com/legal_cards.txt"))
                 {
                     // 最終更新日をチェックして通信量を減らす
                     if (!forceCheck && exists)
-                        req.Headers.IfModifiedSince = lastTime;
+                        req.Headers.IfModifiedSince = lastModifiedTime;
 
                     try
                     {
@@ -185,6 +195,7 @@ namespace Mojp
                                         await resp.Content.CopyToAsync(file);
 
                                     result = exists ? GetPDListResult.Update : GetPDListResult.New;
+                                    lastModifiedTime = resp.Content.Headers.LastModified?.UtcDateTime ?? DateTime.UtcNow;
                                 }
                                 else
                                     return GetPDListResult.NotFound;
@@ -226,6 +237,10 @@ namespace Mojp
 
             // ローテ直後はサーバー上のファイルが頻繁に更新される場合があるので、カードリスト全体の確認が取れてから最終確認日時を記録する
             App.SettingsCache.PDListLastTimeUtc = DateTime.UtcNow.ToString("o", culture);
+
+            if (result == GetPDListResult.New || result == GetPDListResult.Update)
+                App.SettingsCache.PDServerLastTimeUtc = lastModifiedTime.ToString("o", culture);
+
             CardPrice.pdLegalCards = pdLegalCards;
             return result;
         }

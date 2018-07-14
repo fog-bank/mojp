@@ -75,6 +75,8 @@ namespace Mojp
 
         public string PDListLastTimeUtc { get; set; }
 
+        public string PDServerLastTimeUtc { get; set; }
+
         /// <summary>
         /// 設定内容を <see cref="Settings.Default"/> から読み込みます。
         /// </summary>
@@ -112,6 +114,7 @@ namespace Mojp
             GetPDList = opt.GetPDList;
             GetCardPrice = opt.GetCardPrice;
             PDListLastTimeUtc = opt.PDListLastTimeUtc;
+            PDServerLastTimeUtc = opt.PDServerLastTimeUtc;
         }
 
         /// <summary>
@@ -141,6 +144,7 @@ namespace Mojp
             opt.GetPDList = GetPDList;
             opt.GetCardPrice = GetCardPrice;
             opt.PDListLastTimeUtc = PDListLastTimeUtc;
+            opt.PDServerLastTimeUtc = PDServerLastTimeUtc;
         }
     }
 

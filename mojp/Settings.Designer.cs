@@ -250,5 +250,17 @@ namespace Mojp {
                 this["ToolbarCommands"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string PDServerLastTimeUtc {
+            get {
+                return ((string)(this["PDServerLastTimeUtc"]));
+            }
+            set {
+                this["PDServerLastTimeUtc"] = value;
+            }
+        }
     }
 }
