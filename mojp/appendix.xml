@@ -619,6 +619,7 @@
     <regex target="text" pattern="吐炎それに" value="吐炎はそれに" nodebug="true" />
     <regex target="text" pattern="エンチャント\(クリーチャー\)" value="エンチャント（クリーチャー）" nodebug="true" />
     <regex target="text" pattern="\[T\}" value="(Ｔ)" nodebug="true" />
+    <regex target="text" pattern="：あ\(" value="：(" nodebug="true" />
     <regex target="name" pattern="’" value="'" />
     <regex target="type" pattern=" - " value=" ― " />
     <regex target="text" pattern="\(T\)" value="(Ｔ)" />
@@ -677,6 +678,7 @@
     <regex target="text" pattern="(?&lt;=そうしたなら、|とともに、)次の終了ステップの開始時に(?!、)" value="次の終了ステップの開始時に、" nodebug="true" />
     <regex target="text" pattern="(?&lt;=あなたの(?:次の)?)アップキープの開始時に(?!、|しか)" value="アップキープの開始時に、" nodebug="true" />
     <regex target="text" pattern="追加コストとして(?!、)" value="追加コストとして、" nodebug="true" />
+    <regex target="text" pattern="それとそのプレイヤーかそのプレインズウォーカーのコントローラー" value="それと、そのプレイヤーかそのプレインズウォーカーのコントローラー" nodebug="true" />
     <regex target="text" pattern="この能力は、あなたが都市の承認を持っているときにのみ起動できる。" value="この能力はあなたが都市の承認を持っているときにのみ起動できる。" nodebug="true" />
     <regex target="text" pattern="そのプレイヤーは、(?=[^。、]{1,17}(?&lt;=引く|失う|捨てる|捧げる|公開する)。)" value="そのプレイヤーは" nodebug="true" />
     <regex target="text" pattern="を受けるとともに、(?=[^。、]{1,5}を得る。)" value="を受けるとともに" nodebug="true" />
@@ -797,6 +799,7 @@
     <!-- テンプレート変更：その -->
     <regex target="text" pattern="そのコピーになる。" value="それのコピーになる。" nodebug="true" />
     <!-- テンプレート変更 -->
+    <regex target="text" pattern="ゲームを始めてもよい" value="ゲームを開始してもよい" nodebug="true" />
     <regex target="text" pattern="新たな対象" value="新しい対象" nodebug="true" />
     <regex target="text" pattern="(?&lt;!(?:あなた|対戦相手|プレイヤー)は[^。]+)対象として選ぶ。" value="対象とする。" nodebug="true" />
     <regex target="text" pattern="(?&lt;!得た|失われた)ライフの総量|ライフの総数|総ライフ" value="ライフ総量" nodebug="true" />
@@ -1081,10 +1084,6 @@
 (青),ハイドロモルフのカモメを生け贄に捧げる：あなたがコントロールしているクリーチャーを対象とする呪文１つを対象とし、それを打ち消す。</card>
     <!-- 最新オラクル未対応(DOM) -->
     <card name="Imperial Edict" jaName="皇帝の勅令" type="ソーサリー">対戦相手１人を対象とする。そのプレイヤーは自分がコントロールしているクリーチャーを１体選ぶ。そのクリーチャーを破壊する。</card>
-    <card name="Lim-Dul's Paladin" jaName="Lim-Dul's Paladin" type="クリーチャー ― 人間・騎士" pt="0/3">トランプル
-あなたのアップキープの開始時に、あなたはカード１枚を捨ててもよい。そうしないなら、Lim-Dul's Paladinを生け贄に捧げ、カードを１枚引く。
-Lim-Dul's Paladinがブロックされた状態になるたび、ターン終了時まで、それは+6/+3の修整を受ける。
-Lim-Dul's Paladinが攻撃してブロックされないたび、このターン、それは戦闘ダメージを割り振らず、防御プレイヤーは４点のライフを失う。</card>
     <card name="Merseine" jaName="Merseine" type="エンチャント ― オーラ">エンチャント（クリーチャー）
 Merseineは網カウンターが３個置かれた状態で戦場に出る。
 Merseineの上に網カウンターが置かれているかぎり、エンチャントされているクリーチャーはそれのコントローラーのアンタップ・ステップにアンタップしない。
@@ -1115,8 +1114,6 @@ Merseineの上に網カウンターが置かれているかぎり、エンチャ
     <card name="Exploding Borders" jaName="爆発する境界" type="ソーサリー">版図 ― プレイヤー１人かプレインズウォーカー１体を対象とする。あなたのライブラリーから基本土地・カード１枚を探し、そのカードをタップ状態で戦場に出し、その後あなたのライブラリーを切り直す。爆発する境界はそのプレイヤーかプレインズウォーカーにＸ点のダメージを与える。Ｘはあなたがコントロールしている土地の中の基本土地タイプの総数に等しい。</card>
     <card name="Flames of the Blood Hand" jaName="血の手の炎" type="インスタント">プレイヤー１人かプレインズウォーカー１体を対象とする。血の手の炎はそれに４点のダメージを与える。そのダメージは軽減されない。このターン、そのプレイヤーがライフを得るなら、代わりにそのプレイヤーはライフを得ない。</card>
     <card name="Kaboom!" jaName="ドカーン！" type="ソーサリー">望む数のプレイヤーやプレインズウォーカーを対象とする。それらのそれぞれについて、土地でないカードが公開されるまで、あなたのライブラリーの一番上からカードを１枚ずつ公開し、ドカーン！はそのプレイヤーかプレインズウォーカーに、そのカードの点数で見たマナ・コストに等しい点数のダメージを与え、その後公開されたカードをあなたのライブラリーの一番下に望む順番で置く。</card>
-    <card name="Leyline of Lightning" jaName="稲妻の力線" type="エンチャント">稲妻の力線があなたのゲーム開始時の手札にあるなら、あなたはそれが戦場に出ている状態でゲームを開始してもよい。
-あなたが呪文を唱えるたび、プレイヤー１人かプレインズウォーカー１人を対象とする。あなたは(１)を支払ってもよい。そうしたなら、稲妻の力線はそれに１点のダメージを与える。</card>
     <card name="Pulse of the Forge" jaName="溶鉱炉の脈動" type="インスタント">プレイヤー１人かプレインズウォーカー１体を対象とする。溶鉱炉の脈動はそれに４点のダメージを与える。その後そのプレイヤーかそのプレインズウォーカーのコントローラーのライフがあなたより多いなら、溶鉱炉の脈動をオーナーの手札に戻す。</card>
     <card name="Quenchable Fire" jaName="消しえる火" type="ソーサリー">プレイヤー１人かプレインズウォーカー１体を対象とする。消しえる火はそれに３点のダメージを与える。あなたの次のアップキープの開始時に、そのプレイヤーかそのプレインズウォーカーのコントローラーがそのステップより前に(青)を支払わないかぎり、これはそのプレイヤーかプレインズウォーカーに追加の３点のダメージを与える。</card>
     <card name="Sarkhan the Mad" jaName="狂乱のサルカン" type="伝説のプレインズウォーカー ― サルカン" pt="7">[0]：あなたのライブラリーの一番上のカードを公開し、それをあなたの手札に加える。狂乱のサルカンは自身に、そのカードの点数で見たマナ・コストに等しい点数のダメージを与える。
