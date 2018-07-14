@@ -50,5 +50,8 @@
     <Setting Name="PDListLastTimeUtc" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="PDServerLastTimeUtc" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>
