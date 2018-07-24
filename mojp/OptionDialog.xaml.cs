@@ -21,7 +21,10 @@ namespace Mojp
             InitializeComponent();
 
             if (App.IsClickOnce)
+            {
                 grpAutoCheck.Visibility = Visibility.Collapsed;
+                grpAutoCheckSub.Visibility = Visibility.Collapsed;
+            }
 
             // フォントリストの初期化
             var vm = viewModel as MainViewModel;
@@ -109,7 +112,7 @@ namespace Mojp
             imgLoading.Visibility = Visibility.Visible;
 
             var successPd = await CardPrice.GetOrOpenPDLegalFile(true);
-            (App.Current.MainWindow as MainWindow)?.ShowPDMessage(successPd);
+            App.CurrentMainWindow?.ShowPDMessage(successPd);
             ViewModel.RefreshTab();
 
             imgLoading.Visibility = Visibility.Collapsed;

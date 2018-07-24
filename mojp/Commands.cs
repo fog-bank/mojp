@@ -200,9 +200,6 @@ namespace Mojp
 
         public sealed override string Image => @"Resources\Gears.png";
 
-        public sealed override void Execute(object parameter)
-        {
-            (App.Current.MainWindow as MainWindow)?.OnOption(this, null);
-        }
+        public sealed override void Execute(object parameter) => App.CurrentMainWindow?.OnOption(this, null);
     }
 }

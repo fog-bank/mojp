@@ -39,6 +39,11 @@ namespace Mojp
         public static Dispatcher CurrentDispatcher => Current.Dispatcher;
 
         /// <summary>
+        /// このアプリのメインウィンドウを取得します。
+        /// </summary>
+        public static MainWindow CurrentMainWindow => Current.MainWindow as MainWindow;
+
+        /// <summary>
         /// このアプリが ClickOnce で実行されているかどうかを示す値を取得します。
         /// </summary>
         public static bool IsClickOnce { get; private set; }
