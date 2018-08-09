@@ -1284,6 +1284,7 @@
     <regex target="text" pattern="。?」ことを選んでも?よい。" value="。」を選んでもよい。" nodebug="true" />
     <regex target="text" pattern="(?&lt;=戻|追放|公開|タップ)する?ことを選んでもよい。" value="してもよい。" nodebug="true" />
     <regex target="text" pattern="Ｘは([^。Ｙ]+)である。" value="Ｘは$1に等しい。" nodebug="true" />
+    <regex target="text" pattern="等しい量の(?=\(.\)を加え)" value="等しい点数の" nodebug="true" />
     <regex target="text" pattern="(?&lt;=クリーチャー|ドラゴン)の数に等しい。" value="の総数に等しい。" nodebug="true" />
     <regex target="text" pattern="戦場に出ている([^。]+)の総?数に等しい。" value="戦場にある$1の総数に等しい。" nodebug="true" />
     <regex target="text" pattern="(?&lt;!このターン[^。]+)戦場に出ている(?=場合|かぎり|他の|アーティファクト)" value="戦場にある" nodebug="true" />
@@ -1324,8 +1325,8 @@
     <!-- 注釈文 -->
     <regex target="text" pattern="（このクリーチャーは攻撃できない。?）" value="（このクリーチャーでは攻撃できない。）" nodebug="true" />
     <regex target="text" pattern="（このクリーチャーがダメージを与える場合、さらにあなたは同じ点数のライフを得る。）" value="（このクリーチャーがダメージを与えると、さらにあなたはその点数分のライフを得る。）" nodebug="true" />
-    <regex target="text" pattern="トランプル（攻撃しているこのクリーチャーは余剰の戦闘ダメージを(?:防御)?プレイヤーかプレインズウォーカーに与えることができる。）" value="トランプル（このクリーチャーは余剰の戦闘ダメージを、これが攻撃しているプレイヤーかプレインズウォーカーに与えることができる。）" nodebug="true" />
-    <regex target="text" pattern="トランプル（(?:攻撃している)?このクリーチャーは余剰の戦闘ダメージを、?それが攻撃しているプレイヤーかプレインズウォーカーに与えることができる。）" value="トランプル（このクリーチャーは余剰の戦闘ダメージを、これが攻撃しているプレイヤーかプレインズウォーカーに与えることができる。）" nodebug="true" />
+    <regex target="text" pattern="トランプル（攻撃しているこのクリーチャーは余剰の戦闘ダメージを(?:防御)?プレイヤーかプレインズウォーカーに与えることができる。）" value="トランプル（このクリーチャーは余剰の戦闘ダメージをこれが攻撃しているプレイヤーかプレインズウォーカーに与えることができる。）" nodebug="true" />
+    <regex target="text" pattern="トランプル（(?:攻撃している)?このクリーチャーは余剰の戦闘ダメージを、?それが攻撃しているプレイヤーかプレインズウォーカーに与えることができる。）" value="トランプル（このクリーチャーは余剰の戦闘ダメージをこれが攻撃しているプレイヤーかプレインズウォーカーに与えることができる。）" nodebug="true" />
     <regex target="text" pattern="(?&lt;=呪禁.+)(?:あなたの)?対戦相手がコントロールする呪文や能力の対象にならない。）" value="対戦相手がコントロールしている呪文や能力の対象にならない。）" nodebug="true" />
     <regex target="text" pattern="黒でもアーティファクトでもないクリーチャーによってはブロックされない。）" value="アーティファクトでも黒でもないクリーチャーによってはブロックされない。）" nodebug="true" />
     <regex target="text" pattern="あなたがコントロールするクリーチャー１体を対象とし、それにつける。装備はソーサリーとしてのみ行う。" value="あなたがコントロールしているクリーチャー１体を対象とし、これをそれにつける。装備はソーサリーとしてのみ行う。" nodebug="true" />
@@ -2264,7 +2265,6 @@ Knowledge Vaultが戦場を離れたとき、Knowledge Vaultにより追放さ�
 各対戦相手の手札の上限はそれぞれ７枚少なくなる。</card>
     <card name="Keiga, the Tide Star" jaName="潮の星、京河" type="伝説のクリーチャー ― ドラゴン・スピリット" pt="5/5">飛行
 潮の星、京河が死亡したとき、クリーチャー１体を対象とし、それのコントロールを得る。</card>
-    <card name="Mana Drain" jaName="マナ吸収" type="インスタント">呪文１つを対象とし、それを打ち消す。あなたの次のメイン・フェイズの開始時に、その呪文の点数で見たマナ・コストに等しい点数の(◇)を加える。</card>
     <card name="Repeal" jaName="撤廃" type="インスタント">点数で見たマナ・コストがＸであり土地でないパーマネント１つを対象とし、それをオーナーの手札に戻す。
 カードを１枚引く。</card>
     <card name="Sphinx of Uthuun" jaName="ウスーンのスフィンクス" type="クリーチャー ― スフィンクス" pt="5/6">飛行
