@@ -620,6 +620,7 @@
     <regex target="text" pattern="対象し" value="対象とし" nodebug="true" />
     <regex target="text" pattern="対象ににならない" value="対象にならない" nodebug="true" />
     <regex target="text" pattern="プレイヤー１人をか" value="プレイヤー１人か" nodebug="true" />
+    <regex target="text" pattern="クリーチャー１体かプレインズウォーカー１体かプレイヤーを対象とする。" value="クリーチャー１体かプレインズウォーカー１体かプレイヤー１人を対象とする。" nodebug="true" />
     <regex target="text" pattern="トークンを１体を" value="トークン１体を" nodebug="true" />
     <regex target="text" pattern="１つにき" value="１つにつき" nodebug="true" />
     <regex target="text" pattern="「金/Gold」という名前の" value="《金/Gold》という名前の" nodebug="true" />
@@ -644,23 +645,12 @@
     <regex target="text" pattern="\(１\)を加える" value="(◇)を加える" nodebug="true" />
     <regex target="text" pattern="(?&lt;=トークンを[０-９Ｘ]+体)戦場に出す" value="生成する" nodebug="true" />
     <regex target="text" pattern="(?&lt;!この能力は、?)、?呪文や能力によっては?(?=打ち消され)" value="" nodebug="true" />
-    <regex target="text" pattern="クリーチャー１体かプレインズウォーカー１体かプレイヤーを対象とする。" value="クリーチャー１体かプレインズウォーカー１体かプレイヤー１人を対象とする。" nodebug="true" />
-    <regex target="text" pattern="クリーチャー１体かプレイヤー１人かプレインズウォーカー１体" value="クリーチャー１体かプレインズウォーカー１体かプレイヤー１人" nodebug="true" />
-    <regex target="text" pattern="クリーチャー１体と、プレインズウォーカー１体かプレイヤー１人を対象" value="クリーチャー１体と、プレイヤー１人かプレインズウォーカー１体を対象" nodebug="true" />
-    <regex target="text" pattern="プレインズウォーカー１体か対戦相手１人" value="対戦相手１人かプレインズウォーカー１体" nodebug="true" />
-    <regex target="text" pattern="クリーチャー１体かプレイヤー１人(?=[^。]*対象と.+ダメージを[^。]*与え)" value="クリーチャー１体かプレインズウォーカー１体かプレイヤー１人" nodebug="true" />
-    <regex target="text" pattern="クリーチャー[やとか]プレイヤー(?=[^。]*対象と.+ダメージを[^。]*与え)" value="クリーチャーやプレインズウォーカーやプレイヤー" nodebug="true" />
-    <regex target="text" pattern="クリーチャー１体かプレイヤー１人を対象と(?=.+軽減)" value="クリーチャー１体かプレインズウォーカー１体かプレイヤー１人を対象と" nodebug="true" />
-    <regex target="text" pattern="(?&lt;=クリーチャー(?:１体)?かプレインズウォーカー(?:１体)?かプレイヤー(?:１人)?.*\n?.*)そのクリーチャー(?=[かや]プレイヤー|のコントローラー)" value="そのパーマネント" nodebug="true" />
-    <regex target="text" pattern="(?&lt;=パーマネントかプレイヤーに(?:[０-９Ｘ]+点以上の)?ダメージを与えるなら.*)そのクリーチャー(?=[かや]プレイヤー|のコントローラー)" value="そのパーマネント" nodebug="true" />
-    <regex target="text" pattern="(?&lt;!か|した|していた)プレイヤー１人を対象とする。([^。]+は、?)(?&lt;!そのプレイヤー.*)(?:それ|そのプレイヤー)に(?!.*(?:\n[^・])?.*そのプレイヤー)(?=[^。「]+ダメージを与え)" value="プレイヤー１人かプレインズウォーカー１体を対象とする。$1それに" nodebug="true" />
+    <regex target="text" pattern="クリーチャー１体かプレイヤー１人(?!か)(?=[^。]*対象と.+ダメージを[^。]*与え)" value="クリーチャー１体かプレインズウォーカー１体かプレイヤー１人" nodebug="true" />
+    <regex target="text" pattern="(?m)^プレイヤー１人を対象とする。([^。]+は、?)(?&lt;!そのプレイヤー.*)そのプレイヤーに(?=[０-９Ｘ]+点のダメージを与え)" value="プレイヤー１人かプレインズウォーカー１体を対象とする。$1それに" nodebug="true" />
+    <regex target="text" pattern="(?&lt;=クリーチャー１体かプレインズウォーカー１体かプレイヤー１人.*\n?.*)そのクリーチャー(?=かプレイヤー)" value="そのパーマネント" nodebug="true" />
+    <regex target="text" pattern="(?&lt;=パーマネントかプレイヤーにダメージを与えるなら[^。]+)そのクリーチャー(?=かプレイヤー)" value="そのパーマネント" nodebug="true" />
     <regex target="text" pattern="(?&lt;=(?&lt;!か)プレイヤー１人かプレインズウォーカー１体を対象とする。[^。]+)そのプレイヤー(?!か|がコントロール)" value="それ" nodebug="true" />
-    <regex target="text" pattern="(?&lt;=(?&lt;!か)プレイヤー１人かプレインズウォーカー１体を対象とする。.+)そのプレイヤー(?!か|がコントロール|がライフを)" value="そのプレイヤーかプレインズウォーカー" nodebug="true" />
-    <regex target="text" pattern="のままであ(?=る|り)" value="であ" nodebug="true" />
-    <regex target="text" pattern="を得ることを除(?:いて|き)" value="を持つことを除き" nodebug="true" />
-    <regex target="text" pattern="を持つことを除いて" value="を持つことを除き" nodebug="true" />
-    <regex target="text" pattern="(?&lt;=。|なら、|につき、)それが(?=速攻.*を持つことを除き、)" value="" nodebug="true" />
-    <regex target="text" pattern="追放されたカードのうち" value="追放したカードの中から" nodebug="true" />
+    <regex target="text" pattern="を得ることを除き" value="を持つことを除き" nodebug="true" />
     <!-- 中丸追加 -->
     <regex target="type" pattern="部族(?=アーティファクト|エンチャント|インスタント|ソーサリー)" value="部族・" nodebug="true" />
     <regex target="text" pattern="(?&lt;=クリーチャー|アーティファクト|エンチャント|インスタント|ソーサリー|プレインズウォーカー|土地)(?=カード|呪文)" value="・" nodebug="true" />
@@ -685,6 +675,9 @@
     <regex target="type" pattern="エンチャント・アーティファクト" value="アーティファクト・エンチャント" nodebug="true" />
     <regex target="text" pattern="それはこのターン、?(?!の)" value="このターン、それは" nodebug="true" />
     <regex target="text" pattern="タイプや色" value="色やタイプ" nodebug="true" />
+    <regex target="text" pattern="クリーチャー１体かプレイヤー１人かプレインズウォーカー１体" value="クリーチャー１体かプレインズウォーカー１体かプレイヤー１人" nodebug="true" />
+    <regex target="text" pattern="クリーチャー１体と、プレインズウォーカー１体かプレイヤー１人を対象" value="クリーチャー１体と、プレイヤー１人かプレインズウォーカー１体を対象" nodebug="true" />
+    <regex target="text" pattern="プレインズウォーカー１体か対戦相手１人" value="対戦相手１人かプレインズウォーカー１体" nodebug="true" />
     <regex target="text" pattern="そのプレイヤーかパーマネントに与える" value="そのパーマネントかプレイヤーに与える" nodebug="true" />
     <!--<regex target="text" pattern="次のダメージを(?=[０-９Ｘ]+点軽減)" value="ダメージを次の" nodebug="true" />-->
     <regex target="text" pattern="(あなた|対戦相手)のコントロール下で([^。]+)が(１体|１つ)?戦場に出るたび、" value="$2が$3$1のコントロール下で戦場に出るたび、" nodebug="true" />
@@ -837,6 +830,9 @@
     <regex target="text" pattern="(?&lt;=を探し、それら?を(?:タップ状態で)?)戦場に出す。その後あなたのライブラリーを切り直す。" value="戦場に出し、その後あなたのライブラリーを切り直す。" nodebug="true" />
     <regex target="text" pattern="は、(.[\dX]+/.[\dX]+)の修整を受けるとともに、?" value="は$1の修整を受け、" nodebug="true" />
     <regex target="text" pattern="(?&lt;=(?&lt;!ターン終了時まで(?:それぞれ)?).[\dX]+/.[\dX]+の)修整を受けるとともに、?" value="修整を受け、" nodebug="true" />
+    <regex target="text" pattern="を持つことを除いて" value="を持つことを除き" nodebug="true" />
+    <regex target="text" pattern="(?&lt;=。|：|なら、|につき、)それが(?=速攻.*を持つことを除き、)" value="" nodebug="true" />
+    <regex target="text" pattern="のままであ(?=る|り)" value="であ" nodebug="true" />
     <regex target="text" pattern="(?&lt;!さらに)その(?=上から|コントローラー)" value="それの" nodebug="true" />
     <regex target="text" pattern="(?&lt;!の上)から(?=(?:.\d/.\d|氷|蓄積|貯蔵|水晶|探索)カウンターを[０-９Ｘ]+個取り除く)" value="の上から" nodebug="true" />
     <regex target="text" pattern="それ?の上に(?=(?:、それを唱えるために使われたマナの色１色につき)?(?:.\d/.\d|\w{1,2}|オーメン・|ポリープ・)カウンターが[０-９Ｘ]+個置かれた状態で(?:、タップ状態で)?戦場に出る)" value="" nodebug="true" />
@@ -849,6 +845,7 @@
     <regex target="text" pattern="すべての飛行を持たないクリーチャーに(?=[０-９Ｘ]+点のダメージを与える)" value="飛行を持たない各クリーチャーにそれぞれ" nodebug="true" />
     <regex target="text" pattern="。(そのプレイヤーが)?そうしたなら、そのプレイヤーはこの呪文をコピーし、そのコピーの新しい対象を選んでもよい。" value="。そうしたなら、そのプレイヤーはこの呪文をコピーしてもよい。そのプレイヤーはそのコピーの新しい対象を選んでもよい。" nodebug="true" />
     <regex target="text" pattern="対戦相手１人がコントロールする呪文や能力が(?:あなたに)?([^。]+)を捨てさせる(?:場合|なら)" value="対戦相手がコントロールしている呪文や能力によってあなたが$1を捨てるなら" nodebug="true" />
+    <regex target="text" pattern="追放されたカードのうち" value="追放したカードの中から" nodebug="true" />
     <regex target="text" pattern="墓地から唱えられていたなら" value="墓地から唱えられたなら" nodebug="true" />
     <!--<regex target="text" pattern="あなたは「(?:あなたの|あなたは、自分の|あなたは、)ライブラリーから([^「」]*)カード１枚を探(?:す。|し、|して)(それ|そのカード)を公開し(?:て|た上で|たうえで|、)あなたの手札に加え(?:、|る。)その後あなたのライブラリーを切り直す。」を選んでもよい。" value="あなたはあなたのライブラリーから$1カード１枚を探してもよい。そうしたなら、$2を公開してあなたの手札に加え、その後あなたのライブラリーを切り直す。" nodebug="true" />
     <regex target="text" pattern="あなたは「(?:あなたの|あなたは、自分の|あなたは、)ライブラリーから([^「」]+)カード１枚を探(?:す。|し、|して)(それ|そのカード)を(タップ状態で)?戦場に出(?:す。|し、)その後あなたのライブラリーを切り直す。」を選んでもよい。" value="あなたはあなたのライブラリーから$1カード１枚を探してもよい。そうしたなら、$2を$3戦場に出し、その後あなたのライブラリーを切り直す。" nodebug="true" />-->
@@ -1169,8 +1166,6 @@
     <card name="Sakashima the Impostor" jaName="騙り者、逆嶋" type="伝説のクリーチャー ― 人間・ならず者" pt="3/1">あなたは騙り者、逆嶋を、これの名前が《騙り者、逆嶋》であり、他のタイプに加えて伝説であり、「(２)(青)(青)：次の終了ステップの開始時に、このクリーチャーをオーナーの手札に戻す。」を持つことを除き、戦場にあるクリーチャー１体のコピーとして戦場に出してもよい。</card>
     <card name="Splinter Twin" jaName="欠片の双子" type="エンチャント ― オーラ">エンチャント（クリーチャー）
 エンチャントされているクリーチャーは「(Ｔ)：速攻を持つことを除き、このクリーチャーのコピーであるトークンを１体生成する。次の終了ステップの開始時に、そのトークンを追放する。」を持つ。</card>
-    <card name="Twinflame" jaName="双つ身の炎" type="ソーサリー">奮励 ― この呪文を唱えるためのコストは、２つ目以降の対象１つにつき(２)(赤)多くなる。
-あなたがコントロールしている望む数のクリーチャーを対象とする。それら１体につき、速攻を持つことを除き、それのコピーであるトークンを１体生成する。次の終了ステップの開始時に、それらのトークンを追放する。</card>
     <card name="Vesuvan Doppelganger" jaName="Vesuvan Doppelganger" type="クリーチャー ― 多相の戦士" pt="0/0">あなたはVesuvan Doppelgangerを、そのクリーチャーの色をコピーせず、「あなたのアップキープの開始時に、クリーチャー１体を対象とする。あなたはVesuvan Doppelgangerを、そのクリーチャーの色をコピーせず、この能力を持つことを除き、そのクリーチャーのコピーにしてもよい。」を持つことを除き、戦場にあるクリーチャー１体のコピーとして戦場に出してもよい。</card>
     <card name="Vesuvan Shapeshifter" jaName="ヴェズーヴァの多相の戦士" type="クリーチャー ― 多相の戦士" pt="0/0">ヴェズーヴァの多相の戦士が戦場に出るか表向きになるに際し、あなたは戦場にある他のクリーチャー１体を選んでもよい。そうしたなら、ヴェズーヴァの多相の戦士が裏向きになるまで、ヴェズーヴァの多相の戦士は、「あなたのアップキープの開始時に、あなたはこのクリーチャーを裏向きにしてもよい。」を持つことを除き、そのクリーチャーのコピーになる。
 変異(１)(青)（あなたはこのカードを、(３)で2/2クリーチャーとして裏向きに唱えてもよい。これの変異コストで、これをいつでも表向きにしてよい。）</card>
