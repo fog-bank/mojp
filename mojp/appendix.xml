@@ -462,6 +462,19 @@
     <card name="Watery Grave" jaName="湿った墓" type="土地 ― 島・沼">（(Ｔ)：(青)か(黒)を加える。）
 湿った墓が戦場に出るに際し、あなたは２点のライフを支払ってもよい。そうしないなら、これはタップ状態で戦場に出る。</card>
 
+    <card name="Ral, Caller of Storms" jaName="嵐を呼ぶ者、ラル" type="伝説のプレインズウォーカー ― ラル" pt="4">[+1]：カードを１枚引く。
+[-2]：クリーチャーやプレインズウォーカーやプレイヤー、１つか２つか３つを対象とする。嵐を呼ぶ者、ラルはそれらに３点のダメージをあなたの望むように分割して与える。
+[-7]：カードを７枚引く。嵐を呼ぶ者、ラルは対戦相手がコントロールしている各クリーチャーにそれぞれ７点のダメージを与える。</card>
+    <card name="Ral's Dispersal" jaName="ラルの消散" type="インスタント" related="Ral, Caller of Storms">クリーチャー１体を対象とし、それをオーナーの手札に戻す。あなたはあなたのライブラリーやあなたの墓地から《嵐を呼ぶ者、ラル》という名前のカード１枚を探し、それを公開してあなたの手札に加えてもよい。あなたがこれによりあなたのライブラリーからカードを探したなら、あなたのライブラリーを切り直す。</card>
+    <card name="Precision Bolt" jaName="正確な稲妻" type="ソーサリー">クリーチャー１体かプレインズウォーカー１体かプレイヤー１人を対象とする。正確な稲妻はそれに３点のダメージを与える。</card>
+    <card name="Ral's Staticaster" jaName="ラルの静電術師" type="クリーチャー ― ヴィーアシーノ・ウィザード" pt="3/3">トランプル（このクリーチャーは余剰の戦闘ダメージをこれが攻撃しているプレイヤーかプレインズウォーカーに与えることができる。）
+ラルの静電術師が攻撃するたび、あなたがラル・プレインズウォーカーをコントロールしている場合、ターン終了時まで、ラルの静電術師はあなたの手札にあるカード１枚につき+1/+0の修整を受ける。</card>
+    <card name="Vraska, Regal Gorgon" jaName="威厳あるゴルゴン、ヴラスカ" type="伝説のプレインズウォーカー ― ヴラスカ" pt="5">[+2]：クリーチャー最大１体を対象とし、それの上に+1/+1カウンターを１個置く。ターン終了時まで、そのクリーチャーは威迫を得る。
+[-3]：クリーチャー１体を対象とし、それを破壊する。
+[-10]：あなたの墓地にあるクリーチャー・カード１枚につき、あなたがコントロールしている各クリーチャーの上に+1/+1カウンターをそれぞれ１個置く。</card>
+    <card name="Kraul Raider" jaName="クロールの略奪者" type="クリーチャー ― 昆虫・戦士" pt="2/3">威迫（このクリーチャーは２体以上のクリーチャーによってしかブロックされない。）</card>
+    <card name="Attendant of Vraska" jaName="ヴラスカの従者" type="クリーチャー ― ゾンビ・兵士" pt="3/3">ヴラスカの従者が死亡したとき、あなたがヴラスカ・プレインズウォーカーをコントロールしている場合、あなたはヴラスカの従者のパワーに等しい点数のライフを得る。</card>
+    <card name="Vraska's Stoneglare" jaName="ヴラスカの石睨" type="ソーサリー" related="Vraska, Regal Gorgon">クリーチャー１体を対象とし、それを破壊する。あなたはそれのタフネスに等しい点数のライフを得る。あなたはあなたのライブラリーやあなたの墓地から《威厳あるゴルゴン、ヴラスカ》という名前のカード１枚を探し、それを公開してあなたの手札に加えてもよい。あなたがこれによりあなたのライブラリーからカードを探したなら、あなたのライブラリーを切り直す。</card>
     <card name="Impervious Greatwurm" jaName="動じない大ワーム" type="クリーチャー ― ワーム" pt="16/16">召集（あなたのクリーチャーが、この呪文を唱える助けとなる。この呪文を唱える段階であなたがタップした各クリーチャーは、(１)かそのクリーチャーの色のマナ１点を支払う。）
 破壊不能</card>
     <!-- クリーチャーでないトークン -->
@@ -897,6 +910,8 @@
     <related name="Angrath's Fury" related="Angrath, Minotaur Pirate" />
     <related name="Niambi, Faithful Healer" related="Teferi, Timebender" />
     <related name="Chandra's Outburst" related="Chandra, Bold Pyromancer" />
+    <related name="Ral's Dispersal" related="Ral, Caller of Storms" />
+    <related name="Vraska's Stoneglare" related="Vraska, Regal Gorgon" />
     <!-- 関連カード (共闘) -->
     <related name="Regna, the Redeemer" related="Krav, the Unredeemed" />
     <related name="Krav, the Unredeemed" related="Regna, the Redeemer" />
