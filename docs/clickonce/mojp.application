@@ -8,7 +8,7 @@
         <beforeApplicationStartup />
       </update>
     </subscription>
-    <deploymentProvider codebase="https://mojp.azurewebsites.net/docs/clickonce/mojp.application" />
+    <deploymentProvider codebase="http://mojp.azurewebsites.net/docs/clickonce/mojp.application" />
   </deployment>
   <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">
     <framework targetVersion="4.6" profile="Full" supportedRuntime="4.0.30319" />
@@ -21,7 +21,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>96dqtd0NfStu28CTjF4RZ/vV36Xy67BYqOfACSJD/Vc=</dsig:DigestValue>
+        <dsig:DigestValue>jEOs/WxOJ7EL8LgZ90bF36uQOGtnaEBsmTKOEdWrgpQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
