@@ -66,8 +66,8 @@ namespace Mojp
 
             await Task.Run(() =>
             {
-                if (File.Exists("cards.xml"))
-                    App.SetCardInfosFromXml("cards.xml");
+                if (File.Exists(App.GetPath("cards.xml")))
+                    App.SetCardInfosFromXml(App.GetPath("cards.xml"));
                 
                 if (CardPrice.EnableCardPrice)
                     CardPrice.OpenCacheData();

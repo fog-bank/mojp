@@ -20,6 +20,12 @@ namespace Mojp
         {
             InitializeComponent();
 
+            if (App.IsClickOnce)
+            {
+                grpAutoCheck.Visibility = Visibility.Collapsed;
+                grpAutoCheckSub.Visibility = Visibility.Collapsed;
+            }
+
             // フォントリストの初期化
             var vm = viewModel as MainViewModel;
             var fonts = Fonts.SystemFontFamilies;
@@ -60,7 +66,6 @@ namespace Mojp
                     cmbCardDisplayName.SelectedIndex = 0;
                     break;
             }
-
             DataContext = vm;
         }
 
@@ -107,7 +112,7 @@ namespace Mojp
             imgLoading.Visibility = Visibility.Visible;
 
             var successPd = await CardPrice.GetOrOpenPDLegalFile(true);
-            (App.Current.MainWindow as MainWindow)?.ShowPDMessage(successPd);
+            App.CurrentMainWindow?.ShowPDMessage(successPd);
             ViewModel.RefreshTab();
 
             imgLoading.Visibility = Visibility.Collapsed;
@@ -135,11 +140,11 @@ namespace Mojp
                 {
                     App.SetCardInfosFromWhisper(sr);
 
-                    if (File.Exists("appendix.xml"))
-                        Card.FixCardInfo("appendix.xml");
+                    if (File.Exists(App.GetPath("appendix.xml")))
+                        Card.FixCardInfo(App.GetPath("appendix.xml"));
 
                     if (cbxSaveDb.IsChecked == true)
-                        App.SaveAsXml("cards.xml");
+                        App.SaveAsXml(App.GetPath("cards.xml"));
                 }
                 imgLoaded.Visibility = Visibility.Visible;
             }

@@ -39,6 +39,21 @@ namespace Mojp
         public static Dispatcher CurrentDispatcher => Current.Dispatcher;
 
         /// <summary>
+        /// このアプリのメインウィンドウを取得します。
+        /// </summary>
+        public static MainWindow CurrentMainWindow => Current.MainWindow as MainWindow;
+
+        /// <summary>
+        /// このアプリが ClickOnce で実行されているかどうかを示す値を取得します。
+        /// </summary>
+        public static bool IsClickOnce { get; private set; }
+
+        /// <summary>
+        /// このアプリが ClickOnce で実行されている場合のデータディレクトリへのパスを取得します。
+        /// </summary>
+        private static string DataDirectory { get; set; }
+
+        /// <summary>
         /// Application Entry Point.
         /// </summary>
         [STAThread]
@@ -51,12 +66,23 @@ namespace Mojp
             {
                 if (createdNew)
                 {
+                    var domain = AppDomain.CurrentDomain;
+                    IsClickOnce = domain.ActivationContext?.Identity.FullName != null;
+
+                    if (IsClickOnce)
+                        DataDirectory = domain.GetData("DataDirectory") as string;
+
                     var app = new App();
                     app.InitializeComponent();
                     app.Run();
                 }
             }
         }
+
+        /// <summary>
+        /// ClickOnce アプリの場合はデータディレクトリ下のパスになるようにパスを調整します。
+        /// </summary>
+        public static string GetPath(string filename) => IsClickOnce ? Path.Combine(DataDirectory, filename) : filename;
 
         /// <summary>
         /// カードテキストデータを XML に保存します。
@@ -106,9 +132,12 @@ namespace Mojp
         /// このアプリのバージョンが最新かどうかを確認します。
         /// </summary>
         /// <param name="acceptsPrerelease">開発版も含めて確認する場合は true 。</param>
-        /// <returns>これより上のバージョンが無い場合は true 。</returns>
+        /// <returns>これより上のバージョンがあった場合は true 。</returns>
         public static async Task<bool> IsOutdatedRelease(bool acceptsPrerelease)
         {
+            if (IsClickOnce)
+                return false;
+
             string response = null;
             try
             {

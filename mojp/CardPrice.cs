@@ -76,13 +76,13 @@ namespace Mojp
         /// </summary>
         public static void OpenCacheData()
         {
-            if (!File.Exists(CacheFileName))
+            if (!File.Exists(App.GetPath(CacheFileName)))
                 return;
 
             var now = DateTime.UtcNow;
             var culture = CultureInfo.InvariantCulture;
 
-            using (var sr = File.OpenText(CacheFileName))
+            using (var sr = File.OpenText(App.GetPath(CacheFileName)))
             {
                 while (!sr.EndOfStream)
                 {
@@ -113,7 +113,7 @@ namespace Mojp
             var now = DateTime.UtcNow;
             var culture = CultureInfo.InvariantCulture;
 
-            using (var sw = File.CreateText(CacheFileName))
+            using (var sw = File.CreateText(App.GetPath(CacheFileName)))
             {
                 foreach (var pair in prices)
                 {
@@ -147,7 +147,7 @@ namespace Mojp
         /// <param name="forceCheck"><see langword="true"/> の場合、最終確認日時に関わらず HTTP アクセスを行います。</param>
         public static async Task<GetPDListResult> GetOrOpenPDLegalFile(bool forceCheck)
         {
-            bool exists = File.Exists(PDLegalFileName);
+            bool exists = File.Exists(App.GetPath(PDLegalFileName));
             var culture = CultureInfo.InvariantCulture;
             DateTime lastCheckTime = default;
             DateTime lastModifiedTime = default;
@@ -160,7 +160,7 @@ namespace Mojp
                     App.SettingsCache.PDListLastTimeUtc, "o", culture, DateTimeStyles.RoundtripKind, out lastCheckTime))
                 {
                     // 設定ファイルに最終確認日時を保存する前のバージョンとの互換性を維持するための代替措置
-                    lastCheckTime = File.GetLastWriteTime(PDLegalFileName).ToUniversalTime();
+                    lastCheckTime = File.GetLastWriteTime(App.GetPath(PDLegalFileName)).ToUniversalTime();
                 }
 
                 // 最終更新日時の取得
@@ -191,7 +191,7 @@ namespace Mojp
                             {
                                 if (resp.IsSuccessStatusCode)
                                 {
-                                    using (var file = File.Create(PDLegalFileName))
+                                    using (var file = File.Create(App.GetPath(PDLegalFileName)))
                                         await resp.Content.CopyToAsync(file);
 
                                     result = exists ? GetPDListResult.Update : GetPDListResult.New;
@@ -215,7 +215,7 @@ namespace Mojp
             var pdLegalCards = new HashSet<string>();
             var separator = new[] { " // " };
 
-            foreach (string line in File.ReadLines(PDLegalFileName))
+            foreach (string line in File.ReadLines(App.GetPath(PDLegalFileName)))
             {
                 // 分割カードは名前を分ける
                 foreach (string name in line.Split(separator, StringSplitOptions.RemoveEmptyEntries))
