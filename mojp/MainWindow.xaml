@@ -2,7 +2,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local="clr-namespace:Mojp"
         x:Class="Mojp.MainWindow" xml:lang="ja-jp"
-        Title="MO 日本語テキストプレビュー" Topmost="{Binding TopMost, Mode=OneTime}"
+        Title="MO 日本語カードテキスト表示ツール" Topmost="{Binding TopMost, Mode=OneTime}"
         Width="{Binding WindowWidth, Mode=TwoWay}" Height="{Binding WindowHeight, Mode=TwoWay}"
         Left="{Binding WindowLeft, Mode=TwoWay}" Top="{Binding WindowTop, Mode=TwoWay}"
         Icon="Resources/dictionary.ico" SnapsToDevicePixels="True" Initialized="OnInitialized">
