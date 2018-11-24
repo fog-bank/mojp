@@ -143,8 +143,7 @@ namespace Mojp
                     if (File.Exists(App.GetPath("appendix.xml")))
                         Card.FixCardInfo(App.GetPath("appendix.xml"));
 
-                    if (cbxSaveDb.IsChecked == true)
-                        App.SaveAsXml(App.GetPath("cards.xml"));
+                    App.SaveAsXml(App.GetPath("cards.xml"));
                 }
                 imgLoaded.Visibility = Visibility.Visible;
             }

@@ -233,9 +233,6 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
-                    <RowDefinition Height="5" />
-                    <RowDefinition Height="Auto" />
-                    <RowDefinition Height="5" />
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <TextBlock>
@@ -244,18 +241,11 @@
                     <LineBreak />
                     <Run>表示されたテキスト ファイルを shift-jis で保存してください。</Run>
                 </TextBlock>
-                <CheckBox Name="cbxSaveDb" Grid.Row="1" IsChecked="True"
-                          ToolTip="起動時に読み込む cards.xml を編集し、次回起動以降もそれを使用するようにします。">
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock>置換したデータを永続化する</TextBlock>
-                        <Image Source="Resources/Information.png" Height="16" Margin="5,0,0,0" />
-                    </StackPanel>
-                </CheckBox>
-                <StackPanel Grid.Row="3" HorizontalAlignment="Right" Orientation="Horizontal">
+                <StackPanel Grid.Row="1" Margin="0,5" HorizontalAlignment="Right" Orientation="Horizontal">
                     <Button Click="OnBrowseSearchTxt">検索結果テキストの読み込み..</Button>
                     <Image Name="imgLoaded" Source="Resources/Checkmark.png" Height="20" Margin="5,0,5,0" Visibility="Collapsed" />
                 </StackPanel>
-                <Grid Grid.Row="5">
+                <Grid Grid.Row="2">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto" />
                         <ColumnDefinition />
