@@ -835,6 +835,7 @@
     <regex target="text" pattern="(?&lt;=アーティファクト|土地|森|パーマネント)が(あなたのコントロール下で)?戦場に出るたび、" value="が１つ$1戦場に出るたび、" nodebug="true" />
     <regex target="text" pattern="他のクリーチャーが死亡するたび、" value="他のクリーチャーが１体死亡するたび、" nodebug="true" />
     <regex target="text" pattern="(?&lt;=クリーチャー|クリーチャー・トークン)が戦場を離れるたび、" value="が１体戦場を離れるたび、" nodebug="true" />
+    <regex target="text" pattern="いずれかの(人間|鳥|スリヴァー|トークンでないクリーチャー)が(?=[^、。]+たび)" value="$1が１体" nodebug="true" />
     <!-- テンプレート変更：コスト軽減 -->
     <regex target="text" pattern="が唱える(、?)([^。]*)呪文は、それを唱えるためのコストが" value="が$1$2呪文を唱えるためのコストは$1" nodebug="true" />
     <regex target="text" pattern="(?m)呪文は、?それを唱えるためのコストが(?=.{1,9}$)" value="呪文を唱えるためのコストは" nodebug="true" />
