@@ -510,11 +510,11 @@ namespace Mojp
 
             var beforeRoot = new XElement("mojp", beforeNodes);
             var beforeResult = new XDocument(new XDeclaration("1.0", "utf-8", "yes"), beforeRoot);
-            beforeResult.Save("appendix_before.xml");
+            beforeResult.Save(App.GetPath("appendix_before.xml"));
 
             var root = new XElement("mojp", replacedNodes, identicalNodes);
             var result = new XDocument(new XDeclaration("1.0", "utf-8", "yes"), root);
-            result.Save("appendix_result.xml");
+            result.Save(App.GetPath("appendix_result.xml"));
 
             // カードの削除
             foreach (var node in doc.Root.Elements("remove").Elements("card"))
