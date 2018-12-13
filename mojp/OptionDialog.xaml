@@ -51,7 +51,7 @@
                 <StackPanel Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2">
                     <TextBlock>ラヴニカのギルド / アルティメットマスターズ</TextBlock>
                     <TextBlock Margin="2,0,2,4">Game Night / Gift Pack</TextBlock>
-                    <TextBlock Margin="2,0,2,4">Global Series: Jiang Yanggu &amp; Mu Yanling</TextBlock>
+                    <TextBlock Margin="2,0,2,4">GS: Jiang Yanggu &amp; Mu Yanling</TextBlock>
                 </StackPanel>
                 <CheckBox Name="grpAutoCheck" Grid.Row="2" Grid.ColumnSpan="4" Margin="0,4,0,0" IsChecked="{Binding AutoVersionCheck}"
                           ToolTipService.ShowDuration="60000">

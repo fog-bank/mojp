@@ -127,13 +127,6 @@ namespace Mojp
                     if (name == null)
                         return;
 
-                    // 英雄譚の絵師かもしれない場合
-                    if (Card.GetSagaByArtist(name, out string saga))
-                    {
-                        if (CheckAndViewSaga(saga))
-                            return;
-                    }
-
                     // WHISPER データベースからカード情報を取得
                     if (App.Cards.TryGetValue(name, out var card))
                     {
@@ -154,8 +147,28 @@ namespace Mojp
                             }
                         }
                     }
-                    else if (!isToken && name.StartsWith("Token"))
-                        isToken = true;
+                    else
+                    {
+                        // 英雄譚の絵師かもしれない場合
+                        if (Card.GetSagaByArtist(name, out string saga))
+                        {
+                            if (CheckAndViewSaga(saga))
+                                return;
+                        }
+
+                        // アルティメットマスターズのフルアート版
+                        if (Card.CheckIfUltimateBoxToppers(name, out string umaCardName))
+                        {
+                            if (App.Cards.TryGetValue(umaCardName, out var umaCard))
+                            {
+                                ViewModel.InvokeSetCard(card);
+                                return;
+                            }
+                        }
+
+                        if (!isToken && name.StartsWith("Token"))
+                            isToken = true;
+                    }
                 }
 
                 // 設定によっては基本土地 5 種の場合に表示を変えないようにする
@@ -236,6 +249,15 @@ namespace Mojp
                         if (CheckAndViewSaga(saga))
                             return;
                     }
+                    else if (Card.CheckIfUltimateBoxToppers(name, out string umaCardName))
+                    {
+                        // アルティメットマスターズのフルアート版もカード名で探せないので、カード番号で区別する
+                        if (App.Cards.TryGetValue(umaCardName, out var umaCard))
+                        {
+                            ViewModel.InvokeSetCard(umaCard);
+                            return;
+                        }
+                    }
 
                     if (cardType != null)
                         ViewModel.InvokeSetMessage(cardType);
@@ -258,7 +280,7 @@ namespace Mojp
             {
                 if (App.Cards.TryGetValue(cardName, out var foundCard))
                 {
-                    // 英雄譚かどうかをチェックする
+                    // Automation ID が CardType の値を調べて、英雄譚かどうかをチェックする
                     AutomationElement element = null;
                     using (cacheReq.Activate())
                     {

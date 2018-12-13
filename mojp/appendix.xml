@@ -101,7 +101,7 @@ Militant Angelが戦場に出たとき、このターンにあなたが攻撃し
     <card name="Rot Hulk" jaName="Rot Hulk" type="クリーチャー ― ゾンビ" pt="5/5">威迫
 Rot Hulkが戦場に出たとき、あなたの墓地からゾンビ・カード最大Ｘ枚を対象とし、それらを戦場に戻す。Ｘは対戦相手の人数に等しい。</card>
     <!-- Global Series: Jiang Yanggu and Mu Yanling -->
-    <card name="Mu Yanling" jaName="Mu Yanling" type="伝説のプレインズウォーカー ― " pt="5">[+2]：クリーチャー１体を対象とする。このターン、それはブロックされない。
+    <card name="Mu Yanling" jaName="Mu Yanling" type="伝説のプレインズウォーカー ― Yanling" pt="5">[+2]：クリーチャー１体を対象とする。このターン、それはブロックされない。
 [-3]：カードを２枚引く。
 [-10]：対戦相手がコントロールしているクリーチャーをすべてタップする。あなたはこのターンの後に追加の１ターンを得る。</card>
     <card name="Colorful Feiyi Sparrow" jaName="Colorful Feiyi Sparrow" type="クリーチャー ― 鳥" pt="1/3">飛行（このクリーチャーは飛行や到達を持たないクリーチャーによってはブロックされない。）</card>
