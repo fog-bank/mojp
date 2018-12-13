@@ -4,7 +4,7 @@
     <card name="Gleemox" jaName="Gleemox" type="アーティファクト">(Ｔ)：好きな色１色のマナ１点を加える。
 このカードは禁止されている。</card>
     <card name="The Monarch" jaName="統治者" type="" wikilink="統治者">あなたの終了ステップの開始時に、あなたはカードを１枚引く。
-クリーチャー１体があなたに戦闘ダメージを与えるたび、それのコントローラーが統治者になる。</card>
+クリーチャーが１体あなたに戦闘ダメージを与えるたび、それのコントローラーが統治者になる。</card>
     <card name="City's Blessing" jaName="都市の承認" type="" wikilink="昇殿"></card>
     <!-- クリーチャーでないトークン -->
     <card name="Clue" jaName="手掛かり" type="トークン・アーティファクト ― 手掛かり" wikilink="手掛かり">(２),このアーティファクトを生け贄に捧げる：カードを１枚引く。</card>
@@ -28,6 +28,7 @@
 終了ステップの開始時に、このクリーチャーを生け贄に捧げる。</card>
     <card name="Marit Lage" jaName="マリット・レイジ" type="トークン・伝説のクリーチャー ― アバター" pt="20/20" related="Dark Depths">飛行、破壊不能</card>
     <card name="Minor Demon" jaName="マイナー・デーモン" type="トークン・クリーチャー ― デーモン" pt="1/1" related="Boris Devilboon"></card>
+    <card name="Mowu" jaName="Mowu" type="トークン・伝説のクリーチャー ― 猟犬" pt="3/3" related="Jiang Yanggu"></card>
     <card name="Ragavan" jaName="ラガバン" type="トークン・伝説のクリーチャー ― 猿" pt="2/1" related="Kari Zev, Skyship Raider"></card>
     <card name="Stangg Twin" jaName="スタングの双子" type="トークン・伝説のクリーチャー ― 人間・戦士" pt="3/4" related="Stangg"></card>
     <card name="Tombspawn" jaName="屍鬼" type="トークン・クリーチャー ― ゾンビ" pt="2/2" related="Tombstone Stairwell">速攻</card>
@@ -75,6 +76,71 @@
     <card name="Squirrel" jaName="リス" type="トークン・クリーチャー ― リス" pt="1/1"></card>
     <card name="Thopter" jaName="飛行機械" type="トークン・アーティファクト・クリーチャー ― 飛行機械" pt="1/1">飛行</card>
     <card name="Weird" jaName="奇魔" type="トークン・クリーチャー ― 奇魔" pt="3/3" related="Thunderheads">防衛、飛行</card>
+    <!-- Gift Pack (M19) -->
+    <card name="Angelic Guardian" jaName="Angelic Guardian" type="クリーチャー ― 天使" pt="5/5">飛行
+あなたがコントロールしているクリーチャーが１体以上攻撃するたび、ターン終了時まで、それらは破壊不能を得る。</card>
+    <card name="Angler Turtle" jaName="Angler Turtle" type="クリーチャー ― 海亀" pt="5/7">呪禁
+各戦闘で、対戦相手がコントロールしているクリーチャーは可能なら攻撃する。</card>
+    <card name="Immortal Phoenix" jaName="Immortal Phoenix" type="クリーチャー ― フェニックス" pt="5/3">飛行
+Immortal Phoenixが死亡したとき、これをオーナーの手札に戻す。</card>
+    <card name="Rampaging Brontodon" jaName="Rampaging Brontodon" type="クリーチャー ― 恐竜" pt="7/7">トランプル
+Rampaging Brontodonが攻撃するたび、ターン終了時まで、これはあなたがコントロールしている土地１つにつき+1/+1の修整を受ける。</card>
+    <card name="Vengeant Vampire" jaName="Vengeant Vampire" type="クリーチャー ― 吸血鬼" pt="4/4">絆魂
+Vengeant Vampireが死亡したとき、対戦相手がコントロールしているクリーチャー１体を対象とする。それを破壊し、あなたは４点のライフを得る。</card>
+    <!-- Game Night (M19) -->
+    <card name="Avatar of Growth" jaName="Avatar of Growth" type="クリーチャー ― エレメンタル・アバター" pt="4/4">この呪文を唱えるためのコストは対戦相手１人につき(１)少なくなる。
+トランプル
+Avatar of Growthが戦場に出たとき、各プレイヤーはそれぞれ、自分のライブラリーから基本土地・カード最大２枚を探し、それらを戦場に出し、その後自分のライブラリーを切り直す。</card>
+    <card name="Goblin Goliath" jaName="Goblin Goliath" type="クリーチャー ― ゴブリン・ミュータント" pt="5/4">Goblin Goliathが戦場に出たとき、対戦相手の人数に等しい数の、赤の1/1のゴブリン・クリーチャー・トークンを生成する。
+(３)(赤),(Ｔ)：このターン、あなたがコントロールしている発生源が対戦相手にダメージを与えるなら、代わりに、それはそのプレイヤーにその点数の２倍のダメージを与える。</card>
+    <card name="Inspired Sphinx" jaName="Inspired Sphinx" type="クリーチャー ― スフィンクス" pt="5/5">飛行
+Inspired Sphinxが戦場に出たとき、対戦相手の人数に等しい枚数のカードを引く。
+(３)(青)：飛行を持つ無色の1/1の飛行機械・アーティファクト・クリーチャー・トークンを１体生成する。</card>
+    <card name="Militant Angel" jaName="Militant Angel" type="クリーチャー ― 天使" pt="3/4">飛行、絆魂
+Militant Angelが戦場に出たとき、このターンにあなたが攻撃した対戦相手の総数に等しい数の、警戒を持つ白の2/2の騎士・クリーチャー・トークンを生成する。</card>
+    <card name="Rot Hulk" jaName="Rot Hulk" type="クリーチャー ― ゾンビ" pt="5/5">威迫
+Rot Hulkが戦場に出たとき、あなたの墓地からゾンビ・カード最大Ｘ枚を対象とし、それらを戦場に戻す。Ｘは対戦相手の人数に等しい。</card>
+    <!-- Global Series: Jiang Yanggu and Mu Yanling -->
+    <card name="Mu Yanling" jaName="Mu Yanling" type="伝説のプレインズウォーカー ― " pt="5">[+2]：クリーチャー１体を対象とする。このターン、それはブロックされない。
+[-3]：カードを２枚引く。
+[-10]：対戦相手がコントロールしているクリーチャーをすべてタップする。あなたはこのターンの後に追加の１ターンを得る。</card>
+    <card name="Colorful Feiyi Sparrow" jaName="Colorful Feiyi Sparrow" type="クリーチャー ― 鳥" pt="1/3">飛行（このクリーチャーは飛行や到達を持たないクリーチャーによってはブロックされない。）</card>
+    <card name="Purple-Crystal Crab" jaName="Purple-Crystal Crab" type="クリーチャー ― カニ" pt="1/1">Purple-Crystal Crabが死亡したとき、カードを１枚引く。</card>
+    <card name="Vivid Flying Fish" jaName="Vivid Flying Fish" type="クリーチャー ― 魚・トカゲ" pt="1/1">Fish Lizardが攻撃しているかぎり、これは飛行を持つ。（これは飛行や到達を持たないクリーチャーによってはブロックされない。）</card>
+    <card name="Heavenly Qilin" jaName="Heavenly Qilin" type="クリーチャー ― 麒麟" pt="2/2">飛行（このクリーチャーは飛行や到達を持たないクリーチャーによってはブロックされない。）
+Heavenly Qilinが攻撃するたび、あなたがコントロールしている他のクリーチャー１体を対象とする。ターン終了時まで、それは飛行を得る。</card>
+    <card name="Armored Whirl Turtle" jaName="Armored Whirl Turtle" type="クリーチャー ― 海亀" pt="0/5"></card>
+    <card name="Nine-Tail White Fox" jaName="Nine-Tail White Fox" type="クリーチャー ― 狐・スピリット" pt="2/2">Nine-Tail White Foxがプレイヤー１人に戦闘ダメージを与えるたび、カードを１枚引く。</card>
+    <card name="Earth-Origin Yak" jaName="Earth-Origin Yak" type="クリーチャー ― 雄牛" pt="2/4">Earth-Origin Yakが戦場に出たとき、ターン終了時まで、あなたがコントロールしているクリーチャーは+1/+1の修整を受ける。</card>
+    <card name="Moon-Eating Dog" jaName="Moon-Eating Dog" type="クリーチャー ― 猟犬" pt="3/3">あなたがYanling・プレインズウォーカーをコントロールしているかぎり、Moon-Eating Dogは飛行を持つ。（それは飛行や到達を持たないクリーチャーによってはブロックされない。）</card>
+    <card name="Stormcloud Spirit" jaName="Stormcloud Spirit" type="クリーチャー ― スピリット" pt="4/4">飛行（このクリーチャーは飛行や到達を持たないクリーチャーによってはブロックされない。）</card>
+    <card name="Ancestor Dragon" jaName="Ancestor Dragon" type="クリーチャー ― ドラゴン" pt="5/6">飛行
+あなたがコントロールしているクリーチャーが１体以上攻撃するたび、あなたは攻撃クリーチャー１体につき１点のライフを得る。</card>
+    <card name="Qilin's Blessing" jaName="Qilin's Blessing" type="インスタント">クリーチャー１体を対象とする。ターン終了時まで、それは+2/+2の修整を受ける。</card>
+    <card name="Drown in Shapelessness" jaName="Drown in Shapelessness" type="インスタント">クリーチャー１体を対象とし、それをオーナーの手札に戻す。</card>
+    <card name="Dragon's Presence" jaName="Dragon's Presence" type="インスタント">攻撃クリーチャー１体かブロック・クリーチャー１体を対象とする。Dragon's Presenceはそれに５点のダメージを与える。</card>
+    <card name="Rhythmic Water Vortex" jaName="Rhythmic Water Vortex" type="ソーサリー">クリーチャー最大２体を対象とし、それらをオーナーの手札に戻す。
+あなたのライブラリーやあなたの墓地から《Mu Yanling》という名前のカード１枚を探し、それを公開してあなたの手札に加える。これによりあなたのライブラリーからカードを探したなら、あなたのライブラリーを切り直す。</card>
+    <card name="Jiang Yanggu" jaName="Jiang Yanggu" type="伝説のプレインズウォーカー ― Yanggu" pt="4">[+1]：クリーチャー１体を対象とする。ターン終了時まで、それは+2/+2の修整を受ける。
+[-1]：あなたが《Mowu》という名前のクリーチャーをコントロールしていないなら、《Mowu》という名前の緑の3/3の伝説の猟犬・クリーチャー・トークンを１体生成する。
+[-5]：クリーチャー１体を対象とする。ターン終了時まで、それはトランプルを得て+X/+Xの修整を受ける。Ｘはあなたがコントロールしている土地の総数に等しい。</card>
+    <card name="Leopard-Spotted Jiao" jaName="Leopard-Spotted Jiao" type="クリーチャー ― ビースト" pt="3/1"></card>
+    <card name="Feiyi Snake" jaName="Feiyi Snake" type="クリーチャー ― 蛇" pt="2/1">到達（このクリーチャーは飛行を持つクリーチャーをブロックできる。）</card>
+    <card name="Sacred White Deer" jaName="Sacred White Deer" type="クリーチャー ― 大鹿" pt="2/2">(３)(緑),(Ｔ)：あなたは４点のライフを得る。この能力は、あなたがYanggu・プレインズウォーカーをコントロールしているときにのみ起動できる。</card>
+    <card name="Reckless Pangolin" jaName="Reckless Pangolin" type="クリーチャー ― センザンコウ" pt="2/2">Reckless Pangolinが攻撃するたび、ターン終了時まで、これは+1/+1の修整を受ける。</card>
+    <card name="Ferocious Zheng" jaName="Ferocious Zheng" type="クリーチャー ― 猫・ビースト" pt="4/4"></card>
+    <card name="Fire-Omen Crane" jaName="Fire-Omen Crane" type="クリーチャー ― 鳥・スピリット" pt="3/3">飛行（このクリーチャーは飛行や到達を持たないクリーチャーによってはブロックされない。）
+Fire-Omen Craneが攻撃するたび、対戦相手がコントロールしているクリーチャー１体を対象とする。これはそれに１点のダメージを与える。</card>
+    <card name="Screeching Phoenix" jaName="Screeching Phoenix" type="クリーチャー ― フェニックス" pt="4/4">飛行
+(２)(赤)：ターン終了時まで、あなたがコントロールしているクリーチャーは+1/+0の修整を受ける。</card>
+    <card name="Earthshaking Si" jaName="Earthshaking Si" type="クリーチャー ― ビースト" pt="5/5">トランプル（このクリーチャーは余剰の戦闘ダメージをこれが攻撃しているプレイヤーかプレインズウォーカーに与えることができる。）</card>
+    <card name="Hardened-Scale Armor" jaName="Hardened-Scale Armor" type="エンチャント ― オーラ">エンチャント（クリーチャー）
+エンチャントされているクリーチャーは+3/+3の修整を受ける。</card>
+    <card name="Breath of Fire" jaName="Breath of Fire" type="インスタント">クリーチャー１体を対象とする。Breath of Fireはそれに２点のダメージを与える。</card>
+    <card name="Aggressive Instinct" jaName="Aggressive Instinct" type="ソーサリー">あなたがコントロールしているクリーチャー１体と、あなたがコントロールしていないクリーチャー１体を対象とする。その前者はその後者に、自身のパワーに等しい点数のダメージを与える。</card>
+    <card name="Confidence from Strength" jaName="Confidence from Strength" type="ソーサリー">クリーチャー１体を対象とする。ターン終了時まで、それは+4/+4の修整を受けトランプルを得る。（それは余剰の戦闘ダメージをそれが攻撃しているプレイヤーかプレインズウォーカーに与えることができる。）</card>
+    <card name="Journey for the Elixir" jaName="Journey for the Elixir" type="ソーサリー">あなたのライブラリーやあなたの墓地から基本土地・カード１枚と《Jiang Yanggu》という名前のカード１枚を探し、それらを公開してあなたの手札に加え、その後あなたのライブラリーを切り直す。</card>
+    <card name="Cleansing Screech" jaName="Cleansing Screech" type="ソーサリー">クリーチャー１体かプレインズウォーカー１体かプレイヤー１人を対象とする。Cleansing Screechはそれに４点のダメージを与える。</card>
     <!-- Vanguard -->
     <card name="Avatar - Akroma, Angel of Wrath" jaName="Akroma, Angel of Wrath Avatar" type="ヴァンガード" pt="手札 +1/ライフ +7" wikilink="Akroma, Angel of Wrath Avatar">クリーチャーが１体あなたのコントロール下で戦場に出るたび、飛行、先制攻撃、トランプル、速攻、プロテクション（黒）、プロテクション（赤）、警戒の中から能力２つを無作為に選ぶ。そのクリーチャーはそれらの選ばれた能力を得る。</card>
     <card name="Avatar - Arcanis, the Omnipotent" jaName="Arcanis, the Omnipotent Avatar" type="ヴァンガード" pt="手札 +1/ライフ -3" wikilink="Arcanis, the Omnipotent Avatar">(Ｘ),あなたがコントロールしている点数で見たマナ・コストがＸのクリーチャー１体をオーナーの手札に戻す：０からＸまでの数１つを無作為に選び、その選ばれた数に等しい枚数のカードを引く。Ｘは０にできない。</card>
@@ -441,6 +507,8 @@
     <related name="Chandra's Outburst" related="Chandra, Bold Pyromancer" />
     <related name="Ral's Dispersal" related="Ral, Caller of Storms" />
     <related name="Vraska's Stoneglare" related="Vraska, Regal Gorgon" />
+    <related name="Rhythmic Water Vortex" related="Mu Yanling" />
+    <related name="Journey for the Elixir" related="Jiang Yanggu" />
     <!-- 関連カード (共闘) -->
     <related name="Regna, the Redeemer" related="Krav, the Unredeemed" />
     <related name="Krav, the Unredeemed" related="Regna, the Redeemer" />
