@@ -252,6 +252,7 @@ namespace Mojp
                     else if (Card.CheckIfUltimateBoxToppers(name, out string umaCardName))
                     {
                         // アルティメットマスターズのフルアート版もカード名で探せないので、カード番号で区別する
+                        // HACK: U01 / 40 みたいな文字が他に出ない前提。念のために UMA のセット記号を確認するかどうか
                         if (App.Cards.TryGetValue(umaCardName, out var umaCard))
                         {
                             ViewModel.InvokeSetCard(umaCard);
