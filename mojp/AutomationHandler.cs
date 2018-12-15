@@ -14,22 +14,35 @@ namespace Mojp
         private class AutomationHandler
         {
             private AutomationElement previewWnd;
+            private CacheRequest eventCacheReq = new CacheRequest();
             private CacheRequest cacheReq = new CacheRequest();
-            private Condition condition;
+
+            // Preview Window を探す
+            private Condition previewWndCondition1 = new PropertyCondition(AutomationElement.ClassNameProperty, "Window");
+            private Condition previewWndCondition2 = new PropertyCondition(AutomationElement.NameProperty, "Preview");
+
+            // テキストが空でなく、特定の UI 要素でない TextBlock をすべて拾う
+            private Condition textBlockCondition = new AndCondition(
+                Automation.ContentViewCondition,
+                new PropertyCondition(AutomationElement.ClassNameProperty, "TextBlock"),
+                new PropertyCondition(AutomationElement.AutomationIdProperty, string.Empty),
+                new NotCondition(new PropertyCondition(AutomationElement.NameProperty, string.Empty)));
+
+            // 英雄譚のカードタイプを表す要素だけ拾う
+            private Condition cardTypeCondition = new PropertyCondition(AutomationElement.AutomationIdProperty, "CardType");
 
             public AutomationHandler(MainViewModel viewModel)
             {
                 ViewModel = viewModel;
 
                 // UI 要素の名前だけキャッシュする
+                eventCacheReq.Add(AutomationElement.NameProperty);
+                eventCacheReq.AutomationElementMode = AutomationElementMode.None;
+                eventCacheReq.TreeFilter = textBlockCondition;
+
+                // FindAll や FindFirst のときに TreeFilter を設定すると、なぜかうまくいかない (カード名をもつ要素が取得できない)
                 cacheReq.Add(AutomationElement.NameProperty);
                 cacheReq.AutomationElementMode = AutomationElementMode.None;
-
-                // テキストが空でなく、特定の UI 要素でない TextBlock をすべて拾う
-                condition = new AndCondition(
-                    new PropertyCondition(AutomationElement.ClassNameProperty, "TextBlock"),
-                    new NotCondition(new PropertyCondition(AutomationElement.NameProperty, string.Empty)),
-                    new PropertyCondition(AutomationElement.AutomationIdProperty, string.Empty));
             }
 
             private MainViewModel ViewModel { get; }
@@ -56,15 +69,14 @@ namespace Mojp
                     newPreviewWnd = AutomationElement.RootElement.FindFirst(TreeScope.Children,
                         new AndCondition(
                             new PropertyCondition(AutomationElement.ProcessIdProperty, mtgoProcessID),
-                            new PropertyCondition(AutomationElement.ClassNameProperty, "Window"),
-                            new PropertyCondition(AutomationElement.NameProperty, "Preview")));
+                            previewWndCondition1, previewWndCondition2));
                 }
                 catch { Debug.WriteLine("Preview Pane の取得に失敗しました。"); }
 
                 // 他のスレッドで処理が先行した
                 if (previewWnd != currentPreviewWnd)
                     return;
-                
+
                 if (newPreviewWnd == null)
                 {
                     ReleaseAutomationElement();
@@ -74,7 +86,7 @@ namespace Mojp
 
                 if (newPreviewWnd == currentPreviewWnd)
                     return;
-                
+
                 // 新しい Preview Pane が見つかった
                 ReleaseAutomationElement();
                 previewWnd = newPreviewWnd;
@@ -85,7 +97,7 @@ namespace Mojp
                 // UI テキストの変化を追う
                 // 対戦中、カード情報は Preview Pane の直接の子ではなく、
                 // ZoomCard_View というカスタムコントロールの下にくるので、スコープは子孫にしないとダメ
-                using (cacheReq.Activate())
+                using (eventCacheReq.Activate())
                 {
                     Automation.AddAutomationPropertyChangedEventHandler(newPreviewWnd,
                         TreeScope.Descendants, OnAutomaionNamePropertyChanged, AutomationElement.NameProperty);
@@ -100,98 +112,24 @@ namespace Mojp
             }
 
             /// <summary>
-            /// 現在の Preview Pane 内のテキストからカード名を取得し、表示します。
+            /// 現在の Preview Pane に含まれる全テキストからカード名を取得し、表示します。
             /// </summary>
             public void SearchCardName()
             {
-                AutomationElementCollection elements = null;
-                try
-                {
-                    using (cacheReq.Activate())
-                        elements = previewWnd?.FindAll(TreeScope.Descendants, condition);
-                }
-                catch { Debug.WriteLine("TextBlock 要素の全取得に失敗しました。"); }
-
-                if (elements == null)
-                    return;
-
-                // 一連のテキストからカード名を探す (合体カードなど複数のカード名にヒットする場合があるので一通り探し直す必要がある)
-                var foundCards = new List<Card>();
                 bool isToken = false;
 
-                foreach (AutomationElement element in elements)
+                foreach (string value in IterateTextBlocks())
                 {
-                    string name = GetNamePropertyValue(element);
-
-                    // キャッシュ無効化時
-                    if (name == null)
+                    if (TryFetchCard(value))
                         return;
 
-                    // WHISPER データベースからカード情報を取得
-                    if (App.Cards.TryGetValue(name, out var card))
-                    {
-                        if (!foundCards.Contains(card))
-                        {
-                            foundCards.Add(card);
-
-                            // 両面カードの場合に、Preview Pane に片面だけ表示されていても、もう一方の面を表示するようにする
-                            if (card.RelatedCardName != null)
-                            {
-                                foreach (string relatedName in card.RelatedCardNames)
-                                {
-                                    App.Cards.TryGetValue(relatedName, out var card2);
-
-                                    if (!foundCards.Contains(card2))
-                                        foundCards.Add(card2);
-                                }
-                            }
-                        }
-                    }
-                    else
-                    {
-                        // 英雄譚の絵師かもしれない場合
-                        if (Card.GetSagaByArtist(name, out string saga))
-                        {
-                            if (CheckAndViewSaga(saga))
-                                return;
-                        }
-
-                        // アルティメットマスターズのフルアート版
-                        if (Card.CheckIfUltimateBoxToppers(name, out string umaCardName))
-                        {
-                            if (App.Cards.TryGetValue(umaCardName, out var umaCard))
-                            {
-                                ViewModel.InvokeSetCard(card);
-                                return;
-                            }
-                        }
-
-                        if (!isToken && name.StartsWith("Token"))
-                            isToken = true;
-                    }
+                    if (!isToken && value.StartsWith("Token"))
+                        isToken = true;
                 }
 
-                // 設定によっては基本土地 5 種の場合に表示を変えないようにする
-                if (!ViewModel.ShowBasicLands && foundCards.Count == 1)
-                {
-                    switch (foundCards[0].Name)
-                    {
-                        case "Plains":
-                        case "Island":
-                        case "Swamp":
-                        case "Mountain":
-                        case "Forest":
-                            return;
-                    }
-                }
-
-                // 汎用のトークン
-                if (foundCards.Count == 0 && isToken)
-                {
+                // 一通り探して、カード名が見つからず、トークンであることが分かった場合
+                if (isToken)
                     ViewModel.InvokeSetMessage("トークン");
-                    return;
-                }
-                ViewModel.InvokeSetCards(foundCards);
             }
 
             /// <summary>
@@ -199,8 +137,12 @@ namespace Mojp
             /// </summary>
             public void Release()
             {
+                eventCacheReq = null;
                 cacheReq = null;
-                condition = null;
+                previewWndCondition1 = null;
+                previewWndCondition2 = null;
+                textBlockCondition = null;
+                cardTypeCondition = null;
                 ReleaseAutomationElement();
             }
 
@@ -214,80 +156,186 @@ namespace Mojp
                     return;
 
                 string name = GetNamePropertyValue(sender as AutomationElement);
-                //Debug.WriteLineIf(!string.IsNullOrWhiteSpace(name), name);
-
-                // キャッシュ無効化時
-                if (name == null)
-                    return;
-
-                // 新しいテキストがカード名かどうかを調べ、そうでないなら不必要な全体検索をしないようにする
-                // トークンの場合は、カード名を含むとき (= コピートークン) と含まないとき (→ 空表示にする) とがあるので検索を続行する
-                if (!App.Cards.ContainsKey(name) && !name.StartsWith("Token"))
-                {
-                    string cardType = null;
-                    const string triggerPrefix = "Triggered ability from ";
-
-                    // 統治者以外の紋章やテキストレスのヴァンガードの場合は、確定で空表示にする
-                    if (name.StartsWith("Emblem") && name != "Emblem - ")
-                        cardType = "紋章";
-                    else if (name.StartsWith("Avatar - "))
-                        cardType = "ヴァンガード";
-                    else if (name.StartsWith(triggerPrefix))
-                    {
-                        // スタックにのった英雄譚からの誘発型能力
-                        name = name.Substring(triggerPrefix.Length);
-
-                        if (App.Cards.TryGetValue(name, out var card))
-                        {
-                            ViewModel.InvokeSetCard(card);
-                            return;
-                        }
-                    }
-                    else if (Card.GetSagaByArtist(name, out string saga))
-                    {
-                        // 英雄譚はカード名を Automation で探せないため、アーティスト名で 1:1 対応で探す
-                        if (CheckAndViewSaga(saga))
-                            return;
-                    }
-                    else if (Card.CheckIfUltimateBoxToppers(name, out string umaCardName))
-                    {
-                        // アルティメットマスターズのフルアート版もカード名で探せないので、カード番号で区別する
-                        // HACK: U01 / 40 みたいな文字が他に出ない前提。念のために UMA のセット記号を確認するかどうか
-                        if (App.Cards.TryGetValue(umaCardName, out var umaCard))
-                        {
-                            ViewModel.InvokeSetCard(umaCard);
-                            return;
-                        }
-                    }
-
-                    if (cardType != null)
-                        ViewModel.InvokeSetMessage(cardType);
-
-                    return;
-                }
-                Debug.WriteLine(name);
 #if DEBUG
                 Debug.WriteLine("Automation event handlers (NameChanged) = " +
                     (GetListeners()?.Count).GetValueOrDefault() + " @ T" + Thread.CurrentThread.ManagedThreadId);
 #endif
 
-                SearchCardName();
+                // キャッシュ無効化時
+                if (name == null)
+                    return;
+
+                Debug.WriteLine("NameChanged: " + name);
+
+                if (TryFetchCard(name))
+                    return;
+
+                // コピートークンでない普通のトークンである可能性があるので、全体走査する
+                if (name.StartsWith("Token"))
+                    SearchCardName();
+            }
+
+            /// <summary>
+            /// Preview Pane に含まれる TextBlock 要素の値を列挙します。
+            /// </summary>
+            private IEnumerable<string> IterateTextBlocks()
+            {
+                AutomationElementCollection elements = null;
+                try
+                {
+                    using (cacheReq.Activate())
+                        elements = previewWnd?.FindAll(TreeScope.Descendants, textBlockCondition);
+                }
+                catch { Debug.WriteLine("TextBlock 要素の全取得に失敗しました。"); }
+
+                if (elements == null)
+                    yield break;
+
+                // 一連のテキストからカード名を探す
+                for (int i = 0; i < elements.Count; i++)
+                {
+                    string name = GetNamePropertyValue(elements[i]);
+
+                    // キャッシュ無効化時
+                    if (name == null)
+                        yield break;
+
+                    Debug.WriteLine("FindAll: " + name);
+                    yield return name;
+                }
+            }
+
+            /// <summary>
+            /// 指定した文字列がカード名を指定しているかどうかを調べ、そうならばカードを表示します。
+            /// </summary>
+            private bool TryFetchCard(string value)
+            {
+                // WHISPER データベースからカード情報を取得
+                if (App.Cards.TryGetValue(value, out var card))
+                {
+                    Debug.WriteLine(value);
+
+                    // 設定によっては基本土地 5 種の場合に表示を変えないようにする
+                    if (!ViewModel.ShowBasicLands)
+                    {
+                        switch (value)
+                        {
+                            case "Plains":
+                            case "Island":
+                            case "Swamp":
+                            case "Mountain":
+                            case "Forest":
+                                return true;
+                        }
+                    }
+
+                    // 見つかったカードが現在表示されているカードコレクションに含まれていないなら置き換える
+                    var currentCards = ViewModel.Cards;
+
+                    if (currentCards == null)
+                    {
+                        ViewModel.InvokeSetCard(card);
+                    }
+                    else if (!currentCards.Contains(card))
+                    {
+                        // 一部の Lv カードで、キーワード能力と同名のカードの名前が検出される問題を回避
+                        if ((card.Name == "Lifelink" && IsKeywordName("Transcendent Master")) ||
+                            (card.Name == "Vigilance" && IsKeywordName("Ikiral Outrider")))
+                        {
+                            return true;
+                        }
+                        ViewModel.InvokeSetCard(card);
+                    }
+                    return true;
+                }
+
+                // アルティメットマスターズのフルアート版
+                if (Card.CheckIfUltimateBoxToppers(value, out string umaCardName))
+                {
+                    Debug.WriteLine(value + " => " + umaCardName);
+
+                    // アルティメットマスターズのフルアート版もカード名で探せないので、カード番号で区別する
+                    // HACK: U01 / 40 みたいな文字が他に出ない前提。念のために UMA のセット記号を確認するかどうか
+                    if (App.Cards.TryGetValue(umaCardName, out var umaCard))
+                    {
+                        ViewModel.InvokeSetCard(umaCard);
+                        return true;
+                    }
+                }
+
+                // 英雄譚
+                if (Card.GetSagaByArtist(value, out string saga))
+                {
+                    Debug.WriteLine(value + " => " + saga);
+
+                    // 英雄譚はカード名を Automation で探せないため、アーティスト名で 1:1 対応で探す
+                    if (ValidateAndViewSaga(saga))
+                        return true;
+                }
+
+                // 英雄譚の誘発型能力
+                const string triggerPrefix = "Triggered ability from ";
+                if (value.StartsWith(triggerPrefix))
+                {
+                    value = value.Substring(triggerPrefix.Length);
+                    Debug.WriteLine(value);
+
+                    if (App.Cards.TryGetValue(value, out var sagaCard))
+                    {
+                        ViewModel.InvokeSetCard(sagaCard);
+                        return true;
+                    }
+                }
+
+                // 紋章
+                if (value.StartsWith("Emblem") && value != "Emblem - ")
+                {
+                    ViewModel.InvokeSetMessage("紋章");
+                    Debug.WriteLine(value);
+                    return true;
+                }
+
+                // ヴァンガード
+                if (value.StartsWith("Avatar - "))
+                {
+                    ViewModel.InvokeSetMessage("ヴァンガード");
+                    Debug.WriteLine(value);
+                    return true;
+                }
+                return false;
+            }
+
+            /// <summary>
+            /// 見つかったカード名が、Lv カードに含まれるキーワード能力と同じかどうかを調べます。
+            /// </summary>
+            private bool IsKeywordName(string lvCardName)
+            {
+                foreach (string value in IterateTextBlocks())
+                {
+                    if (value == lvCardName)
+                        return true;
+                }
+                return false;
             }
 
             /// <summary>
             /// 現在のカードのカードタイプが英雄譚であるかどうかをチェックし、そうであるなら、指定したカード名のカードを表示します。
             /// </summary>
-            private bool CheckAndViewSaga(string cardName)
+            private bool ValidateAndViewSaga(string cardName)
             {
                 if (App.Cards.TryGetValue(cardName, out var foundCard))
                 {
                     // Automation ID が CardType の値を調べて、英雄譚かどうかをチェックする
                     AutomationElement element = null;
-                    using (cacheReq.Activate())
+                    try
                     {
-                        element = previewWnd?.FindFirst(TreeScope.Descendants,
-                            new PropertyCondition(AutomationElement.AutomationIdProperty, "CardType"));
+                        using (cacheReq.Activate())
+                        {
+                            element = previewWnd?.FindFirst(TreeScope.Descendants, cardTypeCondition);
+                        }
                     }
+                    catch { Debug.WriteLine("CardType 要素の取得に失敗しました。"); }
+
                     string cardType = GetNamePropertyValue(element);
 
                     if (cardType != null && cardType.EndsWith("Saga"))

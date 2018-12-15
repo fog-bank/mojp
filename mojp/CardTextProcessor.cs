@@ -654,33 +654,33 @@ namespace Mojp
                     replacedNodes.Add(node.PreviousNode);
                 }
 
-                var card = FromXml(node);
-                Debug.WriteLineIf(card.RelatedCardName != null && !card.RelatedCardNames.All(cards.ContainsKey), card.Name + " の関連カードが見つかりません。");
-                Debug.WriteLineIf(!cardNamesToReplace.Add(card.Name), card.Name + " のテキスト置換を複数回行おうとしています。");
+                var newCard = FromXml(node);
+                Debug.WriteLineIf(newCard.RelatedCardName != null && !newCard.RelatedCardNames.All(cards.ContainsKey), newCard.Name + " の関連カードが見つかりません。");
+                Debug.WriteLineIf(!cardNamesToReplace.Add(newCard.Name), newCard.Name + " のテキスト置換を複数回行おうとしています。");
 
-                if (cards.ContainsKey(card.Name))
+                if (cards.TryGetValue(newCard.Name, out var oldCard))
                 {
-                    if (card.EqualsStrict(cards[card.Name]))
+                    if (newCard.EqualsStrict(oldCard))
                     {
                         // WHISPER が対応した場合に appendix.xml から外したい
-                        identicalNodes.Add(new XElement("card", new XAttribute("name", card.Name)));
-                        Debug.WriteLine(card.Name + " は置換する必要がありません。");
+                        identicalNodes.Add(new XElement("card", new XAttribute("name", newCard.Name)));
+                        Debug.WriteLine(newCard.Name + " は置換する必要がありません。");
                     }
                     else
                     {
                         // 置換後と置換前で diff できるようにしたい
-                        beforeNodes.Add(cards[card.Name].ToXml());
+                        beforeNodes.Add(oldCard.ToXml());
                         replacedNodes.Add(node);
-                        cards[card.Name] = card;
+                        cards[newCard.Name] = newCard;
 
-                        var cloneCard = card.Clone();
+                        var cloneCard = newCard.Clone();
                         foreach (var tup in regexes)
                             Debug.WriteLineIf(ReplaceByRegex(cloneCard, tup.Item1, tup.Item2, tup.Item3), 
-                                card.Name + " には正規表現による検索（" + tup.Item2 + "）に一致する箇所があります。");
+                                newCard.Name + " には正規表現による検索（" + tup.Item2 + "）に一致する箇所があります。");
                     }
                 }
                 else
-                    Debug.WriteLine("置換先となる " + card.Name + " のカード情報がありません。");
+                    Debug.WriteLine("置換先となる " + newCard.Name + " のカード情報がありません。");
             }
 
             // カードタイプだけ書き換え
@@ -699,13 +699,27 @@ namespace Mojp
                     }
                     else
                     {
-                        beforeNodes.Add(new XElement("type", new XAttribute("name", name), new XAttribute("type", cards[card.Name].Type)));
+                        beforeNodes.Add(new XElement("type", new XAttribute("name", name), new XAttribute("type", card.Type)));
                         replacedNodes.Add(node);
-                        cards[card.Name].Type = type;
+                        card.Type = type;
                     }
                 }
                 else
                     Debug.WriteLine("カードタイプの置換先となる " + name + " のカード情報がありません。");
+            }
+
+            // 関連カードだけ書き換え
+            foreach (var node in doc.Root.Element("replace").Elements("related"))
+            {
+                string name = (string)node.Attribute("name");
+
+                if (cards.TryGetValue(name, out var card))
+                {
+                    card.RelatedCardName = (string)node.Attribute("related");
+                    Debug.WriteLineIf(card.RelatedCardName != null && !card.RelatedCardNames.All(cards.ContainsKey), card.Name + " に追加される関連カードが見つかりません。");
+                }
+                else
+                    Debug.WriteLine("関連カード情報の追加先となる " + name + " のカード情報がありません。");
             }
 
             var beforeRoot = new XElement("mojp", beforeNodes);
