@@ -206,7 +206,7 @@ namespace Mojp
             }
 
             /// <summary>
-            /// 指定した文字列がカード名を指定しているかどうかを調べ、そうならばカードを表示します。
+            /// 指定した文字列がカード名を意味しているかどうかを調べ、そうならばカードを表示します。
             /// </summary>
             private bool TryFetchCard(string value)
             {
@@ -238,9 +238,11 @@ namespace Mojp
                     }
                     else if (!currentCards.Contains(card))
                     {
-                        // 一部の Lv カードで、キーワード能力と同名のカードの名前が検出される問題を回避
+                        // 一部の Lv カードで、キーワード能力と同名のカードの名前が検出される問題や、
+                        // ウギンの運命プロモカードで Catch+Release が表示されてしまう問題を回避
                         if ((card.Name == "Lifelink" && IsKeywordName("Transcendent Master")) ||
-                            (card.Name == "Vigilance" && IsKeywordName("Ikiral Outrider")))
+                            (card.Name == "Vigilance" && IsKeywordName("Ikiral Outrider")) ||
+                            (card.Name == "Release" && IsUginFatePromo()))
                         {
                             return true;
                         }
@@ -316,6 +318,32 @@ namespace Mojp
                         return true;
                 }
                 return false;
+            }
+
+            /// <summary>
+            /// 現在のカードがウギンの運命プロモカードであるかどうかを調べます。
+            /// </summary>
+            /// <returns></returns>
+            private bool IsUginFatePromo()
+            {
+                bool isPromo = false;
+                bool containsCatch = false;
+
+                foreach (string value in IterateTextBlocks())
+                {
+                    switch (value)
+                    {
+                        case "PRM":
+                            isPromo = true;
+                            break;
+
+                        // 分割カード Catch+Release ではない
+                        case "Catch":
+                            containsCatch = true;
+                            break;
+                    }
+                }
+                return isPromo && !containsCatch;
             }
 
             /// <summary>
