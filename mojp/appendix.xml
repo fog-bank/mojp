@@ -18,6 +18,8 @@
     <card name="Aeromunculus" jaName="エアロムンクルス" type="クリーチャー ― ホムンクルス・ミュータント" pt="2/3">飛行
 (２)(緑)(青)：順応１を行う。（このクリーチャーの上に+1/+1カウンターが置かれていないなら、これの上に+1/+1カウンターを１個置く。）</card>
     <card name="Bedevil" jaName="魔性" type="インスタント">アーティファクト１つかクリーチャー１体かプレインズウォーカー１体を対象とし、それを破壊する。</card>
+    <card name="Emergency Powers" jaName="有事の力" type="インスタント">各プレイヤーはそれぞれ、自分の手札と墓地を自分のライブラリーに加えて切り直し、その後カードを７枚引く。有事の力を追放する。
+附則 ― あなたがこの呪文をあなたのメイン・フェイズ中に唱えていたなら、あなたはあなたの手札から点数で見たマナ・コストが７以下のパーマネント・カード１枚を戦場に出してもよい。</card>
     <card name="Frenzied Arynx" jaName="激情のエイリンクス" type="クリーチャー ― 猫・ビースト" pt="3/3">暴動（このクリーチャーは+1/+1カウンター１個か速攻のうちあなたが選んだ１つを持った状態で戦場に出る。）
 トランプル
 (４)(赤)(緑)：ターン終了時まで、激情のエイリンクスは+3/+0の修整を受ける。</card>
@@ -36,9 +38,14 @@
     <card name="Simic Ascendancy" jaName="シミックの隆盛" type="エンチャント">(１)(緑)(青)：あなたがコントロールしているクリーチャー１体を対象とし、それの上に+1/+1カウンターを１個置く。
 あなたがコントロールしているクリーチャー１体の上に+1/+1カウンターが１個以上置かれるたび、その個数に等しい数の成長カウンターをシミックの隆盛の上に置く。
 あなたのアップキープの開始時に、シミックの隆盛の上に成長カウンターが２０個以上置かれている場合、あなたはこのゲームに勝利する。</card>
+    <card name="Sphinx's Insight" jaName="スフィンクスの眼識" type="インスタント">カードを２枚引く。
+附則 ― あなたがこの呪文をあなたのメイン・フェイズ中に唱えていたなら、あなたは２点のライフを得る。</card>
     <card name="Zegana, Utopian Speaker" jaName="楽園党の議長、ゼガーナ" type="伝説のクリーチャー ― マーフォーク・ウィザード" pt="4/4">楽園党の議長、ゼガーナが戦場に出たとき、あなたが+1/+1カウンターが置かれた他のクリーチャーをコントロールしている場合、カードを１枚引く。
 (４)(緑)(青)：順応４を行う。（このクリーチャーの上に+1/+1カウンターが置かれていないなら、これの上に+1/+1カウンターを４個置く。）
 あなたがコントロールしていて+1/+1カウンターが置かれている各クリーチャーはそれぞれトランプルを持つ。</card>
+    
+    <card name="Incubation" jaName="孵化" type="ソーサリー" related="Incongruity" wikilink="孵化+不和/Incubation+Incongruity">あなたのライブラリーの一番上からカードを５枚見る。あなたはその中からクリーチャー・カード１枚を公開してあなたの手札に加えてもよい。残りをあなたのライブラリーの一番下に無作為の順番で置く。</card>
+    <card name="Incongruity" jaName="不和" type="インスタント" related="Incubation" wikilink="孵化+不和/Incubation+Incongruity">クリーチャー１体を対象とし、それを追放する。そのクリーチャーのコントローラーは、緑の3/3のカエル・トカゲ・クリーチャー・トークンを１体生成する。</card>
 
     <card name="Gate Colossus" jaName="門の巨像" type="アーティファクト・クリーチャー ― 構築物" pt="8/8">この呪文を唱えるためのコストは、あなたがコントロールしている門１つにつき(１)少なくなる。
 門の巨像は、パワーが２以下のクリーチャーによってはブロックされない。
@@ -723,6 +730,9 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <wikilink name="Resurgence" wikilink="反応+反正/Response+Resurgence" />
     <wikilink name="Status" wikilink="席次+石像/Status+Statue" />
     <wikilink name="Statue" wikilink="席次+石像/Status+Statue" />
+    <!-- 分割カード (RNA) -->
+    <wikilink name="Incubation" wikilink="孵化+不和/Incubation+Incongruity" />
+    <wikilink name="Incongruity" wikilink="孵化+不和/Incubation+Incongruity" />
     <!-- その他のリンク修正 -->
     <wikilink name="Captivating Vampire" wikilink="蟲惑的な吸血鬼/Captivating Vampire" />
   </add>
