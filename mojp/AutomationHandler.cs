@@ -13,6 +13,7 @@ namespace Mojp
         /// </summary>
         private class AutomationHandler
         {
+            private Process mtgoProc;
             private AutomationElement previewWnd;
             private CacheRequest eventCacheReq = new CacheRequest();
             private CacheRequest cacheReq = new CacheRequest();
@@ -55,11 +56,17 @@ namespace Mojp
                 var currentPreviewWnd = previewWnd;
 
                 // MO のプロセス ID を取得する
-                if (!App.GetProcessIDByName("mtgo", out int mtgoProcessID))
+                if (mtgoProc == null || mtgoProc.HasExited)
                 {
-                    ReleaseAutomationElement();
-                    ViewModel.InvokeSetMessage("起動中のプロセスの中に MO が見つかりません。");
-                    return;
+                    mtgoProc?.Dispose();
+                    mtgoProc = App.GetProcessByName("mtgo");
+
+                    if (mtgoProc == null)
+                    {
+                        ReleaseAutomationElement();
+                        ViewModel.InvokeSetMessage("起動中のプロセスの中に MO が見つかりません。");
+                        return;
+                    }
                 }
 
                 // "Preview" という名前のウィンドウを探す (なぜかルートの子で見つかる)
@@ -68,7 +75,7 @@ namespace Mojp
                 {
                     newPreviewWnd = AutomationElement.RootElement.FindFirst(TreeScope.Children,
                         new AndCondition(
-                            new PropertyCondition(AutomationElement.ProcessIdProperty, mtgoProcessID),
+                            new PropertyCondition(AutomationElement.ProcessIdProperty, mtgoProc.Id),
                             previewWndCondition1, previewWndCondition2));
                 }
                 catch { Debug.WriteLine("Preview Pane の取得に失敗しました。"); }
@@ -137,6 +144,8 @@ namespace Mojp
             /// </summary>
             public void Release()
             {
+                mtgoProc.Dispose();
+                mtgoProc = null;
                 eventCacheReq = null;
                 cacheReq = null;
                 previewWndCondition1 = null;

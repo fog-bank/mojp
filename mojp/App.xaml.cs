@@ -165,26 +165,21 @@ namespace Mojp
         }
 
         /// <summary>
-        /// 指定した名前のプロセスを探し、そのプロセス ID を取得します。
+        /// 指定した名前のプロセスを探し、最初に見つかった <see cref="Process"/> オブジェクトを返します。
         /// </summary>
         /// <param name="processName">プロセスの名前。</param>
-        /// <param name="id">取得したプロセス ID 。</param>
-        /// <returns>プロセスが見つかった場合は <see langword="true"/> 。</returns>
-        public static bool GetProcessIDByName(string processName, out int id)
+        public static Process GetProcessByName(string processName)
         {
+            Process targetProc = null;
+
             foreach (var proc in Process.GetProcesses())
             {
-                using (proc)
-                {
-                    if (string.Equals(proc.ProcessName, processName, StringComparison.OrdinalIgnoreCase))
-                    {
-                        id = proc.Id;
-                        return true;
-                    }
-                }
+                if (targetProc == null && string.Equals(proc.ProcessName, processName, StringComparison.OrdinalIgnoreCase))
+                    targetProc = proc;
+                else
+                    proc.Dispose();
             }
-            id = 0;
-            return false;
+            return targetProc;
         }
 
         protected override void OnStartup(StartupEventArgs e)
