@@ -145,7 +145,7 @@ namespace Mojp
         /// <summary>
         /// 指定した文字列が Ultimate Box Toppers のカード番号であるかどうかを調べ、対応するカード名を返します。
         /// </summary>
-        public static bool CheckIfUltimateBoxToppers(string value, out string cardname)
+        public static bool IsUltimateBoxToppers(string value, out string cardname)
         {
             cardname = null;
 

@@ -215,72 +215,51 @@ namespace Mojp
             }
 
             /// <summary>
+            /// 指定したテキストが Preview Pane に含まれているどうかを調べます。
+            /// </summary>
+            private bool ContainsText(string text)
+            {
+                foreach (string value in IterateTextBlocks())
+                {
+                    if (value == text)
+                        return true;
+                }
+                return false;
+            }
+
+            /// <summary>
             /// 指定した文字列がカード名を意味しているかどうかを調べ、そうならばカードを表示します。
             /// </summary>
+            /// <returns>指定した文字列がカード名を指すものだった場合は true 。</returns>
             private bool TryFetchCard(string value)
             {
-                // WHISPER データベースからカード情報を取得
                 if (App.Cards.TryGetValue(value, out var card))
                 {
-                    Debug.WriteLine(value);
-
-                    // 設定によっては基本土地 5 種の場合に表示を変えないようにする
-                    if (!ViewModel.ShowBasicLands)
-                    {
-                        switch (value)
-                        {
-                            case "Plains":
-                            case "Island":
-                            case "Swamp":
-                            case "Mountain":
-                            case "Forest":
-                                return true;
-                        }
-                    }
-
-                    // 見つかったカードが現在表示されているカードコレクションに含まれていないなら置き換える
-                    var currentCards = ViewModel.Cards;
-
-                    if (currentCards == null)
-                    {
-                        ViewModel.InvokeSetCard(card);
-                    }
-                    else if (!currentCards.Contains(card))
-                    {
-                        // 一部の Lv カードで、キーワード能力と同名のカードの名前が検出される問題や、
-                        // ウギンの運命プロモカードで Catch+Release が表示されてしまう問題を回避
-                        if ((card.Name == "Lifelink" && IsKeywordName("Transcendent Master")) ||
-                            (card.Name == "Vigilance" && IsKeywordName("Ikiral Outrider")) ||
-                            (card.Name == "Release" && IsUginFatePromo()))
-                        {
-                            return true;
-                        }
-                        ViewModel.InvokeSetCard(card);
-                    }
+                    ViewCard(card);
                     return true;
                 }
 
                 // アルティメットマスターズのフルアート版
-                if (Card.CheckIfUltimateBoxToppers(value, out string umaCardName))
+                if (Card.IsUltimateBoxToppers(value, out string cardName))
                 {
-                    Debug.WriteLine(value + " => " + umaCardName);
+                    Debug.WriteLine(value + " => " + cardName);
 
-                    // アルティメットマスターズのフルアート版もカード名で探せないので、カード番号で区別する
+                    // アルティメットマスターズのフルアート版はカード名で探せないので、カード番号で区別する
                     // HACK: U01 / 40 みたいな文字が他に出ない前提。念のために UMA のセット記号を確認するかどうか
-                    if (App.Cards.TryGetValue(umaCardName, out var umaCard))
+                    if (App.Cards.TryGetValue(cardName, out card))
                     {
-                        ViewModel.InvokeSetCard(umaCard);
+                        ViewModel.InvokeSetCard(card);
                         return true;
                     }
                 }
 
-                // 英雄譚
-                if (Card.GetSagaByArtist(value, out string saga))
+                // 英雄譚 (カード名を Automation で探せないため、アーティスト名で 1:1 対応として探す)
+                if (Card.GetSagaByArtist(value, out cardName))
                 {
-                    Debug.WriteLine(value + " => " + saga);
+                    Debug.WriteLine(value + " => " + cardName);
 
-                    // 英雄譚はカード名を Automation で探せないため、アーティスト名で 1:1 対応で探す
-                    if (ValidateAndViewSaga(saga))
+                    // 十分条件として、カードタイプが Saga であることをチェック
+                    if (ValidateAndViewSaga(cardName))
                         return true;
                 }
 
@@ -291,9 +270,9 @@ namespace Mojp
                     value = value.Substring(triggerPrefix.Length);
                     Debug.WriteLine(value);
 
-                    if (App.Cards.TryGetValue(value, out var sagaCard))
+                    if (App.Cards.TryGetValue(value, out card))
                     {
-                        ViewModel.InvokeSetCard(sagaCard);
+                        ViewModel.InvokeSetCard(card);
                         return true;
                     }
                 }
@@ -317,16 +296,59 @@ namespace Mojp
             }
 
             /// <summary>
-            /// 見つかったカード名が、Lv カードに含まれるキーワード能力と同じかどうかを調べます。
+            /// 見つかったカードに基づき、いくつかの例外をチェックしたのち、<see cref="Cards"/> コレクションを更新するようにします。
             /// </summary>
-            private bool IsKeywordName(string lvCardName)
+            private void ViewCard(Card card)
             {
-                foreach (string value in IterateTextBlocks())
+                Debug.WriteLine(card.Name);
+
+                // 設定によっては基本土地 5 種の場合に表示を変えないようにする
+                if (!ViewModel.ShowBasicLands)
                 {
-                    if (value == lvCardName)
-                        return true;
+                    switch (card.Name)
+                    {
+                        case "Plains":
+                        case "Island":
+                        case "Swamp":
+                        case "Mountain":
+                        case "Forest":
+                            return;
+                    }
                 }
-                return false;
+
+                // 見つかったカードが現在表示されているカードコレクションに含まれているかどうかを調べる
+                var currentCards = ViewModel.Cards;
+                if (currentCards != null)
+                {
+                    // 現在表示されているカードコレクションに含まれている場合、どれをマウスオーバーしているかをはっきりさせるため、
+                    // Preview Pane 内で最初に出現するカード名を取得する
+                    if (currentCards.Contains(card))
+                    {
+                        foreach (string value2 in IterateTextBlocks())
+                        {
+                            if (App.Cards.TryGetValue(value2, out card))
+                            {
+                                if (currentCards[0] != card)
+                                    ViewModel.InvokeSetCard(card);
+
+                                return;
+                            }
+                        }
+                        return;
+                    }
+
+                    // 一部の Lv カードで、キーワード能力と同名のカードの名前が検出される問題や、
+                    // ウギンの運命プロモカードで Catch+Release が表示されてしまう問題を回避
+                    if ((card.Name == "Lifelink" && ContainsText("Transcendent Master")) ||
+                        (card.Name == "Vigilance" && ContainsText("Ikiral Outrider")) ||
+                        (card.Name == "Release" && IsUginFatePromo()))
+                    {
+                        return;
+                    }
+                }
+
+                // ふつうのカード
+                ViewModel.InvokeSetCard(card);
             }
 
             /// <summary>
@@ -346,7 +368,7 @@ namespace Mojp
                             isPromo = true;
                             break;
 
-                        // 分割カード Catch+Release ではない
+                        // Catch があれば、"Release" はプロモを指すテキストではなく、分割カード Catch+Release である
                         case "Catch":
                             containsCatch = true;
                             break;
