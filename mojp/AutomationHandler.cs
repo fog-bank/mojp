@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Reflection;
 using System.Threading;
@@ -158,24 +159,31 @@ namespace Mojp
             /// <summary>
             /// 変更された要素名がカード名かどうかを調べます。
             /// </summary>
-            /// <remarks>AutomationPropertyChangedEventHandler は UI スレッドとは別スレッドで動いている</remarks>
+            /// <remarks>AutomationPropertyChangedEventHandler は UI スレッドとは別スレッドで動いている。</remarks>
             private void OnAutomaionNamePropertyChanged(object sender, AutomationPropertyChangedEventArgs e)
             {
-                if (previewWnd == null)
-                    return;
-
-                string name = GetNamePropertyValue(sender as AutomationElement);
 #if DEBUG
-                Debug.WriteLine("Automation event handlers (NameChanged) = " +
-                    (GetListeners()?.Count).GetValueOrDefault() + " @ T" + Thread.CurrentThread.ManagedThreadId);
+                int listenerCount = (GetListeners()?.Count).GetValueOrDefault();
+                if (listenerCount != 1)
+                {
+                    Debug.WriteLine("Automation event handlers (NameChanged) = " +
+                        listenerCount + " @ T" + Thread.CurrentThread.ManagedThreadId);
+                }
 #endif
-
-                // キャッシュ無効化時
-                if (name == null)
+                // CacheRequest で TreeFilter を設定しても、イベントは発生するらしく、代わりに sender が null になっている模様
+                if (previewWnd == null || sender == null)
                     return;
 
-                Debug.WriteLine("NameChanged: " + name);
+                //string name = GetNamePropertyValue(sender as AutomationElement);
+                Debug.Assert(!string.IsNullOrEmpty(GetNamePropertyValue(sender as AutomationElement)));
 
+                string name = Card.NormalizeName(e.NewValue as string);
+
+                if (string.IsNullOrEmpty(name))
+                    return;
+
+                Debug.WriteLine("[NameChanged] " + name.Replace(Environment.NewLine, "\\n"));
+                
                 if (TryFetchCard(name))
                     return;
 
@@ -209,7 +217,7 @@ namespace Mojp
                     if (name == null)
                         yield break;
 
-                    Debug.WriteLine("FindAll: " + name);
+                    Debug.WriteLine("[FindAll] " + name.Replace(Environment.NewLine, "\\n"));
                     yield return name;
                 }
             }
@@ -231,6 +239,7 @@ namespace Mojp
             /// 指定した文字列がカード名を意味しているかどうかを調べ、そうならばカードを表示します。
             /// </summary>
             /// <returns>指定した文字列がカード名を指すものだった場合は true 。</returns>
+            /// <remarks>無限ループになる可能性があるので、<see cref="SearchCardName"/> メソッドは呼ばないこと。</remarks>
             private bool TryFetchCard(string value)
             {
                 if (App.Cards.TryGetValue(value, out var card))
