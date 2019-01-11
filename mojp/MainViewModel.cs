@@ -24,7 +24,7 @@ namespace Mojp
         {
             SetMessage(AutoRefresh ?
                 "MO の Preview Pane を探しています" :
-                "MO の Preview Pane を表示させた状態で、右上のカメラアイコンのボタンを押してください");
+                "MO の Preview Pane を表示させた状態で、右クリックから「MO を探す」を選択してください。");
 
             CaptureCommand = new CaptureCommand(this);
             CopyCardNameCommand = new CopyCardNameCommand(this);

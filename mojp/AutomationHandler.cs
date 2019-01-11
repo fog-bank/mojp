@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Reflection;
 using System.Threading;
 using System.Windows.Automation;
@@ -54,6 +55,16 @@ namespace Mojp
             /// </summary>
             public void CapturePreviewPane()
             {
+                if (App.Cards.Count == 0)
+                {
+                    ViewModel.InvokeSetMessage(
+                        "同梱のカードテキストデータ (cards.xml) を取得できません。" +
+                        "セキュリティ対策ソフトによってブロックされている可能性があります。" +
+                        Environment.NewLine + "[場所] " + 
+                        Path.Combine(Path.GetDirectoryName(typeof(App).Assembly.Location), "cards.xml"));
+                    return;
+                }
+
                 var currentPreviewWnd = previewWnd;
 
                 // MO のプロセス ID を取得する
@@ -145,7 +156,7 @@ namespace Mojp
             /// </summary>
             public void Release()
             {
-                mtgoProc.Dispose();
+                mtgoProc?.Dispose();
                 mtgoProc = null;
                 eventCacheReq = null;
                 cacheReq = null;

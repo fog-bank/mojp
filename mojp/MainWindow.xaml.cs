@@ -35,6 +35,9 @@ namespace Mojp
 
         internal void ShowPDMessage(GetPDListResult result)
         {
+            if (App.Cards.Count == 0)
+                result = GetPDListResult.NoCheck;
+
             switch (result)
             {
                 case GetPDListResult.New:
