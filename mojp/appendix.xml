@@ -28,7 +28,6 @@
 終了ステップの開始時に、このクリーチャーを生け贄に捧げる。</card>
     <card name="Marit Lage" jaName="マリット・レイジ" type="トークン・伝説のクリーチャー ― アバター" pt="20/20" related="Dark Depths">飛行、破壊不能</card>
     <card name="Minor Demon" jaName="マイナー・デーモン" type="トークン・クリーチャー ― デーモン" pt="1/1" related="Boris Devilboon"></card>
-    <card name="Mowu" jaName="Mowu" type="トークン・伝説のクリーチャー ― 猟犬" pt="3/3" related="Jiang Yanggu"></card>
     <card name="Ragavan" jaName="ラガバン" type="トークン・伝説のクリーチャー ― 猿" pt="2/1" related="Kari Zev, Skyship Raider"></card>
     <card name="Stangg Twin" jaName="スタングの双子" type="トークン・伝説のクリーチャー ― 人間・戦士" pt="3/4" related="Stangg"></card>
     <card name="Tombspawn" jaName="屍鬼" type="トークン・クリーチャー ― ゾンビ" pt="2/2" related="Tombstone Stairwell">速攻</card>
@@ -124,6 +123,7 @@ Heavenly Qilinが攻撃するたび、あなたがコントロールしている
     <card name="Jiang Yanggu" jaName="Jiang Yanggu" type="伝説のプレインズウォーカー ― Yanggu" pt="4">[+1]：クリーチャー１体を対象とする。ターン終了時まで、それは+2/+2の修整を受ける。
 [-1]：あなたが《Mowu》という名前のクリーチャーをコントロールしていないなら、《Mowu》という名前の緑の3/3の伝説の猟犬・クリーチャー・トークンを１体生成する。
 [-5]：クリーチャー１体を対象とする。ターン終了時まで、それはトランプルを得て+X/+Xの修整を受ける。Ｘはあなたがコントロールしている土地の総数に等しい。</card>
+    <card name="Mowu" jaName="Mowu" type="トークン・伝説のクリーチャー ― 猟犬" pt="3/3" related="Jiang Yanggu"></card>
     <card name="Leopard-Spotted Jiao" jaName="Leopard-Spotted Jiao" type="クリーチャー ― ビースト" pt="3/1"></card>
     <card name="Feiyi Snake" jaName="Feiyi Snake" type="クリーチャー ― 蛇" pt="2/1">到達（このクリーチャーは飛行を持つクリーチャーをブロックできる。）</card>
     <card name="Sacred White Deer" jaName="Sacred White Deer" type="クリーチャー ― 大鹿" pt="2/2">(３)(緑),(Ｔ)：あなたは４点のライフを得る。この能力は、あなたがYanggu・プレインズウォーカーをコントロールしているときにのみ起動できる。</card>
@@ -490,6 +490,10 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <related name="Sphinx's Herald" related="Sphinx Sovereign" />
     <related name="Urborg Panther" related="Feral Shadow|Breathstealer|Spirit of the Night" />
     <related name="Walker of the Wastes" related="Wastes" />
+    <!-- 関連カード (合体) -->
+    <related name="Gisela, the Broken Blade" related="Bruna, the Fading Light|Brisela, Voice of Nightmares" />
+    <related name="Graf Rats" related="Midnight Scavengers|Chittering Host" />
+    <related name="Hanweir Battlements" related="Hanweir Garrison|Hanweir, the Writhing Township" />
     <!-- 関連カード（PW デッキ） -->
     <related name="Liberating Combustion" related="Chandra, Pyrogenius" />
     <related name="Verdant Crescendo" related="Nissa, Nature's Artisan" />
@@ -2832,6 +2836,13 @@ Knowledge Vaultが戦場を離れたとき、Knowledge Vaultにより追放さ�
     <type name="Urza's Mine" type="土地 ― ウルザの・鉱山" />
     <type name="Urza's Power Plant" type="土地 ― ウルザの・魔力炉" />
     <type name="Urza's Tower" type="土地 ― ウルザの・塔" />
+    <!-- 関連カード (合体) -->
+    <related name="Bruna, the Fading Light" related="Gisela, the Broken Blade|Brisela, Voice of Nightmares" />
+    <related name="Brisela, Voice of Nightmares" related="Gisela, the Broken Blade|Bruna, the Fading Light" />
+    <related name="Midnight Scavengers" related="Graf Rats|Chittering Host" />
+    <related name="Chittering Host" related="Graf Rats|Midnight Scavengers" />
+    <related name="Hanweir Garrison" related="Hanweir Battlements|Hanweir, the Writhing Township" />
+    <related name="Hanweir, the Writhing Township" related="Hanweir Battlements|Hanweir Garrison" />
   </replace>
   <remove>
     <!-- ドラフト能力を持つカード -->
