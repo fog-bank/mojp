@@ -57,7 +57,7 @@
       <Value Profile="(Default)">True</Value>
     </Setting>
     <Setting Name="ToolbarCommands" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Capture,0,CopyCardName,0,CopyEnglishName,0,GoToWiki,1,Option,0</Value>
+      <Value Profile="(Default)">Capture,0,CopyCardName,0,CopyEnglishName,0,GoToWiki,1,Option,1</Value>
     </Setting>
     <Setting Name="PDServerLastTimeUtc" Type="System.String" Scope="User">
       <Value Profile="(Default)" />

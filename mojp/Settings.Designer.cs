@@ -12,7 +12,7 @@ namespace Mojp {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.7.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "15.9.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -241,7 +241,7 @@ namespace Mojp {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Capture,0,CopyCardName,0,CopyEnglishName,0,GoToWiki,1,Option,0")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Capture,0,CopyCardName,0,CopyEnglishName,0,GoToWiki,1,Option,1")]
         public string ToolbarCommands {
             get {
                 return ((string)(this["ToolbarCommands"]));
