@@ -66,6 +66,7 @@
     <card name="Eldrazi Horror" jaName="エルドラージ・ホラー" type="トークン・クリーチャー ― エルドラージ・ホラー" pt="3/2"></card>
     <card name="Eldrazi Spawn" jaName="エルドラージ・落とし子" type="トークン・クリーチャー ― エルドラージ・落とし子" pt="0/1">このクリーチャーを生け贄に捧げる：(◇)を加える。</card>
     <card name="Faerie Rogue" jaName="フェアリー・ならず者" type="トークン・クリーチャー ― フェアリー・ならず者" pt="1/1">飛行</card>
+    <card name="Frog Lizard" jaName="カエル・トカゲ" type="トークン・クリーチャー ― カエル・トカゲ" pt="3/3"></card>
     <card name="Goat" jaName="ヤギ" type="トークン・クリーチャー ― ヤギ" pt="0/1"></card>
     <card name="Manifest" jaName="予示" type="クリーチャー" pt="2/2" wikilink="予示">予示されたクリーチャー・カードは、それのマナ・コストで、いつでも表向きにしてよい。裏向きのカードは、それの変異コストで表向きにしてもよい。</card>
     <card name="Morph" jaName="変異" type="クリーチャー" pt="2/2" wikilink="変異">変異を持つカードは、それの変異コストを支払うことで、いつでも表向きにしてよい。</card>
