@@ -66,7 +66,7 @@ namespace Mojp
             var vm = ViewModel;
             var commands = vm?.ToolbarCommands;
 
-            // Capture,0,CopyCardName,0,CopyEnglishName,0,GoToWiki,1,Option,0
+            // Capture,0,CopyCardName,0,CopyEnglishName,0,GoToWiki,1,Option,1
             if (commands != null && commands.Count == 5)
             {
                 commands[0] = vm.CaptureCommand;
@@ -82,7 +82,7 @@ namespace Mojp
                 commands[3].IsVisible = true;
 
                 commands[4] = vm.OptionCommand;
-                commands[4].IsVisible = false;
+                commands[4].IsVisible = true;
             }
         }
     }
