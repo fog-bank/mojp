@@ -96,7 +96,7 @@ namespace Mojp
                 if (previewWnd != currentPreviewWnd)
                     return;
 
-                if (newPreviewWnd == null)
+                if (newPreviewWnd is null)
                 {
                     ReleaseAutomationElement();
                     ViewModel.InvokeSetMessage("MO の Preview Pane が見つかりません。");
@@ -182,11 +182,13 @@ namespace Mojp
                 }
 #endif
                 // CacheRequest で TreeFilter を設定しても、イベントは発生するらしく、代わりに sender が null になっている模様
-                if (previewWnd == null || sender == null)
+                if (previewWnd is null || sender == null)
                     return;
 
+                // sender が null でなければ、non-empty な文字列が取得できるはずだが、キャッシュがこける場合もあり。
+                // 加えて、e.NewValue と一致するとも限らない。
                 //string name = GetNamePropertyValue(sender as AutomationElement);
-                Debug.Assert(!string.IsNullOrEmpty(GetNamePropertyValue(sender as AutomationElement)));
+                //Debug.Assert(!string.IsNullOrEmpty(GetNamePropertyValue(sender as AutomationElement)));
 
                 string name = Card.NormalizeName(e.NewValue as string);
 
@@ -454,15 +456,15 @@ namespace Mojp
             /// </summary>
             private void ReleaseAutomationElement()
             {
-                if (previewWnd != null)
-                {
-                    previewWnd = null;
-                    Automation.RemoveAllEventHandlers();
+                if (previewWnd is null)
+                    return;
+
+                previewWnd = null;
+                Automation.RemoveAllEventHandlers();
 #if DEBUG
-                    Debug.WriteLine("Automation event handlers (after remove) = " +
-                        (GetListeners()?.Count).GetValueOrDefault() + " @ T" + Thread.CurrentThread.ManagedThreadId);
+                Debug.WriteLine("Automation event handlers (after remove) = " +
+                    (GetListeners()?.Count).GetValueOrDefault() + " @ T" + Thread.CurrentThread.ManagedThreadId);
 #endif
-                }
             }
 
 #if DEBUG
