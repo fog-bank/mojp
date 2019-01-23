@@ -930,6 +930,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="スレッショルド ― あなたの墓地にカードが７枚以上ある場合、" value="スレッショルド ― あなたの墓地にカードが７枚以上あるなら、" nodebug="true" />
     <regex target="text" pattern="(?m)(?&lt;=^族系.+)共通のクリーチャー・タイプを持つ場合、" value="共通のクリーチャー・タイプを持つなら、" nodebug="true" />
     <regex target="text" pattern="呪文を打ち消す場合" value="呪文を打ち消すなら" nodebug="true" />
+    <regex target="text" pattern="(?&lt;=。あなたが(?:.回以上)?コイン投げに(?:勝った|負けた))場合、" value="なら、" nodebug="true" />
     <!-- テンプレート変更：誘発型能力の条件 -->
     <regex target="text" pattern="呪文を１つ唱えるたび、" value="呪文を唱えるたび、" nodebug="true" />
     <regex target="text" pattern="プレイヤー１人が(?=[^。]*呪文を唱えるたび、)" value="プレイヤーが" nodebug="true" />
@@ -953,6 +954,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="そのコピーになる。" value="それのコピーになる。" nodebug="true" />
     <regex target="text" pattern="とき、オーナーは" value="とき、これのオーナーは" nodebug="true" />
     <!-- テンプレート変更 -->
+    <regex target="text" pattern="コインを１枚投げる。" value="コイン投げをする。" nodebug="true" />
     <regex target="text" pattern="ゲームを始めてもよい" value="ゲームを開始してもよい" nodebug="true" />
     <regex target="text" pattern="無くなる" value="なくなる" nodebug="true" />
     <regex target="text" pattern="新たな対象" value="新しい対象" nodebug="true" />
@@ -1438,7 +1440,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <!-- テンプレートの変更：終了ステップの開始時 -->
     <card name="Budoka Pupil" jaName="武道家の学徒" type="クリーチャー ― 人間・モンク" pt="2/2" related="Ichiga, Who Topples Oaks">あなたがスピリットか秘儀である呪文を唱えるたび、あなたは武道家の学徒の上に気カウンターを１個置いてもよい。 
 終了ステップの開始時に、武道家の学徒の上に気カウンターが２個以上置かれている場合、あなたは武道家の学徒を反転してもよい。</card>
-    <card name="Frenetic Sliver" jaName="熱狂スリヴァー" type="クリーチャー ― スリヴァー" pt="2/2">すべてのスリヴァーは「(０)：このパーマネントが戦場に出ているなら、コインを１枚投げる。あなたがコイン投げに勝ったなら、このパーマネントを追放し、次の終了ステップの開始時に、これをオーナーのコントロール下で戦場に戻す。あなたがコイン投げに負けたなら、これを生け贄に捧げる。」を持つ。</card>
+    <card name="Frenetic Sliver" jaName="熱狂スリヴァー" type="クリーチャー ― スリヴァー" pt="2/2">すべてのスリヴァーは「(０)：このパーマネントが戦場にあるなら、コイン投げをする。あなたがコイン投げに勝ったなら、このパーマネントを追放し、次の終了ステップの開始時に、これをオーナーのコントロール下で戦場に戻す。あなたがコイン投げに負けたなら、これを生け贄に捧げる。」を持つ。</card>
     <card name="Knowledge Vault" jaName="Knowledge Vault" type="アーティファクト">(２),(Ｔ)：あなたのライブラリーの一番上のカードを裏向きに追放する。
 (０)：Knowledge Vaultを生け贄に捧げる。そうしたなら、あなたの手札を捨てる。その後Knowledge Vaultにより追放されたカードをすべてオーナーの手札に加える。
 Knowledge Vaultが戦場を離れたとき、Knowledge Vaultにより追放されたカードをすべて、それぞれのオーナーの墓地に置く。</card>
