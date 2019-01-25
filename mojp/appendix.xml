@@ -1043,7 +1043,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="各インスタント・呪文[かと]各ソーサリー・呪文は" value="インスタントかソーサリーである各呪文は" nodebug="true" />
     <regex target="text" pattern="スピリット(・呪文)?(?:１つ)?か秘儀・呪文(?:１つ)?を唱えるたび、" value="スピリットか秘儀である呪文を唱えるたび、" nodebug="true" />
     <regex target="text" pattern="[の・]呪文[とや]([^。]+)[の・]呪文を唱えるためのコストは" value="か$1である呪文を唱えるためのコストは" nodebug="true" />
-    <regex target="text" pattern="飛行を持つ白であり黒である" value="飛行を持ち白であり黒である" nodebug="true" />
+    <regex target="text" pattern="を持つ(?=.であり.である)" value="を持ち" nodebug="true" />
     <!--<regex target="text" pattern="魔巧 ― あなたの墓地にインスタントかソーサリーであるカード" value="魔巧 ― あなたの墓地にインスタントやソーサリーであるカード" nodebug="true" />-->
     <!-- 注釈文 -->
     <regex target="text" pattern="（このクリーチャーは攻撃できない。?）" value="（このクリーチャーでは攻撃できない。）" nodebug="true" />
@@ -2063,8 +2063,6 @@ Knowledge Vaultが戦場を離れたとき、Knowledge Vaultにより追放さ�
 (１)(白)(黒)：このターンの間、あなたがライフを得るたび、各対戦相手はそれぞれその点数に等しい点数のライフを失う。</card>
     <card name="Aether Vial" jaName="霊気の薬瓶" type="アーティファクト">あなたのアップキープの開始時に、あなたは霊気の薬瓶の上に蓄積カウンターを１個置いてもよい。
 (Ｔ)：あなたはあなたの手札から、点数で見たマナ・コストが霊気の薬瓶の上に置かれている蓄積カウンターの個数に等しいクリーチャー・カード１枚を戦場に出してもよい。</card>
-    <card name="Kolaghan Monument" jaName="コラガンの碑" type="アーティファクト">(Ｔ)：(黒)か(赤)を加える。
-(４)(黒)(赤)：ターン終了時まで、コラガンの碑は飛行を持ち黒であり赤である4/4のドラゴン・アーティファクト・クリーチャーになる。</card>
     <card name="Mindcrank" jaName="精神クランク" type="アーティファクト">対戦相手が１人ライフを失うたび、そのプレイヤーは自分のライブラリーの一番上からその失った点数に等しい枚数のカードを自分の墓地に置く。（感染を持たない発生源から与えられたダメージはライフを失わせる。）</card>
     <card name="Mishra's Bauble" jaName="ミシュラのガラクタ" type="アーティファクト">(Ｔ),ミシュラのガラクタを生け贄に捧げる：プレイヤー１人を対象とし、そのプレイヤーのライブラリーの一番上のカードを見る。次のターンのアップキープの開始時に、カードを１枚引く。</card>
     <card name="Oblivion Stone" jaName="忘却石" type="アーティファクト">(４),(Ｔ)：パーマネント１つを対象とし、それの上に運命カウンターを１個置く。
@@ -2870,8 +2868,6 @@ Knowledge Vaultが戦場を離れたとき、Knowledge Vaultにより追放さ�
     <card name="Repudiate" jaName="覆滅" type="インスタント" related="Replicate" wikilink="覆滅+複製/Repudiate+Replicate">起動型か誘発型である能力１つを対象とし、それを打ち消す。（マナ能力は対象にできない。）</card>
     <!--<card name="Saruli Caretaker" jaName="サルーリの世話人" type="クリーチャー ― ドライアド" pt="0/3">防衛
 (Ｔ),あなたがコントロールしているアンタップ状態のクリーチャー１体をタップする：好きな色１色のマナ１点を加える。</card>-->
-    <card name="Threat" jaName="脅威" type="ソーサリー" related="Thrash" wikilink="強撃+脅威/Thrash+Threat">トランプルを持ち赤であり緑である4/4のビースト・クリーチャー・トークンを１体生成する。</card>
-    <card name="Warden" jaName="番人" type="ソーサリー" related="Warrant" wikilink="万全+番人/Warrant+Warden">飛行と警戒を持ち白であり青である4/4のスフィンクス・クリーチャー・トークンを１体生成する。</card>
     <!-- RNA (カンマ) -->
     <card name="Gift of Strength" jaName="活力の贈り物" type="インスタント">クリーチャー１体を対象とする。ターン終了時まで、それは+3/+3の修整を受け到達を得る。</card>
     <card name="Kaya's Wrath" jaName="ケイヤの怒り" type="ソーサリー">クリーチャーをすべて破壊する。あなたはあなたがコントロールしていてこれにより破壊されたクリーチャーの総数に等しい点数のライフを得る。</card>
