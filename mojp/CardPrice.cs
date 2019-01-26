@@ -377,7 +377,7 @@ namespace Mojp
             if (startIndex == -1)
                 return NoPrice;
 
-            if (json.Substring(startIndex + TotalCardsTag.Length, 2) != "1,")
+            if (TrySubstring(json, startIndex + TotalCardsTag.Length, 2) != "1,")
             {
                 // exact サーチじゃないので、複数ヒットする可能性がある
                 const string CardTag = "\"name\":";
@@ -391,6 +391,9 @@ namespace Mojp
             const string RelatedTag = "\"related_uris\":";
             int endIndex = json.IndexOf(RelatedTag, startIndex);
 
+            if (endIndex == -1)
+                endIndex = json.Length;
+
             // PD リーガル情報
             //const string PDLegalityTag = "\"penny\":";
             //const string LegalValue = "\"legal\"";
@@ -400,12 +403,34 @@ namespace Mojp
             const string TixTag = "\"tix\":";
             startIndex = json.IndexOf(TixTag, startIndex, endIndex - startIndex);
 
-            if (startIndex == -1)
+            if (startIndex == -1 || TrySubstring(json, startIndex + TixTag.Length, 4) == "null")
                 return NoPrice;
 
-            startIndex = json.IndexOf('"', startIndex + TixTag.Length) + 1;
+            startIndex += TixTag.Length;
+
+            if (startIndex >= json.Length)
+                return NoPrice;
+
+            startIndex = json.IndexOf('"', startIndex) + 1;
+
+            if (startIndex == 0)
+                return NoPrice;
+
             endIndex = json.IndexOf('"', startIndex);
-            return json.Substring(startIndex, endIndex - startIndex) + " tix";
+            string tix = TrySubstring(json, startIndex, endIndex - startIndex);
+
+            if (tix == null)
+                return NoPrice;
+
+            return tix + " tix";
+        }
+
+        private static string TrySubstring(string target, int startIndex, int length)
+        {
+            if (startIndex < 0 || startIndex + length > target.Length)
+                return null;
+
+            return target.Substring(startIndex, length);
         }
     }
 
