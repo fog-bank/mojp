@@ -791,6 +791,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="その後、居住を行う。" value="その後居住を行う。" nodebug="true" />
     <regex target="text" pattern="(?&lt;=たび、)ターン終了時まで(?!、)" value="ターン終了時まで、" nodebug="true" />
     <regex target="text" pattern="(?&lt;=そうしたなら、|とともに、)次の終了ステップの開始時に(?!、)" value="次の終了ステップの開始時に、" nodebug="true" />
+    <regex target="text" pattern="(?&lt;=。|、)戦闘終了時に(?!、)" value="戦闘終了時に、" nodebug="true" />
     <regex target="text" pattern="(?&lt;=あなたの(?:次の)?)アップキープの開始時に(?!、|しか)" value="アップキープの開始時に、" nodebug="true" />
     <regex target="text" pattern="追加コストとして(?!、)" value="追加コストとして、" nodebug="true" />
     <regex target="text" pattern="を持つことを除き(?!、)" value="を持つことを除き、" nodebug="true" />
@@ -2968,9 +2969,6 @@ Knowledge Vaultが戦場を離れたとき、Knowledge Vaultにより追放さ�
 湧血 ― (赤)(緑),ゴーア族の暴行者を捨てる：攻撃クリーチャー１体を対象とする。ターン終了時まで、それは+4/+4の修整を受けトランプルを得る。</card>
     <card name="Rakdos's Return" jaName="ラクドスの復活" type="ソーサリー">対戦相手１人かプレインズウォーカー１体を対象とする。ラクドスの復活はそれにＸ点のダメージを与える。そのプレイヤーか、そのプレインズウォーカーのコントローラーは、カードＸ枚を捨てる。</card>
     <card name="Savage Twister" jaName="大竜巻" type="ソーサリー">大竜巻は各クリーチャーにそれぞれＸ点のダメージを与える。</card>
-    <card name="Stoic Ephemera" jaName="冷静な陽炎" type="クリーチャー ― スピリット" pt="5/5">防衛（このクリーチャーでは攻撃できない。）
-飛行
-冷静な陽炎がブロックしたとき、戦闘終了時に、これを生け贄に捧げる。</card>
     <card name="Wasteland Viper" jaName="不毛の地のバイパー" type="クリーチャー ― 蛇" pt="1/2">接死
 湧血 ― (緑),不毛の地のバイパーを捨てる：攻撃クリーチャー１体を対象とする。ターン終了時まで、それは+1/+2の修整を受け接死を得る。</card>
     <!-- GK2 (検討中) -->
