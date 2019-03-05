@@ -881,7 +881,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="がコントロールする(他の)?パーマネントは、?" value="がコントロールしている$1パーマネントは" nodebug="true" />
     <regex target="text" pattern="がコントロールする他のクリーチャーを" value="がコントロールしている他のクリーチャーを" nodebug="true" />
     <regex target="text" pattern="がコントロールする(他の)?クリーチャーは、?(?=(?:\+./\+.の修整を受けるとともに)?.{2,5}を(?:得る|持つ)。)" value="がコントロールしている$1クリーチャーは" nodebug="true" />
-    <regex target="text" pattern="がコントロールする(?=他の[白青黒赤緑]のクリーチャーは)" value="がコントロールしている" nodebug="true" />
+    <regex target="text" pattern="がコントロールする(?=他の[白青黒赤緑]のクリーチャー)" value="がコントロールしている" nodebug="true" />
     <regex target="text" pattern="がコントロールする(?=他の[^。]+・クリーチャーは)" value="がコントロールしている" nodebug="true" />
     <regex target="text" pattern="がコントロールする(?=(?:他の)?(?:ドラゴン・|エレメンタル・|マーフォーク・)?クリーチャーは\+\d/\+\dの修整を受ける。)" value="がコントロールしている" nodebug="true" />
     <regex target="text" pattern="がコントロールする(?=(?:他の)?各クリーチャーの上に)" value="がコントロールしている" nodebug="true" />
@@ -952,6 +952,8 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <!-- テンプレート変更：指示語 -->
     <regex target="text" pattern="そのコピーになる。" value="それのコピーになる。" nodebug="true" />
     <regex target="text" pattern="とき、オーナーは" value="とき、これのオーナーは" nodebug="true" />
+    <regex target="text" pattern="それを唱えるために\((.)\)が(?:支払|使)われていないかぎり、それを生け贄に捧げる" value="これを唱えるために($1)が支払われていないかぎり、これを生け贄に捧げる" nodebug="true" />
+    <regex target="text" pattern="あなたは２点のライフを支払ってもよい。そうしないなら、.+はタップ状態で戦場に出る。" value="あなたは２点のライフを支払ってもよい。そうしないなら、これはタップ状態で戦場に出る。" nodebug="true" />
     <!-- テンプレート変更 -->
     <regex target="text" pattern="コインを１枚投げる。" value="コイン投げをする。" nodebug="true" />
     <regex target="text" pattern="別の(?=クリーチャー(?!・|に)|アーティファクト|カード|[^。]+を対象)" value="他の" nodebug="true" />
@@ -969,7 +971,6 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="しかプレイでき" value="しか起動でき" nodebug="true" />
     <regex target="text" pattern="(?:にのみ|にしか|だけしか)(?:支払|使|用いる)(?:うことができる|える|えない|ことができる)" value="にのみ使用できる" nodebug="true" />
     <regex target="text" pattern="(?&lt;=[白青黒赤緑]\))が使われた" value="が支払われていた" nodebug="true" />
-    <regex target="text" pattern="(?&lt;=[白青黒赤緑]\))が使" value="が支払" nodebug="true" />
     <regex target="text" pattern="(?m)(?&lt;=^|[・：。、])攻撃しているクリーチャー" value="攻撃クリーチャー" nodebug="true" />
     <regex target="text" pattern="攻撃(?:クリーチャー)?(?:１体)?かブロックしているクリーチャー１体を対象" value="攻撃クリーチャー１体かブロック・クリーチャー１体を対象" nodebug="true" />
     <regex target="text" pattern="(?m)(?&lt;=^|：|か、|飛行を持つ)ブロックしているクリーチャー１体を対象" value="ブロック・クリーチャー１体を対象" nodebug="true" />
@@ -1025,7 +1026,6 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="を捨てさせられる場合" value="を捨てるなら" nodebug="true" />
     <regex target="text" pattern="追放されたカードのうち" value="追放したカードの中から" nodebug="true" />
     <regex target="text" pattern="墓地から唱えられていたなら" value="墓地から唱えられたなら" nodebug="true" />
-    <regex target="text" pattern="あなたは２点のライフを支払ってもよい。そうしないなら、.+はタップ状態で戦場に出る。" value="あなたは２点のライフを支払ってもよい。そうしないなら、これはタップ状態で戦場に出る。" nodebug="true" />
     <regex target="text" pattern="が勝ったコイン投げ１回" value="がコイン投げに勝った回数１回" nodebug="true" />
     <regex target="text" pattern="クリーチャー１体を対象とする。ターン終了時まで、それは(.\d/.\d)の修整を受ける。他のクリーチャー１体を対象とする。ターン終了時まで、それは(.\d/.\d)の修整を受ける。" value="クリーチャー１体と、他のクリーチャー１体を対象とする。ターン終了時まで、その前者は$1の修整を受け、その後者は$2の修整を受ける。" nodebug="true" />
     <regex target="text" pattern="対戦相手１人が自分がコントロールする呪文を唱えたり自分がコントロールする能力を起動する際の対象を選ぶ間に、そのプレイヤーは可能ならば少なくとも１体の戦場に出ている旗手を選ばなければならない。" value="対戦相手が、自分がコントロールしている呪文を唱えたり、自分がコントロールしている能力を起動したりする最中に対象を選ぶ際、そのプレイヤーは可能なら戦場にある旗手を少なくとも１体選ばなければならない。" nodebug="true" />
@@ -2953,9 +2953,6 @@ Knowledge Vaultが戦場を離れたとき、Knowledge Vaultにより追放さ�
     <card name="Avatar of Discord" jaName="不和の化身" type="クリーチャー ― アバター" pt="5/3">（(黒/赤)は(黒)でも(赤)でも支払うことができる。）
 飛行
 不和の化身が戦場に出たとき、あなたがカード２枚を捨てないかぎり、これを生け贄に捧げる。</card>
-    <card name="Azorius Herald" jaName="アゾリウスの伝令" type="クリーチャー ― スピリット" pt="2/1">アゾリウスの伝令はブロックされない。
-アゾリウスの伝令が戦場に出たとき、あなたは４点のライフを得る。
-アゾリウスの伝令が戦場に出たとき、これを唱えるために(青)が支払われていないかぎり、これを生け贄に捧げる。</card>
     <card name="Belfry Spirit" jaName="鐘楼のスピリット" type="クリーチャー ― スピリット" pt="1/1">飛行
 憑依（このクリーチャーが死亡したとき、クリーチャー１体を対象とする。このカードをそれに憑依している状態で追放する。）
 鐘楼のスピリットが戦場に出るか、これが憑依しているクリーチャーが死亡したとき、飛行を持つ黒の1/1のコウモリ・クリーチャー・トークンを２体生成する。</card>
