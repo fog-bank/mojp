@@ -976,7 +976,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="(?m)(?&lt;=^|：|か、|飛行を持つ)ブロックしているクリーチャー１体を対象" value="ブロック・クリーチャー１体を対象" nodebug="true" />
     <regex target="text" pattern="のブロックしているクリーチャー１体を対象" value="をブロックしているクリーチャー１体を対象" nodebug="true" />
     <regex target="text" pattern="攻撃するかブロックするたび" value="攻撃かブロックするたび" nodebug="true" />
-    <regex target="text" pattern="で?は、?攻撃したりブロックしたりできない" value="では攻撃もブロックもできない" nodebug="true" />
+    <regex target="text" pattern="で?は、?攻撃したりブロックしたりでき" value="では攻撃もブロックもでき" nodebug="true" />
     <regex target="text" pattern="がダメージを与えられる" value="にダメージが与えられる" nodebug="true" />
     <regex target="text" pattern="(?&lt;=[１-９Ｘ])以下の土地でない" value="以下で土地でない" nodebug="true" />
     <regex target="text" pattern="名前が《([^《/》]+)》である" value="《$1》という名前の" nodebug="true" />
