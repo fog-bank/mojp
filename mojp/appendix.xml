@@ -909,9 +909,10 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="クリーチャーにつけられている、あなたがコントロールしている" value="あなたがコントロールしていてクリーチャーにつけられている" nodebug="true" />
     <!-- テンプレート変更：手札/墓地から -->
     <regex target="text" pattern="あなたの墓地にある(?=(?:クリーチャー・|アーティファクト・|エンチャント・)?カード[０-９Ｘ]+枚を対象)" value="あなたの墓地から" nodebug="true" />
+    <regex target="text" pattern="(?m)(?&lt;=^|・|：|とき、|時に、|場合、)いずれかの墓地にある(?=[^。]*カード１枚を対象)" value="墓地から" nodebug="true" />
+    <regex target="text" pattern="墓地にある(?=インスタント・カード１枚かソーサリー・カード１枚を)" value="墓地から" nodebug="true" />
     <regex target="text" pattern="(?&lt;=墓地|手札)にある(?!場合)([^。]*)カード(?=[０-９Ｘ]+枚を追放)" value="から$1カード" nodebug="true" />
     <regex target="text" pattern="(?m)(?&lt;=^|：)墓地にあるカード１枚を対象とし、それを追放する。" value="墓地からカード１枚を対象とし、それを追放する。" nodebug="true" />
-    <regex target="text" pattern="(?m)(?&lt;=^|・|：|とき、|時に、|場合、)いずれかの墓地にある(?=[^。]*カード１枚を対象)" value="墓地から" nodebug="true" />
     <regex target="text" pattern="あなたの墓地にある(?=.{1,10}(?&lt;!カード)を(?:あなたの手札|戦場)に戻)" value="あなたの墓地から" nodebug="true" />
     <regex target="text" pattern="手札(?:から|にある)([^か。]*)カードを１枚、?(タップ状態で)?戦場に出" value="手札から$1カード１枚を$2戦場に出" nodebug="true" />
     <regex target="text" pattern="手札にある([^か。]*)カード１枚を戦場に出" value="手札から$1カード１枚を戦場に出" nodebug="true" />
@@ -1042,8 +1043,8 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="アーティファクトかエンチャント１つを対象" value="アーティファクト１つかエンチャント１つを対象" nodebug="true" />
     <regex target="text" pattern="(?&lt;!か)アーティファクト・カード１枚かエンチャント・カード１枚を" value="アーティファクトかエンチャントであるカード１枚を" nodebug="true" />
     <regex target="text" pattern="(?&lt;!か)クリーチャー・カード１枚か土地・カード１枚を" value="クリーチャーか土地であるカード１枚を" nodebug="true" />
-    <regex target="text" pattern="墓地(?:にある|から)インスタント・カード１枚かソーサリー・カード１枚を" value="墓地からインスタントかソーサリーであるカード１枚を" nodebug="true" />
-    <regex target="text" pattern="あなたの墓地にインスタント・カードやソーサリー・カードが合わせて２枚以上あるなら、" value="あなたの墓地にインスタントかソーサリーであるカードが２枚以上あるなら、" nodebug="true" />
+    <regex target="text" pattern="(?&lt;!か)インスタント・カードやソーサリー・カード(が|を)合わせて" value="インスタントかソーサリーであるカード$1" nodebug="true" />
+    <regex target="text" pattern="(?&lt;!か|各)インスタント・カード(?:１枚)?[かや]ソーサリー・カード(?!(?:１枚)?か)" value="インスタントかソーサリーであるカード" nodebug="true" />
     <regex target="text" pattern="インスタント・カードとソーサリー・カードの総数" value="インスタントかソーサリーであるカードの総数" nodebug="true" />
     <regex target="text" pattern="(?&lt;!か)インスタント・呪文１つかソーサリー・呪文１つを対象" value="インスタントかソーサリーである呪文１つを対象" nodebug="true" />
     <regex target="text" pattern="インスタント・呪文(?:１つ)?かソーサリー・呪文(?:１つ)?を唱えるたび、" value="インスタントかソーサリーである呪文を唱えるたび、" nodebug="true" />
@@ -1501,7 +1502,6 @@ Knowledge Vaultが戦場を離れたとき、Knowledge Vaultにより追放さ�
     <card name="Psychic Spear" jaName="精神の槍" type="ソーサリー">プレイヤー１人を対象とする。そのプレイヤーは自分の手札を公開する。あなたはその中からスピリットか秘儀であるカード１枚を選ぶ。そのプレイヤーはそのカードを捨てる。</card>
     <card name="Relic Crush" jaName="秘宝の破壊" type="インスタント">アーティファクトかエンチャント１つと、他のアーティファクトかエンチャント最大１つを対象とし、それらを破壊する。</card>
     <card name="Safewright Quest" jaName="守美者の探索" type="ソーサリー">あなたのライブラリーから森か平地であるカード１枚を探し、それを公開してあなたの手札に加える。その後あなたのライブラリーを切り直す。</card>
-    <card name="Sin Collector" jaName="罪の収集者" type="クリーチャー ― 人間・クレリック" pt="2/1">罪の収集者が戦場に出たとき、対戦相手１人を対象とする。そのプレイヤーは自分の手札を公開する。あなたはその中からインスタントかソーサリーであるカード１枚を選び、そのカードを追放する。</card>
     <card name="Slumbering Tora" jaName="まどろむ虎の像" type="アーティファクト">(２),スピリットか秘儀であるカード１枚を捨てる：ターン終了時まで、まどろむ虎の像はX/Xの猫・アーティファクト・クリーチャーになる。Ｘは捨てたカードの点数で見たマナ・コストに等しい。</card>
     <card name="Spoils of Victory" jaName="戦利品" type="ソーサリー">あなたのライブラリーから平地か島か沼か山か森であるカード１枚を探し、そのカードを戦場に出す。その後あなたのライブラリーを切り直す。</card>
     <card name="Swan Song" jaName="白鳥の歌" type="インスタント">エンチャントかインスタントかソーサリーである呪文１つを対象とし、それを打ち消す。それのコントローラーは、飛行を持つ青の2/2の鳥・クリーチャー・トークンを１体生成する。</card>
