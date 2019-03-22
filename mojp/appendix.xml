@@ -961,6 +961,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="いずれかの墓地に置かれ" value="墓地に置かれ" nodebug="true" />
     <regex target="text" pattern="対象として唱える呪文" value="対象とする呪文" nodebug="true" />
     <regex target="text" pattern="を除き、それのコピーとなる" value="を除き、それのコピーになる" nodebug="true" />
+    <regex target="text" pattern="(?&lt;=それら?の)起動型能力を起動できない。" value="起動型能力は起動できない。" nodebug="true" />
     <regex target="text" pattern="クリーチャー・呪文でない呪文" value="クリーチャーでない呪文" nodebug="true" />
     <regex target="text" pattern="次のアンタップ・ステップの間に" value="次のアンタップ・ステップに" nodebug="true" />
     <regex target="text" pattern="(?:各|１)ターンに１回(?:のみ|だけ)" value="毎ターン１回のみ" nodebug="true" />
