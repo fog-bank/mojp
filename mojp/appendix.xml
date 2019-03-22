@@ -778,7 +778,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="(?&lt;=クリーチャー|アーティファクト|エンチャント|インスタント|ソーサリー|プレインズウォーカー|土地)(?=カード|呪文)" value="・" nodebug="true" />
     <regex target="text" pattern="(?&lt;=平地|島|沼|山|森|砂漠|恐竜|同盟者|機体|装備品)カード" value="・カード" nodebug="true" />
     <regex target="text" pattern="(?&lt;=オーラ|恐竜|ゾンビ|クレリック|スピリット|エレメンタル|マーフォーク|ミノタウルス)呪文" value="・呪文" nodebug="true" />
-    <regex target="text" pattern="(?&lt;=猫|馬|熊|狼|蛇|植物|苗木|戦士|兵士|騎士|恐竜|海賊|反射|吸血鬼|同盟者|落とし子|ならず者|組立作業員)クリーチャー" value="・クリーチャー" nodebug="true" />
+    <regex target="text" pattern="(?&lt;=土地|猫|馬|熊|狼|蛇|植物|苗木|戦士|兵士|騎士|恐竜|海賊|反射|吸血鬼|同盟者|落とし子|ならず者|組立作業員)クリーチャー" value="・クリーチャー" nodebug="true" />
     <regex target="text" pattern="(?&lt;=装備品|飛行機械|霊気装置|手掛かり)アーティファクト" value="・アーティファクト" nodebug="true" />
     <!-- カンマ追加削減 -->
     <regex target="text" pattern="Ｘは、" value="Ｘは" nodebug="true" />
