@@ -945,6 +945,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="パーマネントを生け贄に捧げるたび" value="パーマネントを１つ生け贄に捧げるたび" nodebug="true" />
     <regex target="text" pattern="いずれかの(人間|鳥|スリヴァー|トークンでないクリーチャー)が(?=[^、。]+たび)" value="$1が１体" nodebug="true" />
     <regex target="text" pattern="対戦相手１人がコントロールしている呪文や能力" value="対戦相手がコントロールしている呪文や能力" nodebug="true" />
+    <regex target="text" pattern="対戦相手１人が(?=[^。]+(?:(?&lt;!最初の.+|つ目の.+)唱える|１枚引く|１枚捨てる|１体死亡する|１つ生け贄に捧げる)たび、)" value="対戦相手が" nodebug="true" />
     <!-- テンプレート変更：コスト軽減 -->
     <regex target="text" pattern="が唱える(、?)([^。]*)呪文は、それを唱えるためのコストが" value="が$1$2呪文を唱えるためのコストは$1" nodebug="true" />
     <regex target="text" pattern="(?m)呪文は、?それを唱えるためのコストが(?=.{1,9}$)" value="呪文を唱えるためのコストは" nodebug="true" />
@@ -1866,9 +1867,6 @@ Knowledge Vaultが戦場を離れたとき、Knowledge Vaultにより追放さ�
     <card name="Puppeteer Clique" jaName="くぐつ師の徒党" type="クリーチャー ― フェアリー・ウィザード" pt="3/2">飛行
 くぐつ師の徒党が戦場に出たとき、対戦相手の墓地からクリーチャー・カード１枚を対象とし、それをあなたのコントロール下で戦場に出す。それは速攻を得る。次のあなたの終了ステップの開始時に、それを追放する。
 頑強（このクリーチャーが死亡したとき、これの上に-1/-1カウンターが置かれていなかった場合、これを-1/-1カウンターが１個置かれた状態でオーナーのコントロール下で戦場に戻す。）</card>
-    <card name="Sangromancer" jaName="吸血術士" type="クリーチャー ― 吸血鬼・シャーマン" pt="3/3">飛行
-対戦相手がコントロールするクリーチャーが１体死亡するたび、あなたは３点のライフを得てもよい。
-対戦相手がカードを１枚捨てるたび、あなたは３点のライフを得てもよい。</card>
     <card name="Skeletal Scrying" jaName="占骨術" type="インスタント">この呪文を唱えるための追加コストとして、あなたの墓地からカードＸ枚を追放する。
 あなたはカードをＸ枚引き、Ｘ点のライフを失う。</card>
     <card name="Vein Drinker" jaName="血流を飲む者" type="クリーチャー ― 吸血鬼" pt="4/4">飛行
