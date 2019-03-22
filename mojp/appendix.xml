@@ -921,6 +921,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="(?&lt;=。そ(?:れ|のカード)が、?[^。、]+カードである場合、.+)そうでない場合、" value="そうでないなら、" nodebug="true" />
     <regex target="text" pattern="(?&lt;=。そ(?:れ|のカード)が、?[^。、]+カード)である場合、" value="であるなら、" nodebug="true" />
     <regex target="text" pattern="。あなたがこの呪文をあなたのメイン・フェイズの間に唱えた場合、" value="。あなたがこの呪文をあなたのメイン・フェイズ中に唱えたなら、" nodebug="true" />
+    <regex target="text" pattern="(?m)^あなたがカードを(?:１枚)?引く場合、" value="あなたがカードを１枚引くなら、" nodebug="true" />
     <regex target="text" pattern="(?m)(?&lt;=(?:^|。)[^。、]+)がキッカーされていた場合、" value="がキッカーされていたなら、" nodebug="true" />
     <regex target="text" pattern="(?&lt;=(?&lt;!が戦場に出たとき、.+)が(?:使|支払)われた)場合、" value="なら、" nodebug="true" />
     <regex target="text" pattern="(?&lt;=パーマネント(?:１体)?かプレイヤー(?:１人)?に([０-９Ｘ]+点以上の)?)ダメージを与える場合" value="ダメージを与えるなら" nodebug="true" />
