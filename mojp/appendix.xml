@@ -971,6 +971,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="(?&lt;!(?:あなた|対戦相手|プレイヤー)は[^。]+)対象として選ぶ。" value="対象とする。" nodebug="true" />
     <regex target="text" pattern="(?&lt;!得た|失われた)ライフの総量|ライフの総数|総ライフ" value="ライフ総量" nodebug="true" />
     <regex target="text" pattern="いずれかの墓地に置かれ" value="墓地に置かれ" nodebug="true" />
+    <regex target="text" pattern="あなたは自分の" value="あなたはあなたの" nodebug="true" />
     <regex target="text" pattern="対象として唱える呪文" value="対象とする呪文" nodebug="true" />
     <regex target="text" pattern="を除き、それのコピーとなる" value="を除き、それのコピーになる" nodebug="true" />
     <regex target="text" pattern="(?&lt;=それら?の)起動型能力を起動できない。" value="起動型能力は起動できない。" nodebug="true" />
@@ -2643,6 +2644,7 @@ Knowledge Vaultが戦場を離れたとき、Knowledge Vaultにより追放さ�
 ・カードをＸ枚引く。
 ・クリーチャー１体かプレインズウォーカー１体かプレイヤー１人を対象とする。火想者の発動はそれにＸ点のダメージを与える。</card>-->
     <!-- UMA -->
+    <card name="All Is Dust" jaName="全ては塵" type="部族・ソーサリー ― エルドラージ">各プレイヤーはそれぞれ、自分がコントロールしている有色のパーマネントをすべて生け贄に捧げる。</card>
     <card name="Faith's Fetters" jaName="信仰の足枷" type="エンチャント ― オーラ">エンチャント（パーマネント）
 信仰の足枷が戦場に出たとき、あなたは４点のライフを得る。
 エンチャントされているパーマネントでは攻撃もブロックもできず、それの起動型能力はマナ能力でないかぎり起動できない。</card>
@@ -2670,9 +2672,7 @@ Knowledge Vaultが戦場を離れたとき、Knowledge Vaultにより追放さ�
 あなたがコントロールしている他のクリーチャーは賛美を持つ。（同一のクリーチャーに賛美が複数あるなら、それぞれ誘発する。）</card>
     <!--<card name="Wandering Champion" jaName="放浪する勇者" type="クリーチャー ― 人間・モンク" pt="3/1">放浪する勇者がプレイヤー１人に戦闘ダメージを与えるたび、あなたが青か赤のパーマネントをコントロールしている場合、あなたはカードを１枚捨ててもよい。そうしたなら、カードを１枚引く。</card>-->
     <!-- UMA (検討中) -->
-    <!--<card name="Ancestor's Chosen" jaName="祖神に選ばれし者" type="クリーチャー ― 人間・クレリック" pt="4/4">先制攻撃（このクリーチャーは、先制攻撃を持たないクリーチャーより先に戦闘ダメージを与える。）
-祖神に選ばれし者が戦場に出たとき、あなたはあなたの墓地にあるカード１枚につき１点のライフを得る。</card>
-    <card name="Containment Priest" jaName="封じ込める僧侶" type="クリーチャー ― 人間・クレリック" pt="2/2">瞬速
+    <!--<card name="Containment Priest" jaName="封じ込める僧侶" type="クリーチャー ― 人間・クレリック" pt="2/2">瞬速
 トークンでないクリーチャーが、それが唱えられることなく戦場に出るなら、代わりにそれを追放する。</card>
     <card name="Dawn Charm" jaName="暁の魔除け" type="インスタント">以下から１つを選ぶ。
 ・このターン、与えられる戦闘ダメージをすべて軽減する。
@@ -2770,7 +2770,6 @@ Knowledge Vaultが戦場を離れたとき、Knowledge Vaultにより追放さ�
 頑強（このクリーチャーが死亡したとき、これの上に-1/-1カウンターが置かれていなかった場合、これを-1/-1カウンターが１個置かれた状態でオーナーのコントロール下で戦場に戻す。）</card>
     <card name="Turn to Mist" jaName="霧への変化" type="インスタント">クリーチャー１体を対象とし、それを追放する。次の終了ステップの開始時に、そのカードをオーナーのコントロール下で戦場に戻す。</card>
     <card name="Fire" jaName="火" type="インスタント" related="Ice" wikilink="火+氷/Fire+Ice">クリーチャーやプレインズウォーカーやプレイヤー、１つか２つを対象とする。火はそれらに２点のダメージをあなたの望むように分割して与える。</card>
-    <card name="All Is Dust" jaName="全ては塵" type="部族・ソーサリー ― エルドラージ">各プレイヤーはそれぞれ、自分がコントロールしている有色のパーマネントをすべて生け贄に捧げる。</card>
     <card name="Eldrazi Conscription" jaName="エルドラージの徴兵" type="部族・エンチャント ― エルドラージ・オーラ">エンチャント（クリーチャー）
 エンチャントされているクリーチャーは+10/+10の修整を受けトランプルと滅殺２を持つ。（それが攻撃するたび、防御プレイヤーはパーマネント２つを生け贄に捧げる。）</card>
     <card name="Karn Liberated" jaName="解放された者、カーン" type="伝説のプレインズウォーカー ― カーン" pt="6">[+4]：プレイヤー１人を対象とする。そのプレイヤーは自分の手札からカード１枚を追放する。
