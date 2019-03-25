@@ -973,6 +973,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="(?&lt;!得た|失われた)ライフの総量|ライフの総数|総ライフ" value="ライフ総量" nodebug="true" />
     <regex target="text" pattern="いずれかの墓地に置かれ" value="墓地に置かれ" nodebug="true" />
     <regex target="text" pattern="あなたは自分の" value="あなたはあなたの" nodebug="true" />
+    <regex target="text" pattern="そ(?:れら)?のうちの(?=[１-９Ｘ]枚をあなたの手札に)" value="そのうち" nodebug="true" />
     <regex target="text" pattern="対象として唱える呪文" value="対象とする呪文" nodebug="true" />
     <regex target="text" pattern="を除き、それのコピーとなる" value="を除き、それのコピーになる" nodebug="true" />
     <regex target="text" pattern="(?&lt;=それら?の)起動型能力を起動できない。" value="起動型能力は起動できない。" nodebug="true" />
@@ -2263,7 +2264,6 @@ Knowledge Vaultが戦場を離れたとき、Knowledge Vaultにより追放さ�
     <card name="Royal Trooper" jaName="近衛の強兵" type="クリーチャー ― 人間・兵士" pt="2/2">近衛の強兵がブロックするたび、ターン終了時まで、これは+2/+2の修整を受ける。</card>
     <card name="Fog Bank" jaName="濃霧の層" type="クリーチャー ― 壁" pt="0/2">防衛、飛行
 濃霧の層に与えられる戦闘ダメージと濃霧の層が与える戦闘ダメージをすべて軽減する。</card>
-    <card name="Impulse" jaName="衝動" type="インスタント">あなたのライブラリーの一番上からカードを４枚見る。そのうち１枚をあなたの手札に加え、残りをあなたのライブラリーの一番下に望む順番で置く。</card>
     <card name="Oracle's Insight" jaName="神託者の眼識" type="エンチャント ― オーラ">エンチャント（クリーチャー）
 エンチャントされているクリーチャーは「(Ｔ)：占術１を行い、その後カードを１枚引く。」を持つ。（占術１を行うとは、「あなたのライブラリーの一番上のカードを見る。その後あなたはそのカードをあなたのライブラリーの一番下に置いてもよい。」ということである。）</card>
     <card name="Sower of Temptation" jaName="誘惑蒔き" type="クリーチャー ― フェアリー・ウィザード" pt="2/2">飛行
@@ -2688,8 +2688,6 @@ Knowledge Vaultが戦場を離れたとき、Knowledge Vaultにより追放さ�
 タップ状態のクリーチャー１体を対象とし、それを破壊する。</card>
     <card name="Tethmos High Priest" jaName="テツモスの大神官" type="クリーチャー ― 猫・クレリック" pt="2/3">英雄的 ― あなたがテツモスの大神官を対象とする呪文を唱えるたび、あなたの墓地から点数で見たマナ・コストが２以下のクリーチャー・カード１枚を対象とし、それを戦場に戻す。</card>
     <card name="Back to Basics" jaName="基本に帰れ" type="エンチャント">基本でない土地は、それのコントローラーのアンタップ・ステップにアンタップしない。</card>
-    <card name="Dig Through Time" jaName="時を越えた探索" type="インスタント">探査（この呪文を唱える段階であなたがあなたの墓地から追放した各カードは、(１)を支払う。）
-あなたのライブラリーの一番上からカードを７枚見る。そのうち２枚をあなたの手札に加え、残りをあなたのライブラリーの一番下に望む順番で置く。</card>
     <card name="Disrupting Shoal" jaName="撹乱する群れ" type="インスタント ― 秘儀">あなたはこの呪文のマナ・コストを支払うのではなく、あなたの手札から点数で見たマナ・コストがＸの青のカード１枚を追放してもよい。
 呪文１つを対象とする。それの点数で見たマナ・コストがＸであるなら、それを打ち消す。</card>
     <card name="Dreamscape Artist" jaName="夢次元の芸術家" type="クリーチャー ― 人間・スペルシェイパー" pt="1/1">(２)(青),(Ｔ),カード１枚を捨てる,土地１つを生け贄に捧げる：あなたのライブラリーから基本土地・カード最大２枚を探して戦場に出し、その後あなたのライブラリーを切り直す。</card>
