@@ -991,7 +991,8 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="選ばれた名前の(?=呪文|土地|発生源)" value="選ばれた名前を持つ" nodebug="true" />
     <regex target="text" pattern="は、?選ばれた(色|名前)に対するプロテクション" value="はプロテクション（その選ばれた$1）" nodebug="true" />
     <regex target="text" pattern="以下から１つまたは複数を選ぶ。" value="以下から１つ以上を選ぶ。" nodebug="true" />
-    <regex target="text" pattern="。?」ことを選んでも?よい。" value="。」を選んでもよい。" nodebug="true" />
+    <regex target="text" pattern="。?」ことを選んでも?よい。?" value="。」を選んでもよい。" nodebug="true" />
+    <regex target="text" pattern="。?」ことを選ばないかぎり" value="。」を選ばないかぎり" nodebug="true" />
     <regex target="text" pattern="(?&lt;=戻|追放|公開|タップ)する?ことを選んでもよい。" value="してもよい。" nodebug="true" />
     <regex target="text" pattern="を捨てることを選んでもよい。" value="を捨ててもよい。" nodebug="true" />
     <regex target="text" pattern="Ｘは([^。Ｙ]+)である。" value="Ｘは$1に等しい。" nodebug="true" />
@@ -1004,7 +1005,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="ライブラリーのカードを上から([０-９Ｘ]{2,}|[０２-９Ｘ])枚、?" value="ライブラリーの一番上からカードを$1枚" nodebug="true" />
     <regex target="text" pattern="好きな色のマナ(?=[０-９Ｘ]+点を加え)" value="好きな色１色のマナ" nodebug="true" />
     <regex target="text" pattern="を対象とし、それはターン終了時まで" value="を対象とする。ターン終了時まで、それは" nodebug="true" />
-    <regex target="text" pattern="を対象とし、それを、?([^。]+)かぎり、?" value="を対象とする。$1かぎり、それを" nodebug="true" />
+    <regex target="text" pattern="を対象とし、それを、?([^。]+(?:「[^。」]+。?」[^。]+)?)かぎり、?" value="を対象とする。$1かぎり、それを" nodebug="true" />
     <regex target="text" pattern="(?&lt;=その|それらの)カードを公開し、あなたの手札に加える。" value="カードを公開してあなたの手札に加える。" nodebug="true" />
     <regex target="text" pattern="公開し(?:、|て|た上で)あなたの手札に加える。その後あなたのライブラリーを切り直す。」" value="公開してあなたの手札に加え、その後あなたのライブラリーを切り直す。」" nodebug="true" />
     <regex target="text" pattern="タップ状態で戦場に出す。その後あなたのライブラリーを切り直す。」" value="タップ状態で戦場に出し、その後あなたのライブラリーを切り直す。」" nodebug="true" />
