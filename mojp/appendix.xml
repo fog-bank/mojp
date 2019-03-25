@@ -945,10 +945,11 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="(?&lt;=トークンでない(?:他の)?)クリーチャーがあなたのコントロール下で戦場に出るたび、" value="クリーチャーが１体あなたのコントロール下で戦場に出るたび、" nodebug="true" />
     <regex target="text" pattern="(?&lt;=アーティファクト|土地|森|パーマネント)が(あなたのコントロール下で)?戦場に出るたび、" value="が１つ$1戦場に出るたび、" nodebug="true" />
     <regex target="text" pattern="(?&lt;!この|装備している)クリーチャーが死亡するたび、" value="クリーチャーが１体死亡するたび、" nodebug="true" />
+    <regex target="text" pattern="クリーチャーが戦場から(?=[^。]*墓地に置かれるたび、)" value="クリーチャーが１体戦場から" nodebug="true" />
     <regex target="text" pattern="(?&lt;=クリーチャー|クリーチャー・トークン)が戦場を離れるたび、" value="が１体戦場を離れるたび、" nodebug="true" />
     <regex target="text" pattern="クリーチャーを生け贄に捧げるたび" value="クリーチャーを１体生け贄に捧げるたび" nodebug="true" />
     <regex target="text" pattern="パーマネントを生け贄に捧げるたび" value="パーマネントを１つ生け贄に捧げるたび" nodebug="true" />
-    <regex target="text" pattern="いずれかの(人間|鳥|スリヴァー|トークンでないクリーチャー)が(?=[^、。]+たび)" value="$1が１体" nodebug="true" />
+    <regex target="text" pattern="いずれかの(人間|鳥|スリヴァー|トークンでないクリーチャー)が(?:１体)?(?=[^、。]+たび)" value="$1が１体" nodebug="true" />
     <regex target="text" pattern="対戦相手１人がコントロールしている呪文や能力" value="対戦相手がコントロールしている呪文や能力" nodebug="true" />
     <regex target="text" pattern="対戦相手１人が(?=[^。]+(?:(?&lt;!最初の.+|つ目の.+)唱える|１枚引く|１枚捨てる|１体死亡する|１つ生け贄に捧げる)たび、)" value="対戦相手が" nodebug="true" />
     <!-- テンプレート変更：コスト軽減 -->
@@ -2682,7 +2683,6 @@ Knowledge Vaultが戦場を離れたとき、Knowledge Vaultにより追放さ�
     <card name="Heliod's Pilgrim" jaName="ヘリオッドの巡礼者" type="クリーチャー ― 人間・クレリック" pt="1/2">ヘリオッドの巡礼者が戦場に出たとき、あなたは「あなたのライブラリーからオーラ・カード１枚を探し、公開してあなたの手札に加え、その後あなたのライブラリーを切り直す。」を選んでもよい。</card>
     <card name="Martyr of Sands" jaName="砂の殉教者" type="クリーチャー ― 人間・クレリック" pt="1/1">(１),あなたの手札から白のカードをＸ枚公開する,砂の殉教者を生け贄に捧げる：あなたはＸの３倍の点数のライフを得る。</card>
     <card name="Miraculous Recovery" jaName="奇跡の復活" type="インスタント">あなたの墓地からクリーチャー・カード１枚を対象とし、それを戦場に戻す。それの上に+1/+1カウンターを１個置く。</card>
-    <card name="Sigil of the New Dawn" jaName="新たな夜明けの印形" type="エンチャント">クリーチャーが１体戦場からあなたの墓地に置かれるたび、あなたは(１)(白)を支払ってもよい。そうしたなら、そのカードをあなたの手札に戻す。</card>
     <card name="Swift Reckoning" jaName="迅速な報い" type="ソーサリー">魔巧 ― あなたの墓地にインスタントやソーサリーであるカードが２枚以上あるなら、あなたは迅速な報いを、瞬速を持っているかのように唱えてもよい。（あなたはこれを、あなたがインスタントを唱えられるときならいつでも唱えてよい。）
 タップ状態のクリーチャー１体を対象とし、それを破壊する。</card>
     <card name="Tethmos High Priest" jaName="テツモスの大神官" type="クリーチャー ― 猫・クレリック" pt="2/3">英雄的 ― あなたがテツモスの大神官を対象とする呪文を唱えるたび、あなたの墓地から点数で見たマナ・コストが２以下のクリーチャー・カード１枚を対象とし、それを戦場に戻す。</card>
