@@ -723,6 +723,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="修正" value="修整" nodebug="true" />
     <regex target="text" pattern="(?&lt;!に)よって" value="によって" nodebug="true" />
     <regex target="text" pattern="ときのみ唱えられる" value="ときにのみ唱えられる" nodebug="true" />
+    <regex target="text" pattern="選ぶ、" value="選び、" nodebug="true" />
     <regex target="text" pattern="パワーの等しい" value="パワーに等しい" nodebug="true" />
     <regex target="text" pattern="の数の等しい" value="の数に等しい" nodebug="true" />
     <regex target="text" pattern="マナ・コストで支払うことなく" value="マナ・コストを支払うことなく" nodebug="true" />
@@ -959,6 +960,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <!-- テンプレート変更：指示語 -->
     <regex target="text" pattern="そのコピーになる。" value="それのコピーになる。" nodebug="true" />
     <regex target="text" pattern="(?&lt;!(?:対象|エンチャント|すべて(?!のクリーチャー・タイプ)|コントロール).+)それは土地でもある。" value="これは土地でもある。" nodebug="true" />
+    <regex target="text" pattern="(?&lt;!(?:対象|エンチャント|コントロール).+)このターン、それはブロックされない。" value="このターン、これはブロックされない。" nodebug="true" />
     <regex target="text" pattern="とき、オーナーは" value="とき、これのオーナーは" nodebug="true" />
     <regex target="text" pattern="それを唱えるために\((.)\)が(?:支払|使)われていないかぎり、それを生け贄に捧げる" value="これを唱えるために($1)が支払われていないかぎり、これを生け贄に捧げる" nodebug="true" />
     <regex target="text" pattern="あなたは２点のライフを支払ってもよい。そうしないなら、.+はタップ状態で戦場に出る。" value="あなたは２点のライフを支払ってもよい。そうしないなら、これはタップ状態で戦場に出る。" nodebug="true" />
@@ -2641,9 +2643,6 @@ Knowledge Vaultが戦場を離れたとき、Knowledge Vaultにより追放さ�
 ・クリーチャー１体かプレインズウォーカー１体かプレイヤー１人を対象とする。火想者の発動はそれにＸ点のダメージを与える。</card>-->
     <!-- UMA -->
     <card name="All Is Dust" jaName="全ては塵" type="部族・ソーサリー ― エルドラージ">各プレイヤーはそれぞれ、自分がコントロールしている有色のパーマネントをすべて生け贄に捧げる。</card>
-    <card name="Creeping Tar Pit" jaName="忍び寄るタール坑" type="土地">忍び寄るタール坑はタップ状態で戦場に出る。
-(Ｔ)：(青)か(黒)を加える。
-(１)(青)(黒)：ターン終了時まで、忍び寄るタール坑は青であり黒である3/2のエレメンタル・クリーチャーになる。このターン、これはブロックされない。これは土地でもある。</card>
     <card name="Faith's Fetters" jaName="信仰の足枷" type="エンチャント ― オーラ">エンチャント（パーマネント）
 信仰の足枷が戦場に出たとき、あなたは４点のライフを得る。
 エンチャントされているパーマネントでは攻撃もブロックもできず、それの起動型能力はマナ能力でないかぎり起動できない。</card>
