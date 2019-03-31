@@ -898,6 +898,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="あなたがコントロールするクリーチャー１体と、([^。]+)がコントロールするクリーチャー" value="あなたがコントロールしているクリーチャー１体と、$1がコントロールしているクリーチャー" nodebug="true" />
     <regex target="text" pattern="あなたがコントロールするクリーチャー１体と、" value="あなたがコントロールしているクリーチャー１体と、" nodebug="true" />
     <regex target="text" pattern="プレインズウォーカーのコントローラーがコントロールする" value="プレインズウォーカーのコントローラーがコントロールしている" nodebug="true" />
+    <regex target="text" pattern="(?&lt;=(?:エンチャント|プロテクション)（[^。]+)がコントロールする(?=[^。]+）)" value="がコントロールしている" nodebug="true" />
     <!-- テンプレート変更：コントロールしていて -->
     <regex target="text" pattern="がコントロール(?:する|している)、?(?=(?:基本|棲み家)でない土地)" value="がコントロールしていて" nodebug="true" />
     <regex target="text" pattern="がコントロール(?:する|している)、?土地でない(?=各?パーマネント)" value="がコントロールしていて土地でない" nodebug="true" />
