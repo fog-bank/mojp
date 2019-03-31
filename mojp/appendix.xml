@@ -837,7 +837,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="一番上からカード([０-９Ｘ]{2,}|[２-９Ｘ])枚を(?=自分の墓地)" value="一番上からカードを$1枚" nodebug="true" />
     <regex target="text" pattern="トークン([０-９Ｘ]+)体を生成する。" value="トークンを$1体生成する。" nodebug="true" />
     <regex target="text" pattern="(１体|１つ)が(あなたのコントロール下で)?戦場に出るたび、" value="が$1$2戦場に出るたび、" nodebug="true" />
-    <regex target="text" pattern="クリーチャー１体が死亡するたび、" value="クリーチャーが１体死亡するたび、" nodebug="true" />
+    <regex target="text" pattern="クリーチャー１体が(?=(?:攻撃|死亡)するたび、)" value="クリーチャーが１体" nodebug="true" />
     <regex target="text" pattern="(?&lt;!につき)([０-９Ｘ]+)個の(.\d/.\d|\w{1,2})カウンターが置かれた状態で戦場に出る" value="$2カウンターが$1個置かれた状態で戦場に出る" nodebug="true" />
     <!-- 順序変更：であるかぎり -->
     <regex target="text" pattern="(?m)(?&lt;=^| ― |「|。)([^\n―：「（。]+)は、((?:(?!。|、|それ|その|自身).)+)かぎり、?それ(?=で?は)" value="$2かぎり、$1" nodebug="true" />
@@ -887,9 +887,11 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="がコントロールする他の各プレインズウォーカー" value="がコントロールしている他の各プレインズウォーカー" nodebug="true" />
     <regex target="text" pattern="がコントロールする、?望む数のクリーチャー" value="がコントロールしている望む数のクリーチャー" nodebug="true" />
     <regex target="text" pattern="がコントロールする(?=(?:土地|アーティファクト|クリーチャー)の総?数)" value="がコントロールしている" nodebug="true" />
-    <regex target="text" pattern="がコントロールするクリーチャー１体につき" value="がコントロールしているクリーチャー１体につき" nodebug="true" />
-    <regex target="text" pattern="がコントロールする(?=(?:平地|島|沼|山|森|オーラ)１つにつき)" value="がコントロールしている" nodebug="true" />
+    <regex target="text" pattern="がコントロールする(?=(?:クリーチャー|平地|島|沼|山|森|エンチャント|オーラ)１.につき)" value="がコントロールしている" nodebug="true" />
     <regex target="text" pattern="がコントロールする(?=(?:アン)?タップ状態のクリーチャー)" value="がコントロールしている" nodebug="true" />
+    <regex target="text" pattern="がコントロールするクリーチャー(?=[^。]+をつける。)" value="がコントロールしているクリーチャー" nodebug="true" />
+    <regex target="text" pattern="がコントロールする(?=(?:他の)?(?:クリーチャー|猫|侍|吸血鬼|霊基体|ゾンビ|ドラゴン|スリヴァー|エレメンタル|マーフォーク|ミノタウルス|島|山|森)(?:１.)?が[^。「]+るたび、)" value="がコントロールしている" nodebug="true" />
+    <regex target="text" pattern="(?&lt;=(?:エンチャント|プロテクション)（[^。]+)がコントロールする(?=[^。]+）)" value="がコントロールしている" nodebug="true" />
     <regex target="text" pattern="(?&lt;!持つ[^。]+)[がの]コントロールする(他の)?(クリーチャー|アーティファクト|エンチャント|土地|パーマネント|島|森|鳥|エルフ)([１-３][つ体])を?オーナーの手札に戻" value="がコントロールしている$1$2$3をオーナーの手札に戻" nodebug="true" />
     <regex target="text" pattern="(?m)(?&lt;=^|・| ― |：|。|たび、|とき、|時に、|場合、)あなたがコントロールするクリーチャー(?=[０-９Ｘ]+体を対象とする。)" value="あなたがコントロールしているクリーチャー" nodebug="true" />
     <regex target="text" pattern="このターン、あなたがコントロールするクリーチャーは" value="このターン、あなたがコントロールしているクリーチャーは" nodebug="true" />
@@ -898,13 +900,9 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="あなたがコントロールするクリーチャー１体と、([^。]+)がコントロールするクリーチャー" value="あなたがコントロールしているクリーチャー１体と、$1がコントロールしているクリーチャー" nodebug="true" />
     <regex target="text" pattern="あなたがコントロールするクリーチャー１体と、" value="あなたがコントロールしているクリーチャー１体と、" nodebug="true" />
     <regex target="text" pattern="プレインズウォーカーのコントローラーがコントロールする" value="プレインズウォーカーのコントローラーがコントロールしている" nodebug="true" />
-    <regex target="text" pattern="(?&lt;=(?:エンチャント|プロテクション)（[^。]+)がコントロールする(?=[^。]+）)" value="がコントロールしている" nodebug="true" />
-    <regex target="text" pattern="がコントロールするクリーチャー(?=[^。]+をつける。)" value="がコントロールしているクリーチャー" nodebug="true" />
     <!-- テンプレート変更：コントロールしていて -->
-    <regex target="text" pattern="がコントロール(?:する|している)、?(?=(?:基本|棲み家)でない土地)" value="がコントロールしていて" nodebug="true" />
+    <regex target="text" pattern="がコントロール(?:する|している)、?(?=(?:伝説|アーティファクト|基本|棲み家)でない)" value="がコントロールしていて" nodebug="true" />
     <regex target="text" pattern="がコントロール(?:する|している)、?土地でない(?=各?パーマネント)" value="がコントロールしていて土地でない" nodebug="true" />
-    <regex target="text" pattern="がコントロール(?:する|している)、?アーティファクトでない" value="がコントロールしていてアーティファクトでない" nodebug="true" />
-    <regex target="text" pattern="がコントロール(?:する|している)、?伝説でない" value="がコントロールしていて伝説でない" nodebug="true" />
     <regex target="text" pattern="がコントロールする他の([^。、]+)でないクリーチャー" value="がコントロールしていて$1でない他のクリーチャー" nodebug="true" />
     <regex target="text" pattern="がコントロール(?:する|している)、?(?=.{1,4}でない(他の)?クリーチャー)" value="がコントロールしていて" nodebug="true" />
     <regex target="text" pattern="がコントロールする(.か.)の(?=クリーチャー|エンチャント|パーマネント)" value="がコントロールしていて$1である" nodebug="true" />
@@ -946,7 +944,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="が対戦相手にダメージを与えるたび、" value="が対戦相手１人にダメージを与えるたび、" nodebug="true" />
     <regex target="text" pattern="(?&lt;=トークンでない(?:他の)?)クリーチャーがあなたのコントロール下で戦場に出るたび、" value="クリーチャーが１体あなたのコントロール下で戦場に出るたび、" nodebug="true" />
     <regex target="text" pattern="(?&lt;=アーティファクト|土地|森|パーマネント)が(あなたのコントロール下で)?戦場に出るたび、" value="が１つ$1戦場に出るたび、" nodebug="true" />
-    <regex target="text" pattern="(?&lt;!この|装備している)クリーチャーが死亡するたび、" value="クリーチャーが１体死亡するたび、" nodebug="true" />
+    <regex target="text" pattern="(?&lt;=(?&lt;!この|装備している)クリーチャー|侍)が死亡するたび、" value="が１体死亡するたび、" nodebug="true" />
     <regex target="text" pattern="クリーチャーが戦場から(?=[^。]*墓地に置かれるたび、)" value="クリーチャーが１体戦場から" nodebug="true" />
     <regex target="text" pattern="(?&lt;=クリーチャー|クリーチャー・トークン)が戦場を離れるたび、" value="が１体戦場を離れるたび、" nodebug="true" />
     <regex target="text" pattern="クリーチャーを生け贄に捧げるたび" value="クリーチャーを１体生け贄に捧げるたび" nodebug="true" />
@@ -1691,7 +1689,7 @@ Knowledge Vaultが戦場を離れたとき、Knowledge Vaultにより追放さ�
     <card name="Brine Elemental" jaName="塩水の精霊" type="クリーチャー ― エレメンタル" pt="5/4">変異(５)(青)(青)（あなたはこのカードを、(３)で2/2クリーチャーとして裏向きに唱えてもよい。これの変異コストで、これをいつでも表向きにしてよい。）
 塩水の精霊が表向きになったとき、各対戦相手はそれぞれ自分の次のアンタップ・ステップを飛ばす。</card>
     <card name="Butcher of Malakir" jaName="マラキールの解体者" type="クリーチャー ― 吸血鬼・戦士" pt="5/4">飛行
-マラキールの解体者かあなたがコントロールする他のクリーチャーが１体死亡するたび、各対戦相手はそれぞれクリーチャー１体を生け贄に捧げる。</card>
+マラキールの解体者かあなたがコントロールしている他のクリーチャーが１体死亡するたび、各対戦相手はそれぞれクリーチャー１体を生け贄に捧げる。</card>
     <card name="Chain Reaction" jaName="連鎖反応" type="ソーサリー">連鎖反応は各クリーチャーにそれぞれＸ点のダメージを与える。Ｘは戦場にあるクリーチャーの総数に等しい。</card>
     <card name="Crowned Ceratok" jaName="冠角獣" type="クリーチャー ― サイ" pt="4/3">トランプル
 あなたがコントロールしていて+1/+1カウンターが置かれている各クリーチャーはそれぞれトランプルを持つ。</card>
@@ -1740,7 +1738,6 @@ Knowledge Vaultが戦場を離れたとき、Knowledge Vaultにより追放さ�
 (Ｔ)：ターン終了時まで、あなたがコントロールしていて飛行を持つ他のクリーチャーは+1/+0の修整を受ける。</card>
     <card name="Strionic Resonator" jaName="ストリオン共鳴体" type="アーティファクト">(２),(Ｔ)：あなたがコントロールしている誘発型能力１つを対象とし、それをコピーする。あなたはそのコピーの新しい対象を選んでもよい。（誘発型能力には「～とき」「～たび」「～時に」のいずれかが書かれている。）</card>
     <card name="Timberpack Wolf" jaName="森林群れの狼" type="クリーチャー ― 狼" pt="2/2">森林群れの狼は、あなたがコントロールしていて《森林群れの狼》という名前である他のクリーチャー１体につき+1/+1の修整を受ける。</card>
-    <card name="Zulaport Cutthroat" jaName="ズーラポートの殺し屋" type="クリーチャー ― 人間・ならず者・同盟者" pt="1/1">ズーラポートの殺し屋かあなたがコントロールしている他のクリーチャーが１体死亡するたび、各対戦相手はそれぞれ１点のライフを失い、あなたは１点のライフを得る。</card>
     <!-- カンマ抜け -->
     <card name="Conqueror's Galleon" jaName="征服者のガレオン船" type="アーティファクト ― 機体" pt="2/10" related="Conqueror's Foothold">征服者のガレオン船が攻撃したとき、戦闘終了時に、これを追放し、その後、変身させた状態であなたのコントロール下で戦場に戻す。
 搭乗４（あなたがコントロールしている望む数のクリーチャーを、パワーの合計が４以上になるように選んでタップする：ターン終了時まで、この機体はアーティファクト・クリーチャーになる。）</card>
@@ -1893,7 +1890,7 @@ Knowledge Vaultが戦場を離れたとき、Knowledge Vaultにより追放さ�
 このターン、血流を飲む者によってダメージを与えられたクリーチャーが１体死亡するたび、血流を飲む者の上に+1/+1カウンターを１個置く。</card>
     <card name="Comet Storm" jaName="彗星の嵐" type="インスタント">多重キッカー(１)（あなたはこの呪文を唱えるに際し、追加で(１)を望む回数支払ってもよい。）
 クリーチャー１体かプレインズウォーカー１体かプレイヤー１人と、この呪文がキッカーされた１回につきさらに他のクリーチャー１体かプレインズウォーカー１体かプレイヤー１人を対象とする。彗星の嵐はそれらにそれぞれＸ点のダメージを与える。</card>
-    <card name="Rakish Heir" jaName="自堕落な後継者" type="クリーチャー ― 吸血鬼" pt="2/2">あなたがコントロールする吸血鬼１体がプレイヤー１人に戦闘ダメージを与えるたび、それの上に+1/+1カウンターを１個置く。</card>
+    <card name="Rakish Heir" jaName="自堕落な後継者" type="クリーチャー ― 吸血鬼" pt="2/2">あなたがコントロールしている吸血鬼１体がプレイヤー１人に戦闘ダメージを与えるたび、それの上に+1/+1カウンターを１個置く。</card>
     <card name="Abundance" jaName="豊穣" type="エンチャント">あなたがカードを１枚引くなら、代わりにあなたは「あなたは土地か土地でないかを選び、選んだ種類のカードが公開されるまで、あなたのライブラリーの一番上からカードを１枚ずつ公開する。そのカードをあなたの手札に加え、これにより公開された他のカードをすべて望む順番であなたのライブラリーの一番下に置く。」を選んでもよい。</card>
     <card name="Jedit Ojanen of Efrava" jaName="エフラヴァのジェディット・オジャネン" type="伝説のクリーチャー ― 猫・戦士" pt="5/5">森渡り（このクリーチャーは防御プレイヤーが森をコントロールしているかぎりブロックされない。）
 エフラヴァのジェディット・オジャネンが攻撃かブロックするたび、森渡りを持つ緑の2/2の猫・戦士・クリーチャー・トークンを１体生成する。</card>
