@@ -388,6 +388,7 @@
     <card name="Carnivore" jaName="肉食動物" type="トークン・クリーチャー ― ビースト" pt="3/1" related="Tooth and Claw"></card>
     <card name="Hornet" jaName="スズメバチ" type="トークン・アーティファクト・クリーチャー ― 昆虫" pt="1/1" related="Hornet Cannon">飛行、速攻</card>
     <card name="Kaldra" jaName="カルドラ" type="トークン・伝説のクリーチャー ― アバター" pt="4/4" related="Helm of Kaldra"></card>
+    <card name="Karox Bladewing" jaName="刃の翼カロックス" type="トークン・伝説のクリーチャー ― ドラゴン" pt="4/4" related="Verix Bladewing">飛行</card>
     <card name="Kelp" jaName="ケルプ" type="トークン・クリーチャー ― 植物・壁" pt="0/1" related="Wall of Kelp">防衛</card>
     <card name="Lightning Rager" jaName="稲妻の憤怒獣" type="トークン・クリーチャー ― エレメンタル" pt="5/1" related="Rite of the Raging Storm">トランプル、速攻
 終了ステップの開始時に、このクリーチャーを生け贄に捧げる。</card>
@@ -400,7 +401,7 @@
     <card name="Twin" jaName="双子" type="トークン・アーティファクト・クリーチャー ― 構築物" pt="*/*" related="Gemini Engine"></card>
     <card name="Urami" jaName="烏羅未" type="トークン・伝説のクリーチャー ― デーモン・スピリット" pt="5/5" related="Tomb of Urami">飛行</card>
     <card name="Voja" jaName="ヴォジャ" type="トークン・伝説のクリーチャー ― 狼" pt="2/2" related="Tolsimir Wolfblood"></card>
-    <card name="Voja, Friend to Elves" jaName="エルフの友、ヴォジャ" type="トークン・伝説のクリーチャー ― 狼" pt="3/3"></card>
+    <card name="Voja, Friend to Elves" jaName="エルフの友、ヴォジャ" type="トークン・伝説のクリーチャー ― 狼" pt="3/3" related="Tolsimir, Friend to Wolves"></card>
     <card name="Wasp" jaName="ワスプ" type="トークン・アーティファクト・クリーチャー ― 昆虫" pt="1/1" related="The Hive">飛行</card>
     <card name="Wirefly" jaName="針金バエ" type="トークン・アーティファクト・クリーチャー ― 昆虫" pt="2/2" related="Wirefly Hive">飛行</card>
     <card name="Wolves of the Hunt" jaName="狩人狼" type="トークン・クリーチャー ― 狼" pt="1/1" related="Master of the Hunt">他の《狩人狼》という名前のクリーチャーとのバンド</card>
@@ -408,7 +409,7 @@
     <!-- 専用のクリーチャータイプを持つトークン -->
     <card name="Camarid" jaName="カマリッド" type="トークン・クリーチャー ― カマリッド" pt="1/1" wikilink="カマリッド"></card>
     <card name="Caribou" jaName="カリブー" type="トークン・クリーチャー ― カリブー" pt="0/1" related="Caribou Range" wikilink="カリブー"></card>
-    <card name="Citizen" jaName="市民" type="トークン・クリーチャー ― 市民" pt="1/1" wikilink="市民"></card>
+    <!--<card name="Citizen" jaName="市民" type="トークン・クリーチャー ― 市民" wikilink="市民"></card>-->
     <card name="Deserter" jaName="脱走者" type="トークン・クリーチャー ― 脱走者" pt="0/1" related="Kjeldoran Home Guard" wikilink="脱走者"></card>
     <card name="Eldrazi Scion" jaName="エルドラージ・末裔" type="トークン・クリーチャー ― エルドラージ・末裔" pt="1/1" wikilink="末裔">このクリーチャーを生け贄に捧げる：(◇)を加える。</card>
     <card name="Germ" jaName="細菌" type="トークン・クリーチャー ― 細菌" pt="0/0" wikilink="細菌"></card>
@@ -429,6 +430,7 @@
     <card name="Zombie Army" jaName="ゾンビ・軍団" type="トークン・クリーチャー ― ゾンビ・軍団" pt="0/0" wikilink="動員"></card>
     <!-- 単一の特性しかないトークン -->
     <card name="Cat Dragon" jaName="猫・ドラゴン" type="トークン・クリーチャー ― 猫・ドラゴン" pt="3/3" related="Wasitora, Nekoru Queen">飛行</card>
+    <card name="Devil" jaName="デビル" type="トークン・クリーチャー ― デビル" pt="1/1">このクリーチャーが死亡したとき、クリーチャー１体かプレインズウォーカー１体かプレイヤー１人を対象とする。これはそれに１点のダメージを与える。</card>
     <card name="Dinosaur" jaName="恐竜" type="トークン・クリーチャー ― 恐竜" pt="3/3">トランプル（このクリーチャーは余剰の戦闘ダメージをこれが攻撃しているプレイヤーかプレインズウォーカーに与えることができる。）</card>
     <card name="Eldrazi Horror" jaName="エルドラージ・ホラー" type="トークン・クリーチャー ― エルドラージ・ホラー" pt="3/2"></card>
     <card name="Eldrazi Spawn" jaName="エルドラージ・落とし子" type="トークン・クリーチャー ― エルドラージ・落とし子" pt="0/1">このクリーチャーを生け贄に捧げる：(◇)を加える。</card>
@@ -443,6 +445,8 @@
     <card name="Squirrel" jaName="リス" type="トークン・クリーチャー ― リス" pt="1/1"></card>
     <card name="Thopter" jaName="飛行機械" type="トークン・アーティファクト・クリーチャー ― 飛行機械" pt="1/1">飛行</card>
     <card name="Weird" jaName="奇魔" type="トークン・クリーチャー ― 奇魔" pt="3/3" related="Thunderheads">防衛、飛行</card>
+    <card name="Wizard" jaName="ウィザード" type="トークン・クリーチャー ― ウィザード" pt="2/2"></card>
+    <card name="Zombie Warrior" jaName="ゾンビ・戦士" type="トークン・クリーチャー ― ゾンビ・戦士" pt="4/4">警戒</card>
     <!-- Gift Pack (M19) -->
     <card name="Angelic Guardian" jaName="Angelic Guardian" type="クリーチャー ― 天使" pt="5/5">飛行
 あなたがコントロールしているクリーチャーが１体以上攻撃するたび、ターン終了時まで、それらは破壊不能を得る。</card>
