@@ -3,6 +3,8 @@
   <add>
     <card name="Gleemox" jaName="Gleemox" type="アーティファクト">(Ｔ)：好きな色１色のマナ１点を加える。
 このカードは禁止されている。</card>
+    <card name="Vitu-Ghazi" jaName="ヴィトゥ＝ガジー" type="伝説の土地・クリーチャー ― エレメンタル" pt="0/0" wikilink="">（《ヴィトゥ＝ガジーの目覚め》によりクリーチャー化した土地です。元の土地タイプや能力はそのままですが、元の名前が判別できないため、ここには表示されません。）
+速攻</card>
     <card name="The Monarch" jaName="統治者" type="" wikilink="統治者">あなたの終了ステップの開始時に、あなたはカードを１枚引く。
 クリーチャーが１体あなたに戦闘ダメージを与えるたび、それのコントローラーが統治者になる。</card>
     <card name="City's Blessing" jaName="都市の承認" type="" wikilink="昇殿"></card>
@@ -398,11 +400,27 @@
 (４),(Ｔ)：増殖を行う。（望む数のパーマネントやプレイヤーを選び、その後すでにそこにあるカウンター１種類につき、そのカウンターをもう１個与える。）</card>
     <card name="Mobilized District" jaName="総動員地区" type="土地">(Ｔ)：(◇)を加える。
 (４)：ターン終了時まで、総動員地区は警戒を持つ3/3の市民・クリーチャーになる。これは土地でもある。この能力を起動するためのコストは、あなたがコントロールしている伝説のクリーチャーやプレインズウォーカー１体につき(１)少なくなる。</card>
+
+    <card name="Gideon, the Oathsworn" jaName="誓いを立てた者、ギデオン" type="伝説のプレインズウォーカー ― ギデオン" pt="4">あなたがギデオンでないクリーチャー２体以上で攻撃するたび、それらのクリーチャーの上に+1/+1カウンターをそれぞれ１個置く。
+[+2]：ターン終了時まで、誓いを立てた者、ギデオンは白の5/5の兵士・クリーチャーになる。これはプレインズウォーカーでもある。このターン、これに与えられるダメージをすべて軽減する。（これがこのターンに唱えられたなら、通常これでは攻撃できない。）
+[-9]：誓いを立てた者、ギデオンと対戦相手がコントロールしている各クリーチャーを追放する。</card>
+    <card name="Desperate Lunge" jaName="捨て身の突進" type="インスタント">クリーチャー１体を対象とする。ターン終了時まで、それは+2/+2の修整を受け飛行を得る。あなたは２点のライフを得る。</card>
+    <card name="Gideon's Battle Cry" jaName="ギデオンの喊声" type="ソーサリー" related="Gideon, the Oathsworn">あなたがコントロールしている各クリーチャーの上に+1/+1カウンターをそれぞれ１個置く。あなたはあなたのライブラリーやあなたの墓地から《誓いを立てた者、ギデオン》という名前のカード１枚を探し、それを公開してあなたの手札に加えてもよい。あなたがこれによりあなたのライブラリーからカードを探したなら、あなたのライブラリーを切り直す。</card>
+    <card name="Gideon's Company" jaName="ギデオンの中隊" type="クリーチャー ― 人間・兵士" pt="3/3">あなたがライフを得るたび、ギデオンの中隊の上に+1/+1カウンターを２個置く。
+(３)(白)：ギデオン・プレインズウォーカー１体を対象とし、それの上に忠誠カウンターを１個置く。</card>
+    <card name="Jace, Arcane Strategist" jaName="秘儀の策士、ジェイス" type="伝説のプレインズウォーカー ― ジェイス" pt="4">あなたが各ターンのあなたの２枚目のカードを引くたび、あなたがコントロールしているクリーチャー１体を対象とし、それの上に+1/+1カウンターを１個置く。
+[+1]：カードを１枚引く。
+[-7]：このターン、あなたがコントロールしているクリーチャーはブロックされない。</card>
+    <card name="Guildpact Informant" jaName="ギルドパクトの密通者" type="クリーチャー ― フェアリー・ならず者" pt="1/1">飛行
+ギルドパクトの密通者がプレイヤー１人かプレインズウォーカー１体に戦闘ダメージを与えるたび、増殖を行う。（望む数のパーマネントやプレイヤーを選び、その後すでにそこにあるカウンター１種類につき、そのカウンターをもう１個与える。）</card>
+    <card name="Jace's Projection" jaName="ジェイスの投影" type="クリーチャー ― ウィザード・イリュージョン" pt="2/2">あなたがカードを１枚引くたび、ジェイスの投影の上に+1/+1カウンターを１個置く。
+(３)(青)：ジェイス・プレインズウォーカー１体を対象とし、それの上に忠誠カウンターを１個置く。</card>
+    <card name="Jace's Ruse" jaName="ジェイスの策略" type="ソーサリー" related="Jace, Arcane Strategist">クリーチャー最大２体を対象とし、それらをオーナーの手札に戻す。あなたはあなたのライブラリーやあなたの墓地から《秘儀の策士、ジェイス》という名前のカード１枚を探し、それを公開してあなたの手札に加えてもよい。あなたがこれによりあなたのライブラリーからカードを探したなら、あなたのライブラリーを切り直す。</card>
     
     <card name="Tezzeret, Master of the Bridge" jaName="橋の主、テゼレット" type="伝説のプレインズウォーカー ― テゼレット" pt="5">あなたが唱えるクリーチャーやプレインズウォーカーである呪文は親和（アーティファクト）を持つ。
 [+2]：橋の主、テゼレットは各対戦相手にそれぞれＸ点のダメージを与える。Ｘはあなたがコントロールしているアーティファクトの総数に等しい。あなたはＸ点のライフを得る。
 [-3]：あなたの墓地からアーティファクト・カード１枚を対象とし、それをあなたの手札に戻す。
-[-8]：あなたのライブラリーの一番上から１０枚のカードを追放する。その中からアーティファクト・カードをすべて戦場に出す。</card>
+[-8]：あなたのライブラリーの一番上からカードを１０枚追放する。その中からアーティファクト・カードをすべて戦場に出す。</card>
     <!-- クリーチャーでないトークン -->
     <card name="Clue" jaName="手掛かり" type="トークン・アーティファクト ― 手掛かり" wikilink="手掛かり">(２),このアーティファクトを生け贄に捧げる：カードを１枚引く。</card>
     <card name="Etherium Cell" jaName="エーテリウム電池" type="トークン・アーティファクト" related="Tezzeret the Schemer">(Ｔ),このアーティファクトを生け贄に捧げる：好きな色１色のマナ１点を加える。</card>
@@ -923,6 +941,8 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <related name="Journey for the Elixir" related="Jiang Yanggu" />
     <related name="Dovin's Dismissal" related="Dovin, Architect of Law" />
     <related name="Domri's Nodorog" related="Domri, City Smasher" />
+    <related name="Gideon's Battle Cry" related="Gideon, the Oathsworn" />
+    <related name="Jace's Ruse" related="Jace, Arcane Strategist" />
     <!-- 関連カード (共闘) -->
     <related name="Regna, the Redeemer" related="Krav, the Unredeemed" />
     <related name="Krav, the Unredeemed" related="Regna, the Redeemer" />
@@ -1158,7 +1178,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="\(X\)" value="(Ｘ)" />
     <regex target="text" pattern="(?&lt;=[０-９Ｘ]+)店" value="点" />
     <regex target="text" pattern="対象都市" value="対象とし" nodebug="true" />
-    <regex target="text" pattern="(?:呪文|クリーチャー)化" value="呪文か" nodebug="true" />
+    <regex target="text" pattern="(?&lt;=呪文|クリーチャー)化(?!した)" value="か" nodebug="true" />
     <regex target="text" pattern="コントール" value="コントロール" nodebug="true" />
     <regex target="text" pattern="そうでないなあ" value="そうでないなら" nodebug="true" />
     <regex target="name" pattern="あんた" value="あなた" />
@@ -1210,7 +1230,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="タイプや色" value="色やタイプ" nodebug="true" />
     <regex target="text" pattern="クリーチャー１体かプレイヤー１人かプレインズウォーカー１体" value="クリーチャー１体かプレインズウォーカー１体かプレイヤー１人" nodebug="true" />
     <regex target="text" pattern="クリーチャー１体と、プレインズウォーカー１体かプレイヤー１人を対象" value="クリーチャー１体と、プレイヤー１人かプレインズウォーカー１体を対象" nodebug="true" />
-    <regex target="text" pattern="プレインズウォーカー１体か対戦相手１人" value="対戦相手１人かプレインズウォーカー１体" nodebug="true" />
+    <regex target="text" pattern="(?&lt;!か)プレインズウォーカー１体か対戦相手１人" value="対戦相手１人かプレインズウォーカー１体" nodebug="true" />
     <regex target="text" pattern="そのプレイヤーかパーマネントに与える" value="そのパーマネントかプレイヤーに与える" nodebug="true" />
     <regex target="text" pattern="他のトークンでない" value="トークンでない他の" nodebug="true" />
     <regex target="text" pattern="あなたのコントロール下で([^。]+)が(１体|１つ)?戦場に出るたび、" value="$1が$2あなたのコントロール下で戦場に出るたび、" nodebug="true" />
@@ -3345,7 +3365,11 @@ Knowledge Vaultが戦場を離れたとき、Knowledge Vaultにより追放さ�
     <card name="Urban Evolution" jaName="都の進化" type="ソーサリー">カードを３枚引く。このターン、あなたは追加で土地を１つプレイしてもよい。</card>-->
     <!-- WAR (保留) -->
     <!--<card name="Saheeli, Sublime Artificer" jaName="崇高な工匠、サヒーリ" type="伝説のプレインズウォーカー ― サヒーリ" pt="5">あなたがクリーチャーでない呪文を唱えるたび、無色の1/1の霊気装置・アーティファクト・クリーチャー・トークンを１体生成する。
-[-2]：あなたがコントロールしているアーティファクト１つと、あなたがコントロールしている他のアーティファクト１つかクリーチャー１つを対象とする。ターン終了時まで、その前者はそれの他のタイプに加えてアーティファクトであることを除きその後者のコピーになる。</card>-->
+[-2]：あなたがコントロールしているアーティファクト１つと、あなたがコントロールしている他のアーティファクト１つかクリーチャー１つを対象とする。ターン終了時まで、その前者はそれの他のタイプに加えてアーティファクトであることを除きその後者のコピーになる。</card>
+    <card name="Tezzeret, Master of the Bridge" jaName="橋の主、テゼレット" type="伝説のプレインズウォーカー ― テゼレット" pt="5">あなたが唱えるクリーチャーやプレインズウォーカーである呪文は親和（アーティファクト）を持つ。
+[+2]：橋の主、テゼレットは各対戦相手にそれぞれＸ点のダメージを与える。Ｘはあなたがコントロールしているアーティファクトの総数に等しい。あなたはＸ点のライフを得る。
+[-3]：あなたの墓地からアーティファクト・カード１枚を対象とし、それをあなたの手札に戻す。
+[-8]：あなたのライブラリーの一番上から１０枚のカードを追放する。その中からアーティファクト・カードをすべて戦場に出す。</card>-->
     <!-- オラクル変更(DOM)の対象外 -->
     <card name="Firesong and Sunspeaker" jaName="ファイアソングとサンスピーカー" type="伝説のクリーチャー ― ミノタウルス・クレリック" pt="4/6">あなたがコントロールしていて赤でありインスタントかソーサリーである呪文は絆魂を持つ。
 白でありインスタントかソーサリーである呪文によりあなたがライフを得るたび、クリーチャー１体かプレイヤー１人を対象とする。ファイアソングとサンスピーカーはそれに３点のダメージを与える。</card>
