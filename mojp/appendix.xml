@@ -3,7 +3,7 @@
   <add>
     <card name="Gleemox" jaName="Gleemox" type="アーティファクト">(Ｔ)：好きな色１色のマナ１点を加える。
 このカードは禁止されている。</card>
-    <card name="Vitu-Ghazi" jaName="ヴィトゥ＝ガジー" type="伝説の土地・クリーチャー ― エレメンタル" pt="0/0" wikilink="">速攻
+    <card name="Vitu-Ghazi" jaName="ヴィトゥ＝ガジー" type="伝説の土地・クリーチャー ― エレメンタル" pt="0/0" wikilink="ヴィトゥ＝ガジーの目覚め/Awakening of Vitu-Ghazi">速攻
 （訳注：これは《ヴィトゥ＝ガジーの目覚め》によりクリーチャー化した土地です。元の土地タイプや能力はそのままですが、元の名前が判別できないため、ここには表示されません。）</card>
     <card name="The Monarch" jaName="統治者" type="" wikilink="統治者">あなたの終了ステップの開始時に、あなたはカードを１枚引く。
 クリーチャーが１体あなたに戦闘ダメージを与えるたび、それのコントローラーが統治者になる。</card>
@@ -478,72 +478,112 @@
 [-8]：あなたのライブラリーの一番上からカードを１０枚追放する。その中からアーティファクト・カードをすべて戦場に出す。</card>
     <!-- クリーチャーでないトークン -->
     <card name="Clue" jaName="手掛かり" type="トークン・アーティファクト ― 手掛かり" wikilink="手掛かり">(２),このアーティファクトを生け贄に捧げる：カードを１枚引く。</card>
-    <card name="Etherium Cell" jaName="エーテリウム電池" type="トークン・アーティファクト" related="Tezzeret the Schemer">(Ｔ),このアーティファクトを生け贄に捧げる：好きな色１色のマナ１点を加える。</card>
+    <card name="Etherium Cell" jaName="エーテリウム電池" type="トークン・アーティファクト" wikilink="策謀家テゼレット/Tezzeret the Schemer">(Ｔ),このアーティファクトを生け贄に捧げる：好きな色１色のマナ１点を加える。</card>
     <card name="Gold" jaName="金" type="トークン・アーティファクト">このアーティファクトを生け贄に捧げる：好きな色１色のマナ１点を加える。</card>
-    <card name="Land Mine" jaName="地雷" type="トークン・アーティファクト">(赤),このアーティファクトを生け贄に捧げる：飛行を持たない攻撃クリーチャー１体を対象とする。このアーティファクトはそれに２点のダメージを与える。</card>
-    <card name="Mask" jaName="仮面" type="トークン・エンチャント ― オーラ" related="Estrid, the Masked">エンチャント（パーマネント）
+    <card name="Land Mine" jaName="地雷" type="トークン・アーティファクト" wikilink="ゴブリンのドカーン物取扱者/Goblin Kaboomist">(赤),このアーティファクトを生け贄に捧げる：飛行を持たない攻撃クリーチャー１体を対象とする。このアーティファクトはそれに２点のダメージを与える。</card>
+    <card name="Mask" jaName="仮面" type="トークン・エンチャント ― オーラ" wikilink="仮面使い、エストリッド/Estrid, the Masked">エンチャント（パーマネント）
 族霊鎧（エンチャントしているパーマネントが破壊されるなら、代わりにそれが負っているダメージをすべて取り除いてこのオーラを破壊する。）</card>
-    <card name="Stoneforged Blade" jaName="石鍛冶製の剣" type="トークン・アーティファクト ― 装備品" related="Nahiri, the Lithomancer">破壊不能
+    <card name="Stoneforged Blade" jaName="石鍛冶製の剣" type="トークン・アーティファクト ― 装備品" wikilink="石術師、ナヒリ/Nahiri, the Lithomancer">破壊不能
 装備しているクリーチャーは+5/+5の修整を受け二段攻撃を持つ。
 装備(０)</card>
     <card name="Treasure" jaName="宝物" type="トークン・アーティファクト ― 宝物" wikilink="宝物">(Ｔ),このアーティファクトを生け贄に捧げる：好きな色１色のマナ１点を加える。</card>
     <!-- 専用の名前を持つトークン -->
-    <card name="Ashaya, the Awoken World" jaName="目覚めし世界、アシャヤ" type="トークン・伝説のクリーチャー ― エレメンタル" pt="4/4" related="Nissa, Sage Animist"></card>
-    <card name="Butterfly" jaName="蝶" type="トークン・クリーチャー ― 昆虫" pt="1/1" related="Giant Caterpillar">飛行</card>
-    <card name="Carnivore" jaName="肉食動物" type="トークン・クリーチャー ― ビースト" pt="3/1" related="Tooth and Claw"></card>
-    <card name="Hornet" jaName="スズメバチ" type="トークン・アーティファクト・クリーチャー ― 昆虫" pt="1/1" related="Hornet Cannon">飛行、速攻</card>
-    <card name="Kaldra" jaName="カルドラ" type="トークン・伝説のクリーチャー ― アバター" pt="4/4" related="Helm of Kaldra"></card>
-    <card name="Karox Bladewing" jaName="刃の翼カロックス" type="トークン・伝説のクリーチャー ― ドラゴン" pt="4/4" related="Verix Bladewing">飛行</card>
-    <card name="Kelp" jaName="ケルプ" type="トークン・クリーチャー ― 植物・壁" pt="0/1" related="Wall of Kelp">防衛</card>
-    <card name="Lightning Rager" jaName="稲妻の憤怒獣" type="トークン・クリーチャー ― エレメンタル" pt="5/1" related="Rite of the Raging Storm">トランプル、速攻
+    <card name="Ashaya, the Awoken World" jaName="目覚めし世界、アシャヤ" type="トークン・伝説のクリーチャー ― エレメンタル" pt="4/4" wikilink="精霊信者の賢人、ニッサ/Nissa, Sage Animist"></card>
+    <card name="Butterfly" jaName="蝶" type="トークン・クリーチャー ― 昆虫" pt="1/1" wikilink="大イモムシ/Giant Caterpillar">飛行</card>
+    <card name="Carnivore" jaName="肉食動物" type="トークン・クリーチャー ― ビースト" pt="3/1" wikilink="歯とかぎ爪/Tooth and Claw"></card>
+    <card name="Hornet" jaName="スズメバチ" type="トークン・アーティファクト・クリーチャー ― 昆虫" pt="1/1" wikilink="スズメバチ砲/Hornet Cannon">飛行、速攻</card>
+    <card name="Kaldra" jaName="カルドラ" type="トークン・伝説のクリーチャー ― アバター" pt="4/4" wikilink="カルドラの兜/Helm of Kaldra"></card>
+    <card name="Karox Bladewing" jaName="刃の翼カロックス" type="トークン・伝説のクリーチャー ― ドラゴン" pt="4/4" wikilink="刃の翼ヴェリックス/Verix Bladewing">飛行</card>
+    <card name="Kelp" jaName="ケルプ" type="トークン・クリーチャー ― 植物・壁" pt="0/1" wikilink="Wall of Kelp">防衛</card>
+    <card name="Lightning Rager" jaName="稲妻の憤怒獣" type="トークン・クリーチャー ― エレメンタル" pt="5/1" wikilink="荒れ狂う嵐の儀式/Rite of the Raging Storm">トランプル、速攻
 終了ステップの開始時に、このクリーチャーを生け贄に捧げる。</card>
-    <card name="Marit Lage" jaName="マリット・レイジ" type="トークン・伝説のクリーチャー ― アバター" pt="20/20" related="Dark Depths">飛行、破壊不能</card>
-    <card name="Minor Demon" jaName="マイナー・デーモン" type="トークン・クリーチャー ― デーモン" pt="1/1" related="Boris Devilboon"></card>
-    <card name="Ragavan" jaName="ラガバン" type="トークン・伝説のクリーチャー ― 猿" pt="2/1" related="Kari Zev, Skyship Raider"></card>
-    <card name="Stangg Twin" jaName="スタングの双子" type="トークン・伝説のクリーチャー ― 人間・戦士" pt="3/4" related="Stangg"></card>
-    <card name="Tombspawn" jaName="屍鬼" type="トークン・クリーチャー ― ゾンビ" pt="2/2" related="Tombstone Stairwell">速攻</card>
-    <card name="Tuktuk the Returned" jaName="復活のタクタク" type="トークン・伝説のアーティファクト・クリーチャー ― ゴブリン・ゴーレム" pt="5/5" related="Tuktuk the Explorer"></card>
-    <card name="Twin" jaName="双子" type="トークン・アーティファクト・クリーチャー ― 構築物" pt="*/*" related="Gemini Engine"></card>
-    <card name="Urami" jaName="烏羅未" type="トークン・伝説のクリーチャー ― デーモン・スピリット" pt="5/5" related="Tomb of Urami">飛行</card>
-    <card name="Voja" jaName="ヴォジャ" type="トークン・伝説のクリーチャー ― 狼" pt="2/2" related="Tolsimir Wolfblood"></card>
-    <card name="Voja, Friend to Elves" jaName="エルフの友、ヴォジャ" type="トークン・伝説のクリーチャー ― 狼" pt="3/3" related="Tolsimir, Friend to Wolves"></card>
-    <card name="Wasp" jaName="ワスプ" type="トークン・アーティファクト・クリーチャー ― 昆虫" pt="1/1" related="The Hive">飛行</card>
-    <card name="Wirefly" jaName="針金バエ" type="トークン・アーティファクト・クリーチャー ― 昆虫" pt="2/2" related="Wirefly Hive">飛行</card>
-    <card name="Wolves of the Hunt" jaName="狩人狼" type="トークン・クリーチャー ― 狼" pt="1/1" related="Master of the Hunt">他の《狩人狼》という名前のクリーチャーとのバンド</card>
-    <card name="Wood" jaName="木材" type="トークン・クリーチャー ― 壁" pt="0/1" related="Jungle Patrol">防衛</card>
+    <card name="Marit Lage" jaName="マリット・レイジ" type="トークン・伝説のクリーチャー ― アバター" pt="20/20" wikilink="暗黒の深部/Dark Depths">飛行、破壊不能</card>
+    <card name="Minor Demon" jaName="マイナー・デーモン" type="トークン・クリーチャー ― デーモン" pt="1/1" wikilink="Boris Devilboon"></card>
+    <card name="Ragavan" jaName="ラガバン" type="トークン・伝説のクリーチャー ― 猿" pt="2/1" wikilink="航空船を強襲する者、カーリ・ゼヴ/Kari Zev, Skyship Raider"></card>
+    <card name="Stangg Twin" jaName="スタングの双子" type="トークン・伝説のクリーチャー ― 人間・戦士" pt="3/4" wikilink="スタング/Stangg"></card>
+    <card name="Tombspawn" jaName="屍鬼" type="トークン・クリーチャー ― ゾンビ" pt="2/2" wikilink="墓石の階段/Tombstone Stairwell">速攻</card>
+    <card name="Tuktuk the Returned" jaName="復活のタクタク" type="トークン・伝説のアーティファクト・クリーチャー ― ゴブリン・ゴーレム" pt="5/5" wikilink="探検家タクタク/Tuktuk the Explorer"></card>
+    <card name="Twin" jaName="双子" type="トークン・アーティファクト・クリーチャー ― 構築物" pt="*/*" wikilink="双子エンジン/Gemini Engine"></card>
+    <card name="Urami" jaName="烏羅未" type="トークン・伝説のクリーチャー ― デーモン・スピリット" pt="5/5" wikilink="烏羅未の墳墓/Tomb of Urami">飛行</card>
+    <card name="Voja" jaName="ヴォジャ" type="トークン・伝説のクリーチャー ― 狼" pt="2/2" wikilink="トルシミール・ウルフブラッド/Tolsimir Wolfblood"></card>
+    <card name="Voja, Friend to Elves" jaName="エルフの友、ヴォジャ" type="トークン・伝説のクリーチャー ― 狼" pt="3/3" wikilink="狼の友、トルシミール/Tolsimir, Friend to Wolves"></card>
+    <card name="Wasp" jaName="ワスプ" type="トークン・アーティファクト・クリーチャー ― 昆虫" pt="1/1" wikilink="蜂の巣/The Hive">飛行</card>
+    <card name="Wirefly" jaName="針金バエ" type="トークン・アーティファクト・クリーチャー ― 昆虫" pt="2/2" wikilink="針金バエの巣/Wirefly Hive">飛行</card>
+    <!--<card name="Wolves of the Hunt" jaName="狩人狼" type="トークン・クリーチャー ― 狼" pt="1/1" wikilink="Master of the Hunt">他の《狩人狼》という名前のクリーチャーとのバンド</card>-->
+    <card name="Wood" jaName="木材" type="トークン・クリーチャー ― 壁" pt="0/1" wikilink="ジャングル巡視部隊/Jungle Patrol">防衛</card>
     <!-- 専用のクリーチャータイプを持つトークン -->
     <card name="Camarid" jaName="カマリッド" type="トークン・クリーチャー ― カマリッド" pt="1/1" wikilink="カマリッド"></card>
-    <card name="Caribou" jaName="カリブー" type="トークン・クリーチャー ― カリブー" pt="0/1" related="Caribou Range" wikilink="カリブー"></card>
+    <card name="Caribou" jaName="カリブー" type="トークン・クリーチャー ― カリブー" pt="0/1" wikilink="カリブー"></card>
     <!--<card name="Citizen" jaName="市民" type="トークン・クリーチャー ― 市民" wikilink="市民"></card>-->
-    <card name="Deserter" jaName="脱走者" type="トークン・クリーチャー ― 脱走者" pt="0/1" related="Kjeldoran Home Guard" wikilink="脱走者"></card>
+    <card name="Deserter" jaName="脱走者" type="トークン・クリーチャー ― 脱走者" pt="0/1" wikilink="脱走者"></card>
     <card name="Eldrazi Scion" jaName="エルドラージ・末裔" type="トークン・クリーチャー ― エルドラージ・末裔" pt="1/1" wikilink="末裔">このクリーチャーを生け贄に捧げる：(◇)を加える。</card>
     <card name="Germ" jaName="細菌" type="トークン・クリーチャー ― 細菌" pt="0/0" wikilink="細菌"></card>
     <card name="Graveborn" jaName="墓生まれ" type="トークン・クリーチャー ― 墓生まれ" pt="3/1" wikilink="墓生まれ">速攻</card>
-    <card name="Orb" jaName="オーブ" type="トークン・クリーチャー ― オーブ" pt="*/*" related="Phantasmal Sphere" wikilink="オーブ">飛行</card>
-    <card name="Pentavite" jaName="ペンタバイト" type="トークン・アーティファクト・クリーチャー ― ペンタバイト" pt="1/1" related="Pentavus" wikilink="ペンタバイト">飛行</card>
-    <card name="Pincher" jaName="ピンチャー" type="トークン・クリーチャー ― ピンチャー" pt="2/2" related="Summoning Station" wikilink="ピンチャー"></card>
-    <card name="Prism" jaName="プリズム" type="トークン・アーティファクト・クリーチャー ― プリズム" pt="0/1" related="Diamond Kaleidoscope" wikilink="プリズム"></card>
-    <card name="Sand" jaName="砂漠の民" type="トークン・クリーチャー ― 砂漠の民" pt="1/1" related="Dune-Brood Nephilim"></card>
-    <card name="Sand Warrior" jaName="砂漠の民・戦士" type="トークン・クリーチャー ― 砂漠の民・戦士" pt="1/1" related="Hazezon Tamar"></card>
-    <card name="Serf" jaName="農奴" type="トークン・クリーチャー ― 農奴" pt="0/1" related="Sengir Autocrat" wikilink="農奴"></card>
+    <!--<card name="Orb" jaName="オーブ" type="トークン・クリーチャー ― オーブ" pt="*/*" wikilink="オーブ">飛行</card>-->
+    <card name="Pentavite" jaName="ペンタバイト" type="トークン・アーティファクト・クリーチャー ― ペンタバイト" pt="1/1" wikilink="ペンタバイト">飛行</card>
+    <card name="Pincher" jaName="ピンチャー" type="トークン・クリーチャー ― ピンチャー" pt="2/2" wikilink="ピンチャー"></card>
+    <card name="Prism" jaName="プリズム" type="トークン・アーティファクト・クリーチャー ― プリズム" pt="0/1" wikilink="プリズム"></card>
+    <card name="Sand" jaName="砂漠の民" type="トークン・クリーチャー ― 砂漠の民" pt="1/1" wikilink="砂丘生みのネフィリム/Dune-Brood Nephilim"></card>
+    <card name="Sand Warrior" jaName="砂漠の民・戦士" type="トークン・クリーチャー ― 砂漠の民・戦士" pt="1/1" wikilink="Hazezon Tamar"></card>
+    <card name="Serf" jaName="農奴" type="トークン・クリーチャー ― 農奴" pt="0/1" wikilink="農奴"></card>
     <card name="Servo" jaName="霊気装置" type="トークン・アーティファクト・クリーチャー ― 霊気装置" pt="1/1" wikilink="霊気装置"></card>
     <card name="Survivor" jaName="生存者" type="トークン・クリーチャー ― 生存者" pt="1/1" wikilink="生存者"></card>
-    <card name="Tetravite" jaName="テトラバイト" type="トークン・アーティファクト・クリーチャー ― テトラバイト" pt="1/1" related="Tetravus" wikilink="テトラバイト">飛行
+    <card name="Tetravite" jaName="テトラバイト" type="トークン・アーティファクト・クリーチャー ― テトラバイト" pt="1/1" wikilink="テトラバイト">飛行
 テトラバイトはエンチャントされない。</card>
-    <card name="Triskelavite" jaName="トリスケラバイト" type="トークン・アーティファクト・クリーチャー ― トリスケラバイト" pt="1/1" related="Triskelavus" wikilink="トリスケラバイト">飛行
+    <card name="Triskelavite" jaName="トリスケラバイト" type="トークン・アーティファクト・クリーチャー ― トリスケラバイト" pt="1/1" wikilink="トリスケラバイト">飛行
 このクリーチャーを生け贄に捧げる：クリーチャー１体かプレインズウォーカー１体かプレイヤー１人を対象とする。このクリーチャーはそれに１点のダメージを与える。</card>
     <card name="Zombie Army" jaName="ゾンビ・軍団" type="トークン・クリーチャー ― ゾンビ・軍団" pt="0/0" wikilink="動員"></card>
     <!-- 単一の特性しかないトークン -->
-    <card name="Cat Dragon" jaName="猫・ドラゴン" type="トークン・クリーチャー ― 猫・ドラゴン" pt="3/3" related="Wasitora, Nekoru Queen">飛行</card>
+    <card name="Antelope" jaName="アンテロープ" type="トークン・クリーチャー ― アンテロープ" pt="2/3" wikilink="Master of the Wild Hunt Avatar">森渡り</card>
+    <card name="Ape" jaName="類人猿" type="トークン・クリーチャー ― 類人猿" pt="3/3" wikilink="猿術/Pongify"></card>
+    <card name="Bird Illusion" jaName="鳥・イリュージョン" type="トークン・クリーチャー ― 鳥・イリュージョン" pt="1/1" wikilink="つぶやく神秘家/Murmuring Mystic">飛行</card>
+    <card name="Bird Soldier" jaName="鳥・兵士" type="トークン・クリーチャー ― 鳥・兵士" pt="1/1" wikilink="翼の疾風/Flurry of Wings">飛行</card>
+    <card name="Cat Dragon" jaName="猫・ドラゴン" type="トークン・クリーチャー ― 猫・ドラゴン" pt="3/3" wikilink="ネコルーの女王、ワシトラ/Wasitora, Nekoru Queen">飛行</card>
+    <card name="Cat Soldier" jaName="猫・兵士" type="トークン・クリーチャー ― 猫・兵士" pt="1/1">警戒</card>
+    <card name="Cat Warrior" jaName="猫・戦士" type="トークン・クリーチャー ― 猫・戦士" pt="2/2">森渡り（このクリーチャーは、防御プレイヤーが森をコントロールしているかぎりブロックされない。）</card>
     <card name="Devil" jaName="デビル" type="トークン・クリーチャー ― デビル" pt="1/1">このクリーチャーが死亡したとき、クリーチャー１体かプレインズウォーカー１体かプレイヤー１人を対象とする。これはそれに１点のダメージを与える。</card>
     <card name="Dinosaur" jaName="恐竜" type="トークン・クリーチャー ― 恐竜" pt="3/3">トランプル（このクリーチャーは余剰の戦闘ダメージをこれが攻撃しているプレイヤーかプレインズウォーカーに与えることができる。）</card>
+    <card name="Djinn" jaName="ジン" type="トークン・アーティファクト・クリーチャー ― ジン" pt="5/5" wikilink="スレイマンの壺/Bottle of Suleiman">飛行</card>
+    <card name="Djinn Monk" jaName="ジン・モンク" type="トークン・クリーチャー ― ジン・モンク" pt="2/2">飛行</card>
+    <card name="Dragon Spirit" jaName="ドラゴン・スピリット" type="トークン・クリーチャー ― ドラゴン・スピリット" pt="5/5" wikilink="龍の牙、辰正/Tatsumasa, the Dragon's Fang">飛行</card>
+    <card name="Drake" jaName="ドレイク" type="トークン・クリーチャー ― ドレイク" pt="2/2">飛行</card>
     <card name="Eldrazi Horror" jaName="エルドラージ・ホラー" type="トークン・クリーチャー ― エルドラージ・ホラー" pt="3/2"></card>
-    <card name="Eldrazi Spawn" jaName="エルドラージ・落とし子" type="トークン・クリーチャー ― エルドラージ・落とし子" pt="0/1">このクリーチャーを生け贄に捧げる：(◇)を加える。</card>
+    <card name="Eldrazi Spawn" jaName="エルドラージ・落とし子" type="トークン・クリーチャー ― エルドラージ・落とし子" pt="0/1" wikilink="落とし子">このクリーチャーを生け贄に捧げる：(◇)を加える。</card>
+    <card name="Elemental Cat" jaName="エレメンタル・猫" type="トークン・クリーチャー ― エレメンタル・猫" pt="1/1" wikilink="火猫の襲撃/Firecat Blitz">速攻</card>
+    <card name="Elf" jaName="エルフ" type="トークン・クリーチャー ― エルフ" pt="1/1" wikilink="Elvish Champion Avatar">(Ｔ)：(緑)を加える。</card>
+    <card name="Elf Druid" jaName="エルフ・ドルイド" type="トークン・クリーチャー ― エルフ・ドルイド" pt="1/1" wikilink="Elvish Champion Avatar">(Ｔ)：(緑)を加える。</card>
+    <card name="Elf Knight" jaName="エルフ・騎士" type="トークン・クリーチャー ― エルフ・騎士" pt="2/2">警戒</card>
+    <card name="Elf Warrior" jaName="エルフ・戦士" type="トークン・クリーチャー ― エルフ・戦士" pt="1/1"></card>
+    <card name="Faerie" jaName="フェアリー" type="トークン・クリーチャー ― フェアリー" pt="1/1" wikilink="狩り立てられたトロール/Hunted Troll">飛行</card>
     <card name="Faerie Rogue" jaName="フェアリー・ならず者" type="トークン・クリーチャー ― フェアリー・ならず者" pt="1/1">飛行</card>
+    <card name="Fish" jaName="魚" type="トークン・クリーチャー ― 魚" pt="3/3" wikilink="浅瀬蟲/Reef Worm">このクリーチャーが死亡したとき、「このクリーチャーが死亡したとき、青の9/9のクラーケン・クリーチャー・トークンを１体生成する。」を持つ青の6/6の鯨・クリーチャー・トークンを１体生成する。</card>
     <card name="Frog Lizard" jaName="カエル・トカゲ" type="トークン・クリーチャー ― カエル・トカゲ" pt="3/3"></card>
+    <card name="Gargoyle" jaName="ガーゴイル" type="トークン・アーティファクト・クリーチャー ― ガーゴイル" pt="3/4" wikilink="ガーゴイルの城/Gargoyle Castle">飛行</card>
+    <card name="Giant" jaName="巨人" type="トークン・クリーチャー ― 巨人" pt="4/4" wikilink="タイタンの契約/Pact of the Titan"></card>
+    <card name="Gnome" jaName="ノーム" type="トークン・アーティファクト・クリーチャー ― ノーム" pt="1/1" wikilink="メトロノーム/Metrognome"></card>
     <card name="Goat" jaName="ヤギ" type="トークン・クリーチャー ― ヤギ" pt="0/1"></card>
-    <card name="Manifest" jaName="予示" type="クリーチャー" pt="2/2" wikilink="予示">予示されたクリーチャー・カードは、それのマナ・コストで、いつでも表向きにしてよい。裏向きのカードは、それの変異コストで表向きにしてもよい。</card>
-    <card name="Morph" jaName="変異" type="クリーチャー" pt="2/2" wikilink="変異">変異を持つカードは、それの変異コストを支払うことで、いつでも表向きにしてよい。</card>
+    <card name="Goblin Rogue" jaName="ゴブリン・ならず者" type="トークン・クリーチャー ― ゴブリン・ならず者" pt="1/1"></card>
+    <card name="Goblin Scout" jaName="ゴブリン・スカウト" type="トークン・クリーチャー ― ゴブリン・スカウト" pt="1/1" wikilink="ゴブリン斥候隊/Goblin Scouts">山渡り</card>
+    <card name="Goblin Soldier" jaName="ゴブリン・兵士" type="トークン・クリーチャー ― ゴブリン・兵士" pt="1/1"></card>
+    <card name="Goblin Warrior" jaName="ゴブリン・戦士" type="トークン・クリーチャー ― ゴブリン・戦士" pt="1/1" wikilink="略奪の母、汁婆/Wort, the Raidmother"></card>
+    <card name="Gremlin" jaName="グレムリン" type="トークン・クリーチャー ― グレムリン" pt="2/2"></card>
+    <card name="Griffin" jaName="グリフィン" type="トークン・クリーチャー ― グリフィン" pt="2/2" wikilink="グリフィンの導き/Griffin Guide">飛行</card>
+    <card name="Harpy" jaName="ハーピー" type="トークン・クリーチャー ― ハーピー" pt="1/1" wikilink="忌まわしき首領/Abhorrent Overlord">飛行</card>
+    <card name="Horse" jaName="馬" type="トークン・クリーチャー ― 馬" pt="5/5" wikilink="冠毛の陽馬/Crested Sunmare"></card>
+    <card name="Hound" jaName="猟犬" type="トークン・クリーチャー ― 猟犬" pt="1/1" wikilink="雑種犬の群/Mongrel Pack"></card>
+    <card name="Human Cleric" jaName="人間・クレリック" type="トークン・クリーチャー ― 人間・クレリック" pt="1/1"></card>
+    <card name="Human Soldier" jaName="人間・兵士" type="トークン・クリーチャー ― 人間・兵士" pt="1/1"></card>
+    <card name="Human Wizard" jaName="人間・ウィザード" type="トークン・クリーチャー ― 人間・ウィザード" pt="1/1"></card>
+    <card name="Hydra" jaName="ハイドラ" type="トークン・クリーチャー ― ハイドラ" pt="*/*" wikilink="ハイドラの繁殖主/Hydra Broodmaster"></card>
+    <card name="Kavu" jaName="カヴー" type="トークン・クリーチャー ― カヴー" pt="3/3" wikilink="暗影のカヴー/Penumbra Kavu"></card>
+    <card name="Kithkin Soldier" jaName="キスキン・兵士" type="トークン・クリーチャー ― キスキン・兵士" pt="1/1"></card>
+    <card name="Knight Ally" jaName="騎士・同盟者" type="トークン・クリーチャー ― 騎士・同盟者" pt="2/2"></card>
+    <card name="Kor Ally" jaName="コー・同盟者" type="トークン・クリーチャー ― コー・同盟者" pt="1/1"></card>
+    <card name="Kor Soldier" jaName="コー・兵士" type="トークン・クリーチャー ― コー・兵士" pt="1/1"></card>
+    <card name="Kraken" jaName="クラーケン" type="トークン・クリーチャー ― クラーケン" pt="9/9"></card>
+    <card name="Manifest" jaName="予示" type="クリーチャー" pt="2/2" wikilink="予示">（予示されたクリーチャー・カードは、それのマナ・コストで、いつでも表向きにしてよい。裏向きのカードは、それの変異コストで表向きにしてもよい。）</card>
+    <card name="Merfolk Wizard" jaName="マーフォーク・ウィザード" type="トークン・クリーチャー ― マーフォーク・ウィザード" pt="1/1"></card>
+    <card name="Morph" jaName="変異" type="クリーチャー" pt="2/2" wikilink="変異">（変異を持つカードは、それの変異コストを支払うことで、いつでも表向きにしてよい。）</card>
     <card name="Myr" jaName="マイア" type="トークン・アーティファクト・クリーチャー ― マイア" pt="1/1"></card>
     <card name="Pirate" jaName="海賊" type="トークン・クリーチャー ― 海賊" pt="2/2">威迫（このクリーチャーは２体以上のクリーチャーによってしかブロックされない。）</card>
     <card name="Starfish" jaName="ヒトデ" type="トークン・クリーチャー ― ヒトデ" pt="0/1" related="Spiny Starfish"></card>
