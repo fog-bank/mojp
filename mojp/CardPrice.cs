@@ -328,8 +328,14 @@ namespace Mojp
             if (string.IsNullOrEmpty(card?.Name))
                 return true;
 
-            if (card.Type != null && (card.Type.Length == 0 || card.Type.StartsWith("トークン") ||
-                card.Type.StartsWith("ヴァンガード") || card.Type.StartsWith("次元") || card.Type.StartsWith("現象")))
+            if (string.IsNullOrEmpty(card.Type))
+                return true;
+
+            if (card.Type.StartsWith("トークン") || card.Type.StartsWith("ヴァンガード") ||
+                card.Type.StartsWith("次元") || card.Type.StartsWith("現象"))
+                return true;
+
+            if (card.Name == "Morph" || card.Name == "Manifest")
                 return true;
 
             return false;

@@ -583,15 +583,42 @@
     <card name="Kraken" jaName="クラーケン" type="トークン・クリーチャー ― クラーケン" pt="9/9"></card>
     <card name="Manifest" jaName="予示" type="クリーチャー" pt="2/2" wikilink="予示">（予示されたクリーチャー・カードは、それのマナ・コストで、いつでも表向きにしてよい。裏向きのカードは、それの変異コストで表向きにしてもよい。）</card>
     <card name="Merfolk Wizard" jaName="マーフォーク・ウィザード" type="トークン・クリーチャー ― マーフォーク・ウィザード" pt="1/1"></card>
+    <card name="Minotaur" jaName="ミノタウルス" type="トークン・クリーチャー ― ミノタウルス" pt="2/3" wikilink="双角の連続襲撃/Flurry of Horns">速攻</card>
+    <card name="Monk" jaName="モンク" type="トークン・クリーチャー ― モンク" pt="1/1" wikilink="僧院の導師/Monastery Mentor">果敢</card>
+    <card name="Monkey" jaName="猿" type="トークン・クリーチャー ― 猿" pt="2/2" wikilink="猿の檻/Monkey Cage"></card>
     <card name="Morph" jaName="変異" type="クリーチャー" pt="2/2" wikilink="変異">（変異を持つカードは、それの変異コストを支払うことで、いつでも表向きにしてよい。）</card>
-    <card name="Myr" jaName="マイア" type="トークン・アーティファクト・クリーチャー ― マイア" pt="1/1"></card>
+    <card name="Nightmare Horror" jaName="ナイトメア・ホラー" type="トークン・クリーチャー ― ナイトメア・ホラー" pt="*/*" wikilink="チェイナーの苦悩/Chainer's Torment"></card>
+    <card name="Octopus" jaName="タコ" type="トークン・クリーチャー ― タコ" pt="8/8"></card>
+    <card name="Ox" jaName="雄牛" type="トークン・クリーチャー ― 雄牛" pt="2/4" wikilink="異形化するワンド/Transmogrifying Wand"></card>
+    <card name="Pegasus" jaName="ペガサス" type="トークン・クリーチャー ― ペガサス" pt="1/1">飛行</card>
+    <card name="Pest" jaName="邪魔者" type="トークン・アーティファクト・クリーチャー ― 邪魔者" pt="0/1" wikilink="迷惑エンジン/Nuisance Engine"></card>
     <card name="Pirate" jaName="海賊" type="トークン・クリーチャー ― 海賊" pt="2/2">威迫（このクリーチャーは２体以上のクリーチャーによってしかブロックされない。）</card>
-    <card name="Starfish" jaName="ヒトデ" type="トークン・クリーチャー ― ヒトデ" pt="0/1" related="Spiny Starfish"></card>
+    <card name="Rhino" jaName="サイ" type="トークン・クリーチャー ― サイ" pt="4/4">トランプル</card>
+    <card name="Satyr" jaName="サテュロス" type="トークン・クリーチャー ― サテュロス" pt="2/2">速攻</card>
+    <card name="Sheep" jaName="羊" type="トークン・クリーチャー ― 羊" pt="0/1" wikilink="羊術師/Ovinomancer"></card>
+    <card name="Skeleton" jaName="スケルトン" type="トークン・クリーチャー ― スケルトン" pt="1/1">(黒)：このクリーチャーを再生する。</card>
+    <card name="Sliver" jaName="スリヴァー" type="トークン・クリーチャー ― スリヴァー" pt="1/1"></card>
+    <card name="Soldier Ally" jaName="兵士・同盟者" type="トークン・クリーチャー ― 兵士・同盟者" pt="1/1" wikilink="兵員への参加/Join the Ranks"></card>
+    <card name="Spawn" jaName="落とし子" type="トークン・アーティファクト・クリーチャー ― 落とし子" pt="2/2" wikilink="落とし子の穴/Spawning Pit"></card>
+    <card name="Spike" jaName="スパイク" type="トークン・クリーチャー ― スパイク" pt="1/1" wikilink="スパイクのブリーダー/Spike Breeder"></card>
+    <card name="Spirit Warrior" jaName="スピリット・戦士" type="トークン・クリーチャー ― スピリット・戦士" pt="*/*" wikilink="族樹の発動/Kin-Tree Invocation"></card>
+    <card name="Squid" jaName="イカ" type="トークン・クリーチャー ― イカ" pt="1/1">島渡り</card>
     <card name="Squirrel" jaName="リス" type="トークン・クリーチャー ― リス" pt="1/1"></card>
+    <card name="Starfish" jaName="ヒトデ" type="トークン・クリーチャー ― ヒトデ" pt="0/1" wikilink="Spiny Starfish"></card>
     <card name="Thopter" jaName="飛行機械" type="トークン・アーティファクト・クリーチャー ― 飛行機械" pt="1/1">飛行</card>
-    <card name="Weird" jaName="奇魔" type="トークン・クリーチャー ― 奇魔" pt="3/3" related="Thunderheads">防衛、飛行</card>
-    <card name="Wizard" jaName="ウィザード" type="トークン・クリーチャー ― ウィザード" pt="2/2"></card>
-    <card name="Zombie Warrior" jaName="ゾンビ・戦士" type="トークン・クリーチャー ― ゾンビ・戦士" pt="4/4">警戒</card>
+    <card name="Treefolk" jaName="ツリーフォーク" type="トークン・クリーチャー ― ツリーフォーク" pt="*/*" wikilink="森の捧げ物/Sylvan Offering"></card>
+    <card name="Treefolk Shaman" jaName="ツリーフォーク・シャーマン" type="トークン・クリーチャー ― ツリーフォーク・シャーマン" pt="2/5" wikilink="枝の手の内/Reach of Branches"></card>
+    <card name="Treefolk Warrior" jaName="ツリーフォーク・戦士" type="トークン・クリーチャー ― ツリーフォーク・戦士" pt="*/*" wikilink="カロニアのツイングローブ/Kalonian Twingrove">このクリーチャーのパワーとタフネスは、それぞれあなたがコントロールしている森の総数に等しい。</card>
+    <card name="Vampire Knight" jaName="吸血鬼・騎士" type="トークン・クリーチャー ― 吸血鬼・騎士" pt="1/1">絆魂</card>
+    <card name="Weird" jaName="奇魔" type="トークン・クリーチャー ― 奇魔" pt="3/3" wikilink="いかづち頭/Thunderheads">防衛、飛行</card>
+    <card name="Whale" jaName="鯨" type="トークン・クリーチャー ― 鯨" pt="6/6" wikilink="浅瀬蟲/Reef Worm">このクリーチャーが死亡したとき、青の9/9のクラーケン・クリーチャー・トークンを１体生成する。</card>
+    <card name="Wizard" jaName="ウィザード" type="トークン・クリーチャー ― ウィザード" pt="2/2" wikilink="謎めいた指導者、カズミナ/Kasmina, Enigmatic Mentor"></card>
+    <card name="Worm" jaName="蟲" type="トークン・クリーチャー ― 蟲" pt="1/1"></card>
+    <card name="Zombie Giant" jaName="ゾンビ・巨人" type="トークン・クリーチャー ― ゾンビ・巨人" pt="5/5" wikilink="墓所王の探索/Quest for the Gravelord"></card>
+    <card name="Zombie Horror" jaName="ゾンビ・ホラー" type="トークン・クリーチャー ― ゾンビ・ホラー" pt="*/*" wikilink="死体結い/Corpseweft"></card>
+    <card name="Zombie Knight" jaName="ゾンビ・騎士" type="トークン・クリーチャー ― ゾンビ・騎士" pt="2/2" wikilink="リッチの騎士、ジョス・ヴェス/Josu Vess, Lich Knight">威迫（このクリーチャーは２体以上のクリーチャーによってしかブロックされない。）</card>
+    <card name="Zombie Warrior" jaName="ゾンビ・戦士" type="トークン・クリーチャー ― ゾンビ・戦士" pt="4/4" wikilink="永遠神オケチラ/God-Eternal Oketra">警戒</card>
+    <card name="Zombie Wizard" jaName="ゾンビ・ウィザード" type="トークン・クリーチャー ― ゾンビ・ウィザード" pt="1/1" wikilink="アンクスの死者の王/Lich Lord of Unx"></card>
     <!-- Gift Pack (M19) -->
     <card name="Angelic Guardian" jaName="Angelic Guardian" type="クリーチャー ― 天使" pt="5/5">飛行
 あなたがコントロールしているクリーチャーが１体以上攻撃するたび、ターン終了時まで、それらは破壊不能を得る。</card>
@@ -640,7 +667,7 @@ Heavenly Qilinが攻撃するたび、あなたがコントロールしている
     <card name="Jiang Yanggu" jaName="Jiang Yanggu" type="伝説のプレインズウォーカー ― ヤングー" pt="4">[+1]：クリーチャー１体を対象とする。ターン終了時まで、それは+2/+2の修整を受ける。
 [-1]：あなたが《Mowu》という名前のクリーチャーをコントロールしていないなら、《Mowu》という名前の緑の3/3の伝説の猟犬・クリーチャー・トークンを１体生成する。
 [-5]：クリーチャー１体を対象とする。ターン終了時まで、それはトランプルを得て+X/+Xの修整を受ける。Ｘはあなたがコントロールしている土地の総数に等しい。</card>
-    <card name="Mowu" jaName="Mowu" type="トークン・伝説のクリーチャー ― 猟犬" pt="3/3" related="Jiang Yanggu"></card>
+    <card name="Mowu" jaName="Mowu" type="トークン・伝説のクリーチャー ― 猟犬" pt="3/3" wikilink="Jiang Yanggu"></card>
     <card name="Leopard-Spotted Jiao" jaName="Leopard-Spotted Jiao" type="クリーチャー ― ビースト" pt="3/1"></card>
     <card name="Feiyi Snake" jaName="Feiyi Snake" type="クリーチャー ― 蛇" pt="2/1">到達（このクリーチャーは飛行を持つクリーチャーをブロックできる。）</card>
     <card name="Sacred White Deer" jaName="Sacred White Deer" type="クリーチャー ― 大鹿" pt="2/2">(３)(緑),(Ｔ)：あなたは４点のライフを得る。この能力は、あなたがヤングー・プレインズウォーカーをコントロールしているときにのみ起動できる。</card>
