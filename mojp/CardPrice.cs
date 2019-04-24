@@ -335,7 +335,7 @@ namespace Mojp
                 card.Type.StartsWith("次元") || card.Type.StartsWith("現象"))
                 return true;
 
-            if (card.Name == "Morph" || card.Name == "Manifest")
+            if (card.Name == "Morph" || card.Name == "Manifest" || card.Name == "Vitu-Ghazi")
                 return true;
 
             return false;
