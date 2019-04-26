@@ -904,7 +904,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <!--<regex target="text" pattern="次のダメージを(?=[０-９Ｘ]+点軽減)" value="ダメージを次の" nodebug="true" />-->
     <!-- 順序変更：数字を前に移動 -->
     <regex target="text" pattern="(?&lt;!上から)カードを([０-９Ｘ]+)枚、?(?=探|選|捨て(?!るたび)|公開|追放|無作為に)" value="カード$1枚を" nodebug="true" />
-    <regex target="text" pattern="(?&lt;!または[^。]*)カードを最大([０-９Ｘ]+)枚(?:まで)?(?=対象|探)" value="カード最大$1枚を" nodebug="true" />
+    <regex target="text" pattern="カードを最大([０-９Ｘ]+)枚(?:まで)?(?=対象|探|あなたの手札に戻)" value="カード最大$1枚を" nodebug="true" />
     <regex target="text" pattern="カードを最大([０-９Ｘ]+)枚までと" value="カード最大$1枚と" nodebug="true" />
     <regex target="text" pattern="クリーチャーを最大([０-９Ｘ]+)体(?:まで)?対象" value="クリーチャー最大$1体を対象" nodebug="true" />
     <regex target="text" pattern="(?&lt;!と|や)(アーティファクト|土地|沼|森|パーマネント|呪文)を最大([０-９Ｘ]+)つ(?:まで)?対象" value="$1最大$2つを対象" nodebug="true" />
@@ -1100,6 +1100,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="(?&lt;!このターン[^。]+)戦場に出ている(?=場合|かぎり|他の|アーティファクト)" value="戦場にある" nodebug="true" />
     <regex target="text" pattern="ライブラリーの一番上(?:から１枚)?のカード(?:１枚)?を(?:１枚、?)?" value="ライブラリーの一番上のカードを" nodebug="true" />
     <regex target="text" pattern="ライブラリーのカードを上から([０-９Ｘ]{2,}|[０２-９Ｘ])枚、?" value="ライブラリーの一番上からカードを$1枚" nodebug="true" />
+    <regex target="text" pattern="ライブラリーの一番上のカードを(?=[０-９Ｘ]+枚見)" value="ライブラリーの一番上からカードを" nodebug="true" />
     <regex target="text" pattern="好きな色のマナ(?=[０-９Ｘ]+点を加え)" value="好きな色１色のマナ" nodebug="true" />
     <regex target="text" pattern="を対象とし、それはターン終了時まで" value="を対象とする。ターン終了時まで、それは" nodebug="true" />
     <regex target="text" pattern="を対象とし、それを、?([^。]+(?:「[^。」]+。?」[^。]+)?)かぎり、?" value="を対象とする。$1かぎり、それを" nodebug="true" />
@@ -1153,6 +1154,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="(?&lt;!する|の)インスタント・呪文かソーサリー・呪文" value="インスタントかソーサリーである呪文" nodebug="true" />
     <regex target="text" pattern="各インスタント・呪文[かと]各ソーサリー・呪文は" value="インスタントかソーサリーである各呪文は" nodebug="true" />
     <regex target="text" pattern="スピリット(・呪文)?(?:１つ)?か秘儀・呪文(?:１つ)?を唱えるたび、" value="スピリットか秘儀である呪文を唱えるたび、" nodebug="true" />
+    <regex target="text" pattern="鳥・パーマネント・カードまたはクレリック・パーマネント・カード" value="鳥かクレリックであるパーマネント・カード" nodebug="true" />
     <regex target="text" pattern="[の・]呪文[とや]([^。]+)[の・]呪文を唱えるためのコストは" value="か$1である呪文を唱えるためのコストは" nodebug="true" />
     <regex target="text" pattern="を持つ(?=.であり.である)" value="を持ち" nodebug="true" />
     <!--<regex target="text" pattern="魔巧 ― あなたの墓地にインスタントかソーサリーであるカード" value="魔巧 ― あなたの墓地にインスタントやソーサリーであるカード" nodebug="true" />-->
@@ -3005,7 +3007,6 @@ Knowledge Vaultが戦場を離れたとき、Knowledge Vaultにより追放さ�
 予見 ― あなたがコントロールしていてアンタップ状態の白か青のクリーチャー２体をタップする,あなたの手札から空の軽騎兵を公開する：カードを１枚引く。（この能力はあなたのアップキープの間にのみ、毎ターン１回のみ起動できる。）</card>
     <card name="Urban Evolution" jaName="都の進化" type="ソーサリー">カードを３枚引く。このターン、あなたは追加で土地を１つプレイしてもよい。</card>-->
     <!-- WAR -->
-    <card name="Bond of Insight" jaName="洞察の絆" type="ソーサリー">各プレイヤーは、自分のライブラリーの一番上からカードを４枚自分の墓地に置く。あなたの墓地からインスタントやソーサリーであるカード最大２枚をあなたの手札に戻す。洞察の絆を追放する。</card>
     <card name="Price of Betrayal" jaName="裏切りの対価" type="ソーサリー">アーティファクト１つかクリーチャー１体かプレインズウォーカー１体か対戦相手１人を対象とし、そこからカウンター最大５個を取り除く。</card>
     <card name="Tezzeret, Master of the Bridge" jaName="橋の主、テゼレット" type="伝説のプレインズウォーカー ― テゼレット" pt="5">あなたが唱えるクリーチャーやプレインズウォーカーである呪文は親和（アーティファクト）を持つ。（それらを唱えるためのコストは、あなたがコントロールしているアーティファクト１つにつき(１)少なくなる。）
 [+2]：橋の主、テゼレットは各対戦相手にそれぞれＸ点のダメージを与える。Ｘはあなたがコントロールしているアーティファクトの総数に等しい。あなたはＸ点のライフを得る。
