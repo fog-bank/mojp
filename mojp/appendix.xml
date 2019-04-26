@@ -1446,6 +1446,11 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <card name="Dark Depths" jaName="暗黒の深部" type="伝説の氷雪土地">暗黒の深部は、氷カウンターが１０個置かれた状態で戦場に出る。
 (３)：暗黒の深部の上から氷カウンターを１個取り除く。
 暗黒の深部の上に氷カウンターがないとき、これを生け贄に捧げる。そうしたなら、《マリット・レイジ》という名前で飛行と破壊不能を持つ黒の20/20の伝説のアバター・クリーチャー・トークンを１体生成する。</card>
+    <!-- 最新オラクル未対応 (WAR) -->
+    <card name="Ever-Watching Threshold" jaName="永久監視の敷居" type="エンチャント">対戦相手が攻撃するたび、そのプレイヤーがあなたやあなたがコントロールしているプレインズウォーカーを攻撃した場合、カードを１枚引く。</card>
+    <card name="General Jarkeld" jaName="General Jarkeld" type="伝説のクリーチャー ― 人間・兵士" pt="1/2">(Ｔ)：ブロックされている攻撃クリーチャー２体を対象とする。それらのクリーチャーをブロックしている各クリーチャーがもう一方をブロックできるなら、それらの攻撃クリーチャーのうちちょうど１体をブロックしている各クリーチャーはそれぞれ、その攻撃クリーチャーをブロックしなくなり、もう一方の攻撃クリーチャーをブロックする。この能力は、ブロック・クリーチャー指定ステップの間にのみ起動できる。</card>
+    <card name="Kudzu" jaName="Kudzu" type="エンチャント ― オーラ">エンチャント（土地）
+エンチャントしている土地がタップ状態になったとき、それを破壊する。その土地のコントローラーは、自分が選んだ土地１つにKudzuをつけてもよい。</card>
     <!-- テンプレートの変更 -->
     <card name="Cursed Rack" jaName="呪われた拷問台" type="アーティファクト">呪われた拷問台が戦場に出るに際し、対戦相手１人を選ぶ。
 選ばれたプレイヤーの手札の上限は４である。</card>
@@ -3285,6 +3290,8 @@ Knowledge Vaultが戦場を離れたとき、Knowledge Vaultにより追放さ�
     <type name="Urza's Mine" type="土地 ― ウルザの・鉱山" />
     <type name="Urza's Power Plant" type="土地 ― ウルザの・魔力炉" />
     <type name="Urza's Tower" type="土地 ― ウルザの・塔" />
+    <!-- 最新オラクル未対応 (WAR) -->
+    <type name="Civic Wayfinder" type="クリーチャー ― エルフ・ドルイド・戦士" />
     <!-- 関連カード (合体) -->
     <related name="Bruna, the Fading Light" related="Gisela, the Broken Blade|Brisela, Voice of Nightmares" />
     <related name="Brisela, Voice of Nightmares" related="Gisela, the Broken Blade|Bruna, the Fading Light" />
