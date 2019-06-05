@@ -216,7 +216,7 @@
                         <ColumnDefinition Width="Auto" />
                         <ColumnDefinition />
                     </Grid.ColumnDefinitions>
-                    <TextBlock>ローテーション日時 :</TextBlock>
+                    <TextBlock>カードリストの更新日時 :</TextBlock>
                     <TextBlock Name="txbPDRotationTime" Grid.Column="1" Margin="2,4,8,4" />
                     <StackPanel Grid.Column="2" Orientation="Horizontal" 
                                 ToolTip="ローテーション後のカードリストの取得に失敗した場合などに、手動で再取得を試みます。" ToolTipService.ShowDuration="60000">

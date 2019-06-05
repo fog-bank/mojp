@@ -91,7 +91,7 @@
             </TabControl.ItemContainerStyle>
             <TabControl.ItemTemplate>
                 <DataTemplate DataType="local:Card">
-                    <TextBlock Text="{Binding DisplayName}" TextTrimming="CharacterEllipsis" ToolTip="{Binding FullName, Mode=OneTime}" />
+                    <TextBlock Text="{Binding DisplayName}" TextTrimming="WordEllipsis" ToolTip="{Binding FullName, Mode=OneTime}" />
                 </DataTemplate>
             </TabControl.ItemTemplate>
             <TabControl.ContentTemplate>
@@ -171,9 +171,9 @@
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
                 <Image Source="Resources/Checkmark.png" Height="16" />
-                <TextBlock Grid.Column="1" Margin="4,0,0,0" TextTrimming="CharacterEllipsis">Penny Dreadful カードリストを更新しました。</TextBlock>
+                <TextBlock Grid.Column="1" Margin="4,0,0,0" TextTrimming="CharacterEllipsis">Penny Dreadful カードリストを取得しました。</TextBlock>
                 <Button Grid.Column="2" BorderBrush="{x:Null}" Background="{x:Null}"
-                        ToolTip="この通知を消します。" Click="OnClosePdSuccess">
+                        ToolTip="この通知を消します。設定で Penny Dreadful への対応を無効にできます。" Click="OnClosePdSuccess">
                     <Image Source="Resources/Close.png" Height="14" />
                 </Button>
             </Grid>
@@ -207,7 +207,7 @@
                     <Hyperlink ToolTip="https://fog-bank.github.io/mojp/" Click="OnGoToNewRelease">新しいバージョンがあります。</Hyperlink>
                 </TextBlock>
                 <Button Grid.Column="2" BorderBrush="{x:Null}" Background="{x:Null}"
-                        ToolTip="この通知を消します。設定で自動的に確認しないようにできます。" Click="OnCloseNotifier">
+                        ToolTip="この通知を消します。設定で自動確認を無効にできます。" Click="OnCloseNotifier">
                     <Image Source="Resources/Close.png" Height="14" />
                 </Button>
             </Grid>
