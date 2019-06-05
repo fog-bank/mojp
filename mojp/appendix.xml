@@ -1706,6 +1706,19 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="諜報１を行う。（あなたのライブラリーの一番上からカードを１枚見る。" value="諜報１を行う。（あなたのライブラリーの一番上のカードを見る。" nodebug="true" />
     <regex target="text" pattern="カウンター１個か速攻のうち、あなたが選んだ１つを持った状態で戦場に出る。" value="カウンター１個か速攻のうちあなたが選んだ１つを持った状態で戦場に出る。" nodebug="true" />
     <regex target="text" pattern="動員１を行う。（あなたがコントロールしている軍団１体の上に\+1/\+1カウンターを２個置く。" value="動員１を行う。（あなたがコントロールしている軍団１体の上に+1/+1カウンターを１個置く。" nodebug="true" />
+    <!-- 固定語 -->
+    <regex target="text" pattern="カンか龍" value="カン(Khans)か龍(Dragons)" nodebug="true" />
+    <regex target="text" pattern="ミラディン軍かファイレクシア軍" value="ミラディン軍(Mirran)かファイレクシア軍(Phyrexian)" nodebug="true" />
+    <regex target="text" pattern="「戦争」か「平和」" value="「戦争(War)」か「平和(Peace)」" nodebug="true" />
+    <regex target="text" pattern="「殺戮」または「忠誠」" value="「殺戮(Carnage)」または「忠誠(Homage)」" nodebug="true" />
+    <regex target="text" pattern="「時」または「金」" value="「時(Time)」または「金(Money)」" nodebug="true" />
+    <regex target="text" pattern="「恩寵」または「糾弾」" value="「恩寵(Grace)」または「糾弾(Condemnation)」" nodebug="true" />
+    <regex target="text" pattern="「時間」または「知識」" value="「時間(Time)」または「知識(Knowledge)」" nodebug="true" />
+    <regex target="text" pattern="「野生」または「解放」" value="「野生(Wild)」または「解放(Free)」" nodebug="true" />
+    <regex target="text" pattern="「死」または「拷問」" value="「死(Death)」または「拷問(Torture)」" nodebug="true" />
+    <regex target="text" pattern="「左」か「右」" value="「左(Left)」か「右(Right)」" nodebug="true" />
+    <regex target="text" pattern="味方か敵" value="味方(Friend)か敵(Foe)" nodebug="true" />
+    <regex target="text" pattern="奇数か偶数" value="奇数(Odd)か偶数(Even)" nodebug="true" />
     <!-- 基本土地 -->
     <card name="Forest" jaName="森" type="基本土地 ― 森">（(Ｔ)：(緑)を加える。）</card>
     <card name="Island" jaName="島" type="基本土地 ― 島">（(Ｔ)：(青)を加える。）</card>
