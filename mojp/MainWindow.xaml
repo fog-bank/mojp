@@ -34,7 +34,7 @@
                             <RowDefinition Height="Auto" SharedSizeGroup="FirstRow" />
                             <RowDefinition />
                         </Grid.RowDefinitions>
-                        <TabPanel Name="HeaderPanel" Margin="2,2,2,0" Background="Transparent" IsItemsHost="True" KeyboardNavigation.TabIndex="1" Panel.ZIndex="1" />
+                        <TabPanel Name="HeaderPanel" Margin="4,2,2,0" Background="Transparent" IsItemsHost="True" KeyboardNavigation.TabIndex="1" Panel.ZIndex="1" />
                         <Border Name="ContentPanel" Grid.Row="1" Grid.ColumnSpan="2"
                                 Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}"
                                 KeyboardNavigation.TabIndex="2" KeyboardNavigation.TabNavigation="Local" KeyboardNavigation.DirectionalNavigation="Contained">
