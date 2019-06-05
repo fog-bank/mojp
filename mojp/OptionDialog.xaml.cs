@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Text;
@@ -25,6 +26,7 @@ namespace Mojp
                 grpAutoCheck.Visibility = Visibility.Collapsed;
                 grpAutoCheckSub.Visibility = Visibility.Collapsed;
             }
+            UpdatePDRotationTime();
 
             // フォントリストの初期化
             var vm = viewModel as MainViewModel;
@@ -71,6 +73,14 @@ namespace Mojp
 
         public MainViewModel ViewModel => DataContext as MainViewModel;
 
+        public void UpdatePDRotationTime()
+        {
+            if (DateTime.TryParse(App.SettingsCache.PDServerLastTimeUtc, out var time))
+                txbPDRotationTime.Text = time.ToString("g");
+            else
+                txbPDRotationTime.Text = "不明";
+        }
+
         private void OnCardDisplayNameChanged(object sender, SelectionChangedEventArgs e)
         {
             var vm = ViewModel;
@@ -114,6 +124,7 @@ namespace Mojp
             var successPd = await CardPrice.GetOrOpenPDLegalFile(true);
             App.CurrentMainWindow?.ShowPDMessage(successPd);
             ViewModel.RefreshTab();
+            UpdatePDRotationTime();
 
             imgLoading.Visibility = Visibility.Collapsed;
         }
