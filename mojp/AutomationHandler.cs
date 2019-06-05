@@ -21,8 +21,11 @@ namespace Mojp
             private CacheRequest cacheReq = new CacheRequest();
 
             // Preview Window を探す
-            private Condition previewWndCondition1 = new PropertyCondition(AutomationElement.ClassNameProperty, "Window");
-            private Condition previewWndCondition2 = new PropertyCondition(AutomationElement.NameProperty, "Preview");
+            private Condition prevWndCondition = new AndCondition(
+                new PropertyCondition(AutomationElement.ClassNameProperty, "Window"),
+                new OrCondition(
+                    new PropertyCondition(AutomationElement.NameProperty, "Preview"),
+                    new PropertyCondition(AutomationElement.AutomationIdProperty, string.Empty)));
 
             // テキストが空でなく、特定の UI 要素でない TextBlock をすべて拾う
             private Condition textBlockCondition = new AndCondition(
@@ -85,10 +88,11 @@ namespace Mojp
                 AutomationElement newPreviewWnd = null;
                 try
                 {
+                    // Name が "" のときがある？ため、AutomationID で保険をかける
                     newPreviewWnd = AutomationElement.RootElement.FindFirst(TreeScope.Children,
                         new AndCondition(
                             new PropertyCondition(AutomationElement.ProcessIdProperty, mtgoProc.Id),
-                            previewWndCondition1, previewWndCondition2));
+                            prevWndCondition));
                 }
                 catch { Debug.WriteLine("Preview Pane の取得に失敗しました。"); }
 
@@ -160,8 +164,7 @@ namespace Mojp
                 mtgoProc = null;
                 eventCacheReq = null;
                 cacheReq = null;
-                previewWndCondition1 = null;
-                previewWndCondition2 = null;
+                prevWndCondition = null;
                 textBlockCondition = null;
                 cardTypeCondition = null;
                 ReleaseAutomationElement();
