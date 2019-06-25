@@ -341,34 +341,51 @@
 風に削られた岩山が戦場に出たとき、あなたは１点のライフを得る。
 (Ｔ)：(赤)か(白)を加える。</card>
 
-    <card name="Ajani, Inspiring Leader" pt="5"></card>
-    <card name="Goldmane Griffin" pt="3/2" related="Ajani, Inspiring Leader"></card>
-    <card name="Savannah Sage" pt="2/2"></card>
-    <card name="Twinblade Paladin" pt="3/3"></card>
-    <card name="Mu Yanling, Celestial Wind" pt="5"></card>
-    <card name="Celestial Messenger" pt="3/2"></card>
-    <card name="Waterkin Shaman" pt="2/1"></card>
-    <card name="Yanling's Harbinger" pt="2/4" related="Mu Yanling, Celestial Wind"></card>
-    <card name="Sorin, Vampire Lord" pt="4"></card>
-    <card name="Savage Gorger" pt="1/1"></card>
-    <card name="Sorin's Guide" pt="4/2" related="Sorin, Vampire Lord"></card>
-    <card name="Thirsting Bloodlord" pt="3/3"></card>
-    <card name="Chandra, Flame's Fury" pt="4"></card>
-    <card name="Chandra's Flame Wave" type="ソーサリー" related="Chandra, Flame's Fury"></card>
-    <card name="Pyroclastic Elemental" pt="5/4"></card>
-    <card name="Wildfire Elemental" pt="3/3"></card>
-    <card name="Vivien, Nature's Avenger" pt="3"></card>
-    <card name="Ethereal Elk" pt="3/3" related="Vivien, Nature's Avenger"></card>
-    <card name="Gnarlback Rhino" pt="4/4"></card>
-    <card name="Vivien's Crocodile" pt="3/3"></card>
+    <card name="Ajani, Inspiring Leader" jaName="鼓舞する指導者、アジャニ" type="伝説のプレインズウォーカー ― アジャニ" pt="5">[+2]：クリーチャー最大１体を対象とする。あなたは２点のライフを得る。それの上に+1/+1カウンターを２個置く。
+[-3]：クリーチャー１体を対象とし、それを追放する。それのコントローラーは２点のライフを得る。
+[-10]：ターン終了時まで、あなたがコントロールしているクリーチャーは飛行と二段攻撃を得る。</card>
+    <card name="Goldmane Griffin" jaName="黄金のたてがみのグリフィン" type="クリーチャー ― グリフィン" pt="3/2" related="Ajani, Inspiring Leader">飛行、警戒
+黄金のたてがみのグリフィンが戦場に出たとき、あなたはあなたのライブラリーやあなたの墓地から《鼓舞する指導者、アジャニ》という名前のカード１枚を探し、公開してあなたの手札に加えてもよい。これによりあなたがあなたのライブラリーからカードを探したなら、あなたのライブラリーを切り直す。</card>
+    <card name="Savannah Sage" jaName="サバンナの賢者" type="クリーチャー ― 猫・クレリック" pt="2/2">サバンナの賢者が戦場に出たとき、あなたは２点のライフを得る。</card>
+    <card name="Twinblade Paladin" jaName="双刃の聖騎士" type="クリーチャー ― 人間・騎士" pt="3/3">あなたがライフを得るたび、双刃の聖騎士の上に+1/+1カウンターを１個置く。
+あなたのライフが２５点以上であるかぎり、双刃の聖騎士は二段攻撃を持つ。（これは先制攻撃と通常の戦闘ダメージの両方を与える。）</card>
+    <card name="Mu Yanling, Celestial Wind" jaName="天界の風、ムー・ヤンリン" type="伝説のプレインズウォーカー ― ヤンリン" pt="5">[+1]：クリーチャー最大１体を対象とする。あなたの次のターンまで、それは-5/-0の修整を受ける。
+[-3]：クリーチャー最大２体を対象とし、それらをオーナーの手札に戻す。
+[-7]：ターン終了時まで、あなたがコントロールしていて飛行を持つクリーチャーは+5/+5の修整を受ける。</card>
+    <card name="Celestial Messenger" jaName="天界の伝書使" type="クリーチャー ― 鳥・スピリット" pt="3/2">瞬速（あなたはこのカードを、あなたがインスタントを唱えられるときならいつでも唱えてよい。）
+飛行
+あなたがヤンリン・プレインズウォーカーをコントロールしているかぎり、天界の伝書使は+1/+1の修整を受ける。</card>
+    <card name="Waterkin Shaman" jaName="水族のシャーマン" type="クリーチャー ― エレメンタル・シャーマン" pt="2/1">飛行を持つクリーチャーが１体あなたのコントロール下で戦場に出るたび、ターン終了時まで、水族のシャーマンは+1/+1の修整を受ける。</card>
+    <card name="Yanling's Harbinger" jaName="ヤンリンの先触れ" type="クリーチャー ― 鳥" pt="2/4" related="Mu Yanling, Celestial Wind">飛行
+ヤンリンの先触れが戦場に出たとき、あなたはあなたのライブラリーやあなたの墓地から《天界の風、ムー・ヤンリン》という名前のカード１枚を探し、公開してあなたの手札に加えてもよい。これによりあなたがあなたのライブラリーからカードを探したなら、あなたのライブラリーを切り直す。</card>
+    <card name="Sorin, Vampire Lord" jaName="吸血鬼の王、ソリン" type="伝説のプレインズウォーカー ― ソリン" pt="4">[+1]：クリーチャー最大１体を対象とする。ターン終了時まで、それは+2/+0の修整を受ける。
+[-2]：クリーチャー１体かプレインズウォーカー１体かプレイヤー１人を対象とする。吸血鬼の王、ソリンはそれに４点のダメージを与える。あなたは４点のライフを得る。
+[-8]：ターン終了時まで、あなたがコントロールしている各吸血鬼はそれぞれ「(Ｔ)：クリーチャー１体を対象とし、それのコントロールを得る。」を得る。</card>
+    <!--<card name="Savage Gorger" jaName="野蛮な大喰らい" pt="1/1"></card>-->
+    <card name="Sorin's Guide" jaName="ソリンの案内人" type="クリーチャー ― 吸血鬼" pt="4/2" related="Sorin, Vampire Lord">ソリンの案内人が戦場に出たとき、あなたはあなたのライブラリーやあなたの墓地から《吸血鬼の王、ソリン》という名前のカード１枚を探し、公開してあなたの手札に加えてもよい。これによりあなたがあなたのライブラリーからカードを探したなら、あなたのライブラリーを切り直す。</card>
+    <card name="Thirsting Bloodlord" jaName="血に飢えた血王" type="クリーチャー ― 吸血鬼" pt="3/3">あなたがコントロールしている他の吸血鬼は+1/+1の修整を受ける。</card>
+    <card name="Chandra, Flame's Fury" jaName="炎の憤怒、チャンドラ" type="伝説のプレインズウォーカー ― チャンドラ" pt="4">[+1]：クリーチャー１体かプレインズウォーカー１体かプレイヤー１人を対象とする。炎の憤怒、チャンドラはそれに２点のダメージを与える。
+[-2]：クリーチャー１体を対象とする。炎の憤怒、チャンドラはそれに４点のダメージ、そのクリーチャーのコントローラーに２点のダメージを与える。
+[-8]：プレイヤー１人を対象とする。炎の憤怒、チャンドラはそのプレイヤーとそのプレイヤーがコントロールしている各クリーチャーにそれぞれ１０点のダメージを与える。</card>
+    <card name="Chandra's Flame Wave" jaName="チャンドラの炎波" type="ソーサリー" related="Chandra, Flame's Fury">プレイヤー１人を対象とする。チャンドラの炎波はそのプレイヤーとそのプレイヤーがコントロールしている各クリーチャーにそれぞれ２点のダメージを与える。あなたのライブラリーやあなたの墓地から《炎の憤怒、チャンドラ》という名前のカード１枚を探し、それを公開してあなたの手札に加える。これによりあなたがあなたのライブラリーからカードを探したなら、あなたのライブラリーを切り直す。</card>
+    <card name="Pyroclastic Elemental" jaName="火砕の精霊" type="クリーチャー ― エレメンタル" pt="5/4">(１)(赤)(赤)：プレイヤー１人を対象とする。火砕の精霊はそれに１点のダメージを与える。</card>
+    <card name="Wildfire Elemental" jaName="野火の精霊" type="クリーチャー ― エレメンタル" pt="3/3">対戦相手１人に戦闘ダメージでないダメージが与えらえるたび、ターン終了時まで、あなたがコントロールしているクリーチャーは+1/+0の修整を受ける。</card>
+    <card name="Vivien, Nature's Avenger" jaName="自然の報復者、ビビアン" type="伝説のプレインズウォーカー ― ビビアン" pt="3">[+1]：クリーチャー最大１体を対象とし、それの上に+1/+1カウンターを３個置く。
+[-1]：クリーチャー・カードが公開されるまで、あなたのライブラリーの一番上からカードを１枚ずつ公開する。そのカードをあなたの手札に加え、残りをあなたのライブラリーの一番下に無作為の順番で置く。
+[-6]：クリーチャー１体を対象とする。ターン終了時まで、それは+10/+10の修整を受けトランプルを得る。</card>
+    <card name="Ethereal Elk" jaName="天上の大鹿" type="クリーチャー ― 大鹿・スピリット" pt="3/3" related="Vivien, Nature's Avenger">トランプル
+天上の大鹿が戦場に出たとき、あなたはあなたのライブラリーやあなたの墓地から《自然の報復者、ビビアン》という名前のカード１枚を探し、公開してあなたの手札に加えてもよい。これによりあなたがあなたのライブラリーからカードを探したなら、あなたのライブラリーを切り直す。</card>
+    <card name="Gnarlback Rhino" jaName="節くれ背のサイ" type="クリーチャー ― サイ" pt="4/4">トランプル（このクリーチャーは余剰の戦闘ダメージをこれが攻撃しているプレイヤーかプレインズウォーカーに与えることができる。）
+あなたが節くれ背のサイを対象とする呪文を唱えるたび、カードを１枚引く。</card>
+    <card name="Vivien's Crocodile" jaName="ビビアンのクロコダイル" type="クリーチャー ― クロコダイル・スピリット" pt="3/3">あなたがビビアン・プレインズウォーカーをコントロールしているかぎり、ビビアンのクロコダイルは+1/+1の修整を受ける。</card>
     <!-- 302-306 -->
-    <card name="Imperial Outrider" pt="1/5"></card>
+    <card name="Imperial Outrider" jaName="帝国の先導" type="クリーチャー ― 人間・騎士" pt="1/5"></card>
     <!-- 308-320 -->
-    <card name="Dark Remedy" type="インスタント"></card>
+    <card name="Dark Remedy" jaName="闇の療法" type="インスタント">クリーチャー１体を対象とする。ターン終了時まで、それは+1/+3の修整を受ける。</card>
     <!-- 322-327 -->
-    <card name="Engulfing Eruption" type="ソーサリー"></card>
+    <card name="Engulfing Eruption" jaName="飲み込む噴火" type="ソーサリー">クリーチャー１体を対象とする。飲み込む噴火はそれに５点のダメージを与える。</card>
     <!-- 329-332 -->
-    <card name="Nimble Birdsticker" pt="2/3"></card>
+    <card name="Nimble Birdsticker" jaName="敏捷な鳥突き" type="クリーチャー ― ゴブリン" pt="2/3">到達（このクリーチャーは飛行を持つクリーチャーをブロックできる。）</card>
     <!-- クリーチャーでないトークン -->
     <card name="Clue" jaName="手掛かり" type="トークン・アーティファクト ― 手掛かり" wikilink="手掛かり">(２),このアーティファクトを生け贄に捧げる：カードを１枚引く。</card>
     <card name="Etherium Cell" jaName="エーテリウム電池" type="トークン・アーティファクト" wikilink="策謀家テゼレット/Tezzeret the Schemer">(Ｔ),このアーティファクトを生け贄に捧げる：好きな色１色のマナ１点を加える。</card>
