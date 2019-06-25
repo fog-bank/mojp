@@ -340,6 +340,35 @@
     <card name="Wind-Scarred Crag" jaName="風に削られた岩山" type="土地">風に削られた岩山はタップ状態で戦場に出る。
 風に削られた岩山が戦場に出たとき、あなたは１点のライフを得る。
 (Ｔ)：(赤)か(白)を加える。</card>
+
+    <card name="Ajani, Inspiring Leader" pt="5"></card>
+    <card name="Goldmane Griffin" pt="3/2" related="Ajani, Inspiring Leader"></card>
+    <card name="Savannah Sage" pt="2/2"></card>
+    <card name="Twinblade Paladin" pt="3/3"></card>
+    <card name="Mu Yanling, Celestial Wind" pt="5"></card>
+    <card name="Celestial Messenger" pt="3/2"></card>
+    <card name="Waterkin Shaman" pt="2/1"></card>
+    <card name="Yanling's Harbinger" pt="2/4" related="Mu Yanling, Celestial Wind"></card>
+    <card name="Sorin, Vampire Lord" pt="4"></card>
+    <card name="Savage Gorger" pt="1/1"></card>
+    <card name="Sorin's Guide" pt="4/2" related="Sorin, Vampire Lord"></card>
+    <card name="Thirsting Bloodlord" pt="3/3"></card>
+    <card name="Chandra, Flame's Fury" pt="4"></card>
+    <card name="Chandra's Flame Wave" type="ソーサリー" related="Chandra, Flame's Fury"></card>
+    <card name="Pyroclastic Elemental" pt="5/4"></card>
+    <card name="Wildfire Elemental" pt="3/3"></card>
+    <card name="Vivien, Nature's Avenger" pt="3"></card>
+    <card name="Ethereal Elk" pt="3/3" related="Vivien, Nature's Avenger"></card>
+    <card name="Gnarlback Rhino" pt="4/4"></card>
+    <card name="Vivien's Crocodile" pt="3/3"></card>
+    <!-- 302-306 -->
+    <card name="Imperial Outrider" pt="1/5"></card>
+    <!-- 308-320 -->
+    <card name="Dark Remedy" type="インスタント"></card>
+    <!-- 322-327 -->
+    <card name="Engulfing Eruption" type="ソーサリー"></card>
+    <!-- 329-332 -->
+    <card name="Nimble Birdsticker" pt="2/3"></card>
     <!-- クリーチャーでないトークン -->
     <card name="Clue" jaName="手掛かり" type="トークン・アーティファクト ― 手掛かり" wikilink="手掛かり">(２),このアーティファクトを生け贄に捧げる：カードを１枚引く。</card>
     <card name="Etherium Cell" jaName="エーテリウム電池" type="トークン・アーティファクト" wikilink="策謀家テゼレット/Tezzeret the Schemer">(Ｔ),このアーティファクトを生け贄に捧げる：好きな色１色のマナ１点を加える。</card>
@@ -413,6 +442,7 @@
     <card name="Drake" jaName="ドレイク" type="トークン・クリーチャー ― ドレイク" pt="2/2">飛行</card>
     <card name="Eldrazi Horror" jaName="エルドラージ・ホラー" type="トークン・クリーチャー ― エルドラージ・ホラー" pt="3/2"></card>
     <card name="Eldrazi Spawn" jaName="エルドラージ・落とし子" type="トークン・クリーチャー ― エルドラージ・落とし子" pt="0/1" wikilink="落とし子">このクリーチャーを生け贄に捧げる：(◇)を加える。</card>
+    <card name="Elemental Bird" jaName="エレメンタル・鳥" type="トークン・クリーチャー ― エレメンタル・鳥" pt="4/4">飛行</card>
     <card name="Elemental Cat" jaName="エレメンタル・猫" type="トークン・クリーチャー ― エレメンタル・猫" pt="1/1" wikilink="火猫の襲撃/Firecat Blitz">速攻</card>
     <card name="Elf" jaName="エルフ" type="トークン・クリーチャー ― エルフ" pt="1/1" wikilink="Elvish Champion Avatar">(Ｔ)：(緑)を加える。</card>
     <card name="Elf Druid" jaName="エルフ・ドルイド" type="トークン・クリーチャー ― エルフ・ドルイド" pt="1/1" wikilink="Elvish Champion Avatar">(Ｔ)：(緑)を加える。</card>
@@ -929,6 +959,11 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <related name="Domri's Nodorog" related="Domri, City Smasher" />
     <related name="Gideon's Battle Cry" related="Gideon, the Oathsworn" />
     <related name="Jace's Ruse" related="Jace, Arcane Strategist" />
+    <related name="Goldmane Griffin" related="Ajani, Inspiring Leader" />
+    <related name="Yanling's Harbinger" related="Mu Yanling, Celestial Wind" />
+    <related name="Sorin's Guide" related="Sorin, Vampire Lord" />
+    <related name="Chandra's Flame Wave" related="Chandra, Flame's Fury" />
+    <related name="Ethereal Elk" related="Vivien, Nature's Avenger" />
     <!-- 関連カード (共闘) -->
     <related name="Regna, the Redeemer" related="Krav, the Unredeemed" />
     <related name="Krav, the Unredeemed" related="Regna, the Redeemer" />
