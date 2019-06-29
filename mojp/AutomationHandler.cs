@@ -23,9 +23,10 @@ namespace Mojp
             // Preview Window を探す
             private Condition prevWndCondition = new AndCondition(
                 new PropertyCondition(AutomationElement.ClassNameProperty, "Window"),
+                new PropertyCondition(AutomationElement.AutomationIdProperty, string.Empty),
                 new OrCondition(
                     new PropertyCondition(AutomationElement.NameProperty, "Preview"),
-                    new PropertyCondition(AutomationElement.AutomationIdProperty, string.Empty)));
+                    new PropertyCondition(AutomationElement.NameProperty, string.Empty)));
 
             // テキストが空でなく、特定の UI 要素でない TextBlock をすべて拾う
             private Condition textBlockCondition = new AndCondition(
