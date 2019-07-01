@@ -1420,6 +1420,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <!-- 順序変更 -->
     <regex target="type" pattern="エンチャント・アーティファクト" value="アーティファクト・エンチャント" nodebug="true" />
     <regex target="text" pattern="タイプや色" value="色やタイプ" nodebug="true" />
+    <regex target="text" pattern="ソーサリー・カード１枚かインスタント・カード１枚" value="インスタント・カード１枚かソーサリー・カード１枚" nodebug="true" />
     <regex target="text" pattern="クリーチャー１体かプレイヤー１人かプレインズウォーカー１体" value="クリーチャー１体かプレインズウォーカー１体かプレイヤー１人" nodebug="true" />
     <regex target="text" pattern="クリーチャー１体と、プレインズウォーカー１体かプレイヤー１人を対象" value="クリーチャー１体と、プレイヤー１人かプレインズウォーカー１体を対象" nodebug="true" />
     <regex target="text" pattern="(?&lt;!か)プレインズウォーカー１体か対戦相手１人" value="対戦相手１人かプレインズウォーカー１体" nodebug="true" />
@@ -1436,7 +1437,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="無作為に対戦相手１人を選ぶ" value="対戦相手１人を無作為に選ぶ" nodebug="true" />
     <!--<regex target="text" pattern="次のダメージを(?=[０-９Ｘ]+点軽減)" value="ダメージを次の" nodebug="true" />-->
     <!-- 順序変更：数字を前に移動 -->
-    <regex target="text" pattern="(?&lt;!上から)カードを([０-９Ｘ]+)枚、?(?=探|選|捨て(?!るたび)|公開|追放|無作為に)" value="カード$1枚を" nodebug="true" />
+    <regex target="text" pattern="(?&lt;!上から)カードを([０-９Ｘ]+)枚、?(?=探|選|捨て(?!るたび)|公開|追放|無作為に|戦場に)" value="カード$1枚を" nodebug="true" />
     <regex target="text" pattern="カードを最大([０-９Ｘ]+)枚(?:まで)?(?=対象|探|あなたの手札に戻)" value="カード最大$1枚を" nodebug="true" />
     <regex target="text" pattern="カードを最大([０-９Ｘ]+)枚までと" value="カード最大$1枚と" nodebug="true" />
     <regex target="text" pattern="クリーチャーを最大([０-９Ｘ]+)体(?:まで)?対象" value="クリーチャー最大$1体を対象" nodebug="true" />
@@ -1683,6 +1684,9 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="ライブラリーから基本(平地|島|沼|山|森)・カード１枚か基本(平地|島|沼|山|森)・カード１枚か基本(平地|島|沼|山|森)・カード１枚を探し" value="ライブラリーから基本であり$1か$2か$3であるカード１枚を探し" nodebug="true" />
     <regex target="text" pattern="アーティファクトかエンチャント１つを対象" value="アーティファクト１つかエンチャント１つを対象" nodebug="true" />
     <regex target="text" pattern="アーティファクトかクリーチャーか土地を１つ" value="アーティファクト１つかクリーチャー１体か土地１つを" nodebug="true" />
+    <regex target="text" pattern="(?&lt;!か)アーティファクト・カードかクリーチャー・カードかエンチャント・カードか土地・カード１枚を" value="アーティファクトかクリーチャーかエンチャントか土地であるカード１枚を" nodebug="true" />
+    <regex target="text" pattern="(?&lt;!か)アーティファクト・カード１枚かクリーチャー・カード１枚かエンチャント・カード１枚を" value="アーティファクトかクリーチャーかエンチャントであるカード１枚を" nodebug="true" />
+    <regex target="text" pattern="(?&lt;!か)アーティファクト・カード１枚かクリーチャー・カード１枚か土地・カード１枚を" value="アーティファクトかクリーチャーか土地であるカード１枚を" nodebug="true" />
     <regex target="text" pattern="(?&lt;!か)アーティファクト・カード１枚かエンチャント・カード１枚を" value="アーティファクトかエンチャントであるカード１枚を" nodebug="true" />
     <regex target="text" pattern="(?&lt;!か)クリーチャー・カード１枚か土地・カード１枚を" value="クリーチャーか土地であるカード１枚を" nodebug="true" />
     <regex target="text" pattern="(?&lt;!か)インスタント・カードやソーサリー・カード(が|を)合わせて" value="インスタントかソーサリーであるカード$1" nodebug="true" />
@@ -2142,8 +2146,6 @@ Knowledge Vaultが戦場を離れたとき、Knowledge Vaultにより追放さ�
     <card name="Bruna, the Fading Light" jaName="消えゆく光、ブルーナ" type="伝説のクリーチャー ― 天使・ホラー" pt="5/7" related="Brisela, Voice of Nightmares">あなたがこの呪文を唱えたとき、あなたの墓地から天使か人間であるクリーチャー・カード１枚を対象とする。あなたはそれを戦場に戻してもよい。
 飛行、警戒
 （《折れた刃、ギセラ》と合体する。）</card>
-    <card name="Eternal Dominion" jaName="永遠の統制" type="ソーサリー">対戦相手１人を対象とする。そのプレイヤーのライブラリーから、アーティファクトかクリーチャーかエンチャントか土地であるカード１枚を探す。そのカードをあなたのコントロール下で戦場に出す。その後そのプレイヤーは自分のライブラリーを切り直す。
-歴伝（ゲームの残りの間、あなたは呪文を唱えられない。あなたの各アップキープの開始時に、その歴伝能力を除き、この呪文をコピーする。）</card>
     <card name="Farseek" jaName="遥か見" type="ソーサリー">あなたのライブラリーから、平地か島か沼か山であるカード１枚を探し、それをタップ状態で戦場に出し、その後あなたのライブラリーを切り直す。</card>
     <card name="Haven of the Spirit Dragon" jaName="精霊龍の安息地" type="土地">(Ｔ)：(◇)を加える。
 (Ｔ)：好きな色１色のマナ１点を加える。このマナは、ドラゴン・クリーチャー・呪文を唱えるためにのみ使用できる。
