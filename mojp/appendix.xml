@@ -1510,7 +1510,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="がコントロールする(?=(?:他の)?各(?:(?:植物|ゾンビ|同盟者|ファンガス|アーティファクト)?・?クリーチャー|アーティファクト|プレインズウォーカー|吸血鬼)の上に)" value="がコントロールしている" nodebug="true" />
     <regex target="text" pattern="がコントロールする、?望む数のクリーチャー" value="がコントロールしている望む数のクリーチャー" nodebug="true" />
     <regex target="text" pattern="がコントロールする(?=(?:土地|アーティファクト|クリーチャー|ゾンビ|ゴブリン|ドラゴン)の総?数)" value="がコントロールしている" nodebug="true" />
-    <regex target="text" pattern="がコントロールする(?=(?:クリーチャー|平地|島|沼|山|森|エンチャント|オーラ)１.につき)" value="がコントロールしている" nodebug="true" />
+    <regex target="text" pattern="がコントロールする(?=(?:他の)?(?:クリーチャー|アーティファクト|エンチャント|オーラ|土地|平地|島|沼|山|森)１.につき)" value="がコントロールしている" nodebug="true" />
     <regex target="text" pattern="がコントロールする(?=(?:アン)?タップ状態のクリーチャー)" value="がコントロールしている" nodebug="true" />
     <regex target="text" pattern="がコントロールするクリーチャー(?=[^。]+をつける。)" value="がコントロールしているクリーチャー" nodebug="true" />
     <regex target="text" pattern="がコントロールする(?=(?:他の)?(?:クリーチャー|猫|侍|吸血鬼|霊基体|ゾンビ|ドラゴン|スリヴァー|エレメンタル|マーフォーク|ミノタウルス|島|山|森)(?:１.)?が[^。「]+るたび、)" value="がコントロールしている" nodebug="true" />
