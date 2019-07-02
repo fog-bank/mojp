@@ -682,12 +682,12 @@
     <card name="Zombie Warrior" jaName="ゾンビ・戦士" type="トークン・クリーチャー ― ゾンビ・戦士" pt="4/4" wikilink="永遠神オケチラ/God-Eternal Oketra">警戒</card>
     <card name="Zombie Wizard" jaName="ゾンビ・ウィザード" type="トークン・クリーチャー ― ゾンビ・ウィザード" pt="1/1" wikilink="アンクスの死者の王/Lich Lord of Unx"></card>
     <!-- Gift Pack (M19) -->
-    <card name="Angelic Guardian" jaName="Angelic Guardian" type="クリーチャー ― 天使" pt="5/5">飛行
-あなたがコントロールしているクリーチャーが１体以上攻撃するたび、ターン終了時まで、それらは破壊不能を得る。</card>
+    <card name="Angelic Guardian" jaName="天使の守護者" type="クリーチャー ― 天使" pt="5/5" wikilink="Angelic Guardian">飛行（このクリーチャーは飛行や到達を持たないクリーチャーによってはブロックされない。）
+あなたがコントロールしているクリーチャーが１体以上攻撃するたび、ターン終了時まで、それらは破壊不能を得る。（ダメージや「破壊」と書かれた効果では、それらは破壊されない。）</card>
     <card name="Angler Turtle" jaName="Angler Turtle" type="クリーチャー ― 海亀" pt="5/7">呪禁
 各戦闘で、対戦相手がコントロールしているクリーチャーは可能なら攻撃する。</card>
-    <card name="Immortal Phoenix" jaName="Immortal Phoenix" type="クリーチャー ― フェニックス" pt="5/3">飛行
-Immortal Phoenixが死亡したとき、これをオーナーの手札に戻す。</card>
+    <card name="Immortal Phoenix" jaName="不死のフェニックス" type="クリーチャー ― フェニックス" pt="5/3" wikilink="Immortal Phoenix">飛行（このクリーチャーは飛行や到達を持たないクリーチャーによってはブロックされない。）
+不死のフェニックスが死亡したとき、これをオーナーの手札に戻す。</card>
     <card name="Rampaging Brontodon" jaName="Rampaging Brontodon" type="クリーチャー ― 恐竜" pt="7/7">トランプル
 Rampaging Brontodonが攻撃するたび、ターン終了時まで、これはあなたがコントロールしている土地１つにつき+1/+1の修整を受ける。</card>
     <card name="Vengeant Vampire" jaName="Vengeant Vampire" type="クリーチャー ― 吸血鬼" pt="4/4">絆魂
