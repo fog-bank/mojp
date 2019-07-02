@@ -1503,12 +1503,10 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="がコントロールする土地(?=は|を)" value="がコントロールしている土地" nodebug="true" />
     <regex target="text" pattern="がコントロールする(他の)?パーマネントは、?" value="がコントロールしている$1パーマネントは" nodebug="true" />
     <regex target="text" pattern="がコントロールするパーマネント(?=１つを対象とし|が１つ)" value="がコントロールしているパーマネント" nodebug="true" />
-    <regex target="text" pattern="がコントロールする他のクリーチャーを" value="がコントロールしている他のクリーチャーを" nodebug="true" />
     <regex target="text" pattern="がコントロールする(他の)?クリーチャーは、?(?=(?:\+./\+.の修整を受けるとともに)?.{2,5}を(?:得る|持つ)。)" value="がコントロールしている$1クリーチャーは" nodebug="true" />
-    <regex target="text" pattern="がコントロールする(?=他の[白青黒赤緑]のクリーチャー)" value="がコントロールしている" nodebug="true" />
-    <regex target="text" pattern="がコントロールする(?=他の[^。]+・クリーチャーは)" value="がコントロールしている" nodebug="true" />
+    <regex target="text" pattern="がコントロールする他の(?=各|(?:[白青黒赤緑]の|[^。]+・)クリーチャー|クリーチャーを)" value="がコントロールしている他の" nodebug="true" />
     <regex target="text" pattern="がコントロールする(?=(?:他の)?(?:ドラゴン・|エレメンタル・|マーフォーク・)?クリーチャーは\+\d/\+\dの修整を受ける。)" value="がコントロールしている" nodebug="true" />
-    <regex target="text" pattern="がコントロールする(?=(?:他の)?各(?:(?:植物|ゾンビ|同盟者|ファンガス|アーティファクト)?・?クリーチャー|アーティファクト|プレインズウォーカー|吸血鬼)の上に)" value="がコントロールしている" nodebug="true" />
+    <regex target="text" pattern="がコントロールする(?=各(?:(?:植物|ゾンビ|同盟者|ファンガス|アーティファクト)?・?クリーチャー|アーティファクト|プレインズウォーカー|吸血鬼)の上に)" value="がコントロールしている" nodebug="true" />
     <regex target="text" pattern="がコントロールする、?望む数のクリーチャー" value="がコントロールしている望む数のクリーチャー" nodebug="true" />
     <regex target="text" pattern="がコントロールする(?=(?:土地|アーティファクト|クリーチャー|ゾンビ|ゴブリン|ドラゴン|スピリット)の総?数)" value="がコントロールしている" nodebug="true" />
     <regex target="text" pattern="がコントロールする(?=(?:他の)?(?:クリーチャー|アーティファクト|エンチャント|オーラ|土地|平地|島|沼|山|森)１.につき)" value="がコントロールしている" nodebug="true" />
@@ -1529,7 +1527,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <!-- テンプレート変更：コントロールしていて -->
     <regex target="text" pattern="がコントロール(?:する|している)、?(?=(?:伝説|アーティファクト|基本|棲み家)でない)" value="がコントロールしていて" nodebug="true" />
     <regex target="text" pattern="がコントロール(?:する|している)、?土地でない(?=各?パーマネント)" value="がコントロールしていて土地でない" nodebug="true" />
-    <regex target="text" pattern="がコントロールする他の([^。、]+)でないクリーチャー" value="がコントロールしていて$1でない他のクリーチャー" nodebug="true" />
+    <regex target="text" pattern="がコントロール(?:する|している)他の([^。、]+)でないクリーチャー" value="がコントロールしていて$1でない他のクリーチャー" nodebug="true" />
     <regex target="text" pattern="がコントロール(?:する|している)、?(?=.{1,4}でない(他の)?クリーチャー)" value="がコントロールしていて" nodebug="true" />
     <regex target="text" pattern="がコントロール(?:する|している)(?=(?:パワー|タフネス)が[０-９Ｘ]+以[上下]の)" value="がコントロールしていて" nodebug="true" />
     <regex target="text" pattern="がコントロールする(.か.)の(?=クリーチャー|エンチャント|パーマネント)" value="がコントロールしていて$1である" nodebug="true" />
