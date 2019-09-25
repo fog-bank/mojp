@@ -2429,7 +2429,7 @@ Knowledge Vaultが戦場を離れたとき、Knowledge Vaultにより追放さ�
 あなたがコントロールしているゴーレムは+1/+1の修整を受ける。</card>
     <card name="Nivix Guildmage" jaName="ニヴィックスのギルド魔道士" type="クリーチャー ― 人間・ウィザード" pt="2/2">(１)(青)(赤)：カードを１枚引き、その後カード１枚を捨てる。
 (２)(青)(赤)：あなたがコントロールしていてインスタントかソーサリーである呪文１つを対象とし、それをコピーする。あなたはそのコピーの新しい対象を選んでもよい。</card>
-    <card name="Sprite Noble" jaName="スプライトの貴族" type="クリーチャー ― フェアリー" pt="2/2">飛行
+    <card name="Sprite Noble" jaName="スプライトの貴族" type="クリーチャー ― フェアリー・貴族" pt="2/2">飛行
 あなたがコントロールしていて飛行を持つ他のクリーチャーは+0/+1の修整を受ける。
 (Ｔ)：ターン終了時まで、あなたがコントロールしていて飛行を持つ他のクリーチャーは+1/+0の修整を受ける。</card>
     <card name="Strionic Resonator" jaName="ストリオン共鳴体" type="アーティファクト">(２),(Ｔ)：あなたがコントロールしている誘発型能力１つを対象とし、それをコピーする。あなたはそのコピーの新しい対象を選んでもよい。（誘発型能力には「～とき」「～たび」「～時に」のいずれかが書かれている。）</card>
@@ -4559,6 +4559,28 @@ Lv8+：
     <type name="Urza's Mine" type="土地 ― ウルザの・鉱山" />
     <type name="Urza's Power Plant" type="土地 ― ウルザの・魔力炉" />
     <type name="Urza's Tower" type="土地 ― ウルザの・塔" />
+    <!-- オラクル更新 -->
+    <type name="Aboshan, Cephalid Emperor" type="伝説のクリーチャー ― セファリッド・貴族" />
+    <type name="Baron Sengir" type="伝説のクリーチャー ― 吸血鬼・貴族" />
+    <type name="Brago, King Eternal" type="伝説のクリーチャー ― スピリット・貴族" />
+    <type name="Cephalid Aristocrat" type="クリーチャー ― セファリッド・貴族" />
+    <type name="Empress Galina" type="伝説のクリーチャー ― マーフォーク・貴族" />
+    <type name="Faerie Noble" type="クリーチャー ― フェアリー・貴族" />
+    <type name="Falkenrath Aristocrat" type="クリーチャー ― 吸血鬼・貴族" />
+    <type name="Falkenrath Noble" type="クリーチャー ― 吸血鬼・貴族" />
+    <type name="Garza Zol, Plague Queen" type="伝説のクリーチャー ― 吸血鬼・貴族" />
+    <type name="Imposing Sovereign" type="クリーチャー ― 人間・貴族" />
+    <type name="Indulgent Aristocrat" type="クリーチャー ― 吸血鬼・貴族" />
+    <type name="King Macar, the Gold-Cursed" type="伝説のクリーチャー ― 人間・貴族" />
+    <type name="King Suleiman" type="クリーチャー ― 人間・貴族" />
+    <type name="Llawan, Cephalid Empress" type="伝説のクリーチャー ― セファリッド・貴族" />
+    <type name="Merfolk Sovereign" type="クリーチャー ― マーフォーク・貴族" />
+    <!--<type name="Sprite Noble" type="クリーチャー ― フェアリー・貴族" />-->
+    <type name="Stromkirk Noble" type="クリーチャー ― 吸血鬼・貴族" />
+    <type name="Vampire Aristocrat" type="クリーチャー ― 吸血鬼・ならず者・貴族" />
+    <type name="Vampire Noble" type="クリーチャー ― 吸血鬼・貴族" />
+    <type name="Vampire Sovereign" type="クリーチャー ― 吸血鬼・貴族" />
+    <type name="Dread Warlock" type="クリーチャー ― 人間・ウィザード・邪術師" />
     <!-- 関連カード (合体) -->
     <related name="Bruna, the Fading Light" related="Gisela, the Broken Blade|Brisela, Voice of Nightmares" />
     <related name="Brisela, Voice of Nightmares" related="Gisela, the Broken Blade|Bruna, the Fading Light" />
