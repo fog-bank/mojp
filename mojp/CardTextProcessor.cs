@@ -78,269 +78,269 @@ namespace Mojp
         /// <summary>
         /// アーティスト名に対応する英雄譚のカード名を取得します。
         /// </summary>
-        public static bool GetSagaByArtist(string artist, out string cardName)
-        {
-            switch (artist)
-            {
-                case "Jason Felix":
-                    cardName = "Fall of the Thran";
-                    return true;
+        //public static bool GetSagaByArtist(string artist, out string cardName)
+        //{
+        //    switch (artist)
+        //    {
+        //        case "Jason Felix":
+        //            cardName = "Fall of the Thran";
+        //            return true;
 
-                case "Noah Bradley":
-                    cardName = "History of Benalia";
-                    return true;
+        //        case "Noah Bradley":
+        //            cardName = "History of Benalia";
+        //            return true;
 
-                case "Daniel Ljunggren":
-                    cardName = "Triumph of Gerrard";
-                    return true;
+        //        case "Daniel Ljunggren":
+        //            cardName = "Triumph of Gerrard";
+        //            return true;
 
-                case "Mark Tedin":
-                    cardName = "The Antiquities War";
-                    return true;
+        //        case "Mark Tedin":
+        //            cardName = "The Antiquities War";
+        //            return true;
 
-                case "James Arnold":
-                    cardName = "The Mirari Conjecture";
-                    return true;
+        //        case "James Arnold":
+        //            cardName = "The Mirari Conjecture";
+        //            return true;
 
-                case "Franz Vohwinkel":
-                    cardName = "Time of Ice";
-                    return true;
+        //        case "Franz Vohwinkel":
+        //            cardName = "Time of Ice";
+        //            return true;
 
-                case "Vincent Proce":
-                    cardName = "Chainer's Torment";
-                    return true;
+        //        case "Vincent Proce":
+        //            cardName = "Chainer's Torment";
+        //            return true;
 
-                case "Jenn Ravenna":
-                    cardName = "The Eldest Reborn";
-                    return true;
+        //        case "Jenn Ravenna":
+        //            cardName = "The Eldest Reborn";
+        //            return true;
 
-                case "Joseph Meehan":
-                    cardName = "Phyrexian Scriptures";
-                    return true;
+        //        case "Joseph Meehan":
+        //            cardName = "Phyrexian Scriptures";
+        //            return true;
 
-                case "Seb McKinnon":
-                    cardName = "Rite of Belzenlok";
-                    return true;
+        //        case "Seb McKinnon":
+        //            cardName = "Rite of Belzenlok";
+        //            return true;
 
-                case "Steven Belledin":
-                    cardName = "The First Eruption";
-                    return true;
+        //        case "Steven Belledin":
+        //            cardName = "The First Eruption";
+        //            return true;
 
-                case "Lake Hurwitz":
-                    cardName = "The Flame of Keld";
-                    return true;
+        //        case "Lake Hurwitz":
+        //            cardName = "The Flame of Keld";
+        //            return true;
 
-                case "Adam Paquette":
-                    cardName = "The Mending of Dominaria";
-                    return true;
+        //        case "Adam Paquette":
+        //            cardName = "The Mending of Dominaria";
+        //            return true;
 
-                case "Min Yum":
-                    cardName = "Song of Freyalise";
-                    return true;
-            }
-            cardName = null;
-            return false;
-        }
+        //        case "Min Yum":
+        //            cardName = "Song of Freyalise";
+        //            return true;
+        //    }
+        //    cardName = null;
+        //    return false;
+        //}
 
         /// <summary>
         /// 指定した文字列が Ultimate Box Toppers のカード番号であるかどうかを調べ、対応するカード名を返します。
         /// </summary>
-        public static bool IsUltimateBoxToppers(string value, out string cardname)
-        {
-            cardname = null;
+        //public static bool IsUltimateBoxToppers(string value, out string cardname)
+        //{
+        //    cardname = null;
 
-            if (string.IsNullOrEmpty(value) || value.Length < 3)
-                return false;
+        //    if (string.IsNullOrEmpty(value) || value.Length < 3)
+        //        return false;
 
-            char num1 = value[1], num2 = value[2];
+        //    char num1 = value[1], num2 = value[2];
 
-            if (value[0] == 'U' && num1 >= '0' && num1 <= '4' && value.EndsWith("/  040 "))
-            {
-                switch (num1)
-                {
-                    case '0':
-                        switch (num2)
-                        {
-                            case '1':
-                                cardname = "Emrakul, the Aeons Torn";
-                                return true;
+        //    if (value[0] == 'U' && num1 >= '0' && num1 <= '4' && value.EndsWith("/  040 "))
+        //    {
+        //        switch (num1)
+        //        {
+        //            case '0':
+        //                switch (num2)
+        //                {
+        //                    case '1':
+        //                        cardname = "Emrakul, the Aeons Torn";
+        //                        return true;
 
-                            case '2':
-                                cardname = "Karn Liberated";
-                                return true;
+        //                    case '2':
+        //                        cardname = "Karn Liberated";
+        //                        return true;
 
-                            case '3':
-                                cardname = "Kozilek, Butcher of Truth";
-                                return true;
+        //                    case '3':
+        //                        cardname = "Kozilek, Butcher of Truth";
+        //                        return true;
 
-                            case '4':
-                                cardname = "Ulamog, the Infinite Gyre";
-                                return true;
+        //                    case '4':
+        //                        cardname = "Ulamog, the Infinite Gyre";
+        //                        return true;
 
-                            case '5':
-                                cardname = "Snapcaster Mage";
-                                return true;
+        //                    case '5':
+        //                        cardname = "Snapcaster Mage";
+        //                        return true;
 
-                            case '6':
-                                cardname = "Temporal Manipulation";
-                                return true;
+        //                    case '6':
+        //                        cardname = "Temporal Manipulation";
+        //                        return true;
 
-                            case '7':
-                                cardname = "Bitterblossom";
-                                return true;
+        //                    case '7':
+        //                        cardname = "Bitterblossom";
+        //                        return true;
 
-                            case '8':
-                                cardname = "Demonic Tutor";
-                                return true;
+        //                    case '8':
+        //                        cardname = "Demonic Tutor";
+        //                        return true;
 
-                            case '9':
-                                cardname = "Goryo's Vengeance";
-                                return true;
-                        }
-                        break;
+        //                    case '9':
+        //                        cardname = "Goryo's Vengeance";
+        //                        return true;
+        //                }
+        //                break;
 
-                    case '1':
-                        switch (num2)
-                        {
-                            case '0':
-                                cardname = "Liliana of the Veil";
-                                return true;
+        //            case '1':
+        //                switch (num2)
+        //                {
+        //                    case '0':
+        //                        cardname = "Liliana of the Veil";
+        //                        return true;
 
-                            case '1':
-                                cardname = "Mikaeus, the Unhallowed";
-                                return true;
+        //                    case '1':
+        //                        cardname = "Mikaeus, the Unhallowed";
+        //                        return true;
 
-                            case '2':
-                                cardname = "Reanimate";
-                                return true;
+        //                    case '2':
+        //                        cardname = "Reanimate";
+        //                        return true;
 
-                            case '3':
-                                cardname = "Tasigur, the Golden Fang";
-                                return true;
+        //                    case '3':
+        //                        cardname = "Tasigur, the Golden Fang";
+        //                        return true;
 
-                            case '4':
-                                cardname = "Balefire Dragon";
-                                return true;
+        //                    case '4':
+        //                        cardname = "Balefire Dragon";
+        //                        return true;
 
-                            case '5':
-                                cardname = "Through the Breach";
-                                return true;
+        //                    case '5':
+        //                        cardname = "Through the Breach";
+        //                        return true;
 
-                            case '6':
-                                cardname = "Eternal Witness";
-                                return true;
+        //                    case '6':
+        //                        cardname = "Eternal Witness";
+        //                        return true;
 
-                            case '7':
-                                cardname = "Life from the Loam";
-                                return true;
+        //                    case '7':
+        //                        cardname = "Life from the Loam";
+        //                        return true;
 
-                            case '8':
-                                cardname = "Noble Hierarch";
-                                return true;
+        //                    case '8':
+        //                        cardname = "Noble Hierarch";
+        //                        return true;
 
-                            case '9':
-                                cardname = "Tarmogoyf";
-                                return true;
-                        }
-                        break;
+        //                    case '9':
+        //                        cardname = "Tarmogoyf";
+        //                        return true;
+        //                }
+        //                break;
 
-                    case '2':
-                        switch (num2)
-                        {
-                            case '0':
-                                cardname = "Vengevine";
-                                return true;
+        //            case '2':
+        //                switch (num2)
+        //                {
+        //                    case '0':
+        //                        cardname = "Vengevine";
+        //                        return true;
 
-                            case '1':
-                                cardname = "Gaddock Teeg";
-                                return true;
+        //                    case '1':
+        //                        cardname = "Gaddock Teeg";
+        //                        return true;
 
-                            case '2':
-                                cardname = "Leovold, Emissary of Trest";
-                                return true;
+        //                    case '2':
+        //                        cardname = "Leovold, Emissary of Trest";
+        //                        return true;
 
-                            case '3':
-                                cardname = "Lord of Extinction";
-                                return true;
+        //                    case '3':
+        //                        cardname = "Lord of Extinction";
+        //                        return true;
 
-                            case '4':
-                                cardname = "Maelstrom Pulse";
-                                return true;
+        //                    case '4':
+        //                        cardname = "Maelstrom Pulse";
+        //                        return true;
 
-                            case '5':
-                                cardname = "Sigarda, Host of Herons";
-                                return true;
+        //                    case '5':
+        //                        cardname = "Sigarda, Host of Herons";
+        //                        return true;
 
-                            case '6':
-                                cardname = "Fulminator Mage";
-                                return true;
+        //                    case '6':
+        //                        cardname = "Fulminator Mage";
+        //                        return true;
 
-                            case '7':
-                                cardname = "Kitchen Finks";
-                                return true;
+        //                    case '7':
+        //                        cardname = "Kitchen Finks";
+        //                        return true;
 
-                            case '8':
-                                cardname = "Engineered Explosives";
-                                return true;
+        //                    case '8':
+        //                        cardname = "Engineered Explosives";
+        //                        return true;
 
-                            case '9':
-                                cardname = "Mana Vault";
-                                return true;
-                        }
-                        break;
+        //                    case '9':
+        //                        cardname = "Mana Vault";
+        //                        return true;
+        //                }
+        //                break;
 
-                    case '3':
-                        switch (num2)
-                        {
-                            case '0':
-                                cardname = "Platinum Emperion";
-                                return true;
+        //            case '3':
+        //                switch (num2)
+        //                {
+        //                    case '0':
+        //                        cardname = "Platinum Emperion";
+        //                        return true;
 
-                            case '1':
-                                cardname = "Ancient Tomb";
-                                return true;
+        //                    case '1':
+        //                        cardname = "Ancient Tomb";
+        //                        return true;
 
-                            case '2':
-                                cardname = "Cavern of Souls";
-                                return true;
+        //                    case '2':
+        //                        cardname = "Cavern of Souls";
+        //                        return true;
 
-                            case '3':
-                                cardname = "Celestial Colonnade";
-                                return true;
+        //                    case '3':
+        //                        cardname = "Celestial Colonnade";
+        //                        return true;
 
-                            case '4':
-                                cardname = "Creeping Tar Pit";
-                                return true;
+        //                    case '4':
+        //                        cardname = "Creeping Tar Pit";
+        //                        return true;
 
-                            case '5':
-                                cardname = "Dark Depths";
-                                return true;
+        //                    case '5':
+        //                        cardname = "Dark Depths";
+        //                        return true;
 
-                            case '6':
-                                cardname = "Karakas";
-                                return true;
+        //                    case '6':
+        //                        cardname = "Karakas";
+        //                        return true;
 
-                            case '7':
-                                cardname = "Lavaclaw Reaches";
-                                return true;
+        //                    case '7':
+        //                        cardname = "Lavaclaw Reaches";
+        //                        return true;
 
-                            case '8':
-                                cardname = "Raging Ravine";
-                                return true;
+        //                    case '8':
+        //                        cardname = "Raging Ravine";
+        //                        return true;
 
-                            case '9':
-                                cardname = "Stirring Wildwood";
-                                return true;
-                        }
-                        break;
+        //                    case '9':
+        //                        cardname = "Stirring Wildwood";
+        //                        return true;
+        //                }
+        //                break;
 
-                    case '4':
-                        cardname = "Urborg, Tomb of Yawgmoth";
-                        return true;
-                }
-            }
-            return false;
-        }
+        //            case '4':
+        //                cardname = "Urborg, Tomb of Yawgmoth";
+        //                return true;
+        //        }
+        //    }
+        //    return false;
+        //}
 
         /// <summary>
         /// WHISPER の検索結果テキストを解析し、カード情報を列挙します。
@@ -600,6 +600,8 @@ namespace Mojp
             }
 
             // 代替テキスト検索を追加
+            App.AltCardKeys.Clear();
+            App.AltCardSubKeys.Clear();
             App.AltCards.Clear();
 
             foreach (var node in doc.Root.Element("add").Elements("alt"))
@@ -611,7 +613,9 @@ namespace Mojp
                 if (!cards.ContainsKey(name))
                     Debug.WriteLine("代替テキスト (" + key + " " + sub + ") の参照先となる " + name + " のカード情報がありません。");
 
-                App.AltCards.Add(key, new AltCard(sub, name));
+                App.AltCardKeys.Add(key);
+                App.AltCardSubKeys.Add(sub);
+                App.AltCards.Add(key + sub, new AltCard(key, sub, name));
             }
 
             // カードデータの差し替え

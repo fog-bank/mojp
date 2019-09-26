@@ -265,53 +265,62 @@ namespace Mojp
                     return true;
                 }
 
-                // アルティメットマスターズのフルアート版
-                if (Card.IsUltimateBoxToppers(value, out string cardName))
-                {
-                    Debug.WriteLine(value + " => " + cardName);
-
-                    // アルティメットマスターズのフルアート版はカード名で探せないので、カード番号で区別する
-                    // HACK: U01 / 40 みたいな文字が他に出ない前提。念のために UMA のセット記号を確認するかどうか
-                    if (ViewCardDirectly(cardName))
-                        return true;
-                }
-
                 // 代替テキストによる検索
-                if (App.AltCards.TryGetValue(value, out var alt) && ContainsText(alt.SubKey))
+                if (App.AltCardKeys.Contains(value))
                 {
-                    Debug.WriteLine(value + " " + alt.SubKey + " => " + alt.CardName);
-
-                    if (App.Cards.TryGetValue(alt.CardName, out card))
+                    foreach (string text in IterateTextBlocks())
                     {
-                        if (alt.SubKey == "ELD" && IsAdventure())
+                        // 第 2 段階
+                        if (App.AltCardSubKeys.Contains(text) && App.AltCards.TryGetValue(value + text, out var alt))
                         {
-                            if (ViewCardDirectly(card.RelatedCardName))
+                            Debug.WriteLine(value + " " + alt.SubKey + " => " + alt.CardName);
+
+                            if (App.Cards.TryGetValue(alt.CardName, out card))
+                            {
+                                // エルドレインの王権のカードだったとき、カードタイプが出来事の場合、呪文側を手前に表示する
+                                if (alt.SubKey == "ELD" && IsAdventure())
+                                {
+                                    Debug.WriteLine(value + " " + alt.SubKey + " => " + alt.CardName + " => " + card.RelatedCardName);
+
+                                    return ViewCardDirectly(card.RelatedCardName);
+                                }
+                                ViewModel.InvokeSetCard(card);
                                 return true;
+                            }
+                            return false;
                         }
-                        ViewModel.InvokeSetCard(card);
-                        return true;
                     }
                 }
 
+                // アルティメットマスターズのフルアート版
+                //if (Card.IsUltimateBoxToppers(value, out string cardName))
+                //{
+                //    Debug.WriteLine(value + " => " + cardName);
+
+                //    // アルティメットマスターズのフルアート版はカード名で探せないので、カード番号で区別する
+                //    // HACK: U01 / 40 みたいな文字が他に出ない前提。念のために UMA のセット記号を確認するかどうか
+                //    if (ViewCardDirectly(cardName))
+                //        return true;
+                //}
+
                 // 英雄譚 (カード名を Automation で探せないため、アーティスト名で 1:1 対応として探す)
-                if (Card.GetSagaByArtist(value, out cardName))
-                {
-                    Debug.WriteLine(value + " => " + cardName);
+                //if (Card.GetSagaByArtist(value, out cardName))
+                //{
+                //    Debug.WriteLine(value + " => " + cardName);
 
-                    // 十分条件として、カードタイプが Saga であることをチェック
-                    if (ValidateAndViewSaga(cardName))
-                        return true;
-                }
+                //    // 十分条件として、カードタイプが Saga であることをチェック
+                //    if (ValidateAndViewSaga(cardName))
+                //        return true;
+                //}
 
-                // 英雄譚の誘発型能力
+                // 英雄譚の誘発型能力 (これだけカードではなく、スタック上にあるのと同じ誘発能力が Preview に表示される)
                 const string triggerPrefix = "Triggered ability from ";
                 if (value.StartsWith(triggerPrefix))
                 {
                     value = value.Substring(triggerPrefix.Length);
                     Debug.WriteLine(value);
 
-                    if (ViewCardDirectly(value))
-                        return true;
+                    return ViewCardDirectly(value);
                 }
 
                 // 紋章
@@ -427,31 +436,31 @@ namespace Mojp
             /// <summary>
             /// 現在のカードのカードタイプが英雄譚であるかどうかをチェックし、そうであるなら、指定したカード名のカードを表示します。
             /// </summary>
-            private bool ValidateAndViewSaga(string cardName)
-            {
-                if (App.Cards.TryGetValue(cardName, out var foundCard))
-                {
-                    // Automation ID が CardType の値を調べて、英雄譚かどうかをチェックする
-                    AutomationElement element = null;
-                    try
-                    {
-                        using (cacheReq.Activate())
-                        {
-                            element = previewWnd?.FindFirst(TreeScope.Descendants, cardTypeCondition);
-                        }
-                    }
-                    catch { Debug.WriteLine("CardType 要素の取得に失敗しました。"); }
+            //private bool ValidateAndViewSaga(string cardName)
+            //{
+            //    if (App.Cards.TryGetValue(cardName, out var foundCard))
+            //    {
+            //        // Automation ID が CardType の値を調べて、英雄譚かどうかをチェックする
+            //        AutomationElement element = null;
+            //        try
+            //        {
+            //            using (cacheReq.Activate())
+            //            {
+            //                element = previewWnd?.FindFirst(TreeScope.Descendants, cardTypeCondition);
+            //            }
+            //        }
+            //        catch { Debug.WriteLine("CardType 要素の取得に失敗しました。"); }
 
-                    string cardType = GetNamePropertyValue(element);
+            //        string cardType = GetNamePropertyValue(element);
 
-                    if (cardType != null && cardType.EndsWith("Saga"))
-                    {
-                        ViewModel.InvokeSetCard(foundCard);
-                        return true;
-                    }
-                }
-                return false;
-            }
+            //        if (cardType != null && cardType.EndsWith("Saga"))
+            //        {
+            //            ViewModel.InvokeSetCard(foundCard);
+            //            return true;
+            //        }
+            //    }
+            //    return false;
+            //}
 
             /// <summary>
             /// Automation ID が CardType の値を調べて、出来事かどうかをチェックする

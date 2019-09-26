@@ -1378,7 +1378,64 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <wikilink name="Captivating Vampire" wikilink="蟲惑的な吸血鬼/Captivating Vampire" />
     <wikilink name="Angelic Guardian" wikilink="Angelic Guardian" />
     <wikilink name="Immortal Phoenix" wikilink="Immortal Phoenix" />
-    <!-- 当事者カード (ELD) -->
+    <!-- 英雄譚 (DOM, C19) -->
+    <alt key="018  /  269 " sub="DOM" name="Fall of the Thran" />
+    <alt key="021  /  269 " sub="DOM" name="History of Benalia" />
+    <alt key="038  /  269 " sub="DOM" name="Triumph of Gerrard" />
+    <alt key="042  /  269 " sub="DOM" name="The Antiquities War" />
+    <alt key="057  /  269 " sub="DOM" name="The Mirari Conjecture" />
+    <alt key="070  /  269 " sub="DOM" name="Time of Ice" />
+    <alt key="082  /  269 " sub="DOM" name="Chainer's Torment" />
+    <alt key="090  /  269 " sub="DOM" name="The Eldest Reborn" />
+    <alt key="100  /  269 " sub="DOM" name="Phyrexian Scriptures" />
+    <alt key="102  /  269 " sub="DOM" name="Rite of Belzenlok" />
+    <alt key="122  /  269 " sub="DOM" name="The First Eruption" />
+    <alt key="123  /  269 " sub="DOM" name="The Flame of Keld" />
+    <alt key="173  /  269 " sub="DOM" name="The Mending of Dominaria" />
+    <alt key="179  /  269 " sub="DOM" name="Song of Freyalise" />
+    <alt key="131  /  302 " sub="C19" name="The Eldest Reborn" />
+    <!-- Ultimate Box Toppers (UMA) -->
+    <alt key="U01  /  040 " sub="UMA" name="Emrakul, the Aeons Torn" />
+    <alt key="U02  /  040 " sub="UMA" name="Karn Liberated" />
+    <alt key="U03  /  040 " sub="UMA" name="Kozilek, Butcher of Truth" />
+    <alt key="U04  /  040 " sub="UMA" name="Ulamog, the Infinite Gyre" />
+    <alt key="U05  /  040 " sub="UMA" name="Snapcaster Mage" />
+    <alt key="U06  /  040 " sub="UMA" name="Temporal Manipulation" />
+    <alt key="U07  /  040 " sub="UMA" name="Bitterblossom" />
+    <alt key="U08  /  040 " sub="UMA" name="Demonic Tutor" />
+    <alt key="U09  /  040 " sub="UMA" name="Goryo's Vengeance" />
+    <alt key="U10  /  040 " sub="UMA" name="Liliana of the Veil" />
+    <alt key="U11  /  040 " sub="UMA" name="Mikaeus, the Unhallowed" />
+    <alt key="U12  /  040 " sub="UMA" name="Reanimate" />
+    <alt key="U13  /  040 " sub="UMA" name="Tasigur, the Golden Fang" />
+    <alt key="U14  /  040 " sub="UMA" name="Balefire Dragon" />
+    <alt key="U15  /  040 " sub="UMA" name="Through the Breach" />
+    <alt key="U16  /  040 " sub="UMA" name="Eternal Witness" />
+    <alt key="U17  /  040 " sub="UMA" name="Life from the Loam" />
+    <alt key="U18  /  040 " sub="UMA" name="Noble Hierarch" />
+    <alt key="U19  /  040 " sub="UMA" name="Tarmogoyf" />
+    <alt key="U20  /  040 " sub="UMA" name="Vengevine" />
+    <alt key="U21  /  040 " sub="UMA" name="Gaddock Teeg" />
+    <alt key="U22  /  040 " sub="UMA" name="Leovold, Emissary of Trest" />
+    <alt key="U23  /  040 " sub="UMA" name="Lord of Extinction" />
+    <alt key="U24  /  040 " sub="UMA" name="Maelstrom Pulse" />
+    <alt key="U25  /  040 " sub="UMA" name="Sigarda, Host of Herons" />
+    <alt key="U26  /  040 " sub="UMA" name="Fulminator Mage" />
+    <alt key="U27  /  040 " sub="UMA" name="Kitchen Finks" />
+    <alt key="U28  /  040 " sub="UMA" name="Engineered Explosives" />
+    <alt key="U29  /  040 " sub="UMA" name="Mana Vault" />
+    <alt key="U30  /  040 " sub="UMA" name="Platinum Emperion" />
+    <alt key="U31  /  040 " sub="UMA" name="Ancient Tomb" />
+    <alt key="U32  /  040 " sub="UMA" name="Cavern of Souls" />
+    <alt key="U33  /  040 " sub="UMA" name="Celestial Colonnade" />
+    <alt key="U34  /  040 " sub="UMA" name="Creeping Tar Pit" />
+    <alt key="U35  /  040 " sub="UMA" name="Dark Depths" />
+    <alt key="U36  /  040 " sub="UMA" name="Karakas" />
+    <alt key="U37  /  040 " sub="UMA" name="Lavaclaw Reaches" />
+    <alt key="U38  /  040 " sub="UMA" name="Raging Ravine" />
+    <alt key="U39  /  040 " sub="UMA" name="Stirring Wildwood" />
+    <alt key="U40  /  040 " sub="UMA" name="Urborg, Tomb of Yawgmoth" />
+    <!-- 出来事 (ELD) -->
     <alt key="005  /  269 " sub="ELD" name="Ardenvale Tactician" />
     <alt key="011  /  269 " sub="ELD" name="Faerie Guidemother" />
     <alt key="014  /  269 " sub="ELD" name="Giant Killer" />

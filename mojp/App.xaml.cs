@@ -24,9 +24,19 @@ namespace Mojp
         public static Dictionary<string, Card> Cards { get; } = new Dictionary<string, Card>(19756);
 
         /// <summary>
+        /// 代替テキスト検索の主キーです。
+        /// </summary>
+        public static HashSet<string> AltCardKeys { get; } = new HashSet<string>();
+
+        /// <summary>
+        /// 代替テキスト検索のサブキーです。
+        /// </summary>
+        public static HashSet<string> AltCardSubKeys { get; } = new HashSet<string>();
+
+        /// <summary>
         /// 代替テキストによるカード検索を行います。
         /// </summary>
-        public static Dictionary<string, AltCard> AltCards { get; } = new Dictionary<string, AltCard>(30);
+        public static Dictionary<string, AltCard> AltCards { get; } = new Dictionary<string, AltCard>(85);
 
         /// <summary>
         /// このアプリの設定を取得します。
@@ -99,8 +109,8 @@ namespace Mojp
             foreach (var card in Cards.Values)
                 cardsElem.Add(card.ToXml());
 
-            foreach (var alt in AltCards)
-                cardsElem.Add(alt.Value.ToXml(alt.Key));
+            foreach (var alt in AltCards.Values)
+                cardsElem.Add(alt.ToXml());
 
             var doc = new XDocument(new XDeclaration("1.0", "utf-8", "yes"), cardsElem);
             doc.Save(path);
@@ -123,6 +133,8 @@ namespace Mojp
         public static void SetCardInfosFromXml(XDocument doc)
         {
             Cards.Clear();
+            AltCardKeys.Clear();
+            AltCardSubKeys.Clear();
             AltCards.Clear();
 
             var node = doc.Element("cards");
@@ -139,8 +151,11 @@ namespace Mojp
                             break;
 
                         case "alt":
-                            AltCards.Add((string)element.Attribute("key"), 
-                                new AltCard((string)element.Attribute("sub"), (string)element.Attribute("name")));
+                            string key = (string)element.Attribute("key");
+                            string sub = (string)element.Attribute("sub");
+                            AltCardKeys.Add(key);
+                            AltCardSubKeys.Add(sub);
+                            AltCards.Add(key + sub, new AltCard(key, sub, (string)element.Attribute("name")));
                             break;
                     }
                 }

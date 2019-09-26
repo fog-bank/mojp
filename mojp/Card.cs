@@ -218,11 +218,14 @@ namespace Mojp
     /// </summary>
     public class AltCard
     {
-        public AltCard(string subKey, string cardName)
+        public AltCard(string key, string subKey, string cardName)
         {
+            Key = key;
             SubKey = subKey;
             CardName = cardName;
         }
+
+        public string Key { get; }
 
         /// <summary>
         /// 追加の検索条件を取得します。
@@ -234,11 +237,11 @@ namespace Mojp
         /// </summary>
         public string CardName { get; }
 
-        public XElement ToXml(string key)
+        public XElement ToXml()
         {
             var xml = new XElement("alt");
 
-            xml.Add(new XAttribute("key", key));
+            xml.Add(new XAttribute("key", Key));
             xml.Add(new XAttribute("sub", SubKey));
             xml.Add(new XAttribute("name", CardName));
 
