@@ -8,6 +8,7 @@
     <card name="The Monarch" jaName="統治者" type="" wikilink="統治者">あなたの終了ステップの開始時に、あなたはカードを１枚引く。
 クリーチャーが１体あなたに戦闘ダメージを与えるたび、それのコントローラーが統治者になる。</card>
     <card name="City's Blessing" jaName="都市の承認" type="" wikilink="昇殿"></card>
+    <card name="プロモ版の当事者カード" jaName="プロモ版の当事者カード" type="" wikilink="出来事">これは、出来事・呪文を持つカードのプロモ版であるとみられますが、カード名を判別できないため、カードテキストを表示できません。ご不便をおかけして申し訳ありません。</card>
     <!-- ELD -->
     <card name="Acclaimed Contender" jaName="評判高い挑戦者" type="クリーチャー ― 人間・騎士" pt="3/3">評判高い挑戦者が戦場に出たとき、あなたが他の騎士をコントロールしている場合、あなたのライブラリーの一番上からカードを５枚見る。あなたはその中から、騎士かオーラか装備品か伝説のアーティファクトであるカード１枚を公開してあなたの手札に加えてもよい。残りをあなたのライブラリーの一番下に無作為の順番で置く。</card>
     <card name="All That Glitters" jaName="きらきらするすべて" type="エンチャント ― オーラ">エンチャント（クリーチャー）
@@ -1466,6 +1467,8 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="174  /  269 " sub="ELD" name="Rosethorn Acolyte" />
     <alt key="180  /  269 " sub="ELD" name="Tuinvale Treefolk" />
     <alt key="212  /  269 " sub="ELD" name="Oakhame Ranger" />
+    <alt key="Instant — Adventure" sub="PRM" name="プロモ版の当事者カード" />
+    <alt key="Sorcery — Adventure" sub="PRM" name="プロモ版の当事者カード" />
   </add>
   <replace>
     <!-- 誤字修正 -->
