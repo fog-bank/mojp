@@ -21,7 +21,12 @@ namespace Mojp
         /// <summary>
         /// カードの英語名から、英語カード名・日本語カード名・日本語カードテキストを検索します。
         /// </summary>
-        public static Dictionary<string, Card> Cards { get; } = new Dictionary<string, Card>();
+        public static Dictionary<string, Card> Cards { get; } = new Dictionary<string, Card>(19756);
+
+        /// <summary>
+        /// 代替テキストによるカード検索を行います。
+        /// </summary>
+        public static Dictionary<string, AltCard> AltCards { get; } = new Dictionary<string, AltCard>(30);
 
         /// <summary>
         /// このアプリの設定を取得します。
@@ -94,6 +99,9 @@ namespace Mojp
             foreach (var card in Cards.Values)
                 cardsElem.Add(card.ToXml());
 
+            foreach (var alt in AltCards)
+                cardsElem.Add(alt.Value.ToXml(alt.Key));
+
             var doc = new XDocument(new XDeclaration("1.0", "utf-8", "yes"), cardsElem);
             doc.Save(path);
         }
@@ -115,11 +123,27 @@ namespace Mojp
         public static void SetCardInfosFromXml(XDocument doc)
         {
             Cards.Clear();
+            AltCards.Clear();
 
-            foreach (var xml in doc.Descendants("card"))
+            var node = doc.Element("cards");
+
+            if (node != null)
             {
-                var card = Card.FromXml(xml);
-                Cards.Add(card.Name, card);
+                foreach (var element in node.Elements())
+                {
+                    switch (element.Name.LocalName)
+                    {
+                        case "card":
+                            var card = Card.FromXml(element);
+                            Cards.Add(card.Name, card);
+                            break;
+
+                        case "alt":
+                            AltCards.Add((string)element.Attribute("key"), 
+                                new AltCard((string)element.Attribute("sub"), (string)element.Attribute("name")));
+                            break;
+                    }
+                }
             }
         }
 

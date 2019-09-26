@@ -212,4 +212,37 @@ namespace Mojp
 
         public event PropertyChangedEventHandler PropertyChanged;
     }
+
+    /// <summary>
+    /// 代替テキストによる追加の検索条件と参照先のカード名を表します。
+    /// </summary>
+    public class AltCard
+    {
+        public AltCard(string subKey, string cardName)
+        {
+            SubKey = subKey;
+            CardName = cardName;
+        }
+
+        /// <summary>
+        /// 追加の検索条件を取得します。
+        /// </summary>
+        public string SubKey { get; }
+
+        /// <summary>
+        /// 参照先のカード名を取得します。
+        /// </summary>
+        public string CardName { get; }
+
+        public XElement ToXml(string key)
+        {
+            var xml = new XElement("alt");
+
+            xml.Add(new XAttribute("key", key));
+            xml.Add(new XAttribute("sub", SubKey));
+            xml.Add(new XAttribute("name", CardName));
+
+            return xml;
+        }
+    }
 }

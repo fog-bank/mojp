@@ -1379,36 +1379,36 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <wikilink name="Angelic Guardian" wikilink="Angelic Guardian" />
     <wikilink name="Immortal Phoenix" wikilink="Immortal Phoenix" />
     <!-- 当事者カード (ELD) -->
-    <alt key="005 / 269 " sub="ELD" name="Ardenvale Tactician" />
-    <alt key="011 / 269 " sub="ELD" name="Faerie Guidemother" />
-    <alt key="014 / 269 " sub="ELD" name="Giant Killer" />
-    <alt key="021 / 269 " sub="ELD" name="Lonesome Unicorn" />
-    <alt key="026 / 269 " sub="ELD" name="Realm-Cloaked Giant" />
-    <alt key="028 / 269 " sub="ELD" name="Shepherd of the Flock" />
-    <alt key="031 / 269 " sub="ELD" name="Silverflame Squire" />
-    <alt key="038 / 269 " sub="ELD" name="Animating Faerie" />
-    <alt key="039 / 269 " sub="ELD" name="Brazen Borrower" />
-    <alt key="044 / 269 " sub="ELD" name="Fae of Wishes" />
-    <alt key="049 / 269 " sub="ELD" name="Hypnotic Sprite" />
-    <alt key="053 / 269 " sub="ELD" name="Merfolk Secretkeeper" />
-    <alt key="061 / 269 " sub="ELD" name="Queen of Ice" />
-    <alt key="090 / 269 " sub="ELD" name="Foulmire Knight" />
-    <alt key="097 / 269 " sub="ELD" name="Murderous Rider" />
-    <alt key="099 / 269 " sub="ELD" name="Order of Midnight" />
-    <alt key="102 / 269 " sub="ELD" name="Reaper of Night" />
-    <alt key="105 / 269 " sub="ELD" name="Smitten Swordmaster" />
-    <alt key="115 / 269 " sub="ELD" name="Bonecrusher Giant" />
-    <alt key="122 / 269 " sub="ELD" name="Embereth Shieldbreaker" />
-    <alt key="131 / 269 " sub="ELD" name="Merchant of the Vale" />
-    <alt key="137 / 269 " sub="ELD" name="Rimrock Knight" />
-    <alt key="149 / 269 " sub="ELD" name="Beanstalk Giant" />
-    <alt key="150 / 269 " sub="ELD" name="Curious Pair" />
-    <alt key="155 / 269 " sub="ELD" name="Flaxen Intruder" />
-    <alt key="156 / 269 " sub="ELD" name="Garenbrig Carver" />
-    <alt key="165 / 269 " sub="ELD" name="Lovestruck Beast" />
-    <alt key="174 / 269 " sub="ELD" name="Rosethorn Acolyte" />
-    <alt key="180 / 269 " sub="ELD" name="Tuinvale Treefolk" />
-    <alt key="212 / 269 " sub="ELD" name="Oakhame Ranger" />
+    <alt key="005  /  269 " sub="ELD" name="Ardenvale Tactician" />
+    <alt key="011  /  269 " sub="ELD" name="Faerie Guidemother" />
+    <alt key="014  /  269 " sub="ELD" name="Giant Killer" />
+    <alt key="021  /  269 " sub="ELD" name="Lonesome Unicorn" />
+    <alt key="026  /  269 " sub="ELD" name="Realm-Cloaked Giant" />
+    <alt key="028  /  269 " sub="ELD" name="Shepherd of the Flock" />
+    <alt key="031  /  269 " sub="ELD" name="Silverflame Squire" />
+    <alt key="038  /  269 " sub="ELD" name="Animating Faerie" />
+    <alt key="039  /  269 " sub="ELD" name="Brazen Borrower" />
+    <alt key="044  /  269 " sub="ELD" name="Fae of Wishes" />
+    <alt key="049  /  269 " sub="ELD" name="Hypnotic Sprite" />
+    <alt key="053  /  269 " sub="ELD" name="Merfolk Secretkeeper" />
+    <alt key="061  /  269 " sub="ELD" name="Queen of Ice" />
+    <alt key="090  /  269 " sub="ELD" name="Foulmire Knight" />
+    <alt key="097  /  269 " sub="ELD" name="Murderous Rider" />
+    <alt key="099  /  269 " sub="ELD" name="Order of Midnight" />
+    <alt key="102  /  269 " sub="ELD" name="Reaper of Night" />
+    <alt key="105  /  269 " sub="ELD" name="Smitten Swordmaster" />
+    <alt key="115  /  269 " sub="ELD" name="Bonecrusher Giant" />
+    <alt key="122  /  269 " sub="ELD" name="Embereth Shieldbreaker" />
+    <alt key="131  /  269 " sub="ELD" name="Merchant of the Vale" />
+    <alt key="137  /  269 " sub="ELD" name="Rimrock Knight" />
+    <alt key="149  /  269 " sub="ELD" name="Beanstalk Giant" />
+    <alt key="150  /  269 " sub="ELD" name="Curious Pair" />
+    <alt key="155  /  269 " sub="ELD" name="Flaxen Intruder" />
+    <alt key="156  /  269 " sub="ELD" name="Garenbrig Carver" />
+    <alt key="165  /  269 " sub="ELD" name="Lovestruck Beast" />
+    <alt key="174  /  269 " sub="ELD" name="Rosethorn Acolyte" />
+    <alt key="180  /  269 " sub="ELD" name="Tuinvale Treefolk" />
+    <alt key="212  /  269 " sub="ELD" name="Oakhame Ranger" />
   </add>
   <replace>
     <!-- 誤字修正 -->

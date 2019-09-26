@@ -272,8 +272,22 @@ namespace Mojp
 
                     // アルティメットマスターズのフルアート版はカード名で探せないので、カード番号で区別する
                     // HACK: U01 / 40 みたいな文字が他に出ない前提。念のために UMA のセット記号を確認するかどうか
-                    if (App.Cards.TryGetValue(cardName, out card))
+                    if (ViewCardDirectly(cardName))
+                        return true;
+                }
+
+                // 代替テキストによる検索
+                if (App.AltCards.TryGetValue(value, out var alt) && ContainsText(alt.SubKey))
+                {
+                    Debug.WriteLine(value + " " + alt.SubKey + " => " + alt.CardName);
+
+                    if (App.Cards.TryGetValue(alt.CardName, out card))
                     {
+                        if (alt.SubKey == "ELD" && IsAdventure())
+                        {
+                            if (ViewCardDirectly(card.RelatedCardName))
+                                return true;
+                        }
                         ViewModel.InvokeSetCard(card);
                         return true;
                     }
@@ -296,11 +310,8 @@ namespace Mojp
                     value = value.Substring(triggerPrefix.Length);
                     Debug.WriteLine(value);
 
-                    if (App.Cards.TryGetValue(value, out card))
-                    {
-                        ViewModel.InvokeSetCard(card);
+                    if (ViewCardDirectly(value))
                         return true;
-                    }
                 }
 
                 // 紋章
@@ -319,6 +330,16 @@ namespace Mojp
                     return true;
                 }
                 return false;
+
+                bool ViewCardDirectly(string name)
+                {
+                    if (App.Cards.TryGetValue(name, out var card2))
+                    {
+                        ViewModel.InvokeSetCard(card2);
+                        return true;
+                    }
+                    return false;
+                }
             }
 
             /// <summary>
@@ -430,6 +451,26 @@ namespace Mojp
                     }
                 }
                 return false;
+            }
+
+            /// <summary>
+            /// Automation ID が CardType の値を調べて、出来事かどうかをチェックする
+            /// </summary>
+            private bool IsAdventure()
+            {
+                AutomationElement element = null;
+                try
+                {
+                    using (cacheReq.Activate())
+                    {
+                        element = previewWnd?.FindFirst(TreeScope.Descendants, cardTypeCondition);
+                    }
+                }
+                catch { Debug.WriteLine("CardType 要素の取得に失敗しました。"); }
+
+                string cardType = GetNamePropertyValue(element);
+
+                return cardType != null && (cardType.EndsWith("Adventure") || cardType.Contains("Adventure"));
             }
 
             /// <summary>

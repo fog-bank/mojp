@@ -599,6 +599,21 @@ namespace Mojp
                     Debug.WriteLine("リンク情報の追加先となる " + name + " のカード情報がありません。");
             }
 
+            // 代替テキスト検索を追加
+            App.AltCards.Clear();
+
+            foreach (var node in doc.Root.Element("add").Elements("alt"))
+            {
+                string key = (string)node.Attribute("key");
+                string sub = (string)node.Attribute("sub");
+                string name = (string)node.Attribute("name");
+
+                if (!cards.ContainsKey(name))
+                    Debug.WriteLine("代替テキスト (" + key + " " + sub + ") の参照先となる " + name + " のカード情報がありません。");
+
+                App.AltCards.Add(key, new AltCard(sub, name));
+            }
+
             // カードデータの差し替え
             var beforeNodes = new XElement("cards");
             var replacedNodes = new XElement("replace");
