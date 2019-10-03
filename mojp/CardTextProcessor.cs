@@ -374,16 +374,7 @@ namespace Mojp
 
                 // カードの区切りを認識
                 if (string.IsNullOrWhiteSpace(line))
-                {
-                    emptyLines++;
                     continue;
-                }
-                else if (emptyLines > 0)
-                {
-                    // 空白行が入ったので別のカード
-                    emptyLines = 0;
-                    prevCard = null;
-                }
 
                 // Lv 系カードかどうかチェック
                 if (line.StartsWith("Ｌｖアップ"))
@@ -456,7 +447,11 @@ namespace Mojp
                         case "　色指標":
                         case "イラスト":
                         case "　セット":
+                            break;
+
                         case "　稀少度":
+                            // 稀少度が各カードの最後の情報
+                            prevCard = null;
                             break;
 
                         default:
