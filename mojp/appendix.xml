@@ -52,10 +52,32 @@ III ― タップ状態の各クリーチャーはそれぞれ、自身にそれ
     <card name="Staggering Insight" jaName="圧倒的洞察" type="エンチャント ― オーラ">エンチャント（クリーチャー）
 エンチャントしているクリーチャーは+1/+1の修整を受け、絆魂と「このクリーチャーがプレイヤー１人に戦闘ダメージを与えるたび、カードを１枚引く。」を持つ。</card>
 
+    <card name="Elspeth, Undaunted Hero" jaName="不屈の英雄、エルズペス" type="伝説のプレインズウォーカー ― エルズペス" pt="5" related="Sunlit Hoplite">[+2]：クリーチャー最大２体を対象とし、それらの上に+1/+1カウンターをそれぞれ１個置く。
+[-2]：あなたのライブラリーや墓地から、《栄光の重装歩兵》という名前のカード１枚を探し、戦場に出す。これによりあなたがあなたのライブラリーからカードを探したなら、あなたのライブラリーを切り直す。
+[-8]：ターン終了時まで、あなたがコントロールしているクリーチャーは飛行を得て+X/+Xの修整を受ける。Ｘはあなたの白への信心に等しい。</card>
+    <card name="Grasping Giant" jaName="わしづかみの巨人" type="クリーチャー ― 巨人" pt="5/7">警戒
+わしづかみの巨人がクリーチャー１体にブロックされた状態になるたび、わしづかみの巨人が戦場を離れるまでそのクリーチャーを追放する。</card>
+    <card name="Victory's Envoy" jaName="勝利の特使" type="クリーチャー ― 人間・クレリック" pt="3/3">あなたのアップキープの開始時に、他の、あなたがコントロールしている各クリーチャーの上に+1/+1カウンターをそれぞれ１個置く。</card>
+    <card name="Sphinx Mindbreaker" jaName="スフィンクスの精神壊し" type="クリーチャー ― スフィンクス" pt="6/6">飛行
+スフィンクスの精神壊しが戦場に出たとき、各対戦相手はそれぞれ自分のライブラリーの一番上からカードを１０枚自分の墓地に置く。</card>
+    <card name="Serpent of Yawning Depths" jaName="最深淵の海蛇" type="クリーチャー・エンチャント ― 海蛇" pt="6/6">あなたがコントロールしているクラーケンやリバイアサンやタコや海蛇は、クラーケンやリバイアサンやタコや海蛇によってしかブロックされない。</card>
+    <card name="Demon of Loathing" jaName="嫌悪の悪魔" type="クリーチャー ― デーモン" pt="7/7">飛行、トランプル
+嫌悪の悪魔がプレイヤー１人に戦闘ダメージを与えるたび、そのプレイヤーはクリーチャー１体を生け贄に捧げる。</card>
+    <card name="Underworld Sentinel" jaName="死の国の衛兵" type="クリーチャー ― スケルトン・兵士" pt="4/5">死の国の衛兵が攻撃するたび、あなたの墓地からクリーチャー・カード１枚を対象とし、それを追放する。
+死の国の衛兵が死亡したとき、これによって追放されたカードをすべて戦場に出す。</card>
+    <card name="Deathbellow War Cry" jaName="死呻きの鬨の声" type="ソーサリー">あなたのライブラリーから名前の異なるミノタウルス・クリーチャー・カード最大４枚を探し、戦場に出し、その後あなたのライブラリーを切り直す。</card>
+    <card name="Terror of Mount Velus" jaName="ヴェリュス山の恐怖" type="クリーチャー ― ドラゴン" pt="5/5">飛行、二段攻撃
+ヴェリュス山の恐怖が戦場に出たとき、ターン終了時まで、あなたがコントロールしているクリーチャーは二段攻撃を得る。</card>
+    <card name="Ironscale Hydra" jaName="鉄鱗のハイドラ" type="クリーチャー ― ハイドラ" pt="5/5">クリーチャー１体が鉄鱗のハイドラに戦闘ダメージを与えるなら、そのダメージを軽減し、鉄鱗のハイドラの上に+1/+1カウンターを１個置く。</card>
+    <card name="Treeshaker Chimera" jaName="大樹揺らしのキマイラ" type="クリーチャー ― キマイラ" pt="8/5">大樹揺らしのキマイラをブロックできるクリーチャーはすべて、これをブロックする。
+大樹揺らしのキマイラが死亡したとき、カードを３枚引く。</card>
     <card name="Athreos, Shroud-Veiled" jaName="埋葬布を纏う者、エイスリオス" type="伝説のクリーチャー・エンチャント ― 神" pt="4/7">破壊不能
 あなたの白と黒への信心が７未満であるかぎり、埋葬布を纏う者、エイスリオスはクリーチャーではない。
 あなたの終了ステップの開始時に、他のクリーチャー１体を対象とし、それの上に硬貨カウンターを１個置く。
 硬貨カウンターが置かれているクリーチャー１体が死亡するか追放領域に置かれるたび、そのカードをあなたのコントロール下で戦場に戻す。</card>
+    <card name="Ashiok, Sculptor of Fears" jaName="恐怖を彫る者、アショク" type="伝説のプレインズウォーカー ― アショク" pt="4">[+2]：カードを１枚引く。各プレイヤーは、自分のライブラリーの一番上からカードを２枚自分の墓地に置く。
+[-5]：墓地からクリーチャー・カード１枚を対象とし、それをあなたのコントロール下で戦場に出す。
+[-11]：対戦相手１人を対象とし、そのプレイヤーがコントロールしているクリーチャーすべてのコントロールを得る。</card>
     <!-- クリーチャーでないトークン -->
     <card name="Clue" jaName="手掛かり" type="トークン・アーティファクト ― 手掛かり" wikilink="手掛かり">(２),このアーティファクトを生け贄に捧げる：カードを１枚引く。</card>
     <card name="Etherium Cell" jaName="エーテリウム電池" type="トークン・アーティファクト" wikilink="策謀家テゼレット/Tezzeret the Schemer">(Ｔ),このアーティファクトを生け贄に捧げる：好きな色１色のマナ１点を加える。</card>
@@ -666,6 +688,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <related name="Ethereal Elk" related="Vivien, Nature's Avenger" />
     <related name="Rowan's Stalwarts" related="Rowan, Fearless Sparkmage" />
     <related name="Oko's Hospitality" related="Oko, the Trickster" />
+    <related name="Elspeth, Undaunted Hero" related="Sunlit Hoplite" />
     <!-- 関連カード (共闘) -->
     <related name="Regna, the Redeemer" related="Krav, the Unredeemed" />
     <related name="Krav, the Unredeemed" related="Regna, the Redeemer" />
