@@ -1474,9 +1474,6 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="212  /  269 " sub="ELD" name="Oakhame Ranger" />
     <alt key="Instant — Adventure" sub="PRM" name="プロモ版の当事者カード" />
     <alt key="Sorcery — Adventure" sub="PRM" name="プロモ版の当事者カード" />
-    <!-- 次期エキスパンション -->
-    <!--<alt key="IKO" sub="  •  EN" name="未対応のカード" />
-    <alt key="IKO" sub=" ★ EN" name="未対応のカード" />-->
   </add>
   <replace>
     <!-- 誤字修正 -->
