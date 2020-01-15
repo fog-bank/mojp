@@ -682,7 +682,6 @@ IV ― 金・トークンを１つ生成する。</card>
     <card name="Monk" jaName="モンク" type="トークン・クリーチャー ― モンク" pt="1/1" wikilink="僧院の導師/Monastery Mentor">果敢</card>
     <card name="Monkey" jaName="猿" type="トークン・クリーチャー ― 猿" pt="2/2" wikilink="猿の檻/Monkey Cage"></card>
     <card name="Morph" jaName="変異" type="クリーチャー" pt="2/2" wikilink="変異">（変異を持つカードは、それの変異コストを支払うことで、いつでも表向きにしてよい。）</card>
-    <card name="Nightmare" jaName="ナイトメア" type="トークン・クリーチャー ― ナイトメア" pt="2/3" wikilink="悪夢の詩神、アショク/Ashiok, Nightmare Muse">このクリーチャーが攻撃するかブロックするたび、各対戦相手はそれぞれ自分のライブラリーの一番上からカードを２枚追放する。</card>
     <card name="Nightmare Horror" jaName="ナイトメア・ホラー" type="トークン・クリーチャー ― ナイトメア・ホラー" pt="*/*" wikilink="チェイナーの苦悩/Chainer's Torment"></card>
     <card name="Octopus" jaName="タコ" type="トークン・クリーチャー ― タコ" pt="8/8"></card>
     <card name="Ox" jaName="雄牛" type="トークン・クリーチャー ― 雄牛" pt="2/4" wikilink="異形化するワンド/Transmogrifying Wand"></card>
@@ -1511,6 +1510,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="トークンを１体を" value="トークン１体を" nodebug="true" />
     <regex target="text" pattern="を１つをタップする" value="１つをタップする" nodebug="true" />
     <regex target="text" pattern="１つにき" value="１つにつき" nodebug="true" />
+    <regex target="text" pattern="唱えらえ" value="唱えられ" />
     <regex target="text" pattern="「金/Gold」という名前の" value="《金/Gold》という名前の" nodebug="true" />
     <regex target="text" pattern="の上に(?=\+1/\+1カウンターが.個未満であった)" value="の上にある" nodebug="true" />
     <regex target="text" pattern="この呪文死より得るもの" value="この呪文" nodebug="true" />
@@ -1527,7 +1527,6 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="コントール" value="コントロール" nodebug="true" />
     <regex target="text" pattern="そうでないなあ" value="そうでないなら" nodebug="true" />
     <regex target="text" pattern="あんた" value="あなた" />
-    <regex target="text" pattern="唱えらえ" value="唱えられ" />
     <regex target="text" pattern="与えらえる" value="与えられる" />
     <regex target="type|text" pattern="ミノタウロス" value="ミノタウルス" />
     <regex target="type|text" pattern="サチュロス" value="サテュロス" />
