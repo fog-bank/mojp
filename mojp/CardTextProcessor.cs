@@ -365,7 +365,6 @@ namespace Mojp
             var card = new Card();
             var texts = new List<string>();
             bool lvCard = false;
-            int emptyLines = 0;
             Card prevCard = null;
 
             while (!sr.EndOfStream)
