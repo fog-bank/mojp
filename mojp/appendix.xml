@@ -4164,6 +4164,23 @@ IV ― 各プレイヤーのライブラリーの一番上のカードを見る�
     <card name="Widget Contraption" />
     <card name="Secret Base" />
     <card name="Watermarket" />
+    <!-- Unsanctioned (16 of 96 cards) -->
+    <card name="Flavor Judge" />
+    <card name="Strutting Turkey" />
+    <card name="Syr Cadian, Knight Owl" />
+    <card name="Alexander Clamilton" />
+    <card name="B.O.B. (Bevy of Beebles)" />
+    <card name="Rings a Bell" />
+    <card name="Acornelia, Fashionable Filcher" />
+    <card name="Bat-" />
+    <card name="Infernius Spawnington III, Esq." />
+    <card name="Abstract Iguanart" />
+    <card name="Boomstacker" />
+    <card name="Stet, Draconic Proofreader" />
+    <card name="Pippa, Duchess of Dice" />
+    <card name="Spirit of the Season" />
+    <card name="Surgeon General Commander" />
+    <card name="Underdome" />
     <!-- アストラルセットなど -->
     <card name="1996 World Champion" />
     <card name="Arden Angel" />
