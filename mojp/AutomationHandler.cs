@@ -15,6 +15,7 @@ namespace Mojp
         /// </summary>
         private class AutomationHandler
         {
+            private const string PromoCollectorNumber = "0000 / 1158 ";
             private Process mtgoProc;
             private AutomationElement previewWnd;
             private CacheRequest eventCacheReq = new CacheRequest();
@@ -141,19 +142,31 @@ namespace Mojp
             public void SearchCardName()
             {
                 bool isToken = false;
+                bool isPromo = false;
 
                 foreach (string value in IterateTextBlocks())
                 {
                     if (TryFetchCard(value))
                         return;
 
+                    if (!isPromo && value == PromoCollectorNumber)
+                        isPromo = true;
+
                     if (!isToken && value.StartsWith("Token"))
                         isToken = true;
                 }
 
-                // 一通り探して、カード名が見つからず、トークンであることが分かった場合
-                if (isToken)
+                // 一通り探して、カード名が見つからず、プロモやトークンであることが分かった場合
+                if (isPromo && App.Cards.TryGetValue("プロモ版のカード", out var prm))
+                {
+                    ViewModel.InvokeSetCard(prm);
+                }
+                else if (isToken)
+                {
                     ViewModel.InvokeSetMessage("トークン");
+                }
+                else
+                    ViewModel.InvokeSetMessage("未対応のカード");
             }
 
             /// <summary>
@@ -205,7 +218,8 @@ namespace Mojp
                     return;
 
                 // コピートークンでない普通のトークンである可能性があるので、全体走査する
-                if (name.StartsWith("Token"))
+                // プロモ版を示唆するコレクター番号の場合も全体走査
+                if (name.StartsWith("Token") || name == PromoCollectorNumber)
                     SearchCardName();
             }
 
@@ -237,19 +251,6 @@ namespace Mojp
                     Debug.WriteLine("[FindAll] " + name.Replace(Environment.NewLine, "\\n"));
                     yield return name;
                 }
-            }
-
-            /// <summary>
-            /// 指定したテキストが Preview Pane に含まれているどうかを調べます。
-            /// </summary>
-            private bool ContainsText(string text)
-            {
-                foreach (string value in IterateTextBlocks())
-                {
-                    if (value == text)
-                        return true;
-                }
-                return false;
             }
 
             /// <summary>
@@ -405,6 +406,19 @@ namespace Mojp
 
                 // ふつうのカード
                 ViewModel.InvokeSetCard(card);
+            }
+
+            /// <summary>
+            /// 指定したテキストが Preview Pane に含まれているどうかを調べます。
+            /// </summary>
+            private bool ContainsText(string text)
+            {
+                foreach (string value in IterateTextBlocks())
+                {
+                    if (value == text)
+                        return true;
+                }
+                return false;
             }
 
             /// <summary>

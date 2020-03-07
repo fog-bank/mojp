@@ -8,7 +8,7 @@
     <card name="The Monarch" jaName="統治者" type="" wikilink="統治者">あなたの終了ステップの開始時に、あなたはカードを１枚引く。
 クリーチャーが１体あなたに戦闘ダメージを与えるたび、それのコントローラーが統治者になる。</card>
     <card name="City's Blessing" jaName="都市の承認" type="" wikilink="昇殿"></card>
-    <card name="プロモ版の当事者カード" jaName="プロモ版の当事者カード" type="" wikilink="当事者カード">これは、プロモ版の当事者カードであるとみられますが、カード名を判別できないため、カードテキストを表示できません。ご不便をおかけして申し訳ありません。</card>
+    <card name="プロモ版のカード" jaName="プロモ版のカード" type="" wikilink="">これはプロモ版のカードですが、UI テキストからカード名を判別できないため、カードテキストを表示できません。ご不便をおかけして申し訳ありません。</card>
     <!-- クリーチャーでないトークン -->
     <card name="Clue" jaName="手掛かり" type="トークン・アーティファクト ― 手掛かり" wikilink="手掛かり">(２),このアーティファクトを生け贄に捧げる：カードを１枚引く。</card>
     <card name="Etherium Cell" jaName="エーテリウム電池" type="トークン・アーティファクト" wikilink="策謀家テゼレット/Tezzeret the Schemer">(Ｔ),このアーティファクトを生け贄に捧げる：好きな色１色のマナ１点を加える。</card>
@@ -917,8 +917,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="174  /  269 " sub="ELD" name="Rosethorn Acolyte" />
     <alt key="180  /  269 " sub="ELD" name="Tuinvale Treefolk" />
     <alt key="212  /  269 " sub="ELD" name="Oakhame Ranger" />
-    <alt key="Instant — Adventure" sub="PRM" name="プロモ版の当事者カード" />
-    <alt key="Sorcery — Adventure" sub="PRM" name="プロモ版の当事者カード" />
+    <!--<alt key="0000 / 1158 " sub="P " name="プロモ版のカード" />-->
   </add>
   <replace>
     <!-- 誤字修正 -->
