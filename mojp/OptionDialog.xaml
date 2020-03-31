@@ -198,7 +198,7 @@
                 <CheckBox Grid.Row="3" IsChecked="{Binding GetPDList}" ToolTipService.ShowDuration="60000">
                     <CheckBox.ToolTip>
                         <TextBlock Margin="0">
-                            新セット発売時の相場が 0.01 チケット (tix) 以下のカードだけが使えるフォーマットです。<LineBreak />
+                            新セット発売時の相場が 0.02 チケット (tix) 以下のカードだけが使えるフォーマットです。<LineBreak />
                             使用可能なカードのリストを 1 日 1 回取得します。
                         </TextBlock>
                     </CheckBox.ToolTip>
