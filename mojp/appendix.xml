@@ -665,6 +665,7 @@
     <!-- クリーチャーでないトークン -->
     <card name="Clue" jaName="手掛かり" type="トークン・アーティファクト ― 手掛かり" wikilink="手掛かり">(２),このアーティファクトを生け贄に捧げる：カードを１枚引く。</card>
     <card name="Etherium Cell" jaName="エーテリウム電池" type="トークン・アーティファクト" wikilink="策謀家テゼレット/Tezzeret the Schemer">(Ｔ),このアーティファクトを生け贄に捧げる：好きな色１色のマナ１点を加える。</card>
+    <card name="Feather" jaName="羽根" type="トークン・アーティファクト" wikilink="永遠羽のフェニックス/Everquill Phoenix">(１),羽根を生け贄に捧げる：あなたの墓地からフェニックス・カード１枚を対象とし、それをタップ状態で戦場に戻す。</card>
     <card name="Food" jaName="食物" type="トークン・アーティファクト ― 食物" wikilink="食物">(２),(Ｔ),このアーティファクトを生け贄に捧げる：あなたは３点のライフを得る。</card>
     <card name="Gold" jaName="金" type="トークン・アーティファクト ― 金" wikilink="金">このアーティファクトを生け贄に捧げる：好きな色１色のマナ１点を加える。</card>
     <card name="Land Mine" jaName="地雷" type="トークン・アーティファクト" wikilink="ゴブリンのドカーン物取扱者/Goblin Kaboomist">(赤),このアーティファクトを生け贄に捧げる：飛行を持たない攻撃クリーチャー１体を対象とする。このアーティファクトはそれに２点のダメージを与える。</card>
@@ -728,11 +729,14 @@
     <card name="Ape" jaName="類人猿" type="トークン・クリーチャー ― 類人猿" pt="3/3" wikilink="猿術/Pongify"></card>
     <card name="Bird Illusion" jaName="鳥・イリュージョン" type="トークン・クリーチャー ― 鳥・イリュージョン" pt="1/1" wikilink="つぶやく神秘家/Murmuring Mystic">飛行</card>
     <card name="Bird Soldier" jaName="鳥・兵士" type="トークン・クリーチャー ― 鳥・兵士" pt="1/1" wikilink="翼の疾風/Flurry of Wings">飛行</card>
+    <card name="Cat Bird" jaName="猫・鳥" type="トークン・クリーチャー ― 猫・鳥" pt="1/1" wikilink="空猫の君主/Skycat Sovereign">飛行</card>
     <card name="Cat Dragon" jaName="猫・ドラゴン" type="トークン・クリーチャー ― 猫・ドラゴン" pt="3/3" wikilink="ネコルーの女王、ワシトラ/Wasitora, Nekoru Queen">飛行</card>
     <card name="Cat Soldier" jaName="猫・兵士" type="トークン・クリーチャー ― 猫・兵士" pt="1/1">警戒</card>
     <card name="Cat Warrior" jaName="猫・戦士" type="トークン・クリーチャー ― 猫・戦士" pt="2/2">森渡り（このクリーチャーは、防御プレイヤーが森をコントロールしているかぎりブロックされない。）</card>
     <card name="Devil" jaName="デビル" type="トークン・クリーチャー ― デビル" pt="1/1">このクリーチャーが死亡したとき、クリーチャー１体かプレインズウォーカー１体かプレイヤー１人を対象とする。これはそれに１点のダメージを与える。</card>
     <card name="Dinosaur" jaName="恐竜" type="トークン・クリーチャー ― 恐竜" pt="3/3">トランプル（このクリーチャーは余剰の戦闘ダメージをこれが攻撃しているプレイヤーかプレインズウォーカーに与えることができる。）</card>
+    <card name="Dinosaur Beast" jaName="恐竜・ビースト" type="トークン・クリーチャー ― 恐竜・ビースト" pt="*/*">トランプル</card>
+    <card name="Dinosaur Cat" jaName="恐竜・猫" type="トークン・クリーチャー ― 恐竜・猫" pt="2/2"></card>
     <card name="Djinn" jaName="ジン" type="トークン・アーティファクト・クリーチャー ― ジン" pt="5/5" wikilink="スレイマンの壺/Bottle of Suleiman">飛行</card>
     <card name="Djinn Monk" jaName="ジン・モンク" type="トークン・クリーチャー ― ジン・モンク" pt="2/2">飛行</card>
     <card name="Dragon Spirit" jaName="ドラゴン・スピリット" type="トークン・クリーチャー ― ドラゴン・スピリット" pt="5/5" wikilink="龍の牙、辰正/Tatsumasa, the Dragon's Fang">飛行</card>
@@ -785,6 +789,7 @@
     <card name="Pest" jaName="邪魔者" type="トークン・アーティファクト・クリーチャー ― 邪魔者" pt="0/1" wikilink="迷惑エンジン/Nuisance Engine"></card>
     <card name="Pirate" jaName="海賊" type="トークン・クリーチャー ― 海賊" pt="2/2">威迫（このクリーチャーは２体以上のクリーチャーによってしかブロックされない。）</card>
     <card name="Rhino" jaName="サイ" type="トークン・クリーチャー ― サイ" pt="4/4">トランプル</card>
+    <card name="Shark" jaName="サメ" type="トークン・クリーチャー ― サメ" pt="*/*" wikilink="サメ台風/Shark Typhoon">飛行</card>
     <card name="Sheep" jaName="羊" type="トークン・クリーチャー ― 羊" pt="0/1" wikilink="羊術師/Ovinomancer"></card>
     <card name="Skeleton" jaName="スケルトン" type="トークン・クリーチャー ― スケルトン" pt="1/1">(黒)：このクリーチャーを再生する。</card>
     <card name="Sliver" jaName="スリヴァー" type="トークン・クリーチャー ― スリヴァー" pt="1/1"></card>
