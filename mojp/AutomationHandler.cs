@@ -393,19 +393,52 @@ namespace Mojp
                         }
                         return;
                     }
+                }
 
-                    // 一部の Lv カードで、キーワード能力と同名のカードの名前が検出される問題や、
-                    // ウギンの運命プロモカードで Catch+Release が表示されてしまう問題を回避
-                    if ((card.Name == "Lifelink" && ContainsText("Transcendent Master")) ||
-                        (card.Name == "Vigilance" && ContainsText("Ikiral Outrider")) ||
-                        (card.Name == "Release" && IsUginFatePromo()))
-                    {
-                        return;
-                    }
+                switch (card.Name)
+                {
+                    case "Flash":
+                    case "Lifelink":
+                    case "Release":
+                    case "Vigilance":
+                        if (IsKeywordText(card.Name))
+                            return;
+                        break;
                 }
 
                 // ふつうのカード
                 ViewModel.InvokeSetCard(card);
+
+                // 一部の Lv カードや変容カードで、キーワード能力と同名のカードの名前が検出される問題や、
+                // ウギンの運命プロモカードで Catch+Release が表示されてしまう問題を回避
+                bool IsKeywordText(string cardName)
+                {
+                    switch (cardName)
+                    {
+                        case "Flash":
+                            return ContainsText("IKO");
+
+                        case "Lifelink":
+                            foreach (string text in IterateTextBlocks())
+                            {
+                                if (text == "Transcendent Master" || text == "IKO")
+                                    return true;
+                            }
+                            break;
+
+                        case "Release":
+                            return IsUginFatePromo();
+
+                        case "Vigilance":
+                            foreach (string text in IterateTextBlocks())
+                            {
+                                if (text == "Ikiral Outrider" || text == "IKO")
+                                    return true;
+                            }
+                            break;
+                    }
+                    return false;
+                }
             }
 
             /// <summary>
