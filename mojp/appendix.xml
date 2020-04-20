@@ -988,7 +988,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="(?&lt;!に)よって" value="によって" nodebug="true" />
     <regex target="text" pattern="ときのみ唱えられる" value="ときにのみ唱えられる" nodebug="true" />
     <regex target="text" pattern="プレインズウォーカー１人" value="プレインズウォーカー１体" nodebug="true" />
-    <regex target="text" pattern="コントール" value="コントロール" />
+    <regex target="text" pattern="コントール" value="コントロール" nodebug="true" />
     <regex target="jaName|text" pattern="パルヘリオン\?" value="パルヘリオンⅡ" nodebug="true" />
     <regex target="text" pattern="していている" value="している" nodebug="true" />
     <regex target="text" pattern="あなたあなたの手札から" value="あなたはあなたの手札から" nodebug="true" />
@@ -1043,6 +1043,8 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="(?&lt;=(?&lt;!か)プレイヤー１人かプレインズウォーカー１体を対象とする。[^。]+)そのプレイヤー(?!か|がコントロール)" value="それ" nodebug="true" />
     <regex target="text" pattern="を得ることを除き" value="を持つことを除き" nodebug="true" />
     <regex target="text" pattern="、自分の墓地と手札" value="、自分の手札と墓地" nodebug="true" />
+    <regex target="text" pattern="能力(?:を起動するためのコストのマナの総量を１マナより少なくすることは|の起動コストのマナの点数を１点未満に減らせ)ない" value="そのコストに含まれるマナの点数を１点未満に減らせない" nodebug="true" />
+    <regex target="text" pattern="(?&lt;=(?:強襲|会戦).+あなたが)クリーチャーで(?=攻撃し)" value="" nodebug="true" />
     <!-- 中丸追加 -->
     <regex target="type" pattern="部族(?=アーティファクト|エンチャント|インスタント|ソーサリー)" value="部族・" nodebug="true" />
     <regex target="text" pattern="(?&lt;=クリーチャー|アーティファクト|エンチャント|インスタント|ソーサリー|プレインズウォーカー|土地|パーマネント)(?=カード|呪文)" value="・" nodebug="true" />
@@ -1502,10 +1504,7 @@ Lv8+：
 あなたが食物を１つ生け贄に捧げるたび、あなたは(１)を支払ってもよい。そうしたなら、あなたのライブラリーの一番上からカードを２枚見る。あなたはその中からパーマネント・カード１枚を公開してあなたの手札に加えてもよい。残りをあなたのライブラリーの一番下に望む順番で置く。</card>
     <!-- テキストが正常でないカード (ELD Brawl) -->
     <card name="Embereth Skyblazer" jaName="エンバレスの空焼き" type="クリーチャー ― 人間・騎士" pt="4/3">あなたのターンであるかぎり、エンバレスの空焼きは飛行を持つ。
-エンバレスの空焼きが攻撃するたび、あなたは(２)(赤)を支払ってもよい。そうしたなら、ターン終了時まで、あなたがコントロールしているクリーチャーは+X/+0の修整を受ける。Ｘは対戦相手の人数に等しい。</card> 
-    <card name="Mace of the Valiant" jaName="勇敢な者の鎚鉾" type="アーティファクト ― 装備品">装備しているクリーチャーは、勇敢な者の鎚鉾の上に置かれている蓄積カウンター１個につき+1/+1の修整を受け、警戒を持つ。
-クリーチャーが１体あなたのコントロール下で戦場に出るたび、勇敢な者の鎚鉾の上に蓄積カウンターを１個置く。
-装備(３)</card>
+エンバレスの空焼きが攻撃するたび、あなたは(２)(赤)を支払ってもよい。そうしたなら、ターン終了時まで、あなたがコントロールしているクリーチャーは+X/+0の修整を受ける。Ｘは対戦相手の人数に等しい。</card>
     <!-- テキストが正常でないカード：コストと対象を必要とする誘発型能力 -->
     <card name="Goblin Vandal" jaName="蛮行ゴブリン" type="クリーチャー ― ゴブリン・ならず者" pt="1/1">蛮行ゴブリンが攻撃してブロックされないたび、防御プレイヤーがコントロールしているアーティファクト１つを対象とする。あなたは(赤)を支払ってもよい。そうしたなら、それを破壊し、このターン、蛮行ゴブリンは戦闘ダメージを割り振らない。</card>
     <card name="Hematite Talisman" jaName="Hematite Talisman" type="アーティファクト">プレイヤーが赤の呪文を唱えるたび、パーマネント１つを対象とする。あなたは(３)を支払ってもよい。そうしたなら、それをアンタップする。</card>
@@ -1718,6 +1717,19 @@ Venarian Goldが戦場に出たとき、エンチャントしているクリー�
 エンチャントしているクリーチャーのコントローラーのアップキープの開始時に、そのクリーチャーの上から睡眠カウンターを１個取り除く。</card>
     <card name="City in a Bottle" jaName="City in a Bottle" type="アーティファクト">他の、Arabian Nightsエキスパンションで最初に印刷された名前を持ちトークンでないパーマネントが１つ以上戦場にあるたび、それらのコントローラーはそれらを生け贄に捧げる。
 プレイヤーは、Arabian Nightsエキスパンションで最初に印刷された名前を持つ呪文を唱えられず、Arabian Nightsエキスパンションで最初に印刷された名前を持つ土地をプレイできない。</card>
+    <!-- 最新オラクル未対応 (IKO) -->
+    <card name="Stand or Fall" jaName="立つか転ぶか" type="エンチャント">あなたのターンの戦闘の開始時に、各防御プレイヤーにつきそれぞれ、そのプレイヤーがコントロールしているすべてのクリーチャーを２つの束に分け、そのプレイヤーは束１つを選ぶ。このターン、その選ばれた束のクリーチャーでしかブロックできない。</card>
+    <!-- 最新オラクル未対応 (IKO)：手札以外の領域から唱える・プレイする効果 -->
+    <card name="Garruk's Horde" jaName="ガラクの大軍" type="クリーチャー ― ビースト" pt="7/7">トランプル
+あなたのライブラリーの一番上のカードを公開したままプレイする。
+あなたはあなたのライブラリーの一番上からクリーチャー・呪文を唱えてもよい。（これはあなたがそのクリーチャー・呪文を唱えることができるときにのみ行う。あなたはその呪文のコストを支払う必要がある。）</card>
+    <card name="Oracle of Mul Daya" jaName="ムル・ダヤの巫女" type="クリーチャー ― エルフ・シャーマン" pt="2/2">あなたは、あなたの各ターンに追加の土地を１つプレイしてもよい。
+あなたのライブラリーの一番上のカードを公開したままプレイする。
+あなたはあなたのライブラリーの一番上から土地をプレイしてもよい。</card>
+    <!-- 最新オラクル未対応 (IKO)：クリーチャーで攻撃 -->
+    <card name="Chart a Course" jaName="航路の作成" type="ソーサリー">カードを２枚引く。その後、このターンにあなたが攻撃していないかぎり、カード１枚を捨てる。</card>
+    <card name="Custodi Soulcaller" jaName="カストーディの魂呼び" type="クリーチャー ― 人間・クレリック" pt="1/2">会戦（このクリーチャーが攻撃するたび、ターン終了時まで、これはこの戦闘であなたが攻撃した対戦相手１人につきそれぞれ+1/+1の修整を受ける。）
+カストーディの魂呼びが攻撃するたび、あなたの墓地から点数で見たマナ・コストがＸ以下のクリーチャー・カード１枚を対象とし、それを戦場に戻す。Ｘはこの戦闘であなたが攻撃したプレイヤーの総数に等しい。</card>
     <!-- テンプレートの変更 -->
     <card name="Cursed Rack" jaName="呪われた拷問台" type="アーティファクト">呪われた拷問台が戦場に出るに際し、対戦相手１人を選ぶ。
 選ばれたプレイヤーの手札の上限は４である。</card>
@@ -3771,6 +3783,13 @@ IV ― 各プレイヤーのライブラリーの一番上のカードを見る�
     <type name="Urza's Mine" type="土地 ― ウルザの・鉱山" />
     <type name="Urza's Power Plant" type="土地 ― ウルザの・魔力炉" />
     <type name="Urza's Tower" type="土地 ― ウルザの・塔" />
+    <!-- オラクル更新 (IKO) -->
+    <type name="Battering Krasis" type="クリーチャー ― サメ・ビースト" />
+    <type name="Giant Shark" type="クリーチャー ― サメ" />
+    <type name="Hammerhead Shark" type="クリーチャー ― サメ" />
+    <type name="Shambleshark" type="クリーチャー ― サメ・カニ" />
+    <type name="Sharktocrab" type="クリーチャー ― サメ・タコ・カニ" />
+    <type name="Dryad of the Ilysian Grove" type="クリーチャー・エンチャント ― ニンフ・ドライアド" />
     <!-- 関連カード (合体) -->
     <related name="Bruna, the Fading Light" related="Gisela, the Broken Blade|Brisela, Voice of Nightmares" />
     <related name="Brisela, Voice of Nightmares" related="Gisela, the Broken Blade|Bruna, the Fading Light" />
