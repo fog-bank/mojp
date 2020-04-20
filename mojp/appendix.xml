@@ -933,8 +933,6 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="174  /  269 " sub="ELD" name="Rosethorn Acolyte" />
     <alt key="180  /  269 " sub="ELD" name="Tuinvale Treefolk" />
     <alt key="212  /  269 " sub="ELD" name="Oakhame Ranger" />
-    <!-- ルールス問題 -->
-    <alt key="Lurrus of the Dream Den" sub="IKO" name="Lurrus of the Dream-Den" />
     <!-- 変容 (IKO) -->
     <alt key="003  /  274 " sub="IKO" name="Mysterious Egg" />
     <alt key="007  /  274 " sub="IKO" name="Cubwarden" />
@@ -978,6 +976,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <!--<alt key="0000 / 1158 " sub="P " name="プロモ版のカード" />-->
   </add>
   <replace>
+    <regex target="name" pattern="Lurrus of the Dream-Den" value="Lurrus of the Dream Den" />
     <!-- 誤字修正 -->
     <regex target="text" pattern="切り直す」" value="切り直す。」" nodebug="true" />
     <regex target="text" pattern="\)\:" value=")：" nodebug="true" />
