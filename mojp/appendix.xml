@@ -969,10 +969,10 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="213  /  274 " sub="IKO" name="Trumpeting Gnarr" />
     <alt key="214  /  274 " sub="IKO" name="Vadrok, Apex of Thunder" />
     <!-- 変容 (C20) -->
-    <alt key="012  /  322 " sub="IKO" name="Otrimi, the Ever-Playful" />
-    <alt key="038  /  322 " sub="IKO" name="Souvenir Snatcher" />
-    <alt key="044  /  322 " sub="IKO" name="Mindleecher" />
-    <alt key="064  /  322 " sub="IKO" name="Sawtusk Demolisher" />
+    <alt key="012  /  322 " sub="C20" name="Otrimi, the Ever-Playful" />
+    <alt key="038  /  322 " sub="C20" name="Souvenir Snatcher" />
+    <alt key="044  /  322 " sub="C20" name="Mindleecher" />
+    <alt key="064  /  322 " sub="C20" name="Sawtusk Demolisher" />
     <!--<alt key="0000 / 1158 " sub="P " name="プロモ版のカード" />-->
   </add>
   <replace>
