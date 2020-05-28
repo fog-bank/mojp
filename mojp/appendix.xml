@@ -1087,6 +1087,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="追加でカードを(?=.枚引く)" value="カードを追加で" nodebug="true" />
     <regex target="text" pattern="無作為に対戦相手１人を選ぶ" value="対戦相手１人を無作為に選ぶ" nodebug="true" />
     <regex target="text" pattern="(?&lt;=なら|場合)、([^。]+)は代わりに(?=[１-９Ｘ]点のダメージ)" value="、代わりに$1は" nodebug="true" />
+    <regex target="text" pattern="あなたの墓地にいずれの領域からでもカードが置かれるなら" value="カードがいずれかの領域からあなたの墓地に置かれるなら" nodebug="true" />
     <!--<regex target="text" pattern="次のダメージを(?=[０-９Ｘ]+点軽減)" value="ダメージを次の" nodebug="true" />-->
     <!-- 順序変更：数字を前に移動 -->
     <regex target="text" pattern="(?&lt;!上から)カードを([０-９Ｘ]+)枚、?(?=探|選|捨て(?!るたび)|公開|追放|無作為に|戦場に)" value="カード$1枚を" nodebug="true" />
@@ -1095,6 +1096,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="クリーチャーを最大([０-９Ｘ]+)体(?:まで)?対象" value="クリーチャー最大$1体を対象" nodebug="true" />
     <regex target="text" pattern="(?&lt;!と|や)(アーティファクト|土地|沼|森|パーマネント|呪文)を最大([０-９Ｘ]+)つ(?:まで)?対象" value="$1最大$2つを対象" nodebug="true" />
     <regex target="text" pattern="土地を最大([０-９Ｘ]+)つ(?:まで)?アンタップ" value="土地最大$1つをアンタップ" nodebug="true" />
+    <regex target="text" pattern="(?&lt;=から(?:クリーチャー・)?)呪文を１つ(?=[^。]*唱えても)" value="呪文１つを" nodebug="true" />
     <regex target="text" pattern="(?&lt;=カード名|タイプ)を([０-９Ｘ]+)つ選" value="$1つを選" nodebug="true" />
     <regex target="text" pattern="色を(１|２)[色つ]選" value="色$1色を選" nodebug="true" />
     <regex target="text" pattern="(?&lt;=プレイヤー|対戦相手)を１人選ぶ。" value="１人を選ぶ。" nodebug="true" />
@@ -1262,6 +1264,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="次のアンタップ・ステップの間に" value="次のアンタップ・ステップに" nodebug="true" />
     <regex target="text" pattern="(?:各|１)ターンに１回(?:のみ|だけ)" value="毎ターン１回のみ" nodebug="true" />
     <regex target="text" pattern="しかプレイでき" value="しか起動でき" nodebug="true" />
+    <regex target="text" pattern="一番上のカードを公開した状態でプレイ" value="一番上のカードを公開したままプレイ" nodebug="true" />
     <regex target="text" pattern="(?:にのみ|にしか|だけしか)(?:支払|使|用いる)(?:うことができる|える|えない|ことができる)" value="にのみ使用できる" nodebug="true" />
     <regex target="text" pattern="(?&lt;=[白青黒赤緑]\))が使われた" value="が支払われていた" nodebug="true" />
     <regex target="text" pattern="(?m)(?&lt;=^|[・：。、])攻撃しているクリーチャー" value="攻撃クリーチャー" nodebug="true" />
@@ -1345,7 +1348,9 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="インスタント・カードとソーサリー・カードの総数" value="インスタントかソーサリーであるカードの総数" nodebug="true" />
     <regex target="text" pattern="(?&lt;!か)インスタント・呪文１つかソーサリー・呪文１つを対象" value="インスタントかソーサリーである呪文１つを対象" nodebug="true" />
     <regex target="text" pattern="インスタント・呪文(?:１つ)?かソーサリー・呪文(?:１つ)?を唱えるたび、" value="インスタントかソーサリーである呪文を唱えるたび、" nodebug="true" />
+    <regex target="text" pattern="からインスタント・呪文１つかソーサリー・呪文１つ" value="からインスタントかソーサリーである呪文１つ" nodebug="true" />
     <regex target="text" pattern="(?&lt;!する|の)インスタント・呪文かソーサリー・呪文" value="インスタントかソーサリーである呪文" nodebug="true" />
+    <regex target="text" pattern="からインスタント・呪文とソーサリー・呪文を唱えてもよい" value="からインスタントかソーサリーである呪文を唱えてもよい" nodebug="true" />
     <regex target="text" pattern="各インスタント・呪文[かと]各ソーサリー・呪文は" value="インスタントかソーサリーである各呪文は" nodebug="true" />
     <regex target="text" pattern="スピリット(・呪文)?(?:１つ)?か秘儀・呪文(?:１つ)?を唱えるたび、" value="スピリットか秘儀である呪文を唱えるたび、" nodebug="true" />
     <regex target="text" pattern="鳥・パーマネント・カードまたはクレリック・パーマネント・カード" value="鳥かクレリックであるパーマネント・カード" nodebug="true" />
@@ -1713,9 +1718,6 @@ Venarian Goldが戦場に出たとき、エンチャントしているクリー�
     <card name="Mystic Forge" jaName="神秘の炉" type="アーティファクト">あなたはいつでもあなたのライブラリーの一番上のカードを見てもよい。
 あなたはあなたのライブラリーの一番上からアーティファクト・呪文や無色の呪文を唱えてもよい。
 (Ｔ),１点のライフを支払う：あなたのライブラリーの一番上のカードを追放する。</card>
-    <card name="Oracle of Mul Daya" jaName="ムル・ダヤの巫女" type="クリーチャー ― エルフ・シャーマン" pt="2/2">あなたは、あなたの各ターンに追加の土地を１つプレイしてもよい。
-あなたのライブラリーの一番上のカードを公開したままプレイする。
-あなたはあなたのライブラリーの一番上から土地をプレイしてもよい。</card>
     <card name="Precognition Field" jaName="前知の場" type="エンチャント">あなたはいつでもあなたのライブラリーの一番上のカードを見てもよい。
 あなたはあなたのライブラリーの一番上からインスタントやソーサリーである呪文を唱えてもよい。
 (３)：あなたのライブラリーの一番上のカードを追放する。</card>
