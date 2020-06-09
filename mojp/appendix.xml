@@ -46,6 +46,97 @@
 (１)(青),波起こしを捨てる：あなたのライブラリーの一番上からカードを２枚見る。そのうち１枚をあなたの手札に、もう１枚をあなたの墓地に置く。</card>
     
     <card name="Bad Deal" jaName="悪い取引" type="ソーサリー">あなたはカードを２枚引き、各対戦相手はそれぞれカード２枚を捨てる。各プレイヤーはそれぞれ２点のライフを失う。</card>
+    <card name="Carrion Grub" jaName="屍肉地虫" type="クリーチャー ― 昆虫" pt="0/5">屍肉地虫は+X/+0の修整を受ける。Ｘはあなたの墓地にあるクリーチャー・カードの中で最大のパワーに等しい。
+屍肉地虫が戦場に出たとき、カードを４枚切削する。（あなたのライブラリーの一番上からカードを４枚あなたの墓地に置く。）</card>
+    <card name="Eliminate" jaName="取り除き" type="インスタント">点数で見たマナ・コストが３以下の、クリーチャー１体かプレインズウォーカー１体を対象とし、それを破壊する。</card>
+    <card name="Grim Tutor" jaName="不気味な教示者" type="ソーサリー">あなたのライブラリーからカード１枚を探し、あなたの手札に加え、その後あなたのライブラリーを切り直す。あなたは３点のライフを失う。</card>
+    <card name="Liliana, Waker of the Dead" jaName="死者を目覚めさせる者、リリアナ" type="伝説のプレインズウォーカー ― リリアナ" pt="4">[+1]：各プレイヤーはそれぞれカード１枚を捨てる。そうできなかった各対戦相手はそれぞれ３点のライフを失う。
+[-3]：クリーチャー１体を対象とする。ターン終了時まで、それは-X/-Xの修整を受ける。Ｘはあなたの墓地にあるカードの枚数に等しい。
+[-7]：あなたは「あなたのターンの戦闘の開始時に、墓地からクリーチャー・カード１枚を対象とし、それをあなたのコントロール下で戦場に出す。それは速攻を得る。」を持つ紋章を得る。</card>
+    <card name="Malefic Scythe" jaName="悪意の鎌" type="アーティファクト ― 装備品">悪意の鎌は魂魄カウンターが１個置かれた状態で戦場に出る。
+装備しているクリーチャーは、悪意の鎌の上に置かれている魂魄カウンター１個につき+1/+1の修整を受ける。
+装備しているクリーチャーが死亡するたび、悪意の鎌の上に魂魄カウンターを１個置く。
+装備(１)（(１)：あなたがコントロールしているクリーチャー１体を対象とし、これをそれにつける。装備はソーサリーとしてのみ行う。）</card>
+    <card name="Necromentia" jaName="屍呆症" type="ソーサリー">対戦相手１人を対象とする。基本土地・カードの名前でないカード名１つを選ぶ。そのプレイヤーの墓地と手札とライブラリーから、その名前を持つ望む枚数のカードを探し、追放する。そのプレイヤーは自分のライブラリーを切り直し、その後そのプレイヤーは、これにより自分の手札から追放されたカード１枚につき黒の2/2のゾンビ・クリーチャー・トークンを１体生成する。</card>
+    <card name="Peer into the Abyss" jaName="深淵への覗き込み" type="ソーサリー">プレイヤー１人を対象とする。そのプレイヤーは、自分のライブラリーにあるカードの枚数の半分に等しい枚数のカードを引き、自分のライフの半分を失う。それぞれの端数は切り上げる。</card>
+    <card name="Vito, Thorn of the Dusk Rose" jaName="薄暮薔薇の棘、ヴィト" type="伝説のクリーチャー ― 吸血鬼・クレリック" pt="1/3">あなたがライフを得るたび、対戦相手１人を対象とする。そのプレイヤーはその点数に等しい点数のライフを失う。
+(３)(黒)(黒)：ターン終了時まで、あなたがコントロールしているクリーチャーは絆魂を得る。</card>
+    
+    <card name="Bolt Hound" jaName="雷光の猟犬" type="クリーチャー ― エレメンタル・犬" pt="2/2">速攻（このクリーチャーは、あなたのコントロール下になってすぐに攻撃したり(Ｔ)したりできる。）
+雷光の猟犬が攻撃するたび、ターン終了時まで、他の、あなたがコントロールしているクリーチャーは+1/+0の修整を受ける。</card>
+    <card name="Double Vision" jaName="複視" type="エンチャント">あなたが各ターン内で初めて、インスタントかソーサリーである呪文を唱えるたび、その呪文をコピーする。あなたはそのコピーの新しい対象を選んでもよい。</card>
+    <card name="Gadrak, the Crown-Scourge" jaName="冠滅ぼしのガドラク" type="伝説のクリーチャー ― ドラゴン" pt="5/4">飛行
+あなたがアーティファクトを４つ以上コントロールしていないかぎり、冠滅ぼしのガドラクでは攻撃できない。
+あなたの終了ステップの開始時に、このターンに死亡した、トークンでないクリーチャー１体につき、宝物・トークンを１つ生成する。（それは、「(Ｔ),このアーティファクトを生け贄に捧げる：好きな色１色のマナ１点を加える。」を持つアーティファクトである。）</card>
+    <card name="Havoc Jester" jaName="騒乱の道化" type="クリーチャー ― デビル" pt="5/5">あなたがパーマネントを１つ生け贄に捧げるたび、クリーチャー１体かプレインズウォーカー１体かプレイヤー１人を対象とする。騒乱の道化はそれに１点のダメージを与える。</card>
+    
+    <card name="Azusa, Lost but Seeking" jaName="迷える探求者、梓" type="伝説のクリーチャー ― 人間・モンク" pt="1/2">あなたの各ターンに、あなたは追加で土地を２つプレイしてもよい。</card>
+    <card name="Fierce Empath" jaName="激情の共感者" type="クリーチャー ― エルフ" pt="1/1">激情の共感者が戦場に出たとき、あなたは「あなたのライブラリーから点数で見たマナ・コストが６以上のクリーチャー・カード１枚を探し、公開し、あなたの手札に加え、その後あなたのライブラリーを切り直す。」を選んでもよい。</card>
+    <card name="Fungal Rebirth" jaName="菌類の再誕" type="インスタント">あなたの墓地からパーマネント・カード１枚を対象とし、それをあなたの手札に戻す。このターンにクリーチャーが死亡していたなら、緑の1/1の苗木・クリーチャー・トークンを２体生成する。</card>
+    <card name="Llanowar Visionary" jaName="ラノワールの幻想家" type="クリーチャー ― エルフ・ドルイド" pt="2/2">ラノワールの幻想家が戦場に出たとき、カードを１枚引く。
+(Ｔ)：(緑)を加える。</card>
+    <card name="Primal Might" jaName="原初の力" type="ソーサリー">あなたがコントロールしているクリーチャー１体とあなたがコントロールしていないクリーチャー最大１体を対象とする。ターン終了時まで、その前者は+X/+Xの修整を受ける。その後、その前者はその後者と格闘を行う。</card>
+    <card name="Quirion Dryad" jaName="クウィリーオンのドライアド" type="クリーチャー ― ドライアド" pt="1/1">あなたが白や青や黒や赤である呪文を唱えるたび、クウィリーオンのドライアドの上に+1/+1カウンターを１個置く。</card>
+    
+    <card name="Indulging Patrician" jaName="耽溺する貴族階級" type="クリーチャー ― 吸血鬼・貴族" pt="1/4">飛行
+絆魂（このクリーチャーがダメージを与えると、さらにあなたはその点数分のライフを得る。）
+あなたの終了ステップの開始時に、このターンにあなたがライフを３点以上得ていた場合、各対戦相手はそれぞれ３点のライフを失う。</card>
+    
+    <card name="Ugin, the Spirit Dragon" jaName="精霊龍、ウギン" type="伝説のプレインズウォーカー ― ウギン" pt="7">[+2]：クリーチャー１体かプレインズウォーカー１体かプレイヤー１人を対象とする。精霊龍、ウギンはそれに３点のダメージを与える。
+[-X]：点数で見たマナ・コストがＸ以下の、１色以上の色を持つ各パーマネントをそれぞれ追放する。
+[-10]：あなたは７点のライフを得てカードを７枚引く。その後、あなたの手札からパーマネント・カード最大７枚を戦場に出す。</card>
+    
+    <card name="Chromatic Orrery" jaName="彩色の宇宙儀" type="伝説のアーティファクト">あなたはマナを望む色のマナであるかのように支払ってもよい。
+(Ｔ)：(◇)(◇)(◇)(◇)(◇)を加える。
+(５),(Ｔ)：あなたがコントロールしているパーマネントの中の色１色につきカードを１枚引く。</card>
+    <card name="Mazemind Tome" jaName="精神迷わせの秘本" type="アーティファクト">(Ｔ),精神迷わせの秘本の上にページ・カウンターを１個置く：占術１を行う。
+(２),(Ｔ),精神迷わせの秘本の上にページ・カウンターを１個置く：カードを１枚引く。
+精神迷わせの秘本の上にページ・カウンターが４個以上置かれているとき、これを追放する。そうしたなら、あなたは４点のライフを得る。</card>
+    <card name="Sparkhunter Masticore" jaName="灯狩人のマスティコア" type="アーティファクト・クリーチャー ― マスティコア" pt="3/4">この呪文を唱えるための追加コストとして、カード１枚を捨てる。
+プロテクション（プレインズウォーカー）
+(１)：プレインズウォーカー１体を対象とする。灯狩人のマスティコアはそれに１点のダメージを与える。
+(３)：ターン終了時まで、灯狩人のマスティコアは破壊不能を得る。</card>
+    <card name="Tormod's Crypt" jaName="トーモッドの墓所" type="アーティファクト">(Ｔ),トーモッドの墓所を生け贄に捧げる：プレイヤー１人を対象とし、そのプレイヤーの墓地からカードをすべて追放する。</card>
+    
+    <card name="Radiant Fountain" jaName="光輝の泉" type="土地">光輝の泉が戦場に出たとき、あなたは２点のライフを得る。
+(Ｔ)：(◇)を加える。</card>
+    <!-- M21 variants -->
+    <card name="Basri, Devoted Paladin" type="伝説のプレインズウォーカー ― バスリ" pt="4">[+1]：クリーチャー最大１体を対象とし、それの上に+1/+1カウンターを１個置く。ターン終了時まで、それは警戒を得る。
+[-1]：このターン、クリーチャーが１体攻撃するたび、それの上に+1/+1カウンターを１個置く。
+[-6]：ターン終了時まで、あなたがコントロールしているクリーチャーは+2/+2の修整を受け飛行を得る。</card>
+    <card name="Adherent of Hope" type="クリーチャー ― 人間・兵士" pt="2/1"></card>
+    <card name="Basri's Aegis" type="ソーサリー" related="Basri, Devoted Paladin"></card>
+    <card name="Sigiled Contender" type="クリーチャー ― 人間・戦士" pt="3/3"></card>
+
+    <card name="Teferi, Timeless Voyager" type="伝説のプレインズウォーカー ― テフェリー" pt="4">[+1]：カードを１枚引く。
+[-3]：クリーチャー１体を対象とし、それをオーナーのライブラリーの一番上に置く。
+[-8]：対戦相手１人を対象とする。そのプレイヤーがコントロールしている各クリーチャーはそれぞれフェイズ・アウトする。次のあなたのターンの終了時まで、それらはフェイズ・インできない。（それらやそれらにつけられているものはすべて存在しないかのように扱う。）</card>
+    <card name="Historian of Zhalfir" type="クリーチャー ― 人間・ウィザード" pt="3/3"></card>
+    <card name="Mystic Skyfish" type="クリーチャー ― 魚" pt="3/1"></card>
+    <card name="Teferi's Wavecaster" type="クリーチャー ― マーフォーク・ウィザード" pt="3/3" related="Teferi, Timeless Voyager"></card>
+    
+    <card name="Liliana, Death Mage" type="伝説のプレインズウォーカー ― リリアナ" pt="4">[+1]：あなたの墓地からクリーチャー・カード最大１枚を対象とし、それをあなたの手札に戻す。
+[-3]：クリーチャー１体を対象とし、それを破壊する。それのコントローラーは２点のライフを失う。
+[-7]：対戦相手１人を対象とする。そのプレイヤーは自分の墓地にあるクリーチャー・カード１枚につき２点のライフを失う。</card>
+    <card name="Liliana's Scorn" type="ソーサリー" related="Liliana, Death Mage"></card>
+    <card name="Liliana's Scrounger" type="クリーチャー ― 人間・ウィザード" pt="3/2">各終了ステップの開始時に、このターンにクリーチャーが死亡していた場合、あなたはあなたがコントロールしているリリアナ・プレインズウォーカーの上に忠誠カウンターを１個置いてもよい。</card>
+    <card name="Spirit of Malevolence" type="クリーチャー ― スピリット" pt="2/1"></card>
+    
+    <card name="Chandra, Flame's Catalyst" type="伝説のプレインズウォーカー ― チャンドラ" pt="5"></card>
+    <card name="Chandra's Firemaw" type="クリーチャー ― ヘリオン" pt="4/2" related="Chandra, Flame's Catalyst"></card>
+    <card name="Keral Keep Disciples" type="クリーチャー ― 人間・モンク" pt="4/3"></card>
+    <card name="Storm Caller" type="クリーチャー ― オーガ・シャーマン" pt="3/2"></card>
+    
+    <card name="Garruk, Savage Herald" type="伝説のプレインズウォーカー ― ガラク" pt="5">[+1]：あなたのライブラリーの一番上のカードを公開する。それがクリーチャー・カードであるなら、それをあなたの手札に加える。そうでないなら、そのカードをあなたのライブラリーの一番下に置く。
+[-2]：あなたがコントロールしているクリーチャー１体と、他のクリーチャー１体を対象とする。その前者はその後者に、自身のパワーに等しい点数のダメージを与える。
+[-7]：ターン終了時まで、あなたがコントロールしているクリーチャーは「あなたはこのクリーチャーの戦闘ダメージを、これがブロックされなかったかのように割り振ってもよい。」を得る。</card>
+    <card name="Garruk's Warsteed" type="クリーチャー ― サイ" pt="3/5" related="Garruk, Savage Herald"></card>
+    <card name="Predatory Wurm" type="クリーチャー ― ワーム" pt="4/4"></card>
+    <card name="Wildwood Patrol" type="クリーチャー ― ケンタウルス・スカウト" pt="4/2">トランプル（このクリーチャーは余剰の戦闘ダメージを、これが攻撃しているプレイヤーかプレインズウォーカーに与えることができる。）</card>
+    
+    <card name="Rin and Seri, Inseparable" jaName="離れられない二匹、リンとセリ" type="伝説のクリーチャー ― 犬・猫" pt="4/4">あなたが犬・呪文を唱えるたび、緑の1/1の猫・クリーチャー・トークンを１体生成する。
+あなたが猫・呪文を唱えるたび、白の1/1の犬・クリーチャー・トークンを１体生成する。
+(赤)(緑)(白),(Ｔ)：クリーチャー１体かプレインズウォーカー１体かプレイヤー１人を対象とする。離れられない二匹、リンとセリはそれに、あなたがコントロールしている犬の総数に等しい点数のダメージを与える。あなたは、あなたがコントロールしている猫の総数に等しい点数のライフを得る。</card>
     <!-- クリーチャーでないトークン -->
     <card name="Clue" jaName="手掛かり" type="トークン・アーティファクト ― 手掛かり" wikilink="手掛かり">(２),このアーティファクトを生け贄に捧げる：カードを１枚引く。</card>
     <card name="Etherium Cell" jaName="エーテリウム電池" type="トークン・アーティファクト" wikilink="策謀家テゼレット/Tezzeret the Schemer">(Ｔ),このアーティファクトを生け贄に捧げる：好きな色１色のマナ１点を加える。</card>
@@ -665,6 +756,11 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <related name="Elspeth, Undaunted Hero" related="Sunlit Hoplite" />
     <related name="Elspeth's Devotee" related="Elspeth, Undaunted Hero" />
     <related name="Ashiok's Forerunner" related="Ashiok, Sculptor of Fears" />
+    <related name="Basri's Aegis" related="Basri, Devoted Paladin" />
+    <related name="Teferi's Wavecaster" related="Teferi, Timeless Voyager" />
+    <related name="Liliana's Scorn" related="Liliana, Death Mage" />
+    <related name="Chandra's Firemaw" related="Chandra, Flame's Catalyst" />
+    <related name="Garruk's Warsteed" related="Garruk, Savage Herald" />
     <!-- 関連カード (共闘) -->
     <related name="Regna, the Redeemer" related="Krav, the Unredeemed" />
     <related name="Krav, the Unredeemed" related="Regna, the Redeemer" />
@@ -4765,7 +4861,6 @@ IV ― 各プレイヤーのライブラリーの一番上のカードを見る�
     <jaName name="Great Defender" />
     <jaName name="Great Wall" />
     <jaName name="Green Scarab" />
-    <jaName name="Grim Tutor" />
     <jaName name="Grizzled Wolverine" />
     <jaName name="Guardian Angel" />
     <jaName name="Guardian Beast" />
