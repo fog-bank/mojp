@@ -661,6 +661,7 @@ Thriving Moorが戦場に出るに際し、黒でない色１色を選ぶ。
     <card name="Dinosaur Cat" jaName="恐竜・猫" type="トークン・クリーチャー ― 恐竜・猫" pt="2/2"></card>
     <card name="Djinn" jaName="ジン" type="トークン・アーティファクト・クリーチャー ― ジン" pt="5/5" wikilink="スレイマンの壺/Bottle of Suleiman">飛行</card>
     <card name="Djinn Monk" jaName="ジン・モンク" type="トークン・クリーチャー ― ジン・モンク" pt="2/2">飛行</card>
+    <card name="Dog" jaName="犬" type="トークン・クリーチャー ― 犬" pt="1/1"></card>
     <card name="Dragon Spirit" jaName="ドラゴン・スピリット" type="トークン・クリーチャー ― ドラゴン・スピリット" pt="5/5" wikilink="龍の牙、辰正/Tatsumasa, the Dragon's Fang">飛行</card>
     <card name="Drake" jaName="ドレイク" type="トークン・クリーチャー ― ドレイク" pt="2/2">飛行</card>
     <card name="Dwarf" jaName="ドワーフ" type="トークン・クリーチャー ― ドワーフ" pt="1/1" wikilink="ドワーフの鉱山/Dwarven Mine"></card>
@@ -684,7 +685,7 @@ Thriving Moorが戦場に出るに際し、黒でない色１色を選ぶ。
     <card name="Goblin Soldier" jaName="ゴブリン・兵士" type="トークン・クリーチャー ― ゴブリン・兵士" pt="1/1"></card>
     <card name="Goblin Warrior" jaName="ゴブリン・戦士" type="トークン・クリーチャー ― ゴブリン・戦士" pt="1/1" wikilink="略奪の母、汁婆/Wort, the Raidmother"></card>
     <card name="Gremlin" jaName="グレムリン" type="トークン・クリーチャー ― グレムリン" pt="2/2"></card>
-    <card name="Griffin" jaName="グリフィン" type="トークン・クリーチャー ― グリフィン" pt="2/2" wikilink="グリフィンの導き/Griffin Guide">飛行</card>
+    <card name="Griffin" jaName="グリフィン" type="トークン・クリーチャー ― グリフィン" pt="2/2">飛行</card>
     <card name="Harpy" jaName="ハーピー" type="トークン・クリーチャー ― ハーピー" pt="1/1" wikilink="忌まわしき首領/Abhorrent Overlord">飛行</card>
     <card name="Horse" jaName="馬" type="トークン・クリーチャー ― 馬" pt="5/5" wikilink="冠毛の陽馬/Crested Sunmare"></card>
     <card name="Hound" jaName="猟犬" type="トークン・クリーチャー ― 猟犬" pt="1/1" wikilink="雑種犬の群/Mongrel Pack"></card>
@@ -709,7 +710,6 @@ Thriving Moorが戦場に出るに際し、黒でない色１色を選ぶ。
     <card name="Octopus" jaName="タコ" type="トークン・クリーチャー ― タコ" pt="8/8"></card>
     <card name="Ox" jaName="雄牛" type="トークン・クリーチャー ― 雄牛" pt="2/4" wikilink="異形化するワンド/Transmogrifying Wand"></card>
     <card name="Pest" jaName="邪魔者" type="トークン・アーティファクト・クリーチャー ― 邪魔者" pt="0/1" wikilink="迷惑エンジン/Nuisance Engine"></card>
-    <card name="Pirate" jaName="海賊" type="トークン・クリーチャー ― 海賊" pt="2/2">威迫（このクリーチャーは２体以上のクリーチャーによってしかブロックされない。）</card>
     <card name="Rhino" jaName="サイ" type="トークン・クリーチャー ― サイ" pt="4/4">トランプル</card>
     <card name="Shark" jaName="サメ" type="トークン・クリーチャー ― サメ" pt="*/*" wikilink="サメ台風/Shark Typhoon">飛行</card>
     <card name="Sheep" jaName="羊" type="トークン・クリーチャー ― 羊" pt="0/1" wikilink="羊術師/Ovinomancer"></card>
@@ -727,7 +727,6 @@ Thriving Moorが戦場に出るに際し、黒でない色１色を選ぶ。
     <card name="Treefolk Shaman" jaName="ツリーフォーク・シャーマン" type="トークン・クリーチャー ― ツリーフォーク・シャーマン" pt="2/5" wikilink="枝の手の内/Reach of Branches"></card>
     <card name="Treefolk Warrior" jaName="ツリーフォーク・戦士" type="トークン・クリーチャー ― ツリーフォーク・戦士" pt="*/*" wikilink="カロニアのツイングローブ/Kalonian Twingrove">このクリーチャーのパワーとタフネスは、それぞれあなたがコントロールしている森の総数に等しい。</card>
     <card name="Vampire Knight" jaName="吸血鬼・騎士" type="トークン・クリーチャー ― 吸血鬼・騎士" pt="1/1">絆魂</card>
-    <card name="Weird" jaName="奇魔" type="トークン・クリーチャー ― 奇魔" pt="3/3" wikilink="いかづち頭/Thunderheads">防衛、飛行</card>
     <card name="Whale" jaName="鯨" type="トークン・クリーチャー ― 鯨" pt="6/6" wikilink="浅瀬蟲/Reef Worm">このクリーチャーが死亡したとき、青の9/9のクラーケン・クリーチャー・トークンを１体生成する。</card>
     <card name="Wizard" jaName="ウィザード" type="トークン・クリーチャー ― ウィザード" pt="2/2" wikilink="謎めいた指導者、カズミナ/Kasmina, Enigmatic Mentor"></card>
     <card name="Worm" jaName="蟲" type="トークン・クリーチャー ― 蟲" pt="1/1"></card>
