@@ -1085,7 +1085,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
 あなたがカオス・シンボルを出すたび、クリーチャー１体を対象とする。ターン終了時まで、それはすべてのクリーチャー・タイプを得る。</card>
     <card name="Windriddle Palaces" jaName="風謎の宮殿" type="次元 ― ベレノン" wikilink="風謎の宮殿/Windriddle Palaces (次元カード)">プレイヤーは自分のライブラリーの一番上のカードを公開したままプレイする。
 あなたはプレイヤー１人のライブラリーの一番上のカードをプレイしてもよい。
-あなたがカオス・シンボルを出すたび、各プレイヤーは自分のライブラリーの一番上のカードを自分の墓地に置く。</card>
+あなたがカオス・シンボルを出すたび、各プレイヤーはそれぞれカードを１枚切削する。</card>
     <!-- プロモーション次元 -->
     <card name="Celestine Reef" jaName="Celestine Reef" type="次元 ― ルヴィオン" wikilink="Celestine Reef (次元カード)">飛行か島渡りを持たないクリーチャーは攻撃できない。
 あなたがカオス・シンボルを出すたび、プレイヤー１人がプレインズウォークするまで、あなたはこのゲームに敗北できず、対戦相手はこのゲームに勝利できない。</card>
@@ -1872,7 +1872,8 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="戦場に出ている([^。]+)の総?数に等しい。" value="戦場にある$1の総数に等しい。" nodebug="true" />
     <regex target="text" pattern="戦場に出ている(?=クリーチャー１体|エンチャント|オーラ)" value="戦場にある" nodebug="true" />
     <regex target="text" pattern="(?&lt;!このターン[^。]+)戦場に出ている(?=場合|かぎり|他の|アーティファクト)" value="戦場にある" nodebug="true" />
-    <regex target="text" pattern="ライブラリーの一番上(?:から１枚)?のカード(?:１枚)?を(?:１枚、?)?" value="ライブラリーの一番上のカードを" nodebug="true" />
+    <regex target="text" pattern="ライブラリーの(?:カードの)?一番上(?:から１枚)?のカード(?:１枚)?を(?:１枚、?)?" value="ライブラリーの一番上のカードを" nodebug="true" />
+    <regex target="text" pattern="ライブラリーのカードを上から１枚、" value="ライブラリーの一番上のカードを" nodebug="true" />
     <regex target="text" pattern="ライブラリーのカードを上から([０-９Ｘ]{2,}|[０２-９Ｘ])枚、?" value="ライブラリーの一番上からカードを$1枚" nodebug="true" />
     <regex target="text" pattern="ライブラリーの一番上のカードを(?=[０-９Ｘ]+枚見)" value="ライブラリーの一番上からカードを" nodebug="true" />
     <regex target="text" pattern="好きな色のマナ(?=[０-９Ｘ]+点を加え)" value="好きな色１色のマナ" nodebug="true" />
@@ -1988,6 +1989,16 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="あなたがこの呪文を唱えたとき、このターンにこれより前に唱えた呪文１つにつきこれを１回コピーする。" value="あなたがこの呪文を唱えたとき、このターンにこれより前に唱えられた呪文１つにつきこれを１回コピーする。" nodebug="true" />
     <regex target="text" pattern="は(?=「\(２\),\(Ｔ\),このアーティファクトを生け贄に捧げる：あなたは３点のライフを得る。」を持つアーティファクトである。)" value="は、" nodebug="true" />
     <regex target="text" pattern="あなたがこの呪文をこれの変容コストで唱えるなら、あなたがオーナーであり人間でないクリーチャー１体を対象とし、これをそれの上か下に置く。これらは、一番上のクリーチャーにその下にある能力すべてを加えたものに変容する。" value="あなたがこの呪文をこれの変容コストで唱えるなら、あなたがオーナーであり人間でないクリーチャー１体を対象とし、これをそれの上か下に置く。これらは、一番上のクリーチャーに、その下にある能力すべてを加えたものに変容する。" nodebug="true" />
+    <!-- オラクル更新 (M21) -->
+    <regex target="text" pattern="(?:あなた|自分)のライブラリーの一番上のカードを(?:あなたの|自分の|そのプレイヤーの)?墓地に置く(?!ことである)" value="カードを１枚切削する" nodebug="true" />
+    <regex target="text" pattern="あなたのライブラリーの一番上のカードをあなたの墓地に置いてもよい" value="カードを１枚切削してもよい" nodebug="true" />
+    <regex target="text" pattern="(?&lt;=切削[^（]+)(?:その|墓地に置かれた)カード" value="その切削したカード" nodebug="true" />
+    <regex target="text" pattern="(?&lt;=切削.+)それがインスタントかソーサリーであるカードなら" value="これによりインスタントかソーサリーであるカードが切削されたなら" nodebug="true" />
+    <regex target="text" pattern="。その切削したカードが選ばれた名前を持つなら" value="。これによりその選ばれた名前を持つカードが切削されたなら" nodebug="true" />
+    <regex target="text" pattern="。その切削したカードが土地(?:・カード)?である(?:なら|場合)" value="。これにより土地・カードが切削されたなら" nodebug="true" />
+    <regex target="text" pattern="発掘１（あなたがカードを１枚引くなら、代わりにあなたのライブラリーの一番上からちょうど１枚のカードをあなたの墓地に置いてもよい。" value="発掘１（あなたがカードを１枚引くなら、代わりにカードを１枚切削してもよい。" nodebug="true" />
+    <regex target="text" pattern="は、カードを(?=[０-９Ｘ]+枚切削)" value="はカードを" nodebug="true" />
+    <!--<regex target="text" pattern="あなたのライブラリーの一番上からカードを２枚あなたの墓地に置く" value="カードを２枚切削する" nodebug="true" />-->
     <!-- 固定語 -->
     <regex target="text" pattern="カンか龍" value="カン(Khans)か龍(Dragons)" nodebug="true" />
     <regex target="text" pattern="ミラディン軍かファイレクシア軍" value="ミラディン軍(Mirran)かファイレクシア軍(Phyrexian)" nodebug="true" />
@@ -4925,6 +4936,11 @@ Thriving Moorが戦場に出るに際し、黒でない色１色を選ぶ。
     <card name="Sure Strike" jaName="確実な一撃" type="インスタント">クリーチャー１体を対象とする。ターン終了時まで、それは+3/+0の修整を受け先制攻撃を得る。（それは先制攻撃を持たないクリーチャーよりも先に戦闘ダメージを与える。）</card>
     <card name="Wall of Runes" jaName="ルーンの壁" type="クリーチャー ― 壁" pt="0/4">防衛（このクリーチャーでは攻撃できない。）
 ルーンの壁が戦場に出たとき、占術１を行う。（あなたのライブラリーの一番上のカードを見る。あなたはそのカードをあなたのライブラリーの一番下に置いてもよい。）</card>
+    
+    <!-- オラクル変更(M21)：切削 -->
+    <card name="Helm of Obedience" jaName="Helm of Obedience" type="アーティファクト">(Ｘ),(Ｔ)：対戦相手１人を対象とする。そのプレイヤーはカードを１枚切削し、その後、これによりクリーチャー・カード１枚かカードＸ枚のどちらかが先に自分の墓地に置かれるまで、この手順を繰り返す。これによりクリーチャー・カード１枚以上が自分の墓地に置かれたなら、Helm of Obedienceを生け贄に捧げ、その中の１枚をあなたのコントロール下で戦場に出す。Ｘは０にできない。</card>
+    <card name="Siren of the Silent Song" jaName="静寂の歌のセイレーン" type="クリーチャー ― ゾンビ・セイレーン" pt="2/1">飛行
+神啓 ― 静寂の歌のセイレーンがアンタップ状態になるたび、各対戦相手はそれぞれカード１枚を捨て、その後各対戦相手はそれぞれカードを１枚切削する。</card>
       
     <!-- オラクル変更(DOM)の対象外 -->
     <card name="Firesong and Sunspeaker" jaName="ファイアソングとサンスピーカー" type="伝説のクリーチャー ― ミノタウルス・クレリック" pt="4/6">あなたがコントロールしていて赤でありインスタントかソーサリーである呪文は絆魂を持つ。
