@@ -1623,6 +1623,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="を得ることを除き" value="を持つことを除き" nodebug="true" />
     <regex target="text" pattern="、自分の墓地と手札" value="、自分の手札と墓地" nodebug="true" />
     <regex target="text" pattern="一番上の土地をプレイしても呪文を唱えてもよい" value="一番上から土地をプレイしても呪文を唱えてもよい" nodebug="true" />
+    <regex target="text" pattern="（このカードがあなたの選んだ相棒であるなら、あなたは１回のみゲームの外部からこれを唱えてもよい。）" value="（このカードがあなたの選んだ相棒であるなら、あなたはあなたがソーサリーを唱えられるときに(３)を支払うことで、ゲームの外部からこれをあなたの手札に加えてもよい。）" nodebug="true" />
     <!-- 中丸追加 -->
     <regex target="type" pattern="部族(?=アーティファクト|エンチャント|インスタント|ソーサリー)" value="部族・" nodebug="true" />
     <regex target="text" pattern="(?&lt;=クリーチャー|アーティファクト|エンチャント|インスタント|ソーサリー|プレインズウォーカー|土地|パーマネント)(?=カード|呪文)" value="・" nodebug="true" />
