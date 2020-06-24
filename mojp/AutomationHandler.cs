@@ -534,7 +534,7 @@ namespace Mojp
             /// </summary>
             private static string GetNamePropertyValue(AutomationElement element)
             {
-                string name = null;
+                string name;
                 try
                 {
                     name = element?.Cached.Name;
