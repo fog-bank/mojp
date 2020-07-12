@@ -995,12 +995,15 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="プレインズウォーカー１人" value="プレインズウォーカー１体" nodebug="true" />
     <regex target="text" pattern="コントール" value="コントロール" nodebug="true" />
     <regex target="jaName|text" pattern="パルヘリオン\?" value="パルヘリオンⅡ" nodebug="true" />
-    <regex target="jaName|text" pattern="離れられない二人、リンとセリ" value="離れられない二匹、リンとセリ" />
+    <regex target="text" pattern="soそのプレイヤー" value="そのプレイヤー" nodebug="true" />
+    <regex target="text" pattern="コントローラーカード" value="コントローラーはカード" nodebug="true" />
     <regex target="text" pattern="ライブラリ(?!ー)" value="ライブラリー" nodebug="true" />
     <regex target="text" pattern="魂絆を得る" value="絆魂を得る" nodebug="true" />
     <regex target="text" pattern="枚数半分" value="枚数の半分" nodebug="true" />
+    <regex target="text" pattern="が切削された、" value="が切削されたなら、" nodebug="true" />
     <regex target="text" pattern="インスタントを唱えるときなら" value="インスタントを唱えられるときなら" nodebug="true" />
     <regex target="text" pattern="置く．" value="置く。" nodebug="true" />
+    <regex target="text" pattern="する．" value="する。" nodebug="true" />
     <regex target="text" pattern="あなたはテフェリー" value="あなたがテフェリー" nodebug="true" />
     <regex target="text" pattern="天上の餌あさりのによって" value="天上の餌あさりによって" nodebug="true" />
     <regex target="text" pattern="していている" value="している" nodebug="true" />
@@ -1015,7 +1018,6 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="クリーチャー死亡" value="クリーチャーが死亡" nodebug="true" />
     <regex target="text" pattern="対象する" value="対象とする" nodebug="true" />
     <regex target="text" pattern="対象ににならない" value="対象にならない" nodebug="true" />
-    <regex target="text" pattern="自分墓地" value="自分の墓地" nodebug="true" />
     <regex target="text" pattern="プレイヤー１人をか" value="プレイヤー１人か" nodebug="true" />
     <regex target="text" pattern="クリーチャー１体かプレインズウォーカー１体かプレイヤーを対象とする。" value="クリーチャー１体かプレインズウォーカー１体かプレイヤー１人を対象とする。" nodebug="true" />
     <regex target="text" pattern="トークンを１体を" value="トークン１体を" nodebug="true" />
@@ -1046,8 +1048,6 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="(?&lt;=《[^《/》]+)/[^《/》]+(?=》)" value="" nodebug="true" />
     <!-- オラクル更新 -->
     <regex target="name|text" pattern="AE" value="Ae" nodebug="true" />
-    <regex target="type" pattern="猟犬" value="犬" nodebug="true" />
-    <regex target="text" pattern="猟犬・" value="犬・" nodebug="true" />
     <regex target="text" pattern="(?&lt;=トークンを[０-９Ｘ]+体)戦場に出す" value="生成する" nodebug="true" />
     <regex target="text" pattern="クリーチャー１体かプレイヤー１人(?!か)(?=[^。]*対象と.+ダメージを[^。]*与え)" value="クリーチャー１体かプレインズウォーカー１体かプレイヤー１人" nodebug="true" />
     <regex target="text" pattern="(?m)^プレイヤー１人を対象とする。([^。]+は、?)(?&lt;!そのプレイヤー.*)そのプレイヤーに(?=[０-９Ｘ]+点のダメージを与え)" value="プレイヤー１人かプレインズウォーカー１体を対象とする。$1それに" nodebug="true" />
@@ -1057,7 +1057,6 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="を得ることを除き" value="を持つことを除き" nodebug="true" />
     <regex target="text" pattern="、自分の墓地と手札" value="、自分の手札と墓地" nodebug="true" />
     <regex target="text" pattern="一番上の土地をプレイしても呪文を唱えてもよい" value="一番上から土地をプレイしても呪文を唱えてもよい" nodebug="true" />
-    <regex target="text" pattern="（このカードがあなたの選んだ相棒であるなら、あなたは１回のみゲームの外部からこれを唱えてもよい。）" value="（このカードがあなたの選んだ相棒であるなら、あなたはあなたがソーサリーを唱えられるときに(３)を支払うことで、ゲームの外部からこれをあなたの手札に加えてもよい。）" nodebug="true" />
     <!-- 中丸追加 -->
     <regex target="type" pattern="部族(?=アーティファクト|エンチャント|インスタント|ソーサリー)" value="部族・" nodebug="true" />
     <regex target="text" pattern="(?&lt;=クリーチャー|アーティファクト|エンチャント|インスタント|ソーサリー|プレインズウォーカー|土地|パーマネント)(?=カード|呪文)" value="・" nodebug="true" />
@@ -1083,7 +1082,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="は、(?=.[\dX]+/.[\dX]+の修整を受けるとともに)" value="は" nodebug="true" />
     <regex target="text" pattern="あなたは、それを" value="あなたはそれを" nodebug="true" />
     <regex target="text" pattern="(?m)^あなたは、あなたの(?=ライブラリーの一番上から)" value="あなたはあなたの" nodebug="true" />
-    <regex target="text" pattern="(?&lt;=ライブラリーの一番上からカードを[０-９Ｘ]+)枚、(?=[^。]+の墓地に置)" value="枚" nodebug="true" />
+    <regex target="text" pattern="は、(?=[^。]{0,11}カードを(?:[０-９Ｘ]+枚)?切削)" value="は" nodebug="true" />
     <!-- 順序変更 -->
     <regex target="type" pattern="エンチャント・アーティファクト" value="アーティファクト・エンチャント" nodebug="true" />
     <regex target="text" pattern="タイプや色" value="色やタイプ" nodebug="true" />
@@ -1298,17 +1297,18 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="以下から１つまたは複数を選ぶ。" value="以下から１つ以上を選ぶ。" nodebug="true" />
     <regex target="text" pattern="。?」ことを選んでも?よい。?" value="。」を選んでもよい。" nodebug="true" />
     <regex target="text" pattern="。?」ことを選ばないかぎり" value="。」を選ばないかぎり" nodebug="true" />
+    <regex target="text" pattern="」を選んでよい。" value="」を選んでもよい。" nodebug="true" />
     <regex target="text" pattern="(?&lt;=戻|追放|公開|タップ)する?ことを選んでもよい。" value="してもよい。" nodebug="true" />
     <regex target="text" pattern="を捨てることを選んでもよい。" value="を捨ててもよい。" nodebug="true" />
     <regex target="text" pattern="Ｘは([^。Ｙ]+)である。" value="Ｘは$1に等しい。" nodebug="true" />
     <regex target="text" pattern="等しい量の(?=\(.\)を加え)" value="等しい点数の" nodebug="true" />
+    <regex target="text" pattern="その点数と同じ" value="その点数に等しい" nodebug="true" />
     <regex target="text" pattern="(?&lt;=がコントロールしている(?:土地|アーティファクト|クリーチャー))の数" value="の総数" nodebug="true" />
     <regex target="text" pattern="(?&lt;=クリーチャー|ドラゴン)の数に等しい。" value="の総数に等しい。" nodebug="true" />
     <regex target="text" pattern="戦場に出ている([^。]+)の総?数に等しい。" value="戦場にある$1の総数に等しい。" nodebug="true" />
     <regex target="text" pattern="戦場に出ている(?=クリーチャー１体|エンチャント|オーラ)" value="戦場にある" nodebug="true" />
     <regex target="text" pattern="(?&lt;!このターン[^。]+)戦場に出ている(?=場合|かぎり|他の|アーティファクト)" value="戦場にある" nodebug="true" />
     <regex target="text" pattern="ライブラリーの(?:カードの)?一番上(?:から１枚)?のカード(?:１枚)?を(?:１枚、?)?" value="ライブラリーの一番上のカードを" nodebug="true" />
-    <regex target="text" pattern="ライブラリーのカードを上から１枚、" value="ライブラリーの一番上のカードを" nodebug="true" />
     <regex target="text" pattern="ライブラリーのカードを(?:一番)?上から([０-９Ｘ]{2,}|[０２-９Ｘ])枚、?" value="ライブラリーの一番上からカードを$1枚" nodebug="true" />
     <regex target="text" pattern="ライブラリーの一番上のカードを(?=[０-９Ｘ]+枚見)" value="ライブラリーの一番上からカードを" nodebug="true" />
     <regex target="text" pattern="好きな色のマナ(?=[０-９Ｘ]+点を加え)" value="好きな色１色のマナ" nodebug="true" />
@@ -1397,7 +1397,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="枚を探し、それを公開してあなたの手札に加える。その後あなたのライブラリーを切り直す。）" value="枚を探し、それを公開してあなたの手札に加え、その後あなたのライブラリーを切り直す。）" nodebug="true" />
     <regex target="text" pattern="（あなたが秘儀呪文を唱えるに際し、あなたはこのカードを手札から公開して連繋コストを支払ってもよい。そうしたなら、このカードの効果をその呪文に追加する。）" value="（あなたが秘儀・呪文を唱えるに際し、あなたはあなたの手札からこのカードを公開して、連繋コストを支払ってもよい。そうしたなら、このカードの効果をその呪文に加える。）" nodebug="true" />
     <regex target="text" pattern="この呪文を唱えるに際しあなたがタップしたクリーチャー１体で、\(１\)かそのクリーチャーの色のマナ１点を支払う。）" value="この呪文を唱える段階であなたがタップした各クリーチャーは、(１)かそのクリーチャーの色のマナ１点を支払う。）" nodebug="true" />
-    <regex target="text" pattern="（あなたがカードを引く場合、代わりにあなたはあなたのライブラリーのカードを上からちょうど([１-６])枚、あなたの墓地に置いてもよい。そうしたなら、あなたの墓地にあるこのカードをあなたの手札に戻す。そうしなかったなら、カードを１枚引く。）" value="（あなたがカードを１枚引くなら、代わりにカードを$1枚切削してもよい。そうしたなら、あなたの墓地からこのカードをあなたの手札に戻す。そうしなかったなら、カードを１枚引く。）" nodebug="true" />
+    <regex target="text" pattern="そうしたなら、あなたの墓地にあるこのカードをあなたの手札に戻す。" value="そうしたなら、あなたの墓地からこのカードをあなたの手札に戻す。" nodebug="true" />
     <regex target="text" pattern="（このカードをあなたの手札から唱えるのではなく、([^。]{3,12})を支払うとともにそれを時間カウンターが([１-９Ｘ])個置かれた状態で追放(?:する|してもよい)。あなたのアップキープの開始時に、時間カウンターを１個取り除く。最後の１個を取り除いたとき、それをそのマナ・コストを支払うことなく唱える。）" value="（あなたの手札からこのカードを唱えるのではなく、あなたは$1を支払い、時間カウンターを$2個置いた状態でこれを追放してもよい。あなたのアップキープの開始時に、時間カウンターを１個取り除く。最後の１個を取り除いたとき、これをこれのマナ・コストを支払うことなく唱える。）" nodebug="true" />
     <regex target="text" pattern="（このカードをあなたの手札から唱えるのではなく、([^。]{3,12})を支払うとともにそれを時間カウンターが([１-９Ｘ])個置かれた状態で追放(?:する|してもよい)。あなたのアップキープの開始時に、時間カウンターを１個取り除く。最後の１個を取り除いたとき、それをそのマナ・コストを支払うことなく唱える。それは速攻を持つ。）" value="（あなたの手札からこのカードを唱えるのではなく、あなたは$1を支払い、時間カウンターを$2個置いた状態でこれを追放してもよい。あなたのアップキープの開始時に、時間カウンターを１個取り除く。最後の１個を取り除いたとき、これをこれのマナ・コストを支払うことなく唱える。これは速攻を持つ。）" nodebug="true" />
     <regex target="text" pattern="あなたがこのカードを捨てるなら、これを追放領域に捨てる。あなたがそうしたとき、マッドネス・コストでこれを唱えるか、これをあなたの墓地に置く。" value="あなたがこのカードを捨てるなら、これを追放領域に捨てる。そうしたとき、マッドネス・コストでこれを唱えるか、これをあなたの墓地に置く。" nodebug="true" />
@@ -1425,25 +1425,6 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="あなたがこの呪文を唱えたとき、このターンにこれより前に唱えた呪文１つにつきこれを１回コピーする。" value="あなたがこの呪文を唱えたとき、このターンにこれより前に唱えられた呪文１つにつきこれを１回コピーする。" nodebug="true" />
     <regex target="text" pattern="は(?=「(?:\(２\),)?\(Ｔ\),このアーティファクトを生け贄に捧げる：)" value="は、" nodebug="true" />
     <regex target="text" pattern="あなたがこの呪文をこれの変容コストで唱えるなら、あなたがオーナーであり人間でないクリーチャー１体を対象とし、これをそれの上か下に置く。これらは、一番上のクリーチャーにその下にある能力すべてを加えたものに変容する。" value="あなたがこの呪文をこれの変容コストで唱えるなら、あなたがオーナーであり人間でないクリーチャー１体を対象とし、これをそれの上か下に置く。これらは、一番上のクリーチャーに、その下にある能力すべてを加えたものに変容する。" nodebug="true" />
-    <!-- オラクル更新 (M21)：切削1 -->
-    <regex target="text" pattern="(?:あなた|自分)のライブラリーの一番上のカードを(?:あなたの|自分の|そのプレイヤーの)?墓地に置く(?!ことである)" value="カードを１枚切削する" nodebug="true" />
-    <regex target="text" pattern="あなたのライブラリーの一番上のカードをあなたの墓地に置いてもよい" value="カードを１枚切削してもよい" nodebug="true" />
-    <regex target="text" pattern="(?&lt;=切削[^（]+)(?:その|墓地に置かれた)カード" value="その切削したカード" nodebug="true" />
-    <regex target="text" pattern="(?&lt;=切削.+)それがインスタントかソーサリーであるカードなら" value="これによりインスタントかソーサリーであるカードが切削されたなら" nodebug="true" />
-    <regex target="text" pattern="。その切削したカードが選ばれた名前を持つなら" value="。これによりその選ばれた名前を持つカードが切削されたなら" nodebug="true" />
-    <regex target="text" pattern="。その切削したカードが土地(?:・カード)?である(?:なら|場合)" value="。これにより土地・カードが切削されたなら" nodebug="true" />
-    <!-- オラクル更新 (M21)：切削N -->
-    <regex target="text" pattern="(?:あなた|自分|そのプレイヤー)のライブラリーの一番上からカードを([０-９Ｘ]+)枚(?:あなたの|自分の|そのプレイヤーの)?墓地に置く(?!。）)" value="カードを$1枚切削する" nodebug="true" />
-    <regex target="text" pattern="あなたのライブラリーの一番上からカードを([２３])枚あなたの墓地に置いてもよい" value="カードを$1枚切削してもよい" nodebug="true" />
-    <regex target="text" pattern="あなたのライブラリーの一番上からカードを([２３])枚あなたの墓地に置き、" value="カードを$1枚切削し、" nodebug="true" />
-    <regex target="text" pattern="自分のライブラリーの一番上からカードを２枚あなたの墓地に置かないかぎり" value="カードを２枚切削しないかぎり" nodebug="true" />
-    <regex target="text" pattern="（あなたがカードを１枚引くなら、代わりにあなたのライブラリーの一番上からちょうど([１-６])枚のカードをあなたの墓地に置いてもよい。" value="（あなたがカードを１枚引くなら、代わりにカードを$1枚切削してもよい。" nodebug="true" />
-    <regex target="text" pattern="あなたは「カードを２枚切削する。」を選んでもよい" value="あなたはカードを２枚切削してもよい" nodebug="true" />
-    <regex target="text" pattern="自分のライブラリーの一番上から、?([^。]+)に等しい枚数のカードを自分の墓地に置く" value="$1に等しい枚数のカードを切削する" nodebug="true" />
-    <regex target="text" pattern="自分のライブラリーの一番上から端数を切り(上げた|捨てた)半分を自分の墓地に置く" value="自分のライブラリーの端数を切り$1半分を切削する" nodebug="true" />
-    <regex target="text" pattern="自分のライブラリーのカードを、?上から(?:その点数と)?同じ枚数だけ自分の墓地に置く" value="その点数に等しい枚数のカードを切削する" nodebug="true" />
-    <regex target="text" pattern="同じ枚数のカードを自分のライブラリーの一番上から自分の墓地に置く" value="同じ枚数のカードを切削する" nodebug="true" />
-    <regex target="text" pattern="は、カードを(?=[０-９Ｘ]+枚切削)" value="はカードを" nodebug="true" />
     <!-- 固定語 -->
     <regex target="text" pattern="カンか龍" value="カン(Khans)か龍(Dragons)" nodebug="true" />
     <regex target="text" pattern="ミラディン軍かファイレクシア軍" value="ミラディン軍(Mirran)かファイレクシア軍(Phyrexian)" nodebug="true" />
@@ -3783,9 +3764,6 @@ IV ― 各プレイヤーのライブラリーの一番上のカードを見る�
 (Ｔ)：好きな色１色のマナ２点を加える。
 あなたがマナ・コストに(Ｘ)を含む呪文を唱えるたび、緑の0/0のハイドラ・クリーチャー・トークンを１体生成し、その後それの上に+1/+1カウンターをＸ個置く。</card>
     
-    <!-- M21 (オラクル更新) -->
-    <card name="Lorescale Coatl" jaName="知識鱗のコアトル" type="クリーチャー ― 蛇" pt="2/2">あなたがカードを１枚引くたび、知識鱗のコアトルの上に+1/+1カウンターを１個置く。</card>
-    
     <!-- テキストが正常でないカード (M21) -->
     <card name="Chandra, Heart of Fire" jaName="炎の心、チャンドラ" type="伝説のプレインズウォーカー ― チャンドラ" pt="5">[+1]：あなたの手札を捨て、その後あなたのライブラリーの一番上からカードを３枚追放する。ターン終了時まで、あなたはこれにより追放されたカードをプレイしてもよい。
 [+1]：クリーチャー１体かプレインズウォーカー１体かプレイヤー１人を対象とする。炎の心、チャンドラはそれに２点のダメージを与える。
@@ -3794,33 +3772,33 @@ IV ― 各プレイヤーのライブラリーの一番上のカードを見る�
     <card name="Track Down" jaName="突き止め" type="ソーサリー">占術３を行い、その後あなたのライブラリーの一番上のカードを公開する。それがクリーチャーや土地であるカードなら、カードを１枚引く。（占術３とは、あなたのライブラリーの一番上からカードを３枚見て、そのうち望む枚数をあなたのライブラリーの一番下に、残りを一番上に、それぞれ望む順番で置くことである。）</card>
     
     <!-- テキストが正常でないカード (Jumpstart) -->
-    <card name="Allosaurus Shepherd" jaName="アロサウルス飼い" type="クリーチャー ― エルフ・シャーマン" pt="1/1">Allosaurus Shepherdは打ち消されない。
+    <card name="Allosaurus Shepherd" jaName="アロサウルス飼い" type="クリーチャー ― エルフ・シャーマン" pt="1/1">アロサウルス飼いは打ち消されない。
 あなたがコントロールしている緑の呪文は打ち消されない。
 (４)(緑)(緑)：ターン終了時まで、あなたがコントロールしている各エルフ・クリーチャーはそれぞれ、基本のパワーとタフネスが5/5になり、それの他のクリーチャー・タイプに加えて恐竜になる。</card>
-    <card name="Bruvac the Grandiloquent" jaName="文飾衒才のブリューバ" type="伝説のクリーチャー ― 人間・アドバイザー" pt="1/4">対戦相手がカードを１枚以上切削するなら、代わりに、そのプレイヤーはその２倍の枚数のカードを切削する。（カードを１枚切削するとは、プレイヤーが自分のライブラリーの一番上のカードを自分の墓地に置くことである。）</card>
-    <card name="Corsair Captain" jaName="海賊船長" type="クリーチャー ― 人間・海賊" pt="2/2">Corsair Captainが戦場に出たとき、宝物・トークンを１つ生成する。（それは、「(Ｔ),このアーティファクトを生け贄に捧げる：好きな色１色のマナ１点を加える。」を持つアーティファクトである。）
+    <card name="Bruvac the Grandiloquent" jaName="文飾衒才のブルバック" type="伝説のクリーチャー ― 人間・アドバイザー" pt="1/4">対戦相手がカードを１枚以上切削するなら、代わりに、そのプレイヤーはその２倍の枚数のカードを切削する。（カードを１枚切削するとは、プレイヤーが自分のライブラリーの一番上のカードを自分の墓地に置くことである。）</card>
+    <card name="Corsair Captain" jaName="海賊船長" type="クリーチャー ― 人間・海賊" pt="2/2">海賊船長が戦場に出たとき、宝物・トークンを１つ生成する。（それは、「(Ｔ),このアーティファクトを生け贄に捧げる：好きな色１色のマナ１点を加える。」を持つアーティファクトである。）
 他の、あなたがコントロールしている海賊は+1/+1の修整を受ける。</card>
     <card name="Inniaz, the Gale Force" jaName="強風の力、イニアス" type="伝説のクリーチャー ― ジン" pt="4/4">飛行
 (２)(白/青)：ターン終了時まで、飛行を持つ攻撃クリーチャーは+1/+1の修整を受ける。（(白/青)は(白)でも(青)でも支払うことができる。）
 あなたがコントロールしていて飛行を持つクリーチャーが３体以上攻撃するたび、各プレイヤーはそれぞれ、自分の右隣のプレイヤーがコントロールしていて、あなたが選んだ土地でないパーマネント１つのコントロールを得る。</card>
     <card name="Lightning Phoenix" jaName="稲妻のフェニックス" type="クリーチャー ― フェニックス" pt="2/2">飛行、速攻
-Lightning Phoenixではブロックできない。
-あなたの終了ステップの開始時に、このターンに対戦相手１人に３点以上のダメージが与えられていた場合、あなたは(赤)を支払ってもよい。そうしたなら、あなたの墓地からLightning Phoenixを戦場に戻す。</card>
-    <card name="Muxus, Goblin Grandee" jaName="上流階級のゴブリン、マクサス" type="伝説のクリーチャー ― ゴブリン・貴族" pt="4/4">Muxus, Goblin Grandeeが戦場に出たとき、あなたのライブラリーの一番上からカードを６枚公開する。その中から、点数で見たマナ・コストが５以下のゴブリン・クリーチャー・カードをすべて戦場に出し、残りをあなたのライブラリーの一番下に無作為の順番で置く。
-Muxus, Goblin Grandeeが攻撃するたび、ターン終了時まで、これは他の、あなたがコントロールしているゴブリン１体につき+1/+1の修整を受ける。</card>
+稲妻のフェニックスではブロックできない。
+あなたの終了ステップの開始時に、このターンに対戦相手１人に３点以上のダメージが与えられていた場合、あなたは(赤)を支払ってもよい。そうしたなら、あなたの墓地から稲妻のフェニックスを戦場に戻す。</card>
+    <card name="Muxus, Goblin Grandee" jaName="上流階級のゴブリン、マクサス" type="伝説のクリーチャー ― ゴブリン・貴族" pt="4/4">上流階級のゴブリン、マクサスが戦場に出たとき、あなたのライブラリーの一番上からカードを６枚公開する。その中から、点数で見たマナ・コストが５以下のゴブリン・クリーチャー・カードをすべて戦場に出し、残りをあなたのライブラリーの一番下に無作為の順番で置く。
+上流階級のゴブリン、マクサスが攻撃するたび、ターン終了時まで、これは他の、あなたがコントロールしているゴブリン１体につき+1/+1の修整を受ける。</card>
     <card name="Neyith of the Dire Hunt" jaName="不吉な狩猟のニース" type="伝説のクリーチャー ― 人間・戦士" pt="3/3">あなたがコントロールしているクリーチャーが１体以上、格闘を行うかブロックされた状態になるたび、カードを１枚引く。
 あなたのターンの戦闘の開始時に、クリーチャー１体を対象とする。あなたは(２)(赤/緑)を支払ってもよい。そうしたなら、ターン終了時まで、それのパワーを２倍にする。この戦闘で、そのクリーチャーは可能ならブロックされなければならない。（(赤/緑)は(赤)でも(緑)でも支払うことができる。）</card>
     <card name="Ormos, Archive Keeper" jaName="書庫の守り手、オルモス" type="伝説のクリーチャー ― スフィンクス" pt="5/5">飛行
-あなたのライブラリーにカードがないときにあなたがカードを引くなら、代わりにOrmos, Archive Keeperの上に+1/+1カウンターを５個置く。
+あなたのライブラリーにカードがないときにあなたがカードを引くなら、代わりに書庫の守り手、オルモスの上に+1/+1カウンターを５個置く。
 (１)(青)(青),名前の異なるカード３枚を捨てる：カードを５枚引く。</card>
     <card name="Scholar of the Lost Trove" jaName="失われた宝物庫の学者" type="クリーチャー ― スフィンクス" pt="5/5">飛行
-Scholar of the Lost Troveが戦場に出たとき、あなたの墓地からインスタントかソーサリーかアーティファクトであるカード１枚を対象とする。あなたはそれをそのマナ・コストを支払うことなく唱えてもよい。このターン、これにより唱えたインスタントかソーサリーである呪文があなたの墓地に置かれるなら、代わりにそれを追放する。</card>
-    <card name="Sethron, Hurloon General" jaName="ハールーンの将軍、セスロン" type="伝説のクリーチャー ― ミノタウルス・戦士" pt="4/4">Sethron, Hurloon Generalか、他の、トークンでないミノタウルスが１体あなたのコントロール下で戦場に出るたび、赤の2/3のミノタウルス・クリーチャー・トークンを１体生成する。
+失われた宝物庫の学者が戦場に出たとき、あなたの墓地からインスタントかソーサリーかアーティファクトであるカード１枚を対象とする。あなたはそれをそのマナ・コストを支払うことなく唱えてもよい。このターン、これにより唱えたインスタントかソーサリーである呪文があなたの墓地に置かれるなら、代わりにそれを追放する。</card>
+    <card name="Sethron, Hurloon General" jaName="ハールーンの将軍、セスロン" type="伝説のクリーチャー ― ミノタウルス・戦士" pt="4/4">ハールーンの将軍、セスロンか、他の、トークンでないミノタウルスが１体あなたのコントロール下で戦場に出るたび、赤の2/3のミノタウルス・クリーチャー・トークンを１体生成する。
 (２)(黒/赤)：ターン終了時まで、あなたがコントロールしているミノタウルスは+1/+0の修整を受け威迫と速攻を得る。（(黒/赤)は(黒)でも(赤)でも支払うことができる。）</card>
-    <card name="Supply Runners" jaName="補給品運び" type="クリーチャー ― 犬" pt="2/2">Supply Runnersが戦場に出たとき、他の、あなたがコントロールしている各クリーチャーの上に+1/+1カウンターをそれぞれ１個置く。</card>
+    <card name="Supply Runners" jaName="補給品運び" type="クリーチャー ― 犬" pt="2/2">補給品運びが戦場に出たとき、他の、あなたがコントロールしている各クリーチャーの上に+1/+1カウンターをそれぞれ１個置く。</card>
     <card name="Tinybones, Trinket Thief" jaName=" 小物泥棒、チビボネ" type="伝説のクリーチャー ― スケルトン・ならず者" pt="1/2">各終了ステップの開始時に、このターンに対戦相手がカードを捨てていた場合、あなたはカードを１枚引き、あなたは１点のライフを失う。
 (４)(黒)(黒)：手札にカードがない各対戦相手はそれぞれ１０点のライフを失う。</card>
-    <card name="Towering Titan" jaName="聳えるタイタン" type="クリーチャー ― 巨人" pt="0/0">Towering Titanは、+1/+1カウンターがＸ個置かれた状態で戦場に出る。Ｘは他の、あなたがコントロールしているクリーチャーのタフネスの合計に等しい。
+    <card name="Towering Titan" jaName="聳えるタイタン" type="クリーチャー ― 巨人" pt="0/0">聳えるタイタンは、+1/+1カウンターがＸ個置かれた状態で戦場に出る。Ｘは他の、あなたがコントロールしているクリーチャーのタフネスの合計に等しい。
 防衛を持つクリーチャー１体を生け贄に捧げる：ターン終了時まで、クリーチャーはすべてトランプルを得る。</card>
     <card name="Witch of the Moors" jaName="原野の魔女" type="クリーチャー ― 人間・邪術師" pt="4/4">接死
 あなたの終了ステップの開始時に、このターンにあなたがライフを得ていた場合、あなたの墓地からクリーチャー・カード最大１枚を対象とする。各対戦相手はそれぞれクリーチャー１体を生け贄に捧げ、あなたはそれをあなたの手札に戻す。</card>
@@ -3900,47 +3878,17 @@ Thriving Moorが戦場に出るに際し、黒でない色１色を選ぶ。
     <!--<card name="Sure Strike" jaName="確実な一撃" type="インスタント">クリーチャー１体を対象とする。ターン終了時まで、それは+3/+0の修整を受け、先制攻撃を得る。（それは先制攻撃を持たないクリーチャーよりも先に戦闘ダメージを与える。）</card>-->
     
     <!-- M21 (注釈文) -->
-    <card name="Capture Sphere" jaName="捕獲球" type="エンチャント ― オーラ">瞬速（あなたはこの呪文を、あなたがインスタントを唱えられるときならいつでも唱えてよい。）
-エンチャント（クリーチャー）
-捕獲球が戦場に出たとき、エンチャントしているクリーチャーをタップする。
-エンチャントしているクリーチャーは、それのコントローラーのアンタップ・ステップにアンタップしない。</card>
-    <card name="Concordia Pegasus" jaName="協約のペガサス" type="クリーチャー ― ペガサス" pt="1/3">飛行</card>
     <card name="Dub" jaName="叙爵" type="エンチャント ― オーラ">エンチャント（クリーチャー）
 エンチャントしているクリーチャーは、+2/+2の修整を受け、先制攻撃を持ち、それの他のタイプに加えて騎士でもある。（それは先制攻撃を持たないクリーチャーよりも先に戦闘ダメージを与える。）</card>
-    <card name="Fetid Imp" jaName="異臭のインプ" type="クリーチャー ― インプ" pt="1/2">飛行
-(黒)：ターン終了時まで、異臭のインプは接死を得る。（これが何らかのダメージをクリーチャーに与えたら、それだけで破壊する。）</card>
-    <card name="Portcullis Vine" jaName="落とし格子の蔦" type="クリーチャー ― 植物・壁" pt="0/3">防衛（このクリーチャーでは攻撃できない。）
-(２),(Ｔ),防衛を持つクリーチャー１体を生け贄に捧げる：カードを１枚引く。</card>
     <card name="Setessan Training" jaName="セテッサ式訓練" type="エンチャント ― オーラ">エンチャント（あなたがコントロールしているクリーチャー）
 セテッサ式訓練が戦場に出たとき、カードを１枚引く。
 エンチャントしているクリーチャーは+1/+0の修整を受けトランプルを持つ。（それは余剰の戦闘ダメージを、それが攻撃しているプレイヤーかプレインズウォーカーに与えることができる。）</card>
-    <card name="Snarespinner" jaName="罠紡ぎ" type="クリーチャー ― 蜘蛛" pt="1/3">到達（このクリーチャーは飛行を持つクリーチャーをブロックできる。）
-罠紡ぎが飛行を持つクリーチャーを１体ブロックするたび、ターン終了時まで、罠紡ぎは+2/+0の修整を受ける。</card>
-    <card name="Sure Strike" jaName="確実な一撃" type="インスタント">クリーチャー１体を対象とする。ターン終了時まで、それは+3/+0の修整を受け先制攻撃を得る。（それは先制攻撃を持たないクリーチャーよりも先に戦闘ダメージを与える。）</card>
-    <card name="Turret Ogre" jaName="砲塔のオーガ" type="クリーチャー ― オーガ・戦士" pt="4/3">到達（このクリーチャーは飛行を持つクリーチャーをブロックできる。）
-砲塔のオーガが戦場に出たとき、あなたが他の、パワーが４以上のクリーチャーをコントロールしている場合、砲塔のオーガは各対戦相手にそれぞれ２点のダメージを与える。</card>
-    <card name="Wall of Runes" jaName="ルーンの壁" type="クリーチャー ― 壁" pt="0/4">防衛（このクリーチャーでは攻撃できない。）
-ルーンの壁が戦場に出たとき、占術１を行う。（あなたのライブラリーの一番上のカードを見る。あなたはそのカードをあなたのライブラリーの一番下に置いてもよい。）</card>
     
     <!-- オラクル変更(M21)：切削 -->
-    <card name="Combustible Gearhulk" jaName="焼却の機械巨人" type="アーティファクト・クリーチャー ― 構築物" pt="6/6">先制攻撃
-焼却の機械巨人が戦場に出たとき、対戦相手１人を対象とする。そのプレイヤーは「あなたはカードを３枚引く。」を選んでもよい。そうしないなら、あなたはカードを３枚切削し、その後焼却の機械巨人はそのプレイヤーに、それらのカードの点数で見たマナ・コストの合計に等しい点数のダメージを与える。</card>
-    <card name="Funeral Rites" jaName="葬儀" type="ソーサリー">あなたはカードを２枚引き、２点のライフを失い、その後カードを２枚切削する。</card>
     <card name="Grindstone" jaName="丸砥石" type="アーティファクト">(３),(Ｔ)：プレイヤー１人を対象とする。そのプレイヤーはカードを２枚切削する。これにより共通の色を持つカード２枚が切削されたなら、この手順を繰り返す。</card>
-    <card name="Gyruda, Doom of Depths" jaName="深海の破滅、ジャイルーダ" type="伝説のクリーチャー ― デーモン・クラーケン" pt="6/6">相棒 ― あなたの開始時のデッキに、点数で見たマナ・コストが偶数のカードのみが入っていること。（このカードがあなたの選んだ相棒であるなら、あなたはあなたがソーサリーを唱えられるときに(３)を支払うことで、ゲームの外部からこれをあなたの手札に加えてもよい。）
-深海の破滅、ジャイルーダが戦場に出たとき、各プレイヤーはそれぞれ、カードを４枚切削する。その切削したカードの中から、点数で見たマナ・コストが偶数のクリーチャー・カード１枚をあなたのコントロール下で戦場に出す。</card>
     <card name="Helm of Obedience" jaName="Helm of Obedience" type="アーティファクト">(Ｘ),(Ｔ)：対戦相手１人を対象とする。そのプレイヤーはカードを１枚切削し、その後、これによりクリーチャー・カード１枚かカードＸ枚のどちらかが先に自分の墓地に置かれるまで、この手順を繰り返す。これによりクリーチャー・カード１枚以上が自分の墓地に置かれたなら、Helm of Obedienceを生け贄に捧げ、その中の１枚をあなたのコントロール下で戦場に出す。Ｘは０にできない。</card>
-    <card name="Heretic's Punishment" jaName="異教徒の罰" type="エンチャント">(３)(赤)：クリーチャー１体かプレインズウォーカー１体かプレイヤー１人を対象とする。その後、カードを３枚切削する。異教徒の罰はそのパーマネントやプレイヤーに、切削したカードの中で最も大きい点数で見たマナ・コストに等しい点数のダメージを与える。</card>
     <card name="Increasing Confusion" jaName="高まる混乱" type="ソーサリー">プレイヤー１人を対象とする。そのプレイヤーはカードをＸ枚切削する。この呪文が墓地から唱えられたなら、代わりにそのプレイヤーはその２倍の枚数のカードを切削する。
 フラッシュバック(Ｘ)(青)（あなたはあなたの墓地から、このカードをこれのフラッシュバック・コストで唱えてもよい。その後、これを追放する。）</card>
-    <card name="Liliana, Untouched by Death" jaName="死が触れぬ者、リリアナ" type="伝説のプレインズウォーカー ― リリアナ" pt="4">[+1]：カードを３枚切削する。これによりゾンビ・カードが少なくとも１枚切削されたなら、各対戦相手はそれぞれ２点のライフを失い、あなたは２点のライフを得る。
-[-2]：クリーチャー１体を対象とする。ターン終了時まで、それは-X/-Xの修整を受ける。Ｘはあなたがコントロールしているゾンビの総数に等しい。
-[-3]：このターン、あなたはあなたの墓地からゾンビ・呪文を唱えてもよい。</card>
-    <card name="Siren of the Silent Song" jaName="静寂の歌のセイレーン" type="クリーチャー ― ゾンビ・セイレーン" pt="2/1">飛行
-神啓 ― 静寂の歌のセイレーンがアンタップ状態になるたび、各対戦相手はそれぞれカード１枚を捨て、その後各対戦相手はそれぞれカードを１枚切削する。</card>
-    <card name="Sword of Body and Mind" jaName="肉体と精神の剣" type="アーティファクト ― 装備品">装備しているクリーチャーは+2/+2の修整を受け、プロテクション（緑）とプロテクション（青）を持つ。
-装備しているクリーチャーがプレイヤー１人に戦闘ダメージを与えるたび、あなたは緑の2/2の狼・クリーチャー・トークンを１体生成し、そのプレイヤーはカードを１０枚切削する。
-装備(２)</card>
     <card name="Sphinx's Tutelage" jaName="スフィンクスの後見" type="エンチャント">あなたがカードを１枚引くたび、対戦相手１人を対象とする。そのプレイヤーはカードを２枚切削する。これにより共通の色を持ち土地でないカード２枚が切削されたなら、この手順を繰り返す。
 (５)(青)：カードを１枚引き、その後カード１枚を捨てる。</card>
       
@@ -5408,6 +5356,7 @@ Thriving Moorが戦場に出るに際し、黒でない色１色を選ぶ。
     <!-- 公式日本語カード名が無いプロモカード -->
     <jaName name="Sewers of Estark" />
     <jaName name="Windseeker Centaur" />
+    
     <!-- Global Series: Jiang Yanggu & Mu Yanling -->
     <!--<jaName name="Colorful Feiyi Sparrow" />
     <jaName name="Heavenly Qilin" />
@@ -5439,8 +5388,9 @@ Thriving Moorが戦場に出るに際し、黒でない色１色を選ぶ。
     <jaName name="Aggressive Instinct" />
     <jaName name="Confidence from Strength" />
     <jaName name="Journey for the Elixir" />-->
+    
     <!-- Jumpstart -->
-    <jaName name="Blessed Sanctuary" />
+    <!--<jaName name="Blessed Sanctuary" />
     <jaName name="Brightmare" />
     <jaName name="Emiel the Blessed" />
     <jaName name="Release the Dogs" />
@@ -5476,6 +5426,6 @@ Thriving Moorが戦場に出るに際し、黒でない色１色を選ぶ。
     <jaName name="Thriving Grove" />
     <jaName name="Thriving Heath" />
     <jaName name="Thriving Isle" />
-    <jaName name="Thriving Moor" />
+    <jaName name="Thriving Moor" />-->
   </remove>
 </mojp>
