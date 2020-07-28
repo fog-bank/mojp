@@ -866,47 +866,47 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="160  /  254 " sub="THB" name="The Triumph of Anax" />
     <alt key="166  /  254 " sub="THB" name="The Binding of the Titans" />
     <alt key="170  /  254 " sub="THB" name="The First Iroan Games" />
-    <!-- Ultimate Box Toppers (UMA) -->
-    <alt key="U01  /  040 " sub="UMA" name="Emrakul, the Aeons Torn" />
-    <alt key="U02  /  040 " sub="UMA" name="Karn Liberated" />
-    <alt key="U03  /  040 " sub="UMA" name="Kozilek, Butcher of Truth" />
-    <alt key="U04  /  040 " sub="UMA" name="Ulamog, the Infinite Gyre" />
-    <alt key="U05  /  040 " sub="UMA" name="Snapcaster Mage" />
-    <alt key="U06  /  040 " sub="UMA" name="Temporal Manipulation" />
-    <alt key="U07  /  040 " sub="UMA" name="Bitterblossom" />
-    <alt key="U08  /  040 " sub="UMA" name="Demonic Tutor" />
-    <alt key="U09  /  040 " sub="UMA" name="Goryo's Vengeance" />
-    <alt key="U10  /  040 " sub="UMA" name="Liliana of the Veil" />
-    <alt key="U11  /  040 " sub="UMA" name="Mikaeus, the Unhallowed" />
-    <alt key="U12  /  040 " sub="UMA" name="Reanimate" />
-    <alt key="U13  /  040 " sub="UMA" name="Tasigur, the Golden Fang" />
-    <alt key="U14  /  040 " sub="UMA" name="Balefire Dragon" />
-    <alt key="U15  /  040 " sub="UMA" name="Through the Breach" />
-    <alt key="U16  /  040 " sub="UMA" name="Eternal Witness" />
-    <alt key="U17  /  040 " sub="UMA" name="Life from the Loam" />
-    <alt key="U18  /  040 " sub="UMA" name="Noble Hierarch" />
-    <alt key="U19  /  040 " sub="UMA" name="Tarmogoyf" />
-    <alt key="U20  /  040 " sub="UMA" name="Vengevine" />
-    <alt key="U21  /  040 " sub="UMA" name="Gaddock Teeg" />
-    <alt key="U22  /  040 " sub="UMA" name="Leovold, Emissary of Trest" />
-    <alt key="U23  /  040 " sub="UMA" name="Lord of Extinction" />
-    <alt key="U24  /  040 " sub="UMA" name="Maelstrom Pulse" />
-    <alt key="U25  /  040 " sub="UMA" name="Sigarda, Host of Herons" />
-    <alt key="U26  /  040 " sub="UMA" name="Fulminator Mage" />
-    <alt key="U27  /  040 " sub="UMA" name="Kitchen Finks" />
-    <alt key="U28  /  040 " sub="UMA" name="Engineered Explosives" />
-    <alt key="U29  /  040 " sub="UMA" name="Mana Vault" />
-    <alt key="U30  /  040 " sub="UMA" name="Platinum Emperion" />
-    <alt key="U31  /  040 " sub="UMA" name="Ancient Tomb" />
-    <alt key="U32  /  040 " sub="UMA" name="Cavern of Souls" />
-    <alt key="U33  /  040 " sub="UMA" name="Celestial Colonnade" />
-    <alt key="U34  /  040 " sub="UMA" name="Creeping Tar Pit" />
-    <alt key="U35  /  040 " sub="UMA" name="Dark Depths" />
-    <alt key="U36  /  040 " sub="UMA" name="Karakas" />
-    <alt key="U37  /  040 " sub="UMA" name="Lavaclaw Reaches" />
-    <alt key="U38  /  040 " sub="UMA" name="Raging Ravine" />
-    <alt key="U39  /  040 " sub="UMA" name="Stirring Wildwood" />
-    <alt key="U40  /  040 " sub="UMA" name="Urborg, Tomb of Yawgmoth" />
+    <!-- Ultimate Box oppers (UMA) -->
+    <alt key="U01  /  40 " sub="UMA" name="Emrakul, the Aeons Torn" />
+    <alt key="U02  /  40 " sub="UMA" name="Karn Liberated" />
+    <alt key="U03  /  40 " sub="UMA" name="Kozilek, Butcher of Truth" />
+    <alt key="U04  /  40 " sub="UMA" name="Ulamog, the Infinite Gyre" />
+    <alt key="U05  /  40 " sub="UMA" name="Snapcaster Mage" />
+    <alt key="U06  /  40 " sub="UMA" name="Temporal Manipulation" />
+    <alt key="U07  /  40 " sub="UMA" name="Bitterblossom" />
+    <alt key="U08  /  40 " sub="UMA" name="Demonic Tutor" />
+    <alt key="U09  /  40 " sub="UMA" name="Goryo's Vengeance" />
+    <alt key="U10  /  40 " sub="UMA" name="Liliana of the Veil" />
+    <alt key="U11  /  40 " sub="UMA" name="Mikaeus, the Unhallowed" />
+    <alt key="U12  /  40 " sub="UMA" name="Reanimate" />
+    <alt key="U13  /  40 " sub="UMA" name="Tasigur, the Golden Fang" />
+    <alt key="U14  /  40 " sub="UMA" name="Balefire Dragon" />
+    <alt key="U15  /  40 " sub="UMA" name="Through the Breach" />
+    <alt key="U16  /  40 " sub="UMA" name="Eternal Witness" />
+    <alt key="U17  /  40 " sub="UMA" name="Life from the Loam" />
+    <alt key="U18  /  40 " sub="UMA" name="Noble Hierarch" />
+    <alt key="U19  /  40 " sub="UMA" name="Tarmogoyf" />
+    <alt key="U20  /  40 " sub="UMA" name="Vengevine" />
+    <alt key="U21  /  40 " sub="UMA" name="Gaddock Teeg" />
+    <alt key="U22  /  40 " sub="UMA" name="Leovold, Emissary of Trest" />
+    <alt key="U23  /  40 " sub="UMA" name="Lord of Extinction" />
+    <alt key="U24  /  40 " sub="UMA" name="Maelstrom Pulse" />
+    <alt key="U25  /  40 " sub="UMA" name="Sigarda, Host of Herons" />
+    <alt key="U26  /  40 " sub="UMA" name="Fulminator Mage" />
+    <alt key="U27  /  40 " sub="UMA" name="Kitchen Finks" />
+    <alt key="U28  /  40 " sub="UMA" name="Engineered Explosives" />
+    <alt key="U29  /  40 " sub="UMA" name="Mana Vault" />
+    <alt key="U30  /  40 " sub="UMA" name="Platinum Emperion" />
+    <alt key="U31  /  40 " sub="UMA" name="Ancient Tomb" />
+    <alt key="U32  /  40 " sub="UMA" name="Cavern of Souls" />
+    <alt key="U33  /  40 " sub="UMA" name="Celestial Colonnade" />
+    <alt key="U34  /  40 " sub="UMA" name="Creeping Tar Pit" />
+    <alt key="U35  /  40 " sub="UMA" name="Dark Depths" />
+    <alt key="U36  /  40 " sub="UMA" name="Karakas" />
+    <alt key="U37  /  40 " sub="UMA" name="Lavaclaw Reaches" />
+    <alt key="U38  /  40 " sub="UMA" name="Raging Ravine" />
+    <alt key="U39  /  40 " sub="UMA" name="Stirring Wildwood" />
+    <alt key="U40  /  40 " sub="UMA" name="Urborg, Tomb of Yawgmoth" />
     <!-- 出来事 (ELD) -->
     <alt key="005  /  269 " sub="ELD" name="Ardenvale Tactician" />
     <alt key="011  /  269 " sub="ELD" name="Faerie Guidemother" />
