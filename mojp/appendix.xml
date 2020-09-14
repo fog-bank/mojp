@@ -700,6 +700,7 @@
     <card name="Ape" jaName="類人猿" type="トークン・クリーチャー ― 類人猿" pt="3/3" wikilink="猿術/Pongify"></card>
     <card name="Bird Illusion" jaName="鳥・イリュージョン" type="トークン・クリーチャー ― 鳥・イリュージョン" pt="1/1" wikilink="つぶやく神秘家/Murmuring Mystic">飛行</card>
     <card name="Bird Soldier" jaName="鳥・兵士" type="トークン・クリーチャー ― 鳥・兵士" pt="1/1" wikilink="翼の疾風/Flurry of Wings">飛行</card>
+    <card name="Cat Beast" jaName="猫・ビースト" type="トークン・クリーチャー ― 猫・ビースト" pt="2/2" wikilink="フェリダーの撤退/Felidar Retreat"></card>
     <card name="Cat Bird" jaName="猫・鳥" type="トークン・クリーチャー ― 猫・鳥" pt="1/1" wikilink="空猫の君主/Skycat Sovereign">飛行</card>
     <card name="Cat Dragon" jaName="猫・ドラゴン" type="トークン・クリーチャー ― 猫・ドラゴン" pt="3/3" wikilink="ネコルーの女王、ワシトラ/Wasitora, Nekoru Queen">飛行</card>
     <card name="Cat Soldier" jaName="猫・兵士" type="トークン・クリーチャー ― 猫・兵士" pt="1/1">警戒</card>
@@ -744,13 +745,12 @@
     <card name="Human Soldier" jaName="人間・兵士" type="トークン・クリーチャー ― 人間・兵士" pt="1/1"></card>
     <card name="Human Warrior" jaName="人間・戦士" type="トークン・クリーチャー ― 人間・戦士" pt="3/1" wikilink="荒くれたちの笑い声/Outlaws' Merriment">トランプル、速攻</card>
     <card name="Human Wizard" jaName="人間・ウィザード" type="トークン・クリーチャー ― 人間・ウィザード" pt="1/1"></card>
-    <card name="Hydra" jaName="ハイドラ" type="トークン・クリーチャー ― ハイドラ" pt="*/*" wikilink="ハイドラの繁殖主/Hydra Broodmaster"></card>
     <card name="Kavu" jaName="カヴー" type="トークン・クリーチャー ― カヴー" pt="3/3" wikilink="暗影のカヴー/Penumbra Kavu"></card>
     <card name="Kithkin Soldier" jaName="キスキン・兵士" type="トークン・クリーチャー ― キスキン・兵士" pt="1/1"></card>
     <card name="Knight Ally" jaName="騎士・同盟者" type="トークン・クリーチャー ― 騎士・同盟者" pt="2/2"></card>
     <card name="Kor Ally" jaName="コー・同盟者" type="トークン・クリーチャー ― コー・同盟者" pt="1/1"></card>
     <card name="Kor Soldier" jaName="コー・兵士" type="トークン・クリーチャー ― コー・兵士" pt="1/1"></card>
-    <card name="Kor Warrior" jaName="コー・戦士" type="トークン・クリーチャー ― コー・戦士" pt="1/1" wikilink="古代を継ぐ者、ナヒリ/Nahiri, Heir of the Ancients"></card>
+    <card name="Kor Warrior" jaName="コー・戦士" type="トークン・クリーチャー ― コー・戦士" pt="1/1"></card>
     <card name="Manifest" jaName="予示" type="クリーチャー" pt="2/2" wikilink="予示">（予示されたクリーチャー・カードは、それのマナ・コストで、いつでも表向きにしてよい。裏向きのカードは、それの変異コストで表向きにしてもよい。）</card>
     <card name="Merfolk Wizard" jaName="マーフォーク・ウィザード" type="トークン・クリーチャー ― マーフォーク・ウィザード" pt="1/1"></card>
     <card name="Minotaur" jaName="ミノタウルス" type="トークン・クリーチャー ― ミノタウルス" pt="2/3" wikilink="双角の連続襲撃/Flurry of Horns">速攻</card>
