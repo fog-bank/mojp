@@ -35,11 +35,11 @@ Windows 7 SP1 以降
 
 ## 開発環境
 Windows 10 November 2019 Update (Version 1909)  
-Visual Studio 2019 v16.6  
+Visual Studio 2019 v16.7  
 C# 7.3
 
 ### 仕組み
-[UI Automation](https://msdn.microsoft.com/ja-jp/library/ms753388.aspx) API を利用して、Preview Pane 内のテキストを検索しています。メインロジックは [AutomationHandler.cs](https://github.com/fog-bank/mojp/blob/master/mojp/AutomationHandler.cs#L53) 内の CapturePreviewPane メソッド以下です。
+[UI Automation](https://msdn.microsoft.com/ja-jp/library/ms753388.aspx) API を利用して、Preview Pane 内のテキストを検索しています。メインロジックは [AutomationHandler.cs](https://github.com/fog-bank/mojp/blob/master/mojp/AutomationHandler.cs#L58) 内の CapturePreviewPane メソッド以下です。
 
 ## リファレンス
 * MO で日本語テキストを表示する試みとして、[Magic Online 日本語化計画](http://www.royalcrab.net/wpx/?page_id=38)の影響を受けています。

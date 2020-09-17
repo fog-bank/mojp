@@ -695,7 +695,7 @@
 このクリーチャーを生け贄に捧げる：クリーチャー１体かプレインズウォーカー１体かプレイヤー１人を対象とする。このクリーチャーはそれに１点のダメージを与える。</card>
     <card name="Zombie Army" jaName="ゾンビ・軍団" type="トークン・クリーチャー ― ゾンビ・軍団" pt="0/0" wikilink="動員"></card>
     <!-- 単一の特性しかないトークン -->
-    <card name="Angel Warrior" jaName="天使・戦士" type="トークン・クリーチャー ― 天使・戦士" pt="4/4" wikilink="エメリアの呼び声/Emeria's Call"></card>
+    <card name="Angel Warrior" jaName="天使・戦士" type="トークン・クリーチャー ― 天使・戦士" pt="4/4" wikilink="エメリアの呼び声/Emeria's Call">飛行</card>
     <card name="Antelope" jaName="アンテロープ" type="トークン・クリーチャー ― アンテロープ" pt="2/3" wikilink="Master of the Wild Hunt Avatar">森渡り</card>
     <card name="Ape" jaName="類人猿" type="トークン・クリーチャー ― 類人猿" pt="3/3" wikilink="猿術/Pongify"></card>
     <card name="Bird Illusion" jaName="鳥・イリュージョン" type="トークン・クリーチャー ― 鳥・イリュージョン" pt="1/1" wikilink="つぶやく神秘家/Murmuring Mystic">飛行</card>
@@ -1467,33 +1467,13 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <!-- その他のリンク修正 -->
     <wikilink name="Captivating Vampire" wikilink="蟲惑的な吸血鬼/Captivating Vampire" />
     <wikilink name="Lurrus of the Dream-Den" wikilink="夢の巣のルールス/Lurrus of the Dream-Den" />
-    <!-- 英雄譚 (DOM, C19, THB) -->
-    <alt key="018  /  269 " sub="DOM" name="Fall of the Thran" />
-    <alt key="021  /  269 " sub="DOM" name="History of Benalia" />
-    <alt key="038  /  269 " sub="DOM" name="Triumph of Gerrard" />
-    <alt key="042  /  269 " sub="DOM" name="The Antiquities War" />
-    <alt key="057  /  269 " sub="DOM" name="The Mirari Conjecture" />
-    <alt key="070  /  269 " sub="DOM" name="Time of Ice" />
-    <alt key="082  /  269 " sub="DOM" name="Chainer's Torment" />
-    <alt key="090  /  269 " sub="DOM" name="The Eldest Reborn" />
-    <alt key="100  /  269 " sub="DOM" name="Phyrexian Scriptures" />
-    <alt key="102  /  269 " sub="DOM" name="Rite of Belzenlok" />
-    <alt key="122  /  269 " sub="DOM" name="The First Eruption" />
-    <alt key="123  /  269 " sub="DOM" name="The Flame of Keld" />
-    <alt key="173  /  269 " sub="DOM" name="The Mending of Dominaria" />
-    <alt key="179  /  269 " sub="DOM" name="Song of Freyalise" />
-    <alt key="131  /  302 " sub="C19" name="The Eldest Reborn" />
-    <alt key="005  /  254 " sub="THB" name="The Birth of Meletis" />
-    <alt key="013  /  254 " sub="THB" name="Elspeth Conquers Death" />
-    <alt key="052  /  254 " sub="THB" name="Kiora Bests the Sea God" />
-    <alt key="053  /  254 " sub="THB" name="Medomai's Prophecy" />
-    <alt key="091  /  254 " sub="THB" name="Elspeth's Nightmare" />
-    <alt key="118  /  254 " sub="THB" name="Tymaret Calls the Dead" />
-    <alt key="124  /  254 " sub="THB" name="The Akroan War" />
-    <alt key="160  /  254 " sub="THB" name="The Triumph of Anax" />
-    <alt key="166  /  254 " sub="THB" name="The Binding of the Titans" />
-    <alt key="170  /  254 " sub="THB" name="The First Iroan Games" />
-    <!-- Ultimate Box oppers (UMA) -->
+    <!-- UND -->
+    <!--<alt key="88  /  96 " sub="UND" name="Plains" />
+    <alt key="90  /  96 " sub="UND" name="Island" />
+    <alt key="92  /  96 " sub="UND" name="Swamp" />
+    <alt key="94  /  96 " sub="UND" name="Mountain" />
+    <alt key="96  /  96 " sub="UND" name="Forest" />-->
+    <!-- Ultimate Box toppers (UMA) -->
     <alt key="U01  /  40 " sub="UMA" name="Emrakul, the Aeons Torn" />
     <alt key="U02  /  40 " sub="UMA" name="Karn Liberated" />
     <alt key="U03  /  40 " sub="UMA" name="Kozilek, Butcher of Truth" />
@@ -1534,6 +1514,63 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="U38  /  40 " sub="UMA" name="Raging Ravine" />
     <alt key="U39  /  40 " sub="UMA" name="Stirring Wildwood" />
     <alt key="U40  /  40 " sub="UMA" name="Urborg, Tomb of Yawgmoth" />
+    <!-- ZNE -->
+    <alt key="01  /  30 " sub="ZNE" name="Flooded Strand" />
+    <alt key="02  /  30 " sub="ZNE" name="Polluted Delta" />
+    <alt key="03  /  30 " sub="ZNE" name="Bloodstained Mire" />
+    <alt key="04  /  30 " sub="ZNE" name="Wooded Foothills" />
+    <alt key="05  /  30 " sub="ZNE" name="Windswept Heath" />
+    <alt key="06  /  30 " sub="ZNE" name="Marsh Flats" />
+    <alt key="07  /  30 " sub="ZNE" name="Scalding Tarn" />
+    <alt key="08  /  30 " sub="ZNE" name="Verdant Catacombs" />
+    <alt key="09  /  30 " sub="ZNE" name="Arid Mesa" />
+    <alt key="10  /  30 " sub="ZNE" name="Misty Rainforest" />
+    <alt key="11  /  30 " sub="ZNE" name="Seachrome Coast" />
+    <alt key="12  /  30 " sub="ZNE" name="Darkslick Shores" />
+    <alt key="13  /  30 " sub="ZNE" name="Blackcleave Cliffs" />
+    <alt key="14  /  30 " sub="ZNE" name="Copperline Gorge" />
+    <alt key="15  /  30 " sub="ZNE" name="Razorverge Thicket" />
+    <alt key="16  /  30 " sub="ZNE" name="Sea of Clouds" />
+    <alt key="17  /  30 " sub="ZNE" name="Morphic Pool" />
+    <alt key="18  /  30 " sub="ZNE" name="Luxury Suite" />
+    <alt key="19  /  30 " sub="ZNE" name="Spire Garden" />
+    <alt key="20  /  30 " sub="ZNE" name="Bountiful Promenade" />
+    <alt key="21  /  30 " sub="ZNE" name="Ancient Tomb" />
+    <alt key="22  /  30 " sub="ZNE" name="Cavern of Souls" />
+    <alt key="23  /  30 " sub="ZNE" name="Celestial Colonnade" />
+    <alt key="24  /  30 " sub="ZNE" name="Creeping Tar Pit" />
+    <alt key="25  /  30 " sub="ZNE" name="Grove of the Burnwillows" />
+    <alt key="26  /  30 " sub="ZNE" name="Horizon Canopy" />
+    <alt key="27  /  30 " sub="ZNE" name="Prismatic Vista" />
+    <alt key="28  /  30 " sub="ZNE" name="Strip Mine" />
+    <alt key="29  /  30 " sub="ZNE" name="Valakut, the Molten Pinnacle" />
+    <alt key="30  /  30 " sub="ZNE" name="Wasteland" />
+    <!-- 英雄譚 (DOM, C19, THB) -->
+    <alt key="018  /  269 " sub="DOM" name="Fall of the Thran" />
+    <alt key="021  /  269 " sub="DOM" name="History of Benalia" />
+    <alt key="038  /  269 " sub="DOM" name="Triumph of Gerrard" />
+    <alt key="042  /  269 " sub="DOM" name="The Antiquities War" />
+    <alt key="057  /  269 " sub="DOM" name="The Mirari Conjecture" />
+    <alt key="070  /  269 " sub="DOM" name="Time of Ice" />
+    <alt key="082  /  269 " sub="DOM" name="Chainer's Torment" />
+    <alt key="090  /  269 " sub="DOM" name="The Eldest Reborn" />
+    <alt key="100  /  269 " sub="DOM" name="Phyrexian Scriptures" />
+    <alt key="102  /  269 " sub="DOM" name="Rite of Belzenlok" />
+    <alt key="122  /  269 " sub="DOM" name="The First Eruption" />
+    <alt key="123  /  269 " sub="DOM" name="The Flame of Keld" />
+    <alt key="173  /  269 " sub="DOM" name="The Mending of Dominaria" />
+    <alt key="179  /  269 " sub="DOM" name="Song of Freyalise" />
+    <alt key="131  /  302 " sub="C19" name="The Eldest Reborn" />
+    <alt key="005  /  254 " sub="THB" name="The Birth of Meletis" />
+    <alt key="013  /  254 " sub="THB" name="Elspeth Conquers Death" />
+    <alt key="052  /  254 " sub="THB" name="Kiora Bests the Sea God" />
+    <alt key="053  /  254 " sub="THB" name="Medomai's Prophecy" />
+    <alt key="091  /  254 " sub="THB" name="Elspeth's Nightmare" />
+    <alt key="118  /  254 " sub="THB" name="Tymaret Calls the Dead" />
+    <alt key="124  /  254 " sub="THB" name="The Akroan War" />
+    <alt key="160  /  254 " sub="THB" name="The Triumph of Anax" />
+    <alt key="166  /  254 " sub="THB" name="The Binding of the Titans" />
+    <alt key="170  /  254 " sub="THB" name="The First Iroan Games" />
     <!-- 出来事 (ELD) -->
     <alt key="005  /  269 " sub="ELD" name="Ardenvale Tactician" />
     <alt key="011  /  269 " sub="ELD" name="Faerie Guidemother" />
@@ -1565,7 +1602,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="174  /  269 " sub="ELD" name="Rosethorn Acolyte" />
     <alt key="180  /  269 " sub="ELD" name="Tuinvale Treefolk" />
     <alt key="212  /  269 " sub="ELD" name="Oakhame Ranger" />
-    <!-- 変容 (IKO) -->
+    <!-- 変容 (IKO, C20) -->
     <alt key="003  /  274 " sub="IKO" name="Mysterious Egg" />
     <alt key="007  /  274 " sub="IKO" name="Cubwarden" />
     <alt key="016  /  274 " sub="IKO" name="Huntmaster Liger" />
@@ -1600,11 +1637,47 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="209  /  274 " sub="IKO" name="Snapdax, Apex of the Hunt" />
     <alt key="213  /  274 " sub="IKO" name="Trumpeting Gnarr" />
     <alt key="214  /  274 " sub="IKO" name="Vadrok, Apex of Thunder" />
-    <!-- 変容 (C20) -->
     <alt key="012  /  322 " sub="C20" name="Otrimi, the Ever-Playful" />
     <alt key="038  /  322 " sub="C20" name="Souvenir Snatcher" />
     <alt key="044  /  322 " sub="C20" name="Mindleecher" />
     <alt key="064  /  322 " sub="C20" name="Sawtusk Demolisher" />
+    <!-- モーダル両面カード (ZNR) -->
+    <alt key="012  /  280 " sub="ZNR" name="Emeria's Call" />
+    <alt key="019  /  280 " sub="ZNR" name="Kabira Takedown" />
+    <alt key="026  /  280 " sub="ZNR" name="Makindi Stampede" />
+    <alt key="030  /  280 " sub="ZNR" name="Ondu Inversion" />
+    <alt key="037  /  280 " sub="ZNR" name="Sejiri Shelter" />
+    <alt key="040  /  280 " sub="ZNR" name="Skyclave Cleric" />
+    <alt key="046  /  280 " sub="ZNR" name="Beyeen Veil" />
+    <alt key="060  /  280 " sub="ZNR" name="Glasspool Mimic" />
+    <alt key="064  /  280 " sub="ZNR" name="Jwari Disruption" />
+    <alt key="076  /  280 " sub="ZNR" name="Sea Gate Restoration" />
+    <alt key="080  /  280 " sub="ZNR" name="Silundi Vision" />
+    <alt key="086  /  280 " sub="ZNR" name="Umara Wizard" />
+    <alt key="090  /  280 " sub="ZNR" name="Agadeem's Awakening" />
+    <alt key="091  /  280 " sub="ZNR" name="Blackbloom Rogue" />
+    <alt key="106  /  280 " sub="ZNR" name="Hagra Mauling" />
+    <alt key="111  /  280 " sub="ZNR" name="Malakir Rebirth" />
+    <alt key="120  /  280 " sub="ZNR" name="Pelakka Predation" />
+    <alt key="132  /  280 " sub="ZNR" name="Zof Consumption" />
+    <alt key="134  /  280 " sub="ZNR" name="Akoum Warrior" />
+    <alt key="146  /  280 " sub="ZNR" name="Kazuul's Fury" />
+    <alt key="161  /  280 " sub="ZNR" name="Shatterskull Smashing" />
+    <alt key="165  /  280 " sub="ZNR" name="Song-Mad Treachery" />
+    <alt key="166  /  280 " sub="ZNR" name="Spikefield Hazard" />
+    <alt key="174  /  280 " sub="ZNR" name="Valakut Awakening" />
+    <alt key="180  /  280 " sub="ZNR" name="Bala Ged Recovery" />
+    <alt key="189  /  280 " sub="ZNR" name="Kazandu Mammoth" />
+    <alt key="192  /  280 " sub="ZNR" name="Khalni Ambush" />
+    <alt key="211  /  280 " sub="ZNR" name="Tangled Florahedron" />
+    <alt key="215  /  280 " sub="ZNR" name="Turntimber Symbiosis" />
+    <alt key="216  /  280 " sub="ZNR" name="Vastwood Fortification" />
+    <alt key="258  /  280 " sub="ZNR" name="Branchloft Pathway" />
+    <alt key="259  /  280 " sub="ZNR" name="Brightclimb Pathway" />
+    <alt key="260  /  280 " sub="ZNR" name="Clearwater Pathway" />
+    <alt key="261  /  280 " sub="ZNR" name="Cragcrown Pathway" />
+    <alt key="263  /  280 " sub="ZNR" name="Needleverge Pathway" />
+    <alt key="264  /  280 " sub="ZNR" name="Riverglide Pathway" />
     <!--<alt key="0000 / 1158 " sub="P " name="プロモ版のカード" />-->
   </add>
   <replace>
