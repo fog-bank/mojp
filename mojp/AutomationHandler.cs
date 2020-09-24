@@ -20,6 +20,7 @@ namespace Mojp
             private AutomationElement previewWnd;
             private CacheRequest eventCacheReq = new CacheRequest();
             private CacheRequest cacheReq = new CacheRequest();
+            private CacheRequest menuCacheReq = new CacheRequest();
 
             // Preview Window を探す
             private Condition prevWndCondition = new AndCondition(
@@ -84,6 +85,17 @@ namespace Mojp
                         ViewModel.InvokeSetMessage("起動中のプロセスの中に MO が見つかりません。");
                         return;
                     }
+
+                    //mtgoWnd = AutomationElement.RootElement.FindFirst(TreeScope.Children, new AndCondition(
+                    //    new PropertyCondition(AutomationElement.ProcessIdProperty, mtgoProc.Id),
+                    //    new PropertyCondition(AutomationElement.ClassNameProperty, "Window"),
+                    //    new PropertyCondition(AutomationElement.AutomationIdProperty, "ShinyMainView")));
+
+                    using (menuCacheReq.Activate())
+                    {
+                        Automation.AddAutomationEventHandler(AutomationElement.MenuOpenedEvent,
+                            AutomationElement.RootElement, TreeScope.Descendants, OnMenuOpened);
+                    }
                 }
 
                 // "Preview" という名前のウィンドウを探す (なぜかルートの子で見つかる)
@@ -136,6 +148,41 @@ namespace Mojp
 #endif          
             }
 
+            private void OnMenuOpened(object sender, AutomationEventArgs e)
+            {
+                var menu = AutomationElement.RootElement.FindFirst(TreeScope.Descendants, new AndCondition(
+                    new PropertyCondition(AutomationElement.ProcessIdProperty, mtgoProc.Id),
+                    new PropertyCondition(AutomationElement.ClassNameProperty, "MenuItem"),
+                    new PropertyCondition(AutomationElement.AutomationIdProperty, string.Empty),
+                    new PropertyCondition(AutomationElement.NameProperty, string.Empty)));
+
+                AutomationElementCollection elements = null;
+                try
+                {
+                    using (cacheReq.Activate())
+                        elements = menu?.FindAll(TreeScope.Descendants, textBlockCondition);
+                }
+                catch { Debug.WriteLine("TextBlock 要素の全取得に失敗しました。"); }
+
+                if (elements == null)
+                    return;
+
+                // 一連のテキストからカード名を探す
+                for (int i = 0; i < elements.Count; i++)
+                {
+                    string name = GetNamePropertyValue(elements[i]);
+
+                    // キャッシュ無効化時
+                    if (name == null)
+                        continue;
+
+                    Debug.WriteLine("[Menu] " + name.Replace(Environment.NewLine, "\\n"));
+
+                    if (TryFetchCard(name))
+                        return;
+                }
+            }
+
             /// <summary>
             /// 現在の Preview Pane に含まれる全テキストからカード名を取得し、表示します。
             /// </summary>
@@ -182,6 +229,7 @@ namespace Mojp
                 textBlockCondition = null;
                 cardTypeCondition = null;
                 ReleaseAutomationElement();
+                Automation.RemoveAllEventHandlers();
             }
 
             /// <summary>
@@ -560,8 +608,9 @@ namespace Mojp
                 if (previewWnd is null)
                     return;
 
+                Automation.RemoveAutomationPropertyChangedEventHandler(previewWnd, OnAutomaionNamePropertyChanged);
                 previewWnd = null;
-                Automation.RemoveAllEventHandlers();
+                //Automation.RemoveAllEventHandlers();
 #if DEBUG
                 Debug.WriteLine("Automation event handlers (after remove) = " +
                     (GetListeners()?.Count).GetValueOrDefault() + " @ T" + Thread.CurrentThread.ManagedThreadId);
