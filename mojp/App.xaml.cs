@@ -124,7 +124,14 @@ namespace Mojp
             Cards.Clear();
 
             foreach (var card in Card.ParseWhisper(sr))
+            {
+                if (Cards.ContainsKey(card.Name))
+                {
+                    Debug.WriteLine(card.Name + " を二重登録しようとしています。");
+                    continue;
+                }
                 Cards.Add(card.Name, card);
+            }
         }
 
         /// <summary>
