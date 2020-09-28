@@ -1105,7 +1105,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="加える）" value="加える。）" nodebug="true" />
     <regex target="text" pattern="受けるともに" value="受けるとともに" nodebug="true" />
     <regex target="text" pattern="(?&lt;!に)よって" value="によって" nodebug="true" />
-    <regex target="text" pattern="(?:ライラブラリー|ラブラリー)" value="ライブラリー" nodebug="true" />
+    <regex target="text" pattern="ライラブラリー|ラブラリー" value="ライブラリー" nodebug="true" />
     <regex target="text" pattern="修正" value="修整" nodebug="true" />
     <regex target="text" pattern="ときのみ唱えられる" value="ときにのみ唱えられる" nodebug="true" />
     <regex target="text" pattern="プレインズウォーカー１人" value="プレインズウォーカー１体" nodebug="true" />
@@ -1177,7 +1177,6 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="を得ることを除き" value="を持つことを除き" nodebug="true" />
     <regex target="text" pattern="、自分の墓地と手札" value="、自分の手札と墓地" nodebug="true" />
     <regex target="text" pattern="一番上の土地をプレイしても呪文を唱えてもよい" value="一番上から土地をプレイしても呪文を唱えてもよい" nodebug="true" />
-    <regex target="text" pattern="ゲームの外部(?:にある|から)あなたがオーナーで([^。]*)カード１枚を選び、(?:そのカード|それ)を公開し[て、]" value="ゲームの外部からあなたがオーナーで$1カード１枚を公開し、" nodebug="true" />
     <!-- 中丸追加 -->
     <regex target="type" pattern="部族(?=アーティファクト|エンチャント|インスタント|ソーサリー)" value="部族・" nodebug="true" />
     <regex target="text" pattern="(?&lt;=クリーチャー|アーティファクト|エンチャント|インスタント|ソーサリー|プレインズウォーカー|土地|パーマネント)(?=カード|呪文)" value="・" nodebug="true" />
@@ -1326,6 +1325,10 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="がコントロール(?:する|している)、?(?=(?:飛行|防衛|接合|その選ばれたタイプ)を持つ各?(?:攻撃)?クリーチャー)" value="がコントロールしていて" nodebug="true" />
     <regex target="text" pattern="がコントロール(?:する|している)、?\+1/\+1カウンターが置かれている(?=(?:他の)?各?クリーチャー)" value="がコントロールしていて+1/+1カウンターが置かれている" nodebug="true" />
     <regex target="text" pattern="クリーチャーにつけられている、あなたがコントロールしている" value="あなたがコントロールしていてクリーチャーにつけられている" nodebug="true" />
+    <!-- テンプレート変更：条件連結 -->
+    <regex target="text" pattern="追放領域にあるあなたがオーナーである" value="追放領域にありあなたがオーナーである" nodebug="true" />
+    <regex target="text" pattern="を持つ(?=.であり.である)" value="を持ち" nodebug="true" />
+    <regex target="text" pattern="オーナーである(?=[^。]*か[^。]*であるカード|[^。]*・カード(?:１枚)?か[^。]*・カード|[^。]*でないカード)" value="オーナーであり" nodebug="true" />
     <!-- テンプレート変更：手札/墓地から -->
     <regex target="text" pattern="あなたの墓地にある(?=(?:クリーチャー・|アーティファクト・|エンチャント・)?カード[０-９Ｘ]+枚を対象)" value="あなたの墓地から" nodebug="true" />
     <regex target="text" pattern="あなたの墓地にある(?=点数で見たマナ・コストが[^。]+対象)" value="あなたの墓地から" nodebug="true" />
@@ -1385,6 +1388,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="とき、オーナーは" value="とき、これのオーナーは" nodebug="true" />
     <regex target="text" pattern="それを唱えるために\((.)\)が(?:支払|使)われていないかぎり、それを生け贄に捧げる" value="これを唱えるために($1)が支払われていないかぎり、これを生け贄に捧げる" nodebug="true" />
     <regex target="text" pattern="あなたは２点のライフを支払ってもよい。そうしないなら、.+はタップ状態で戦場に出る。" value="あなたは２点のライフを支払ってもよい。そうしないなら、これはタップ状態で戦場に出る。" nodebug="true" />
+    <regex target="text" pattern="カード１枚を公開し、それをあなたの手札に加え(?=てもよい|る。」)" value="カード１枚を公開し、あなたの手札に加え" nodebug="true" />
     <!-- テンプレート変更：ライブラリーサーチ -->
     <!--<regex target="text" pattern="を探し、それら?をあなたの手札に加え" value="を探し、あなたの手札に加え" nodebug="true" />-->
     <!-- テンプレート変更 -->
@@ -1500,8 +1504,6 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="スピリット(・呪文)?(?:１つ)?か秘儀・呪文(?:１つ)?を唱えるたび、" value="スピリットか秘儀である呪文を唱えるたび、" nodebug="true" />
     <regex target="text" pattern="鳥・パーマネント・カードまたはクレリック・パーマネント・カード" value="鳥かクレリックであるパーマネント・カード" nodebug="true" />
     <regex target="text" pattern="[の・]呪文[とや]([^。]+)[の・]呪文を唱えるためのコストは" value="か$1である呪文を唱えるためのコストは" nodebug="true" />
-    <regex target="text" pattern="を持つ(?=.であり.である)" value="を持ち" nodebug="true" />
-    <regex target="text" pattern="オーナーである(?=[^。]*か[^。]*であるカード)" value="オーナーであり" nodebug="true" />
     <!--<regex target="text" pattern="魔巧 ― あなたの墓地にインスタントかソーサリーであるカード" value="魔巧 ― あなたの墓地にインスタントやソーサリーであるカード" nodebug="true" />-->
     <!-- 注釈文 -->
     <regex target="text" pattern="（このクリーチャーは攻撃できない。?）" value="（このクリーチャーでは攻撃できない。）" nodebug="true" />
@@ -1577,9 +1579,6 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <card name="Snow-Covered Mountain" jaName="冠雪の山" type="基本氷雪土地 ― 山">（(Ｔ)：(赤)を加える。）</card>
     <card name="Snow-Covered Plains" jaName="冠雪の平地" type="基本氷雪土地 ― 平地">（(Ｔ)：(白)を加える。）</card>
     <card name="Snow-Covered Swamp" jaName="冠雪の沼" type="基本氷雪土地 ― 沼">（(Ｔ)：(黒)を加える。）</card>
-    <!-- テキストが未設定のカード -->
-    <card name="Rampaging Brontodon" jaName="Rampaging Brontodon" type="クリーチャー ― 恐竜" pt="7/7">トランプル
-Rampaging Brontodonが攻撃するたび、ターン終了時まで、これはあなたがコントロールしている土地１つにつき+1/+1の修整を受ける。</card>
     <!-- テキストが正常でないカード -->
     <card name="Bludgeon Brawl" jaName="棍棒での殴り合い" type="エンチャント">クリーチャーでも装備品でもない各アーティファクトは、装備(Ｘ)と「装備しているクリーチャーは+X/+0の修整を受ける。」を持つ装備品である。Ｘはそのアーティファクトの点数で見たマナ・コストに等しい。</card>
     <card name="Chandra Nalaar" jaName="チャンドラ・ナラー" type="伝説のプレインズウォーカー ― チャンドラ" pt="6">[+1]：プレイヤー１人かプレインズウォーカー１体を対象とする。チャンドラ・ナラーはそれに１点のダメージを与える。
@@ -4241,22 +4240,10 @@ Thriving Moorが戦場に出るに際し、黒でない色１色を選ぶ。
 海門の嵐呼びが戦場に出たとき、このターン、あなたが次にインスタントやソーサリーであり点数で見たマナ・コストが２以下である呪文を唱えるとき、それをコピーする。海門の嵐呼びがキッカーされていたなら、代わりにその呪文を２回コピーする。あなたはそれらのコピーの新しい対象を選んでもよい。</card>
     
     <!-- ZNR (オラクル更新) -->
-    <card name="Lotus Cobra" jaName="水蓮のコブラ" type="クリーチャー ― 蛇" pt="2/1">上陸 ― 土地が１つあなたのコントロール下で戦場に出るたび、好きな色１色のマナ１点を加える。</card>
+    <card name="Ring of Ma'ruf" jaName="Ring of Ma'ruf" type="アーティファクト">(５),(Ｔ),Ring of Ma'rufを追放する：このターン、あなたが次にカードを１枚引くなら、代わりに、ゲームの外部からあなたがオーナーであるカード１枚をあなたの手札に加える。</card>
     <card name="Spawnsire of Ulamog" jaName="ウラモグの種父" type="クリーチャー ― エルドラージ" pt="7/11">滅殺１（このクリーチャーが攻撃するたび、防御プレイヤーはパーマネント１つを生け贄に捧げる。）
 (４)：無色の0/1のエルドラージ・落とし子・クリーチャー・トークンを２体生成する。それらは「このクリーチャーを生け贄に捧げる：(◇)を加える。」を持つ。
 (20)：ゲームの外部にありあなたがオーナーであるカードの中から、望む数のエルドラージ・呪文をそれらのマナ・コストを支払うことなく唱える。</card>
-    
-    <!-- ZNR (オラクル更新：ゲームの外部からカードを選ぶ) -->
-    <card name="Coax from the Blind Eternities" jaName="久遠の闇からの誘引" type="ソーサリー">あなたは、ゲームの外部からあなたがオーナーであるエルドラージ・カード１枚を公開するか、追放領域にありあなたがオーナーである表向きのエルドラージ・カード１枚を選んでもよい。そのカードをあなたの手札に加える。</card>
-    <card name="Death Wish" jaName="死せる願い" type="ソーサリー">あなたは、ゲームの外部からあなたがオーナーであるカード１枚をあなたの手札に加えてもよい。あなたはあなたのライフの端数を切り上げた半分を失う。死せる願いを追放する。</card>
-    <card name="Karn, the Great Creator" jaName="大いなる創造者、カーン" type="伝説のプレインズウォーカー ― カーン" pt="5">対戦相手がコントロールしているアーティファクトの起動型能力は起動できない。
-[+1]：クリーチャーでないアーティファクト最大１つを対象とする。あなたの次のターンまで、それはパワーとタフネスがそれぞれそれの点数で見たマナ・コストに等しいアーティファクト・クリーチャーになる。
-[-2]：あなたは、ゲームの外部からあなたがオーナーであるアーティファクト・カード１枚を公開するか、追放領域にありあなたがオーナーである表向きのアーティファクト・カード１枚を公開してもよい。そのカードをあなたの手札に加える。</card>
-    <card name="Mastermind's Acquisition" jaName="首謀者の収得" type="ソーサリー">以下から１つを選ぶ。
-・あなたのライブラリーからカード１枚を探し、それをあなたの手札に加え、その後あなたのライブラリーを切り直す。
-・ゲームの外部からあなたがオーナーであるカード１枚をあなたの手札に加える。</card>
-    <card name="Research" jaName="研究" type="インスタント" related="Development" wikilink="研究+開発/Research+Development">ゲームの外部からあなたがオーナーであるカード最大４枚をあなたのライブラリーに加えて切り直す。</card>
-    <card name="Ring of Ma'ruf" jaName="Ring of Ma'ruf" type="アーティファクト">(５),(Ｔ),Ring of Ma'rufを追放する：このターン、あなたが次にカードを１枚引くなら、代わりに、ゲームの外部からあなたがオーナーであるカード１枚をあなたの手札に加える。</card>
       
     <!-- ZNC -->
     <card name="Anowon, the Ruin Thief" jaName="遺跡の盗人、アノワン" type="伝説のクリーチャー ― 吸血鬼・ならず者" pt="2/4">他の、あなたがコントロールしているならず者は+1/+1の修整を受ける。
