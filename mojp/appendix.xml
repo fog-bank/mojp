@@ -1097,7 +1097,6 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <!--<alt key="0000 / 1158 " sub="P " name="プロモ版のカード" />-->
   </add>
   <replace>
-    <regex target="name" pattern="Lurrus of the Dream-Den" value="Lurrus of the Dream Den" />
     <!-- 誤字修正 -->
     <regex target="text" pattern="切り直す」" value="切り直す。」" nodebug="true" />
     <regex target="text" pattern="\)\:" value=")：" nodebug="true" />
@@ -1117,7 +1116,6 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="コントローラーカード" value="コントローラーはカード" nodebug="true" />
     <regex target="text" pattern="ライブラリ(?!ー)" value="ライブラリー" nodebug="true" />
     <regex target="text" pattern="パーティ(?!ー)" value="パーティー" nodebug="true" />
-    <regex target="text" pattern="魂絆を得る" value="絆魂を得る" nodebug="true" />
     <regex target="text" pattern="枚数半分" value="枚数の半分" nodebug="true" />
     <regex target="text" pattern="フェイズ・アウトしている際は" value="フェイズ・アウトしている間は" nodebug="true" />
     <regex target="text" pattern="インスタントを唱えるときなら" value="インスタントを唱えられるときなら" nodebug="true" />
@@ -4194,20 +4192,7 @@ Thriving Moorが戦場に出るに際し、黒でない色１色を選ぶ。
 (２),(Ｔ)：土地１つを対象とする。演劇の舞台は、この能力を持つことを除きそれのコピーになる。</card>-->
     
     <!-- テキストが正常でないカード (ZNR) -->
-    <card name="Journey to Oblivion" jaName="忘却への旅" type="エンチャント">この呪文を唱えるためのコストは、あなたのパーティーを構成しているクリーチャー１体につき(１)少なくなる。（あなたのパーティーは、ウィザードとクレリックと戦士とならず者それぞれ最大１体から構成される。）
-忘却への旅が戦場に出たとき、対戦相手がコントロールしていて土地でないパーマネント１つを対象とする。忘却への旅が戦場を離れるまで、それを追放する。</card>
-    <card name="Kitesail Cleric" jaName="帆凧の僧侶" type="クリーチャー ― コー・クレリック" pt="1/1">キッカー(２)(白)（あなたはこの呪文を唱えるに際し、追加で(２)(白)を支払ってもよい。）
-飛行
-帆凧の僧侶が戦場に出たとき、これがキッカーされていた場合、クリーチャー最大２体を対象とする。それらをタップする。</card>
-    <card name="Legion Angel" jaName="軍団の天使" type="クリーチャー ― 天使・戦士" pt="4/3">飛行
-軍団の天使が戦場に出たとき、あなたは「ゲームの外部からあなたがオーナーであり《軍団の天使》という名前であるカード１枚を公開し、あなたの手札に加える。」を選んでもよい。</card>
-    <card name="Pelakka Caverns" jaName="ペラッカの洞窟" type="土地" related="Pelakka Predation">ペラッカの洞窟はタップ状態で戦場に出る。
-(Ｔ)：(黒)を加える。</card>
     <card name="Seafloor Stalker" jaName="海底の忍び寄り" type="クリーチャー ― マーフォーク・ならず者" pt="2/3">(４)(青)：ターン終了時まで、海底の忍び寄りは+1/+0の修整を受け、このターン、これはブロックされない。この能力を起動するためのコストはあなたのパーティーを構成しているクリーチャー１体につき(１)少なくなる。（あなたのパーティーは、ウィザードとクレリックと戦士とならず者それぞれ最大１体から構成される。）</card>
-    <card name="Shepherd of Heroes" jaName="英雄たちの世話人" type="クリーチャー ― 天使・クレリック" pt="3/4">飛行
-英雄たちの世話人が戦場に出たとき、あなたはあなたのパーティーを構成しているクリーチャー１体につき２点のライフを得る。（あなたのパーティーは、ウィザードとクレリックと戦士とならず者それぞれ最大１体から構成される。）</card>
-    <card name="Zof Bloodbog" jaName="ゾフの血溜まり" type="土地" related="Zof Consumption">ゾフの血溜まりはタップ状態で戦場に出る。
-(Ｔ)：(黒)を加える。</card>
     
     <!-- ZNR -->
     <card name="Attended Healer" jaName="従者つきの癒し手" type="クリーチャー ― コー・クレリック" pt="2/3">あなたが各ターン最初にライフを得るたび、白の1/1の猫・クリーチャー・トークンを１体生成する。
