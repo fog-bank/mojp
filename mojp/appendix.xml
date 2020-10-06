@@ -81,6 +81,7 @@
     <card name="Urami" jaName="烏羅未" type="トークン・伝説のクリーチャー ― デーモン・スピリット" pt="5/5" wikilink="烏羅未の墳墓/Tomb of Urami">飛行</card>
     <card name="Voja" jaName="ヴォジャ" type="トークン・伝説のクリーチャー ― 狼" pt="2/2" wikilink="トルシミール・ウルフブラッド/Tolsimir Wolfblood"></card>
     <card name="Voja, Friend to Elves" jaName="エルフの友、ヴォジャ" type="トークン・伝説のクリーチャー ― 狼" pt="3/3" wikilink="狼の友、トルシミール/Tolsimir, Friend to Wolves"></card>
+    <card name="Walker" jaName="Walker" type="トークン・クリーチャー ― ゾンビ" pt="2/2"></card>
     <card name="Wasp" jaName="ワスプ" type="トークン・アーティファクト・クリーチャー ― 昆虫" pt="1/1" wikilink="蜂の巣/The Hive">飛行</card>
     <card name="Wirefly" jaName="針金バエ" type="トークン・アーティファクト・クリーチャー ― 昆虫" pt="2/2" wikilink="針金バエの巣/Wirefly Hive">飛行</card>
     <!--<card name="Wolves of the Hunt" jaName="狩人狼" type="トークン・クリーチャー ― 狼" pt="1/1" wikilink="Master of the Hunt">他の《狩人狼》という名前のクリーチャーとのバンド</card>-->
@@ -202,6 +203,23 @@
     <card name="Zombie Knight" jaName="ゾンビ・騎士" type="トークン・クリーチャー ― ゾンビ・騎士" pt="2/2" wikilink="リッチの騎士、ジョス・ヴェス/Josu Vess, Lich Knight">威迫（このクリーチャーは２体以上のクリーチャーによってしかブロックされない。）</card>
     <card name="Zombie Warrior" jaName="ゾンビ・戦士" type="トークン・クリーチャー ― ゾンビ・戦士" pt="4/4" wikilink="永遠神オケチラ/God-Eternal Oketra">警戒</card>
     <card name="Zombie Wizard" jaName="ゾンビ・ウィザード" type="トークン・クリーチャー ― ゾンビ・ウィザード" pt="1/1" wikilink="アンクスの死者の王/Lich Lord of Unx"></card>
+    <!-- SL2 -->
+    <card name="Rick, Steadfast Leader" jaName="Rick, Steadfast Leader" type="伝説のクリーチャー ― 人間・兵士" pt="3/4">Rick, Steadfast Leaderが戦場に出るに際し、先制攻撃か警戒か絆魂のうち能力２つを選ぶ。
+あなたがコントロールしている人間は選ばれた各能力を持つ。
+あなたが人間を４体以上コントロールしているかぎり、あなたがコントロールしている人間は+2/+2の修整を受ける。</card>
+    <card name="Daryl, Hunter of Walkers" jaName="Daryl, Hunter of Walkers" type="伝説のクリーチャー ― 人間・射手" pt="4/4">あなたのアップキープの開始時に、対戦相手１人を対象とする。そのプレイヤーはWalkerトークンを３体生成する。
+(Ｔ)：クリーチャー１体を対象とする。Daryl, Hunter of Walkersはそれに２点のダメージを与える。
+対戦相手がコントロールしているゾンビが１体死亡するたび、カードを１枚引く。</card>
+    <card name="Glenn, the Voice of Calm" jaName="Glenn, the Voice of Calm" type="伝説のクリーチャー ― 人間・アドバイザー" pt="1/3">潜伏（このクリーチャーは、これより大きなパワーを持つクリーチャーによってはブロックされない。）
+Glenn, the Voice of Calmがプレイヤー１人に戦闘ダメージを与えるたび、これのパワーに等しい枚数のカードを引く。</card>
+    <card name="Michonne, Ruthless Survivor" jaName="Michonne, Ruthless Survivor" type="伝説のクリーチャー ― 人間・戦士" pt="3/3">Michonne, Ruthless Survivorが戦場に出たとき、Walkerトークンを２体生成する。
+Michonne, Ruthless Survivorに装備品がついているかぎり、これは可能ならブロックされなければならない。
+Michonne, Ruthless Survivorとゾンビ２体以上が攻撃するたび、ターン終了時まで、これは破壊不能を得る。</card>
+    <card name="Negan, the Cold-Blooded" jaName="Negan, the Cold-Blooded" type="伝説のクリーチャー ― 人間・ならず者" pt="4/3">Negan, the Cold-Bloodedが戦場に出たとき、対戦相手１人を対象とする。あなたとそのプレイヤーはそれぞれ、秘密裏にそのプレイヤーがコントロールしているクリーチャー１体を選ぶ。その後、それらの選択を公開し、そのプレイヤーはそれらのクリーチャーを生け贄に捧げる。
+対戦相手がクリーチャーを１体生け贄に捧げるたび、あなたは宝物・トークンを１つ生成する。</card>
+    <card name="Lucille" jaName="Lucille" type="伝説のアーティファクト ― 装備品">装備しているクリーチャーは+2/+0の修整を受け威迫を持つ。
+装備しているクリーチャーが攻撃するたび、防御プレイヤーはクリーチャー１体を生け贄に捧げる。そうしたなら、あなたはWalkerトークンを１体生成する。
+装備(４)</card>
     <!-- Gift Pack (M19) -->
     <card name="Angler Turtle" jaName="Angler Turtle" type="クリーチャー ― 海亀" pt="5/7">呪禁
 各戦闘で、対戦相手がコントロールしているクリーチャーは可能なら攻撃する。</card>
@@ -889,6 +907,13 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="92  /  96 " sub="UND" name="Swamp" />
     <alt key="94  /  96 " sub="UND" name="Mountain" />
     <alt key="96  /  96 " sub="UND" name="Forest" />-->
+    <!-- SL2 -->
+    <alt key="143  /   " sub="SL2" name="Rick, Steadfast Leader" />
+    <alt key="144  /   " sub="SL2" name="Daryl, Hunter of Walkers" />
+    <alt key="145  /   " sub="SL2" name="Glenn, the Voice of Calm" />
+    <alt key="146  /   " sub="SL2" name="Michonne, Ruthless Survivor" />
+    <alt key="147  /   " sub="SL2" name="Negan, the Cold-Blooded" />
+    <alt key="581  /   " sub="SL2" name="Lucille" />
     <!-- Ultimate Box toppers (UMA) -->
     <alt key="U01  /  40 " sub="UMA" name="Emrakul, the Aeons Torn" />
     <alt key="U02  /  40 " sub="UMA" name="Karn Liberated" />
