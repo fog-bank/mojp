@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="mojp.exe" size="137216">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="mojp.exe" size="240128">
       <assemblyIdentity name="mojp" version="2.11.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>2cvSHIN+Kk3dERfCAqViUJSCNFLRUby5KH57djmvG14=</dsig:DigestValue>
+        <dsig:DigestValue>iIntlFC6FngrwSmX+tJQ3widZo3rXXbw8rfoZPDtjcg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
