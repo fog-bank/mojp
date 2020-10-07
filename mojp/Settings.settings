@@ -62,5 +62,8 @@
     <Setting Name="PDServerLastTimeUtc" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="PromoCodeNumber" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">0000  /  1158 </Value>
+    </Setting>
   </Settings>
 </SettingsFile>

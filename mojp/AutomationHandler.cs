@@ -15,7 +15,7 @@ namespace Mojp
         /// </summary>
         private class AutomationHandler
         {
-            private const string PromoCollectorNumber = "0000  /  1158 ";
+            private readonly string PromoCollectorNumber = Settings.Default.PromoCodeNumber;
             private Process mtgoProc;
             private AutomationElement previewWnd;
             private CacheRequest eventCacheReq = new CacheRequest();

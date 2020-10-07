@@ -21,7 +21,7 @@ namespace Mojp
         /// <summary>
         /// カードの英語名から、英語カード名・日本語カード名・日本語カードテキストを検索します。
         /// </summary>
-        public static Dictionary<string, Card> Cards { get; } = new Dictionary<string, Card>(19756);
+        public static Dictionary<string, Card> Cards { get; } = new Dictionary<string, Card>(20845);
 
         /// <summary>
         /// 代替テキスト検索の主キーです。
@@ -36,7 +36,7 @@ namespace Mojp
         /// <summary>
         /// 代替テキストによるカード検索を行います。
         /// </summary>
-        public static Dictionary<string, AltCard> AltCards { get; } = new Dictionary<string, AltCard>(85);
+        public static Dictionary<string, AltCard> AltCards { get; } = new Dictionary<string, AltCard>(205);
 
         /// <summary>
         /// このアプリの設定を取得します。
