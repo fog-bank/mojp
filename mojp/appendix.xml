@@ -900,7 +900,8 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <wikilink name="Warden" wikilink="万全+番人/Warrant+Warden" />
     <!-- その他のリンク修正 -->
     <wikilink name="Captivating Vampire" wikilink="蟲惑的な吸血鬼/Captivating Vampire" />
-    <wikilink name="Lurrus of the Dream-Den" wikilink="夢の巣のルールス/Lurrus of the Dream-Den" />
+    <!-- 代替キー -->
+    <!--<alt key="0000 / 1158 " sub="P " name="プロモ版のカード" />-->
     <!-- UND -->
     <!--<alt key="88  /  96 " sub="UND" name="Plains" />
     <alt key="90  /  96 " sub="UND" name="Island" />
@@ -1119,7 +1120,6 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="261  /  280 " sub="ZNR" name="Cragcrown Pathway" />
     <alt key="263  /  280 " sub="ZNR" name="Needleverge Pathway" />
     <alt key="264  /  280 " sub="ZNR" name="Riverglide Pathway" />
-    <!--<alt key="0000 / 1158 " sub="P " name="プロモ版のカード" />-->
   </add>
   <replace>
     <!-- 誤字修正 -->
