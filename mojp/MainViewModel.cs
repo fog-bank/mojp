@@ -15,7 +15,7 @@ namespace Mojp
     public sealed partial class MainViewModel : INotifyPropertyChanged
     {
         private readonly SettingsCache settings = App.SettingsCache;
-        private AutomationHandler automation;
+        private readonly AutomationHandler automation;
         private DispatcherTimer timer;
         private List<Card> displayCards;
         private int selectedIndex = -1;

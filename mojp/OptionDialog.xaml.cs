@@ -50,24 +50,13 @@ namespace Mojp
             cmbFonts.ItemsSource = fontNames;
 
             // CardDisplayNameType 型リストの設定
-            switch (vm.CardDisplayNameType)
+            cmbCardDisplayName.SelectedIndex = vm.CardDisplayNameType switch
             {
-                case CardDisplayNameType.JananeseEnglish:
-                    cmbCardDisplayName.SelectedIndex = 1;
-                    break;
-
-                case CardDisplayNameType.EnglishJapanese:
-                    cmbCardDisplayName.SelectedIndex = 2;
-                    break;
-
-                case CardDisplayNameType.English:
-                    cmbCardDisplayName.SelectedIndex = 3;
-                    break;
-
-                default:
-                    cmbCardDisplayName.SelectedIndex = 0;
-                    break;
-            }
+                CardDisplayNameType.JananeseEnglish => 1,
+                CardDisplayNameType.EnglishJapanese => 2,
+                CardDisplayNameType.English => 3,
+                _ => 0,
+            };
             DataContext = vm;
         }
 

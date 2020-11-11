@@ -92,20 +92,13 @@ namespace Mojp
         {
             get
             {
-                switch (App.SettingsCache.CardDisplayNameType)
+                return App.SettingsCache.CardDisplayNameType switch
                 {
-                    case CardDisplayNameType.JananeseEnglish:
-                        return FullName;
-
-                    case CardDisplayNameType.EnglishJapanese:
-                        return HasJapaneseName ? Name + " / " + JapaneseName : EnglishName;
-
-                    case CardDisplayNameType.English:
-                        return EnglishName;
-
-                    default:
-                        return JapaneseName;
-                }
+                    CardDisplayNameType.JananeseEnglish => FullName,
+                    CardDisplayNameType.EnglishJapanese => HasJapaneseName ? Name + " / " + JapaneseName : EnglishName,
+                    CardDisplayNameType.English => EnglishName,
+                    _ => JapaneseName,
+                };
             }
         }
 
