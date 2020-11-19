@@ -4,7 +4,7 @@
   <description asmv2:iconFile="Resources\dictionary.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="mojp" version="2.11.0.0" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="mojp" version="2.12.0.0" language="neutral" processorArchitecture="msil" />
     <commandLine file="mojp.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -44,13 +44,13 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="mojp.exe" size="240640">
-      <assemblyIdentity name="mojp" version="2.11.0.0" language="neutral" processorArchitecture="msil" />
+      <assemblyIdentity name="mojp" version="2.12.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>i2fL1gTZLOH3o0q60sxcds8i5BishjsXETAPh/SGs+8=</dsig:DigestValue>
+        <dsig:DigestValue>552bZaaHmmDw8MA/z7djRmjmdK0h1KmY3Urp+6glKwo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
