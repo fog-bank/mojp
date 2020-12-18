@@ -9,6 +9,79 @@
 クリーチャーが１体あなたに戦闘ダメージを与えるたび、それのコントローラーが統治者になる。</card>
     <card name="City's Blessing" jaName="都市の承認" type="" wikilink="昇殿"></card>
     <card name="プロモ版のカード" jaName="プロモ版のカード" type="" wikilink="">これはプロモ版のカードですが、UI テキストからカード名を判別できないため、カードテキストを表示できません。ご不便をおかけして申し訳ありません。</card>
+    <!-- KHM -->
+    <card name="Magda, Brazen Outlaw" jaName="厚顔の無法者、マグダ" type="伝説のクリーチャー ― ドワーフ・狂戦士" pt="2/1">あなたがコントロールしている、他のすべてのドワーフは+1/+0の修整を受ける。
+あなたがコントロールしているドワーフ１体がタップ状態になるたび、宝物・トークン１つを生成する。
+宝物５つを生け贄に捧げる：あなたのライブラリーからアーティファクトかドラゴンであるカード１枚を探し、戦場に出す。その後あなたのライブラリーを切り直す。</card>
+    
+    <card name="Realmwalker" jaName="領界渡り" type="クリーチャー ― 多相の戦士" pt="2/3">多相（このカードはすべてのクリーチャー・タイプである。）
+領界渡りが戦場に出るに際し、クリーチャー・タイプ１つを選ぶ。
+あなたはいつでもあなたのライブラリーの一番上のカードを見てよい。
+あなたはあなたのライブラリーの一番上からその選ばれたタイプのクリーチャー・呪文を唱えてもよい。</card>
+    
+    <card name="Kaya the Inexorable" jaName="情け無用のケイヤ" type="伝説のプレインズウォーカー ― ケイヤ" pt="5">[+1]：トークンでないクリーチャー最大１体を対象とする。それの上に幽体カウンター１個を置く。それは「このクリーチャーが死亡するか追放領域に置かれたとき、これをオーナーの手札に戻し、飛行を持つ白の1/1のスピリット・クリーチャー・トークン１体を生成する。」を得る。
+[-3]：土地でないパーマネント１つを対象とする。それを追放する。
+[-7]：あなたは「あなたのアップキープの開始時に、あなたは、あなたの手札からかあなたの墓地からか追放領域にありあなたがオーナーであるカードの中から、伝説の呪文１つを、そのマナ・コストを支払うことなく唱えてもよい。」を持つ紋章を得る。</card>
+    <card name="Showdown of the Skalds" jaName="スカルドの決戦" type="エンチャント ― 英雄譚">（この英雄譚が出た際とあなたのドロー・ステップの後に、伝承カウンターを１個加える。IIIの後に、生け贄に捧げる。）
+I ― あなたのライブラリーの一番上からカード４枚を追放する。次のあなたのターンの終了時まで、あなたはそれらのカードをプレイしてもよい。
+II,III ― このターン、あなたが呪文を唱えるたび、あなたがコントロールしているクリーチャー１体を対象とする。それの上に+1/+1カウンター１個を置く。</card>
+    
+    <card name="Pyre of Heroes" jaName="英雄たちの送り火" type="アーティファクト">(２),(Ｔ),クリーチャー１体を生け贄に捧げる：あなたのライブラリーから、その生け贄に捧げられたクリーチャーと共通のクリーチャー・タイプを持ち、そのクリーチャーの点数で見たマナ・コストに１を足した値に等しい点数で見たマナ・コストを持つクリーチャー・カード１枚を探し、戦場に出す。その後あなたのライブラリーを切り直す。この能力は、あなたがソーサリーを唱えられるときにのみ起動できる。</card>
+    
+    <card name="Halvar, God of Battle" jaName="戦闘の神、ハルヴァール" type="伝説のクリーチャー ― 神" pt="4/4" related="Sword of the Realms">あなたがコントロールしていてオーラや装備品がついているすべてのクリーチャーは二段攻撃を持つ。
+各戦闘の開始時に、あなたがコントロールしているクリーチャーについている、オーラ１つか装備品１つと、あなたがコントロールしているクリーチャー１体を対象とする。その前者をその後者につける。</card>
+    <card name="Sword of the Realms" jaName="領界の剣" type="伝説のアーティファクト ― 装備品" related="Halvar, God of Battle">装備しているクリーチャーは+2/+0の修整を受け警戒を持つ。
+装備しているクリーチャーが死亡するたび、それをオーナーの手札に戻す。
+装備(１)(白)</card>
+    <card name="Barkchannel Pathway" jaName="樹皮路の小道" type="土地" related="Tidechannel Pathway">(Ｔ)：(緑)を加える。</card>
+    <card name="Tidechannel Pathway" jaName="潮水路の小道" type="土地" related="Barkchannel Pathway">(Ｔ)：(青)を加える。</card>
+    <card name="Blightstep Pathway" jaName="荒廃踏みの小道" type="土地" related="Searstep Pathway">(Ｔ)：(黒)を加える。</card>
+    <card name="Searstep Pathway" jaName="灼熱踏みの小道" type="土地" related="Blightstep Pathway">(Ｔ)：(赤)を加える。</card>
+    <card name="Darkbore Pathway" jaName="闇孔の小道" type="土地" related="Slitherbore Pathway">(Ｔ)：(黒)を加える。</card>
+    <card name="Slitherbore Pathway" jaName="蛇孔の小道" type="土地" related="Darkbore Pathway">(Ｔ)：(緑)を加える。</card>
+    <card name="Hengegate Pathway" jaName="連門の小道" type="土地" related="Mistgate Pathway">(Ｔ)：(白)を加える。</card>
+    <card name="Mistgate Pathway" jaName="霧門の小道" type="土地" related="Hengegate Pathway">(Ｔ)：(青)を加える。</card>
+    
+    <!-- KHM variants (374-393 : theme booster) -->
+    <card name="Valkyrie Harbinger" jaName="戦乙女の先触れ" type="クリーチャー ― 天使・クレリック" pt="4/5">飛行、絆魂
+各終了ステップの開始時に、このターンにあなたが４点以上のライフを得ていた場合、飛行と警戒を持つ白の4/4の天使・クリーチャー・トークン１体を生成する。</card>
+    <card name="Armed and Armored" jaName="完全武装" type="インスタント">ターン終了時まで、あなたがコントロールしているすべての機体はアーティファクト・クリーチャーになる。あなたがコントロールしているドワーフ１体を選ぶ。あなたがコントロールしている望む数の装備品をそれにつける。</card>
+    <card name="Starnheim Aspirant" jaName="シュタルンハイムの野心家" type="クリーチャー ― 人間・クレリック" pt="2/2">あなたが天使・呪文を唱えるためのコストは(２)少なくなる。</card>
+    <card name="Warchanter Skald" jaName="戦詠みのスカルド" type="クリーチャー ― ドワーフ・クレリック" pt="2/3">戦詠みのスカルドがタップ状態になるたび、これにオーラや装備品がついている場合、赤の2/1のドワーフ・狂戦士・クリーチャー・トークン１体を生成する。</card>
+    <card name="Youthful Valkyrie" jaName="若年の戦乙女" type="クリーチャー ― 天使" pt="1/3">飛行
+他の天使１体があなたのコントロール下で戦場に出るたび、若年の戦乙女の上に+1/+1カウンター１個を置く。</card>
+    
+    <card name="Surtland Elementalist" jaName="セルトランドの精霊術師" type="クリーチャー ― 巨人・ウィザード" pt="8/8">この呪文を唱えるための追加コストとして、あなたの手札から巨人・カード１枚を公開するか(２)を支払う。
+セルトランドの精霊術師が攻撃するたび、あなたはあなたの手札からインスタントかソーサリーである呪文１つを、そのマナ・コストを支払うことなく唱えてもよい。</card>
+    <card name="Absorb Identity" jaName="自我の吸収" type="インスタント">クリーチャー１体を対象とする。それをオーナーの手札に戻す。あなたは「ターン終了時まで、あなたがコントロールしているすべての多相の戦士はそのクリーチャーのコピーになる。」を選んでもよい。</card>
+    <card name="Giant's Grasp" jaName="巨人の掌握" type="エンチャント ― オーラ">エンチャント（あなたがコントロールしている巨人）
+巨人の掌握が戦場に出たとき、土地でないパーマネント１つを対象とする。巨人の掌握が戦場にあるかぎり。あなたはそれのコントロールを得る。</card>
+    
+    <card name="Cleaving Reaper" jaName="肉裂きの死神" type="クリーチャー ― 天使・狂戦士" pt="5/3">飛行、トランプル
+３点のライフを支払う：あなたの墓地から肉裂きの死神をあなたの手札に戻す。この能力は、このターンに天使か狂戦士をあなたのコントロール下で戦場に出していたときにのみ起動できる。</card>
+    <card name="Elderfang Ritualist" jaName="古牙の儀式者" type="クリーチャー ― エルフ・クレリック" pt="3/1">古牙の儀式者が死亡したとき、あなたの墓地から他のエルフ・カード１枚を対象とする。それをあなたの手札に戻す。</card>
+    <card name="Renegade Reaper" jaName="背教の死神" type="クリーチャー ― 天使・狂戦士" pt="2/3">飛行
+背教の死神が戦場に出たとき、カード４枚を切削する。これにより天使・カード１枚以上が切削されたなら、あなたは４点のライフを得る。（カードを切削するとは、あなたのライブラリーの一番上からカードをあなたの墓地に置くことである。）</card>
+    <card name="Thornmantle Striker" jaName="茨外套の打撃者" type="クリーチャー ― エルフ・ならず者" pt="4/3">茨外套の打撃者が戦場に出たとき、以下から１つを選ぶ。
+・パーマネント１つを対象とする。それの上からカウンターＸ個を取り除く。Ｘはあなたがコントロールしているエルフの数に等しい。
+・対戦相手がコントロールしているクリーチャー１体を対象とする。ターン終了時まで、それは-X/-Xの修整を受ける。Ｘはあなたがコントロールしているエルフの数に等しい。</card>
+    
+    <card name="Surtland Flinger" jaName="セルトランドの投げ飛ばし屋" type="クリーチャー ― 巨人・狂戦士" pt="4/6">セルトランドの投げ飛ばし屋が攻撃するたび、あなたは他のクリーチャー１体を生け贄に捧げてもよい。そうしたとき、クリーチャー１体かプレインズウォーカー１体かプレイヤー１人を対象とする。セルトランドの投げ飛ばし屋はそれに、その生け贄に捧げたクリーチャーのパワーに等しい点数のダメージを与える。その生け贄に捧げたクリーチャーが巨人であったなら、セルトランドの投げ飛ばし屋は代わりにその２倍の点数のダメージを与える。</card>
+    <card name="Bearded Axe" jaName="鈎斧" type="アーティファクト ― 装備品">装備しているクリーチャーは、あなたがコントロールしているドワーフや装備品や機体１つにつき+1/+1の修整を受ける。
+装備(２)</card>
+    <card name="Fire Giant's Fury" jaName="炎巨人の憤怒" type="ソーサリー">あなたがコントロールしている巨人１体を対象とする。ターン終了時まで、それは+2/+2の修整を受けトランプルを得る。このターン、それがプレイヤー１人に戦闘ダメージを与えるたび、あなたのライブラリーの一番上からその点数に等しい枚数のカードを追放する。次のあなたのターンの終了時まで、あなたはそれらのカードをプレイしてもよい。</card>
+    <card name="Gilded Assault Cart" jaName="金の突撃車" type="アーティファクト ― 機体" pt="5/1">トランプル
+搭乗２（あなたがコントロールしていてパワーの合計が２以上になる望む数のクリーチャーをタップする：ターン終了時まで、この機体はアーティファクト・クリーチャーになる。）
+宝物２つを生け贄に捧げる：あなたの墓地から金の突撃車をあなたの手札に戻す。</card>
+    
+    <card name="Canopy Tactician" jaName="梢の戦術家" type="クリーチャー ― エルフ・戦士" pt="3/3">あなたがコントロールしている、他のすべてのエルフは+1/+1の修整を受ける。
+(Ｔ)：(緑)(緑)(緑)を加える。</card>
+    <card name="Elven Ambush" jaName="エルフの伏兵" type="インスタント">あなたがコントロールしているエルフ１体につき１体の、緑の1/1のエルフ・戦士・クリーチャー・トークンを生成する。</card>
+    <card name="Gladewalker Ritualist" jaName="林歩きの儀式者" type="クリーチャー ― 多相の戦士" pt="3/3">多相（このカードはすべてのクリーチャー・タイプである。）
+他の《林歩きの儀式者》という名前のクリーチャー１体があなたのコントロール下で戦場に出るたび、カード１枚を引く。</card>
+    
+    <card name="Rampage of the Valkyries" jaName="戦乙女の猛威" type="エンチャント">戦乙女の猛威が戦場に出たとき、飛行と警戒を持つ白の4/4の天使・クリーチャー・トークン１体を生成する。
+あなたがコントロールしている天使１体が死亡するたび、他の各プレイヤーはそれぞれクリーチャー１体を生け贄に捧げる。</card>
     <!-- クリーチャーでないトークン -->
     <card name="Clue" jaName="手掛かり" type="トークン・アーティファクト ― 手掛かり" wikilink="手掛かり">(２),このアーティファクトを生け贄に捧げる：カードを１枚引く。</card>
     <card name="Etherium Cell" jaName="エーテリウム電池" type="トークン・アーティファクト" wikilink="策謀家テゼレット/Tezzeret the Schemer">(Ｔ),このアーティファクトを生け贄に捧げる：好きな色１色のマナ１点を加える。</card>
@@ -581,6 +654,8 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <pt name="Enchanted Carriage" pt="4/4" />
     <!-- 機体のP/T (THB) -->
     <pt name="Thundering Chariot" pt="3/3" />
+    <!-- 機体のP/T (KHM) -->
+    <pt name="Gilded Assault Cart" pt="5/1" />
     <!-- 関連カード -->
     <related name="Alpine Houndmaster" related="Alpine Watchdog|Igneous Cur" />
     <related name="Angel's Herald" related="Empyrial Archangel" />
@@ -1084,6 +1159,15 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="261  /  280 " sub="ZNR" name="Cragcrown Pathway" />
     <alt key="263  /  280 " sub="ZNR" name="Needleverge Pathway" />
     <alt key="264  /  280 " sub="ZNR" name="Riverglide Pathway" />
+    <!-- モーダル両面カード (KHM) -->
+    <alt key="015  /  285 " sub="KHM" name="Halvar, God of Battle" />
+    <alt key="251  /  285 " sub="KHM" name="Barkchannel Pathway" />
+    <alt key="252  /  285 " sub="KHM" name="Blightstep Pathway" />
+    <alt key="254  /  285 " sub="KHM" name="Darkbore Pathway" />
+    <alt key="260  /  285 " sub="KHM" name="Hengegate Pathway" />
+    <!-- 英雄譚 (KHM) -->
+    <alt key="229  /  285 " sub="KHM" name="Showdown of the Skalds" />
+    <alt key="000  /  285 " sub="KHM" name="" />
   </add>
   <replace>
     <!-- 誤字修正 -->
