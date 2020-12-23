@@ -79,8 +79,11 @@ namespace Mojp
                 commands[2].IsVisible = false;
 
                 commands[3] = vm.GoToWikiCommand;
+#if !OFFLINE
                 commands[3].IsVisible = true;
-
+#else
+                commands[3].IsVisible = false;
+#endif
                 commands[4] = vm.OptionCommand;
                 commands[4].IsVisible = true;
             }

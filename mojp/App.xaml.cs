@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Net.Http;
 using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Threading;
 using System.Xml.Linq;
+#if !OFFLINE
+using System.Net.Http;
+#endif
 
 namespace Mojp
 {
@@ -43,10 +45,12 @@ namespace Mojp
         /// </summary>
         public static SettingsCache SettingsCache { get; } = new SettingsCache();
 
+#if !OFFLINE
         /// <summary>
         /// このアプリで共有する <see cref="System.Net.Http.HttpClient"/> を取得します。
         /// </summary>
         public static Lazy<HttpClient> HttpClient { get; } = new Lazy<HttpClient>();
+#endif
 
         /// <summary>
         /// <see cref="App"/> に関連付けられている <see cref="Dispatcher"/> を取得します。
@@ -63,10 +67,12 @@ namespace Mojp
         /// </summary>
         public static bool IsClickOnce { get; private set; }
 
+#if !OFFLINE
         /// <summary>
         /// このアプリが ClickOnce で実行されている場合のデータディレクトリへのパスを取得します。
         /// </summary>
         private static string DataDirectory { get; set; }
+#endif
 
         /// <summary>
         /// Application Entry Point.
@@ -81,11 +87,13 @@ namespace Mojp
             {
                 if (createdNew)
                 {
+#if !OFFLINE
                     var domain = AppDomain.CurrentDomain;
                     IsClickOnce = domain.ActivationContext?.Identity.FullName != null;
 
                     if (IsClickOnce)
                         DataDirectory = domain.GetData("DataDirectory") as string;
+#endif
 
                     var app = new App();
                     app.InitializeComponent();
@@ -94,11 +102,14 @@ namespace Mojp
             }
         }
 
+#if !OFFLINE
         /// <summary>
         /// ClickOnce アプリの場合はデータディレクトリ下のパスになるようにパスを調整します。
         /// </summary>
         public static string GetPath(string filename) => IsClickOnce ? Path.Combine(DataDirectory, filename) : filename;
+#endif
 
+#if !OFFLINE
         /// <summary>
         /// カードテキストデータを XML に保存します。
         /// </summary>
@@ -115,7 +126,9 @@ namespace Mojp
             var doc = new XDocument(new XDeclaration("1.0", "utf-8", "yes"), cardsElem);
             doc.Save(path);
         }
+#endif
 
+#if !OFFLINE
         /// <summary>
         /// WHISPER の検索結果を格納したテキストファイルからカードテキストデータを構築します。
         /// </summary>
@@ -133,6 +146,7 @@ namespace Mojp
                 Cards.Add(card.Name, card);
             }
         }
+#endif
 
         /// <summary>
         /// XML オブジェクトからカードテキストデータを構築します。
@@ -169,11 +183,33 @@ namespace Mojp
             }
         }
 
+#if OFFLINE
+        /// <summary>
+        /// 埋め込まれた XML ファイルからカードテキストデータを構築します。
+        /// </summary>
+        public static void SetCardInfosFromResource()
+        {
+            var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Mojp.cards.xml");
+
+            if (stream != null)
+            {
+                using (stream)
+                {
+                    var xml = XDocument.Load(stream);
+                    SetCardInfosFromXml(xml);
+                }
+            }
+        }
+#endif
+
+#if !OFFLINE
         /// <summary>
         /// XML ファイルからカードテキストデータを構築します。
         /// </summary>
         public static void SetCardInfosFromXml(string file) => SetCardInfosFromXml(XDocument.Load(file));
+#endif
 
+#if !OFFLINE
         /// <summary>
         /// このアプリのバージョンが最新かどうかを確認します。
         /// </summary>
@@ -209,6 +245,7 @@ namespace Mojp
 
             return Version.TryParse(version, out var latest) && current < latest;
         }
+#endif
 
         /// <summary>
         /// 指定した名前のプロセスを探し、最初に見つかった <see cref="Process"/> オブジェクトを返します。
@@ -242,15 +279,18 @@ namespace Mojp
 
         protected override void OnExit(ExitEventArgs e)
         {
+#if !OFFLINE
             if (HttpClient.IsValueCreated)
                 HttpClient.Value.Dispose();
+#endif
 
             SettingsCache.Write();
             Settings.Default.Save();
 
+#if !OFFLINE
             if (SettingsCache.GetCardPrice)
                 CardPrice.SaveCacheData();
-
+#endif
             Debug.WriteLine("Card.PropertyChanged = { " + string.Join(", ", Cards.Values.Where(card => card.IsObserved)) + " }");
 
             base.OnExit(e);

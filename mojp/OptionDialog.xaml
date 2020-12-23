@@ -49,7 +49,7 @@
                 </Grid.RowDefinitions>
                 <TextBlock>リリース バージョン</TextBlock>
                 <TextBlock Grid.Column="2">2.12.0</TextBlock>
-                <TextBlock Grid.Column="3">
+                <TextBlock Name="grpGoGitHub" Grid.Column="3">
                     <Hyperlink ToolTip="https://github.com/fog-bank/mojp/releases" Click="OnClickHyperlink">GitHub に移動</Hyperlink>
                 </TextBlock>
                 <TextBlock Grid.Row="1" VerticalAlignment="Top">対応最新セット</TextBlock>
@@ -67,7 +67,7 @@
                     </CheckBox.ToolTip>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock>最新バージョンを自動的に確認する</TextBlock>
-                        <Image Source="Resources/Information.png" Height="16" Margin="5,0,0,0" />
+                        <Image Source="Resources/Information.png" Height="16" Margin="5,0,0,0" Style="{StaticResource btnImageStyle}" />
                     </StackPanel>
                 </CheckBox>
                 <CheckBox Name="grpAutoCheckSub" Grid.Row="3" Grid.ColumnSpan="4" Margin="10,0,0,0"
@@ -195,7 +195,7 @@
                     <TextBox Grid.Column="1" MinWidth="100" VerticalContentAlignment="Center" Text="{Binding RefreshIntervalMilliseconds}" />
                     <TextBlock Grid.Column="2">ミリ秒</TextBlock>
                 </Grid>
-                <CheckBox Grid.Row="3" IsChecked="{Binding GetPDList}" ToolTipService.ShowDuration="60000">
+                <CheckBox Name="grpGetPDList" Grid.Row="3" IsChecked="{Binding GetPDList}" ToolTipService.ShowDuration="60000">
                     <CheckBox.ToolTip>
                         <TextBlock Margin="0">
                             新セット発売時の相場が 0.02 チケット (tix) 以下のカードだけが使えるフォーマットです。<LineBreak />
@@ -207,10 +207,10 @@
                             <Hyperlink ToolTip="http://pdmtgo.com/" Click="OnClickHyperlink">Penny Dreadful</Hyperlink>
                             <Run> (PD) で使用可能かどうかを調べる</Run>
                         </TextBlock>
-                        <Image Source="Resources/Information.png" Height="16" Margin="5,0,0,0" />
+                        <Image Source="Resources/Information.png" Height="16" Margin="5,0,0,0" Style="{StaticResource btnImageStyle}" />
                     </StackPanel>
                 </CheckBox>
-                <Grid Grid.Row="4" Margin="8,4,4,4" IsEnabled="{Binding GetPDList}">
+                <Grid Name="grpPDRotationTime" Grid.Row="4" Margin="8,4,4,4" IsEnabled="{Binding GetPDList}">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto" />
                         <ColumnDefinition Width="Auto" />
@@ -224,18 +224,18 @@
                         <Image Source="Resources/Information.png" Height="16" Margin="5,0,0,0" Style="{StaticResource btnImageStyle}" />
                     </StackPanel>
                 </Grid>
-                <CheckBox Grid.Row="5" IsChecked="{Binding GetCardPrice}"
+                <CheckBox Name="grpGetCardPrice" Grid.Row="5" IsChecked="{Binding GetCardPrice}"
                           ToolTip="カード検索サイト Scryfall からカードの日毎の平均価格を 1 日 1 回取得します。" ToolTipService.ShowDuration="60000">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock>
                             <Hyperlink ToolTip="https://scryfall.com/" Click="OnClickHyperlink">Scryfall</Hyperlink>
                             <Run> を利用してカード相場を調べる</Run>
                         </TextBlock>
-                        <Image Source="Resources/Information.png" Height="16" Margin="5,0,0,0" />
+                        <Image Source="Resources/Information.png" Height="16" Margin="5,0,0,0" Style="{StaticResource btnImageStyle}" />
                     </StackPanel>
                 </CheckBox>
             </Grid>
-            <Grid Margin="0,10,0,0">
+            <Grid Name="grpEditCardData" Margin="0,10,0,0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto" />
                     <ColumnDefinition Width="5" />

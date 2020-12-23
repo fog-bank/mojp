@@ -37,7 +37,7 @@
                                 <ColumnDefinition Width="Auto" SharedSizeGroup="Col2" />
                                 <ColumnDefinition Width="Auto" SharedSizeGroup="Col3" />
                             </Grid.ColumnDefinitions>
-                            <CheckBox IsChecked="{Binding IsVisible}" />
+                            <CheckBox IsEnabled="{Binding IsEnabled}" IsChecked="{Binding IsVisible}" />
                             <Image Grid.Column="1" Source="{Binding Image}" Height="16" Margin="4,0" />
                             <TextBlock Grid.Column="2" Text="{Binding Header}" />
                         </Grid>

@@ -110,7 +110,17 @@ namespace Mojp
         /// <summary>
         /// このカードの価格情報を取得します。
         /// </summary>
-        public string Price => CardPrice.GetPrice(this);
+        public string Price
+        {
+            get
+            {
+#if !OFFLINE
+                return CardPrice.GetPrice(this);
+#else
+                return string.Empty;
+#endif
+            }
+        }
 
         public bool IsObserved => PropertyChanged != null;
 
@@ -139,6 +149,7 @@ namespace Mojp
 
         public override string ToString() => Name;
 
+#if !OFFLINE
         public Card Clone()
         {
             return new Card()
@@ -152,7 +163,9 @@ namespace Mojp
                 WikiLink = WikiLink
             };
         }
+#endif
 
+#if !OFFLINE
         /// <summary>
         /// 後で復元できるように XML ノードに変換します。
         /// </summary>
@@ -178,11 +191,14 @@ namespace Mojp
 
             return xml;
         }
+#endif
 
+#if !OFFLINE
         /// <summary>
         /// 価格情報を取得し終わったときに呼び出します。
         /// </summary>
         public void OnUpdatePrice() => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Price)));
+#endif
 
         public void OnUpdateDisplayName() => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(DisplayName)));
 
@@ -230,6 +246,7 @@ namespace Mojp
         /// </summary>
         public string CardName { get; }
 
+#if !OFFLINE
         public XElement ToXml()
         {
             var xml = new XElement("alt");
@@ -240,5 +257,6 @@ namespace Mojp
 
             return xml;
         }
+#endif
     }
 }

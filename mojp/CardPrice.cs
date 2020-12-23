@@ -5,15 +5,24 @@ using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Net;
-using System.Net.Http;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+#if !OFFLINE
+using System.Net.Http;
+#endif
 
 namespace Mojp
 {
     public static class CardPrice
     {
+#if OFFLINE
+        public static readonly DependencyProperty PriceTargetProperty
+            = DependencyProperty.RegisterAttached("PriceTarget", typeof(Card), typeof(CardPrice));
+
+        public static readonly DependencyProperty LegalTargetProperty
+            = DependencyProperty.RegisterAttached("LegalTarget", typeof(Card), typeof(CardPrice));
+#else
         public static readonly DependencyProperty PriceTargetProperty
             = DependencyProperty.RegisterAttached("PriceTarget", typeof(Card), typeof(CardPrice),
                 new FrameworkPropertyMetadata(Card.Empty, FrameworkPropertyMetadataOptions.AffectsMeasure, OnPriceTargetChanged));
@@ -21,7 +30,9 @@ namespace Mojp
         public static readonly DependencyProperty LegalTargetProperty
             = DependencyProperty.RegisterAttached("LegalTarget", typeof(Card), typeof(CardPrice),
                 new FrameworkPropertyMetadata(Card.Empty, FrameworkPropertyMetadataOptions.AffectsMeasure, OnLegalTargetChanged));
+#endif
 
+#if !OFFLINE
         // card_name -> (tix_info, expire_time)
         private static readonly ConcurrentDictionary<string, Tuple<string, DateTime>> prices
             = new ConcurrentDictionary<string, Tuple<string, DateTime>>();
@@ -33,6 +44,7 @@ namespace Mojp
         private const string CacheFileName = "price_list.txt";
         private const string PDLegalFileName = "pd_legal_cards.txt";
         private const string HttpErrorMsg = "取得失敗";
+#endif
 
         /// <summary>
         /// カード価格取得を有効にするかどうかを示す値を取得または設定します。
@@ -51,6 +63,7 @@ namespace Mojp
         [AttachedPropertyBrowsableForType(typeof(UIElement))]
         public static void SetLegalTarget(UIElement element, Card value) => element.SetValue(LegalTargetProperty, value);
 
+#if !OFFLINE
         /// <summary>
         /// 指定したカードの価格の取得を試みます。
         /// </summary>
@@ -447,6 +460,7 @@ namespace Mojp
 
             return target.Substring(startIndex, length);
         }
+#endif
     }
 
     public enum GetPDListResult
@@ -480,4 +494,4 @@ namespace Mojp
         /// </summary>
         Conflict
     }
-}
+    }
