@@ -490,6 +490,7 @@ namespace Mojp
             return card;
         }
 
+#if !OFFLINE
         /// <summary>
         /// カードテキストデータを指定した XML ファイルで修正します。
         /// </summary>
@@ -765,7 +766,9 @@ namespace Mojp
                     Debug.WriteLine(name + " は既にカードリストに含まれていません。");
             }
         }
+#endif
 
+#if !OFFLINE
         /// <summary>
         /// <see cref="Card"/> オブジェクト内の指定した対象に対して、<see cref="Regex"/> で一致したテキストを置換します。
         /// </summary>
@@ -852,6 +855,7 @@ namespace Mojp
             }
             return applied;
         }
+#endif
 
         ///// <summary>
         ///// サブタイプの英語名を削除した文字列にします。

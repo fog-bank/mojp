@@ -381,6 +381,11 @@ namespace Mojp
                 {
                     ToolbarCommands.Add(command);
                     command.IsVisible = settings.ToolbarCommands[i + 1] == "1";
+
+#if OFFLINE
+                    if (command.Name == "GoToWiki")
+                        command.IsVisible = false;
+#endif
                 }
             }
         }

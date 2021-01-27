@@ -83,10 +83,10 @@ namespace Mojp
         public void Read()
         {
             var opt = Settings.Default;
-
+#if !OFFLINE
             AutoVersionCheck = opt.AutoVersionCheck;
             AcceptsPrerelease = opt.AcceptsPrerelease;
-
+#endif
             WindowWidth = opt.WindowWidth;
             WindowHeight = opt.WindowHeight;
             WindowLeft = opt.WindowLeft;
@@ -111,10 +111,12 @@ namespace Mojp
             ShowBasicLands = opt.ShowBasicLands;
             AutoRefresh = opt.AutoRefresh;
             RefreshIntervalMilliseconds = (int)opt.RefreshInterval.TotalMilliseconds;
+#if !OFFLINE
             GetPDList = opt.GetPDList;
             GetCardPrice = opt.GetCardPrice;
             PDListLastTimeUtc = opt.PDListLastTimeUtc;
             PDServerLastTimeUtc = opt.PDServerLastTimeUtc;
+#endif
         }
 
         /// <summary>

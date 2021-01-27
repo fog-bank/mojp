@@ -58,6 +58,8 @@ namespace Mojp
             }
         }
 
+        public virtual bool IsEnabled => true;
+
         public virtual bool CanExecute(object parameter) => true;
 
         public abstract void Execute(object parameter);
@@ -145,8 +147,13 @@ namespace Mojp
 
         public sealed override string Image => @"Resources\Web.png";
 
+#if OFFLINE
+        public sealed override bool IsEnabled => false;
+#endif
+
         public sealed override bool CanExecute(object parameter)
         {
+#if !OFFLINE
             var card = ViewModel?.SelectedCard;
 
             if (card == null)
@@ -165,10 +172,14 @@ namespace Mojp
                 return false;
 
             return true;
+#else
+            return false;
+#endif
         }
 
         public sealed override void Execute(object parameter)
         {
+#if !OFFLINE
             var card = ViewModel?.SelectedCard;
 
             if (card == null)
@@ -188,6 +199,7 @@ namespace Mojp
             link = Uri.EscapeUriString(link);
 
             Process.Start("http://mtgwiki.com/wiki/" + link);
+#endif
         }
     }
 

@@ -33,6 +33,7 @@ namespace Mojp
                 DragMove();
         }
 
+#if !OFFLINE
         internal void ShowPDMessage(GetPDListResult result)
         {
             if (App.Cards.Count == 0)
@@ -60,6 +61,7 @@ namespace Mojp
                     break;
             }
         }
+#endif
 
         private async void OnInitialized(object sender, EventArgs e)
         {
@@ -69,23 +71,31 @@ namespace Mojp
 
             await Task.Run(() =>
             {
+#if !OFFLINE
                 if (File.Exists(App.GetPath("cards.xml")))
                     App.SetCardInfosFromXml(App.GetPath("cards.xml"));
-                
+
                 if (CardPrice.EnableCardPrice)
                     CardPrice.OpenCacheData();
+#else
+                App.SetCardInfosFromResource();
+#endif
             });
 
+#if !OFFLINE
             if (vm.GetPDList)
             {
                 var successPd = await CardPrice.GetOrOpenPDLegalFile(false);
                 ShowPDMessage(successPd);
             }
+#endif
             imgLoading.Visibility = Visibility.Hidden;
             vm.SetRefreshTimer(Dispatcher);
 
+#if !OFFLINE
             if (vm.AutoVersionCheck && await App.IsOutdatedRelease(vm.AcceptsPrerelease))
                 notifier.Visibility = Visibility.Visible;
+#endif
         }
 
         internal async void OnOption(object sender, RoutedEventArgs e)
@@ -102,6 +112,7 @@ namespace Mojp
             // Preview Pane の自動探索の設定を反映
             vm.SetRefreshTimer(Dispatcher);
 
+#if !OFFLINE
             notifier.Visibility = vm.AutoVersionCheck &&
                 await App.IsOutdatedRelease(vm.AcceptsPrerelease) ? Visibility.Visible : Visibility.Collapsed;
 
@@ -135,12 +146,15 @@ namespace Mojp
                 vm.RefreshTab();
 
             imgLoading.Visibility = Visibility.Hidden;
+#endif
         }
 
         private void OnGoToNewRelease(object sender, RoutedEventArgs e)
         {
+#if !OFFLINE
             notifier.Visibility = Visibility.Collapsed;
             Process.Start((sender as Hyperlink).ToolTip.ToString());
+#endif
         }
 
         private void OnCloseNotifier(object sender, RoutedEventArgs e) => notifier.Visibility = Visibility.Collapsed;

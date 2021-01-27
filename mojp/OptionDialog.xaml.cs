@@ -21,6 +21,14 @@ namespace Mojp
         {
             InitializeComponent();
 
+#if OFFLINE
+            grpGoGitHub.IsEnabled = false;
+            grpAutoCheck.IsEnabled = false;
+            grpGetPDList.IsEnabled = false;
+            grpPDRotationTime.IsEnabled = false;
+            grpGetCardPrice.IsEnabled = false;
+            grpEditCardData.IsEnabled = false;
+#endif
             if (App.IsClickOnce)
             {
                 grpAutoCheck.Visibility = Visibility.Collapsed;
@@ -64,10 +72,14 @@ namespace Mojp
 
         public void UpdatePDRotationTime()
         {
+#if !OFFLINE
             if (DateTime.TryParse(App.SettingsCache.PDServerLastTimeUtc, out var time))
                 txbPDRotationTime.Text = time.ToString("g");
             else
                 txbPDRotationTime.Text = "不明";
+#else
+            txbPDRotationTime.Text = "無効";
+#endif
         }
 
         private void OnCardDisplayNameChanged(object sender, SelectionChangedEventArgs e)
@@ -108,6 +120,7 @@ namespace Mojp
 
         private async void OnRetryPDList(object sender, RoutedEventArgs e)
         {
+#if !OFFLINE
             imgLoading.Visibility = Visibility.Visible;
 
             var successPd = await CardPrice.GetOrOpenPDLegalFile(true);
@@ -116,6 +129,7 @@ namespace Mojp
             UpdatePDRotationTime();
 
             imgLoading.Visibility = Visibility.Collapsed;
+#endif
         }
 
         /// <summary>
@@ -123,6 +137,7 @@ namespace Mojp
         /// </summary>
         private void OnBrowseSearchTxt(object sender, RoutedEventArgs e)
         {
+#if !OFFLINE
             imgLoading.Visibility = Visibility.Visible;
             imgLoaded.Visibility = Visibility.Collapsed;
 
@@ -148,10 +163,12 @@ namespace Mojp
                 imgLoaded.Visibility = Visibility.Visible;
             }
             imgLoading.Visibility = Visibility.Collapsed;
+#endif
         }
 
         private void OnTestBoxKeyDown(object sender, KeyEventArgs e)
         {
+#if !OFFLINE
             if (e.Key != Key.Enter)
                 return;
 
@@ -174,9 +191,14 @@ namespace Mojp
                 }
             }
             ViewModel?.SetCard(target);
+#endif
         }
 
         private void OnClickHyperlink(object sender, RoutedEventArgs e)
-            => Process.Start((sender as Hyperlink).ToolTip.ToString());
+        {
+#if !OFFLINE
+            Process.Start((sender as Hyperlink).ToolTip.ToString());
+#endif
+        }
     }
 }
