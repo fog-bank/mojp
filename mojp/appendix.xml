@@ -1845,7 +1845,6 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="コントール" value="コントロール" nodebug="true" />
     <regex target="jaName|text" pattern="パルヘリオン\?" value="パルヘリオンⅡ" nodebug="true" />
     <regex target="text" pattern="二度目" value="２度目" nodebug="true" />
-    <regex target="text" pattern="再演\(12\)（," value="再演(１２)（(１２)," nodebug="true" />
     <regex target="text" pattern="唱えるかどうか決定する" value="唱えるかどうかを決定する" nodebug="true" />
     <regex target="text" pattern="任意のマナを望むマナ" value="任意のマナを望む色のマナ" nodebug="true" />
     <regex target="text" pattern="ステップやフェイズに際して" value="ステップやフェイズの終了に際して" nodebug="true" />
@@ -1859,7 +1858,6 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="置く．" value="置く。" nodebug="true" />
     <regex target="text" pattern="する．" value="する。" nodebug="true" />
     <regex target="text" pattern="あなたはテフェリー" value="あなたがテフェリー" nodebug="true" />
-    <regex target="text" pattern="天上の餌あさりのによって" value="天上の餌あさりによって" nodebug="true" />
     <regex target="text" pattern="していている" value="している" nodebug="true" />
     <regex target="text" pattern="あなたあなたの手札から" value="あなたはあなたの手札から" nodebug="true" />
     <regex target="text" pattern="をの上に" value="の上に" nodebug="true" />
@@ -1985,12 +1983,14 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="最大([０-９Ｘ]+)体までのクリーチャーを対象" value="クリーチャー最大$1体を対象" nodebug="true" />
     <regex target="text" pattern="一番上から([０-９Ｘ]{2,}|[２-９Ｘ])枚のカードを(?=見|公開|追放|あなたの墓地|自分の墓地|そのプレイヤーの墓地|予示)" value="一番上からカードを$1枚" nodebug="true" />
     <regex target="text" pattern="一番上(?:から|の)カード([０-９Ｘ]{2,}|[２-９Ｘ])枚を(?=追放|自分の墓地)" value="一番上からカードを$1枚" nodebug="true" />
-    <regex target="text" pattern="トークン([０-９Ｘ]+)体を生成する。" value="トークンを$1体生成する。" nodebug="true" />
+    <!--<regex target="text" pattern="トークン([０-９Ｘ]+)体を生成する。" value="トークンを$1体生成する。" nodebug="true" />-->
     <regex target="text" pattern="１(体|つ)が(あなたのコントロール下で)?戦場に出るたび、" value="が１$1$2戦場に出るたび、" nodebug="true" />
     <regex target="text" pattern="１(体|つ)が対戦相手１人のコントロール下で戦場に出るたび、" value="が１$1対戦相手のコントロール下で戦場に出るたび、" nodebug="true" />
     <regex target="text" pattern="(?&lt;=クリーチャー|プレインズウォーカー)１体が(?=(?:攻撃|死亡)するたび、)" value="が１体" nodebug="true" />
     <regex target="text" pattern="([１-９])つ以上の(土地|基本土地|平地|アーティファクト|エンチャント)をコントロール" value="$2を$1つ以上コントロール" nodebug="true" />
     <regex target="text" pattern="(?&lt;!につき)([０-９Ｘ]+)個の(.\d/.\d|\w{1,2})カウンターが置かれた状態で戦場に出る" value="$2カウンターが$1個置かれた状態で戦場に出る" nodebug="true" />
+    <!-- 順序変更：数字を前に移動 (KHM) -->
+    <!--<regex target="text" pattern="トークンを([０-９Ｘ]+)体生成する。" value="トークン$1体を生成する。" nodebug="true" />-->
     <!-- 順序変更：であるかぎり -->
     <regex target="text" pattern="(?m)(?&lt;=^| ― |「|。)([^\n―：「（。]+)は、((?:(?!。|、|それ|その|自身).)+)かぎり、?それ(?=で?は)" value="$2かぎり、$1" nodebug="true" />
     <regex target="text" pattern="(?m)(?&lt;=^| ― |「|。)(その後)?([^\n―：「（。]+)は、((?:(?!。|、|それ|その|これ|自身|自分).)+[はが](?:(?!。|、|その).)+)かぎり、?(?=(?:(?!。|かぎり).)+。)" value="$1$3かぎり、$2は" nodebug="true" />
@@ -2013,7 +2013,6 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="すべての(クリーチャー|アーティファクト|土地|パーマネント)(?:の上)?からすべての([^。]{1,6})カウンターを取り除く" value="$1すべての上から$2カウンターをすべて取り除く" nodebug="true" />
     <regex target="text" pattern="(?:の上)?からすべての([^。]{1,5})カウンターを取り除く" value="の上から$1カウンターをすべて取り除く" nodebug="true" />
     <regex target="text" pattern="すべてのアーティファクトと、?すべてのクリーチャーと、?すべてのエンチャントを" value="アーティファクトとクリーチャーとエンチャントをすべて" nodebug="true" />
-    <!--<regex target="text" pattern="すべてのダメージを軽減" value="ダメージをすべて軽減" nodebug="true" />-->
     <!-- 順序変更：他の -->
     <regex target="text" pattern="(?m)(?&lt;!他の.+\n)(?&lt;=^|、)あなたがコントロール(?:する|している)他の(?=(?:クリーチャー|海賊)[はが])" value="他の、あなたがコントロールしている" nodebug="true" />
     <regex target="text" pattern="(?m)^あなたがコントロール(?:する|している)他の(?=[白青黒赤緑]のクリーチャー)" value="他の、あなたがコントロールしている" nodebug="true" />
@@ -2293,7 +2292,6 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="そのうちの望む枚数(?:のカード)?を望む順番であなたのライブラリーの一番下に(?:置き)?、残りを望む順番で一番上に置く" value="そのうちの望む枚数をあなたのライブラリーの一番下に、残りを一番上に、それぞれ望む順番で置く" nodebug="true" />
     <regex target="text" pattern="授与コストで唱えた場合、これはエンチャント（クリーチャー）を持つオーラ・呪文である。クリーチャーにつけられていない場合" value="授与コストで唱えたなら、これはエンチャント（クリーチャー）を持つオーラ・呪文である。クリーチャーにつけられていないなら" nodebug="true" />
     <regex target="text" pattern="怪物的でない場合、" value="怪物的でないなら、" nodebug="true" />
-    <regex target="text" pattern="(?m)^(不朽|永遠)(.+)であることを除き、これのコピーであるトークンを１体生成する。.+はソーサリーとしてのみ行う。）$" value="$1$2であることを除きこれのコピーであるトークンを１体生成する。$1はソーサリーとしてのみ行う。）" nodebug="true" />
     <regex target="text" pattern="(?&lt;=それは探検を行う。（[^）]+)このクリーチャーの上に" value="そのクリーチャーの上に" nodebug="true" />
     <regex target="text" pattern="諜報１を行う。（あなたのライブラリーの一番上からカードを１枚見る。" value="諜報１を行う。（あなたのライブラリーの一番上のカードを見る。" nodebug="true" />
     <regex target="text" pattern="カウンター１個か速攻のうち、あなたが選んだ１つを持った状態で戦場に出る。" value="カウンター１個か速攻のうちあなたが選んだ１つを持った状態で戦場に出る。" nodebug="true" />
@@ -4953,11 +4951,6 @@ Thriving Moorが戦場に出るに際し、黒でない色１色を選ぶ。
 各プレイヤーの各ターンに、そのプレイヤーは追加で土地を１つプレイしてもよい。</card>
     
     <!-- テキストが正常でないカード (CMR) -->
-    <card name="Armix, Filigree Thrasher" jaName="金線の打破者、アーミクス" type="伝説のアーティファクト・クリーチャー ― ゴーレム" pt="3/2">金線の打破者、アーミクスが攻撃するたび、あなたはカード１枚を捨ててもよい。そうしたとき、防御プレイヤーがコントロールしているクリーチャー１体を対象とする。ターン終了時まで、それは-X/-Xの修整を受ける。Ｘは、あなたがコントロールしているアーティファクトの総数に、あなたの墓地にあるアーティファクト・カードの枚数を足した値に等しい。
-共闘（両方が共闘を持つなら、あなたは２体の統率者を使用できる。）</card>
-    <card name="Esior, Wardwing Familiar" jaName="守り翼の使い魔、エシオル" type="伝説のクリーチャー ― 鳥" pt="1/3">飛行
-対戦相手があなたがコントロールしている統率者を対象として呪文を唱えるためのコストは(３)多くなる。
-共闘（両方が共闘を持つなら、あなたは２体の統率者を使用できる。）</card>
     <card name="Glacian, Powerstone Engineer" jaName="パワーストーンの技師、グレイシャン" type="伝説のクリーチャー ― 人間・工匠" pt="3/6">(Ｔ),あなたがコントロールしていてアンタップ状態のアーティファクトＸ個をタップする：あなたのライブラリーの一番上からカードをＸ枚見る。それらのカードのうち１枚をあなたの手札に、残りをあなたの墓地に置く。
 共闘（両方が共闘を持つなら、あなたは２体の統率者を使用できる。）</card>
     
@@ -4966,10 +4959,6 @@ Thriving Moorが戦場に出るに際し、黒でない色１色を選ぶ。
 各終了ステップの開始時に、あなたがクリーチャーをコントロールしていない場合、明日の確約を生け贄に捧げ、これによって追放されているカードをすべてあなたのコントロール下で戦場に戻す。</card>
     <card name="Rebbec, Architect of Ascension" jaName="登る建築家、レベック" type="伝説のクリーチャー ― 人間・工匠" pt="3/4">あなたがコントロールしているアーティファクトは、あなたがコントロールしているアーティファクトの中の点数で見たマナ・コストにつきそれぞれ、プロテクション（点数で見たマナ・コストがその数である）を持つ。
 共闘（両方が共闘を持つなら、あなたは２体の統率者を使用できる。）</card>
-    
-    <!-- CMR (オラクル更新) -->
-    <card name="Imperious Perfect" jaName="傲慢な完全者" type="クリーチャー ― エルフ・戦士" pt="2/2">他の、あなたがコントロールしているエルフは+1/+1の修整を受ける。
-(緑),(Ｔ)：緑の1/1のエルフ・戦士・クリーチャー・トークンを１体生成する。</card>
     
     <!-- CMR (注釈文) -->
     <card name="Corpse Churn" jaName="屍体の攪拌" type="インスタント">カードを３枚切削する。その後、あなたはあなたの墓地からクリーチャー・カード１枚をあなたの手札に戻してもよい。（カードを切削するとは、あなたのライブラリーの一番上からカードをあなたの墓地に置くことである。）</card>
