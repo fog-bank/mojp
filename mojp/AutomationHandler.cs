@@ -271,6 +271,20 @@ namespace Mojp
                 {
                     foreach (string text in IterateTextBlocks())
                     {
+                        // コレクター番号かぶり対策
+                        if (App.Cards.TryGetValue(text, out card))
+                        {
+                            ViewCard(card);
+                            return true;
+                        }
+
+                        // 両面カード対策
+                        if (App.AltCardKeys.Contains(text))
+                        {
+                            Debug.Write(value + " => ");
+                            value = text;
+                        }
+
                         // 第 2 段階
                         if (App.AltCardSubKeys.Contains(text) && App.AltCards.TryGetValue(value + text, out var alt))
                         {
