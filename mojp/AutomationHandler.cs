@@ -260,7 +260,7 @@ namespace Mojp
             /// <remarks>無限ループになる可能性があるので、<see cref="SearchCardName"/> メソッドは呼ばないこと。</remarks>
             private bool TryFetchCard(string value)
             {
-                if (App.Cards.TryGetValue(value, out var card))
+                if (App.Cards.TryGetValue(value, out var card) && !IsKeywordText(value))
                 {
                     ViewCard(card);
                     return true;
@@ -377,25 +377,31 @@ namespace Mojp
                     // Preview Pane 内で最初に出現するカード名を取得する
                     if (currentCards.Contains(card))
                     {
-                        foreach (string value2 in IterateTextBlocks())
-                        {
-                            if (App.Cards.TryGetValue(value2, out card))
-                            {
-                                if (currentCards[0] != card)
-                                    ViewModel.InvokeSetCard(card);
-
-                                return;
-                            }
-                        }
+                        SearchForeground(currentCards[0]);
                         return;
                     }
                 }
 
-                if (IsKeywordText(card.Name))
-                    return;
+                // このメソッドの呼び出し前にチェックするようにしたため、コメントアウト
+                //if (IsKeywordText(card.Name))
+                //    return;
 
                 // ふつうのカード
                 ViewModel.InvokeSetCard(card);
+
+                void SearchForeground(Card currentForeground)
+                {
+                    foreach (string value in IterateTextBlocks())
+                    {
+                        if (App.Cards.TryGetValue(value, out var card))
+                        {
+                            if (card != currentForeground)
+                                ViewModel.InvokeSetCard(card);
+
+                            return;
+                        }
+                    }
+                }
             }
 
             /// <summary>
