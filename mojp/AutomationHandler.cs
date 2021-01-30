@@ -267,66 +267,8 @@ namespace Mojp
                 }
 
                 // 代替テキストによる検索
-                if (App.AltCardKeys.Contains(value))
-                {
-                    foreach (string text in IterateTextBlocks())
-                    {
-                        // コレクター番号かぶり対策
-                        if (App.Cards.TryGetValue(text, out card))
-                        {
-                            ViewCard(card);
-                            return true;
-                        }
-
-                        // 両面カード対策
-                        if (App.AltCardKeys.Contains(text))
-                        {
-                            Debug.Write(value + " => ");
-                            value = text;
-                        }
-
-                        // 第 2 段階
-                        if (App.AltCardSubKeys.Contains(text) && App.AltCards.TryGetValue(value + text, out var alt))
-                        {
-                            Debug.WriteLine(value + " " + alt.SubKey + " => " + alt.CardName);
-
-                            if (App.Cards.TryGetValue(alt.CardName, out card))
-                            {
-                                // エルドレインの王権のカードだったとき、カードタイプが出来事の場合、呪文側を手前に表示する
-                                if (alt.SubKey == "ELD" && IsAdventure())
-                                {
-                                    Debug.WriteLine(value + " " + alt.SubKey + " => " + alt.CardName + " => " + card.RelatedCardName);
-
-                                    return ViewCardDirectly(card.RelatedCardName);
-                                }
-                                ViewModel.InvokeSetCard(card);
-                                return true;
-                            }
-                            return false;
-                        }
-                    }
-                }
-
-                // アルティメットマスターズのフルアート版
-                //if (Card.IsUltimateBoxToppers(value, out string cardName))
-                //{
-                //    Debug.WriteLine(value + " => " + cardName);
-
-                //    // アルティメットマスターズのフルアート版はカード名で探せないので、カード番号で区別する
-                //    // HACK: U01 / 40 みたいな文字が他に出ない前提。念のために UMA のセット記号を確認するかどうか
-                //    if (ViewCardDirectly(cardName))
-                //        return true;
-                //}
-
-                // 英雄譚 (カード名を Automation で探せないため、アーティスト名で 1:1 対応として探す)
-                //if (Card.GetSagaByArtist(value, out cardName))
-                //{
-                //    Debug.WriteLine(value + " => " + cardName);
-
-                //    // 十分条件として、カードタイプが Saga であることをチェック
-                //    if (ValidateAndViewSaga(cardName))
-                //        return true;
-                //}
+                if (App.AltCardKeys.Contains(value) && SearchAltSubKey(value))
+                    return true;
 
                 // 英雄譚の誘発型能力 (これだけカードではなく、スタック上にあるのと同じ誘発能力が Preview に表示される)
                 const string triggerPrefix = "Triggered ability from ";
@@ -354,6 +296,46 @@ namespace Mojp
                     return true;
                 }
                 return false;
+
+                bool SearchAltSubKey(string altKey)
+                {
+                    foreach (string text in IterateTextBlocks())
+                    {
+                        // コレクター番号かぶり対策
+                        if (App.Cards.TryGetValue(text, out var card) && !IsKeywordText(text))
+                        {
+                            ViewCard(card);
+                            return true;
+                        }
+
+                        // 両面カード対策
+                        if (App.AltCardKeys.Contains(text))
+                        {
+                            Debug.WriteLine(altKey + " -> " + text);
+                            altKey = text;
+                        }
+
+                        // 第 2 段階
+                        if (App.AltCardSubKeys.Contains(text) && App.AltCards.TryGetValue(altKey + text, out var alt))
+                        {
+                            Debug.WriteLine(altKey + " " + alt.SubKey + " => " + alt.CardName);
+
+                            if (App.Cards.TryGetValue(alt.CardName, out card))
+                            {
+                                // エルドレインの王権のカードだったとき、カードタイプが出来事の場合、呪文側を手前に表示する
+                                if (alt.SubKey == "ELD" && IsAdventure())
+                                {
+                                    Debug.WriteLine(altKey + " " + alt.SubKey + " => " + alt.CardName + " => " + card.RelatedCardName);
+
+                                    return ViewCardDirectly(card.RelatedCardName);
+                                }
+                                ViewModel.InvokeSetCard(card);
+                                return true;
+                            }
+                        }
+                    }
+                    return false;
+                }
 
                 bool ViewCardDirectly(string name)
                 {
@@ -409,89 +391,64 @@ namespace Mojp
                     }
                 }
 
-                switch (card.Name)
-                {
-                    case "Flash":
-                    case "Lifelink":
-                    case "Release":
-                    case "Vigilance":
-                        if (IsKeywordText(card.Name))
-                            return;
-                        break;
-                }
+                if (IsKeywordText(card.Name))
+                    return;
 
                 // ふつうのカード
                 ViewModel.InvokeSetCard(card);
+            }
 
-                // 一部の Lv カードや変容カードで、キーワード能力と同名のカードの名前が検出される問題や、
-                // ウギンの運命プロモカードで Catch+Release が表示されてしまう問題を回避
-                bool IsKeywordText(string cardName)
+            /// <summary>
+            /// このテキストがカード名ではなく、キーワード能力（あるいはウギンの運命プロモコード）であるかどうかを調べます。
+            /// </summary>
+            /// <remarks>
+            /// 一部の Lv カードや変容カードで、キーワード能力と同名のカードの名前が検出される問題や、
+            /// ウギンの運命プロモカードで Catch+Release が表示されてしまう問題を回避
+            /// </remarks>
+            private bool IsKeywordText(string cardName)
+            {
+                return cardName switch
                 {
-                    switch (cardName)
+                    "Flash" => ContainsText("IKO"),
+                    "Lifelink" => ContainsText("Transcendent Master", "IKO"),
+                    "Release" => IsUginFatePromo(),
+                    "Vigilance" => ContainsText("Ikiral Outrider", "IKO"),
+                    _ => false,
+                };
+
+                // 指定したテキストが Preview Pane に含まれているどうかを調べます。
+                bool ContainsText(string text, string text2 = null)
+                {
+                    foreach (string value in IterateTextBlocks())
                     {
-                        case "Flash":
-                            return ContainsText("IKO");
-
-                        case "Lifelink":
-                            foreach (string text in IterateTextBlocks())
-                            {
-                                if (text == "Transcendent Master" || text == "IKO")
-                                    return true;
-                            }
-                            break;
-
-                        case "Release":
-                            return IsUginFatePromo();
-
-                        case "Vigilance":
-                            foreach (string text in IterateTextBlocks())
-                            {
-                                if (text == "Ikiral Outrider" || text == "IKO")
-                                    return true;
-                            }
-                            break;
+                        if (value == text || (text2 != null && value == text2))
+                            return true;
                     }
                     return false;
                 }
-            }
 
-            /// <summary>
-            /// 指定したテキストが Preview Pane に含まれているどうかを調べます。
-            /// </summary>
-            private bool ContainsText(string text)
-            {
-                foreach (string value in IterateTextBlocks())
+                // 現在のカードがウギンの運命プロモカードであるかどうかを調べます。
+                bool IsUginFatePromo()
                 {
-                    if (value == text)
-                        return true;
-                }
-                return false;
-            }
+                    bool isPromo = false;
+                    bool containsCatch = false;
 
-            /// <summary>
-            /// 現在のカードがウギンの運命プロモカードであるかどうかを調べます。
-            /// </summary>
-            /// <returns></returns>
-            private bool IsUginFatePromo()
-            {
-                bool isPromo = false;
-                bool containsCatch = false;
-
-                foreach (string value in IterateTextBlocks())
-                {
-                    switch (value)
+                    foreach (string value in IterateTextBlocks())
                     {
-                        case "PRM":
-                            isPromo = true;
-                            break;
+                        switch (value)
+                        {
+                            case "PRM":
+                                isPromo = true;
+                                break;
 
-                        // Catch があれば、"Release" はプロモを指すテキストではなく、分割カード Catch+Release である
-                        case "Catch":
-                            containsCatch = true;
-                            break;
+                            // Catch があれば、"Release" はプロモを指すテキストではなく、分割カード Catch+Release である
+                            case "Catch":
+                                containsCatch = true;
+                                break;
+                        }
                     }
+                    return isPromo && !containsCatch;
                 }
-                return isPromo && !containsCatch;
             }
 
             /// <summary>
