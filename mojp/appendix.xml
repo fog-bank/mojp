@@ -988,12 +988,24 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="94  /  96 " sub="UND" name="Mountain" />
     <alt key="96  /  96 " sub="UND" name="Forest" />-->
     <!-- SL2 -->
+    <alt key="138  /   " sub="SL2" name="Anguished Unmaking" />
+    <alt key="139  /   " sub="SL2" name="Assassin's Trophy" />
+    <alt key="140  /   " sub="SL2" name="Decimate" />
+    <alt key="141  /   " sub="SL2" name="Dreadbore" />
+    <alt key="142  /   " sub="SL2" name="Thraximundar" />
     <alt key="143  /   " sub="SL2" name="Rick, Steadfast Leader" />
     <alt key="144  /   " sub="SL2" name="Daryl, Hunter of Walkers" />
     <alt key="145  /   " sub="SL2" name="Glenn, the Voice of Calm" />
     <alt key="146  /   " sub="SL2" name="Michonne, Ruthless Survivor" />
     <alt key="147  /   " sub="SL2" name="Negan, the Cold-Blooded" />
     <alt key="581  /   " sub="SL2" name="Lucille" />
+    <!-- SLD -->
+    <alt key="220  /   " sub="SLD" name="Frost Titan" />
+    <alt key="221  /   " sub="SLD" name="Primeval Titan" />
+    <alt key="222  /   " sub="SLD" name="Uro, Titan of Nature's Wrath" />
+    <alt key="223  /   " sub="SLD" name="Grave Titan" />
+    <alt key="224  /   " sub="SLD" name="Inferno Titan" />
+    <alt key="225  /   " sub="SLD" name="Kroxa, Titan of Death's Hunger" />
     <!-- Ultimate Box toppers (UMA) -->
     <alt key="U01  /  40 " sub="UMA" name="Emrakul, the Aeons Torn" />
     <alt key="U02  /  40 " sub="UMA" name="Karn Liberated" />
