@@ -9,6 +9,8 @@
 クリーチャーが１体あなたに戦闘ダメージを与えるたび、それのコントローラーが統治者になる。</card>
     <card name="City's Blessing" jaName="都市の承認" type="" wikilink="昇殿"></card>
     <card name="プロモ版のカード" jaName="プロモ版のカード" type="" wikilink="">これはプロモ版のカードですが、UI テキストからカード名を判別できないため、カードテキストを表示できません。ご不便をおかけして申し訳ありません。</card>
+    <!-- MH2 -->
+    <card name="Abundant Harvest" jaName="豊穣な収穫" type="ソーサリー">土地か土地でないかを選ぶ。選んだ種類のカードが公開されるまで、あなたのライブラリーの一番上から１枚ずつ公開していく。そのカードをあなたの手札に、残りをあなたのライブラリーの一番下に無作為の順番で置く。</card>
     <!-- STX -->
     <card name="Academic Probation" jaName="謹慎補講" type="ソーサリー ― 講義">以下から１つを選ぶ。
 ・土地でないカード名１つを選ぶ。次のあなたのターンまで、対戦相手はその選ばれた名前を持つ呪文を唱えられない。
@@ -1713,6 +1715,70 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="223  /   " sub="SLD" name="Grave Titan" />
     <alt key="224  /   " sub="SLD" name="Inferno Titan" />
     <alt key="225  /   " sub="SLD" name="Kroxa, Titan of Death's Hunger" />
+    <!-- Strixhaven Mystical Archive -->
+    <alt key="01  /  63 " sub="STA" name="Approach of the Second Sun" />
+    <alt key="02  /  63 " sub="STA" name="Day of Judgment" />
+    <alt key="03  /  63 " sub="STA" name="Defiant Strike" />
+    <alt key="04  /  63 " sub="STA" name="Divine Gambit" />
+    <alt key="05  /  63 " sub="STA" name="Ephemerate" />
+    <alt key="06  /  63 " sub="STA" name="Gift of Estates" />
+    <alt key="07  /  63 " sub="STA" name="Gods Willing" />
+    <alt key="08  /  63 " sub="STA" name="Mana Tithe" />
+    <alt key="09  /  63 " sub="STA" name="Revitalize" />
+    <alt key="10  /  63 " sub="STA" name="Swords to Plowshares" />
+    <alt key="11  /  63 " sub="STA" name="Teferi's Protection" />
+    <alt key="12  /  63 " sub="STA" name="Blue Sun's Zenith" />
+    <alt key="13  /  63 " sub="STA" name="Brainstorm" />
+    <alt key="14  /  63 " sub="STA" name="Compulsive Research" />
+    <alt key="15  /  63 " sub="STA" name="Counterspell" />
+    <alt key="16  /  63 " sub="STA" name="Memory Lapse" />
+    <alt key="17  /  63 " sub="STA" name="Mind's Desire" />
+    <alt key="18  /  63 " sub="STA" name="Negate" />
+    <alt key="19  /  63 " sub="STA" name="Opt" />
+    <alt key="20  /  63 " sub="STA" name="Strategic Planning" />
+    <alt key="21  /  63 " sub="STA" name="Tezzeret's Gambit" />
+    <alt key="22  /  63 " sub="STA" name="Time Warp" />
+    <alt key="23  /  63 " sub="STA" name="Whirlwind Denial" />
+    <alt key="24  /  63 " sub="STA" name="Agonizing Remorse" />
+    <alt key="25  /  63 " sub="STA" name="Crux of Fate" />
+    <alt key="26  /  63 " sub="STA" name="Dark Ritual" />
+    <alt key="27  /  63 " sub="STA" name="Demonic Tutor" />
+    <alt key="28  /  63 " sub="STA" name="Doom Blade" />
+    <alt key="29  /  63 " sub="STA" name="Duress" />
+    <alt key="30  /  63 " sub="STA" name="Eliminate" />
+    <alt key="31  /  63 " sub="STA" name="Inquisition of Kozilek" />
+    <alt key="32  /  63 " sub="STA" name="Sign in Blood" />
+    <alt key="33  /  63 " sub="STA" name="Tainted Pact" />
+    <alt key="34  /  63 " sub="STA" name="Tendrils of Agony" />
+    <alt key="35  /  63 " sub="STA" name="Village Rites" />
+    <alt key="36  /  63 " sub="STA" name="Chaos Warp" />
+    <alt key="37  /  63 " sub="STA" name="Claim the Firstborn" />
+    <alt key="38  /  63 " sub="STA" name="Faithless Looting" />
+    <alt key="39  /  63 " sub="STA" name="Grapeshot" />
+    <alt key="40  /  63 " sub="STA" name="Increasing Vengeance" />
+    <alt key="41  /  63 " sub="STA" name="Infuriate" />
+    <alt key="42  /  63 " sub="STA" name="Lightning Bolt" />
+    <alt key="43  /  63 " sub="STA" name="Mizzix's Mastery" />
+    <alt key="44  /  63 " sub="STA" name="Shock" />
+    <alt key="45  /  63 " sub="STA" name="Stone Rain" />
+    <alt key="46  /  63 " sub="STA" name="Thrill of Possibility" />
+    <alt key="47  /  63 " sub="STA" name="Urza's Rage" />
+    <alt key="48  /  63 " sub="STA" name="Abundant Harvest" />
+    <alt key="49  /  63 " sub="STA" name="Adventurous Impulse" />
+    <alt key="50  /  63 " sub="STA" name="Channel" />
+    <alt key="51  /  63 " sub="STA" name="Cultivate" />
+    <alt key="52  /  63 " sub="STA" name="Harmonize" />
+    <alt key="53  /  63 " sub="STA" name="Krosan Grip" />
+    <alt key="54  /  63 " sub="STA" name="Natural Order" />
+    <alt key="55  /  63 " sub="STA" name="Primal Command" />
+    <alt key="56  /  63 " sub="STA" name="Regrowth" />
+    <alt key="57  /  63 " sub="STA" name="Snakeskin Veil" />
+    <alt key="58  /  63 " sub="STA" name="Weather the Storm" />
+    <alt key="59  /  63 " sub="STA" name="Despark" />
+    <alt key="60  /  63 " sub="STA" name="Electrolyze" />
+    <alt key="61  /  63 " sub="STA" name="Growth Spiral" />
+    <alt key="62  /  63 " sub="STA" name="Lightning Helix" />
+    <alt key="63  /  63 " sub="STA" name="Putrefy" />
     <!-- Ultimate Box toppers (UMA) -->
     <alt key="U01  /  40 " sub="UMA" name="Emrakul, the Aeons Torn" />
     <alt key="U02  /  40 " sub="UMA" name="Karn Liberated" />
