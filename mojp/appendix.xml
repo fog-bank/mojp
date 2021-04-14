@@ -1585,8 +1585,83 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <wikilink name="Warden" wikilink="万全+番人/Warrant+Warden" />
     <!-- その他のリンク修正 -->
     <wikilink name="Captivating Vampire" wikilink="蟲惑的な吸血鬼/Captivating Vampire" />
-    <!-- 代替キー -->
-    <!--<alt key="0000 / 1158 " sub="P " name="プロモ版のカード" />-->
+    <!-- 代替キー (KHM: 1-114, STX&C21: 1-193) -->
+    <!--<alt key="0000  /  1158 " sub="P " name="プロモ版のカード" />-->
+    <alt key="0115  /  1158 " sub="P " name="Culmination of Studies" />
+    <alt key="0116  /  1158 " sub="P " name="Reinterpret" />
+    <alt key="0117  /  1158 " sub="P " name="Elemental Expressionist" />
+    <alt key="0118  /  1158 " sub="P " name="Prismari Command" />
+    <alt key="0119  /  1158 " sub="P " name="Venerable Warsinger" />
+    <alt key="0120  /  1158 " sub="P " name="Blade Historian" />
+    <alt key="0121  /  1158 " sub="P " name="Radiant Scrollwielder" />
+    <alt key="0122  /  1158 " sub="P " name="Lorehold Command" />
+    <alt key="0123  /  1158 " sub="P " name="Wake the Past" />
+    <alt key="0124  /  1158 " sub="P " name="Revival Experiment" />
+    <alt key="0125  /  1158 " sub="P " name="Oversimplify" />
+    <alt key="0126  /  1158 " sub="P " name="Selfless Glyphweaver" />
+    <alt key="0127  /  1158 " sub="P " name="Deadly Vanity" />
+    <alt key="0128  /  1158 " sub="P " name="Shaile, Dean of Radiance" />
+    <alt key="0129  /  1158 " sub="P " name="Embrose, Dean of Shadow" />
+    <alt key="0130  /  1158 " sub="P " name="Pestilent Cauldron" />
+    <alt key="0131  /  1158 " sub="P " name="Restorative Burst" />
+    <alt key="0132  /  1158 " sub="P " name="Valentin, Dean of the Vein" />
+    <alt key="0133  /  1158 " sub="P " name="Lisette, Dean of the Root" />
+    <alt key="0134  /  1158 " sub="P " name="Augmenter Pugilist" />
+    <alt key="0135  /  1158 " sub="P " name="Echoing Equation" />
+    <alt key="0136  /  1158 " sub="P " name="Kianne, Dean of Substance" />
+    <alt key="0137  /  1158 " sub="P " name="Imbraham, Dean of Theory" />
+    <alt key="0138  /  1158 " sub="P " name="Torrent Sculptor" />
+    <alt key="0139  /  1158 " sub="P " name="Flamethrower Sonata" />
+    <alt key="0140  /  1158 " sub="P " name="Uvilda, Dean of Perfection" />
+    <alt key="0141  /  1158 " sub="P " name="Nassari, Dean of Expression" />
+    <alt key="0142  /  1158 " sub="P " name="Flamescroll Celebrant" />
+    <alt key="0143  /  1158 " sub="P " name="Revel in Silence" />
+    <alt key="0144  /  1158 " sub="P " name="Plargg, Dean of Chaos" />
+    <alt key="0145  /  1158 " sub="P " name="Augusta, Dean of Order" />
+    <alt key="0146  /  1158 " sub="P " name="Breena, the Demagogue" />
+    <alt key="0147  /  1158 " sub="P " name="Blot Out the Sky" />
+    <alt key="0148  /  1158 " sub="P " name="Felisa, Fang of Silverquill" />
+    <alt key="0149  /  1158 " sub="P " name="Harness Infinity" />
+    <alt key="0151  /  1158 " sub="P " name="Body of Research" />
+    <alt key="0152  /  1158 " sub="P " name="Magma Opus" />
+    <alt key="0153  /  1158 " sub="P " name="Hofri Ghostforge" />
+    <alt key="0154  /  1158 " sub="P " name="Zaffai, Thunder Conductor" />
+    <alt key="0155  /  1158 " sub="P " name="Veyran, Voice of Duality" />
+    <alt key="0156  /  1158 " sub="P " name="Osgir, the Reconstructor" />
+    <alt key="0157  /  1158 " sub="P " name="Alibou, Ancient Witness" />
+    <alt key="0158  /  1158 " sub="P " name="Willowdusk, Essence Seer" />
+    <alt key="0159  /  1158 " sub="P " name="Gyome, Master Chef" />
+    <alt key="0160  /  1158 " sub="P " name="Adrix and Nev, Twincasters" />
+    <alt key="0161  /  1158 " sub="P " name="Extus, Oriq Overlord" />
+    <alt key="0162  /  1158 " sub="P " name="Esix, Fractal Bloom" />
+    <alt key="0163  /  1158 " sub="P " name="Awaken the Blood Avatar" />
+    <alt key="0164  /  1158 " sub="P " name="Blex, Vexing Pest" />
+    <alt key="0165  /  1158 " sub="P " name="Search for Blex" />
+    <alt key="0166  /  1158 " sub="P " name="Jadzi, Oracle of Arcavios" />
+    <alt key="0167  /  1158 " sub="P " name="Journey to the Oracle" />
+    <alt key="0170  /  1158 " sub="P " name="Mila, Crafty Companion" />
+    <alt key="0172  /  1158 " sub="P " name="Shadrix Silverquill" />
+    <alt key="0173  /  1158 " sub="P " name="Beledros Witherbloom" />
+    <alt key="0174  /  1158 " sub="P " name="Tanazir Quandrix" />
+    <alt key="0175  /  1158 " sub="P " name="Galazeth Prismari" />
+    <alt key="0176  /  1158 " sub="P " name="Velomachus Lorehold" />
+    <alt key="0177  /  1158 " sub="P " name="Strixhaven Stadium" />
+    <alt key="0178  /  1158 " sub="P " name="Tempting Contract" />
+    <alt key="0179  /  1158 " sub="P " name="Codie, Vociferous Codex" />
+    <alt key="0180  /  1158 " sub="P " name="Elementalist's Palette" />
+    <alt key="0181  /  1158 " sub="P " name="Triplicate Titan" />
+    <alt key="0182  /  1158 " sub="P " name="Geometric Nexus" />
+    <alt key="0183  /  1158 " sub="P " name="Wandering Archaic" />
+    <alt key="0184  /  1158 " sub="P " name="Explore the Vastlands" />
+    <alt key="0185  /  1158 " sub="P " name="Mascot Exhibition" />
+    <alt key="0186  /  1158 " sub="P " name="Shineshadow Snarl" />
+    <alt key="0187  /  1158 " sub="P " name="Frostboil Snarl" />
+    <alt key="0188  /  1158 " sub="P " name="Necroblossom Snarl" />
+    <alt key="0189  /  1158 " sub="P " name="Furycalm Snarl" />
+    <alt key="0190  /  1158 " sub="P " name="Vineglimmer Snarl" />
+    <alt key="0191  /  1158 " sub="P " name="Hall of Oracles" />
+    <alt key="0192  /  1158 " sub="P " name="The Biblioplex" />
+    <alt key="0193  /  1158 " sub="P " name="Witch's Clinic" />
     <!-- UND -->
     <!--<alt key="88  /  96 " sub="UND" name="Plains" />
     <alt key="90  /  96 " sub="UND" name="Island" />
