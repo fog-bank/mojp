@@ -38,7 +38,7 @@ namespace Mojp
         /// <summary>
         /// 代替テキストによるカード検索を行います。
         /// </summary>
-        public static Dictionary<string, AltCard> AltCards { get; } = new Dictionary<string, AltCard>(448);
+        public static Dictionary<string, AltCard> AltCards { get; } = new Dictionary<string, AltCard>(346);
 
         /// <summary>
         /// このアプリの設定を取得します。

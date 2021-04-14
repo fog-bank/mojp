@@ -149,8 +149,20 @@ namespace Mojp
                     if (TryFetchCard(value))
                         return;
 
-                    if (!isPromo && value == PromoCollectorNumber)
+                    if (!isPromo && value.Length == PromoCollectorNumber.Length)
+                    {
                         isPromo = true;
+
+                        // "0***  /  1158 " のような形式なので、5文字目以降が一致するかどうかで判定
+                        for (int i = 4; i < value.Length; i++)
+                        {
+                            if (value[i] != PromoCollectorNumber[i])
+                            {
+                                isPromo = false;
+                                break;
+                            }
+                        }
+                    }
 
                     if (!isToken && value.StartsWith("Token"))
                         isToken = true;
@@ -218,8 +230,9 @@ namespace Mojp
                     return;
 
                 // コピートークンでない普通のトークンである可能性があるので、全体走査する
-                // プロモ版を示唆するコレクター番号の場合も全体走査
-                if (name.StartsWith("Token") || name == PromoCollectorNumber)
+                // プロモ版を示唆するテキストの場合も全体走査
+                // （KHM以降、プロモにもコレクター番号が振られるようになったが、STXと被り捲りなので、廃止）
+                if (name.StartsWith("Token") || name == "P ")
                     SearchCardName();
             }
 
