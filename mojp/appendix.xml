@@ -979,7 +979,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <card name="Avatar - Bosh, Iron Golem" jaName="Bosh, Iron Golem Avatar" type="ヴァンガード" pt="手札 +0/ライフ -2" wikilink="Bosh, Iron Golem Avatar">(Ｘ),マナ総量がＸのアーティファクト１つを生け贄に捧げる：クリーチャー１体かプレインズウォーカー１体かプレイヤー１人を対象とする。Bosh, Iron Golem AvatarはそれにＸ点のダメージを与える。</card>
     <card name="Avatar - Braids, Conjurer Adept" jaName="Braids, Conjurer Adept Avatar" type="ヴァンガード" pt="手札 +0/ライフ +3" wikilink="Braids, Conjurer Adept Avatar">(２)：各プレイヤーはそれぞれ、自分の手札から土地・カード１枚をタップ状態で戦場に出してもよい。
 (３)：各プレイヤーはそれぞれ、自分の手札からクリーチャーでないアーティファクト・カード１枚を戦場に出してもよい。
-(４)：各プレイヤーはそれぞれ、自分の手札からクリーチャー・カード１枚を戦場に出してもよい。この能力は、あなたがソーサリーを唱えられるときにのみ起動できる。</card>
+(４)：各プレイヤーはそれぞれ、自分の手札からクリーチャー・カード１枚を戦場に出してもよい。起動はソーサリーとしてのみ行う。</card>
     <card name="Avatar - Chronatog" jaName="Chronatog Avatar" type="ヴァンガード" pt="手札 -1/ライフ +1" wikilink="Chronatog Avatar">あなたの手札の上限はなくなる。
 (０)：カードを３枚引く。あなたはあなたの次のターンを飛ばす。この能力は、毎ターン１回のみ起動できる。</card>
     <card name="Avatar - Dakkon Blackblade" jaName="Dakkon Blackblade Avatar" type="ヴァンガード" pt="手札 +1/ライフ +0" wikilink="Dakkon Blackblade Avatar">あなたは、あなたの手札から有色のカードを、そのカードの色のうちの１色のマナを生み出すことのできる基本土地・カード１枚を無作為に選び、その選ばれた基本土地・カードのコピーとしてプレイしてもよい。</card>
@@ -1014,7 +1014,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
 （０）：パーマネント１つか呪文１つか戦場に無いカード１つを選び、それをオーナーの手札に戻す。</card>
     <card name="Avatar - Jaya Ballard" jaName="Jaya Ballard Avatar" type="ヴァンガード" pt="手札 +0/ライフ +1" wikilink="Jaya Ballard Avatar">(Ｘ)：クリーチャー１体かプレインズウォーカー１体かプレイヤー１人を対象とする。０からＸまでの数１つを無作為に選ぶ。Jaya Balard Avatarはそれに、その選ばれた数に等しい点数のダメージを与える。この能力は、毎ターン１回のみ起動できる。</card>
     <card name="Avatar - Jhoira of the Ghitu" jaName="Jhoira of the Ghitu Avatar" type="ヴァンガード" pt="手札 +1/ライフ +0" wikilink="Jhoira of the Ghitu Avatar">(３),カード１枚を捨てる：無作為に選んだインスタント・カード３枚をコピーする。あなたはそれらのコピーのうちの１つをそのマナ・コストを支払わずに唱えてもよい。
-(３),カード１枚を捨てる：無作為に選んだソーサリー・カード３枚をコピーする。あなたはそれらのコピーのうちの１つをそのマナ・コストを支払わずに唱えてもよい。この能力は、あなたがソーサリーを唱えられるときにのみ起動できる。</card>
+(３),カード１枚を捨てる：無作為に選んだソーサリー・カード３枚をコピーする。あなたはそれらのコピーのうちの１つをそのマナ・コストを支払わずに唱えてもよい。起動はソーサリーとしてのみ行う。</card>
     <card name="Avatar - Karona, False God" jaName="Karona, False God Avatar" type="ヴァンガード" pt="手札 -1/ライフ +8" wikilink="Karona, False God Avatar">あなたのアップキープの開始時に、対戦相手１人を対象とする。あなたがコントロールしているパーマネント１つを無作為に選び、そのプレイヤーがコントロールしているパーマネント１つを無作為に選ぶ。それらのコントロールを交換する。</card>
     <card name="Avatar - Kresh the Bloodbraided" jaName="Kresh the Bloodbraided Avatar" type="ヴァンガード" pt="手札 +1/ライフ -3" wikilink="Kresh the Bloodbraided Avatar">あなたがコントロールしているクリーチャーが１体貪食されるたび、緑のX/Xのウーズ・クリーチャー・トークン１体を生成する。Ｘはその貪食されたクリーチャーのパワーに等しい。</card>
     <card name="Avatar - Loxodon Hierarch" jaName="Loxodon Hierarch Avatar" type="ヴァンガード" pt="手札 +0/ライフ +12" wikilink="Loxodon Hierarch Avatar">パーマネント１つを生け贄に捧げる：あなたがコントロールしているクリーチャー１体を対象とし、それを再生する。</card>
@@ -2379,6 +2379,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="(?&lt;=の上に置かれている.{1,2}カウンター)の総数に等しい" value="の数に等しい" nodebug="true" />
     <regex target="text" pattern="を持ち(白|青|黒|赤|緑)であり(白|青|黒|赤|緑)である" value="を持つ$1$2の" nodebug="true" />
     <regex target="text" pattern="(?&lt;!であり)(白|青|黒|赤|緑)であり(白|青|黒|赤|緑)である" value="$1$2の" nodebug="true" />
+    <regex target="text" pattern="この能力は、あなたがソーサリーを唱えられるとき(?:に?のみ|にしか|ならいつでも)起動できる。|この能力はソーサリーとしてのみ起動できる。" value="起動はソーサリーとしてのみ行う。" nodebug="true" />
     <!-- テンプレート変更への対抗 (you may ~. If you do, ...)  -->
     <regex target="text" pattern="実演（あなたがこの呪文を唱えたとき、あなたは「これをコピーし、(?:その後、)?対戦相手１人にもこれをコピーさせる。(両プレイヤーは自分のコピーの新しい対象を選んでもよい。)」を選んでもよい。）" value="実演（あなたがこの呪文を唱えたとき、あなたはこれをコピーしてもよい。そうしたなら、対戦相手１人にもこれをコピーさせる。$1）" nodebug="true" />
     <!-- テンプレート変更：A or B -->
