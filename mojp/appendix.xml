@@ -1709,12 +1709,27 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="147  /   " sub="SL2" name="Negan, the Cold-Blooded" />
     <alt key="581  /   " sub="SL2" name="Lucille" />
     <!-- SLD -->
+    <alt key="115  /   " sub="SLD" name="Glen Elendra Archmage" />
+    <alt key="116  /   " sub="SLD" name="Mistbind Clique" />
+    <alt key="117  /   " sub="SLD" name="Spellstutter Sprite" />
+    <alt key="118  /   " sub="SLD" name="Vendilion Clique" />
+    <alt key="214  /   " sub="SLD" name="Heliod, Sun-Crowned" />
+    <alt key="215  /   " sub="SLD" name="Goblin Rabblemaster" />
+    <alt key="216  /   " sub="SLD" name="Monastery Swiftspear" />
+    <alt key="217  /   " sub="SLD" name="Boros Charm" />
+    <alt key="218  /   " sub="SLD" name="Gisela, Blade of Goldnight" />
     <alt key="220  /   " sub="SLD" name="Frost Titan" />
     <alt key="221  /   " sub="SLD" name="Primeval Titan" />
     <alt key="222  /   " sub="SLD" name="Uro, Titan of Nature's Wrath" />
     <alt key="223  /   " sub="SLD" name="Grave Titan" />
     <alt key="224  /   " sub="SLD" name="Inferno Titan" />
     <alt key="225  /   " sub="SLD" name="Kroxa, Titan of Death's Hunger" />
+    <alt key="268  /   " sub="SLD" name="All Is Dust" />
+    <alt key="269  /   " sub="SLD" name="Artifact Mutation" />
+    <alt key="270  /   " sub="SLD" name="Drown in the Loch" />
+    <alt key="271  /   " sub="SLD" name="Fire Covenant" />
+    <alt key="272  /   " sub="SLD" name="Fractured Identity" />
+    <alt key="273  /   " sub="SLD" name="Fracturing Gust" />
     <!-- Strixhaven Mystical Archive -->
     <alt key="01  /  63 " sub="STA" name="Approach of the Second Sun" />
     <alt key="02  /  63 " sub="STA" name="Day of Judgment" />
