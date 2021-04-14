@@ -35,7 +35,7 @@ Windows 7 SP1 以降
 
 ## 開発環境
 Windows 10 October 2020 Update (Version 20H2)  
-Visual Studio 2019 v16.8  
+Visual Studio 2019 v16.9  
 C# 9.0
 
 ### 仕組み
