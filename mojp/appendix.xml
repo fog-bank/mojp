@@ -294,7 +294,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
 (３)：各プレイヤーはそれぞれ、自分の手札からクリーチャーでないアーティファクト・カード１枚を戦場に出してもよい。
 (４)：各プレイヤーはそれぞれ、自分の手札からクリーチャー・カード１枚を戦場に出してもよい。起動はソーサリーとしてのみ行う。</card>
     <card name="Avatar - Chronatog" jaName="Chronatog Avatar" type="ヴァンガード" pt="手札 -1/ライフ +1" wikilink="Chronatog Avatar">あなたの手札の上限はなくなる。
-(０)：カードを３枚引く。あなたはあなたの次のターンを飛ばす。毎ターン１回しか起動できない。</card>
+(０)：カードを３枚引く。あなたはあなたの次のターンを飛ばす。毎ターン１回のみ起動できる。</card>
     <card name="Avatar - Dakkon Blackblade" jaName="Dakkon Blackblade Avatar" type="ヴァンガード" pt="手札 +1/ライフ +0" wikilink="Dakkon Blackblade Avatar">あなたは、あなたの手札から有色のカードを、そのカードの色のうちの１色のマナを生み出すことのできる基本土地・カード１枚を無作為に選び、その選ばれた基本土地・カードのコピーとしてプレイしてもよい。</card>
     <card name="Avatar - Dauntless Escort" jaName="Dauntless Escort Avatar" type="ヴァンガード" pt="手札 +1/ライフ +1" wikilink="Dauntless Escort Avatar">あなたがコントロールしているクリーチャーは賛美を持つ。（あなたがコントロールしているクリーチャーが単独で攻撃するたび、ターン終了時まで、それはあなたがコントロールしているパーマネントの中にある賛美１つにつき+1/+1の修整を受ける。）</card>
     <card name="Avatar - Diamond Faerie" jaName="Diamond Faerie Avatar" type="ヴァンガード" pt="手札 +0/ライフ +5" wikilink="Diamond Faerie Avatar">(氷)：あなたがコントロールしているクリーチャー１体を対象とする。ターン終了時まで、それは+1/+1の修整を受ける。</card>
@@ -325,7 +325,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
 （０）：プレイヤー１人を選ぶ。そのプレイヤーは自分のライブラリーを公開する。その中から望む枚数のカードを選ぶ。そのプレイヤーはそれらのカードを自分の手札に加える。
 （０）：プレイヤー１人を選ぶ。そのプレイヤーがコントロールしているパーマネントをすべてアンタップする。
 （０）：パーマネント１つか呪文１つか戦場に無いカード１つを選び、それをオーナーの手札に戻す。</card>
-    <card name="Avatar - Jaya Ballard" jaName="Jaya Ballard Avatar" type="ヴァンガード" pt="手札 +0/ライフ +1" wikilink="Jaya Ballard Avatar">(Ｘ)：クリーチャー１体かプレインズウォーカー１体かプレイヤー１人を対象とする。０からＸまでの数１つを無作為に選ぶ。Jaya Balard Avatarはそれに、その選ばれた数に等しい点数のダメージを与える。毎ターン１回しか起動できない。</card>
+    <card name="Avatar - Jaya Ballard" jaName="Jaya Ballard Avatar" type="ヴァンガード" pt="手札 +0/ライフ +1" wikilink="Jaya Ballard Avatar">(Ｘ)：クリーチャー１体かプレインズウォーカー１体かプレイヤー１人を対象とする。０からＸまでの数１つを無作為に選ぶ。Jaya Balard Avatarはそれに、その選ばれた数に等しい点数のダメージを与える。毎ターン１回のみ起動できる。</card>
     <card name="Avatar - Jhoira of the Ghitu" jaName="Jhoira of the Ghitu Avatar" type="ヴァンガード" pt="手札 +1/ライフ +0" wikilink="Jhoira of the Ghitu Avatar">(３),カード１枚を捨てる：無作為に選んだインスタント・カード３枚をコピーする。あなたはそれらのコピーのうちの１つをそのマナ・コストを支払わずに唱えてもよい。
 (３),カード１枚を捨てる：無作為に選んだソーサリー・カード３枚をコピーする。あなたはそれらのコピーのうちの１つをそのマナ・コストを支払わずに唱えてもよい。起動はソーサリーとしてのみ行う。</card>
     <card name="Avatar - Karona, False God" jaName="Karona, False God Avatar" type="ヴァンガード" pt="手札 -1/ライフ +8" wikilink="Karona, False God Avatar">あなたのアップキープの開始時に、対戦相手１人を対象とする。あなたがコントロールしているパーマネント１つを無作為に選び、そのプレイヤーがコントロールしているパーマネント１つを無作為に選ぶ。それらのコントロールを交換する。</card>
@@ -375,7 +375,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <card name="Avatar - Squee, Goblin Nabob" jaName="Squee, Goblin Nabob Avatar" type="ヴァンガード" pt="手札 +3/ライフ -4" wikilink="Squee, Goblin Nabob Avatar">(１)：あなたがコントロールしているクリーチャー１体を対象とする。このターン、それに与えられるダメージを次の１点軽減する。</card>
     <card name="Avatar - Stalking Tiger" jaName="Stalking Tiger Avatar" type="ヴァンガード" pt="手札 +0/ライフ +2" wikilink="Stalking Tiger Avatar">あなたがクリーチャー・呪文を唱えるたび、あなたは(１)を支払ってもよい。そうしたなら、カードを１枚引く。</card>
     <card name="Avatar - Stonehewer Giant" jaName="Stonehewer Giant Avatar" type="ヴァンガード" pt="手札 +1/ライフ -5" wikilink="Stonehewer Giant Avatar">クリーチャー１体があなたのコントロール下で戦場に出るたび、マナ総量がそのクリーチャーのマナ総量より小さい装備品・カード１枚を無作為に選び、それのコピーであるトークン１つを生成する。その装備品をそのクリーチャーにつける。</card>
-    <card name="Avatar - Stuffy Doll" jaName="Stuffy Doll Avatar" type="ヴァンガード" pt="手札 +0/ライフ -6" wikilink="Stuffy Doll Avatar">(０)：対戦相手１人を対象とする。このターン、あなたが選んだ発生源１つからあなたにダメージが与えられるなら、そのダメージを軽減する。Stuffy Doll Avatarはあなたとそのプレイヤーに、これにより軽減されたダメージの端数を切り上げた半分に等しいダメージを与える。毎ターン１回しか起動できない。</card>
+    <card name="Avatar - Stuffy Doll" jaName="Stuffy Doll Avatar" type="ヴァンガード" pt="手札 +0/ライフ -6" wikilink="Stuffy Doll Avatar">(０)：対戦相手１人を対象とする。このターン、あなたが選んだ発生源１つからあなたにダメージが与えられるなら、そのダメージを軽減する。Stuffy Doll Avatarはあなたとそのプレイヤーに、これにより軽減されたダメージの端数を切り上げた半分に等しいダメージを与える。毎ターン１回のみ起動できる。</card>
     <card name="Avatar - Teysa, Orzhov Scion" jaName="Teysa, Orzhov Scion Avatar" type="ヴァンガード" pt="手札 +0/ライフ -2" wikilink="Teysa, Orzhov Scion Avatar">トークンでないクリーチャーが１体死亡するたび、飛行を持つ白の1/1のスピリット・クリーチャー・トークン１体を生成する。</card>
     <card name="Avatar - The Avenger" jaName="報復者" type="ヴァンガード" wikilink="報復者/The Avenger">(３),(Ｔ)：あなたがコントロールしているクリーチャー１体を対象とする。ターン終了時まで、それは接死を得る。</card>
     <card name="Avatar - The Harvester" jaName="収穫者" type="ヴァンガード" wikilink="収穫者/The Harvester">(Ｔ)：カードを１枚引き、その後カード１枚を捨てる。</card>
@@ -1432,7 +1432,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="、自分の墓地と手札" value="、自分の手札と墓地" nodebug="true" />
     <regex target="text" pattern="一番上の土地をプレイしても呪文を唱えてもよい" value="一番上から土地をプレイしても呪文を唱えてもよい" nodebug="true" />
     <regex target="text" pattern="この能力は、あなたがソーサリーを唱えられるとき(?:に?のみ|にしか|ならいつでも)起動できる。|この能力はソーサリーとしてのみ起動できる。" value="起動はソーサリーとしてのみ行う。" nodebug="true" />
-    <regex target="text" pattern="この能力は、[毎各１]ターンに?１回(?:のみ|だけ)起動できる。" value="毎ターン１回しか起動できない。" nodebug="true" />
+    <regex target="text" pattern="この能力は、[毎各１]ターンに?１回(?:のみ|だけ)起動できる。" value="毎ターン１回のみ起動できる。" nodebug="true" />
     <!-- 中丸追加 -->
     <regex target="type" pattern="部族(?=アーティファクト|エンチャント|インスタント|ソーサリー)" value="部族・" nodebug="true" />
     <regex target="text" pattern="(?&lt;=クリーチャー|アーティファクト|エンチャント|インスタント|ソーサリー|プレインズウォーカー|土地|パーマネント)(?=カード|呪文)" value="・" nodebug="true" />
@@ -1752,7 +1752,10 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="(?&lt;=の上に置かれている.{1,2}カウンター)の総数に等しい" value="の数に等しい" nodebug="true" />
     <regex target="text" pattern="を持ち(白|青|黒|赤|緑)であり(白|青|黒|赤|緑)である" value="を持つ$1$2の" nodebug="true" />
     <regex target="text" pattern="(?&lt;!であり)(白|青|黒|赤|緑)であり(白|青|黒|赤|緑)である" value="$1$2の" nodebug="true" />
-    <regex target="text" pattern="選ばれた偶奇" value="選ばれた値" nodebug="true" />
+    <regex target="text" pattern="選ばれた偶奇" value="選ばれた性質" nodebug="true" />
+    <regex target="text" pattern="(?&lt;=いる|ある)のなら起動できる。" value="ときにのみ起動できる。" nodebug="true" />
+    <regex target="text" pattern="起動はソーサリーとしてのみ行い、(?=毎ターン１回のみ起動できる。)" value="ソーサリーとしてのみ、" nodebug="true" />
+    <regex target="text" pattern="起動はソーサリーとしてのみ行い、(?=[^。]+のみ起動できる。)" value="ソーサリーとしてのみ、かつ、" nodebug="true" />
     <!-- テンプレート変更への対抗 (you may ~. If you do, ...)  -->
     <regex target="text" pattern="実演（あなたがこの呪文を唱えたとき、あなたは「これをコピーし、(?:その後、)?対戦相手１人にもこれをコピーさせる。(両プレイヤーは自分のコピーの新しい対象を選んでもよい。)」を選んでもよい。）" value="実演（あなたがこの呪文を唱えたとき、あなたはこれをコピーしてもよい。そうしたなら、対戦相手１人にもこれをコピーさせる。$1）" nodebug="true" />
     <!-- テンプレート変更：A or B -->
@@ -2698,7 +2701,7 @@ Venarian Goldが戦場に出たとき、エンチャントしているクリー�
 装備(３)</card>
     <card name="Steel Hellkite" jaName="鋼のヘルカイト" type="アーティファクト・クリーチャー ― ドラゴン" pt="5/5">飛行
 (２)：ターン終了時まで、鋼のヘルカイトは+1/+0の修整を受ける。
-(Ｘ)：このターンに鋼のヘルカイトによって戦闘ダメージを与えられたプレイヤーがコントロールする、マナ総量がＸで土地でない各パーマネントをそれぞれ破壊する。毎ターン１回しか起動できない。</card>
+(Ｘ)：このターンに鋼のヘルカイトによって戦闘ダメージを与えられたプレイヤーがコントロールする、マナ総量がＸで土地でない各パーマネントをそれぞれ破壊する。毎ターン１回のみ起動できる。</card>
     <card name="Mosswort Bridge" jaName="苔汁の橋" type="土地">秘匿（この土地はタップ状態で戦場に出る。そうしたとき、あなたのライブラリーの一番上からカードを４枚見て、そのうち１枚を裏向きに追放し、残りをあなたのライブラリーの一番下に置く。）
 (Ｔ)：(緑)を加える。
 (緑),(Ｔ)：あなたがコントロールしているクリーチャーのパワーの合計が１０以上であるなら、あなたはその追放されたカードを、それのマナ・コストを支払うことなくプレイしてもよい。</card>
@@ -4246,7 +4249,7 @@ III ― 対戦相手１人を対象とする。そのプレイヤーがコント
     
     <card name="Beledros Witherbloom" jaName="ベレドロス・ウィザーブルーム" type="伝説のクリーチャー ― エルダー・ドラゴン" pt="4/4">飛行
 各アップキープの開始時に、「このクリーチャーが死亡したとき、あなたは１点のライフを得る。」を持つ黒緑の1/1の邪魔者・クリーチャー・トークン１体を生成する。
-１０点のライフを支払う：あなたがコントロールしているすべての土地をアンタップする。毎ターン１回しか起動できない。</card>
+１０点のライフを支払う：あなたがコントロールしているすべての土地をアンタップする。毎ターン１回のみ起動できる。</card>
     <card name="Creative Outburst" jaName="創造の発露" type="インスタント">クリーチャー１体かプレインズウォーカー１体かプレイヤー１人を対象とする。創造の発露はそれに５点のダメージを与える。あなたのライブラリーの一番上からカード５枚を見る。そのうち１枚をあなたの手札に、残りをあなたのライブラリーの一番下に無作為の順番で置く。
 (青/赤)(青/赤),創造の発露を捨てる：宝物・トークン１つを生成する。</card>
     <card name="Culmination of Studies" jaName="研究の集大成" type="ソーサリー">あなたのライブラリーの一番上からカードＸ枚を追放する。これにより追放された土地・カードの枚数に等しい数の宝物・トークンを生成する。これにより追放された青のカードの枚数に等しい枚数のカードを引く。研究の集大成は各対戦相手にそれぞれ、これにより追放された赤のカードの枚数に等しい点数のダメージを与える。</card>
