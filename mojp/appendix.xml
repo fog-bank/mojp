@@ -1243,116 +1243,6 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <pt name="The Omenkeel" pt="3/3" />
     <!-- 機体のP/T (MH2) -->
     <pt name="Dermotaxi" pt="0/0" />
-    <!-- 関連カード -->
-    <related name="Alpine Houndmaster" related="Alpine Watchdog|Igneous Cur" />
-    <related name="Angel's Herald" related="Empyrial Archangel" />
-    <related name="Arachnus Spinner" related="Arachnus Web" />
-    <related name="Behemoth's Herald" related="Godsire" />
-    <related name="Bogbrew Witch" related="Festering Newt|Bubbling Cauldron" />
-    <related name="Bubbling Cauldron" related="Festering Newt|Bogbrew Witch" />
-    <related name="Festering Newt" related="Bogbrew Witch|Bubbling Cauldron" />
-    <related name="Crown of Empires" related="Scepter of Empires|Throne of Empires" />
-    <related name="Scepter of Empires" related="Crown of Empires|Throne of Empires" />
-    <related name="Throne of Empires" related="Crown of Empires|Scepter of Empires" />
-    <related name="Dark Supplicant" related="Scion of Darkness" />
-    <related name="Demon's Herald" related="Prince of Thralls" />
-    <related name="Diligent Farmhand" related="Muscle Burst" />
-    <related name="Dragon's Herald" related="Hellkite Overlord" />
-    <related name="Gate to the Afterlife" related="God-Pharaoh's Gift" />
-    <related name="Helm of Kaldra" related="Sword of Kaldra|Shield of Kaldra|Helm of Kaldra" />
-    <related name="Shield of Kaldra" related="Sword of Kaldra|Shield of Kaldra|Helm of Kaldra" />
-    <related name="Kookus" related="Keeper of Kookus" />
-    <related name="Kyscu Drake" related="Spitting Drake|Viashivan Dragon" />
-    <related name="Liu Bei, Lord of Shu" related="Guan Yu, Sainted Warrior|Zhang Fei, Fierce Warrior" />
-    <related name="Marauding Maulhorn" related="Advocate of the Beast" />
-    <related name="Nazahn, Revered Bladesmith" related="Hammer of Nazahn" />
-    <related name="Nissa Revane" related="Nissa's Chosen" />
-    <related name="Pardic Firecat" related="Flame Burst" />
-    <related name="Pious Kitsune" related="Eight-and-a-Half-Tails" />
-    <related name="Renowned Weaponsmith" related="Heart-Piercer Bow|Vial of Dragonfire" />
-    <related name="Rohgahh of Kher Keep" related="Kobolds of Kher Keep" />
-    <related name="Ruin in Their Wake" related="Wastes" />
-    <related name="Sift Through Sands" related="Peer Through Depths|Reach Through Mists|The Unspeakable" />
-    <related name="Skophos Maze-Warden" related="Labyrinth of Skophos" />
-    <related name="Sphinx's Herald" related="Sphinx Sovereign" />
-    <related name="Urborg Panther" related="Feral Shadow|Breathstealer|Spirit of the Night" />
-    <related name="Walker of the Wastes" related="Wastes" />
-    <!-- 関連カード (合体) -->
-    <related name="Gisela, the Broken Blade" related="Bruna, the Fading Light|Brisela, Voice of Nightmares" />
-    <related name="Graf Rats" related="Midnight Scavengers|Chittering Host" />
-    <related name="Hanweir Battlements" related="Hanweir Garrison|Hanweir, the Writhing Township" />
-    <!-- 関連カード（PW デッキ） -->
-    <related name="Liberating Combustion" related="Chandra, Pyrogenius" />
-    <related name="Verdant Crescendo" related="Nissa, Nature's Artisan" />
-    <related name="Tezzeret's Betrayal" related="Tezzeret, Master of Metal" />
-    <related name="Ajani's Aid" related="Ajani, Valiant Protector" />
-    <related name="Gideon's Resolve" related="Gideon, Martial Paragon" />
-    <related name="Liliana's Influence" related="Liliana, Death Wielder" />
-    <related name="Nissa's Encouragement" related="Forest|Brambleweft Behemoth|Nissa, Genesis Mage" />
-    <related name="Visage of Bolas" related="Nicol Bolas, the Deceiver" />
-    <related name="Grasping Current" related="Jace, Ingenious Mind-Mage" />
-    <related name="Sun-Blessed Mount" related="Huatli, Dinosaur Knight" />
-    <related name="Vraska's Scorn" related="Vraska, Scheming Gorgon" />
-    <related name="Angrath's Fury" related="Angrath, Minotaur Pirate" />
-    <related name="Niambi, Faithful Healer" related="Teferi, Timebender" />
-    <related name="Chandra's Outburst" related="Chandra, Bold Pyromancer" />
-    <related name="Ral's Dispersal" related="Ral, Caller of Storms" />
-    <related name="Vraska's Stoneglare" related="Vraska, Regal Gorgon" />
-    <related name="Rhythmic Water Vortex" related="Mu Yanling" />
-    <related name="Journey for the Elixir" related="Jiang Yanggu" />
-    <related name="Dovin's Dismissal" related="Dovin, Architect of Law" />
-    <related name="Domri's Nodorog" related="Domri, City Smasher" />
-    <related name="Gideon's Battle Cry" related="Gideon, the Oathsworn" />
-    <related name="Jace's Ruse" related="Jace, Arcane Strategist" />
-    <related name="Goldmane Griffin" related="Ajani, Inspiring Leader" />
-    <related name="Yanling's Harbinger" related="Mu Yanling, Celestial Wind" />
-    <related name="Sorin's Guide" related="Sorin, Vampire Lord" />
-    <related name="Chandra's Flame Wave" related="Chandra, Flame's Fury" />
-    <related name="Ethereal Elk" related="Vivien, Nature's Avenger" />
-    <related name="Rowan's Stalwarts" related="Rowan, Fearless Sparkmage" />
-    <related name="Oko's Hospitality" related="Oko, the Trickster" />
-    <related name="Elspeth, Undaunted Hero" related="Sunlit Hoplite" />
-    <related name="Elspeth's Devotee" related="Elspeth, Undaunted Hero" />
-    <related name="Ashiok's Forerunner" related="Ashiok, Sculptor of Fears" />
-    <related name="Basri's Aegis" related="Basri, Devoted Paladin" />
-    <related name="Teferi's Wavecaster" related="Teferi, Timeless Voyager" />
-    <related name="Liliana's Scorn" related="Liliana, Death Mage" />
-    <related name="Chandra's Firemaw" related="Chandra, Flame's Catalyst" />
-    <related name="Garruk's Warsteed" related="Garruk, Savage Herald" />
-    <!-- 関連カード (共闘) -->
-    <related name="Regna, the Redeemer" related="Krav, the Unredeemed" />
-    <related name="Krav, the Unredeemed" related="Regna, the Redeemer" />
-    <related name="Sylvia Brightspear" related="Khorvath Brightflame" />
-    <related name="Khorvath Brightflame" related="Sylvia Brightspear" />
-    <related name="Blaring Recruiter" related="Blaring Captain" />
-    <related name="Blaring Captain" related="Blaring Recruiter" />
-    <related name="Proud Mentor" related="Impetuous Protege" />
-    <related name="Impetuous Protege" related="Proud Mentor" />
-    <related name="Will Kenrith" related="Rowan Kenrith" />
-    <related name="Rowan Kenrith" related="Will Kenrith" />
-    <related name="Zndrsplt, Eye of Wisdom" related="Okaun, Eye of Chaos" />
-    <related name="Okaun, Eye of Chaos" related="Zndrsplt, Eye of Wisdom" />
-    <related name="Toothy, Imaginary Friend" related="Pir, Imaginative Rascal" />
-    <related name="Pir, Imaginative Rascal" related="Toothy, Imaginary Friend" />
-    <related name="Chakram Retriever" related="Chakram Slinger" />
-    <related name="Chakram Slinger" related="Chakram Retriever" />
-    <related name="Lore Weaver" related="Ley Weaver" />
-    <related name="Ley Weaver" related="Lore Weaver" />
-    <related name="Virtus the Veiled" related="Gorm the Great" />
-    <related name="Gorm the Great" related="Virtus the Veiled" />
-    <related name="Soulblade Corrupter" related="Soulblade Renewer" />
-    <related name="Soulblade Renewer" related="Soulblade Corrupter" />
-    <!-- 関連カード (共闘 C20) -->
-    <related name="Trynn, Champion of Freedom" related="Silvar, Devourer of the Free" />
-    <related name="Silvar, Devourer of the Free" related="Trynn, Champion of Freedom" />
-    <related name="Haldan, Avid Arcanist" related="Pako, Arcane Retriever" />
-    <related name="Pako, Arcane Retriever" related="Haldan, Avid Arcanist" />
-    <related name="Nikara, Lair Scavenger" related="Yannik, Scavenging Sentinel" />
-    <related name="Yannik, Scavenging Sentinel" related="Nikara, Lair Scavenger" />
-    <related name="Brallin, Skyshark Rider" related="Shabraz, the Skyshark" />
-    <related name="Shabraz, the Skyshark" related="Brallin, Skyshark Rider" />
-    <related name="Cazur, Ruthless Stalker" related="Ukkima, Stalking Shadow" />
-    <related name="Ukkima, Stalking Shadow" related="Cazur, Ruthless Stalker" />
     <!-- 分割カードのwikiページ -->
     <wikilink name="Stand" wikilink="抵抗+救難/Stand+Deliver" />
     <wikilink name="Deliver" wikilink="抵抗+救難/Stand+Deliver" />
@@ -5967,12 +5857,15 @@ III ― あなたのライブラリーからマナ・コストが(０)か(１)�
     <type name="Yawgmoth Demon" type="クリーチャー ― ファイレクシアン・デーモン" />
     <type name="Ranger-Captain of Eos" type="クリーチャー ― 人間・兵士・レインジャー" />
     <type name="Quirion Ranger" type="クリーチャー ― エルフ・レインジャー" />
-    <!-- 関連カード (合体) -->
+    <!-- 合体カード -->
+    <related name="Gisela, the Broken Blade" related="Bruna, the Fading Light|Brisela, Voice of Nightmares" />
     <related name="Bruna, the Fading Light" related="Gisela, the Broken Blade|Brisela, Voice of Nightmares" />
     <related name="Brisela, Voice of Nightmares" related="Gisela, the Broken Blade|Bruna, the Fading Light" />
+    <related name="Graf Rats" related="Midnight Scavengers|Chittering Host" />
     <related name="Midnight Scavengers" related="Graf Rats|Chittering Host" />
     <related name="Chittering Host" related="Graf Rats|Midnight Scavengers" />
     <related name="Hanweir Garrison" related="Hanweir Battlements|Hanweir, the Writhing Township" />
+    <related name="Hanweir Battlements" related="Hanweir Garrison|Hanweir, the Writhing Township" />
     <related name="Hanweir, the Writhing Township" related="Hanweir Battlements|Hanweir Garrison" />
   </replace>
   <remove>
