@@ -1534,6 +1534,11 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="223  /   " sub="SLD" name="Grave Titan" />
     <alt key="224  /   " sub="SLD" name="Inferno Titan" />
     <alt key="225  /   " sub="SLD" name="Kroxa, Titan of Death's Hunger" />
+    <alt key="244  /   " sub="SLD" name="Shalai, Voice of Plenty" />
+    <alt key="245  /   " sub="SLD" name="Ponder" />
+    <alt key="246  /   " sub="SLD" name="Cultivate" />
+    <alt key="249  /   " sub="SLD" name="Sol Ring" />
+    <alt key="250  /   " sub="SLD" name="Path of Ancestry" />
     <alt key="268  /   " sub="SLD" name="All Is Dust" />
     <alt key="269  /   " sub="SLD" name="Artifact Mutation" />
     <alt key="270  /   " sub="SLD" name="Drown in the Loch" />
