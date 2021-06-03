@@ -2070,6 +2070,8 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="一番上の土地をプレイしても呪文を唱えてもよい" value="一番上から土地をプレイしても呪文を唱えてもよい" nodebug="true" />
     <regex target="text" pattern="この能力は、あなたがソーサリーを唱えられるとき(?:に?のみ|にしか|ならいつでも)起動できる。|この能力はソーサリーとしてのみ起動できる。" value="起動はソーサリーとしてのみ行う。" nodebug="true" />
     <regex target="text" pattern="この能力は、[毎各１]ターンに?１回(?:のみ|だけ)起動できる。" value="毎ターン１回のみ起動できる。" nodebug="true" />
+    <regex target="text" pattern="の細菌・クリーチャー・トークン" value="のファイレクシアン・細菌・クリーチャー・トークン" nodebug="true" />
+    <regex target="text" pattern="接合者が戦場に出たとき、無色の3/3のゴーレム" value="接合者が戦場に出たとき、無色の3/3のファイレクシアン・ゴーレム" nodebug="true" />
     <!-- 中丸追加 -->
     <regex target="type" pattern="部族(?=アーティファクト|エンチャント|インスタント|ソーサリー)" value="部族・" nodebug="true" />
     <regex target="text" pattern="(?&lt;=クリーチャー|アーティファクト|エンチャント|インスタント|ソーサリー|プレインズウォーカー|土地|パーマネント)(?=カード|呪文)" value="・" nodebug="true" />
@@ -5682,6 +5684,46 @@ III ― あなたのライブラリーからマナ・コストが(０)か(１)�
     <card name="Braingeyser" jaName="知識の噴出" type="ソーサリー" wikilink="Braingeyser">プレイヤー１人を対象とする。そのプレイヤーはカードをＸ枚引く。</card>
     <card name="Black Lotus" jaName="ブラック・ロータス" type="アーティファクト" wikilink="Black Lotus">(Ｔ),ブラック・ロータスを生け贄に捧げる：好きな色１色のマナ３点を加える。</card>
     
+    <!-- ファイレクシアン -->
+    <card name="Brudiclad, Telchor Engineer" jaName="テルカーの技師、ブルーディクラッド" type="伝説のアーティファクト・クリーチャー ― ファイレクシアン・工匠" pt="4/4">あなたがコントロールしているクリーチャー・トークンは速攻を持つ。
+あなたのターンの戦闘の開始時に、青の2/1のファイレクシアン・マイア・アーティファクト・クリーチャー・トークン１体を生成する。その後、あなたはあなたがコントロールしているトークン１つを選んでもよい。そうしたなら、あなたがコントロールしている他の各トークンはそれぞれ、そのトークンのコピーになる。</card>
+    <card name="Carrion Call" jaName="屍肉の呼び声" type="インスタント">感染を持つ緑の1/1のファイレクシアン・昆虫・クリーチャー・トークン２体を生成する。（それらは、クリーチャーに-1/-1カウンターの形でダメージを与え、プレイヤーに毒カウンターの形でダメージを与える。）</card>
+    <card name="Chancellor of the Forge" jaName="溶鉱炉の大長" type="クリーチャー ― ファイレクシアン・巨人" pt="5/5">あなたはあなたのゲーム開始時の手札にあるこのカードを公開してもよい。そうしたなら、最初のアップキープの開始時に、速攻を持つ赤の1/1のファイレクシアン・ゴブリン・クリーチャー・トークン１体を生成する。
+溶鉱炉の大長が戦場に出たとき、速攻を持つ赤の1/1のゴブリン・クリーチャー・トークンＸ体を生成する。Ｘはあなたがコントロールしているクリーチャーの数に等しい。</card>
+    <card name="Conversion Chamber" jaName="変換室" type="アーティファクト">(２),(Ｔ)：墓地からアーティファクト・カード１枚を対象とし、それを追放する。変換室の上に蓄積カウンターを１個置く。
+(２),(Ｔ),変換室の上から蓄積カウンターを１個取り除く：無色の3/3のファイレクシアン・ゴーレム・アーティファクト・クリーチャー・トークン１体を生成する。</card>
+    <card name="Ezuri's Predation" jaName="エズーリの捕食" type="ソーサリー">あなたの対戦相手がコントロールしているクリーチャー１体につき、緑の4/4のファイレクシアン・ビースト・クリーチャー・トークン１体を生成する。それらの各ビースト・クリーチャーはそれぞれ、対戦相手のコントロールするクリーチャーのうち別々のものと格闘を行う。</card>
+    <card name="Ich-Tekik, Salvage Splicer" jaName="回収の接合者、イチ＝テキク" type="伝説のクリーチャー ― ファイレクシアン・人間・工匠" pt="1/1">回収の接合者、イチ＝テキクが戦場に出たとき、無色の3/3のファイレクシアン・ゴーレム・アーティファクト・クリーチャー・トークン１体を生成する。
+アーティファクトが１つ戦場から墓地に置かれるたび、回収の接合者、イチ＝テキクの上に+1/+1カウンターを１個と、あなたがコントロールしている各ゴーレムの上に+1/+1カウンターをそれぞれ１個置く。
+共闘（両方が共闘を持つなら、あなたは２体の統率者を使用できる。）</card>
+    <card name="Inkmoth Nexus" jaName="墨蛾の生息地" type="土地">(Ｔ)：(◇)を加える。
+(１)：ターン終了時まで、墨蛾の生息地は飛行と感染を持つ1/1のファイレクシアン・ちらつき蛾・アーティファクト・クリーチャーになる。これは土地でもある。（それは、クリーチャーに-1/-1カウンターの形でダメージを与え、プレイヤーに毒カウンターの形でダメージを与える。）</card>
+    <card name="Lurking Evil" jaName="隠れ潜む邪悪" type="エンチャント">あなたのライフの端数を切り上げた半分を支払う：隠れ潜む邪悪は飛行を持つ4/4のファイレクシアン・ホラー・クリーチャーになる。</card>
+    <card name="Lurking Skirge" jaName="隠れ潜むスカージ" type="エンチャント">クリーチャーが戦場から対戦相手１人の墓地に置かれたとき、隠れ潜むスカージがエンチャントである場合、隠れ潜むスカージは飛行を持つ3/2のファイレクシアン・インプ・クリーチャーになる。</card>
+    <card name="Myr Sire" jaName="マイアの種父" type="アーティファクト・クリーチャー ― マイア" pt="1/1">マイアの種父が死亡したとき、無色の1/1のファイレクシアン・マイア・アーティファクト・クリーチャー・トークン１体を生成する。</card>
+    <card name="Nested Ghoul" jaName="入れ子のグール" type="クリーチャー ― ファイレクシアン・ゾンビ・戦士" pt="4/2">発生源１つが入れ子のグールにダメージを与えるたび、黒の2/2のファイレクシアン・ゾンビ・クリーチャー・トークン１体を生成する。</card>
+    <card name="Parasitic Implant" jaName="寄生的移植" type="エンチャント ― オーラ">エンチャント（クリーチャー）
+あなたのアップキープの開始時に、エンチャントしているクリーチャーのコントローラーはそれを生け贄に捧げ、あなたは無色の1/1のファイレクシアン・マイア・アーティファクト・クリーチャー・トークン１体を生成する。</card>
+    <card name="Phyrexian Processor" jaName="ファイレクシアの処理装置" type="アーティファクト">ファイレクシアの処理装置が戦場に出るに際し、好きな点数のライフを支払う。
+(４),(Ｔ)：黒のX/Xのファイレクシアン・ミニオン・クリーチャー・トークン１体を生成する。Ｘはファイレクシアの処理装置が戦場に出るに際し支払われたライフの点数に等しい。</card>
+    <card name="Phyrexian Rebirth" jaName="ファイレクシアの再誕" type="ソーサリー">クリーチャーをすべて破壊する。その後、無色のX/Xのファイレクシアン・ホラー・アーティファクト・クリーチャー・トークン１体を生成する。Ｘはこれにより破壊されたクリーチャーの総数に等しい。</card>
+    <card name="Phyrexian Swarmlord" jaName="ファイレクシアの群れの王" type="クリーチャー ― ファイレクシアン・昆虫・ホラー" pt="4/4">感染（このクリーチャーは、クリーチャーに-1/-1カウンターの形でダメージを与え、プレイヤーに毒カウンターの形でダメージを与える。）
+あなたのアップキープの開始時に、あなたの対戦相手が持つ毒カウンター１個につき、感染を持つ緑の1/1のファイレクシアン・昆虫・クリーチャー・トークン１体を生成する。</card>
+    <card name="Phyrexian Totem" jaName="ファイレクシアのトーテム像" type="アーティファクト">(Ｔ)：(黒)を加える。
+(２)(黒)：ターン終了時まで、ファイレクシアのトーテム像はトランプルを持つ黒の5/5のファイレクシアン・ホラー・アーティファクト・クリーチャーになる。
+ファイレクシアのトーテム像にダメージが与えられるたび、それがクリーチャーである場合、その点数に等しい数のパーマネントを生け贄に捧げる。</card>
+    <card name="Phyrexian Triniform" jaName="ファイレクシアの三重体" type="アーティファクト・クリーチャー ― ゴーレム" pt="9/9">ファイレクシアの三重体が死亡したとき、無色の3/3のファイレクシアン・ゴーレム・アーティファクト・クリーチャー・トークン３体を生成する。
+再演(１２)（(１２),あなたの墓地からこのカードを追放する：各対戦相手につきそれぞれ、このカードのコピーであり、このターン可能ならそのプレイヤーを攻撃するトークン１体を生成する。それらは速攻を得る。次の終了ステップの開始時に、それらを生け贄に捧げる。起動はソーサリーとしてのみ行う。）</card>
+    <card name="Shrine of Loyal Legions" jaName="忠実な軍勢の祭殿" type="アーティファクト">あなたのアップキープの開始時か、あなたが白の呪文を唱えるたび、忠実な軍勢の祭殿の上に蓄積カウンターを１個置く。
+(３),(Ｔ),忠実な軍勢の祭殿を生け贄に捧げる：忠実な軍勢の祭殿の上に置かれていた蓄積カウンター１個につき、無色の1/1のファイレクシアン・マイア・アーティファクト・クリーチャー・トークン１体を生成する。</card>
+    <card name="Splicer's Skill" jaName="接合者の技法" type="ソーサリー">無色の3/3のファイレクシアン・ゴーレム・アーティファクト・クリーチャー・トークン１体を生成する。
+連繋（インスタントかソーサリー）(３)(白)（あなたがインスタントかソーサリーである呪文を唱えるに際し、あなたはあなたの手札からこのカードを公開して、連繋コストを支払ってもよい。そうしたなら、このカードの効果をその呪文に加える。）</card>
+    <card name="Trigon of Infestation" jaName="感染の三角護符" type="アーティファクト">感染の三角護符は、蓄積カウンターが３個置かれた状態で戦場に出る。
+(緑)(緑),(Ｔ)：感染の三角護符の上に蓄積カウンターを１個置く。
+(２),(Ｔ),感染の三角護符の上から蓄積カウンターを１個取り除く：感染を持つ緑の1/1のファイレクシアン・昆虫・クリーチャー・トークン１体を生成する。</card>
+    <card name="Wurmcoil Engine" jaName="ワームとぐろエンジン" type="アーティファクト・クリーチャー ― ワーム" pt="6/6">接死、絆魂
+ワームとぐろエンジンが死亡したとき、接死を持つ無色の3/3のファイレクシアン・ワーム・アーティファクト・クリーチャー・トークン１体と、絆魂を持つ無色の3/3のファイレクシアン・ワーム・アーティファクト・クリーチャー・トークン１体を生成する。</card>
+
     <!-- テンプレート変更への対抗 (you may ~. If you do, ...) (MH2) -->
     <card name="Master of Death" jaName="死の達人" type="クリーチャー ― ゾンビ・ウィザード" pt="3/1">死の達人が戦場に出たとき、諜報２を行う。
 あなたのアップキープの開始時に、死の達人があなたの墓地にある場合、あなたは１点のライフを支払ってもよい。そうしたなら、これをあなたの手札に戻す。</card>
@@ -5698,8 +5740,231 @@ III ― あなたのライブラリーからマナ・コストが(０)か(１)�
     <type name="Urza's Power Plant" type="土地 ― ウルザの・魔力炉" />
     <type name="Urza's Tower" type="土地 ― ウルザの・塔" />
     <!-- MH2 -->
+    <type name="Ascendant Evincar" type="伝説のクリーチャー ― ファイレクシアン・吸血鬼・貴族" />
+    <type name="Atraxa, Praetors' Voice" type="伝説のクリーチャー ― ファイレクシアン・天使・ホラー" />
+    <type name="Belbe, Corrupted Observer" type="伝説のクリーチャー ― ファイレクシアン・ゾンビ・エルフ" />
+    <type name="Blackcleave Goblin" type="クリーチャー ― ファイレクシアン・ゴブリン・ゾンビ" />
+    <type name="Blade Splicer" type="クリーチャー ― ファイレクシアン・人間・工匠" />
+    <type name="Blight Mamba" type="クリーチャー ― ファイレクシアン・蛇"/>
+    <type name="Blighted Agent" type="クリーチャー ― ファイレクシアン・人間・ならず者" />
+    <type name="Blightsteel Colossus" type="アーティファクト・クリーチャー ― ファイレクシアン・ゴーレム" />
+    <type name="Blightwidow" type="クリーチャー ― ファイレクシアン・蜘蛛" />
+    <type name="Blind Zealot" type="クリーチャー ― ファイレクシアン・人間・クレリック" />
+    <type name="Blinding Souleater" type="アーティファクト・クリーチャー ― ファイレクシアン・クレリック" />
+    <type name="Blistergrub" type="クリーチャー ― ファイレクシアン・ホラー" />
+    <type name="Body Snatcher" type="クリーチャー ― ファイレクシアン・ミニオン" />
     <type name="Bone Shredder" type="クリーチャー ― ファイレクシアン・ミニオン" />
+    <type name="Brudiclad, Telchor Engineer" type="伝説のアーティファクト・クリーチャー ― ファイレクシアン・工匠" />
+    <type name="Brutalizer Exarch" type="クリーチャー ― ファイレクシアン・クレリック" />
+    <type name="Carnifex Demon" type="クリーチャー ― ファイレクシアン・デーモン" />
+    <type name="Cathedral Membrane" type="アーティファクト・クリーチャー ― ファイレクシアン・壁" />
+    <type name="Caustic Hound" type="クリーチャー ― ファイレクシアン・犬" />
+    <type name="Chained Throatseeker" type="クリーチャー ― ファイレクシアン・ホラー" />
+    <type name="Chancellor of the Annex" type="クリーチャー ― ファイレクシアン・天使" />
+    <type name="Chancellor of the Dross" type="クリーチャー ― ファイレクシアン・吸血鬼" />
+    <type name="Chancellor of the Forge" type="クリーチャー ― ファイレクシアン・巨人" />
+    <type name="Chancellor of the Spires" type="クリーチャー ― ファイレクシアン・スフィンクス" />
+    <type name="Chancellor of the Tangle" type="クリーチャー ― ファイレクシアン・ビースト" />
+    <type name="Commander Greven il-Vec" type="伝説のクリーチャー ― ファイレクシアン・人間・戦士" />
+    <type name="Consecrated Sphinx" type="クリーチャー ― ファイレクシアン・スフィンクス" />
+    <type name="Contagious Nim" type="クリーチャー ― ファイレクシアン・ゾンビ" />
+    <type name="Core Prowler" type="アーティファクト・クリーチャー ― ファイレクシアン・ホラー" />
+    <type name="Corpse Cur" type="アーティファクト・クリーチャー ― ファイレクシアン・犬" />
+    <type name="Corrupted Harvester" type="クリーチャー ― ファイレクシアン・ホラー" />
+    <type name="Crazed Skirge" type="クリーチャー ― ファイレクシアン・インプ" />
+    <type name="Cystbearer" type="クリーチャー ― ファイレクシアン・ビースト" />
+    <type name="Darkslick Drake" type="クリーチャー ― ファイレクシアン・ドレイク" />
+    <type name="Death-Hood Cobra" type="クリーチャー ― ファイレクシアン・蛇" />
+    <type name="Deceiver Exarch" type="クリーチャー ― ファイレクシアン・クレリック" />
+    <type name="Dementia Bat" type="クリーチャー ― ファイレクシアン・コウモリ" />
+    <type name="Devouring Strossus" type="クリーチャー ― ファイレクシアン・ホラー" />
+    <type name="Dross Hopper" type="クリーチャー ― ファイレクシアン・昆虫・ホラー" />
+    <type name="Dross Ripper" type="アーティファクト・クリーチャー ― ファイレクシアン・犬" />
+    <type name="Eastern Paladin" type="クリーチャー ― ファイレクシアン・ゾンビ・騎士" />
+    <type name="Elesh Norn, Grand Cenobite" type="伝説のクリーチャー ― ファイレクシアン・法務官" />
+    <type name="Entomber Exarch" type="クリーチャー ― ファイレクシアン・クレリック" />
+    <type name="Ertai, the Corrupted" type="伝説のクリーチャー ― ファイレクシアン・人間・ウィザード" />
+    <type name="Etched Monstrosity" type="アーティファクト・クリーチャー ― ファイレクシアン・ゴーレム" />
+    <type name="Eviscerator" type="クリーチャー ― ファイレクシアン・ホラー" />
+    <type name="Ezuri, Claw of Progress" type="伝説のクリーチャー ― ファイレクシアン・エルフ・戦士" />
+    <type name="Fallen Ferromancer" type="クリーチャー ― ファイレクシアン・人間・シャーマン" />
+    <type name="First-Sphere Gargantua" type="クリーチャー ― ファイレクシアン・ホラー" />
+    <type name="Flameborn Viron" type="クリーチャー ― ファイレクシアン・昆虫" />
+    <type name="Flensermite" type="クリーチャー ― ファイレクシアン・グレムリン" />
+    <type name="Flesh Reaver" type="クリーチャー ― ファイレクシアン・ホラー" />
+    <type name="Flesh-Eater Imp" type="クリーチャー ― ファイレクシアン・インプ" />
+    <type name="Fume Spitter" type="クリーチャー ― ファイレクシアン・ホラー" />
+    <type name="Furnace Scamp" type="クリーチャー ― ファイレクシアン・ビースト" />
+    <type name="Gallowbraid" type="伝説のクリーチャー ― ファイレクシアン・ホラー" />
+    <type name="Geth, Lord of the Vault" type="伝説のクリーチャー ― ファイレクシアン・ゾンビ" />
+    <type name="Glissa, the Traitor" type="伝説のクリーチャー ― ファイレクシアン・ゾンビ・エルフ" />
+    <type name="Glissa's Courier" type="クリーチャー ― ファイレクシアン・ホラー" />
+    <type name="Glistener Elf" type="クリーチャー ― ファイレクシアン・エルフ・戦士" />
+    <type name="Gore Vassal" type="クリーチャー ― ファイレクシアン・犬" />
+    <type name="Greven, Predator Captain" type="伝説のクリーチャー ― ファイレクシアン・人間・戦士" />
+    <type name="Hand of the Praetors" type="クリーチャー ― ファイレクシアン・ゾンビ" />
+    <type name="Hex Parasite" type="アーティファクト・クリーチャー ― ファイレクシアン・昆虫" />
+    <type name="Hollow Dogs" type="クリーチャー ― ファイレクシアン・ゾンビ・犬" />
+    <type name="Ichor Rats" type="クリーチャー ― ファイレクシアン・ネズミ" />
+    <type name="Ichorclaw Myr" type="アーティファクト・クリーチャー ― ファイレクシアン・マイア" />
+    <type name="Ich-Tekik, Salvage Splicer" type="伝説のクリーチャー ― ファイレクシアン・人間・工匠" />
+    <type name="Immolating Souleater" type="アーティファクト・クリーチャー ― ファイレクシアン・犬" />
+    <type name="Impaler Shrike" type="クリーチャー ― ファイレクシアン・鳥" />
+    <type name="Inquisitor Exarch" type="クリーチャー ― ファイレクシアン・クレリック" />
+    <type name="Invader Parasite" type="クリーチャー ― ファイレクシアン・昆虫" />
+    <type name="Jin-Gitaxias, Core Augur" type="伝説のクリーチャー ― ファイレクシアン・法務官" />
+    <type name="Keskit, the Flesh Sculptor" type="伝説のクリーチャー ― ファイレクシアン・人間・工匠" />
+    <type name="Kiln Walker" type="アーティファクト・クリーチャー ― ファイレクシアン・構築物" />
+    <type name="K'rrik, Son of Yawgmoth" type="伝説のクリーチャー ― ファイレクシアン・ホラー・ミニオン" />
+    <type name="Lost Leonin" type="クリーチャー ― ファイレクシアン・猫・兵士" />
+    <type name="Loxodon Convert" type="クリーチャー ― ファイレクシアン・象・兵士" />
+    <type name="Marauding Knight" type="クリーチャー ― ファイレクシアン・ゾンビ・騎士" />
+    <type name="Massacre Wurm" type="クリーチャー ― ファイレクシアン・ワーム" />
+    <type name="Master Splicer" type="クリーチャー ― ファイレクシアン・人間・工匠" />
+    <type name="Maul Splicer" type="クリーチャー ― ファイレクシアン・人間・工匠" />
+    <type name="Moltensteel Dragon" type="アーティファクト・クリーチャー ― ファイレクシアン・ドラゴン" />
+    <type name="Morinfen" type="伝説のクリーチャー ― ファイレクシアン・ホラー" />
+    <type name="Mortis Dogs" type="クリーチャー ― ファイレクシアン・犬" />
+    <type name="Mycosynth Fiend" type="クリーチャー ― ファイレクシアン・ホラー" />
+    <type name="Myr Sire" type="アーティファクト・クリーチャー ― ファイレクシアン・マイア" />
+    <type name="Necrogen Scudder" type="クリーチャー ― ファイレクシアン・ホラー" />
+    <type name="Necropede" type="アーティファクト・クリーチャー ― ファイレクシアン・昆虫" />
+    <type name="Nested Ghoul" type="クリーチャー ― ファイレクシアン・ゾンビ・戦士" />
+    <type name="Oculus" type="クリーチャー ― ファイレクシアン・ホムンクルス" />
+    <type name="Ogre Menial" type="クリーチャー ― ファイレクシアン・オーガ" />
+    <type name="Order of Yawgmoth" type="クリーチャー ― ファイレクシアン・ゾンビ・騎士" />
+    <type name="Perilous Myr" type="アーティファクト・クリーチャー ― ファイレクシアン・マイア"/>
+    <type name="Pestilent Souleater" type="アーティファクト・クリーチャー ― ファイレクシアン・昆虫" />
+    <type name="Phyrexian Battleflies" type="クリーチャー ― ファイレクシアン・昆虫" />
+    <type name="Phyrexian Bloodstock" type="クリーチャー ― ファイレクシアン・ゾンビ" />
+    <type name="Phyrexian Broodlings" type="クリーチャー ― ファイレクシアン・ミニオン" />
+    <type name="Phyrexian Colossus" type="アーティファクト・クリーチャー ― ファイレクシアン・ゴーレム" />
+    <type name="Phyrexian Crusader" type="クリーチャー ― ファイレクシアン・ゾンビ・騎士" />
+    <type name="Phyrexian Debaser" type="クリーチャー ― ファイレクシアン・キャリアー" />
+    <type name="Phyrexian Defiler" type="クリーチャー ― ファイレクシアン・キャリアー" />
+    <type name="Phyrexian Delver" type="クリーチャー ― ファイレクシアン・ゾンビ" />
+    <type name="Phyrexian Denouncer" type="クリーチャー ― ファイレクシアン・キャリアー" />
+    <type name="Phyrexian Devourer" type="アーティファクト・クリーチャー ― ファイレクシアン・構築物" />
+    <type name="Phyrexian Digester" type="アーティファクト・クリーチャー ― ファイレクシアン・構築物" />
+    <type name="Phyrexian Dreadnought" type="アーティファクト・クリーチャー ― ファイレクシアン・ドレッドノート" />
+    <type name="Phyrexian Driver" type="クリーチャー ― ファイレクシアン・ゾンビ・傭兵" />
+    <type name="Phyrexian Gargantua" type="クリーチャー ― ファイレクシアン・ホラー" />
+    <type name="Phyrexian Ghoul" type="クリーチャー ― ファイレクシアン・ゾンビ" />
+    <type name="Phyrexian Gremlins" type="クリーチャー ― ファイレクシアン・グレムリン" />
+    <type name="Phyrexian Hulk" type="アーティファクト・クリーチャー ― ファイレクシアン・ゴーレム" />
+    <type name="Phyrexian Hydra" type="クリーチャー ― ファイレクシアン・ハイドラ" />
+    <type name="Phyrexian Infiltrator" type="クリーチャー ― ファイレクシアン・ミニオン" />
+    <type name="Phyrexian Ingester" type="クリーチャー ― ファイレクシアン・ビースト" />
+    <type name="Phyrexian Ironfoot" type="氷雪アーティファクト・クリーチャー ― ファイレクシアン・構築物" />
+    <type name="Phyrexian Juggernaut" type="アーティファクト・クリーチャー ― ファイレクシアン・巨大戦車" />
+    <type name="Phyrexian Marauder" type="アーティファクト・クリーチャー ― ファイレクシアン・構築物" />
+    <type name="Phyrexian Metamorph" type="アーティファクト・クリーチャー ― ファイレクシアン・多相の戦士" />
+    <type name="Phyrexian Monitor" type="クリーチャー ― ファイレクシアン・スケルトン" />
+    <type name="Phyrexian Negator" type="クリーチャー ― ファイレクシアン・ホラー" />
+    <type name="Phyrexian Obliterator" type="クリーチャー ― ファイレクシアン・ホラー" />
+    <type name="Phyrexian Plaguelord" type="クリーチャー ― ファイレクシアン・キャリアー" />
+    <type name="Phyrexian Prowler" type="クリーチャー ― ファイレクシアン・ゾンビ・傭兵" />
+    <type name="Phyrexian Rager" type="クリーチャー ― ファイレクシアン・ホラー" />
+    <type name="Phyrexian Reaper" type="クリーチャー ― ファイレクシアン・ゾンビ" />
+    <type name="Phyrexian Revoker" type="アーティファクト・クリーチャー ― ファイレクシアン・ホラー" />
+    <type name="Phyrexian Scuta" type="クリーチャー ― ファイレクシアン・ゾンビ" />
+    <type name="Phyrexian Slayer" type="クリーチャー ― ファイレクシアン・ミニオン" />
+    <type name="Phyrexian Snowcrusher" type="氷雪アーティファクト・クリーチャー ― ファイレクシアン・巨大戦車" />
+    <type name="Phyrexian Soulgorger" type="氷雪アーティファクト・クリーチャー ― ファイレクシアン・構築物" />
+    <type name="Phyrexian Swarmlord" type="クリーチャー ― ファイレクシアン・昆虫・ホラー" />
+    <type name="Phyrexian Triniform" type="アーティファクト・クリーチャー ― ファイレクシアン・ゴーレム" />
+    <type name="Phyrexian Vatmother" type="クリーチャー ― ファイレクシアン・ホラー" />
+    <type name="Phyrexian Walker" type="アーティファクト・クリーチャー ― ファイレクシアン・構築物" />
+    <type name="Phyrexian War Beast" type="アーティファクト・クリーチャー ― ファイレクシアン・ビースト" />
+    <type name="Pierce Strider" type="アーティファクト・クリーチャー ― ファイレクシアン・構築物" />
+    <type name="Pith Driller" type="アーティファクト・クリーチャー ― ファイレクシアン・ホラー" />
+    <type name="Plague Dogs" type="クリーチャー ― ファイレクシアン・ゾンビ・犬" />
+    <type name="Plague Engineer" type="クリーチャー ― ファイレクシアン・キャリアー" />
+    <type name="Plague Myr" type="アーティファクト・クリーチャー ― ファイレクシアン・マイア" />
+    <type name="Plague Spitter" type="クリーチャー ― ファイレクシアン・ホラー" />
+    <type name="Plague Stinger" type="クリーチャー ― ファイレクシアン・昆虫・ホラー" />
+    <type name="Plaguemaw Beast" type="クリーチャー ― ファイレクシアン・ビースト" />
+    <type name="Porcelain Legionnaire" type="アーティファクト・クリーチャー ― ファイレクシアン・兵士" />
+    <type name="Priest of Gix" type="クリーチャー ― ファイレクシアン・人間・クレリック・ミニオン" />
+    <type name="Priest of Urabrask" type="クリーチャー ― ファイレクシアン・人間・クレリック" />
+    <type name="Priest of Yawgmoth" type="クリーチャー ― ファイレクシアン・人間・クレリック" />
+    <type name="Priests of Norn" type="クリーチャー ― ファイレクシアン・クレリック" />
+    <type name="Psychosis Crawler" type="アーティファクト・クリーチャー ― ファイレクシアン・ホラー" />
+    <type name="Putrefax" type="クリーチャー ― ファイレクシアン・ホラー" />
+    <type name="Quilled Slagwurm" type="クリーチャー ― ファイレクシアン・ワーム" />
+    <type name="Rackling" type="アーティファクト・クリーチャー ― ファイレクシアン・構築物" />
+    <type name="Rathi Assassin" type="クリーチャー ― ファイレクシアン・ゾンビ・傭兵・暗殺者" />
+    <type name="Rathi Fiend" type="クリーチャー ― ファイレクシアン・ホラー・傭兵" />
+    <type name="Rathi Intimidator" type="クリーチャー ― ファイレクシアン・ホラー・傭兵" />
+    <type name="Ravenous Skirge" type="クリーチャー ― ファイレクシアン・インプ" />
+    <type name="Razor Swine" type="クリーチャー ― ファイレクシアン・猪" />
+    <type name="Reaper of Sheoldred" type="クリーチャー ― ファイレクシアン・ホラー" />
+    <type name="Rot Wolf" type="クリーチャー ― ファイレクシアン・狼" />
+    <type name="Rotted Hystrix" type="クリーチャー ― ファイレクシアン・ビースト" />
+    <type name="Rusted Slasher" type="アーティファクト・クリーチャー ― ファイレクシアン・ホラー" />
+    <type name="Sanguine Guard" type="クリーチャー ― ファイレクシアン・ゾンビ・騎士" />
+    <type name="Sarcomite Myr" type="アーティファクト・クリーチャー ― ファイレクシアン・マイア" />
+    <type name="Scourge Servant" type="クリーチャー ― ファイレクシアン・ゾンビ" />
+    <type name="Selenia, Dark Angel" type="伝説のクリーチャー ― ファイレクシアン・天使" />
+    <type name="Sensor Splicer" type="クリーチャー ― ファイレクシアン・工匠" />
+    <type name="Septic Rats" type="クリーチャー ― ファイレクシアン・ネズミ" />
+    <type name="Serum Raker" type="クリーチャー ― ファイレクシアン・ドレイク" />
+    <type name="Shattered Angel" type="クリーチャー ― ファイレクシアン・天使" />
+    <type name="Sheoldred, Whispering One" type="伝説のクリーチャー ― ファイレクシアン・法務官" />
+    <type name="Shivan Zombie" type="クリーチャー ― ファイレクシアン・バーバリアン・ゾンビ" />
+    <type name="Shriek Raptor" type="クリーチャー ― ファイレクシアン・鳥" />
+    <type name="Skinrender" type="クリーチャー ― ファイレクシアン・ゾンビ" />
     <type name="Skirge Familiar" type="クリーチャー ― ファイレクシアン・インプ" />
+    <type name="Skithiryx, the Blight Dragon" type="伝説のクリーチャー ― ファイレクシアン・ドラゴン・スケルトン" />
+    <type name="Skittering Horror" type="クリーチャー ― ファイレクシアン・ホラー" />
+    <type name="Skittering Skirge" type="クリーチャー ― ファイレクシアン・インプ" />
+    <type name="Slag Fiend" type="クリーチャー ― ファイレクシアン・構築物" />
+    <type name="Slash Panther" type="アーティファクト・クリーチャー ― ファイレクシアン・猫" />
+    <type name="Sleeper Agent" type="クリーチャー ― ファイレクシアン・ミニオン" />
+    <type name="Slinking Skirge" type="クリーチャー ― ファイレクシアン・インプ" />
+    <type name="Soul of New Phyrexia" type="アーティファクト・クリーチャー ― ファイレクシアン・アバター" />
+    <type name="Spellskite" type="アーティファクト・クリーチャー ― ファイレクシアン・ホラー" />
+    <type name="Spinebiter" type="クリーチャー ― ファイレクシアン・ビースト" />
+    <type name="Spined Thopter" type="アーティファクト・クリーチャー ― ファイレクシアン・飛行機械" />
+    <type name="Spineless Thug" type="クリーチャー ― ファイレクシアン・ゾンビ・傭兵" />
+    <type name="Spire Monitor" type="クリーチャー ― ファイレクシアン・ドレイク" />
+    <type name="Spiteful Bully" type="クリーチャー ― ファイレクシアン・ゾンビ・傭兵" />
+    <type name="Stronghold Assassin" type="クリーチャー ― ファイレクシアン・ゾンビ・暗殺者" />
+    <type name="Suture Priest" type="クリーチャー ― ファイレクシアン・クレリック" />
+    <type name="Tangle Angler" type="クリーチャー ― ファイレクシアン・ホラー" />
+    <type name="Tangle Hulk" type="アーティファクト・クリーチャー ― ファイレクシアン・ビースト" />
+    <type name="Tel-Jilad Fallen" type="クリーチャー ― ファイレクシアン・エルフ・戦士" />
+    <type name="Tethered Skirge" type="クリーチャー ― ファイレクシアン・インプ" />
+    <type name="Thrummingbird" type="クリーチャー ― ファイレクシアン・鳥・ホラー" />
+    <type name="Thundering Tanadon" type="アーティファクト・クリーチャー ― ファイレクシアン・ビースト" />
+    <type name="Tine Shrike" type="クリーチャー ― ファイレクシアン・鳥" />
+    <type name="Tormentor Exarch" type="クリーチャー ― ファイレクシアン・クレリック" />
+    <type name="Toxic Nim" type="クリーチャー ― ファイレクシアン・ゾンビ" />
+    <type name="Trespassing Souleater" type="アーティファクト・クリーチャー ― ファイレクシアン・構築物" />
+    <type name="Tsabo Tavoc" type="伝説のクリーチャー ― ファイレクシアン・ホラー" />
+    <type name="Tsabo's Assassin" type="クリーチャー ― ファイレクシアン・ゾンビ・暗殺者" />
+    <type name="Unworthy Dead" type="クリーチャー ― ファイレクシアン・スケルトン" />
+    <type name="Urabrask the Hidden" type="伝説のクリーチャー ― ファイレクシアン・法務官" />
+    <type name="Vault Skirge" type="アーティファクト・クリーチャー ― ファイレクシアン・インプ" />
+    <type name="Vebulid" type="クリーチャー ― ファイレクシアン・ホラー" />
+    <type name="Vector Asp" type="アーティファクト・クリーチャー ― ファイレクシアン・蛇" />
+    <type name="Vedalken Anatomist" type="クリーチャー ― ファイレクシアン・ヴィダルケン・ウィザード" />
+    <type name="Viral Drake" type="クリーチャー ― ファイレクシアン・ドレイク" />
+    <type name="Viridian Betrayers" type="クリーチャー ― ファイレクシアン・エルフ・戦士" />
+    <type name="Viridian Corrupter" type="クリーチャー ― ファイレクシアン・エルフ・シャーマン" />
+    <type name="Viridian Emissary" type="クリーチャー ― ファイレクシアン・エルフ・スカウト" />
+    <type name="Viseling" type="アーティファクト・クリーチャー ― ファイレクシアン・構築物" />
+    <type name="Vital Splicer" type="クリーチャー ― ファイレクシアン・人間・工匠" />
+    <type name="Volrath the Fallen" type="伝説のクリーチャー ― ファイレクシアン・多相の戦士" />
+    <type name="Volrath, the Shapestealer" type="伝説のクリーチャー ― ファイレクシアン・多相の戦士" />
+    <type name="Volrath's Shapeshifter" type="クリーチャー ― ファイレクシアン・多相の戦士" />
+    <type name="Vorinclex, Voice of Hunger" type="伝説のクリーチャー ― ファイレクシアン・法務官" />
+    <type name="Western Paladin" type="クリーチャー ― ファイレクシアン・ゾンビ・騎士" />
+    <type name="Whispering Specter" type="クリーチャー ― ファイレクシアン・スペクター" />
+    <type name="Wing Splicer" type="クリーチャー ― ファイレクシアン・人間・工匠" />
+    <type name="Wurmcoil Engine" type="アーティファクト・クリーチャー ― ファイレクシアン・ワーム" />
+    <type name="Xantcha, Sleeper Agent" type="伝説のクリーチャー ― ファイレクシアン・ミニオン" />
+    <type name="Yawgmoth Demon" type="クリーチャー ― ファイレクシアン・デーモン" />
     <type name="Ranger-Captain of Eos" type="クリーチャー ― 人間・兵士・レインジャー" />
     <type name="Quirion Ranger" type="クリーチャー ― エルフ・レインジャー" />
     <!-- 関連カード (合体) -->
