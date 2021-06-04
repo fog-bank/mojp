@@ -2,6 +2,7 @@
 [Magic: The Gathering Online](http://www.mtgo.com/) で表示されているカードに対応して、日本語テキストを自動で表示するアプリです。
 
 ![Screenshot v2.0.0](https://github.com/fog-bank/mojp/blob/master/images/screenshot.png)
+![Screenshot latest](https://github.com/fog-bank/mojp/blob/master/docs/images/screenshot.png)
 
 ## 主な機能
 * MO の Preview Pane に表示されているカードの日本語テキストを表示する
@@ -56,4 +57,5 @@ C# 9.0
 カードセットを絞らない場合、2 万件以上のカードがヒットし、テキストのサイズは 7 MB を超えますので、この方法で頻繁に検索しないでください。
 
 ## 連絡先
+Website: https://fog-bank.github.io/mojp/
 Twitter: [@bank_fog](https://twitter.com/bank_fog)
