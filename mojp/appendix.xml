@@ -5578,6 +5578,7 @@ III ― あなたのライブラリーからマナ・コストが(０)か(１)�
     <!-- MH2 新日本語カード名 -->
     <card name="Braingeyser" jaName="知識の噴出" type="ソーサリー" wikilink="Braingeyser">プレイヤー１人を対象とする。そのプレイヤーはカードをＸ枚引く。</card>
     <card name="Black Lotus" jaName="ブラック・ロータス" type="アーティファクト" wikilink="Black Lotus">(Ｔ),ブラック・ロータスを生け贄に捧げる：好きな色１色のマナ３点を加える。</card>
+    <card name="Gift of the Fae" jaName="フェイからの贈り物" type="ソーサリー ― 出来事" related="Faerie Guidemother">クリーチャー１体を対象とする。ターン終了時まで、それは+2/+1の修整を受け飛行を得る。（その後、このカードを追放する。あなたは後で追放領域からこのクリーチャーを唱えてもよい。）</card>
     
     <!-- ファイレクシアン -->
     <card name="Brudiclad, Telchor Engineer" jaName="テルカーの技師、ブルーディクラッド" type="伝説のアーティファクト・クリーチャー ― ファイレクシアン・工匠" pt="4/4">あなたがコントロールしているクリーチャー・トークンは速攻を持つ。
