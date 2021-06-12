@@ -613,6 +613,28 @@ namespace Mojp
                 App.AltCards.Add(key + sub, new AltCard(key, sub, name));
             }
 
+            // カードの削除
+            foreach (var node in doc.Root.Elements("remove").Elements("card"))
+            {
+                string name = (string)node.Attribute("name");
+                Debug.WriteLineIf(!cards.ContainsKey(name), name + " は既にカードリストに含まれていません。");
+                cards.Remove(name);
+            }
+
+            // 暫定日本語カード名の削除
+            foreach (var node in doc.Root.Elements("remove").Elements("jaName"))
+            {
+                string name = (string)node.Attribute("name");
+
+                if (cards.TryGetValue(name, out var card))
+                {
+                    Debug.WriteLineIf(card.Name == card.JapaneseName, name + " には既に日本語名がありません。");
+                    card.JapaneseName = card.Name;
+                }
+                else
+                    Debug.WriteLine(name + " は既にカードリストに含まれていません。");
+            }
+
             // カードデータの差し替え
             var beforeNodes = new XElement("cards");
             var replacedNodes = new XElement("replace");
@@ -743,28 +765,6 @@ namespace Mojp
             var root = new XElement("mojp", replacedNodes, identicalNodes);
             var result = new XDocument(new XDeclaration("1.0", "utf-8", "yes"), root);
             result.Save(App.GetPath("appendix_result.xml"));
-
-            // カードの削除
-            foreach (var node in doc.Root.Elements("remove").Elements("card"))
-            {
-                string name = (string)node.Attribute("name");
-                Debug.WriteLineIf(!cards.ContainsKey(name), name + " は既にカードリストに含まれていません。");
-                cards.Remove(name);
-            }
-
-            // 暫定日本語カード名の削除
-            foreach (var node in doc.Root.Elements("remove").Elements("jaName"))
-            {
-                string name = (string)node.Attribute("name");
-
-                if (cards.TryGetValue(name, out var card))
-                {
-                    Debug.WriteLineIf(card.Name == card.JapaneseName, name + " には既に日本語名がありません。");
-                    card.JapaneseName = card.Name;
-                }
-                else
-                    Debug.WriteLine(name + " は既にカードリストに含まれていません。");
-            }
         }
 #endif
 

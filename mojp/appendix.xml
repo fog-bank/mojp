@@ -1267,7 +1267,6 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="する．" value="する。" nodebug="true" />
     <regex target="text" pattern="選ぶ、" value="選び、" nodebug="true" />
     <regex target="text" pattern="一番江" value="一番上" nodebug="true" />
-    <regex target="text" pattern="唱えらえ" value="唱えられ" nodebug="true" />
     <regex target="text" pattern="にすてる" value="に捨てる" nodebug="true" />
     <regex target="text" pattern="に修整を受け" value="の修整を受け" nodebug="true" />
     <regex target="text" pattern="は各対戦相手は" value="は各対戦相手に" nodebug="true" />
@@ -1301,6 +1300,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="(?&lt;=[０-９Ｘ]+)店" value="点" />
     <regex target="text" pattern="クリーチャ(?!ー)" value="クリーチャー" nodebug="true" />
     <regex target="text" pattern="対象都市" value="対象とし" />
+    <regex target="text" pattern="唱えらえ" value="唱えられ" nodebug="true" />
     <regex target="text" pattern="(?&lt;=呪文|クリーチャー)化(?!した)" value="か" nodebug="true" />
     <regex target="text" pattern="そうでないなあ" value="そうでないなら" />
     <regex target="text" pattern="あんた" value="あなた" />
@@ -1316,7 +1316,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="type|text" pattern="\([a-zA-Z'\- ]+\)" value="" nodebug="true" />
     <regex target="text" pattern="(?&lt;=《[^《/》]+)/[^《/》]+(?=》)" value="" nodebug="true" />
     <!-- オラクル更新 -->
-    <regex target="name|text" pattern="AE" value="Ae" nodebug="true" />
+    <regex target="name|jaName|text" pattern="AE" value="Ae" nodebug="true" />
     <regex target="text" pattern="点数で見たマナ・コスト" value="マナ総量" nodebug="true" />
     <regex target="text" pattern="(?&lt;=トークンを[０-９Ｘ]+体)戦場に出す" value="生成する" nodebug="true" />
     <regex target="text" pattern="クリーチャー１体かプレイヤー１人(?!か)(?=[^。]*対象と.+ダメージを[^。]*与え)" value="クリーチャー１体かプレインズウォーカー１体かプレイヤー１人" nodebug="true" />
@@ -4690,7 +4690,7 @@ III ― 対戦相手１人を対象とする。そのプレイヤーがコント
   </replace>
   <remove>
     <!-- ドラフト能力を持つカード -->
-    <card name="Aether Searcher" />
+    <card name="AEther Searcher" />
     <card name="Agent of Acquisitions" />
     <card name="Animus of Predation" />
     <card name="Arcane Savant" />
@@ -4936,7 +4936,7 @@ III ― 対戦相手１人を対象とする。そのプレイヤーがコント
     <card name="Wordmail" />
     <card name="Working Stiff" />
     <card name="World-Bottling Kit" />
-    <card name="Yet Another Aether Vortex" />
+    <card name="Yet Another AEther Vortex" />
     <card name="Zombie" />
     <card name="Zombie Fanboy" />
     <card name="Zzzyxas's Abyss" />
@@ -5334,7 +5334,7 @@ III ― 対戦相手１人を対象とする。そのプレイヤーがコント
     <jaName name="Adventurers' Guildhouse" />
     <jaName name="Aegis of the Meek" />
     <jaName name="Aeolipile" />
-    <jaName name="Aerathi Berserker" />
+    <jaName name="AErathi Berserker" />
     <jaName name="Agent of Stromgald" />
     <jaName name="Aggression" />
     <jaName name="Aisling Leprechaun" />
