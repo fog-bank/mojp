@@ -1406,7 +1406,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="１(体|つ)が対戦相手１人のコントロール下で戦場に出るたび、" value="が１$1対戦相手のコントロール下で戦場に出るたび、" nodebug="true" />
     <regex target="text" pattern="(?&lt;!につき)([０-９Ｘ]+)個の(.\d/.\d|\w{1,2})カウンターが置かれた状態で戦場に出る" value="$2カウンターが$1個置かれた状態で戦場に出る" nodebug="true" />
     <!-- 順序変更：数字を前に移動 (KHM and later) -->
-    <regex target="text" pattern="一番上からカードを([０-９]{2,}|[２-９Ｘ])枚" value="一番上からカード$1枚を" nodebug="true" />
+    <regex target="text" pattern="一番上(?:から|の)カードを([０-９]{2,}|[２-９Ｘ])枚" value="一番上からカード$1枚を" nodebug="true" />
     <regex target="text" pattern="トークンを([０-９Ｘ]+)体生成する。" value="トークン$1体を生成する。" nodebug="true" />
     <regex target="text" pattern="クリーチャー・トークンを１体と、" value="クリーチャー・トークン１体と、" nodebug="true" />
     <regex target="text" pattern="(?&lt;=クリーチャー|プレインズウォーカー)が１体(?=(?:攻撃|死亡)するたび、)" value="１体が" nodebug="true" />
@@ -1599,8 +1599,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="戦場に出ている(?=クリーチャー１体|エンチャント|オーラ|[^。]+の総?数に等しい。)" value="戦場にある" nodebug="true" />
     <regex target="text" pattern="(?&lt;!このターン[^。]+)戦場に出ている(?=場合|かぎり|他の|アーティファクト)" value="戦場にある" nodebug="true" />
     <regex target="text" pattern="ライブラリーの(?:カードの)?一番上(?:から１枚)?のカード(?:１枚)?を(?:１枚、?)?" value="ライブラリーの一番上のカードを" nodebug="true" />
-    <regex target="text" pattern="ライブラリーのカードを(?:一番)?上から([０-９Ｘ]{2,}|[０２-９Ｘ])枚、?" value="ライブラリーの一番上からカードを$1枚" nodebug="true" />
-    <regex target="text" pattern="ライブラリーの一番上のカードを(?=[０-９Ｘ]+枚見)" value="ライブラリーの一番上からカードを" nodebug="true" />
+    <regex target="text" pattern="ライブラリーのカードを(?:一番)?上から([０-９Ｘ]{2,}|[０２-９Ｘ])枚、?" value="ライブラリーの一番上からカード$1枚を" nodebug="true" />
     <regex target="text" pattern="好きな色のマナ(?=[０-９Ｘ]+点を加え)" value="好きな色１色のマナ" nodebug="true" />
     <regex target="text" pattern="を対象とし、それはターン終了時まで" value="を対象とする。ターン終了時まで、それは" nodebug="true" />
     <regex target="text" pattern="を対象とし、それを、?([^。]+(?:「[^。」]+。?」[^。]+)?)かぎり、?" value="を対象とする。$1かぎり、それを" nodebug="true" />
