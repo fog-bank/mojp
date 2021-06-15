@@ -1356,6 +1356,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="あなたは、それを" value="あなたはそれを" nodebug="true" />
     <regex target="text" pattern="(?m)^あなたは、あなたの(?=ライブラリーの一番上から)" value="あなたはあなたの" nodebug="true" />
     <regex target="text" pattern="は、(?=[^。]{0,11}カードを(?:[０-９Ｘ]+枚)?切削)" value="は" nodebug="true" />
+    <regex target="text" pattern="(?&lt;!、[^。]+)を、オーナーの手札に戻す。" value="をオーナーの手札に戻す。" nodebug="true" />
     <!-- 順序変更 -->
     <regex target="type" pattern="エンチャント・アーティファクト" value="アーティファクト・エンチャント" nodebug="true" />
     <regex target="type" pattern="エンチャント・土地" value="土地・エンチャント" nodebug="true" />
@@ -4297,7 +4298,6 @@ III ― 対戦相手１人を対象とする。そのプレイヤーがコント
     
     <card name="Sea Drake" jaName="海のドレイク" type="クリーチャー ― ドレイク" pt="4/3">飛行
 海のドレイクが戦場に出たとき、あなたがコントロールしている土地２つを対象とする。それらをオーナーの手札に戻す。</card>
-    <card name="Upheaval" jaName="激動" type="ソーサリー">すべてのパーマネントをオーナーの手札に戻す。</card>
     <card name="Wonder" jaName="不可思議" type="クリーチャー ― インカーネーション" pt="2/2">飛行
 不可思議があなたの墓地にあってあなたが島をコントロールしているかぎり、あなたがコントロールしているすべてのクリーチャーは飛行を持つ。</card>
     
