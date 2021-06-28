@@ -32,6 +32,44 @@
     <card name="Vorpal Sword" jaName="ヴォーパル・ソード" type="アーティファクト ― 装備品">装備しているクリーチャーは+2/+0の修整を受け接死を持つ。
 (５)(黒)(黒)(黒)：ターン終了時まで、ヴォーパル・ソードは「装備しているクリーチャーがプレイヤー１人に戦闘ダメージを与えるたび、そのプレイヤーはこのゲームに敗北する。」を得る。
 装備(黒)(黒)</card>
+    
+    <card name="Ellywick Tumblestrum" jaName="エリーウィック・タンブルストロム" type="伝説のプレインズウォーカー ― エリーウィック" pt="4">[+1]：ダンジョン探索をする。（ダンジョン探索をするとは、最初の部屋へ入るか、次の部屋へ進むことである。）
+[-2]：あなたのライブラリーの一番上からカード６枚を見る。あなたは「その中からクリーチャー・カード１枚を公開し、あなたの手札に加える。」を選んでもよい。それが伝説であるなら、あなたは３点のライフを得る。残りをあなたのライブラリーの一番下に無作為の順番で置く。
+[-7]：あなたは「あなたがコントロールしているすべてのクリーチャーは、トランプルと速攻を持ち、あなたが踏破した、名前の異なるダンジョン１つにつき+2/+2の修整を受ける。」を持つ紋章を得る。</card>
+    <card name="Prosperous Innkeeper" jaName="裕福な亭主" type="クリーチャー ― ハーフリング・市民" pt="1/1">裕福な亭主が戦場に出たとき、宝物・トークン１つを生成する。（それは、「(Ｔ),このアーティファクトを生け贄に捧げる：好きな色１色のマナ１点を加える。」を持つアーティファクトである。）
+これ以外のクリーチャー１体があなたのコントロール下で戦場に出るたび、あなたは１点のライフを得る。</card>
+    
+    <card name="Bruenor Battlehammer" jaName="ブルーノー・バトルハンマー" type="伝説のクリーチャー ― ドワーフ・戦士" pt="5/3">あなたがコントロールしている各クリーチャーは、それぞれ自身についている装備品１つにつき+2/+0の修整を受ける。
+あなたは、各ターンで初めてあなたが起動する装備能力の装備コストを支払うのではなく(０)を支払ってもよい。</card>
+    <card name="Drizzt Do'Urden" jaName="ドリッズト・ドゥアーデン" type="伝説のクリーチャー ― エルフ・レインジャー" pt="3/3">二段攻撃
+ドリッズト・ドゥアーデンが戦場に出たとき、《グエンワイヴァー》という名前でトランプルを持つ緑の4/1の伝説の猫・クリーチャー・トークン１体を生成する。
+クリーチャー１体が死亡するたび、それがドリッズト・ドゥアーデンのパワーより大きいパワーを持っていた場合、ドリッズト・ドゥアーデンの上にその差に等しい数の+1/+1カウンターを置く。</card>
+    <card name="Tiamat" jaName="ティアマト" type="伝説のクリーチャー ― ドラゴン・神" pt="7/7">飛行
+ティアマトが戦場に出たとき、あなたがこれを唱えていた場合、あなたのライブラリーから《ティアマト》という名前でない異なる名前のドラゴン・カード最大５枚を探し、公開し、あなたの手札に加える。その後、ライブラリーを切り直す。</card>
+    
+    <card name="Dungeon of the Mad Mage" jaName="狂える魔道士の迷宮" type="ダンジョン">Yawning Portal ― あなたは１点のライフを得る。
+Dungeon Level ― 占術１を行う。
+Goblin Bazaar ― 宝物・トークン１つを生成する。
+Twisted Caverns ― クリーチャー１体を対象とする。あなたの次のターンまで、それは攻撃できない。
+Lost Level ― 占術２を行う。
+Runestone Caverns ― あなたのライブラリーの一番上からカード２枚を追放する。あなたはそれらをプレイしてもよい。
+Muiral's Graveyard ― 黒の1/1のスケルトン・クリーチャー・トークン２体を生成する。
+Deep Mines ― 占術３を行う。
+Mad Wizard's Lair ― カード３枚を引き、公開する。あなたはその中から１枚をマナ・コストを支払うことなく唱えてもよい。</card>
+    <card name="Lost Mine of Phandelver" jaName="ファンデルヴァーの失われた鉱山" type="ダンジョン">Cave Entrance ― 占術１を行う。
+Goblin Lair ― 赤の1/1のゴブリン・クリーチャー・トークン１体を生成する。
+Mine Tunnels ― 宝物・トークン１つを生成する。
+Storeroom ― クリーチャー１体を対象とする。それの上に+1/+1カウンター１個を置く。
+Dark Pool ― 各対戦相手はそれぞれ１点のライフを失い、あなたは１点のライフを得る。
+Fungi Cavern ― クリーチャー１体を対象とする。あなたの次のターンまで、それは-4/-0の修整を受ける。
+Temple of Dumathoin ― カード１枚を引く。</card>
+    <card name="Tomb of Annihilation" jaName="魂を喰らう墓" type="ダンジョン">Trapped Entry ― 各プレイヤーはそれぞれ１点のライフを失う。
+Veils of Fear ― 各プレイヤーはそれぞれ、カード１枚を捨てないかぎり２点のライフを失う。
+Oubliette ― カード１枚を捨て、アーティファクト１つとクリーチャー１体と土地１つを生け贄に捧げる。
+Sandfall Cell ― 各プレイヤーはそれぞれ、アーティファクトやクリーチャーや土地のうち１つを生け贄に捧げないかぎり２点のライフを失う。
+Cradle of the Death God ― 《アトロパル》という名前で接死を持つ黒の4/4の伝説の神・ホラー・クリーチャー・トークン１体を生成する。</card>
+    
+    <card name="Evolving Wilds" jaName="進化する未開地" type="土地">(Ｔ),進化する未開地を生け贄に捧げる：あなたのライブラリーから基本土地・カード１枚を探し、タップ状態で戦場に出す。その後、ライブラリーを切り直す。</card>
     <!-- クリーチャーでないトークン -->
     <card name="Clue" jaName="手掛かり" type="トークン・アーティファクト ― 手掛かり" wikilink="手掛かり">(２),このアーティファクトを生け贄に捧げる：カード１枚を引く。</card>
     <card name="Etherium Cell" jaName="エーテリウム電池" type="トークン・アーティファクト" wikilink="策謀家テゼレット/Tezzeret the Schemer">(Ｔ),このアーティファクトを生け贄に捧げる：好きな色１色のマナ１点を加える。</card>
@@ -52,8 +90,10 @@
     <card name="Treasure" jaName="宝物" type="トークン・アーティファクト ― 宝物" wikilink="宝物">(Ｔ),このアーティファクトを生け贄に捧げる：好きな色１色のマナ１点を加える。</card>
     <!-- 専用の名前を持つトークン -->
     <card name="Ashaya, the Awoken World" jaName="目覚めし世界、アシャヤ" type="トークン・伝説のクリーチャー ― エレメンタル" pt="4/4" wikilink="精霊信者の賢人、ニッサ/Nissa, Sage Animist"></card>
+    <card name="The Atropal" jaName="アトロパル" type="トークン・伝説のクリーチャー ― 神・ホラー" pt="4/4" wikilink="魂を喰らう墓/Tomb of Annihilation">接死</card>
     <card name="Butterfly" jaName="蝶" type="トークン・クリーチャー ― 昆虫" pt="1/1" wikilink="大イモムシ/Giant Caterpillar">飛行</card>
     <card name="Carnivore" jaName="肉食動物" type="トークン・クリーチャー ― ビースト" pt="3/1" wikilink="歯とかぎ爪/Tooth and Claw"></card>
+    <card name="Guenhwyvar" jaName="グエンワイヴァー" type="トークン・伝説のクリーチャー ― 猫" pt="4/1" wikilink="ドリッズト・ドゥアーデン/Drizzt Do'Urden">トランプル</card>
     <card name="Hornet" jaName="スズメバチ" type="トークン・アーティファクト・クリーチャー ― 昆虫" pt="1/1" wikilink="スズメバチ砲/Hornet Cannon">飛行、速攻</card>
     <card name="Kaldra" jaName="カルドラ" type="トークン・伝説のクリーチャー ― アバター" pt="4/4" wikilink="カルドラの兜/Helm of Kaldra"></card>
     <card name="Karox Bladewing" jaName="刃の翼カロックス" type="トークン・伝説のクリーチャー ― ドラゴン" pt="4/4" wikilink="刃の翼ヴェリックス/Verix Bladewing">飛行</card>
