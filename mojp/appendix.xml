@@ -1707,7 +1707,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="フェイズ・アウトしている際は" value="フェイズ・アウトしている間は" nodebug="true" />
     <regex target="text" pattern="クリーチャー・トークンを１個生成" value="クリーチャー・トークンを１体生成" nodebug="true" />
     <regex target="text" pattern="エンチャント\(クリーチャー\)" value="エンチャント（クリーチャー）" nodebug="true" />
-    <regex target="jaName" pattern="爆走\(DISのほう\)" value="爆走" nodebug="true" />
+    <regex target="jaName" pattern="爆走\(DISのほう\)" value="力走" nodebug="true" />
     <regex target="text" pattern="\){（" value=")（" nodebug="true" />
     <regex target="text" pattern="をの上に" value="の上に" nodebug="true" />
     <regex target="text" pattern="永遠はそ" value="永遠は" nodebug="true" />
