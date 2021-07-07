@@ -345,10 +345,10 @@ namespace Mojp
                 return true;
 
             if (card.Type.StartsWith("トークン") || card.Type.StartsWith("ヴァンガード") ||
-                card.Type.StartsWith("次元") || card.Type.StartsWith("現象"))
+                card.Type.StartsWith("次元") || card.Type.StartsWith("現象") || card.Type == "ダンジョン")
                 return true;
 
-            if (card.Name == "Morph" || card.Name == "Manifest" || card.Name == "Vitu-Ghazi")
+            if (card.Name is "Morph" or "Manifest" or "Vitu-Ghazi")
                 return true;
 
             return false;

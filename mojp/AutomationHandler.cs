@@ -432,6 +432,7 @@ namespace Mojp
                     "Lifelink" => ContainsText("Transcendent Master", "IKO"),
                     "Release" => IsUginFatePromo(),
                     "Vigilance" => ContainsText("Ikiral Outrider", "IKO"),
+                    "Oubliette" => ContainsText("Trapped Entry"),
                     _ => false,
                 };
 

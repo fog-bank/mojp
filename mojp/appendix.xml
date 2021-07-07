@@ -1902,6 +1902,10 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="228  /  281 " sub="AFR" name="Monk Class" />
     <alt key="230  /  281 " sub="AFR" name="Rogue Class" />
     <alt key="233  /  281 " sub="AFR" name="Sorcerer Class" />
+    <!-- ダンジョン (AFR) -->
+    <alt key="Yawning Portal" sub="Dungeon Level" name="Dungeon of the Mad Mage" />
+    <alt key="Cave Entrance" sub="Goblin Lair" name="Lost Mine of Phandelver" />
+    <alt key="Trapped Entry" sub="Veils of Fear" name="Tomb of Annihilation" />
   </add>
   <replace>
     <!-- 誤字脱字 -->
