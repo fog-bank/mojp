@@ -1931,6 +1931,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="１つにき" value="１つにつき" nodebug="true" />
     <regex target="text" pattern="に等しい$" value="に等しい。" nodebug="true" />
     <regex target="text" pattern="引く）" value="引く。）" nodebug="true" />
+    <regex target="text" pattern="手札に加る。" value="手札に加える。" nodebug="true" />
     <regex target="text" pattern="クリーチャー死亡" value="クリーチャーが死亡" nodebug="true" />
     <regex target="text" pattern="コントローラーカード" value="コントローラーはカード" nodebug="true" />
     <regex target="text" pattern="唱えるかどうか決定する" value="唱えるかどうかを決定する" nodebug="true" />
@@ -2231,12 +2232,13 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="カード１枚を公開し、それをあなたの手札に加え(?=てもよい|る。」)" value="カード１枚を公開し、あなたの手札に加え" nodebug="true" />
     <!-- テンプレート変更：ライブラリーを探す -->
     <regex target="text" pattern="を探(?:し、|して|す。)(?:それら?|そのカード|それらのカード)をあなたの手札に加え" value="を探し、あなたの手札に加え" nodebug="true" />
-    <regex target="text" pattern="を探(?:し、|して|す。)(?:それら?|そのカード|それらのカード)を公開し(?:、|て|た上で|、それを)あなたの手札に加え" value="を探し、公開し、あなたの手札に加え" nodebug="true" />
+    <regex target="text" pattern="(?&lt;!探す。.+)を探(?:し、|して|す。)(?:それら?|そのカード|それらのカード)を公開し(?:、|て|た上で|、それを)(?=(?:あなた|自分)の手札に加え)" value="を探し、公開し、" nodebug="true" />
     <regex target="text" pattern="を探(?:し、|して|す。)(?:それら?|そのカード|それらのカード)を([^。]+状態で)?戦場に出" value="を探し、$1戦場に出" nodebug="true" />
     <regex target="text" pattern="を探し、公開してあなたの手札に加え" value="を探し、公開し、あなたの手札に加え" nodebug="true" />
     <regex target="text" pattern="を探して戦場に出" value="を探し、戦場に出" nodebug="true" />
     <regex target="text" pattern="(?&lt;=(?:「|あなたのライブラリー)[^。]+(?:加え|捨て))、(?:その後、?)?ライブラリーを切り直す。(?!その後)" value="る。その後、ライブラリーを切り直す。" nodebug="true" />
     <regex target="text" pattern="(?&lt;=(?:「|あなたのライブラリー)[^。]+)出し、(?:その後、?)?ライブラリーを切り直す。(Ｘは[^。]+(?:に等しい|である)。)?" value="出す。$1その後、ライブラリーを切り直す。" nodebug="true" />
+    <regex target="text" pattern="を探し、それを公開し、その後ライブラリーを切り直し、(?:そのカードを一番上に|一番上にそのカードを)置く。" value="を探し、公開する。その後、ライブラリーを切り直し、そのカードを一番上に置く。" nodebug="true" />
     <regex target="text" pattern="(?&lt;=加える。|出す。)その後ライブラリーを切り直す。" value="その後、ライブラリーを切り直す。" nodebug="true" />
     <regex target="text" pattern="公開し、あなたの手札に加える。その後あなたのライブラリーを切り直す。」" value="公開し、あなたの手札に加える。その後、ライブラリーを切り直す。」" nodebug="true" />
     <regex target="text" pattern="を探し、タップ状態で戦場に出し、あなたのライブラリーを切り直す。" value="を探し、タップ状態で戦場に出す。その後、ライブラリーを切り直す。" nodebug="true" />
@@ -2980,8 +2982,6 @@ Venarian Goldが戦場に出たとき、エンチャントしているクリー�
     <card name="Nissa's Triumph" jaName="ニッサの勝利" type="ソーサリー">あなたのライブラリーから基本森・カード最大２枚を探す。あなたがニッサ・プレインズウォーカーをコントロールしているなら、代わりに、あなたのライブラリーから土地・カード最大３枚を探す。それらのカードを公開し、あなたの手札に加える。その後、ライブラリーを切り直す。</card>
     <!-- テンプレートの変更：ライブラリーを探してもよい -->
     <card name="Borderland Explorer" jaName="国境探検者" type="クリーチャー ― エルフ・スカウト" pt="3/1">国境探検者が戦場に出たとき、各プレイヤーはそれぞれカード１枚を捨ててもよい。これによりカードを捨てた各プレイヤーはそれぞれ、「自分のライブラリーから基本土地・カード１枚を探し、公開し、自分の手札に加える。その後、ライブラリーを切り直す。」を選んでもよい。</card>
-    <card name="Momir Vig, Simic Visionary" jaName="シミックの幻想家、モミール・ヴィグ" type="伝説のクリーチャー ― エルフ・ウィザード" pt="2/2">あなたが緑のクリーチャー・呪文を唱えるたび、あなたは「あなたのライブラリーからクリーチャー・カード１枚を探し、公開する。その後、ライブラリーを切り直し、そのカードを一番上に置く。」を選んでもよい。
-あなたが青のクリーチャー・呪文を唱えるたび、あなたのライブラリーの一番上のカードを公開する。それがクリーチャー・カードであるなら、そのカードをあなたの手札に加える。</card>
     <!-- テンプレートの変更：選んでもよい -->
     <card name="Assault Suit" jaName="突撃鎧" type="アーティファクト ― 装備品">装備しているクリーチャーは+2/+2の修整を受け、速攻を持ち、あなたやあなたがコントロールしているプレインズウォーカーを攻撃できず、生け贄に捧げることもできない。
 各対戦相手のアップキープの開始時に、あなたは「ターン終了時まで、そのプレイヤーは装備しているクリーチャーのコントロールを得る。」を選んでもよい。そうしたなら、それをアンタップする。
