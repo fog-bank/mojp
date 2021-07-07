@@ -2056,6 +2056,8 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="無作為に対戦相手１人を選ぶ" value="対戦相手１人を無作為に選ぶ" nodebug="true" />
     <regex target="text" pattern="(?&lt;=なら|場合)、([^。]+)は代わりに(?=[１-９Ｘ]点のダメージ)" value="、代わりに$1は" nodebug="true" />
     <regex target="text" pattern="あなたの墓地にいずれの領域からでもカードが置かれるなら" value="カードがいずれかの領域からあなたの墓地に置かれるなら" nodebug="true" />
+    <regex target="text" pattern="次のあなたのターンまで" value="あなたの次のターンまで" nodebug="true" />
+    <regex target="text" pattern="次の、?それ(ら)?のコントローラーのアンタップ・ステップ" value="それ$1のコントローラーの次のアンタップ・ステップ" nodebug="true" />
     <!-- 順序変更：数字を前に移動 -->
     <regex target="text" pattern="(?&lt;!上から)カードを([０-９Ｘ]+)枚、?(?=探|選|捨て(?!るたび)|公開|追放|無作為に|戦場に)" value="カード$1枚を" nodebug="true" />
     <regex target="text" pattern="カードを最大([０-９Ｘ]+)枚(?:まで)?(?=対象|探|あなたの手札に戻)" value="カード最大$1枚を" nodebug="true" />
@@ -2261,6 +2263,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="(?&lt;=それら?の)起動型能力を起動できない。" value="起動型能力は起動できない。" nodebug="true" />
     <regex target="text" pattern="クリーチャー・呪文でない呪文" value="クリーチャーでない呪文" nodebug="true" />
     <regex target="text" pattern="次のアンタップ・ステップの間に" value="次のアンタップ・ステップに" nodebug="true" />
+    <regex target="text" pattern="あなたの次のターン終了時まで" value="次のあなたのターンの終了時まで" nodebug="true" />
     <regex target="text" pattern="しかプレイでき" value="しか起動でき" nodebug="true" />
     <regex target="text" pattern="一番上のカードを公開した状態でプレイ" value="一番上のカードを公開したままプレイ" nodebug="true" />
     <regex target="text" pattern="、?裏向きのまま追放" value="裏向きに追放" nodebug="true" />
