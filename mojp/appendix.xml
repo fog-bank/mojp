@@ -2267,6 +2267,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="しかプレイでき" value="しか起動でき" nodebug="true" />
     <regex target="text" pattern="一番上のカードを公開した状態でプレイ" value="一番上のカードを公開したままプレイ" nodebug="true" />
     <regex target="text" pattern="、?裏向きのまま追放" value="裏向きに追放" nodebug="true" />
+    <regex target="text" pattern="毎ターン１回しか誘発しない。" value="毎ターン１回のみ誘発する。" nodebug="true" />
     <regex target="text" pattern="(?:にのみ|にしか|だけしか)(?:支払|使|用いる)(?:うことができる|える|えない|ことができる)" value="にのみ使用できる" nodebug="true" />
     <regex target="text" pattern="(?&lt;=[白青黒赤緑]\))が使われた" value="が支払われていた" nodebug="true" />
     <regex target="text" pattern="(?m)(?&lt;=^|[・：。、])攻撃しているクリーチャー" value="攻撃クリーチャー" nodebug="true" />
