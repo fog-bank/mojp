@@ -5541,9 +5541,11 @@ III ― 対戦相手１人を対象とする。そのプレイヤーがコント
 白でありインスタントかソーサリーである呪文によりあなたがライフを得るたび、クリーチャー１体かプレイヤー１人を対象とする。ファイアソングとサンスピーカーはそれに３点のダメージを与える。</card>
     
     <!-- サブタイプが正常でないカード -->
-    <type name="Consecrated Sphinx" type="クリーチャー ― ファイレクシアン・スフィンクス" />
     <type name="Ranger-Captain of Eos" type="クリーチャー ― 人間・兵士・レインジャー" />
     <type name="Quirion Ranger" type="クリーチャー ― エルフ・レインジャー" />
+    <type name="Elvish Bard" type="クリーチャー ― エルフ・シャーマン・バード" />
+    <type name="Joraga Bard" type="クリーチャー ― エルフ・ならず者・バード・同盟者" />
+    <type name="Yisan, the Wanderer Bard" type="伝説のクリーチャー ― 人間・ならず者・バード" />
     
     <!-- 合体カード -->
     <related name="Gisela, the Broken Blade" related="Bruna, the Fading Light|Brisela, Voice of Nightmares" />
