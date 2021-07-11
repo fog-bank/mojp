@@ -429,19 +429,25 @@ namespace Mojp
                 return cardName switch
                 {
                     "Flash" => ContainsText("IKO"),
-                    "Lifelink" => ContainsText("Transcendent Master", "IKO"),
+                    "Lifelink" => ContainsText("Transcendent Master", "Sorin, Vengeful Bloodlord", "IKO"),
                     "Release" => IsUginFatePromo(),
-                    "Vigilance" => ContainsText("Ikiral Outrider", "IKO"),
                     "Oubliette" => ContainsText("Trapped Entry"),
+                    "Vigilance" => ContainsText("Ikiral Outrider", "IKO"),
                     _ => false,
                 };
 
                 // 指定したテキストが Preview Pane に含まれているどうかを調べます。
-                bool ContainsText(string text, string text2 = null)
+                bool ContainsText(string text, string text2 = null, string text3 = null)
                 {
                     foreach (string value in IterateTextBlocks())
                     {
-                        if (value == text || (text2 != null && value == text2))
+                        if (value == text)
+                            return true;
+
+                        if (text2 != null && value == text2)
+                            return true;
+
+                        if (text3 != null && value == text3)
                             return true;
                     }
                     return false;
