@@ -1428,8 +1428,8 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <wikilink name="Error" wikilink="試行+錯誤/Trial+Error" />
     <wikilink name="Rise" wikilink="隆盛+下落/Rise+Fall" />
     <wikilink name="Fall" wikilink="隆盛+下落/Rise+Fall" />
-    <wikilink name="Hit" wikilink="打撃+爆走/Hit+Run" />
-    <wikilink name="Run" wikilink="打撃+爆走/Hit+Run" />
+    <wikilink name="Hit" wikilink="打撃+力走/Hit+Run" />
+    <wikilink name="Run" wikilink="打撃+力走/Hit+Run" />
     <wikilink name="Pure" wikilink="純粋+単純/Pure+Simple" />
     <wikilink name="Simple" wikilink="純粋+単純/Pure+Simple" />
     <wikilink name="Hide" wikilink="隠匿+探求/Hide+Seek" />
@@ -5829,8 +5829,31 @@ III ― 対戦相手１人を対象とする。そのプレイヤーがコント
 白でありインスタントかソーサリーである呪文によりあなたがライフを得るたび、クリーチャー１体かプレイヤー１人を対象とする。ファイアソングとサンスピーカーはそれに３点のダメージを与える。</card>
     
     <!-- サブタイプが正常でないカード -->
-    <type name="Ranger-Captain of Eos" type="クリーチャー ― 人間・兵士・レインジャー" />
+    <type name="Birchlore Rangers" type="クリーチャー ― エルフ・ドルイド・レインジャー" />
+    <type name="Borderland Ranger" type="クリーチャー ― 人間・スカウト・レインジャー" />
+    <type name="Cloudgoat Ranger" type="クリーチャー ― 巨人・戦士・レインジャー" />
+    <type name="Daybreak Ranger" type="クリーチャー ― 人間・射手・レインジャー・狼男" />
+    <type name="Elvish Ranger" type="クリーチャー ― エルフ・レインジャー" />
+    <type name="Firebrand Ranger" type="クリーチャー ― 人間・兵士・レインジャー" />
+    <type name="Halana, Kessig Ranger" type="伝説のクリーチャー ― 人間・射手・レインジャー" />
+    <type name="Jadelight Ranger" type="クリーチャー ― マーフォーク・スカウト・レインジャー" />
+    <type name="Juniper Order Ranger" type="クリーチャー ― 人間・騎士・レインジャー"/>
+    <type name="Kelsinko Ranger" type="クリーチャー ― 人間・レインジャー" />
+    <type name="Murasa Ranger" type="クリーチャー ― 人間・戦士・レインジャー" />
+    <type name="Norwood Ranger" type="クリーチャー ― エルフ・スカウト・レインジャー" />
+    <type name="Oakhame Ranger" type="クリーチャー ― エルフ・騎士・レインジャー" />
+    <type name="Orochi Ranger" type="クリーチャー ― 蛇・戦士・レインジャー" />
     <type name="Quirion Ranger" type="クリーチャー ― エルフ・レインジャー" />
+    <type name="Ranger en-Vec" type="クリーチャー ― 人間・兵士・射手・レインジャー" />
+    <type name="Ranger of Eos" type="クリーチャー ― 人間・兵士・レインジャー" />
+    <type name="Ranger-Captain of Eos" type="クリーチャー ― 人間・兵士・レインジャー" />
+    <type name="Scryb Ranger" type="クリーチャー ― フェアリー・レインジャー" />
+    <type name="Shoreline Ranger" type="クリーチャー ― 鳥・兵士・レインジャー" />
+    <type name="Skyshroud Ranger" type="クリーチャー ― エルフ・レインジャー" />
+    <type name="Sylvan Ranger" type="クリーチャー ― エルフ・スカウト・レインジャー" />
+    <type name="Treetop Rangers" type="クリーチャー ― エルフ・レインジャー" />
+    <type name="Turntimber Ranger" type="クリーチャー ― エルフ・スカウト・レインジャー・同盟者" />
+    <type name="Verge Rangers" type="クリーチャー ― 人間・スカウト・レインジャー" />
     <type name="Elvish Bard" type="クリーチャー ― エルフ・シャーマン・バード" />
     <type name="Joraga Bard" type="クリーチャー ― エルフ・ならず者・バード・同盟者" />
     <type name="Yisan, the Wanderer Bard" type="伝説のクリーチャー ― 人間・ならず者・バード" />
