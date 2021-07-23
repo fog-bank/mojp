@@ -9,8 +9,6 @@
 クリーチャーが１体あなたに戦闘ダメージを与えるたび、それのコントローラーが統治者になる。</card>
     <card name="City's Blessing" jaName="都市の承認" type="" wikilink="昇殿"></card>
     <card name="プロモ版のカード" jaName="プロモ版のカード" type="" wikilink="">（UI テキストからカード名を取得できないカード枠のため、カードテキストを表示できません。）</card>
-    <!-- WHISPER 誤植 -->
-    <card name="Realm-Cloaked Giant" jaName="王国まといの巨人" type="クリーチャー ― 巨人" pt="7/7" related="Cast Off">警戒</card>
     <!-- クリーチャーでないトークン -->
     <card name="Clue" jaName="手掛かり" type="トークン・アーティファクト ― 手掛かり" wikilink="手掛かり">(２),このアーティファクトを生け贄に捧げる：カード１枚を引く。</card>
     <card name="Etherium Cell" jaName="エーテリウム電池" type="トークン・アーティファクト" wikilink="策謀家テゼレット/Tezzeret the Schemer">(Ｔ),このアーティファクトを生け贄に捧げる：好きな色１色のマナ１点を加える。</card>
@@ -632,8 +630,6 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <pt name="The Omenkeel" pt="3/3" />
     <!-- 機体のP/T (MH2) -->
     <pt name="Dermotaxi" pt="0/0" />
-    <!-- WHISPER 誤植 -->
-    <related name="Cast Off" related="Realm-Cloaked Giant" />
     <!-- 分割カードのwikiページ -->
     <wikilink name="Stand" wikilink="抵抗+救難/Stand+Deliver" />
     <wikilink name="Deliver" wikilink="抵抗+救難/Stand+Deliver" />
@@ -1287,7 +1283,6 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="10(?=点|体|個)" value="１０" nodebug="true" />
     <regex target="text" pattern="\)\:" value=")：" nodebug="true" />
     <regex target="text" pattern="X(?=は|枚)" value="Ｘ" nodebug="true" />
-    <regex target="text" pattern="切り直す」" value="切り直す。」" nodebug="true" />
     <regex target="text" pattern="(?&lt;=パワー|点数|の数|の値)の等しい" value="に等しい" nodebug="true" />
     <regex target="text" pattern="加える）" value="加える。）" nodebug="true" />
     <regex target="text" pattern="受けるともに" value="受けるとともに" nodebug="true" />
@@ -1299,28 +1294,9 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="ときのみ唱えられる" value="ときにのみ唱えられる" nodebug="true" />
     <regex target="text" pattern="(?&lt;=カウンター.個)取り除く" value="を取り除く" nodebug="true" />
     <regex target="text" pattern="ライラブラリー|ラブラリー|ライブラリ(?!ー)" value="ライブラリー" nodebug="true" />
-    <regex target="text" pattern="(?&lt;=食物は、?|それらは、?)「\(Ｔ\),このアーティファクトを生け贄に捧げる：あなたは３点のライフを得る。」" value="「(２),(Ｔ),このアーティファクトを生け贄に捧げる：あなたは３点のライフを得る。」" nodebug="true" />
     <regex target="text" pattern="修正" value="修整" nodebug="true" />
     <regex target="text" pattern="プレインズウォーカー１人" value="プレインズウォーカー１体" nodebug="true" />
     <regex target="jaName|text" pattern="パルヘリオン\?" value="パルヘリオンⅡ" nodebug="true" />
-    <regex target="text" pattern="パーティ(?!ー)" value="パーティー" nodebug="true" />
-    <regex target="text" pattern="カウンタ(?!ー)" value="カウンター" nodebug="true" />
-    <regex target="text" pattern="振る旅" value="振るたび" nodebug="true" />
-    <regex target="text" pattern="枚数半分" value="枚数の半分" nodebug="true" />
-    <regex target="text" pattern="対象する" value="対象とする" nodebug="true" />
-    <regex target="text" pattern="１つにき" value="１つにつき" nodebug="true" />
-    <regex target="text" pattern="に等しい$" value="に等しい。" nodebug="true" />
-    <regex target="text" pattern="引く）" value="引く。）" nodebug="true" />
-    <regex target="text" pattern="手札に加る。" value="手札に加える。" nodebug="true" />
-    <regex target="text" pattern="支払に加えて" value="支払いに加えて" nodebug="true" />
-    <regex target="text" pattern="クリーチャー死亡" value="クリーチャーが死亡" nodebug="true" />
-    <regex target="text" pattern="コントローラーカード" value="コントローラーはカード" nodebug="true" />
-    <regex target="text" pattern="唱えるかどうか決定する" value="唱えるかどうかを決定する" nodebug="true" />
-    <regex target="text" pattern="任意のマナを望むマナ" value="任意のマナを望む色のマナ" nodebug="true" />
-    <regex target="text" pattern="ステップやフェイズに際して" value="ステップやフェイズの終了に際して" nodebug="true" />
-    <regex target="text" pattern="インスタントを唱えるときなら" value="インスタントを唱えられるときなら" nodebug="true" />
-    <regex target="text" pattern="の上に(?=\+1/\+1カウンターが.個未満であった)" value="の上にある" nodebug="true" />
-    <regex target="text" pattern="クリーチャー１体かプレインズウォーカー１体かプレイヤーを対象とする。" value="クリーチャー１体かプレインズウォーカー１体かプレイヤー１人を対象とする。" nodebug="true" />
     <regex target="text" pattern="二度目" value="２度目" nodebug="true" />
     <regex target="text" pattern="する．" value="する。" nodebug="true" />
     <regex target="text" pattern="選ぶ、" value="選び、" nodebug="true" />
@@ -1333,6 +1309,26 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="フェイズ・アウトしている際は" value="フェイズ・アウトしている間は" nodebug="true" />
     <regex target="text" pattern="クリーチャー・トークンを１個生成" value="クリーチャー・トークンを１体生成" nodebug="true" />
     <regex target="text" pattern="エンチャント\(クリーチャー\)" value="エンチャント（クリーチャー）" nodebug="true" />
+    <regex target="text" pattern="パーティ(?!ー)" value="パーティー" nodebug="true" />
+    <regex target="text" pattern="カウンタ(?!ー)" value="カウンター" nodebug="true" />
+    <regex target="text" pattern="振る旅" value="振るたび" nodebug="true" />
+    <regex target="text" pattern="枚数半分" value="枚数の半分" nodebug="true" />
+    <regex target="text" pattern="対象する" value="対象とする" nodebug="true" />
+    <regex target="text" pattern="１つにき" value="１つにつき" nodebug="true" />
+    <regex target="text" pattern="に等しい$" value="に等しい。" nodebug="true" />
+    <regex target="text" pattern="引く）" value="引く。）" nodebug="true" />
+    <regex target="text" pattern="切り直す」" value="切り直す。」" nodebug="true" />
+    <regex target="text" pattern="手札に加る。" value="手札に加える。" nodebug="true" />
+    <regex target="text" pattern="支払に加えて" value="支払いに加えて" nodebug="true" />
+    <regex target="text" pattern="クリーチャー死亡" value="クリーチャーが死亡" nodebug="true" />
+    <regex target="text" pattern="コントローラーカード" value="コントローラーはカード" nodebug="true" />
+    <regex target="text" pattern="唱えるかどうか決定する" value="唱えるかどうかを決定する" nodebug="true" />
+    <regex target="text" pattern="任意のマナを望むマナ" value="任意のマナを望む色のマナ" nodebug="true" />
+    <regex target="text" pattern="ステップやフェイズに際して" value="ステップやフェイズの終了に際して" nodebug="true" />
+    <regex target="text" pattern="インスタントを唱えるときなら" value="インスタントを唱えられるときなら" nodebug="true" />
+    <regex target="text" pattern="の上に(?=\+1/\+1カウンターが.個未満であった)" value="の上にある" nodebug="true" />
+    <regex target="text" pattern="クリーチャー１体かプレインズウォーカー１体かプレイヤーを対象とする。" value="クリーチャー１体かプレインズウォーカー１体かプレイヤー１人を対象とする。" nodebug="true" />
+    <regex target="text" pattern="(?&lt;=食物は、?|それらは、?)「\(Ｔ\),このアーティファクトを生け贄に捧げる：あなたは３点のライフを得る。」" value="「(２),(Ｔ),このアーティファクトを生け贄に捧げる：あなたは３点のライフを得る。」" nodebug="true" />
     <regex target="text" pattern="をの上に" value="の上に" nodebug="true" />
     <regex target="text" pattern="永遠はそ" value="永遠は" nodebug="true" />
     <regex target="text" pattern="点マナ総量" value="マナ総量" nodebug="true" />
@@ -4278,9 +4274,6 @@ III ― 対戦相手１人を対象とする。そのプレイヤーがコント
     
     <!-- テキストが正常でないカード (AFR & AFC) -->
     <card name="Devoted Paladin" jaName="献身のパラディン" type="クリーチャー ― オーク・騎士" pt="4/4">ビーコン・オヴ・ホープ ― 献身のパラディンが戦場に出たとき、ターン終了時まで、あなたがコントロールしているすべてのクリーチャーは+1/+1の修整を受け警戒を得る。</card>
-    <card name="Hand of Vecna" jaName="ハンド・オヴ・ヴェクナ" type="伝説のアーティファクト ― 装備品">あなたのターンの戦闘の開始時に、ターン終了時まで、装備しているクリーチャーかあなたがコントロールしていて《ヴェクナ》という名前のクリーチャー１体は+X/+Xの修整を受ける。Ｘはあなたの手札にあるカードの枚数に等しい。
-装備 ― あなたの手札にあるカードの枚数に等しい点数のライフを支払う。
-装備(２)</card>
     <card name="Instrument of the Bards" jaName="インストゥルメント・オヴ・ザ・バーズ" type="伝説のアーティファクト">あなたのアップキープの開始時に、あなたはインストゥルメント・オヴ・ザ・バーズの上に調和カウンター１個を置いてもよい。
 (３)(緑),(Ｔ)：あなたのライブラリーから、マナ総量がインストゥルメント・オヴ・ザ・バーズの上に置かれている調和カウンターの数に等しいクリーチャー・カード１枚を探し、公開し、あなたの手札に加える。そのカードが伝説であるなら、宝物・トークン１つを生成する。その後、ライブラリーを切り直す。</card>
     <card name="Long Rest" jaName="大休憩" type="ソーサリー">あなたの墓地からマナ総量が異なるカードＸ枚を対象とする。それらをあなたの手札に戻す。これにより８枚以上のカードが手札に戻ったなら、あなたのライフ総量は初期ライフ総量と等しい点数になる。大休憩を追放する。</card>
@@ -4299,13 +4292,6 @@ III ― 対戦相手１人を対象とする。そのプレイヤーがコント
 あなたがコントロールしているすべてのクリーチャーは「(Ｔ)：(青)か(赤)を加える。このマナは、インスタントかソーサリーである呪文を唱えるか、クラス・レベルを得るためにのみ使用できる。」を持つ。
 (３)(青)(赤)：レベル３
 あなたがインスタントかソーサリーである呪文を唱えるたび、その呪文は各対戦相手にそれぞれ、このターンにあなたが唱えたインスタントやソーサリーである呪文の数に等しい点数のダメージを与える。</card>
-    <card name="Storvald, Frost Giant Jarl" jaName="フロスト・ジャイアントの伯爵、ストルヴァルド" type="伝説のクリーチャー ― 巨人" pt="7/7">護法(３)
-あなたがコントロールしていてこれでないすべてのクリーチャーは護法(３)を持つ。
-フロスト・ジャイアントの伯爵、ストルヴァルドが戦場に出るか攻撃するたび、以下から１つまたは両方を選ぶ。
-・クリーチャー１体を対象とする。ターン終了時まで、それの基本のパワーとタフネスは7/7になる。
-・クリーチャー１体を対象とする。ターン終了時まで、それの基本のパワーとタフネスは1/1になる。</card>
-    <card name="The Book of Vile Darkness" jaName="不浄なる暗黒の書" type="伝説のアーティファクト">あなたの終了ステップの開始時に、このターンにあなたが２点以上のライフを失っていた場合、黒の2/2のゾンビ・クリーチャー・トークン１体を生成する。
-(Ｔ),不浄なる暗黒の書と、あなたがコントロールしている《アイ・オヴ・ヴェクナ》という名前のアーティファクト１つと《ハンド・オヴ・ヴェクナ》という名前のアーティファクト１つを追放する：《ヴェクナ》という名前で破壊不能とそれらの追放されたカードのすべての誘発型能力を持つ黒の8/8の伝説のゾンビ・神・クリーチャー・トークン１体を生成する。</card>
     <card name="Wizard's Spellbook" jaName="ウィザードの呪文書" type="アーティファクト">(Ｔ)：墓地からインスタントかソーサリーであるカード１枚を対象とする。それを追放する。１個のd20を振る。起動はソーサリーとしてのみ行う。
 1-9｜そのカードをコピーする。あなたはそのコピーを唱えてもよい。
 10-19｜そのカードをコピーする。あなたはそのコピーを、マナ・コストを支払うのではなく(１)を支払って唱えてもよい。
@@ -4349,6 +4335,9 @@ III ― 対戦相手１人を対象とする。そのプレイヤーがコント
     <!-- 解釈違い (AFR) -->
     <card name="Bag of Tricks" jaName="バッグ・オヴ・トリックス" type="アーティファクト">(４)(緑),(Ｔ)：１個のd8を振る。マナ総量がその出目に等しいクリーチャー・カードが公開されるまで、あなたのライブラリーの一番上から１枚ずつ公開していく。そのカードを戦場に、残りをあなたのライブラリーの一番下に無作為の順番で置く。</card>
     <card name="Check for Traps" jaName="罠を探す" type="ソーサリー">対戦相手１人を対象とする。そのプレイヤーは自分の手札を公開する。あなたはその中から土地でないカード１枚を選ぶ。そのカードを追放する。これによりインスタント・カードか瞬速を持つカードが追放されたなら、そのプレイヤーは１点のライフを失う。そうでないなら、あなたは１点のライフを失う。</card>
+    <card name="Hand of Vecna" jaName="ハンド・オヴ・ヴェクナ" type="伝説のアーティファクト ― 装備品">あなたのターンの戦闘の開始時に、ターン終了時まで、装備しているクリーチャーかあなたがコントロールしていて《ヴェクナ》という名前のクリーチャー１体は+X/+Xの修整を受ける。Ｘはあなたの手札にあるカードの枚数に等しい。
+装備 ― あなたの手札にあるカードの枚数に等しい点数のライフを支払う。
+装備(２)</card>
     <card name="Loyal Warhound" jaName="忠実な軍用犬" type="クリーチャー ― 犬" pt="3/1">警戒
 忠実な軍用犬が戦場に出たとき、対戦相手１人があなたよりも多くの土地をコントロールしている場合、あなたのライブラリーから基本平地・カード１枚を探し、タップ状態で戦場に出す。その後、ライブラリーを切り直す。</card>
     <card name="Power of Persuasion" jaName="説得の力" type="ソーサリー">対戦相手がコントロールしているクリーチャー１体を対象とする。１個のd20を振る。
@@ -4396,6 +4385,8 @@ III ― 対戦相手１人を対象とする。そのプレイヤーがコント
     <card name="Feign Death" jaName="フェイン・デス" type="インスタント">クリーチャー１体を対象とする。ターン終了時まで、それは「このクリーチャーが死亡したとき、これをその上に+1/+1カウンター１個が置かれた状態かつタップ状態でオーナーのコントロール下で戦場に戻す。」を得る。</card>
     <card name="Ray of Enfeeblement" jaName="レイ・オヴ・エンフィーブルメント" type="インスタント">クリーチャー１体を対象とする。ターン終了時まで、それは-4/-1の修整を受ける。そのクリーチャーが白であるなら、代わりに、ターン終了時まで、それは-4/-4の修整を受ける。</card>
     <card name="Sepulcher Ghoul" jaName="墓所のグール" type="クリーチャー ― ゾンビ" pt="2/1">これ以外のクリーチャー１体を生け贄に捧げる：ターン終了時まで、墓所のグールは+2/+2の修整を受ける。毎ターン１回のみ起動できる。</card>
+    <card name="The Book of Vile Darkness" jaName="不浄なる暗黒の書" type="伝説のアーティファクト">あなたの終了ステップの開始時に、このターンにあなたが２点以上のライフを失っていた場合、黒の2/2のゾンビ・クリーチャー・トークン１体を生成する。
+(Ｔ),不浄なる暗黒の書と、あなたがコントロールしている《アイ・オヴ・ヴェクナ》という名前のアーティファクト１つと《ハンド・オヴ・ヴェクナ》という名前のアーティファクト１つを追放する：《ヴェクナ》という名前で破壊不能とそれらの追放されたカードのすべての誘発型能力を持つ黒の8/8の伝説のゾンビ・神・クリーチャー・トークン１体を生成する。</card>
     <card name="Warlock Class" jaName="ウォーロック・クラス" type="エンチャント ― クラス">（次のレベルになることはソーサリーとして行う。そのレベルの能力を得る。）
 あなたの終了ステップの開始時に、このターンにクリーチャーが死亡していた場合、各対戦相手はそれぞれ１点のライフを失う。
 (１)(黒)：レベル２
@@ -4553,34 +4544,6 @@ III ― 対戦相手１人を対象とする。そのプレイヤーがコント
     <!-- オラクル変更(DOM)の対象外 -->
     <card name="Firesong and Sunspeaker" jaName="ファイアソングとサンスピーカー" type="伝説のクリーチャー ― ミノタウルス・クレリック" pt="4/6">あなたがコントロールしていて赤でありインスタントかソーサリーである呪文は絆魂を持つ。
 白でありインスタントかソーサリーである呪文によりあなたがライフを得るたび、クリーチャー１体かプレイヤー１人を対象とする。ファイアソングとサンスピーカーはそれに３点のダメージを与える。</card>
-    
-    <!-- サブタイプが正常でないカード -->
-    <type name="Birchlore Rangers" type="クリーチャー ― エルフ・ドルイド・レインジャー" />
-    <type name="Borderland Ranger" type="クリーチャー ― 人間・スカウト・レインジャー" />
-    <type name="Cloudgoat Ranger" type="クリーチャー ― 巨人・戦士・レインジャー" />
-    <type name="Daybreak Ranger" type="クリーチャー ― 人間・射手・レインジャー・狼男" />
-    <type name="Elvish Ranger" type="クリーチャー ― エルフ・レインジャー" />
-    <type name="Firebrand Ranger" type="クリーチャー ― 人間・兵士・レインジャー" />
-    <type name="Halana, Kessig Ranger" type="伝説のクリーチャー ― 人間・射手・レインジャー" />
-    <type name="Jadelight Ranger" type="クリーチャー ― マーフォーク・スカウト・レインジャー" />
-    <type name="Juniper Order Ranger" type="クリーチャー ― 人間・騎士・レインジャー"/>
-    <type name="Kelsinko Ranger" type="クリーチャー ― 人間・レインジャー" />
-    <type name="Murasa Ranger" type="クリーチャー ― 人間・戦士・レインジャー" />
-    <type name="Norwood Ranger" type="クリーチャー ― エルフ・スカウト・レインジャー" />
-    <type name="Oakhame Ranger" type="クリーチャー ― エルフ・騎士・レインジャー" />
-    <type name="Orochi Ranger" type="クリーチャー ― 蛇・戦士・レインジャー" />
-    <type name="Ranger en-Vec" type="クリーチャー ― 人間・兵士・射手・レインジャー" />
-    <type name="Ranger of Eos" type="クリーチャー ― 人間・兵士・レインジャー" />
-    <type name="Scryb Ranger" type="クリーチャー ― フェアリー・レインジャー" />
-    <type name="Shoreline Ranger" type="クリーチャー ― 鳥・兵士・レインジャー" />
-    <type name="Skyshroud Ranger" type="クリーチャー ― エルフ・レインジャー" />
-    <type name="Sylvan Ranger" type="クリーチャー ― エルフ・スカウト・レインジャー" />
-    <type name="Treetop Rangers" type="クリーチャー ― エルフ・レインジャー" />
-    <type name="Turntimber Ranger" type="クリーチャー ― エルフ・スカウト・レインジャー・同盟者" />
-    <type name="Verge Rangers" type="クリーチャー ― 人間・スカウト・レインジャー" />
-    <type name="Elvish Bard" type="クリーチャー ― エルフ・シャーマン・バード" />
-    <type name="Joraga Bard" type="クリーチャー ― エルフ・ならず者・バード・同盟者" />
-    <type name="Yisan, the Wanderer Bard" type="伝説のクリーチャー ― 人間・ならず者・バード" />
     
     <!-- 合体カード -->
     <related name="Gisela, the Broken Blade" related="Bruna, the Fading Light|Brisela, Voice of Nightmares" />
