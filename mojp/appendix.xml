@@ -1070,7 +1070,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="28  /  30 " sub="ZNE" name="Strip Mine" />
     <alt key="29  /  30 " sub="ZNE" name="Valakut, the Molten Pinnacle" />
     <alt key="30  /  30 " sub="ZNE" name="Wasteland" />
-    <!-- 英雄譚 (DOM, C19, THB) -->
+    <!-- 英雄譚 (DOM, C19, THB, KHM, MH2) -->
     <alt key="018  /  269 " sub="DOM" name="Fall of the Thran" />
     <alt key="021  /  269 " sub="DOM" name="History of Benalia" />
     <alt key="038  /  269 " sub="DOM" name="Triumph of Gerrard" />
@@ -1096,7 +1096,6 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="160  /  254 " sub="THB" name="The Triumph of Anax" />
     <alt key="166  /  254 " sub="THB" name="The Binding of the Titans" />
     <alt key="170  /  254 " sub="THB" name="The First Iroan Games" />
-    <!-- 英雄譚 (KHM) -->
     <alt key="201  /  285 " sub="KHM" name="Arni Slays the Troll" />
     <alt key="202  /  285 " sub="KHM" name="Ascent of the Worthy" />
     <alt key="203  /  285 " sub="KHM" name="Battle for Bretagard" />
@@ -1117,9 +1116,8 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="231  /  285 " sub="KHM" name="The Three Seasons" />
     <alt key="232  /  285 " sub="KHM" name="The Trickster-God's Heist" />
     <alt key="234  /  285 " sub="KHM" name="Waking the Trolls" />
-    <!-- 英雄譚 (MH2) -->
     <alt key="259  /  303 " sub="MH2" name="Urza's Saga" />
-    <!-- 出来事 (ELD) -->
+    <!-- 出来事 (ELD, AFC) -->
     <alt key="005  /  269 " sub="ELD" name="Ardenvale Tactician" />
     <alt key="011  /  269 " sub="ELD" name="Faerie Guidemother" />
     <alt key="014  /  269 " sub="ELD" name="Giant Killer" />
@@ -1150,6 +1148,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="174  /  269 " sub="ELD" name="Rosethorn Acolyte" />
     <alt key="180  /  269 " sub="ELD" name="Tuinvale Treefolk" />
     <alt key="212  /  269 " sub="ELD" name="Oakhame Ranger" />
+    <alt key="70  /   " sub="AFC" name="Realm-Cloaked Giant" />
     <!-- 変容 (IKO, C20) -->
     <alt key="003  /  274 " sub="IKO" name="Mysterious Egg" />
     <alt key="007  /  274 " sub="IKO" name="Cubwarden" />
@@ -1189,7 +1188,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="038  /  322 " sub="C20" name="Souvenir Snatcher" />
     <alt key="044  /  322 " sub="C20" name="Mindleecher" />
     <alt key="064  /  322 " sub="C20" name="Sawtusk Demolisher" />
-    <!-- モーダル両面カード (ZNR) -->
+    <!-- モーダル両面カード (ZNR, KHM, STX) -->
     <alt key="012  /  280 " sub="ZNR" name="Emeria's Call" />
     <alt key="019  /  280 " sub="ZNR" name="Kabira Takedown" />
     <alt key="026  /  280 " sub="ZNR" name="Makindi Stampede" />
@@ -1226,7 +1225,6 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="261  /  280 " sub="ZNR" name="Cragcrown Pathway" />
     <alt key="263  /  280 " sub="ZNR" name="Needleverge Pathway" />
     <alt key="264  /  280 " sub="ZNR" name="Riverglide Pathway" />
-    <!-- モーダル両面カード (KHM) -->
     <alt key="015  /  285 " sub="KHM" name="Halvar, God of Battle" />
     <alt key="021  /  285 " sub="KHM" name="Reidane, God of the Worthy" />
     <alt key="040  /  285 " sub="KHM" name="Alrund, God of the Cosmos" />
@@ -1243,7 +1241,6 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="252  /  285 " sub="KHM" name="Blightstep Pathway" />
     <alt key="254  /  285 " sub="KHM" name="Darkbore Pathway" />
     <alt key="260  /  285 " sub="KHM" name="Hengegate Pathway" />
-    <!-- モーダル両面カード (STX) -->
     <alt key="006  /  275 " sub="STX" name="Wandering Archaic" />
     <alt key="147  /  275 " sub="STX" name="Augmenter Pugilist" />
     <alt key="148  /  275 " sub="STX" name="Blex, Vexing Pest" />
