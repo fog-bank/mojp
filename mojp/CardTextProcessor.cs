@@ -758,6 +758,19 @@ namespace Mojp
                     Debug.WriteLine("関連カード情報の追加先となる " + name + " のカード情報がありません。");
             }
 
+            // 日本語カード名の重複チェック
+            var jaNames = new Dictionary<string, Card>();
+            foreach (var card in cards.Values)
+            {
+                if (jaNames.ContainsKey(card.JapaneseName))
+                {
+                    Debug.WriteLineIf(!card.Name.EndsWith("(Alt.)"),
+                        "日本語カード名の重複：≪" + card.FullName + "≫ ≪" + jaNames[card.JapaneseName].FullName + "≫");
+                }
+                else
+                    jaNames.Add(card.JapaneseName, card);
+            }
+
             var beforeRoot = new XElement("mojp", beforeNodes);
             var beforeResult = new XDocument(new XDeclaration("1.0", "utf-8", "yes"), beforeRoot);
             beforeResult.Save(App.GetPath("appendix_before.xml"));
