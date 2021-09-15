@@ -2098,6 +2098,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="\([a-zA-Z'\- ]+\)・?(?=クリーチャー|アーティファクト|土地|カード|呪文|パーマネント)" value="・" nodebug="true" />
     <regex target="type|text" pattern="\([a-zA-Z'\- ]+\)" value="" nodebug="true" />
     <regex target="text" pattern="(?&lt;=《[^《/》]+)/[^《/》]+(?=》)" value="" nodebug="true" />
+    <regex target="text" pattern="^\([白青黒赤緑]\)$" value="" nodebug="true" />
     <!-- オラクル更新 -->
     <regex target="name|jaName|text" pattern="AE" value="Ae" nodebug="true" />
     <regex target="text" pattern="(?&lt;=トークンを[０-９Ｘ]+体)戦場に出す" value="生成する" nodebug="true" />
@@ -2537,7 +2538,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="(?&lt;=速攻.*)（(?:このターン、)?(?:それら?|[こそ]のクリーチャー)は、?(?:あなたのコントロール下(?:になって|で戦場に出て))?(?:すぐに)?攻撃したり\(Ｔ\)したりできる。）" value="" nodebug="true" />
     <regex target="text" pattern="(?&lt;=速攻.*)（それがいつあなたのコントロール下になったかに関係なく、それは攻撃したり\(Ｔ\)したりできる。）" value="" nodebug="true" />
     <regex target="text" pattern="(?&lt;=先制攻撃.*)（(?:これ|それら?|このクリーチャー)は、?先制攻撃を持たないクリーチャーよりも?先に戦闘ダメージを与える。）" value="" nodebug="true" />
-    <regex target="text" pattern="(?&lt;=装備.*)（[^。]+：あなたがコントロール(?:する|している)クリーチャー１体を対象と(?:し、|する。)(?:これを)?(?:それに)?つける。装備はソーサリーとしてのみ行う。(?:このカードはつけられていない状態で戦場に出て、クリーチャーが戦場を離れても戦場に残る。)?）" value="" nodebug="true" />
+    <regex target="text" pattern="(?&lt;=装備.*)（[^。]+：?あなたがコントロール(?:する|している)クリーチャー１体を対象と(?:し、|する。)(?:これを)?(?:それに)?つける。装備はソーサリーとしてのみ行う。(?:このカードはつけられていない状態で戦場に出て、クリーチャーが戦場を離れても戦場に残る。)?）" value="" nodebug="true" />
     <regex target="text" pattern="(?&lt;=エンチャント.*)（(?:あなたが)?これを唱える(?:に際し|際に)、[^。]+を対象とする。このカードはその[^。]+につけられ(?:た|ている)状態で戦場に出る。）" value="" nodebug="true" />
     <!-- 固定語 -->
     <regex target="text" pattern="カンか龍" value="カン(Khans)か龍(Dragons)" nodebug="true" />
@@ -2553,17 +2554,6 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="「野生」または「解放」" value="「野生(Wild)」または「解放(Free)」" nodebug="true" />
     <regex target="text" pattern="「死」または「拷問」" value="「死(Death)」または「拷問(Torture)」" nodebug="true" />
     <regex target="text" pattern="「羽」または「羽ペン」" value="「羽(Feather)」または「羽ペン(Quill)」" nodebug="true" />
-    <!-- 基本土地 -->
-    <card name="Forest" jaName="森" type="基本土地 ― 森">（(Ｔ)：(緑)を加える。）</card>
-    <card name="Island" jaName="島" type="基本土地 ― 島">（(Ｔ)：(青)を加える。）</card>
-    <card name="Mountain" jaName="山" type="基本土地 ― 山">（(Ｔ)：(赤)を加える。）</card>
-    <card name="Plains" jaName="平地" type="基本土地 ― 平地">（(Ｔ)：(白)を加える。）</card>
-    <card name="Swamp" jaName="沼" type="基本土地 ― 沼">（(Ｔ)：(黒)を加える。）</card>
-    <card name="Snow-Covered Forest" jaName="冠雪の森" type="基本氷雪土地 ― 森">（(Ｔ)：(緑)を加える。）</card>
-    <card name="Snow-Covered Island" jaName="冠雪の島" type="基本氷雪土地 ― 島">（(Ｔ)：(青)を加える。）</card>
-    <card name="Snow-Covered Mountain" jaName="冠雪の山" type="基本氷雪土地 ― 山">（(Ｔ)：(赤)を加える。）</card>
-    <card name="Snow-Covered Plains" jaName="冠雪の平地" type="基本氷雪土地 ― 平地">（(Ｔ)：(白)を加える。）</card>
-    <card name="Snow-Covered Swamp" jaName="冠雪の沼" type="基本氷雪土地 ― 沼">（(Ｔ)：(黒)を加える。）</card>
     <!-- テキストが正常でないカード -->
     <card name="Auratouched Mage" jaName="オーラ掠りの魔道士" type="クリーチャー ― 人間・ウィザード" pt="3/3">オーラ掠りの魔道士が戦場に出たとき、あなたのライブラリーからこれにエンチャントできるオーラ・カード１枚を探す。オーラ掠りの魔道士が戦場に出ているなら、そのオーラ・カードをこれについている状態で戦場に出す。そうでないなら、そのオーラ・カードを公開し、あなたの手札に加える。その後、ライブラリーを切り直す。</card>
     <card name="Bludgeon Brawl" jaName="棍棒での殴り合い" type="エンチャント">クリーチャーでも装備品でもない各アーティファクトは、装備(Ｘ)と「装備しているクリーチャーは+X/+0の修整を受ける。」を持つ装備品である。Ｘはそのアーティファクトのマナ総量に等しい。</card>
@@ -2714,9 +2704,6 @@ Lv8+：
     <!-- テキストが正常でないカード (STX & C21) -->
     <card name="Mage Duel" jaName="魔道士の決闘" type="ソーサリー">このターンにあなたがこれ以外でインスタントやソーサリーである呪文を唱えていたなら、この呪文を唱えるためのコストは(２)少なくなる。
 あなたがコントロールしているクリーチャー１体と、あなたがコントロールしていないクリーチャー１体を対象とする。ターン終了時まで、その前者は+1/+2の修整を受ける。その前者はその後者と格闘を行う。（それぞれはもう一方に自身のパワーに等しい点数のダメージを与える。）</card>
-    <card name="Zephyr Boots" jaName="微風のブーツ" type="アーティファクト ― 装備品">装備しているクリーチャーは飛行を持つ。
-装備しているクリーチャーがプレイヤー１人に戦闘ダメージを与えるたび、カード１枚を引き、その後カード１枚を捨てる。
-装備(２)</card>
     <!-- テキストが正常でないカード：if節 -->
     <card name="Curse of the Cabal" jaName="陰謀団の呪い" type="ソーサリー">プレイヤー１人を対象とする。そのプレイヤーは、自分がコントロールしているパーマネントの、端数を切り捨てた半分を生け贄に捧げる。
 待機２ ― (２)(黒)(黒)（あなたの手札からこのカードを唱えるのではなく、あなたは(２)(黒)(黒)を支払い、時間カウンターを２個置いた状態でこれを追放してもよい。あなたのアップキープの開始時に、時間カウンターを１個取り除く。最後の１個を取り除いたとき、これをこれのマナ・コストを支払うことなく唱える。）
