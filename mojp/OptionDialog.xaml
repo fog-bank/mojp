@@ -165,8 +165,13 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
-                <CheckBox IsChecked="{Binding ShowBasicLands}"
-                          ToolTip="チェックを外すと、氷雪でない基本の平地、島、沼、山、森には反応しなくなります。" ToolTipService.ShowDuration="60000">
+                <CheckBox IsChecked="{Binding ShowBasicLands}" ToolTipService.ShowDuration="60000">
+                    <CheckBox.ToolTip>
+                        <TextBlock Margin="0">
+                            チェックを外すと、氷雪でない基本の平地、島、沼、山、森には反応しなくなります。<LineBreak />
+                            一部のフルアート版の基本土地にはこの設定に関わらず反応しません。
+                        </TextBlock>
+                    </CheckBox.ToolTip>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock>基本土地 5 種のカードテキストを表示する</TextBlock>
                         <Image Source="Resources/Information.png" Height="16" Margin="5,0,0,0" />

@@ -1664,6 +1664,21 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="271  /   " sub="SLD" name="Fire Covenant" />
     <alt key="272  /   " sub="SLD" name="Fractured Identity" />
     <alt key="273  /   " sub="SLD" name="Fracturing Gust" />
+    <!-- MID variants -->
+    <alt key="312  /   " sub="MID" name="Adeline, Resplendent Cathar" />
+    <alt key="313  /   " sub="MID" name="Lier, Disciple of the Drowned" />
+    <alt key="314  /   " sub="MID" name="Gisa, Glorious Resurrector" />
+    <alt key="315  /   " sub="MID" name="Jadar, Ghoulcaller of Nephalia" />
+    <alt key="316  /   " sub="MID" name="Jerren, Corrupted Bishop" />
+    <alt key="317  /   " sub="MID" name="Dennick, Pious Apprentice" />
+    <alt key="318  /   " sub="MID" name="Florian, Voldaren Scion" />
+    <alt key="319  /   " sub="MID" name="Liesa, Forgotten Archangel" />
+    <alt key="320  /   " sub="MID" name="Ludevic, Necrogenius" />
+    <alt key="321  /   " sub="MID" name="Old Stickfingers" />
+    <alt key="322  /   " sub="MID" name="Rem Karolus, Stalwart Slayer" />
+    <alt key="323  /   " sub="MID" name="Sigarda, Champion of Light" />
+    <alt key="324  /   " sub="MID" name="Slogurk, the Overslime" />
+    <alt key="325  /   " sub="MID" name="Vadrik, Astral Archmage" />
     <!-- Strixhaven Mystical Archive -->
     <alt key="01  /  63 " sub="STA" name="Approach of the Second Sun" />
     <alt key="02  /  63 " sub="STA" name="Day of Judgment" />
