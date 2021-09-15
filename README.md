@@ -36,7 +36,7 @@ Windows 7 SP1 以降
 
 ## 開発環境
 Windows 10 May 2021 Update (Version 21H1)  
-Visual Studio 2019 v16.10  
+Visual Studio 2019 v16.11  
 C# 9.0
 
 ### 仕組み
