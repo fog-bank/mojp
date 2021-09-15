@@ -556,7 +556,7 @@
     <card name="Vengeful Strangler" jaName="復讐に燃えた絞殺者" type="クリーチャー ― 人間・ならず者" pt="2/1" related="Strangling Grasp">復讐に燃えた絞殺者ではブロックできない。
 復讐に燃えた絞殺者が死亡したとき、クリーチャーやプレインズウォーカーのうち対戦相手がコントロールしている１体を対象とする。これをそれについた状態かつ変身させた状態かつあなたのコントロール下で戦場に戻す。</card>
     <card name="Strangling Grasp" jaName="絞殺の手" type="エンチャント ― オーラ" related="Vengeful Strangler">エンチャント（対戦相手がコントロールしているクリーチャーかプレインズウォーカー）
-あなたのアップキープの開始時に、エンチャントしているパーマネントのコントローラーは土地でないパーマネント１つを生け贄に捧げ１点のライフを失う。</card>
+あなたのアップキープの開始時に、エンチャントしているパーマネントのコントローラーは土地でないパーマネント１つを生け贄に捧げ、その後そのプレイヤーは１点のライフを失う。</card>
     <card name="Fangblade Brigand" jaName="牙刃の盗賊" type="クリーチャー ― 人間・狼男" pt="3/4" related="Fangblade Eviscerator">(１)(赤)：ターン終了時まで、牙刃の盗賊は+1/+0の修整を受け先制攻撃を得る。
 日暮（プレイヤーが自分のターンに呪文を唱えなかったなら、次のターンに夜になる。）</card>
     <card name="Fangblade Eviscerator" jaName="牙刃の腸抜き" type="クリーチャー ― 狼男" pt="4/5" related="Fangblade Brigand">(１)(赤)：ターン終了時まで、牙刃の腸抜きは+1/+0の修整を受け先制攻撃を得る。
@@ -581,7 +581,7 @@
 日暮（プレイヤーが自分のターンに呪文を唱えなかったなら、次のターンに夜になる。）</card>
     <card name="Spellrune Howler" jaName="ルーン綴りの咆哮獣" type="クリーチャー ― 狼男" pt="3/4" related="Spellrune Painter">あなたがインスタントかソーサリーである呪文を唱えるたび、ターン終了時まで、ルーン綴りの咆哮獣は+2/+2の修整を受ける。
 夜明（プレイヤーが自分のターンに２つ以上の呪文を唱えたなら、次のターンに昼になる。）</card>
-    <card name="Tavern Ruffian" jaName="酒場の悪漢" type="クリーチャー ― 人間・戦士・狼男" pt="2/5" related="Tavern Smasher">日暮（プレイヤーが自分のターンに呪文を唱えなかったなら、次のターンに夜になる。）</card>
+    <card name="Tavern Ruffian" jaName="酒場のごろつき" type="クリーチャー ― 人間・戦士・狼男" pt="2/5" related="Tavern Smasher">日暮（プレイヤーが自分のターンに呪文を唱えなかったなら、次のターンに夜になる。）</card>
     <card name="Tavern Smasher" jaName="酒場破り" type="クリーチャー ― 狼男" pt="6/5" related="Tavern Ruffian">夜明（プレイヤーが自分のターンに２つ以上の呪文を唱えたなら、次のターンに昼になる。）</card>
     <card name="Village Watch" jaName="村の見張り番" type="クリーチャー ― 人間・狼男" pt="4/3" related="Village Reavers">速攻
 日暮（プレイヤーが自分のターンに呪文を唱えなかったなら、次のターンに夜になる。）</card>
@@ -5659,7 +5659,7 @@ III ― 対戦相手１人を対象とする。そのプレイヤーがコント
     <card name="Vengeful Strangler" jaName="復讐に燃えた絞殺者" type="クリーチャー ― 人間・ならず者" pt="2/1" related="Strangling Grasp">復讐に燃えた絞殺者ではブロックできない。
 復讐に燃えた絞殺者が死亡したとき、クリーチャーやプレインズウォーカーのうち対戦相手がコントロールしている１体を対象とする。これをそれについた状態かつ変身させた状態かつあなたのコントロール下で戦場に戻す。</card>
     <card name="Strangling Grasp" jaName="絞殺の手" type="エンチャント ― オーラ" related="Vengeful Strangler">エンチャント（対戦相手がコントロールしているクリーチャーかプレインズウォーカー）
-あなたのアップキープの開始時に、エンチャントしているパーマネントのコントローラーは土地でないパーマネント１つを生け贄に捧げ１点のライフを失う。</card>
+あなたのアップキープの開始時に、エンチャントしているパーマネントのコントローラーは土地でないパーマネント１つを生け贄に捧げ、その後そのプレイヤーは１点のライフを失う。</card>
     <card name="Fangblade Brigand" jaName="牙刃の盗賊" type="クリーチャー ― 人間・狼男" pt="3/4" related="Fangblade Eviscerator">(１)(赤)：ターン終了時まで、牙刃の盗賊は+1/+0の修整を受け先制攻撃を得る。
 日暮（プレイヤーが自分のターンに呪文を唱えなかったなら、次のターンに夜になる。）</card>
     <card name="Fangblade Eviscerator" jaName="牙刃の腸抜き" type="クリーチャー ― 狼男" pt="4/5" related="Fangblade Brigand">(１)(赤)：ターン終了時まで、牙刃の腸抜きは+1/+0の修整を受け先制攻撃を得る。
@@ -5684,7 +5684,7 @@ III ― 対戦相手１人を対象とする。そのプレイヤーがコント
 日暮（プレイヤーが自分のターンに呪文を唱えなかったなら、次のターンに夜になる。）</card>
     <card name="Spellrune Howler" jaName="ルーン綴りの咆哮獣" type="クリーチャー ― 狼男" pt="3/4" related="Spellrune Painter">あなたがインスタントかソーサリーである呪文を唱えるたび、ターン終了時まで、ルーン綴りの咆哮獣は+2/+2の修整を受ける。
 夜明（プレイヤーが自分のターンに２つ以上の呪文を唱えたなら、次のターンに昼になる。）</card>
-    <card name="Tavern Ruffian" jaName="酒場の悪漢" type="クリーチャー ― 人間・戦士・狼男" pt="2/5" related="Tavern Smasher">日暮（プレイヤーが自分のターンに呪文を唱えなかったなら、次のターンに夜になる。）</card>
+    <card name="Tavern Ruffian" jaName="酒場のごろつき" type="クリーチャー ― 人間・戦士・狼男" pt="2/5" related="Tavern Smasher">日暮（プレイヤーが自分のターンに呪文を唱えなかったなら、次のターンに夜になる。）</card>
     <card name="Tavern Smasher" jaName="酒場破り" type="クリーチャー ― 狼男" pt="6/5" related="Tavern Ruffian">夜明（プレイヤーが自分のターンに２つ以上の呪文を唱えたなら、次のターンに昼になる。）</card>
     <card name="Village Watch" jaName="村の見張り番" type="クリーチャー ― 人間・狼男" pt="4/3" related="Village Reavers">速攻
 日暮（プレイヤーが自分のターンに呪文を唱えなかったなら、次のターンに夜になる。）</card>
