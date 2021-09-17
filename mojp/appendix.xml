@@ -8,6 +8,14 @@
     <card name="The Monarch" jaName="統治者" type="" wikilink="統治者">あなたの終了ステップの開始時に、あなたはカード１枚を引く。
 クリーチャーが１体あなたに戦闘ダメージを与えるたび、それのコントローラーが統治者になる。</card>
     <card name="City's Blessing" jaName="都市の承認" type="" wikilink="昇殿"></card>
+    <card name="昼／夜" jaName="昼／夜" type="" wikilink="日暮">昼か夜になるか、日暮面であるパーマネントが戦場に出たなら、残りのゲームの間、昼／夜を記録する。
+《昼》
+昼になるに際し、夜明面であるすべてのパーマネントを変身させる。
+プレイヤーが自分のターンに呪文を唱えなかったなら、次のターンに夜になる。
+《夜》
+夜になるに際し、日暮面であるすべてのパーマネントを変身させる。
+すべてのパーマネントは夜明面で戦場に出る。
+プレイヤーが自分のターンに２つ以上の呪文を唱えたなら、次のターンに昼になる。</card>
     <card name="プロモ版のカード" jaName="プロモ版のカード" type="" wikilink="">（UI テキストからカード名を判別できないカード枠のため、日本語テキストを表示できません。）</card>
     <!-- MID -->
     <card name="Adeline, Resplendent Cathar" jaName="輝かしい聖戦士、エーデリン" type="伝説のクリーチャー ― 人間・騎士" pt="*/4">警戒
@@ -2019,6 +2027,8 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="Yawning Portal" sub="Dungeon Level" name="Dungeon of the Mad Mage" />
     <alt key="Cave Entrance" sub="Goblin Lair" name="Lost Mine of Phandelver" />
     <alt key="Trapped Entry" sub="Veils of Fear" name="Tomb of Annihilation" />
+    <!-- 昼・夜 (MID) -->
+    <alt key="19  /  19 " sub="TOK" name="昼／夜" />
   </add>
   <replace>
     <!-- 誤字脱字 -->
@@ -2560,6 +2570,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="ミラディン軍かファイレクシア軍" value="ミラディン軍(Mirran)かファイレクシア軍(Phyrexian)" nodebug="true" />
     <regex target="text" pattern="味方か敵" value="味方(Friend)か敵(Foe)" nodebug="true" />
     <regex target="text" pattern="奇数か偶数" value="奇数(Odd)か偶数(Even)" nodebug="true" />
+    <regex target="text" pattern="昼か夜" value="昼(Day)か夜(Night)" nodebug="true" />
     <regex target="text" pattern="「戦争」か「平和」" value="「戦争(War)」か「平和(Peace)」" nodebug="true" />
     <regex target="text" pattern="「左」か「右」" value="「左(Left)」か「右(Right)」" nodebug="true" />
     <regex target="text" pattern="「殺戮」または「忠誠」" value="「殺戮(Carnage)」または「忠誠(Homage)」" nodebug="true" />
