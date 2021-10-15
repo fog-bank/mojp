@@ -218,6 +218,26 @@
 落砂の監房/Sandfall Cell ― 各プレイヤーはそれぞれ、アーティファクトやクリーチャーや土地のうち１つを生け贄に捧げないかぎり２点のライフを失う。
 土牢/Oubliette ― カード１枚を捨て、アーティファクト１つとクリーチャー１体と土地１つを生け贄に捧げる。
 死神の揺り篭/Cradle of the Death God ― 《アトロパル》という名前で接死を持つ黒の4/4の伝説の神・ホラー・クリーチャー・トークン１体を生成する。</card>
+    <!-- SLD -->
+    <card name="Chief Jim Hopper" jaName="Chief Jim Hopper" type="伝説のクリーチャー ― 人間・兵士" pt="4/4">威迫
+Chief Jim Hopperが攻撃するたび、トークンでない攻撃クリーチャー１体につき１回調査を行う。
+Friends forever（両方がfriends foreverを持つなら、あなたは２体の統率者を使用できる。）</card>
+    <card name="Dustin, Gadget Genius" jaName="Dustin, Gadget Genius" type="伝説のクリーチャー ― 人間" pt="2/3">(Ｔ)：(◇)(◇)を加える。このマナは、アーティファクト呪文を唱えるためか、アーティファクトの能力を起動するためにのみ使用できる。
+Friends forever（両方がfriends foreverを持つなら、あなたは２体の統率者を使用できる。）</card>
+    <card name="Eleven, the Mage" jaName="Eleven, the Mage" type="伝説のクリーチャー ― 人間・ウィザード" pt="3/5">あなたの手札の上限は１１である。
+Eleven, the Mageが攻撃するたび、あなたはカード１枚を引き、１点のライフを失う。その後、あなたの手札に１１枚以上のカードがあるなら、あなたはあなたの手札からインスタントかソーサリーである呪文１つをマナ・コストを支払うことなく唱えてもよい。
+Friends forever（両方がfriends foreverを持つなら、あなたは２体の統率者を使用できる。）</card>
+    <card name="Lucas, the Sharpshooter" jaName="Lucas, the Sharpshooter" type="伝説のクリーチャー ― 人間" pt="1/3">(Ｔ),アーティファクト１つを生け贄に捧げる：クリーチャー１体を対象とする。Lucas, the Sharpshooterはそれに１点のダメージを与える。そのクリーチャーを使嗾する。（あなたの次のターンまで、そのクリーチャーは、各戦闘で可能なら攻撃し、可能ならあなたでないプレイヤーを攻撃する。）
+Friends forever（両方がfriends foreverを持つなら、あなたは２体の統率者を使用できる。）</card>
+    <card name="Max, the Daredevil" jaName="Max, the Daredevil" type="伝説のクリーチャー ― 人間" pt="3/2">速攻
+あなたが各ターンのあなたの２つ目の呪文を唱えるたび、クリーチャー１体を対象とする。それをアンタップし、その後調査を行う。（「(２),このアーティファクトを生け贄に捧げる：カード１枚を引く。」を持つ無色の手掛かり・アーティファクト・トークン１つを生成する。）
+Friends forever（両方がfriends foreverを持つなら、あなたは２体の統率者を使用できる。）</card>
+    <card name="Mike, the Dungeon Master" jaName="Mike, the Dungeon Master" type="伝説のクリーチャー ― 人間" pt="2/2">(２),(Ｔ)：あなたの墓地にありこのターンに戦場からあなたの墓地に置かれたクリーチャー・カード１枚を対象とする。それをタップ状態で戦場に戻す。
+Friends forever（両方がfriends foreverを持つなら、あなたは２体の統率者を使用できる。）</card>
+    <card name="Mind Flayer, the Shadow" jaName="Mind Flayer, the Shadow" type="伝説のクリーチャー・エンチャント ― ホラー" pt="9/9">あなたが、あなたがオーナーではないパーマネントを３つ以上コントロールしていないかぎり、Mind Flayer, the Shadowはクリーチャーではない。
+あなたの終了ステップの開始時に、各対戦相手のライブラリーの一番下のカードをそれぞれ裏向きに追放する。それらのカードが追放され続けているかぎり、あなたはそれらを見てもよく、あなたはそれらの中からパーマネント呪文を唱えてもよく、あなたはそれらの呪文を唱えるためにマナを望む色のマナであるかのように支払ってもよい。</card>
+    <card name="Will the Wise" jaName="Will the Wise" type="伝説のクリーチャー ― 人間" pt="1/2">Will the Wiseが戦場に出たか戦場を離れたとき、各対戦相手はそれぞれ調査を行ってもよい。そうしなかった各対戦相手はそれぞれ１点のライフを失う。あなたはＸ回調査を行う。Ｘはこれにより調査を行った対戦相手の人数に１を足した値に等しい。
+Friends forever（両方がfriends foreverを持つなら、あなたは２体の統率者を使用できる。）</card>
     <!-- SL2 -->
     <card name="Rick, Steadfast Leader" jaName="Rick, Steadfast Leader" type="伝説のクリーチャー ― 人間・兵士" pt="3/4">Rick, Steadfast Leaderが戦場に出るに際し、先制攻撃か警戒か絆魂のうち能力２つを選ぶ。
 あなたがコントロールしている人間は選ばれた各能力を持つ。
