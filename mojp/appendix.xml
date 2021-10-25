@@ -8,7 +8,7 @@
     <card name="The Monarch" jaName="統治者" type="" wikilink="統治者">あなたの終了ステップの開始時に、あなたはカード１枚を引く。
 クリーチャーが１体あなたに戦闘ダメージを与えるたび、それのコントローラーが統治者になる。</card>
     <card name="City's Blessing" jaName="都市の承認" type="" wikilink="昇殿"></card>
-    <card name="昼／夜" jaName="昼／夜" type="" wikilink="日暮">昼か夜になるか、日暮面であるパーマネントが戦場に出たなら、残りのゲームの間、昼／夜を記録する。
+    <card name="昼／夜" jaName="昼／夜" type="" wikilink="昼">昼か夜になるか、日暮面であるパーマネントが戦場に出たなら、残りのゲームの間、昼／夜を記録する。
 《昼》
 昼になるに際し、夜明面であるすべてのパーマネントを変身させる。
 プレイヤーが自分のターンに呪文を唱えなかったなら、次のターンに夜になる。
@@ -238,6 +238,12 @@ Friends forever（両方がfriends foreverを持つなら、あなたは２体�
 あなたの終了ステップの開始時に、各対戦相手のライブラリーの一番下のカードをそれぞれ裏向きに追放する。それらのカードが追放され続けているかぎり、あなたはそれらを見てもよく、あなたはそれらの中からパーマネント呪文を唱えてもよく、あなたはそれらの呪文を唱えるためにマナを望む色のマナであるかのように支払ってもよい。</card>
     <card name="Will the Wise" jaName="Will the Wise" type="伝説のクリーチャー ― 人間" pt="1/2">Will the Wiseが戦場に出たか戦場を離れたとき、各対戦相手はそれぞれ調査を行ってもよい。そうしなかった各対戦相手はそれぞれ１点のライフを失う。あなたはＸ回調査を行う。Ｘはこれにより調査を行った対戦相手の人数に１を足した値に等しい。
 Friends forever（両方がfriends foreverを持つなら、あなたは２体の統率者を使用できる。）</card>
+    <card name="Hawkins National Laboratory" jaName="Hawkins National Laboratory" type="伝説の土地" related="The Upside Down">(Ｔ)：(◇)を加える。
+(４),(Ｔ)：調査を行う。
+あなたの終了ステップの開始時に、このターンにあなたが３つ以上の手掛かりを生け贄に捧げていた場合、Hawkins National Laboratoryを変身させる。</card>
+    <card name="The Upside Down" jaName="The Upside Down" type="伝説の土地" related="Hawkins National Laboratory">この土地がThe Upside Downに変身したとき、あなたの墓地にあるクリーチャー・カード１枚を対象とする。それを戦場に戻す。
+The Upside Downによって戦場に出たクリーチャーが戦場を離れたとき、The Upside Downを変身させる。
+(Ｔ),１点のライフを支払う：(黒)を加える。</card>
     <!-- SL2 -->
     <card name="Rick, Steadfast Leader" jaName="Rick, Steadfast Leader" type="伝説のクリーチャー ― 人間・兵士" pt="3/4">Rick, Steadfast Leaderが戦場に出るに際し、先制攻撃か警戒か絆魂のうち能力２つを選ぶ。
 あなたがコントロールしている人間は選ばれた各能力を持つ。
