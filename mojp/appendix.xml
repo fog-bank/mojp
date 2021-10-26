@@ -222,7 +222,7 @@
     <card name="Chief Jim Hopper" jaName="Chief Jim Hopper" type="伝説のクリーチャー ― 人間・兵士" pt="4/4">威迫
 Chief Jim Hopperが攻撃するたび、トークンでない攻撃クリーチャー１体につき１回調査を行う。
 Friends forever（両方がfriends foreverを持つなら、あなたは２体の統率者を使用できる。）</card>
-    <card name="Dustin, Gadget Genius" jaName="Dustin, Gadget Genius" type="伝説のクリーチャー ― 人間" pt="2/3">(Ｔ)：(◇)(◇)を加える。このマナは、アーティファクト呪文を唱えるためか、アーティファクトの能力を起動するためにのみ使用できる。
+    <card name="Dustin, Gadget Genius" jaName="Dustin, Gadget Genius" type="伝説のクリーチャー ― 人間" pt="2/3">(Ｔ)：(◇)(◇)を加える。このマナは、アーティファクト・呪文を唱えるためか、アーティファクトの能力を起動するためにのみ使用できる。
 Friends forever（両方がfriends foreverを持つなら、あなたは２体の統率者を使用できる。）</card>
     <card name="Eleven, the Mage" jaName="Eleven, the Mage" type="伝説のクリーチャー ― 人間・ウィザード" pt="3/5">あなたの手札の上限は１１である。
 Eleven, the Mageが攻撃するたび、あなたはカード１枚を引き、１点のライフを失う。その後、あなたの手札に１１枚以上のカードがあるなら、あなたはあなたの手札からインスタントかソーサリーである呪文１つをマナ・コストを支払うことなく唱えてもよい。
@@ -235,7 +235,7 @@ Friends forever（両方がfriends foreverを持つなら、あなたは２体�
     <card name="Mike, the Dungeon Master" jaName="Mike, the Dungeon Master" type="伝説のクリーチャー ― 人間" pt="2/2">(２),(Ｔ)：あなたの墓地にありこのターンに戦場からあなたの墓地に置かれたクリーチャー・カード１枚を対象とする。それをタップ状態で戦場に戻す。
 Friends forever（両方がfriends foreverを持つなら、あなたは２体の統率者を使用できる。）</card>
     <card name="Mind Flayer, the Shadow" jaName="Mind Flayer, the Shadow" type="伝説のクリーチャー・エンチャント ― ホラー" pt="9/9">あなたが、あなたがオーナーではないパーマネントを３つ以上コントロールしていないかぎり、Mind Flayer, the Shadowはクリーチャーではない。
-あなたの終了ステップの開始時に、各対戦相手のライブラリーの一番下のカードをそれぞれ裏向きに追放する。それらのカードが追放され続けているかぎり、あなたはそれらを見てもよく、あなたはそれらの中からパーマネント呪文を唱えてもよく、あなたはそれらの呪文を唱えるためにマナを望む色のマナであるかのように支払ってもよい。</card>
+あなたの終了ステップの開始時に、各対戦相手のライブラリーの一番下のカードをそれぞれ裏向きに追放する。それらのカードが追放され続けているかぎり、あなたはそれらを見てもよく、あなたはそれらの中からパーマネント・呪文を唱えてもよく、あなたはそれらの呪文を唱えるためにマナを望む色のマナであるかのように支払ってもよい。</card>
     <card name="Will the Wise" jaName="Will the Wise" type="伝説のクリーチャー ― 人間" pt="1/2">Will the Wiseが戦場に出たか戦場を離れたとき、各対戦相手はそれぞれ調査を行ってもよい。そうしなかった各対戦相手はそれぞれ１点のライフを失う。あなたはＸ回調査を行う。Ｘはこれにより調査を行った対戦相手の人数に１を足した値に等しい。
 Friends forever（両方がfriends foreverを持つなら、あなたは２体の統率者を使用できる。）</card>
     <card name="Hawkins National Laboratory" jaName="Hawkins National Laboratory" type="伝説の土地" related="The Upside Down">(Ｔ)：(◇)を加える。
@@ -1810,7 +1810,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="タコか海蛇・クリーチャー・カード" value="タコか海蛇であるクリーチャー・カード" nodebug="true" />
     <regex target="text" pattern="天使・クリーチャー・カード１枚かデーモン・クリーチャー・カード１枚かドラゴン・クリーチャー・カード１枚" value="天使かデーモンかドラゴンであるクリーチャー・カード１枚" nodebug="true" />
     <regex target="text" pattern="[の・]呪文[とや]([^。]+)[の・]呪文を唱えるためのコストは" value="か$1である呪文を唱えるためのコストは" nodebug="true" />
-    <regex target="text" pattern="(?&lt;!や)インスタントやソーサリーである(?=カード１枚(?!につき)|カードが追放されるまで|カードを公開するたび|カードなら|呪文１つ(?!につき)|呪文を唱え(?!るための|てもよい))" value="インスタントかソーサリーである" nodebug="true" />
+    <regex target="text" pattern="(?&lt;!や)インスタントやソーサリーである(?=カード１枚(?!につき)|カードが追放されるまで|カードを公開するたび|カードが公開されたなら|カードなら|呪文１つ(?!につき)|呪文を唱え(?!るための|てもよい))" value="インスタントかソーサリーである" nodebug="true" />
     <regex target="text" pattern="次にインスタントやソーサリー(?=である呪文|でありマナ総量が.以下である呪文)" value="次にインスタントかソーサリー" nodebug="true" />
     <regex target="text" pattern="インスタントやソーサリーやウィザードである呪文を唱えるたび" value="インスタントかソーサリーかウィザードである呪文を唱えるたび" nodebug="true" />
     <!-- テンプレート変更：A and B -->
@@ -4510,7 +4510,6 @@ III ― 対戦相手１人を対象とする。そのプレイヤーがコント
     
     <!-- MID (再録) -->
     <card name="Clear Shot" jaName="直接射撃" type="インスタント">あなたがコントロールしているクリーチャー１体とあなたがコントロールしていないクリーチャー１体を対象とする。ターン終了時まで、その前者は+1/+1の修整を受ける。その前者はその後者に、自身のパワーに等しい点数のダメージを与える。</card>
-    <card name="Delver of Secrets" jaName="秘密を掘り下げる者" type="クリーチャー ― 人間・ウィザード" pt="1/1" related="Insectile Aberration">あなたのアップキープの開始時に、あなたのライブラリーの一番上のカードを見る。あなたはそのカードを公開してもよい。これによりインスタントかソーサリーであるカードが公開されたなら、秘密を掘り下げる者を変身させる。</card>
     <card name="Devious Cover-Up" jaName="悪賢い隠蔽" type="インスタント">呪文１つとあなたの墓地にあるカード最大４枚を対象とする。その前者の呪文を打ち消す。これによりその呪文が打ち消されたなら、それをオーナーの墓地に置く代わりに追放する。あなたは「その後者のカードをあなたのライブラリーに加えて切り直す。」を選んでもよい。</card>
     
     <!-- MIC -->
