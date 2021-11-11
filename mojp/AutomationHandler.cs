@@ -178,7 +178,7 @@ namespace Mojp
                     ViewModel.InvokeSetMessage("トークン");
                 }
                 else
-                    ViewModel.InvokeSetMessage("未対応のカード");
+                    ViewModel.InvokeSetMessage(string.Empty);
             }
 
             /// <summary>
@@ -225,15 +225,18 @@ namespace Mojp
                     return;
 
                 Debug.WriteLine("[NameChanged] " + name.Replace(Environment.NewLine, "\\n"));
-                
-                if (TryFetchCard(name))
-                    return;
+
+                //if (TryFetchCard(name))
+                //    return;
 
                 // コピートークンでない普通のトークンである可能性があるので、全体走査する
                 // プロモ版を示唆するテキストの場合も全体走査
                 // （KHM以降、プロモにもコレクター番号が振られるようになったが、STXと被り捲りなので、廃止）
-                if (name.StartsWith("Token") || name == "PRM" || name == PromoCollectorNumber)
-                    SearchCardName();
+                //if (name.StartsWith("Token") || name == "PRM" || name == PromoCollectorNumber)
+                //    SearchCardName();
+
+                // 拡張アート枠のコレクター番号問題のため、常時全体走査に変更 (since VOW)
+                SearchCardName();
             }
 
             /// <summary>
@@ -324,7 +327,7 @@ namespace Mojp
                         // 両面カード対策
                         if (App.AltCardKeys.Contains(text))
                         {
-                            Debug.WriteLine(altKey + " -> " + text);
+                            Debug.WriteLineIf(altKey != text, altKey + " -> " + text);
                             altKey = text;
                         }
 

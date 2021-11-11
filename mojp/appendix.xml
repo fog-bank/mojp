@@ -16,14 +16,17 @@
 夜になるに際し、日暮面であるすべてのパーマネントを変身させる。
 すべてのパーマネントは夜明面で戦場に出る。
 プレイヤーが自分のターンに２つ以上の呪文を唱えたなら、次のターンに昼になる。</card>
-    <card name="プロモ版のカード" jaName="プロモ版のカード" type="" wikilink="">（UI テキストからカード名を判別できないカード枠のため、日本語テキストを表示できません。）</card>
-    <!-- クリーチャーでないトークン -->
+    <card name="プロモ版のカード" jaName="プロモ版のカード" type="" wikilink="">（カード名を判別できないカード枠のため、日本語テキストを表示できません。）</card>
+    <!-- 定義済みトークン -->
     <card name="Blood Token" jaName="血・トークン" type="トークン・アーティファクト ― 血" wikilink="血">(１),(Ｔ),カード１枚を捨てる,このアーティファクトを生け贄に捧げる：カード１枚を引く。</card>
-    <card name="Clue" jaName="手掛かり" type="トークン・アーティファクト ― 手掛かり" wikilink="手掛かり">(２),このアーティファクトを生け贄に捧げる：カード１枚を引く。</card>
+    <card name="Clue Token" jaName="手掛かり・トークン" type="トークン・アーティファクト ― 手掛かり" wikilink="手掛かり">(２),このアーティファクトを生け贄に捧げる：カード１枚を引く。</card>
+    <card name="Food Token" jaName="食物・トークン" type="トークン・アーティファクト ― 食物" wikilink="食物">(２),(Ｔ),このアーティファクトを生け贄に捧げる：あなたは３点のライフを得る。</card>
+    <card name="Gold Token" jaName="金・トークン" type="トークン・アーティファクト ― 金" wikilink="金">このアーティファクトを生け贄に捧げる：好きな色１色のマナ１点を加える。</card>
+    <card name="Shard Token" jaName="破片・トークン" type="トークン・エンチャント ― 破片" wikilink="ニコ・アリス/Niko Aris">(２),このエンチャントを生け贄に捧げる：占術１を行い、その後カード１枚を引く。</card>
+    <card name="Treasure Token" jaName="宝物・トークン" type="トークン・アーティファクト ― 宝物" wikilink="宝物">(Ｔ),このアーティファクトを生け贄に捧げる：好きな色１色のマナ１点を加える。</card>
+    <!-- クリーチャーでないトークン -->
     <card name="Etherium Cell" jaName="エーテリウム電池" type="トークン・アーティファクト" wikilink="策謀家テゼレット/Tezzeret the Schemer">(Ｔ),このアーティファクトを生け贄に捧げる：好きな色１色のマナ１点を加える。</card>
     <card name="Feather" jaName="羽根" type="トークン・アーティファクト" wikilink="永遠羽のフェニックス/Everquill Phoenix">(１),羽根を生け贄に捧げる：あなたの墓地からフェニックス・カード１枚を対象とし、それをタップ状態で戦場に戻す。</card>
-    <card name="Food" jaName="食物" type="トークン・アーティファクト ― 食物" wikilink="食物">(２),(Ｔ),このアーティファクトを生け贄に捧げる：あなたは３点のライフを得る。</card>
-    <card name="Gold" jaName="金" type="トークン・アーティファクト ― 金" wikilink="金">このアーティファクトを生け贄に捧げる：好きな色１色のマナ１点を加える。</card>
     <card name="Icy Manalith" jaName="氷のマナリス" type="トークン・氷雪アーティファクト" wikilink="氷刻み、スヴェラ/Svella, Ice Shaper">(Ｔ)：好きな色１色のマナ１点を加える。</card>
     <card name="Land Mine" jaName="地雷" type="トークン・アーティファクト" wikilink="ゴブリンのドカーン物取扱者/Goblin Kaboomist">(赤),このアーティファクトを生け贄に捧げる：飛行を持たない攻撃クリーチャー１体を対象とする。このアーティファクトはそれに２点のダメージを与える。</card>
     <card name="Mask" jaName="仮面" type="トークン・エンチャント ― オーラ" wikilink="仮面使い、エストリッド/Estrid, the Masked">エンチャント（パーマネント）
@@ -31,11 +34,9 @@
     <card name="Replicated Ring" jaName="複製された指輪" type="トークン・氷雪アーティファクト" wikilink="複製する指輪/Replicating Ring">(Ｔ)：好きな色１色のマナ１点を加える。</card>
     <card name="Rock" jaName="岩" type="トークン・アーティファクト ― 装備品" wikilink="ゴブリンの武器職人、トッゴ/Toggo, Goblin Weaponsmith">装備しているクリーチャーは「(１),(Ｔ),岩を生け贄に捧げる：クリーチャー１体かプレインズウォーカー１体かプレイヤー１人を対象とする。このクリーチャーはそれに２点のダメージを与える。」を持つ。
 装備(１)</card>
-    <card name="Shard" jaName="破片" type="トークン・エンチャント ― 破片" wikilink="ニコ・アリス/Niko Aris">(２),このエンチャントを生け贄に捧げる：占術１を行い、その後カード１枚を引く。</card>
     <card name="Stoneforged Blade" jaName="石鍛冶製の剣" type="トークン・アーティファクト ― 装備品" wikilink="石術師、ナヒリ/Nahiri, the Lithomancer">破壊不能
 装備しているクリーチャーは+5/+5の修整を受け二段攻撃を持つ。
 装備(０)</card>
-    <card name="Treasure" jaName="宝物" type="トークン・アーティファクト ― 宝物" wikilink="宝物">(Ｔ),このアーティファクトを生け贄に捧げる：好きな色１色のマナ１点を加える。</card>
     <!-- 専用の名前を持つトークン -->
     <card name="Ashaya, the Awoken World" jaName="目覚めし世界、アシャヤ" type="トークン・伝説のクリーチャー ― エレメンタル" pt="4/4" wikilink="精霊信者の賢人、ニッサ/Nissa, Sage Animist"></card>
     <card name="The Atropal" jaName="アトロパル" type="トークン・伝説のクリーチャー ― 神・ホラー" pt="4/4" wikilink="魂を喰らう墓/Tomb of Annihilation">接死</card>
@@ -73,131 +74,9 @@
     <card name="Wirefly" jaName="針金バエ" type="トークン・アーティファクト・クリーチャー ― 昆虫" pt="2/2" wikilink="針金バエの巣/Wirefly Hive">飛行</card>
     <!--<card name="Wolves of the Hunt" jaName="狩人狼" type="トークン・クリーチャー ― 狼" pt="1/1" wikilink="Master of the Hunt">他の《狩人狼》という名前のクリーチャーとのバンド</card>-->
     <card name="Wood" jaName="木材" type="トークン・クリーチャー ― 壁" pt="0/1" wikilink="ジャングル巡視部隊/Jungle Patrol">防衛</card>
-    <!-- 専用のクリーチャータイプを持つトークン -->
-    <card name="Camarid" jaName="カマリッド" type="トークン・クリーチャー ― カマリッド" pt="1/1" wikilink="カマリッド"></card>
-    <card name="Caribou" jaName="カリブー" type="トークン・クリーチャー ― カリブー" pt="0/1" wikilink="カリブー"></card>
-    <!--<card name="Citizen" jaName="市民" type="トークン・クリーチャー ― 市民" wikilink="市民"></card>-->
-    <card name="Deserter" jaName="脱走者" type="トークン・クリーチャー ― 脱走者" pt="0/1" wikilink="脱走者"></card>
-    <card name="Eldrazi Scion" jaName="エルドラージ・末裔" type="トークン・クリーチャー ― エルドラージ・末裔" pt="1/1" wikilink="末裔">このクリーチャーを生け贄に捧げる：(◇)を加える。</card>
-    <card name="Graveborn" jaName="墓生まれ" type="トークン・クリーチャー ― 墓生まれ" pt="3/1" wikilink="墓生まれ">速攻</card>
-    <card name="Inkling" jaName="墨獣" type="トークン・クリーチャー ― 墨獣" pt="2/1" wikilink="墨獣">飛行</card>
-    <card name="Mouse" jaName="ハツカネズミ" type="トークン・クリーチャー ― ハツカネズミ" pt="1/1" wikilink="ハツカネズミ"></card>
-    <!--<card name="Orb" jaName="オーブ" type="トークン・クリーチャー ― オーブ" pt="*/*" wikilink="オーブ">飛行</card>-->
-    <card name="Pentavite" jaName="ペンタバイト" type="トークン・アーティファクト・クリーチャー ― ペンタバイト" pt="1/1" wikilink="ペンタバイト">飛行</card>
-    <card name="Phyrexian Germ" jaName="ファイレクシアン・細菌" type="トークン・クリーチャー ― ファイレクシアン・細菌" pt="0/0" wikilink="細菌"></card>
-    <card name="Pincher" jaName="ピンチャー" type="トークン・クリーチャー ― ピンチャー" pt="2/2" wikilink="ピンチャー"></card>
-    <card name="Prism" jaName="プリズム" type="トークン・アーティファクト・クリーチャー ― プリズム" pt="0/1" wikilink="プリズム"></card>
-    <card name="Sand" jaName="砂漠の民" type="トークン・クリーチャー ― 砂漠の民" pt="1/1" wikilink="砂丘生みのネフィリム/Dune-Brood Nephilim"></card>
-    <card name="Sand Warrior" jaName="砂漠の民・戦士" type="トークン・クリーチャー ― 砂漠の民・戦士" pt="1/1" wikilink="Hazezon Tamar"></card>
-    <card name="Sculpture" jaName="彫像" type="トークン・アーティファクト・クリーチャー ― 彫像" pt="*/*" wikilink="彫像">このクリーチャーのパワーとタフネスは、それぞれあなたがコントロールしている彫像の総数に等しい。</card>
-    <card name="Serf" jaName="農奴" type="トークン・クリーチャー ― 農奴" pt="0/1" wikilink="農奴"></card>
-    <card name="Servo" jaName="霊気装置" type="トークン・アーティファクト・クリーチャー ― 霊気装置" pt="1/1" wikilink="霊気装置"></card>
-    <card name="Survivor" jaName="生存者" type="トークン・クリーチャー ― 生存者" pt="1/1" wikilink="生存者"></card>
-    <card name="Tentacle" jaName="触手" type="トークン・クリーチャー ― 触手" pt="1/1" wikilink="触手"></card>
-    <card name="Tetravite" jaName="テトラバイト" type="トークン・アーティファクト・クリーチャー ― テトラバイト" pt="1/1" wikilink="テトラバイト">飛行
-テトラバイトはエンチャントされない。</card>
-    <card name="Triskelavite" jaName="トリスケラバイト" type="トークン・アーティファクト・クリーチャー ― トリスケラバイト" pt="1/1" wikilink="トリスケラバイト">飛行
-このクリーチャーを生け贄に捧げる：クリーチャー１体かプレインズウォーカー１体かプレイヤー１人を対象とする。このクリーチャーはそれに１点のダメージを与える。</card>
-    <card name="Zombie Army" jaName="ゾンビ・軍団" type="トークン・クリーチャー ― ゾンビ・軍団" pt="0/0" wikilink="動員"></card>
-    <!-- 単一の特性しかないトークン -->
-    <card name="Antelope" jaName="アンテロープ" type="トークン・クリーチャー ― アンテロープ" pt="2/3" wikilink="Master of the Wild Hunt Avatar">森渡り</card>
-    <card name="Ape" jaName="類人猿" type="トークン・クリーチャー ― 類人猿" pt="3/3" wikilink="猿術/Pongify"></card>
-    <card name="Bird Illusion" jaName="鳥・イリュージョン" type="トークン・クリーチャー ― 鳥・イリュージョン" pt="1/1" wikilink="つぶやく神秘家/Murmuring Mystic">飛行</card>
-    <card name="Bird Soldier" jaName="鳥・兵士" type="トークン・クリーチャー ― 鳥・兵士" pt="1/1" wikilink="翼の疾風/Flurry of Wings">飛行</card>
-    <card name="Cat Beast" jaName="猫・ビースト" type="トークン・クリーチャー ― 猫・ビースト" pt="2/2" wikilink="フェリダーの撤退/Felidar Retreat"></card>
-    <card name="Cat Bird" jaName="猫・鳥" type="トークン・クリーチャー ― 猫・鳥" pt="1/1" wikilink="空猫の君主/Skycat Sovereign">飛行</card>
-    <card name="Cat Dragon" jaName="猫・ドラゴン" type="トークン・クリーチャー ― 猫・ドラゴン" pt="3/3" wikilink="ネコルーの女王、ワシトラ/Wasitora, Nekoru Queen">飛行</card>
-    <card name="Cat Soldier" jaName="猫・兵士" type="トークン・クリーチャー ― 猫・兵士" pt="1/1">警戒</card>
-    <card name="Cat Warrior" jaName="猫・戦士" type="トークン・クリーチャー ― 猫・戦士" pt="2/2">森渡り（このクリーチャーは、防御プレイヤーが森をコントロールしているかぎりブロックされない。）</card>
-    <card name="Devil" jaName="デビル" type="トークン・クリーチャー ― デビル" pt="1/1">このクリーチャーが死亡したとき、クリーチャー１体かプレインズウォーカー１体かプレイヤー１人を対象とする。これはそれに１点のダメージを与える。</card>
-    <card name="Demon Berserker" jaName="デーモン・狂戦士" type="トークン・クリーチャー ― デーモン・狂戦士" pt="2/3" wikilink="血空の虐殺/The Bloodsky Massacre">威迫（このクリーチャーは２体以上のクリーチャーによってしかブロックされない。）</card>
-    <card name="Dinosaur" jaName="恐竜" type="トークン・クリーチャー ― 恐竜" pt="3/3">トランプル（このクリーチャーは余剰の戦闘ダメージをこれが攻撃しているプレイヤーかプレインズウォーカーに与えることができる。）</card>
-    <card name="Dinosaur Beast" jaName="恐竜・ビースト" type="トークン・クリーチャー ― 恐竜・ビースト" pt="*/*">トランプル</card>
-    <card name="Dinosaur Cat" jaName="恐竜・猫" type="トークン・クリーチャー ― 恐竜・猫" pt="2/2"></card>
-    <card name="Djinn" jaName="ジン" type="トークン・アーティファクト・クリーチャー ― ジン" pt="5/5" wikilink="スレイマンの壺/Bottle of Suleiman">飛行</card>
-    <card name="Djinn Monk" jaName="ジン・モンク" type="トークン・クリーチャー ― ジン・モンク" pt="2/2">飛行</card>
-    <card name="Dog" jaName="犬" type="トークン・クリーチャー ― 犬" pt="1/1"></card>
-    <card name="Dog Illusion" jaName="犬・イリュージョン" type="トークン・クリーチャー ― 犬・イリュージョン" pt="*/*" wikilink="モルデンカイネン/Mordenkainen">このクリーチャーのパワーとタフネスは、それぞれあなたの手札にあるカードの枚数の２倍に等しい。</card>
-    <card name="Dragon Illusion" jaName="ドラゴン・イリュージョン" type="トークン・クリーチャー ― ドラゴン・イリュージョン" pt="*/*" wikilink="マナ形成のヘルカイト/Manaform Hellkite">飛行、速攻</card>
-    <card name="Drake" jaName="ドレイク" type="トークン・クリーチャー ― ドレイク" pt="2/2">飛行</card>
-    <card name="Dwarf" jaName="ドワーフ" type="トークン・クリーチャー ― ドワーフ" pt="1/1" wikilink="ドワーフの鉱山/Dwarven Mine"></card>
-    <card name="Dwarf Berserker" jaName="ドワーフ・狂戦士" type="トークン・クリーチャー ― ドワーフ・狂戦士" pt="2/1"></card>
-    <card name="Eldrazi Horror" jaName="エルドラージ・ホラー" type="トークン・クリーチャー ― エルドラージ・ホラー" pt="3/2"></card>
-    <card name="Eldrazi Spawn" jaName="エルドラージ・落とし子" type="トークン・クリーチャー ― エルドラージ・落とし子" pt="0/1" wikilink="落とし子">このクリーチャーを生け贄に捧げる：(◇)を加える。</card>
-    <card name="Elemental Bird" jaName="エレメンタル・鳥" type="トークン・クリーチャー ― エレメンタル・鳥" pt="4/4">飛行</card>
-    <card name="Elemental Cat" jaName="エレメンタル・猫" type="トークン・クリーチャー ― エレメンタル・猫" pt="1/1" wikilink="火猫の襲撃/Firecat Blitz">速攻</card>
-    <card name="Elf" jaName="エルフ" type="トークン・クリーチャー ― エルフ" pt="1/1" wikilink="Elvish Champion Avatar">(Ｔ)：(緑)を加える。</card>
-    <card name="Elf Druid" jaName="エルフ・ドルイド" type="トークン・クリーチャー ― エルフ・ドルイド" pt="1/1" wikilink="Elvish Champion Avatar">(Ｔ)：(緑)を加える。</card>
-    <card name="Elf Knight" jaName="エルフ・騎士" type="トークン・クリーチャー ― エルフ・騎士" pt="2/2">警戒</card>
-    <card name="Elf Warrior" jaName="エルフ・戦士" type="トークン・クリーチャー ― エルフ・戦士" pt="1/1"></card>
-    <card name="Faerie" jaName="フェアリー" type="トークン・クリーチャー ― フェアリー" pt="1/1">飛行</card>
-    <card name="Faerie Dragon" jaName="フェアリー・ドラゴン" type="トークン・クリーチャー ― フェアリー・ドラゴン" pt="1/1">飛行</card>
-    <card name="Faerie Rogue" jaName="フェアリー・ならず者" type="トークン・クリーチャー ― フェアリー・ならず者" pt="1/1">飛行</card>
-    <card name="Fish" jaName="魚" type="トークン・クリーチャー ― 魚" pt="3/3" wikilink="浅瀬蟲/Reef Worm">このクリーチャーが死亡したとき、「このクリーチャーが死亡したとき、青の9/9のクラーケン・クリーチャー・トークン１体を生成する。」を持つ青の6/6の鯨・クリーチャー・トークン１体を生成する。</card>
-    <card name="Fractal" jaName="フラクタル" type="トークン・クリーチャー ― フラクタル" pt="0/0" wikilink="フラクタル"></card>
-    <card name="Frog Lizard" jaName="カエル・トカゲ" type="トークン・クリーチャー ― カエル・トカゲ" pt="3/3"></card>
-    <card name="Fungus Beast" jaName="ファンガス・ビースト" type="トークン・クリーチャー ― ファンガス・ビースト" pt="4/4" wikilink="トラッジの庭/Trudge Garden"></card>
-    <card name="Gargoyle" jaName="ガーゴイル" type="トークン・アーティファクト・クリーチャー ― ガーゴイル" pt="3/4" wikilink="ガーゴイルの城/Gargoyle Castle">飛行</card>
-    <card name="Giant Wizard" jaName="巨人・ウィザード" type="トークン・クリーチャー ― 巨人・ウィザード" pt="4/4" wikilink="巨人の護符/Giant's Amulet"></card>
-    <card name="Gnome" jaName="ノーム" type="トークン・アーティファクト・クリーチャー ― ノーム" pt="1/1" wikilink="メトロノーム/Metrognome"></card>
-    <card name="Goat" jaName="ヤギ" type="トークン・クリーチャー ― ヤギ" pt="0/1"></card>
-    <card name="Goblin Construct" jaName="ゴブリン・構築物" type="トークン・アーティファクト・クリーチャー ― ゴブリン・構築物" pt="0/1" wikilink="秘宝荒らし/Relic Robber">このクリーチャーではブロックできない。
-あなたのアップキープの開始時に、このクリーチャーはあなたに１点のダメージを与える。</card>
-    <card name="Goblin Rogue" jaName="ゴブリン・ならず者" type="トークン・クリーチャー ― ゴブリン・ならず者" pt="1/1"></card>
-    <card name="Goblin Scout" jaName="ゴブリン・スカウト" type="トークン・クリーチャー ― ゴブリン・スカウト" pt="1/1" wikilink="ゴブリン斥候隊/Goblin Scouts">山渡り</card>
-    <card name="Goblin Soldier" jaName="ゴブリン・兵士" type="トークン・クリーチャー ― ゴブリン・兵士" pt="1/1"></card>
-    <card name="Goblin Warrior" jaName="ゴブリン・戦士" type="トークン・クリーチャー ― ゴブリン・戦士" pt="1/1" wikilink="略奪の母、汁婆/Wort, the Raidmother"></card>
-    <card name="Gremlin" jaName="グレムリン" type="トークン・クリーチャー ― グレムリン" pt="2/2"></card>
-    <card name="Griffin" jaName="グリフィン" type="トークン・クリーチャー ― グリフィン" pt="2/2">飛行</card>
-    <card name="Harpy" jaName="ハーピー" type="トークン・クリーチャー ― ハーピー" pt="1/1" wikilink="忌まわしき首領/Abhorrent Overlord">飛行</card>
-    <card name="Horse" jaName="馬" type="トークン・クリーチャー ― 馬" pt="5/5" wikilink="冠毛の陽馬/Crested Sunmare"></card>
-    <card name="Human Rogue" jaName="人間・ならず者" type="トークン・クリーチャー ― 人間・ならず者" pt="1/2" wikilink="荒くれたちの笑い声/Outlaws' Merriment">速攻
-このクリーチャーが戦場に出たとき、クリーチャー１体かプレインズウォーカー１体かプレイヤー１人を対象とする。これはそれに１点のダメージを与える。</card>
-    <card name="Human Soldier" jaName="人間・兵士" type="トークン・クリーチャー ― 人間・兵士" pt="1/1"></card>
-    <card name="Human Warrior" jaName="人間・戦士" type="トークン・クリーチャー ― 人間・戦士" pt="3/1" wikilink="荒くれたちの笑い声/Outlaws' Merriment">トランプル、速攻</card>
-    <card name="Human Wizard" jaName="人間・ウィザード" type="トークン・クリーチャー ― 人間・ウィザード" pt="1/1"></card>
-    <card name="Kavu" jaName="カヴー" type="トークン・クリーチャー ― カヴー" pt="3/3" wikilink="暗影のカヴー/Penumbra Kavu"></card>
-    <card name="Kithkin Soldier" jaName="キスキン・兵士" type="トークン・クリーチャー ― キスキン・兵士" pt="1/1"></card>
-    <card name="Knight Ally" jaName="騎士・同盟者" type="トークン・クリーチャー ― 騎士・同盟者" pt="2/2"></card>
-    <card name="Kor Ally" jaName="コー・同盟者" type="トークン・クリーチャー ― コー・同盟者" pt="1/1"></card>
-    <card name="Kor Soldier" jaName="コー・兵士" type="トークン・クリーチャー ― コー・兵士" pt="1/1"></card>
-    <card name="Kor Warrior" jaName="コー・戦士" type="トークン・クリーチャー ― コー・戦士" pt="1/1"></card>
+    <!-- 特殊トークン -->
     <card name="Manifest" jaName="予示" type="クリーチャー" pt="2/2" wikilink="予示">（予示されたクリーチャー・カードは、それのマナ・コストで、いつでも表向きにしてよい。裏向きのカードは、それの変異コストで表向きにしてもよい。）</card>
-    <card name="Merfolk Wizard" jaName="マーフォーク・ウィザード" type="トークン・クリーチャー ― マーフォーク・ウィザード" pt="1/1"></card>
-    <card name="Minotaur" jaName="ミノタウルス" type="トークン・クリーチャー ― ミノタウルス" pt="2/3" wikilink="双角の連続襲撃/Flurry of Horns">速攻</card>
-    <card name="Monk" jaName="モンク" type="トークン・クリーチャー ― モンク" pt="1/1" wikilink="僧院の導師/Monastery Mentor">果敢</card>
-    <card name="Monkey" jaName="猿" type="トークン・クリーチャー ― 猿" pt="2/2" wikilink="猿の檻/Monkey Cage"></card>
     <card name="Morph" jaName="変異" type="クリーチャー" pt="2/2" wikilink="変異">（変異を持つカードは、それの変異コストを支払うことで、いつでも表向きにしてよい。）</card>
-    <card name="Nightmare Horror" jaName="ナイトメア・ホラー" type="トークン・クリーチャー ― ナイトメア・ホラー" pt="*/*" wikilink="チェイナーの苦悩/Chainer's Torment"></card>
-    <card name="Octopus" jaName="タコ" type="トークン・クリーチャー ― タコ" pt="8/8"></card>
-    <card name="Ox" jaName="雄牛" type="トークン・クリーチャー ― 雄牛" pt="2/4" wikilink="異形化するワンド/Transmogrifying Wand"></card>
-    <card name="Rhino" jaName="サイ" type="トークン・クリーチャー ― サイ" pt="4/4">トランプル</card>
-    <card name="Salamander Warrior" jaName="サラマンダー・戦士" type="トークン・クリーチャー ― サラマンダー・戦士" pt="4/3" wikilink="アンフィン学者、ゴー・ムルドラク/Gor Muldrak, Amphinologist"></card>
-    <card name="Shark" jaName="サメ" type="トークン・クリーチャー ― サメ" pt="*/*" wikilink="サメ台風/Shark Typhoon">飛行</card>
-    <card name="Sheep" jaName="羊" type="トークン・クリーチャー ― 羊" pt="0/1" wikilink="羊術師/Ovinomancer"></card>
-    <card name="Sliver" jaName="スリヴァー" type="トークン・クリーチャー ― スリヴァー" pt="1/1"></card>
-    <card name="Soldier Ally" jaName="兵士・同盟者" type="トークン・クリーチャー ― 兵士・同盟者" pt="1/1" wikilink="兵員への参加/Join the Ranks"></card>
-    <card name="Spawn" jaName="落とし子" type="トークン・アーティファクト・クリーチャー ― 落とし子" pt="2/2" wikilink="落とし子の穴/Spawning Pit"></card>
-    <card name="Spike" jaName="スパイク" type="トークン・クリーチャー ― スパイク" pt="1/1" wikilink="スパイクのブリーダー/Spike Breeder"></card>
-    <card name="Spirit Warrior" jaName="スピリット・戦士" type="トークン・クリーチャー ― スピリット・戦士" pt="*/*" wikilink="族樹の発動/Kin-Tree Invocation"></card>
-    <card name="Squid" jaName="イカ" type="トークン・クリーチャー ― イカ" pt="1/1">島渡り</card>
-    <card name="Squirrel" jaName="リス" type="トークン・クリーチャー ― リス" pt="1/1"></card>
-    <card name="Starfish" jaName="ヒトデ" type="トークン・クリーチャー ― ヒトデ" pt="0/1" wikilink="Spiny Starfish"></card>
-    <card name="Thopter" jaName="飛行機械" type="トークン・アーティファクト・クリーチャー ― 飛行機械" pt="1/1">飛行</card>
-    <card name="Treefolk" jaName="ツリーフォーク" type="トークン・クリーチャー ― ツリーフォーク" pt="*/*" wikilink="森の捧げ物/Sylvan Offering"></card>
-    <card name="Treefolk Shaman" jaName="ツリーフォーク・シャーマン" type="トークン・クリーチャー ― ツリーフォーク・シャーマン" pt="2/5" wikilink="枝の手の内/Reach of Branches"></card>
-    <card name="Treefolk Warrior" jaName="ツリーフォーク・戦士" type="トークン・クリーチャー ― ツリーフォーク・戦士" pt="*/*" wikilink="カロニアのツイングローブ/Kalonian Twingrove">このクリーチャーのパワーとタフネスは、それぞれあなたがコントロールしている森の総数に等しい。</card>
-    <card name="Troll Warrior" jaName="トロール・戦士" type="トークン・クリーチャー ― トロール・戦士" pt="4/4">トランプル</card>
-    <card name="Vampire Knight" jaName="吸血鬼・騎士" type="トークン・クリーチャー ― 吸血鬼・騎士" pt="1/1">絆魂</card>
-    <card name="Whale" jaName="鯨" type="トークン・クリーチャー ― 鯨" pt="6/6" wikilink="浅瀬蟲/Reef Worm">このクリーチャーが死亡したとき、青の9/9のクラーケン・クリーチャー・トークン１体を生成する。</card>
-    <card name="Wizard" jaName="ウィザード" type="トークン・クリーチャー ― ウィザード" pt="2/2" wikilink="謎めいた指導者、カズミナ/Kasmina, Enigmatic Mentor"></card>
-    <card name="Worm" jaName="蟲" type="トークン・クリーチャー ― 蟲" pt="1/1"></card>
-    <card name="Zombie Berserker" jaName="ゾンビ・狂戦士" type="トークン・クリーチャー ― ゾンビ・狂戦士" pt="2/2"></card>
-    <card name="Zombie Giant" jaName="ゾンビ・巨人" type="トークン・クリーチャー ― ゾンビ・巨人" pt="5/5" wikilink="墓所王の探索/Quest for the Gravelord"></card>
-    <card name="Zombie Horror" jaName="ゾンビ・ホラー" type="トークン・クリーチャー ― ゾンビ・ホラー" pt="*/*" wikilink="死体結い/Corpseweft"></card>
-    <card name="Zombie Knight" jaName="ゾンビ・騎士" type="トークン・クリーチャー ― ゾンビ・騎士" pt="2/2" wikilink="リッチの騎士、ジョス・ヴェス/Josu Vess, Lich Knight">威迫（このクリーチャーは２体以上のクリーチャーによってしかブロックされない。）</card>
-    <card name="Zombie Warrior" jaName="ゾンビ・戦士" type="トークン・クリーチャー ― ゾンビ・戦士" pt="4/4" wikilink="永遠神オケチラ/God-Eternal Oketra">警戒</card>
-    <card name="Zombie Wizard" jaName="ゾンビ・ウィザード" type="トークン・クリーチャー ― ゾンビ・ウィザード" pt="1/1" wikilink="アンクスの死者の王/Lich Lord of Unx"></card>
     <!-- ダンジョン -->
     <card name="Dungeon of the Mad Mage" jaName="狂える魔道士の迷宮" type="ダンジョン">大口の門/Yawning Portal ― あなたは１点のライフを得る。
 ダンジョン階層/Dungeon Level ― 占術１を行う。
@@ -972,6 +851,69 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="271  /   " sub="SLD" name="Fire Covenant" />
     <alt key="272  /   " sub="SLD" name="Fractured Identity" />
     <alt key="273  /   " sub="SLD" name="Fracturing Gust" />
+    <!-- MH2 variants -->
+    <alt key="0001  /  1158 " sub="MH2" name="Solitude" />
+    <alt key="0006  /  1158 " sub="MH2" name="Sanctifier en-Vec" />
+    <alt key="0007  /  1158 " sub="MH2" name="Timeless Dragon" />
+    <alt key="0008  /  1158 " sub="MH2" name="Resurgent Belief" />
+    <alt key="0009  /  1158 " sub="MH2" name="Out of Time" />
+    <alt key="0013  /  1158 " sub="MH2" name="Subtlety" />
+    <alt key="0015  /  1158 " sub="MH2" name="Svyelun of Sea and Sky" />
+    <alt key="0017  /  1158 " sub="MH2" name="Rishadan Dockhand" />
+    <alt key="0019  /  1158 " sub="MH2" name="Inevitable Betrayal" />
+    <alt key="0021  /  1158 " sub="MH2" name="Suspend" />
+    <alt key="0022  /  1158 " sub="MH2" name="Counterspell" />
+    <alt key="0025  /  1158 " sub="MH2" name="Grief" />
+    <alt key="0000  /  1158 " sub="MH2" name="" />
+    <!-- KHM variants -->
+    <alt key="0001  /  1158 " sub="KHM" name="Starnheim Unleashed" />
+    <alt key="0002  /  1158 " sub="KHM" name="Resplendent Marshal" />
+    <alt key="0003  /  1158 " sub="KHM" name="Halvar, God of Battle" />
+    <alt key="0004  /  1158 " sub="KHM" name="Sword of the Realms" />
+    <alt key="0005  /  1158 " sub="KHM" name="Search for Glory" />
+    <alt key="0006  /  1158 " sub="KHM" name="Runeforge Champion" />
+    <alt key="0007  /  1158 " sub="KHM" name="Righteous Valkyrie" />
+    <alt key="0008  /  1158 " sub="KHM" name="Sigrid, God-Favored" />
+    <alt key="0009  /  1158 " sub="KHM" name="Glorious Protector" />
+    <alt key="0010  /  1158 " sub="KHM" name="Rally the Ranks" />
+    <alt key="0011  /  1158 " sub="KHM" name="Doomskar" />
+    <alt key="0014  /  1158 " sub="KHM" name="Reidane, God of the Worthy" />
+    <alt key="0015  /  1158 " sub="KHM" name="Valkmira, Protector's Shield" />
+    <alt key="0017  /  1158 " sub="KHM" name="Orvar, the All-Form" />
+    <alt key="0018  /  1158 " sub="KHM" name="Alrund's Epiphany" />
+    <alt key="0019  /  1158 " sub="KHM" name="Alrund, God of the Cosmos" />
+    <alt key="0020  /  1158 " sub="KHM" name="Hakka, Whispering Raven" />
+    <alt key="0021  /  1158 " sub="KHM" name="Ascendant Spirit" />
+    <alt key="0022  /  1158 " sub="KHM" name="Cosmos Charger" />
+    <alt key="0023  /  1158 " sub="KHM" name="Cyclone Summoner" />
+    <alt key="0024  /  1158 " sub="KHM" name="Icebreaker Kraken" />
+    <alt key="0000  /  1158 " sub="KHM" name="" />
+    <!-- AFR variants -->
+    <alt key="0002  /  1158 " sub="AFR" name="Icingdeath, Frost Tyrant" />
+    <alt key="0003  /  1158 " sub="AFR" name="The Book of Exalted Deeds" />
+    <alt key="0005  /  1158 " sub="AFR" name="Flumph" />
+    <alt key="0007  /  1158 " sub="AFR" name="Loyal Warhound" />
+    <alt key="0010  /  1158 " sub="AFR" name="Guardian of Faith" />
+    <alt key="0012  /  1158 " sub="AFR" name="Dancing Sword" />
+    <alt key="0014  /  1158 " sub="AFR" name="Teleportation Circle" />
+    <alt key="0018  /  1158 " sub="AFR" name="White Dragon" />
+    <alt key="0019  /  1158 " sub="AFR" name="Iymrith, Desert Doom" />
+    <alt key="0021  /  1158 " sub="AFR" name="Demilich" />
+    <alt key="0022  /  1158 " sub="AFR" name="Yuan-Ti Malison" />
+    <alt key="0024  /  1158 " sub="AFR" name="Grazilaxx, Illithid Scholar" />
+    <alt key="0000  /  1158 " sub="AFR" name="" />
+    <!-- AFC variants -->
+    <alt key="0004  /  1158 " sub="AFC" name="Fey Steed" />
+    <alt key="0006  /  1158 " sub="AFC" name="Holy Avenger" />
+    <alt key="0008  /  1158 " sub="AFC" name="Immovable Rod" />
+    <alt key="0009  /  1158 " sub="AFC" name="Mantle of the Ancients" />
+    <alt key="0011  /  1158 " sub="AFC" name="Radiant Solar" />
+    <alt key="0013  /  1158 " sub="AFC" name="Revivify" />
+    <alt key="0015  /  1158 " sub="AFC" name="Robe of Stars" />
+    <alt key="0016  /  1158 " sub="AFC" name="Thorough Investigation" />
+    <alt key="0017  /  1158 " sub="AFC" name="Valiant Endeavor" />
+    <alt key="0023  /  1158 " sub="AFC" name="Arcane Endeavor" />
+    <alt key="0000  /  1158 " sub="AFC" name="" />
     <!-- MID variants -->
     <alt key="312  /   " sub="MID" name="Adeline, Resplendent Cathar" />
     <alt key="313  /   " sub="MID" name="Lier, Disciple of the Drowned" />
@@ -987,6 +929,67 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="323  /   " sub="MID" name="Sigarda, Champion of Light" />
     <alt key="324  /   " sub="MID" name="Slogurk, the Overslime" />
     <alt key="325  /   " sub="MID" name="Vadrik, Astral Archmage" />
+    <alt key="0001  /  1158 " sub="MID" name="Intrepid Adversary" />
+    <alt key="0002  /  1158 " sub="MID" name="Sigardian Savior" />
+    <alt key="0004  /  1158 " sub="MID" name="Enduring Angel" />
+    <alt key="0006  /  1158 " sub="MID" name="Sungold Sentinel" />
+    <alt key="0009  /  1158 " sub="MID" name="Sigarda's Splendor" />
+    <alt key="0011  /  1158 " sub="MID" name="Fateful Absence" />
+    <alt key="0013  /  1158 " sub="MID" name="Curse of Silence" />
+    <alt key="0015  /  1158 " sub="MID" name="Vanquish the Horde" />
+    <alt key="0018  /  1158 " sub="MID" name="Spectral Adversary" />
+    <alt key="0019  /  1158 " sub="MID" name="Poppet Stitcher" />
+    <alt key="0021  /  1158 " sub="MID" name="Triskaidekaphile" />
+    <alt key="0024  /  1158 " sub="MID" name="Patrician Geist" />
+    <alt key="0000  /  1158 " sub="MID" name="" />
+    <!-- MIC variants -->
+    <alt key="0003  /  1158 " sub="MIC" name="Avacyn's Memorial" />
+    <alt key="0007  /  1158 " sub="MIC" name="Wall of Mourning" />
+    <alt key="0008  /  1158 " sub="MIC" name="Stalwart Pathlighter" />
+    <alt key="0010  /  1158 " sub="MIC" name="Sigarda's Vanguard" />
+    <alt key="0012  /  1158 " sub="MIC" name="Moorland Rescuer" />
+    <alt key="0014  /  1158 " sub="MIC" name="Curse of Conformity" />
+    <alt key="0016  /  1158 " sub="MIC" name="Celestial Judgment" />
+    <alt key="0017  /  1158 " sub="MIC" name="Visions of Glory" />
+    <alt key="0022  /  1158 " sub="MIC" name="Cleaver Skaab" />
+    <alt key="0000  /  1158 " sub="MIC" name="" />
+    <!-- VOW variants -->
+    <alt key="317  /   " sub="VOW" name="Katilda, Dawnhart Martyr" />
+    <alt key="318  /   " sub="VOW" name="Thalia, Guardian of Thraben" />
+    <alt key="319  /   " sub="VOW" name="Geralf, Visionary Stitcher" />
+    <alt key="320  /   " sub="VOW" name="Jacob Hauken, Inspector" />
+    <alt key="321  /   " sub="VOW" name="Toxrill, the Corrosive" />
+    <alt key="322  /   " sub="VOW" name="Dorothea, Vengeful Victim" />
+    <alt key="323  /   " sub="VOW" name="Eruth, Tormented Prophet" />
+    <alt key="324  /   " sub="VOW" name="Grolnok, the Omnivore" />
+    <alt key="325  /   " sub="VOW" name="Halana and Alena, Partners" />
+    <alt key="326  /   " sub="VOW" name="Old Rutstein" />
+    <alt key="327  /   " sub="VOW" name="Runo Stromkirk" />
+    <alt key="328  /   " sub="VOW" name="Torens, Fist of the Angels" />
+    <alt key="0001  /  1158 " sub="VOW" name="Hopeful Initiate" />
+    <alt key="0004  /  1158 " sub="VOW" name="Voice of the Blessed" />
+    <alt key="0007  /  1158 " sub="VOW" name="Lantern Flare" />
+    <alt key="0009  /  1158 " sub="VOW" name="Sigarda's Summons" />
+    <alt key="0012  /  1158 " sub="VOW" name="By Invitation Only" />
+    <alt key="0014  /  1158 " sub="VOW" name="Wedding Announcement" />
+    <alt key="0016  /  1158 " sub="VOW" name="Cemetery Protector" />
+    <alt key="0018  /  1158 " sub="VOW" name="Savior of Ollenbock" />
+    <alt key="0019  /  1158 " sub="VOW" name="Hallowed Haunting" />
+    <alt key="0020  /  1158 " sub="VOW" name="Faithbound Judge" />
+    <alt key="0023  /  1158 " sub="VOW" name="Patchwork Crawler" />
+    <alt key="0025  /  1158 " sub="VOW" name="Dreamshackle Geist" />
+    <alt key="0000  /  1158 " sub="VOW" name="" />
+    <!-- VOC variants -->
+    <alt key="0002  /  1158 " sub="VOC" name="Haunted Library" />
+    <alt key="0003  /  1158 " sub="VOC" name="Storm of Souls" />
+    <alt key="0005  /  1158 " sub="VOC" name="Sudden Salvation" />
+    <alt key="0006  /  1158 " sub="VOC" name="Drogskol Reinforcements" />
+    <alt key="0008  /  1158 " sub="VOC" name="Priest of the Blessed Graf" />
+    <alt key="0010  /  1158 " sub="VOC" name="Breathkeeper Seraph" />
+    <alt key="0013  /  1158 " sub="VOC" name="Rhoda, Geist Avenger" />
+    <alt key="0017  /  1158 " sub="VOC" name="Wedding Ring" />
+    <alt key="0024  /  1158 " sub="VOC" name="Occult Epiphany" />
+    <alt key="0000  /  1158 " sub="VOC" name="" />
     <!-- Strixhaven Mystical Archive -->
     <alt key="01  /  63 " sub="STA" name="Approach of the Second Sun" />
     <alt key="02  /  63 " sub="STA" name="Day of Judgment" />

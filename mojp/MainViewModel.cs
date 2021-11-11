@@ -335,7 +335,9 @@ namespace Mojp
                         cards.Add(card2);
                 }
             }
-            SetCards(cards);
+
+            if (Cards == null || !Cards.SequenceEqual(cards))
+                SetCards(cards);
         }
 
         /// <summary>
