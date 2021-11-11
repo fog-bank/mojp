@@ -232,7 +232,7 @@ namespace Mojp
                 // コピートークンでない普通のトークンである可能性があるので、全体走査する
                 // プロモ版を示唆するテキストの場合も全体走査
                 // （KHM以降、プロモにもコレクター番号が振られるようになったが、STXと被り捲りなので、廃止）
-                if (name.StartsWith("Token") || name == "PRM")
+                if (name.StartsWith("Token") || name == "PRM" || name == PromoCollectorNumber)
                     SearchCardName();
             }
 
