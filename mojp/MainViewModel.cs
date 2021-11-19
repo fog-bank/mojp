@@ -325,6 +325,9 @@ namespace Mojp
             if (card == null)
                 card = Card.Empty;
 
+            if (Cards != null && Cards.Count >= 1 && Cards[0] == card)
+                return;
+
             var cards = new List<Card>(card.RelatedCardName == null ? 1 : 4) { card };
 
             if (card.RelatedCardName != null)
@@ -335,9 +338,7 @@ namespace Mojp
                         cards.Add(card2);
                 }
             }
-
-            if (Cards == null || !Cards.SequenceEqual(cards))
-                SetCards(cards);
+            SetCards(cards);
         }
 
         /// <summary>

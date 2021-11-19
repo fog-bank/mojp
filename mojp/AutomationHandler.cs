@@ -65,7 +65,7 @@ namespace Mojp
                     ViewModel.InvokeSetMessage(
                         "同梱のカードテキストデータ (cards.xml) を取得できません。" +
                         "セキュリティ対策ソフトによってブロックされている可能性があります。" +
-                        Environment.NewLine + "[場所] " + 
+                        Environment.NewLine + "[場所] " +
                         Path.Combine(Path.GetDirectoryName(typeof(App).Assembly.Location), "cards.xml"));
                     return;
                 }
@@ -276,10 +276,15 @@ namespace Mojp
             /// <remarks>無限ループになる可能性があるので、<see cref="SearchCardName"/> メソッドは呼ばないこと。</remarks>
             private bool TryFetchCard(string value)
             {
-                if (App.Cards.TryGetValue(value, out var card) && !IsKeywordText(value))
+                if (App.Cards.TryGetValue(value, out var card))
                 {
-                    ViewCard(card);
-                    return true;
+                    if (!IsKeywordText(value))
+                    {
+                        ViewCard(card);
+                        return true;
+                    }
+                    else
+                        return false;
                 }
 
                 // 代替テキストによる検索
@@ -386,17 +391,18 @@ namespace Mojp
                 }
 
                 // 見つかったカードが現在表示されているカードコレクションに含まれているかどうかを調べる
-                var currentCards = ViewModel.Cards;
-                if (currentCards != null)
-                {
-                    // 現在表示されているカードコレクションに含まれている場合、どれをマウスオーバーしているかをはっきりさせるため、
-                    // Preview Pane 内で最初に出現するカード名を取得する
-                    if (currentCards.Contains(card))
-                    {
-                        SearchForeground(currentCards[0]);
-                        return;
-                    }
-                }
+                // 全体走査中のため、不要 (since VOW)
+                //var currentCards = ViewModel.Cards;
+                //if (currentCards != null)
+                //{
+                //    // 現在表示されているカードコレクションに含まれている場合、どれをマウスオーバーしているかをはっきりさせるため、
+                //    // Preview Pane 内で最初に出現するカード名を取得する
+                //    if (currentCards.Contains(card))
+                //    {
+                //        SearchForeground(currentCards[0]);
+                //        return;
+                //    }
+                //}
 
                 // このメソッドの呼び出し前にチェックするようにしたため、コメントアウト
                 //if (IsKeywordText(card.Name))
@@ -405,19 +411,19 @@ namespace Mojp
                 // ふつうのカード
                 ViewModel.InvokeSetCard(card);
 
-                void SearchForeground(Card currentForeground)
-                {
-                    foreach (string value in IterateTextBlocks())
-                    {
-                        if (App.Cards.TryGetValue(value, out var card))
-                        {
-                            if (card != currentForeground)
-                                ViewModel.InvokeSetCard(card);
+                //void SearchForeground(Card currentForeground)
+                //{
+                //    foreach (string value in IterateTextBlocks())
+                //    {
+                //        if (App.Cards.TryGetValue(value, out var card) && !IsKeywordText(card.Name))
+                //        {
+                //            if (card != currentForeground)
+                //                ViewModel.InvokeSetCard(card);
 
-                            return;
-                        }
-                    }
-                }
+                //            return;
+                //        }
+                //    }
+                //}
             }
 
             /// <summary>
@@ -479,35 +485,6 @@ namespace Mojp
                     return isPromo && !containsCatch;
                 }
             }
-
-            /// <summary>
-            /// 現在のカードのカードタイプが英雄譚であるかどうかをチェックし、そうであるなら、指定したカード名のカードを表示します。
-            /// </summary>
-            //private bool ValidateAndViewSaga(string cardName)
-            //{
-            //    if (App.Cards.TryGetValue(cardName, out var foundCard))
-            //    {
-            //        // Automation ID が CardType の値を調べて、英雄譚かどうかをチェックする
-            //        AutomationElement element = null;
-            //        try
-            //        {
-            //            using (cacheReq.Activate())
-            //            {
-            //                element = previewWnd?.FindFirst(TreeScope.Descendants, cardTypeCondition);
-            //            }
-            //        }
-            //        catch { Debug.WriteLine("CardType 要素の取得に失敗しました。"); }
-
-            //        string cardType = GetNamePropertyValue(element);
-
-            //        if (cardType != null && cardType.EndsWith("Saga"))
-            //        {
-            //            ViewModel.InvokeSetCard(foundCard);
-            //            return true;
-            //        }
-            //    }
-            //    return false;
-            //}
 
             /// <summary>
             /// Automation ID が CardType の値を調べて、出来事かどうかをチェックする
