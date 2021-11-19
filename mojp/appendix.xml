@@ -729,7 +729,59 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <wikilink name="Black Lotus" wikilink="Black Lotus" />
     <wikilink name="Braingeyser" wikilink="Braingeyser" />
     <wikilink name="Captivating Vampire" wikilink="蟲惑的な吸血鬼/Captivating Vampire" />
-    <!-- 代替キー (KHM: 1-114, STX&C21: 1-193) -->
+    <!-- UND -->
+    <!--<alt key="88  /  96 " sub="UND" name="Plains" />
+    <alt key="90  /  96 " sub="UND" name="Island" />
+    <alt key="92  /  96 " sub="UND" name="Swamp" />
+    <alt key="94  /  96 " sub="UND" name="Mountain" />
+    <alt key="96  /  96 " sub="UND" name="Forest" />-->
+    <!-- SL2 -->
+    <!--<alt key="119  /   " sub="SL2" name="Swamp" />-->
+    <alt key="138 " sub="SL2" name="Anguished Unmaking" />
+    <alt key="139 " sub="SL2" name="Assassin's Trophy" />
+    <alt key="140 " sub="SL2" name="Decimate" />
+    <alt key="141 " sub="SL2" name="Dreadbore" />
+    <alt key="142 " sub="SL2" name="Thraximundar" />
+    <alt key="143 " sub="SL2" name="Rick, Steadfast Leader" />
+    <alt key="144 " sub="SL2" name="Daryl, Hunter of Walkers" />
+    <alt key="145 " sub="SL2" name="Glenn, the Voice of Calm" />
+    <alt key="146 " sub="SL2" name="Michonne, Ruthless Survivor" />
+    <alt key="147 " sub="SL2" name="Negan, the Cold-Blooded" />
+    <!--<alt key="539  /   " sub="SL2" name="Swamp" />-->
+    <alt key="581 " sub="SL2" name="Lucille" />
+    <!-- SLD -->
+    <alt key="115 " sub="SLD" name="Glen Elendra Archmage" />
+    <alt key="116 " sub="SLD" name="Mistbind Clique" />
+    <alt key="117 " sub="SLD" name="Spellstutter Sprite" />
+    <alt key="118 " sub="SLD" name="Vendilion Clique" />
+    <alt key="214 " sub="SLD" name="Heliod, Sun-Crowned" />
+    <alt key="215 " sub="SLD" name="Goblin Rabblemaster" />
+    <alt key="216 " sub="SLD" name="Monastery Swiftspear" />
+    <alt key="217 " sub="SLD" name="Boros Charm" />
+    <alt key="218 " sub="SLD" name="Gisela, Blade of Goldnight" />
+    <alt key="220 " sub="SLD" name="Frost Titan" />
+    <alt key="221 " sub="SLD" name="Primeval Titan" />
+    <alt key="222 " sub="SLD" name="Uro, Titan of Nature's Wrath" />
+    <alt key="223 " sub="SLD" name="Grave Titan" />
+    <alt key="224 " sub="SLD" name="Inferno Titan" />
+    <alt key="225 " sub="SLD" name="Kroxa, Titan of Death's Hunger" />
+    <!--<alt key="239  /   " sub="SLD" name="Plains" />
+    <alt key="240  /   " sub="SLD" name="Island" />
+    <alt key="241  /   " sub="SLD" name="Swamp" />
+    <alt key="242  /   " sub="SLD" name="Mountain" />
+    <alt key="243  /   " sub="SLD" name="Forest" />-->
+    <alt key="244 " sub="SLD" name="Shalai, Voice of Plenty" />
+    <alt key="245 " sub="SLD" name="Ponder" />
+    <alt key="246 " sub="SLD" name="Cultivate" />
+    <alt key="249 " sub="SLD" name="Sol Ring" />
+    <alt key="250 " sub="SLD" name="Path of Ancestry" />
+    <alt key="268 " sub="SLD" name="All Is Dust" />
+    <alt key="269 " sub="SLD" name="Artifact Mutation" />
+    <alt key="270 " sub="SLD" name="Drown in the Loch" />
+    <alt key="271 " sub="SLD" name="Fire Covenant" />
+    <alt key="272 " sub="SLD" name="Fractured Identity" />
+    <alt key="273 " sub="SLD" name="Fracturing Gust" />
+    <!-- PRM (KHM: 1-114, STX&C21: 1-193) -->
     <alt key="0115  /  1158 " sub="P " name="Culmination of Studies" />
     <alt key="0116  /  1158 " sub="P " name="Reinterpret" />
     <alt key="0117  /  1158 " sub="P " name="Elemental Expressionist" />
@@ -806,58 +858,6 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0191  /  1158 " sub="P " name="Hall of Oracles" />
     <alt key="0192  /  1158 " sub="P " name="The Biblioplex" />
     <alt key="0193  /  1158 " sub="P " name="Witch's Clinic" />
-    <!-- UND -->
-    <!--<alt key="88  /  96 " sub="UND" name="Plains" />
-    <alt key="90  /  96 " sub="UND" name="Island" />
-    <alt key="92  /  96 " sub="UND" name="Swamp" />
-    <alt key="94  /  96 " sub="UND" name="Mountain" />
-    <alt key="96  /  96 " sub="UND" name="Forest" />-->
-    <!-- SL2 -->
-    <!--<alt key="119  /   " sub="SL2" name="Swamp" />-->
-    <alt key="138  /   " sub="SL2" name="Anguished Unmaking" />
-    <alt key="139  /   " sub="SL2" name="Assassin's Trophy" />
-    <alt key="140  /   " sub="SL2" name="Decimate" />
-    <alt key="141  /   " sub="SL2" name="Dreadbore" />
-    <alt key="142  /   " sub="SL2" name="Thraximundar" />
-    <alt key="143  /   " sub="SL2" name="Rick, Steadfast Leader" />
-    <alt key="144  /   " sub="SL2" name="Daryl, Hunter of Walkers" />
-    <alt key="145  /   " sub="SL2" name="Glenn, the Voice of Calm" />
-    <alt key="146  /   " sub="SL2" name="Michonne, Ruthless Survivor" />
-    <alt key="147  /   " sub="SL2" name="Negan, the Cold-Blooded" />
-    <!--<alt key="539  /   " sub="SL2" name="Swamp" />-->
-    <alt key="581  /   " sub="SL2" name="Lucille" />
-    <!-- SLD -->
-    <alt key="115  /   " sub="SLD" name="Glen Elendra Archmage" />
-    <alt key="116  /   " sub="SLD" name="Mistbind Clique" />
-    <alt key="117  /   " sub="SLD" name="Spellstutter Sprite" />
-    <alt key="118  /   " sub="SLD" name="Vendilion Clique" />
-    <alt key="214  /   " sub="SLD" name="Heliod, Sun-Crowned" />
-    <alt key="215  /   " sub="SLD" name="Goblin Rabblemaster" />
-    <alt key="216  /   " sub="SLD" name="Monastery Swiftspear" />
-    <alt key="217  /   " sub="SLD" name="Boros Charm" />
-    <alt key="218  /   " sub="SLD" name="Gisela, Blade of Goldnight" />
-    <alt key="220  /   " sub="SLD" name="Frost Titan" />
-    <alt key="221  /   " sub="SLD" name="Primeval Titan" />
-    <alt key="222  /   " sub="SLD" name="Uro, Titan of Nature's Wrath" />
-    <alt key="223  /   " sub="SLD" name="Grave Titan" />
-    <alt key="224  /   " sub="SLD" name="Inferno Titan" />
-    <alt key="225  /   " sub="SLD" name="Kroxa, Titan of Death's Hunger" />
-    <!--<alt key="239  /   " sub="SLD" name="Plains" />
-    <alt key="240  /   " sub="SLD" name="Island" />
-    <alt key="241  /   " sub="SLD" name="Swamp" />
-    <alt key="242  /   " sub="SLD" name="Mountain" />
-    <alt key="243  /   " sub="SLD" name="Forest" />-->
-    <alt key="244  /   " sub="SLD" name="Shalai, Voice of Plenty" />
-    <alt key="245  /   " sub="SLD" name="Ponder" />
-    <alt key="246  /   " sub="SLD" name="Cultivate" />
-    <alt key="249  /   " sub="SLD" name="Sol Ring" />
-    <alt key="250  /   " sub="SLD" name="Path of Ancestry" />
-    <alt key="268  /   " sub="SLD" name="All Is Dust" />
-    <alt key="269  /   " sub="SLD" name="Artifact Mutation" />
-    <alt key="270  /   " sub="SLD" name="Drown in the Loch" />
-    <alt key="271  /   " sub="SLD" name="Fire Covenant" />
-    <alt key="272  /   " sub="SLD" name="Fractured Identity" />
-    <alt key="273  /   " sub="SLD" name="Fracturing Gust" />
     <!-- ZNR variants -->
     <alt key="0109  /  1158 " sub="ZNR" name="Needleverge Pathway" />
     <alt key="0110  /  1158 " sub="ZNR" name="Pillarverge Pathway" />
@@ -1133,20 +1133,23 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0106  /  1158 " sub="AFC" name="Ride the Avalanche" />
     <alt key="0107  /  1158 " sub="AFC" name="Wulfgar of Icewind Dale" />
     <!-- MID variants -->
-    <alt key="312  /   " sub="MID" name="Adeline, Resplendent Cathar" />
-    <alt key="313  /   " sub="MID" name="Lier, Disciple of the Drowned" />
-    <alt key="314  /   " sub="MID" name="Gisa, Glorious Resurrector" />
-    <alt key="315  /   " sub="MID" name="Jadar, Ghoulcaller of Nephalia" />
-    <alt key="316  /   " sub="MID" name="Jerren, Corrupted Bishop" />
-    <alt key="317  /   " sub="MID" name="Dennick, Pious Apprentice" />
-    <alt key="318  /   " sub="MID" name="Florian, Voldaren Scion" />
-    <alt key="319  /   " sub="MID" name="Liesa, Forgotten Archangel" />
-    <alt key="320  /   " sub="MID" name="Ludevic, Necrogenius" />
-    <alt key="321  /   " sub="MID" name="Old Stickfingers" />
-    <alt key="322  /   " sub="MID" name="Rem Karolus, Stalwart Slayer" />
-    <alt key="323  /   " sub="MID" name="Sigarda, Champion of Light" />
-    <alt key="324  /   " sub="MID" name="Slogurk, the Overslime" />
-    <alt key="325  /   " sub="MID" name="Vadrik, Astral Archmage" />
+    <alt key="312 " sub="MID" name="Adeline, Resplendent Cathar" />
+    <alt key="313 " sub="MID" name="Lier, Disciple of the Drowned" />
+    <alt key="314 " sub="MID" name="Gisa, Glorious Resurrector" />
+    <alt key="315 " sub="MID" name="Jadar, Ghoulcaller of Nephalia" />
+    <alt key="316a " sub="MID" name="Jerren, Corrupted Bishop" />
+    <alt key="316b " sub="MID" name="Ormendahl, the Corrupter" />
+    <alt key="317a " sub="MID" name="Dennick, Pious Apprentice" />
+    <alt key="317b " sub="MID" name="Dennick, Pious Apparition" />
+    <alt key="318 " sub="MID" name="Florian, Voldaren Scion" />
+    <alt key="319 " sub="MID" name="Liesa, Forgotten Archangel" />
+    <alt key="320a " sub="MID" name="Ludevic, Necrogenius" />
+    <alt key="320b " sub="MID" name="Olag, Ludevic's Hubris" />
+    <alt key="321 " sub="MID" name="Old Stickfingers" />
+    <alt key="322 " sub="MID" name="Rem Karolus, Stalwart Slayer" />
+    <alt key="323 " sub="MID" name="Sigarda, Champion of Light" />
+    <alt key="324 " sub="MID" name="Slogurk, the Overslime" />
+    <alt key="325 " sub="MID" name="Vadrik, Astral Archmage" />
     <alt key="0001  /  1158 " sub="MID" name="Intrepid Adversary" />
     <alt key="0002  /  1158 " sub="MID" name="Sigardian Savior" />
     <alt key="0004  /  1158 " sub="MID" name="Enduring Angel" />
@@ -1247,18 +1250,22 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0088  /  1158 " sub="MIC" name="Kyler, Sigardian Emissary" />
     <alt key="0089  /  1158 " sub="MIC" name="Lynde, Cheerful Tormentor" />
     <!-- VOW variants -->
-    <alt key="317  /   " sub="VOW" name="Katilda, Dawnhart Martyr" />
-    <alt key="318  /   " sub="VOW" name="Thalia, Guardian of Thraben" />
-    <alt key="319  /   " sub="VOW" name="Geralf, Visionary Stitcher" />
-    <alt key="320  /   " sub="VOW" name="Jacob Hauken, Inspector" />
-    <alt key="321  /   " sub="VOW" name="Toxrill, the Corrosive" />
-    <alt key="322  /   " sub="VOW" name="Dorothea, Vengeful Victim" />
-    <alt key="323  /   " sub="VOW" name="Eruth, Tormented Prophet" />
-    <alt key="324  /   " sub="VOW" name="Grolnok, the Omnivore" />
-    <alt key="325  /   " sub="VOW" name="Halana and Alena, Partners" />
-    <alt key="326  /   " sub="VOW" name="Old Rutstein" />
-    <alt key="327  /   " sub="VOW" name="Runo Stromkirk" />
-    <alt key="328  /   " sub="VOW" name="Torens, Fist of the Angels" />
+    <alt key="317a " sub="VOW" name="Katilda, Dawnhart Martyr" />
+    <alt key="317b " sub="VOW" name="Katilda's Rising Dawn" />
+    <alt key="318 " sub="VOW" name="Thalia, Guardian of Thraben" />
+    <alt key="319 " sub="VOW" name="Geralf, Visionary Stitcher" />
+    <alt key="320a " sub="VOW" name="Jacob Hauken, Inspector" />
+    <alt key="320b " sub="VOW" name="Hauken's Insight" />
+    <alt key="321 " sub="VOW" name="Toxrill, the Corrosive" />
+    <alt key="322a " sub="VOW" name="Dorothea, Vengeful Victim" />
+    <alt key="322b " sub="VOW" name="Dorothea's Retribution" />
+    <alt key="323 " sub="VOW" name="Eruth, Tormented Prophet" />
+    <alt key="324 " sub="VOW" name="Grolnok, the Omnivore" />
+    <alt key="325 " sub="VOW" name="Halana and Alena, Partners" />
+    <alt key="326 " sub="VOW" name="Old Rutstein" />
+    <alt key="327a " sub="VOW" name="Runo Stromkirk" />
+    <alt key="327b " sub="VOW" name="Krothuss, Lord of the Deep" />
+    <alt key="328 " sub="VOW" name="Torens, Fist of the Angels" />
     <alt key="0001  /  1158 " sub="VOW" name="Hopeful Initiate" />
     <alt key="0004  /  1158 " sub="VOW" name="Voice of the Blessed" />
     <alt key="0007  /  1158 " sub="VOW" name="Lantern Flare" />
@@ -1570,7 +1577,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="174  /  269 " sub="ELD" name="Rosethorn Acolyte" />
     <alt key="180  /  269 " sub="ELD" name="Tuinvale Treefolk" />
     <alt key="212  /  269 " sub="ELD" name="Oakhame Ranger" />
-    <alt key="70  /   " sub="AFC" name="Realm-Cloaked Giant" />
+    <alt key="70 " sub="AFC" name="Realm-Cloaked Giant" />
     <!-- 変容 (IKO, C20) -->
     <alt key="003  /  274 " sub="IKO" name="Mysterious Egg" />
     <alt key="007  /  274 " sub="IKO" name="Cubwarden" />
@@ -1611,74 +1618,142 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="044  /  322 " sub="C20" name="Mindleecher" />
     <alt key="064  /  322 " sub="C20" name="Sawtusk Demolisher" />
     <!-- モーダル両面カード (ZNR, KHM, STX) -->
-    <alt key="012  /  280 " sub="ZNR" name="Emeria's Call" />
-    <alt key="019  /  280 " sub="ZNR" name="Kabira Takedown" />
-    <alt key="026  /  280 " sub="ZNR" name="Makindi Stampede" />
-    <alt key="030  /  280 " sub="ZNR" name="Ondu Inversion" />
-    <alt key="037  /  280 " sub="ZNR" name="Sejiri Shelter" />
-    <alt key="040  /  280 " sub="ZNR" name="Skyclave Cleric" />
-    <alt key="046  /  280 " sub="ZNR" name="Beyeen Veil" />
-    <alt key="060  /  280 " sub="ZNR" name="Glasspool Mimic" />
-    <alt key="064  /  280 " sub="ZNR" name="Jwari Disruption" />
-    <alt key="076  /  280 " sub="ZNR" name="Sea Gate Restoration" />
-    <alt key="080  /  280 " sub="ZNR" name="Silundi Vision" />
-    <alt key="086  /  280 " sub="ZNR" name="Umara Wizard" />
-    <alt key="090  /  280 " sub="ZNR" name="Agadeem's Awakening" />
-    <alt key="091  /  280 " sub="ZNR" name="Blackbloom Rogue" />
-    <alt key="106  /  280 " sub="ZNR" name="Hagra Mauling" />
-    <alt key="111  /  280 " sub="ZNR" name="Malakir Rebirth" />
-    <alt key="120  /  280 " sub="ZNR" name="Pelakka Predation" />
-    <alt key="132  /  280 " sub="ZNR" name="Zof Consumption" />
-    <alt key="134  /  280 " sub="ZNR" name="Akoum Warrior" />
-    <alt key="146  /  280 " sub="ZNR" name="Kazuul's Fury" />
-    <alt key="161  /  280 " sub="ZNR" name="Shatterskull Smashing" />
-    <alt key="165  /  280 " sub="ZNR" name="Song-Mad Treachery" />
-    <alt key="166  /  280 " sub="ZNR" name="Spikefield Hazard" />
-    <alt key="174  /  280 " sub="ZNR" name="Valakut Awakening" />
-    <alt key="180  /  280 " sub="ZNR" name="Bala Ged Recovery" />
-    <alt key="189  /  280 " sub="ZNR" name="Kazandu Mammoth" />
-    <alt key="192  /  280 " sub="ZNR" name="Khalni Ambush" />
-    <alt key="211  /  280 " sub="ZNR" name="Tangled Florahedron" />
-    <alt key="215  /  280 " sub="ZNR" name="Turntimber Symbiosis" />
-    <alt key="216  /  280 " sub="ZNR" name="Vastwood Fortification" />
-    <alt key="258  /  280 " sub="ZNR" name="Branchloft Pathway" />
-    <alt key="259  /  280 " sub="ZNR" name="Brightclimb Pathway" />
-    <alt key="260  /  280 " sub="ZNR" name="Clearwater Pathway" />
-    <alt key="261  /  280 " sub="ZNR" name="Cragcrown Pathway" />
-    <alt key="263  /  280 " sub="ZNR" name="Needleverge Pathway" />
-    <alt key="264  /  280 " sub="ZNR" name="Riverglide Pathway" />
-    <alt key="015  /  285 " sub="KHM" name="Halvar, God of Battle" />
-    <alt key="021  /  285 " sub="KHM" name="Reidane, God of the Worthy" />
-    <alt key="040  /  285 " sub="KHM" name="Alrund, God of the Cosmos" />
-    <alt key="050  /  285 " sub="KHM" name="Cosima, God of the Voyage" />
-    <alt key="092  /  285 " sub="KHM" name="Egon, God of Death" />
-    <alt key="112  /  285 " sub="KHM" name="Tergrid, God of Fright" />
-    <alt key="114  /  285 " sub="KHM" name="Valki, God of Lies" />
-    <alt key="123  /  285 " sub="KHM" name="Birgi, God of Storytelling" />
-    <alt key="154  /  285 " sub="KHM" name="Toralf, God of Fury" />
-    <alt key="168  /  285 " sub="KHM" name="Esika, God of the Tree" />
-    <alt key="179  /  285 " sub="KHM" name="Jorn, God of Winter" />
-    <alt key="181  /  285 " sub="KHM" name="Kolvori, God of Kinship" />
-    <alt key="251  /  285 " sub="KHM" name="Barkchannel Pathway" />
-    <alt key="252  /  285 " sub="KHM" name="Blightstep Pathway" />
-    <alt key="254  /  285 " sub="KHM" name="Darkbore Pathway" />
-    <alt key="260  /  285 " sub="KHM" name="Hengegate Pathway" />
-    <alt key="006  /  275 " sub="STX" name="Wandering Archaic" />
-    <alt key="147  /  275 " sub="STX" name="Augmenter Pugilist" />
-    <alt key="148  /  275 " sub="STX" name="Blex, Vexing Pest" />
-    <alt key="149  /  275 " sub="STX" name="Extus, Oriq Overlord" />
-    <alt key="150  /  275 " sub="STX" name="Flamescroll Celebrant" />
-    <alt key="151  /  275 " sub="STX" name="Jadzi, Oracle of Arcavios" />
-    <alt key="152  /  275 " sub="STX" name="Kianne, Dean of Substance" />
-    <alt key="153  /  275 " sub="STX" name="Mila, Crafty Companion" />
-    <alt key="154  /  275 " sub="STX" name="Pestilent Cauldron" />
-    <alt key="155  /  275 " sub="STX" name="Plargg, Dean of Chaos" />
-    <alt key="156  /  275 " sub="STX" name="Rowan, Scholar of Sparks" />
-    <alt key="157  /  275 " sub="STX" name="Selfless Glyphweaver" />
-    <alt key="158  /  275 " sub="STX" name="Shaile, Dean of Radiance" />
-    <alt key="159  /  275 " sub="STX" name="Torrent Sculptor" />
-    <alt key="160  /  275 " sub="STX" name="Uvilda, Dean of Perfection" />
-    <alt key="161  /  275 " sub="STX" name="Valentin, Dean of the Vein" />
+    <alt key="12a  /  280 " sub="ZNR" name="Emeria's Call" />
+    <alt key="12b  /  280 " sub="ZNR" name="Emeria, Shattered Skyclave" />
+    <alt key="19a  /  280 " sub="ZNR" name="Kabira Takedown" />
+    <alt key="19b  /  280 " sub="ZNR" name="Kabira Plateau" />
+    <alt key="26a  /  280 " sub="ZNR" name="Makindi Stampede" />
+    <alt key="26b  /  280 " sub="ZNR" name="Makindi Mesas" />
+    <alt key="30a  /  280 " sub="ZNR" name="Ondu Inversion" />
+    <alt key="30b  /  280 " sub="ZNR" name="Ondu Skyruins" />
+    <alt key="37a  /  280 " sub="ZNR" name="Sejiri Shelter" />
+    <alt key="37b  /  280 " sub="ZNR" name="Sejiri Glacier" />
+    <alt key="40a  /  280 " sub="ZNR" name="Skyclave Cleric" />
+    <alt key="40b  /  280 " sub="ZNR" name="Skyclave Basilica" />
+    <alt key="46a  /  280 " sub="ZNR" name="Beyeen Veil" />
+    <alt key="46b  /  280 " sub="ZNR" name="Beyeen Coast" />
+    <alt key="60a  /  280 " sub="ZNR" name="Glasspool Mimic" />
+    <alt key="60b  /  280 " sub="ZNR" name="Glasspool Shore" />
+    <alt key="64a  /  280 " sub="ZNR" name="Jwari Disruption" />
+    <alt key="64b  /  280 " sub="ZNR" name="Jwari Ruins" />
+    <alt key="76a  /  280 " sub="ZNR" name="Sea Gate Restoration" />
+    <alt key="76b  /  280 " sub="ZNR" name="Sea Gate, Reborn" />
+    <alt key="80a  /  280 " sub="ZNR" name="Silundi Vision" />
+    <alt key="80b  /  280 " sub="ZNR" name="Silundi Isle" />
+    <alt key="86a  /  280 " sub="ZNR" name="Umara Wizard" />
+    <alt key="86b  /  280 " sub="ZNR" name="Umara Skyfalls" />
+    <alt key="90a  /  280 " sub="ZNR" name="Agadeem's Awakening" />
+    <alt key="90b  /  280 " sub="ZNR" name="Agadeem, the Undercrypt" />
+    <alt key="91a  /  280 " sub="ZNR" name="Blackbloom Rogue" />
+    <alt key="91b  /  280 " sub="ZNR" name="Blackbloom Bog" />
+    <alt key="106a  /  280 " sub="ZNR" name="Hagra Mauling" />
+    <alt key="106b  /  280 " sub="ZNR" name="Hagra Broodpit" />
+    <alt key="111a  /  280 " sub="ZNR" name="Malakir Rebirth" />
+    <alt key="111b  /  280 " sub="ZNR" name="Malakir Mire" />
+    <alt key="120a  /  280 " sub="ZNR" name="Pelakka Predation" />
+    <alt key="120b  /  280 " sub="ZNR" name="Pelakka Caverns" />
+    <alt key="132a  /  280 " sub="ZNR" name="Zof Consumption" />
+    <alt key="132b  /  280 " sub="ZNR" name="Zof Bloodbog" />
+    <alt key="134a  /  280 " sub="ZNR" name="Akoum Warrior" />
+    <alt key="134b  /  280 " sub="ZNR" name="Akoum Teeth" />
+    <alt key="146a  /  280 " sub="ZNR" name="Kazuul's Fury" />
+    <alt key="146b  /  280 " sub="ZNR" name="Kazuul's Cliffs" />
+    <alt key="161a  /  280 " sub="ZNR" name="Shatterskull Smashing" />
+    <alt key="161b  /  280 " sub="ZNR" name="Shatterskull, the Hammer Pass" />
+    <alt key="165a  /  280 " sub="ZNR" name="Song-Mad Treachery" />
+    <alt key="165b  /  280 " sub="ZNR" name="Song-Mad Ruins" />
+    <alt key="166a  /  280 " sub="ZNR" name="Spikefield Hazard" />
+    <alt key="166b  /  280 " sub="ZNR" name="Spikefield Cave" />
+    <alt key="174a  /  280 " sub="ZNR" name="Valakut Awakening" />
+    <alt key="174b  /  280 " sub="ZNR" name="Valakut Stoneforge" />
+    <alt key="180a  /  280 " sub="ZNR" name="Bala Ged Recovery" />
+    <alt key="180b  /  280 " sub="ZNR" name="Bala Ged Sanctuary" />
+    <alt key="189a  /  280 " sub="ZNR" name="Kazandu Mammoth" />
+    <alt key="189b  /  280 " sub="ZNR" name="Kazandu Valley" />
+    <alt key="192a  /  280 " sub="ZNR" name="Khalni Ambush" />
+    <alt key="192b  /  280 " sub="ZNR" name="Khalni Territory" />
+    <alt key="211a  /  280 " sub="ZNR" name="Tangled Florahedron" />
+    <alt key="211b  /  280 " sub="ZNR" name="Tangled Vale" />
+    <alt key="215a  /  280 " sub="ZNR" name="Turntimber Symbiosis" />
+    <alt key="215b  /  280 " sub="ZNR" name="Turntimber, Serpentine Wood" />
+    <alt key="216a  /  280 " sub="ZNR" name="Vastwood Fortification" />
+    <alt key="216b  /  280 " sub="ZNR" name="Vastwood Thicket" />
+    <alt key="258a  /  280 " sub="ZNR" name="Branchloft Pathway" />
+    <alt key="258b  /  280 " sub="ZNR" name="Boulderloft Pathway" />
+    <alt key="259a  /  280 " sub="ZNR" name="Brightclimb Pathway" />
+    <alt key="259b  /  280 " sub="ZNR" name="Grimclimb Pathway" />
+    <alt key="260a  /  280 " sub="ZNR" name="Clearwater Pathway" />
+    <alt key="260b  /  280 " sub="ZNR" name="Murkwater Pathway" />
+    <alt key="261a  /  280 " sub="ZNR" name="Cragcrown Pathway" />
+    <alt key="261b  /  280 " sub="ZNR" name="Timbercrown Pathway" />
+    <alt key="263a  /  280 " sub="ZNR" name="Needleverge Pathway" />
+    <alt key="263b  /  280 " sub="ZNR" name="Pillarverge Pathway" />
+    <alt key="264a  /  280 " sub="ZNR" name="Riverglide Pathway" />
+    <alt key="264b  /  280 " sub="ZNR" name="Lavaglide Pathway" />
+    <alt key="15a  /  285 " sub="KHM" name="Halvar, God of Battle" />
+    <alt key="15b  /  285 " sub="KHM" name="Sword of the Realms" />
+    <alt key="21a  /  285 " sub="KHM" name="Reidane, God of the Worthy" />
+    <alt key="21b  /  285 " sub="KHM" name="Valkmira, Protector's Shield" />
+    <alt key="40a  /  285 " sub="KHM" name="Alrund, God of the Cosmos" />
+    <alt key="40b  /  285 " sub="KHM" name="Hakka, Whispering Raven" />
+    <alt key="50a  /  285 " sub="KHM" name="Cosima, God of the Voyage" />
+    <alt key="50b  /  285 " sub="KHM" name="The Omenkeel" />
+    <alt key="92a  /  285 " sub="KHM" name="Egon, God of Death" />
+    <alt key="92b  /  285 " sub="KHM" name="Throne of Death" />
+    <alt key="112a  /  285 " sub="KHM" name="Tergrid, God of Fright" />
+    <alt key="112b  /  285 " sub="KHM" name="Tergrid's Lantern" />
+    <alt key="114a  /  285 " sub="KHM" name="Valki, God of Lies" />
+    <alt key="114b  /  285 " sub="KHM" name="Tibalt, Cosmic Impostor" />
+    <alt key="123a  /  285 " sub="KHM" name="Birgi, God of Storytelling" />
+    <alt key="123b  /  285 " sub="KHM" name="Harnfel, Horn of Bounty" />
+    <alt key="154a  /  285 " sub="KHM" name="Toralf, God of Fury" />
+    <alt key="154b  /  285 " sub="KHM" name="Toralf's Hammer" />
+    <alt key="168a  /  285 " sub="KHM" name="Esika, God of the Tree" />
+    <alt key="168b  /  285 " sub="KHM" name="The Prismatic Bridge" />
+    <alt key="179a  /  285 " sub="KHM" name="Jorn, God of Winter" />
+    <alt key="179b  /  285 " sub="KHM" name="Kaldring, the Rimestaff" />
+    <alt key="181a  /  285 " sub="KHM" name="Kolvori, God of Kinship" />
+    <alt key="181b  /  285 " sub="KHM" name="The Ringhart Crest" />
+    <alt key="251a  /  285 " sub="KHM" name="Barkchannel Pathway" />
+    <alt key="251b  /  285 " sub="KHM" name="Tidechannel Pathway" />
+    <alt key="252a  /  285 " sub="KHM" name="Blightstep Pathway" />
+    <alt key="252b  /  285 " sub="KHM" name="Searstep Pathway" />
+    <alt key="254a  /  285 " sub="KHM" name="Darkbore Pathway" />
+    <alt key="254b  /  285 " sub="KHM" name="Slitherbore Pathway" />
+    <alt key="260a  /  285 " sub="KHM" name="Hengegate Pathway" />
+    <alt key="260b  /  285 " sub="KHM" name="Mistgate Pathway" />
+    <alt key="06a  /  275 " sub="STX" name="Wandering Archaic" />
+    <alt key="06b  /  275 " sub="STX" name="Explore the Vastlands" />
+    <alt key="147a  /  275 " sub="STX" name="Augmenter Pugilist" />
+    <alt key="147b  /  275 " sub="STX" name="Echoing Equation" />
+    <alt key="148a  /  275 " sub="STX" name="Blex, Vexing Pest" />
+    <alt key="148b  /  275 " sub="STX" name="Search for Blex" />
+    <alt key="149a  /  275 " sub="STX" name="Extus, Oriq Overlord" />
+    <alt key="149b  /  275 " sub="STX" name="Awaken the Blood Avatar" />
+    <alt key="150a  /  275 " sub="STX" name="Flamescroll Celebrant" />
+    <alt key="150b  /  275 " sub="STX" name="Revel in Silence" />
+    <alt key="151a  /  275 " sub="STX" name="Jadzi, Oracle of Arcavios" />
+    <alt key="151b  /  275 " sub="STX" name="Journey to the Oracle" />
+    <alt key="152a  /  275 " sub="STX" name="Kianne, Dean of Substance" />
+    <alt key="152b  /  275 " sub="STX" name="Imbraham, Dean of Theory" />
+    <alt key="153a  /  275 " sub="STX" name="Mila, Crafty Companion" />
+    <alt key="153b  /  275 " sub="STX" name="Lukka, Wayward Bonder" />
+    <alt key="154a  /  275 " sub="STX" name="Pestilent Cauldron" />
+    <alt key="154b  /  275 " sub="STX" name="Restorative Burst" />
+    <alt key="155a  /  275 " sub="STX" name="Plargg, Dean of Chaos" />
+    <alt key="155b  /  275 " sub="STX" name="Augusta, Dean of Order" />
+    <alt key="156a  /  275 " sub="STX" name="Rowan, Scholar of Sparks" />
+    <alt key="156b  /  275 " sub="STX" name="Will, Scholar of Frost" />
+    <alt key="157a  /  275 " sub="STX" name="Selfless Glyphweaver" />
+    <alt key="157b  /  275 " sub="STX" name="Deadly Vanity" />
+    <alt key="158a  /  275 " sub="STX" name="Shaile, Dean of Radiance" />
+    <alt key="158b  /  275 " sub="STX" name="Embrose, Dean of Shadow" />
+    <alt key="159a  /  275 " sub="STX" name="Torrent Sculptor" />
+    <alt key="159b  /  275 " sub="STX" name="Flamethrower Sonata" />
+    <alt key="160a  /  275 " sub="STX" name="Uvilda, Dean of Perfection" />
+    <alt key="160b  /  275 " sub="STX" name="Nassari, Dean of Expression" />
+    <alt key="161a  /  275 " sub="STX" name="Valentin, Dean of the Vein" />
+    <alt key="161b  /  275 " sub="STX" name="Lisette, Dean of the Root" />
     <!-- クラス (AFR) -->
     <alt key="006  /  281 " sub="AFR" name="Cleric Class" />
     <alt key="029  /  281 " sub="AFR" name="Paladin Class" />
@@ -1697,7 +1772,10 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="Cave Entrance" sub="Goblin Lair" name="Lost Mine of Phandelver" />
     <alt key="Trapped Entry" sub="Veils of Fear" name="Tomb of Annihilation" />
     <!-- 昼・夜 (MID) -->
-    <alt key="19  /  19 " sub="TOK" name="昼／夜" />
+    <alt key="19a  /  19 " sub="TOK" name="昼／夜" />
+    <alt key="19b  /  19 " sub="TOK" name="昼／夜" />
+    <alt key="21a  /  21 " sub="TOK" name="昼／夜" />
+    <alt key="21b  /  21 " sub="TOK" name="昼／夜" />
   </add>
   <replace>
     <!-- 誤字脱字 -->
