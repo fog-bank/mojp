@@ -129,28 +129,66 @@
     <card name="Sokenzan, Crucible of Defiance" jaName="反逆のるつぼ、霜剣山" type="伝説の土地">(Ｔ)：(赤)を加える。
 魂力 ― (３)(赤),反逆のるつぼ、霜剣山を捨てる：無色の1/1のスピリット・クリーチャー・トークン２体を生成する。ターン終了時まで、それらは速攻を得る。この能力を起動するためのコストは、あなたがコントロールしている伝説のクリーチャー１体につき(１)少なくなる。</card>
     
-    <card name="Era of Enlightenment" related="Hand of Enlightenment"></card>
-    <card name="Hand of Enlightenment" related="Era of Enlightenment"></card>
-    <card name="Michiko's Reign of Truth" related="Portrait of Michiko"></card>
-    <card name="Portrait of Michiko" related="Michiko's Reign of Truth"></card>
-    <card name="Behold the Unspeakable" related="Vision of the Unspeakable"></card>
-    <card name="Vision of the Unspeakable" related="Behold the Unspeakable"></card>
-    <card name="The Modern Age" related="Vector Glider"></card>
-    <card name="Vector Glider" related="The Modern Age"></card>
-    <card name="Life of Toshiro Umezawa" related="Memory of Toshiro"></card>
-    <card name="Memory of Toshiro" related="Life of Toshiro Umezawa"></card>
-    <card name="The Shattered States Era" related="Nameless Conqueror"></card>
-    <card name="Nameless Conqueror" related="The Shattered States Era"></card>
-    <card name="Azusa's Many Journeys" related="Likeness of the Seeker"></card>
-    <card name="Likeness of the Seeker" related="Azusa's Many Journeys"></card>
-    <card name="Boseiju Reaches Skyward" related="Branch of Boseiju"></card>
-    <card name="Branch of Boseiju" related="Boseiju Reaches Skyward"></card>
-    <card name="The Dragon-Kami Reborn" related="Dragon-Kami's Egg"></card>
-    <card name="Dragon-Kami's Egg" related="The Dragon-Kami Reborn"></card>
-    <card name="Teachings of the Kirin" related="Kirin-Touched Orochi"></card>
-    <card name="Kirin-Touched Orochi" related="Teachings of the Kirin"></card>
-    <card name="The Kami War" related="O-Kagachi Made Manifest"></card>
-    <card name="O-Kagachi Made Manifest" related="The Kami War"></card>
+    <card name="Era of Enlightenment" jaName="啓蒙の時代" type="エンチャント ― 英雄譚" related="Hand of Enlightenment">（この英雄譚が出た際とあなたのドロー・ステップの後に、伝承カウンター１個を加える。）
+I ― 占術２を行う。
+II ― あなたは２点のライフを得る。
+III ― この英雄譚を追放する。その後、これを変身させた状態であなたのコントロール下で戦場に戻す。</card>
+    <card name="Hand of Enlightenment" jaName="啓蒙の手" type="クリーチャー・エンチャント ― 人間・モンク" pt="2/2" related="Era of Enlightenment">先制攻撃</card>
+    <card name="Michiko's Reign of Truth" jaName="魅知子の真理の支配" type="エンチャント ― 英雄譚" related="Portrait of Michiko">（この英雄譚が出た際とあなたのドロー・ステップの後に、伝承カウンター１個を加える。）
+I,II ― クリーチャー１体を対象とする。ターン終了時まで、それはあなたがコントロールしているアーティファクトやエンチャント１つにつき+1/+1の修整を受ける。
+III ― この英雄譚を追放する。その後、これを変身させた状態であなたのコントロール下で戦場に戻す。</card>
+    <card name="Portrait of Michiko" jaName="魅知子の肖像" type="クリーチャー・エンチャント ― 人間・貴族" pt="0/0" related="Michiko's Reign of Truth">魅知子の肖像は、あなたがコントロールしているアーティファクトやエンチャント１つにつき+1/+1の修整を受ける。</card>
+    <card name="Behold the Unspeakable" jaName="語られざるものの警告" type="エンチャント ― 英雄譚" related="Vision of the Unspeakable">（この英雄譚が出た際とあなたのドロー・ステップの後に、伝承カウンター１個を加える。）
+I ― あなたの次のターンまで、あなたがコントロールしていないすべてのクリーチャーは-2/-0の修整を受ける。
+II ― あなたの手札のカードが１枚以下であるなら、カード４枚を引く。そうでないなら、占術２を行い、その後カード２枚を引く。
+III ― この英雄譚を追放する。その後、これを変身させた状態であなたのコントロール下で戦場に戻す。</card>
+    <card name="Vision of the Unspeakable" jaName="忌話図の幻像" type="クリーチャー・エンチャント ― スピリット" pt="0/0" related="Behold the Unspeakable">飛行、トランプル
+忌話図の幻像は、あなたの手札にあるカード１枚につき+1/+1の修整を受ける。</card>
+    <card name="The Modern Age" jaName="当世" type="エンチャント ― 英雄譚" related="Vector Glider">（この英雄譚が出た際とあなたのドロー・ステップの後に、伝承カウンター１個を加える。）
+I,II ― カード１枚を引き、その後カード１枚を捨てる。
+III ― この英雄譚を追放する。その後、これを変身させた状態であなたのコントロール下で戦場に戻す。</card>
+    <card name="Vector Glider" jaName="ベクターの滑空者" type="クリーチャー・エンチャント ― スピリット" pt="2/3" related="The Modern Age">飛行</card>
+    <card name="Life of Toshiro Umezawa" jaName="梅澤俊郎の生涯" type="エンチャント ― 英雄譚" related="Memory of Toshiro">（この英雄譚が出た際とあなたのドロー・ステップの後に、伝承カウンター１個を加える。）
+I,II ― 以下から１つを選ぶ。
+・クリーチャー１体を対象とする。ターン終了時まで、それは+2/+2の修整を受ける。
+・クリーチャー１体を対象とする。ターン終了時まで、それは-1/-1の修整を受ける。
+・あなたは２点のライフを得る。
+III ― この英雄譚を追放する。その後、これを変身させた状態であなたのコントロール下で戦場に戻す。</card>
+    <card name="Memory of Toshiro" jaName="俊郎の記憶" type="クリーチャー・エンチャント ― 人間・侍" pt="2/3" related="Life of Toshiro Umezawa">(Ｔ),１点のライフを支払う：(黒)を加える。このマナは、インスタントかソーサリーである呪文を唱えるためにのみ使用できる。</card>
+    <card name="The Shattered States Era" jaName="戦乱時代" type="エンチャント ― 英雄譚" related="Nameless Conqueror">（この英雄譚が出た際とあなたのドロー・ステップの後に、伝承カウンター１個を加える。）
+I ― クリーチャー１体を対象とする。ターン終了時まで、それのコントロールを得る。それをアンタップする。ターン終了時まで、それは速攻を得る。
+II ― ターン終了時まで、あなたがコントロールしているすべてのクリーチャーは+1/+0の修整を受ける。
+III ― この英雄譚を追放する。その後、これを変身させた状態であなたのコントロール下で戦場に戻す。</card>
+    <card name="Nameless Conqueror" jaName="無名なる覇王" type="クリーチャー・エンチャント ― 人間・侍" pt="3/3" related="The Shattered States Era">トランプル、速攻</card>
+    <card name="Azusa's Many Journeys" jaName="梓の幾多の旅" type="エンチャント ― 英雄譚" related="Likeness of the Seeker">（この英雄譚が出た際とあなたのドロー・ステップの後に、伝承カウンター１個を加える。）
+I ― このターン、あなたは追加で土地１つをプレイしてもよい。
+II ― あなたは３点のライフを得る。
+III ― この英雄譚を追放する。その後、これを変身させた状態であなたのコントロール下で戦場に戻す。</card>
+    <card name="Likeness of the Seeker" jaName="探求者の肖像" type="クリーチャー・エンチャント ― 人間・モンク" pt="3/3" related="Azusa's Many Journeys">探求者の肖像がブロックされた状態になるたび、あなたがコントロールしている土地最大３つをアンタップする。</card>
+    <card name="Boseiju Reaches Skyward" jaName="天空に到る母聖樹" type="エンチャント ― 英雄譚" related="Branch of Boseiju">（この英雄譚が出た際とあなたのドロー・ステップの後に、伝承カウンター１個を加える。）
+I ― あなたのライブラリーから基本森・カード最大２枚を探し、公開し、あなたの手札に加える。その後、ライブラリーを切り直す。
+II ― あなたの墓地にある土地・カード最大１枚を対象とする。それをあなたのライブラリーの一番上に置く。
+III ― この英雄譚を追放する。その後、これを変身させた状態であなたのコントロール下で戦場に戻す。</card>
+    <card name="Branch of Boseiju" jaName="母聖樹の枝" type="クリーチャー・エンチャント ― 植物" pt="0/0" related="Boseiju Reaches Skyward">到達
+母聖樹の枝は、あなたがコントロールしている土地１つにつき+1/+1の修整を受ける。</card>
+    <card name="The Dragon-Kami Reborn" jaName="龍の神の再誕" type="エンチャント ― 英雄譚" related="Dragon-Kami's Egg">（この英雄譚が出た際とあなたのドロー・ステップの後に、伝承カウンター１個を加える。）
+I,II ― あなたは２点のライフを得る。あなたのライブラリーの一番上からカード３枚を見る。そのうち１枚を、孵化カウンター１個を置いた状態で裏向きに追放し、残りをあなたのライブラリーの一番下に望む順番で置く。
+III ― この英雄譚を追放する。その後、これを変身させた状態であなたのコントロール下で戦場に戻す。</card>
+    <card name="Dragon-Kami's Egg" jaName="龍の神の卵" type="クリーチャー・エンチャント ― 卵" pt="0/1" related="The Dragon-Kami Reborn">龍の神の卵か、あなたがコントロールしているドラゴン１体が死亡するたび、あなたは、追放領域にありあなたがオーナーであり孵化カウンターが置かれているカードの中から、クリーチャー・呪文１つを、マナ・コストを支払うことなく唱えてもよい。</card>
+    <card name="Teachings of the Kirin" jaName="麒麟の教え" type="エンチャント ― 英雄譚" related="Kirin-Touched Orochi">（この英雄譚が出た際とあなたのドロー・ステップの後に、伝承カウンター１個を加える。）
+I ― カード３枚を切削する。無色の1/1のスピリット・クリーチャー・トークン１体を生成する。
+II ― あなたがコントロールしているクリーチャー１体を対象とする。それの上に+1/+1カウンター１個を置く。
+III ― この英雄譚を追放する。その後、これを変身させた状態であなたのコントロール下で戦場に戻す。</card>
+    <card name="Kirin-Touched Orochi" jaName="麒麟触れの大蛇" type="クリーチャー・エンチャント ― 蛇・モンク" pt="1/1" related="Teachings of the Kirin">麒麟触れの大蛇が攻撃するたび、以下から１つを選ぶ。
+・墓地にあるクリーチャー・カード１枚を対象とする。それを追放する。そうしたとき、無色の1/1のスピリット・クリーチャー・トークン１体を生成する。
+・墓地にありクリーチャーでないカード１枚を対象とする。それを追放する。そうしたとき、あなたがコントロールしているクリーチャー１体を対象とする。それの上に+1/+1カウンター１個を置く。</card>
+    <card name="The Kami War" jaName="神の乱" type="エンチャント ― 英雄譚" related="O-Kagachi Made Manifest">（この英雄譚が出た際とあなたのドロー・ステップの後に、伝承カウンター１個を加える。）
+I ― 対戦相手がコントロールしていて土地でないパーマネント１つを対象とする。それを追放する。
+II ― これでも土地でもないパーマネント最大１つを対象とする。それをオーナーの手札に戻す。その後、各対戦相手はそれぞれカード１枚を捨てる。
+III ― この英雄譚を追放する。その後、これを変身させた状態であなたのコントロール下で戦場に戻す。</card>
+    <card name="O-Kagachi Made Manifest" jaName="顕現した大口縄" type="クリーチャー・エンチャント ― ドラゴン・スピリット" pt="6/6" related="The Kami War">顕現した大口縄はすべての色である。
+飛行、トランプル
+顕現した大口縄が攻撃するたび、防御プレイヤーは、あなたの墓地にあり土地でないカード１枚を選ぶ。そのカードをあなたの手札に戻す。ターン終了時まで、顕現した大口縄は+X/+0の修整を受ける。Ｘはそのカードのマナ総量に等しい。</card>
     <!-- 定義済みトークン -->
     <card name="Blood Token" jaName="血・トークン" type="トークン・アーティファクト ― 血" wikilink="血">(１),(Ｔ),カード１枚を捨てる,このアーティファクトを生け贄に捧げる：カード１枚を引く。</card>
     <card name="Clue Token" jaName="手掛かり・トークン" type="トークン・アーティファクト ― 手掛かり" wikilink="手掛かり">(２),このアーティファクトを生け贄に捧げる：カード１枚を引く。</card>
