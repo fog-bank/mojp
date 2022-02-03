@@ -3,13 +3,15 @@ using System.Resources;
 using System.Runtime.InteropServices;
 using System.Windows;
 
+//#error version
+
 // アセンブリに関する一般情報は以下の属性セットをとおして制御されます。
 // アセンブリに関連付けられている情報を変更するには、
 // これらの属性値を変更してください。
 [assembly: AssemblyTitle("MTGO Japanese Card Text Preview")]
 [assembly: AssemblyCompany("co3366353")]
 [assembly: AssemblyProduct("mojp")]
-[assembly: AssemblyCopyright("Copyright © 2021 fog-bank. Some rights reserved.")]
+[assembly: AssemblyCopyright("Copyright © 2022 fog-bank. Some rights reserved.")]
 [assembly: NeutralResourcesLanguage("ja-JP")]
 
 // Icon 1: https://www.iconfinder.com/icons/6000/book_dictionary_learn_school_translate_icon#size=128
