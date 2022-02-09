@@ -35,9 +35,9 @@ Windows 7 SP1 以降
   * カードを表示するたび [Scryfall の検索 API](https://scryfall.com/docs/api/cards/search) にアクセスします (1 秒に 5 枚まで、各カード 1 日 1 回まで) 。
 
 ## 開発環境
-Windows 10 May 2021 Update (Version 21H1)  
-Visual Studio 2019 v16.11  
-C# 9.0
+Windows 10 November 2021 Update (Version 21H2)  
+Visual Studio 2022 v17.0 
+C# 10.0
 
 ### 仕組み
 [UI Automation](https://msdn.microsoft.com/ja-jp/library/ms753388.aspx) API を利用して、Preview Pane 内のテキストを検索しています。メインロジックは [AutomationHandler.cs](https://github.com/fog-bank/mojp/blob/master/mojp/AutomationHandler.cs#L58) 内の CapturePreviewPane メソッド以下です。
