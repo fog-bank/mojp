@@ -13,7 +13,7 @@ name: "CodeQL"
 
 on:
   push:
-    branches: [ main ]
+    branches: [ develop ]
   pull_request:
     # The branches below must be a subset of the branches above
     branches: [ develop ]
@@ -58,9 +58,11 @@ jobs:
     
     - name: Add msbuild to PATH
       uses: microsoft/setup-msbuild@v1.1
+      env:
+        ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
 
     - name: Build app for release
-      run: msbuild mojp\mojp.sln -t:rebuild -p:Configuration=Release
+      run: msbuild mojp\mojp.sln -t:rebuild -p:Configuration=Release /p:UseSharedCompilation=false
 
     # ℹ️ Command-line programs to run using the OS shell.
     # 📚 https://git.io/JvXDl
