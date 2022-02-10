@@ -885,6 +885,8 @@ Michonne, Ruthless Survivorとゾンビ２体以上が攻撃するたび、タ�
     <card name="Lucille" jaName="Lucille" type="伝説のアーティファクト ― 装備品">装備しているクリーチャーは+2/+0の修整を受け威迫を持つ。
 装備しているクリーチャーが攻撃するたび、防御プレイヤーはクリーチャー１体を生け贄に捧げる。そうしたなら、あなたはWalkerトークン１体を生成する。
 装備(４)</card>
+    <!-- Heroes of the Realm 2017 -->
+    <card name="M'Odo, the Gnarled Oracle" jaName="M'Odo, the Gnarled Oracle" type="クリーチャー ― ゾンビ・エルフ・ウィザード" pt="0/3">威光 ― (Ｘ),カード１枚を捨てる：プレイヤー１人を対象とする。そのプレイヤーは、マナ総量がＸ以下のクリーチャー・カードが公開されるまで、自分のライブラリーの一番上から１枚ずつ公開する。そのカードをあなたのコントロール下で戦場に出し、その後、そのプレイヤーは残りを自分のライブラリーに加えて切り直す。M'Odo, the Gnarled Oracleが戦場か統率領域にあるときにのみ起動できる。</card>
     <!-- Gift Pack (M19) -->
     <card name="Angler Turtle" jaName="Angler Turtle" type="クリーチャー ― 海亀" pt="5/7">呪禁
 各戦闘で、対戦相手がコントロールしているクリーチャーは可能なら攻撃する。</card>
@@ -1893,23 +1895,6 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0106  /  1158 " sub="AFC" name="Ride the Avalanche" />
     <alt key="0107  /  1158 " sub="AFC" name="Wulfgar of Icewind Dale" />
     <!-- MID variants -->
-    <alt key="312 " sub="MID" name="Adeline, Resplendent Cathar" />
-    <alt key="313 " sub="MID" name="Lier, Disciple of the Drowned" />
-    <alt key="314 " sub="MID" name="Gisa, Glorious Resurrector" />
-    <alt key="315 " sub="MID" name="Jadar, Ghoulcaller of Nephalia" />
-    <alt key="316a " sub="MID" name="Jerren, Corrupted Bishop" />
-    <alt key="316b " sub="MID" name="Ormendahl, the Corrupter" />
-    <alt key="317a " sub="MID" name="Dennick, Pious Apprentice" />
-    <alt key="317b " sub="MID" name="Dennick, Pious Apparition" />
-    <alt key="318 " sub="MID" name="Florian, Voldaren Scion" />
-    <alt key="319 " sub="MID" name="Liesa, Forgotten Archangel" />
-    <alt key="320a " sub="MID" name="Ludevic, Necrogenius" />
-    <alt key="320b " sub="MID" name="Olag, Ludevic's Hubris" />
-    <alt key="321 " sub="MID" name="Old Stickfingers" />
-    <alt key="322 " sub="MID" name="Rem Karolus, Stalwart Slayer" />
-    <alt key="323 " sub="MID" name="Sigarda, Champion of Light" />
-    <alt key="324 " sub="MID" name="Slogurk, the Overslime" />
-    <alt key="325 " sub="MID" name="Vadrik, Astral Archmage" />
     <alt key="0001  /  1158 " sub="MID" name="Intrepid Adversary" />
     <alt key="0002  /  1158 " sub="MID" name="Sigardian Savior" />
     <alt key="0004  /  1158 " sub="MID" name="Enduring Angel" />
@@ -2010,22 +1995,6 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0088  /  1158 " sub="MIC" name="Kyler, Sigardian Emissary" />
     <alt key="0089  /  1158 " sub="MIC" name="Lynde, Cheerful Tormentor" />
     <!-- VOW variants -->
-    <alt key="317a " sub="VOW" name="Katilda, Dawnhart Martyr" />
-    <alt key="317b " sub="VOW" name="Katilda's Rising Dawn" />
-    <alt key="318 " sub="VOW" name="Thalia, Guardian of Thraben" />
-    <alt key="319 " sub="VOW" name="Geralf, Visionary Stitcher" />
-    <alt key="320a " sub="VOW" name="Jacob Hauken, Inspector" />
-    <alt key="320b " sub="VOW" name="Hauken's Insight" />
-    <alt key="321 " sub="VOW" name="Toxrill, the Corrosive" />
-    <alt key="322a " sub="VOW" name="Dorothea, Vengeful Victim" />
-    <alt key="322b " sub="VOW" name="Dorothea's Retribution" />
-    <alt key="323 " sub="VOW" name="Eruth, Tormented Prophet" />
-    <alt key="324 " sub="VOW" name="Grolnok, the Omnivore" />
-    <alt key="325 " sub="VOW" name="Halana and Alena, Partners" />
-    <alt key="326 " sub="VOW" name="Old Rutstein" />
-    <alt key="327a " sub="VOW" name="Runo Stromkirk" />
-    <alt key="327b " sub="VOW" name="Krothuss, Lord of the Deep" />
-    <alt key="328 " sub="VOW" name="Torens, Fist of the Angels" />
     <alt key="0001  /  1158 " sub="VOW" name="Hopeful Initiate" />
     <alt key="0004  /  1158 " sub="VOW" name="Voice of the Blessed" />
     <alt key="0007  /  1158 " sub="VOW" name="Lantern Flare" />
@@ -2123,6 +2092,238 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0101  /  1158 " sub="VOC" name="Millicent, Restless Revenant" />
     <alt key="0102  /  1158 " sub="VOC" name="Strefan, Maurer Progenitor" />
     <alt key="0104  /  1158 " sub="VOC" name="Umbris, Fear Manifest" />
+    <!-- NEO variants -->
+    <alt key="0001  /  1158 " sub="NEO" name="Light-Paws, Emperor's Voice" />
+    <alt key="0003  /  1158 " sub="NEO" name="Kyodai, Soul of Kamigawa" />
+    <alt key="0005  /  1158 " sub="NEO" name="Kyodai, Soul of Kamigawa" />
+    <alt key="0006  /  1158 " sub="NEO" name="Cloudsteel Kirin" />
+    <alt key="0008  /  1158 " sub="NEO" name="Brilliant Restoration" />
+    <alt key="0010  /  1158 " sub="NEO" name="Farewell" />
+    <alt key="0012  /  1158 " sub="NEO" name="Lion Sash" />
+    <alt key="0014  /  1158 " sub="NEO" name="March of Otherworldly Light" />
+    <alt key="0016  /  1158 " sub="NEO" name="Invoke Justice" />
+    <alt key="0017  /  1158 " sub="NEO" name="The Restoration of Eiganjo" />
+    <alt key="0019  /  1158 " sub="NEO" name="Ao, the Dawn Sky" />
+    <alt key="0020  /  1158 " sub="NEO" name="Ao, the Dawn Sky" />
+    <alt key="0023  /  1158 " sub="NEO" name="Thousand-Faced Shadow" />
+    <alt key="0025  /  1158 " sub="NEO" name="Tameshi, Reality Architect" />
+    <alt key="0027  /  1158 " sub="NEO" name="The Reality Chip" />
+    <alt key="0029  /  1158 " sub="NEO" name="Mindlink Mech" />
+    <alt key="0032  /  1158 " sub="NEO" name="March of Swirling Mist" />
+    <alt key="0034  /  1158 " sub="NEO" name="Invoke the Winds" />
+    <alt key="0037  /  1158 " sub="NEO" name="Inventive Iteration" />
+    <alt key="0039  /  1158 " sub="NEO" name="Kairi, the Swirling Sky" />
+    <alt key="0040  /  1158 " sub="NEO" name="Kairi, the Swirling Sky" />
+    <alt key="0041  /  1158 " sub="NEO" name="Jin-Gitaxias, Progress Tyrant" />
+    <alt key="0043  /  1158 " sub="NEO" name="Hidetsugu, Devouring Chaos" />
+    <alt key="0045  /  1158 " sub="NEO" name="Mukotai Soulripper" />
+    <alt key="0047  /  1158 " sub="NEO" name="Tatsunari, Toad Rider" />
+    <alt key="0048  /  1158 " sub="NEO" name="Soul Transfer" />
+    <alt key="0049  /  1158 " sub="NEO" name="Biting-Palm Ninja" />
+    <alt key="0050  /  1158 " sub="NEO" name="March of Wretched Sorrow" />
+    <alt key="0051  /  1158 " sub="NEO" name="Invoke Despair" />
+    <alt key="0053  /  1158 " sub="NEO" name="Tribute to Horobi" />
+    <alt key="0055  /  1158 " sub="NEO" name="Junji, the Midnight Sky" />
+    <alt key="0056  /  1158 " sub="NEO" name="Junji, the Midnight Sky" />
+    <alt key="0057  /  1158 " sub="NEO" name="Nashi, Moon Sage's Scion" />
+    <alt key="0058  /  1158 " sub="NEO" name="Blade of the Oni" />
+    <alt key="0059  /  1158 " sub="NEO" name="Ogre-Head Helm" />
+    <alt key="0061  /  1158 " sub="NEO" name="Lizard Blades" />
+    <alt key="0063  /  1158 " sub="NEO" name="Goro-Goro, Disciple of Ryusei" />
+    <alt key="0065  /  1158 " sub="NEO" name="Scrap Welder" />
+    <alt key="0067  /  1158 " sub="NEO" name="Thundering Raiju" />
+    <alt key="0069  /  1158 " sub="NEO" name="March of Reckless Joy" />
+    <alt key="0071  /  1158 " sub="NEO" name="Invoke Calamity" />
+    <alt key="0073  /  1158 " sub="NEO" name="Fable of the Mirror-Breaker" />
+    <alt key="0075  /  1158 " sub="NEO" name="Atsushi, the Blazing Sky" />
+    <alt key="0076  /  1158 " sub="NEO" name="Atsushi, the Blazing Sky" />
+    <alt key="0077  /  1158 " sub="NEO" name="Explosive Singularity" />
+    <alt key="0078  /  1158 " sub="NEO" name="Kami of Transience" />
+    <alt key="0080  /  1158 " sub="NEO" name="Shigeki, Jukai Visionary" />
+    <alt key="0082  /  1158 " sub="NEO" name="Spring-Leaf Avenger" />
+    <alt key="0084  /  1158 " sub="NEO" name="Weaver of Harmony" />
+    <alt key="0086  /  1158 " sub="NEO" name="March of Burgeoning Life" />
+    <alt key="0088  /  1158 " sub="NEO" name="Invoke the Ancients" />
+    <alt key="0092  /  1158 " sub="NEO" name="Teachings of the Kirin" />
+    <alt key="0093  /  1158 " sub="NEO" name="The Dragon-Kami Reborn" />
+    <alt key="0096  /  1158 " sub="NEO" name="Kura, the Boundless Sky" />
+    <alt key="0097  /  1158 " sub="NEO" name="Kura, the Boundless Sky" />
+    <alt key="0099  /  1158 " sub="NEO" name="Kodama of the West Tree" />
+    <alt key="0100  /  1158 " sub="NEO" name="Jugan Defends the Temple" />
+    <alt key="0102  /  1158 " sub="NEO" name="Risona, Asari Commander" />
+    <alt key="0103  /  1158 " sub="NEO" name="Satsuki, the Living Lore" />
+    <alt key="0104  /  1158 " sub="NEO" name="Kotose, the Silent Spider" />
+    <alt key="0105  /  1158 " sub="NEO" name="Greasefang, Okiba Boss" />
+    <alt key="0106  /  1158 " sub="NEO" name="Raiyuu, Storm's Edge" />
+    <alt key="0107  /  1158 " sub="NEO" name="Hinata, Dawn-Crowned" />
+    <alt key="0108  /  1158 " sub="NEO" name="Satoru Umezawa" />
+    <alt key="0109  /  1158 " sub="NEO" name="Satoru Umezawa" />
+    <alt key="0110  /  1158 " sub="NEO" name="Isshin, Two Heavens as One" />
+    <alt key="0111  /  1158 " sub="NEO" name="Eiganjo Uprising" />
+    <alt key="0117  /  1158 " sub="NEO" name="Tamiyo, Compleated Sage" />
+    <alt key="0118  /  1158 " sub="NEO" name="Spirit-Sister's Call" />
+    <alt key="0119  /  1158 " sub="NEO" name="The Kami War" />
+    <alt key="0120  /  1158 " sub="NEO" name="Hidetsugu Consumes All" />
+    <alt key="0123  /  1158 " sub="NEO" name="Mechtitan Core" />
+    <alt key="0124  /  1158 " sub="NEO" name="Eater of Virtue" />
+    <alt key="0125  /  1158 " sub="NEO" name="Reckoner Bankbuster" />
+    <alt key="0126  /  1158 " sub="NEO" name="Surgehacker Mech" />
+    <alt key="0127  /  1158 " sub="NEO" name="Mirror Box" />
+    <alt key="0128  /  1158 " sub="NEO" name="Eiganjo, Seat of the Empire" />
+    <alt key="0129  /  1158 " sub="NEO" name="Eiganjo, Seat of the Empire" />
+    <alt key="0130  /  1158 " sub="NEO" name="Otawara, Soaring City" />
+    <alt key="0131  /  1158 " sub="NEO" name="Otawara, Soaring City" />
+    <alt key="0132  /  1158 " sub="NEO" name="Takenuma, Abandoned Mire" />
+    <alt key="0133  /  1158 " sub="NEO" name="Takenuma, Abandoned Mire" />
+    <alt key="0134  /  1158 " sub="NEO" name="Sokenzan, Crucible of Defiance" />
+    <alt key="0135  /  1158 " sub="NEO" name="Sokenzan, Crucible of Defiance" />
+    <alt key="0136  /  1158 " sub="NEO" name="Boseiju, Who Endures" />
+    <alt key="0137  /  1158 " sub="NEO" name="Boseiju, Who Endures" />
+    <!-- NEC variants -->
+    <alt key="0002  /  1158 " sub="NEC" name="Aerial Surveyor" />
+    <alt key="0004  /  1158 " sub="NEC" name="Drumbellower" />
+    <alt key="0007  /  1158 " sub="NEC" name="Ironsoul Enforcer" />
+    <alt key="0009  /  1158 " sub="NEC" name="Myojin of Blooming Dawn" />
+    <alt key="0011  /  1158 " sub="NEC" name="Organic Extinction" />
+    <alt key="0013  /  1158 " sub="NEC" name="Release to Memory" />
+    <alt key="0015  /  1158 " sub="NEC" name="Swift Reconfiguration" />
+    <alt key="0021  /  1158 " sub="NEC" name="Yoshimaru, Ever Faithful" />
+    <alt key="0024  /  1158 " sub="NEC" name="Access Denied" />
+    <alt key="0026  /  1158 " sub="NEC" name="Cyberdrive Awakener" />
+    <alt key="0028  /  1158 " sub="NEC" name="Imposter Mech" />
+    <alt key="0030  /  1158 " sub="NEC" name="Kappa Cannoneer" />
+    <alt key="0031  /  1158 " sub="NEC" name="Katsumasa, the Animator" />
+    <alt key="0033  /  1158 " sub="NEC" name="Myojin of Cryptic Dreams" />
+    <alt key="0035  /  1158 " sub="NEC" name="Research Thief" />
+    <alt key="0036  /  1158 " sub="NEC" name="Universal Surveillance" />
+    <alt key="0044  /  1158 " sub="NEC" name="Myojin of Grim Betrayal" />
+    <alt key="0045  /  1158 " sub="NEC" name="Ruthless Technomancer" />
+    <alt key="0060  /  1158 " sub="NEC" name="Akki Battle Squad" />
+    <alt key="0062  /  1158 " sub="NEC" name="Collision of Realms" />
+    <alt key="0064  /  1158 " sub="NEC" name="Kami of Celebration" />
+    <alt key="0066  /  1158 " sub="NEC" name="Komainu Battle Armor" />
+    <alt key="0068  /  1158 " sub="NEC" name="Myojin of Roaring Blades" />
+    <alt key="0070  /  1158 " sub="NEC" name="Smoke Spirits' Aid" />
+    <alt key="0072  /  1158 " sub="NEC" name="Unquenchable Fury" />
+    <alt key="0079  /  1158 " sub="NEC" name="Ascendant Acolyte" />
+    <alt key="0081  /  1158 " sub="NEC" name="Concord with the Kami" />
+    <alt key="0083  /  1158 " sub="NEC" name="Kosei, Penitent Warlord" />
+    <alt key="0085  /  1158 " sub="NEC" name="Myojin of Towering Might" />
+    <alt key="0087  /  1158 " sub="NEC" name="One with the Kami" />
+    <alt key="0089  /  1158 " sub="NEC" name="Rampant Rejuvenator" />
+    <alt key="0090  /  1158 " sub="NEC" name="Silkguard" />
+    <alt key="0091  /  1158 " sub="NEC" name="Tanuki Transplanter" />
+    <alt key="0098  /  1158 " sub="NEC" name="Go-Shintai of Life's Origin" />
+    <alt key="0112  /  1158 " sub="NEC" name="Chishiro, the Shattered Blade" />
+    <alt key="0113  /  1158 " sub="NEC" name="Kaima, the Fractured Calm" />
+    <alt key="0114  /  1158 " sub="NEC" name="Kotori, Pilot Prodigy" />
+    <alt key="0116  /  1158 " sub="NEC" name="Shorikai, Genesis Engine" />
+    <!-- Ultimate Box toppers (UMA) -->
+    <alt key="U01  /  40 " sub="UMA" name="Emrakul, the Aeons Torn" />
+    <alt key="U02  /  40 " sub="UMA" name="Karn Liberated" />
+    <alt key="U03  /  40 " sub="UMA" name="Kozilek, Butcher of Truth" />
+    <alt key="U04  /  40 " sub="UMA" name="Ulamog, the Infinite Gyre" />
+    <alt key="U05  /  40 " sub="UMA" name="Snapcaster Mage" />
+    <alt key="U06  /  40 " sub="UMA" name="Temporal Manipulation" />
+    <alt key="U07  /  40 " sub="UMA" name="Bitterblossom" />
+    <alt key="U08  /  40 " sub="UMA" name="Demonic Tutor" />
+    <alt key="U09  /  40 " sub="UMA" name="Goryo's Vengeance" />
+    <alt key="U10  /  40 " sub="UMA" name="Liliana of the Veil" />
+    <alt key="U11  /  40 " sub="UMA" name="Mikaeus, the Unhallowed" />
+    <alt key="U12  /  40 " sub="UMA" name="Reanimate" />
+    <alt key="U13  /  40 " sub="UMA" name="Tasigur, the Golden Fang" />
+    <alt key="U14  /  40 " sub="UMA" name="Balefire Dragon" />
+    <alt key="U15  /  40 " sub="UMA" name="Through the Breach" />
+    <alt key="U16  /  40 " sub="UMA" name="Eternal Witness" />
+    <alt key="U17  /  40 " sub="UMA" name="Life from the Loam" />
+    <alt key="U18  /  40 " sub="UMA" name="Noble Hierarch" />
+    <alt key="U19  /  40 " sub="UMA" name="Tarmogoyf" />
+    <alt key="U20  /  40 " sub="UMA" name="Vengevine" />
+    <alt key="U21  /  40 " sub="UMA" name="Gaddock Teeg" />
+    <alt key="U22  /  40 " sub="UMA" name="Leovold, Emissary of Trest" />
+    <alt key="U23  /  40 " sub="UMA" name="Lord of Extinction" />
+    <alt key="U24  /  40 " sub="UMA" name="Maelstrom Pulse" />
+    <alt key="U25  /  40 " sub="UMA" name="Sigarda, Host of Herons" />
+    <alt key="U26  /  40 " sub="UMA" name="Fulminator Mage" />
+    <alt key="U27  /  40 " sub="UMA" name="Kitchen Finks" />
+    <alt key="U28  /  40 " sub="UMA" name="Engineered Explosives" />
+    <alt key="U29  /  40 " sub="UMA" name="Mana Vault" />
+    <alt key="U30  /  40 " sub="UMA" name="Platinum Emperion" />
+    <alt key="U31  /  40 " sub="UMA" name="Ancient Tomb" />
+    <alt key="U32  /  40 " sub="UMA" name="Cavern of Souls" />
+    <alt key="U33  /  40 " sub="UMA" name="Celestial Colonnade" />
+    <alt key="U34  /  40 " sub="UMA" name="Creeping Tar Pit" />
+    <alt key="U35  /  40 " sub="UMA" name="Dark Depths" />
+    <alt key="U36  /  40 " sub="UMA" name="Karakas" />
+    <alt key="U37  /  40 " sub="UMA" name="Lavaclaw Reaches" />
+    <alt key="U38  /  40 " sub="UMA" name="Raging Ravine" />
+    <alt key="U39  /  40 " sub="UMA" name="Stirring Wildwood" />
+    <alt key="U40  /  40 " sub="UMA" name="Urborg, Tomb of Yawgmoth" />
+    <!-- Eternal Night Card (MID, VOW) -->
+    <alt key="312 " sub="MID" name="Adeline, Resplendent Cathar" />
+    <alt key="313 " sub="MID" name="Lier, Disciple of the Drowned" />
+    <alt key="314 " sub="MID" name="Gisa, Glorious Resurrector" />
+    <alt key="315 " sub="MID" name="Jadar, Ghoulcaller of Nephalia" />
+    <alt key="316a " sub="MID" name="Jerren, Corrupted Bishop" />
+    <alt key="316b " sub="MID" name="Ormendahl, the Corrupter" />
+    <alt key="317a " sub="MID" name="Dennick, Pious Apprentice" />
+    <alt key="317b " sub="MID" name="Dennick, Pious Apparition" />
+    <alt key="318 " sub="MID" name="Florian, Voldaren Scion" />
+    <alt key="319 " sub="MID" name="Liesa, Forgotten Archangel" />
+    <alt key="320a " sub="MID" name="Ludevic, Necrogenius" />
+    <alt key="320b " sub="MID" name="Olag, Ludevic's Hubris" />
+    <alt key="321 " sub="MID" name="Old Stickfingers" />
+    <alt key="322 " sub="MID" name="Rem Karolus, Stalwart Slayer" />
+    <alt key="323 " sub="MID" name="Sigarda, Champion of Light" />
+    <alt key="324 " sub="MID" name="Slogurk, the Overslime" />
+    <alt key="325 " sub="MID" name="Vadrik, Astral Archmage" />
+    <alt key="317a " sub="VOW" name="Katilda, Dawnhart Martyr" />
+    <alt key="317b " sub="VOW" name="Katilda's Rising Dawn" />
+    <alt key="318 " sub="VOW" name="Thalia, Guardian of Thraben" />
+    <alt key="319 " sub="VOW" name="Geralf, Visionary Stitcher" />
+    <alt key="320a " sub="VOW" name="Jacob Hauken, Inspector" />
+    <alt key="320b " sub="VOW" name="Hauken's Insight" />
+    <alt key="321 " sub="VOW" name="Toxrill, the Corrosive" />
+    <alt key="322a " sub="VOW" name="Dorothea, Vengeful Victim" />
+    <alt key="322b " sub="VOW" name="Dorothea's Retribution" />
+    <alt key="323 " sub="VOW" name="Eruth, Tormented Prophet" />
+    <alt key="324 " sub="VOW" name="Grolnok, the Omnivore" />
+    <alt key="325 " sub="VOW" name="Halana and Alena, Partners" />
+    <alt key="326 " sub="VOW" name="Old Rutstein" />
+    <alt key="327a " sub="VOW" name="Runo Stromkirk" />
+    <alt key="327b " sub="VOW" name="Krothuss, Lord of the Deep" />
+    <alt key="328 " sub="VOW" name="Torens, Fist of the Angels" />
+    <!-- ZNE -->
+    <alt key="01  /  30 " sub="ZNE" name="Flooded Strand" />
+    <alt key="02  /  30 " sub="ZNE" name="Polluted Delta" />
+    <alt key="03  /  30 " sub="ZNE" name="Bloodstained Mire" />
+    <alt key="04  /  30 " sub="ZNE" name="Wooded Foothills" />
+    <alt key="05  /  30 " sub="ZNE" name="Windswept Heath" />
+    <alt key="06  /  30 " sub="ZNE" name="Marsh Flats" />
+    <alt key="07  /  30 " sub="ZNE" name="Scalding Tarn" />
+    <alt key="08  /  30 " sub="ZNE" name="Verdant Catacombs" />
+    <alt key="09  /  30 " sub="ZNE" name="Arid Mesa" />
+    <alt key="10  /  30 " sub="ZNE" name="Misty Rainforest" />
+    <alt key="11  /  30 " sub="ZNE" name="Seachrome Coast" />
+    <alt key="12  /  30 " sub="ZNE" name="Darkslick Shores" />
+    <alt key="13  /  30 " sub="ZNE" name="Blackcleave Cliffs" />
+    <alt key="14  /  30 " sub="ZNE" name="Copperline Gorge" />
+    <alt key="15  /  30 " sub="ZNE" name="Razorverge Thicket" />
+    <alt key="16  /  30 " sub="ZNE" name="Sea of Clouds" />
+    <alt key="17  /  30 " sub="ZNE" name="Morphic Pool" />
+    <alt key="18  /  30 " sub="ZNE" name="Luxury Suite" />
+    <alt key="19  /  30 " sub="ZNE" name="Spire Garden" />
+    <alt key="20  /  30 " sub="ZNE" name="Bountiful Promenade" />
+    <alt key="21  /  30 " sub="ZNE" name="Ancient Tomb" />
+    <alt key="22  /  30 " sub="ZNE" name="Cavern of Souls" />
+    <alt key="23  /  30 " sub="ZNE" name="Celestial Colonnade" />
+    <alt key="24  /  30 " sub="ZNE" name="Creeping Tar Pit" />
+    <alt key="25  /  30 " sub="ZNE" name="Grove of the Burnwillows" />
+    <alt key="26  /  30 " sub="ZNE" name="Horizon Canopy" />
+    <alt key="27  /  30 " sub="ZNE" name="Prismatic Vista" />
+    <alt key="28  /  30 " sub="ZNE" name="Strip Mine" />
+    <alt key="29  /  30 " sub="ZNE" name="Valakut, the Molten Pinnacle" />
+    <alt key="30  /  30 " sub="ZNE" name="Wasteland" />
     <!-- Strixhaven Mystical Archive -->
     <alt key="01  /  63 " sub="STA" name="Approach of the Second Sun" />
     <alt key="02  /  63 " sub="STA" name="Day of Judgment" />
@@ -2187,78 +2388,6 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="61  /  63 " sub="STA" name="Growth Spiral" />
     <alt key="62  /  63 " sub="STA" name="Lightning Helix" />
     <alt key="63  /  63 " sub="STA" name="Putrefy" />
-    <!-- Ultimate Box toppers (UMA) -->
-    <alt key="U01  /  40 " sub="UMA" name="Emrakul, the Aeons Torn" />
-    <alt key="U02  /  40 " sub="UMA" name="Karn Liberated" />
-    <alt key="U03  /  40 " sub="UMA" name="Kozilek, Butcher of Truth" />
-    <alt key="U04  /  40 " sub="UMA" name="Ulamog, the Infinite Gyre" />
-    <alt key="U05  /  40 " sub="UMA" name="Snapcaster Mage" />
-    <alt key="U06  /  40 " sub="UMA" name="Temporal Manipulation" />
-    <alt key="U07  /  40 " sub="UMA" name="Bitterblossom" />
-    <alt key="U08  /  40 " sub="UMA" name="Demonic Tutor" />
-    <alt key="U09  /  40 " sub="UMA" name="Goryo's Vengeance" />
-    <alt key="U10  /  40 " sub="UMA" name="Liliana of the Veil" />
-    <alt key="U11  /  40 " sub="UMA" name="Mikaeus, the Unhallowed" />
-    <alt key="U12  /  40 " sub="UMA" name="Reanimate" />
-    <alt key="U13  /  40 " sub="UMA" name="Tasigur, the Golden Fang" />
-    <alt key="U14  /  40 " sub="UMA" name="Balefire Dragon" />
-    <alt key="U15  /  40 " sub="UMA" name="Through the Breach" />
-    <alt key="U16  /  40 " sub="UMA" name="Eternal Witness" />
-    <alt key="U17  /  40 " sub="UMA" name="Life from the Loam" />
-    <alt key="U18  /  40 " sub="UMA" name="Noble Hierarch" />
-    <alt key="U19  /  40 " sub="UMA" name="Tarmogoyf" />
-    <alt key="U20  /  40 " sub="UMA" name="Vengevine" />
-    <alt key="U21  /  40 " sub="UMA" name="Gaddock Teeg" />
-    <alt key="U22  /  40 " sub="UMA" name="Leovold, Emissary of Trest" />
-    <alt key="U23  /  40 " sub="UMA" name="Lord of Extinction" />
-    <alt key="U24  /  40 " sub="UMA" name="Maelstrom Pulse" />
-    <alt key="U25  /  40 " sub="UMA" name="Sigarda, Host of Herons" />
-    <alt key="U26  /  40 " sub="UMA" name="Fulminator Mage" />
-    <alt key="U27  /  40 " sub="UMA" name="Kitchen Finks" />
-    <alt key="U28  /  40 " sub="UMA" name="Engineered Explosives" />
-    <alt key="U29  /  40 " sub="UMA" name="Mana Vault" />
-    <alt key="U30  /  40 " sub="UMA" name="Platinum Emperion" />
-    <alt key="U31  /  40 " sub="UMA" name="Ancient Tomb" />
-    <alt key="U32  /  40 " sub="UMA" name="Cavern of Souls" />
-    <alt key="U33  /  40 " sub="UMA" name="Celestial Colonnade" />
-    <alt key="U34  /  40 " sub="UMA" name="Creeping Tar Pit" />
-    <alt key="U35  /  40 " sub="UMA" name="Dark Depths" />
-    <alt key="U36  /  40 " sub="UMA" name="Karakas" />
-    <alt key="U37  /  40 " sub="UMA" name="Lavaclaw Reaches" />
-    <alt key="U38  /  40 " sub="UMA" name="Raging Ravine" />
-    <alt key="U39  /  40 " sub="UMA" name="Stirring Wildwood" />
-    <alt key="U40  /  40 " sub="UMA" name="Urborg, Tomb of Yawgmoth" />
-    <!-- ZNE -->
-    <alt key="01  /  30 " sub="ZNE" name="Flooded Strand" />
-    <alt key="02  /  30 " sub="ZNE" name="Polluted Delta" />
-    <alt key="03  /  30 " sub="ZNE" name="Bloodstained Mire" />
-    <alt key="04  /  30 " sub="ZNE" name="Wooded Foothills" />
-    <alt key="05  /  30 " sub="ZNE" name="Windswept Heath" />
-    <alt key="06  /  30 " sub="ZNE" name="Marsh Flats" />
-    <alt key="07  /  30 " sub="ZNE" name="Scalding Tarn" />
-    <alt key="08  /  30 " sub="ZNE" name="Verdant Catacombs" />
-    <alt key="09  /  30 " sub="ZNE" name="Arid Mesa" />
-    <alt key="10  /  30 " sub="ZNE" name="Misty Rainforest" />
-    <alt key="11  /  30 " sub="ZNE" name="Seachrome Coast" />
-    <alt key="12  /  30 " sub="ZNE" name="Darkslick Shores" />
-    <alt key="13  /  30 " sub="ZNE" name="Blackcleave Cliffs" />
-    <alt key="14  /  30 " sub="ZNE" name="Copperline Gorge" />
-    <alt key="15  /  30 " sub="ZNE" name="Razorverge Thicket" />
-    <alt key="16  /  30 " sub="ZNE" name="Sea of Clouds" />
-    <alt key="17  /  30 " sub="ZNE" name="Morphic Pool" />
-    <alt key="18  /  30 " sub="ZNE" name="Luxury Suite" />
-    <alt key="19  /  30 " sub="ZNE" name="Spire Garden" />
-    <alt key="20  /  30 " sub="ZNE" name="Bountiful Promenade" />
-    <alt key="21  /  30 " sub="ZNE" name="Ancient Tomb" />
-    <alt key="22  /  30 " sub="ZNE" name="Cavern of Souls" />
-    <alt key="23  /  30 " sub="ZNE" name="Celestial Colonnade" />
-    <alt key="24  /  30 " sub="ZNE" name="Creeping Tar Pit" />
-    <alt key="25  /  30 " sub="ZNE" name="Grove of the Burnwillows" />
-    <alt key="26  /  30 " sub="ZNE" name="Horizon Canopy" />
-    <alt key="27  /  30 " sub="ZNE" name="Prismatic Vista" />
-    <alt key="28  /  30 " sub="ZNE" name="Strip Mine" />
-    <alt key="29  /  30 " sub="ZNE" name="Valakut, the Molten Pinnacle" />
-    <alt key="30  /  30 " sub="ZNE" name="Wasteland" />
     <!-- 英雄譚 (DOM, C19, THB, KHM, MH2, NEO) -->
     <alt key="018  /  269 " sub="DOM" name="Fall of the Thran" />
     <alt key="021  /  269 " sub="DOM" name="History of Benalia" />
@@ -2306,14 +2435,14 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="232  /  285 " sub="KHM" name="The Trickster-God's Heist" />
     <alt key="234  /  285 " sub="KHM" name="Waking the Trolls" />
     <alt key="259  /  303 " sub="MH2" name="Urza's Saga" />
-    <alt key="004a  /  302 " sub="NEO" name="Befriending the Moths" />
-    <alt key="011a  /  302 " sub="NEO" name="Era of Enlightenment" />
-    <alt key="012a  /  302 " sub="NEO" name="The Fall of Lord Konda" />
-    <alt key="029a  /  302 " sub="NEO" name="Michiko's Reign of Truth" />
-    <alt key="034a  /  302 " sub="NEO" name="The Restoration of Eiganjo" />
-    <alt key="048a  /  302 " sub="NEO" name="Behold the Unspeakable" />
-    <alt key="057a  /  302 " sub="NEO" name="Inventive Iteration" />
-    <alt key="066a  /  302 " sub="NEO" name="The Modern Age" />
+    <alt key="04a  /  302 " sub="NEO" name="Befriending the Moths" />
+    <alt key="11a  /  302 " sub="NEO" name="Era of Enlightenment" />
+    <alt key="12a  /  302 " sub="NEO" name="The Fall of Lord Konda" />
+    <alt key="29a  /  302 " sub="NEO" name="Michiko's Reign of Truth" />
+    <alt key="34a  /  302 " sub="NEO" name="The Restoration of Eiganjo" />
+    <alt key="48a  /  302 " sub="NEO" name="Behold the Unspeakable" />
+    <alt key="57a  /  302 " sub="NEO" name="Inventive Iteration" />
+    <alt key="66a  /  302 " sub="NEO" name="The Modern Age" />
     <alt key="108a  /  302 " sub="NEO" name="Life of Toshiro Umezawa" />
     <alt key="109a  /  302 " sub="NEO" name="The Long Reach of Night" />
     <alt key="117a  /  302 " sub="NEO" name="Okiba Reckoner Raid" />
@@ -2550,6 +2679,8 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="228  /  281 " sub="AFR" name="Monk Class" />
     <alt key="230  /  281 " sub="AFR" name="Rogue Class" />
     <alt key="233  /  281 " sub="AFR" name="Sorcerer Class" />
+    <!-- 完成化 PW -->
+    <alt key="238  /  302 " sub="NEO" name="Tamiyo, Compleated Sage" />
     <!-- ダンジョン (AFR) -->
     <alt key="Yawning Portal" sub="Dungeon Level" name="Dungeon of the Mad Mage" />
     <alt key="Cave Entrance" sub="Goblin Lair" name="Lost Mine of Phandelver" />
@@ -4844,7 +4975,6 @@ IV ― あなたがコントロールしているクリーチャー１体と、�
     
     <card name="Confiscate" jaName="押収" type="エンチャント ― オーラ">エンチャント（パーマネント）
 あなたはエンチャントしているパーマネントをコントロールする。</card>
-    <card name="Thirst for Knowledge" jaName="知識の渇望" type="インスタント">カード３枚を引く。その後、あなたがアーティファクト・カード１枚を捨てないかぎり、カード２枚を捨てる。</card>
     
     <card name="Crow of Dark Tidings" jaName="闇告げカラス" type="クリーチャー ― ゾンビ・鳥" pt="2/1">飛行
 闇告げカラスが戦場に出たか死亡したとき、カード２枚を切削する。（あなたのライブラリーの一番上からカード２枚をあなたの墓地に置く。）</card>
