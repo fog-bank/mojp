@@ -269,6 +269,29 @@ namespace Mojp
         }
 
         /// <summary>
+        /// カード価格を取得しなくてよいカードかどうかを判定します。
+        /// </summary>
+        public static bool IsSpecialCard(Card card)
+        {
+            if (string.IsNullOrEmpty(card?.Name))
+                return true;
+
+            if (string.IsNullOrEmpty(card.Type))
+                return true;
+
+            if (card.Name is "Gleemox" or "Vitu-Ghazi" or "Morph" or "Manifest")
+                return true;
+
+            if (card.Type.StartsWith("トークン") || card.Type.StartsWith("次元"))
+                return true;
+
+            if (card.Type is "ヴァンガード" or "現象" or "ダンジョン")
+                return true;
+
+            return false;
+        }
+
+        /// <summary>
         /// <see cref="PriceTargetProperty"/> 添付プロパティの値が変更されたときに、カード価格情報の取得を行います。
         /// </summary>
         private static async void OnPriceTargetChanged(DependencyObject sender, DependencyPropertyChangedEventArgs e)
@@ -331,27 +354,6 @@ namespace Mojp
         {
             if (sender is UIElement element)
                 element.Visibility = IsPDLegal(e.NewValue as Card) ? Visibility.Visible : Visibility.Collapsed;
-        }
-
-        /// <summary>
-        /// カード価格を取得しなくてよいカードかどうかを判定します。
-        /// </summary>
-        private static bool IsSpecialCard(Card card)
-        {
-            if (string.IsNullOrEmpty(card?.Name))
-                return true;
-
-            if (string.IsNullOrEmpty(card.Type))
-                return true;
-
-            if (card.Type.StartsWith("トークン") || card.Type.StartsWith("ヴァンガード") ||
-                card.Type.StartsWith("次元") || card.Type.StartsWith("現象") || card.Type == "ダンジョン")
-                return true;
-
-            if (card.Name is "Morph" or "Manifest" or "Vitu-Ghazi")
-                return true;
-
-            return false;
         }
 
         /// <summary>

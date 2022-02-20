@@ -145,21 +145,28 @@ namespace Mojp
             {
                 FileName = "search.txt",
                 CheckFileExists = true,
+                Multiselect = true,
                 Filter = "テキスト ファイル (*.txt)|*.txt|すべてのファイル (*.*)|*.*"
             };
 
             if (dlg.ShowDialog(this) == true)
             {
-                using (var stream = dlg.OpenFile())
-                using (var sr = new StreamReader(stream, Encoding.GetEncoding("shift-jis")))
+                var streams = dlg.OpenFiles();
+                bool append = false;
+
+                foreach (var stream in streams)
                 {
-                    App.SetCardInfosFromWhisper(sr);
-
-                    if (File.Exists(App.GetPath("appendix.xml")))
-                        Card.FixCardInfo(App.GetPath("appendix.xml"));
-
-                    App.SaveAsXml(App.GetPath("cards.xml"));
+                    using var sr = new StreamReader(stream, Encoding.GetEncoding("shift-jis"));
+                    App.SetCardInfosFromWhisper(sr, append);
+                    append = true;
                 }
+
+                string appendixPath = App.GetPath("appendix.xml");
+                if (File.Exists(appendixPath))
+                    Card.FixCardInfo(appendixPath);
+
+                App.SaveAsXml(App.GetPath("cards.xml"));
+
                 imgLoaded.Visibility = Visibility.Visible;
             }
             imgLoading.Visibility = Visibility.Collapsed;

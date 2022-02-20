@@ -117,7 +117,10 @@ namespace Mojp
         {
             var cardsElem = new XElement("cards");
 
-            foreach (var card in Cards.Values)
+            foreach (var card in Cards.Values.Where(c => !CardPrice.IsSpecialCard(c)).OrderBy(c => c.Name))
+                cardsElem.Add(card.ToXml());
+
+            foreach (var card in Cards.Values.Where(CardPrice.IsSpecialCard))
                 cardsElem.Add(card.ToXml());
 
             foreach (var alt in AltCards.Values)
@@ -132,9 +135,10 @@ namespace Mojp
         /// <summary>
         /// WHISPER の検索結果を格納したテキストファイルからカードテキストデータを構築します。
         /// </summary>
-        public static void SetCardInfosFromWhisper(StreamReader sr)
+        public static void SetCardInfosFromWhisper(StreamReader sr, bool append = false)
         {
-            Cards.Clear();
+            if (!append)
+                Cards.Clear();
 
             foreach (var card in Card.ParseWhisper(sr))
             {
