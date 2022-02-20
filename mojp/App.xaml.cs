@@ -142,9 +142,13 @@ namespace Mojp
 
             foreach (var card in Card.ParseWhisper(sr))
             {
-                if (Cards.ContainsKey(card.Name))
+                if (Cards.TryGetValue(card.Name, out var card2))
                 {
-                    Debug.WriteLine(card.Name + " を二重登録しようとしています。");
+                    card.RelatedCardName = card2.RelatedCardName;
+
+                    if (!card.EqualsStrict(card2))
+                        Debug.WriteLine(card.Name + " を違うテキストで二重登録しようとしています。");
+
                     continue;
                 }
                 Cards.Add(card.Name, card);
