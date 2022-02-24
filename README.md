@@ -43,7 +43,7 @@ C# 10.0
 [UI Automation](https://msdn.microsoft.com/ja-jp/library/ms753388.aspx) API を利用して、Preview Pane 内のテキストを検索しています。メインロジックは [AutomationHandler.cs](https://github.com/fog-bank/mojp/blob/master/mojp/AutomationHandler.cs#L58) 内の CapturePreviewPane メソッド以下です。
 
 ## リファレンス
-* MO で日本語テキストを表示する試みとして、[Magic Online 日本語化計画](http://www.royalcrab.net/wpx/?page_id=38)の影響を受けています。
+* MO で日本語テキストを表示する試みとして、[Magic Online 日本語化計画](https://k5.hatenablog.com/archive/category/MTGO_SUPPORT)の影響を受けています。
 * このアプリで表示する日本語テキストは、[WHISPER](http://whisper.wisdom-guild.net/) の検索結果をテキストファイルに保存したものに基づいています。
 * アイコンの一部は Iconfinder \[[1](https://www.iconfinder.com/icons/6000/book_dictionary_learn_school_translate_icon#size=128), [2](https://www.iconfinder.com/icons/285680/camera_icon#size=16)\] を利用しています。
 

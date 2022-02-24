@@ -1547,7 +1547,18 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="U38  /  40 " sub="UMA" name="Raging Ravine" />
     <alt key="U39  /  40 " sub="UMA" name="Stirring Wildwood" />
     <alt key="U40  /  40 " sub="UMA" name="Urborg, Tomb of Yawgmoth" />
-    <!-- Eternal Night Card (MID, VOW) -->
+    <!-- Eternal Night Card (MID, VOW, DBL) -->
+    <alt key="2a " sub="MID" name="Ambitious Farmhand" />
+    <alt key="2b " sub="MID" name="Seasoned Cathar" />
+    <alt key="3a " sub="MID" name="Beloved Beggar" />
+    <alt key="3b " sub="MID" name="Generous Soul" />
+    <alt key="4a " sub="MID" name="Bereaved Survivor" />
+    <alt key="4b " sub="MID" name="Dauntless Avenger" />
+    <alt key="7a " sub="MID" name="Brutal Cathar" />
+    <alt key="7b " sub="MID" name="Moonrage Brute" />
+    <alt key="13a " sub="MID" name="Chaplain of Alms" />
+    <alt key="13b " sub="MID" name="Chapel Shieldgeist" />
+    <alt key=" " sub="MID" name="" />
     <alt key="312 " sub="MID" name="Adeline, Resplendent Cathar" />
     <alt key="313 " sub="MID" name="Lier, Disciple of the Drowned" />
     <alt key="314 " sub="MID" name="Gisa, Glorious Resurrector" />
@@ -1565,10 +1576,33 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="323 " sub="MID" name="Sigarda, Champion of Light" />
     <alt key="324 " sub="MID" name="Slogurk, the Overslime" />
     <alt key="325 " sub="MID" name="Vadrik, Astral Archmage" />
+    
+    <alt key="276a " sub="VOW" name="Distracting Geist" />
+    <alt key="276b " sub="VOW" name="Clever Distraction" />
+    <alt key="277a " sub="VOW" name="Drogskol Infantry" />
+    <alt key="277b " sub="VOW" name="Drogskol Armaments" />
+    <alt key="279a " sub="VOW" name="Faithbound Judge" />
+    <alt key="279b " sub="VOW" name="Sinner's Judgment" />
+    <alt key="288a " sub="VOW" name="Katilda, Dawnhart Martyr" />
+    <alt key="288b " sub="VOW" name="Katilda's Rising Dawn" />
+    <alt key="289a " sub="VOW" name="Kindly Ancestor" />
+    <alt key="289b " sub="VOW" name="Ancestor's Embrace" />
+    <alt key="295a " sub="VOW" name="Panicked Bystander" />
+    <alt key="295b " sub="VOW" name="Cackling Culprit" />
+    <alt key="298a " sub="VOW" name="Radiant Grace" />
+    <alt key="298b " sub="VOW" name="Radiant Restraints" />
+    <alt key="307a " sub="VOW" name="Twinblade Geist" />
+    <alt key="307b " sub="VOW" name="Twinblade Invocation" />
+    <alt key="312a " sub="VOW" name="Wedding Announcement" />
+    <alt key="312b " sub="VOW" name="Wedding Festivity" />
+    <alt key="315a " sub="VOW" name="Binding Geist" />
+    <alt key="315b " sub="VOW" name="Spectral Binding" />
+    <alt key="316a " sub="VOW" name="Biolume Egg" />
+    <alt key="316b " sub="VOW" name="Biolume Serpent" />
     <alt key="317a " sub="VOW" name="Katilda, Dawnhart Martyr" />
     <alt key="317b " sub="VOW" name="Katilda's Rising Dawn" />
-    <alt key="318 " sub="VOW" name="Thalia, Guardian of Thraben" />
-    <alt key="319 " sub="VOW" name="Geralf, Visionary Stitcher" />
+    <alt key="318 " sub="VOW" name="プロモ版のカード" /> <!-- Thalia, Guardian of Thraben / Chill of the Grave -->
+    <alt key="319 " sub="VOW" name="プロモ版のカード" /> <!-- Geralf, Visionary Stitcher / Cobbled Lancer -->
     <alt key="320a " sub="VOW" name="Jacob Hauken, Inspector" />
     <alt key="320b " sub="VOW" name="Hauken's Insight" />
     <alt key="321 " sub="VOW" name="Toxrill, the Corrosive" />
@@ -1581,6 +1615,83 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="327a " sub="VOW" name="Runo Stromkirk" />
     <alt key="327b " sub="VOW" name="Krothuss, Lord of the Deep" />
     <alt key="328 " sub="VOW" name="Torens, Fist of the Angels" />
+    <alt key="329a " sub="VOW" name="Gutter Skulker" />
+    <alt key="329b " sub="VOW" name="Gutter Shortcut" />
+    <alt key="332a " sub="VOW" name="Jacob Hauken, Inspector" />
+    <alt key="332b " sub="VOW" name="Hauken's Insight" />
+    <alt key="333a " sub="VOW" name="Lantern Bearer" />
+    <alt key="333b " sub="VOW" name="Lanterns' Lift" />
+    <alt key="335a " sub="VOW" name="Mirrorhall Mimic" />
+    <alt key="335b " sub="VOW" name="Ghastly Mimicry" />
+    <alt key="336a " sub="VOW" name="Mischievous Catgeist" />
+    <alt key="336b " sub="VOW" name="Catlike Curiosity" />
+    <alt key="346a " sub="VOW" name="Soulcipher Board" />
+    <alt key="346b " sub="VOW" name="Cipherbound Spirit" />
+    <alt key="364a " sub="VOW" name="Bloodsworn Squire" />
+    <alt key="364b " sub="VOW" name="Bloodsworn Knight" />
+    <alt key="366a " sub="VOW" name="Catapult Fodder" />
+    <alt key="366b " sub="VOW" name="Catapult Captain" />
+    <alt key="368a " sub="VOW" name="Concealing Curtains" />
+    <alt key="368b " sub="VOW" name="Revealing Eye" />
+    <alt key="371a " sub="VOW" name="Desperate Farmer" />
+    <alt key="371b " sub="VOW" name="Depraved Harvester" />
+    <alt key="386a " sub="VOW" name="Henrika Domnathi" />
+    <alt key="386b " sub="VOW" name="Henrika, Infernal Seer" />
+    <alt key="388a " sub="VOW" name="Innocent Traveler" />
+    <alt key="388b " sub="VOW" name="Malicious Invader" />
+    <alt key="394a " sub="VOW" name="Ragged Recluse" />
+    <alt key="394b " sub="VOW" name="Odious Witch" />
+    <alt key="395a " sub="VOW" name="Restless Bloodseeker" />
+    <alt key="395b " sub="VOW" name="Bloodsoaked Reveler" />
+    <alt key="404a " sub="VOW" name="Voldaren Bloodcaster" />
+    <alt key="404b " sub="VOW" name="Bloodbat Summoner" />
+    <alt key="408a " sub="VOW" name="Alluring Suitor" />
+    <alt key="408b " sub="VOW" name="Deadly Dancer" />
+    <alt key="410a " sub="VOW" name="Ballista Watcher" />
+    <alt key="410b " sub="VOW" name="Ballista Wielder" />
+    <alt key="424a " sub="VOW" name="Fearful Villager" />
+    <alt key="424b " sub="VOW" name="Fearsome Werewolf" />
+    <alt key="429a " sub="VOW" name="Ill-Tempered Loner" />
+    <alt key="429b " sub="VOW" name="Howlpack Avenger" />
+    <alt key="434a " sub="VOW" name="Lambholt Raconteur" />
+    <alt key="434b " sub="VOW" name="Lambholt Ravager" />
+    <alt key="448a " sub="VOW" name="Volatile Arsonist" />
+    <alt key="448b " sub="VOW" name="Dire-Strain Anarchist" />
+    <alt key="450a " sub="VOW" name="Voltaic Visionary" />
+    <alt key="450b " sub="VOW" name="Volt-Charged Berserker" />
+    <alt key="451a " sub="VOW" name="Weary Prisoner" />
+    <alt key="451b " sub="VOW" name="Wrathful Jailbreaker" />
+    <alt key="454a " sub="VOW" name="Avabruck Caretaker" />
+    <alt key="454b " sub="VOW" name="Hollowhenge Huntmaster" />
+    <alt key="465a " sub="VOW" name="Dormant Grove" />
+    <alt key="465b " sub="VOW" name="Gnarled Grovestrider" />
+    <alt key="470a " sub="VOW" name="Hookhand Mariner" />
+    <alt key="470b " sub="VOW" name="Riphook Raider" />
+    <alt key="472a " sub="VOW" name="Howlpack Piper" />
+    <alt key="472b " sub="VOW" name="Wildsong Howler" />
+    <alt key="473a " sub="VOW" name="Infestation Expert" />
+    <alt key="473b " sub="VOW" name="Infested Werewolf" />
+    <alt key="479a " sub="VOW" name="Oakshade Stalker" />
+    <alt key="479b " sub="VOW" name="Moonlit Ambusher" />
+    <alt key="492a " sub="VOW" name="Ulvenwald Oddity" />
+    <alt key="492b " sub="VOW" name="Ulvenwald Behemoth" />
+    <alt key="493a " sub="VOW" name="Weaver of Blossoms" />
+    <alt key="493b " sub="VOW" name="Blossom-Clad Werewolf" />
+    <alt key="496a " sub="VOW" name="Wolfkin Outcast" />
+    <alt key="496b " sub="VOW" name="Wedding Crasher" />
+    <alt key="500a " sub="VOW" name="Brine Comber" />
+    <alt key="500b " sub="VOW" name="Brinebound Gift" />
+    <alt key="501a " sub="VOW" name="Child of the Pack" />
+    <alt key="501b " sub="VOW" name="Savage Packmate" />
+    <alt key="502a " sub="VOW" name="Dorothea, Vengeful Victim" />
+    <alt key="502b " sub="VOW" name="Dorothea's Retribution" />
+    <alt key="503a " sub="VOW" name="Edgar, Charmed Groom" />
+    <alt key="503b " sub="VOW" name="Edgar Markov's Coffin" />
+    <alt key="513a " sub="VOW" name="Runo Stromkirk" />
+    <alt key="513b " sub="VOW" name="Krothuss, Lord of the Deep" />
+    <alt key="523a " sub="VOW" name="Foreboding Statue" />
+    <alt key="523b " sub="VOW" name="Forsaken Thresher" />
+    <alt key=" " sub="VOW" name="" />
     <!-- ZNE -->
     <alt key="01  /  30 " sub="ZNE" name="Flooded Strand" />
     <alt key="02  /  30 " sub="ZNE" name="Polluted Delta" />
