@@ -2034,11 +2034,11 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="パーティ(?!ー)" value="パーティー" nodebug="true" />
     <regex target="text" pattern="カウンタ(?!ー)" value="カウンター" nodebug="true" />
     <regex target="text" pattern="振る旅" value="振るたび" nodebug="true" />
+    <regex target="text" pattern="引く）" value="引く。）" nodebug="true" />
     <regex target="text" pattern="枚数半分" value="枚数の半分" nodebug="true" />
     <regex target="text" pattern="対象する" value="対象とする" nodebug="true" />
     <regex target="text" pattern="１つにき" value="１つにつき" nodebug="true" />
     <regex target="text" pattern="に等しい$" value="に等しい。" nodebug="true" />
-    <regex target="text" pattern="引く）" value="引く。）" nodebug="true" />
     <regex target="text" pattern="切り直す」" value="切り直す。」" nodebug="true" />
     <regex target="text" pattern="手札に加る。" value="手札に加える。" nodebug="true" />
     <regex target="text" pattern="支払に加えて" value="支払いに加えて" nodebug="true" />
@@ -2054,25 +2054,26 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="の上に(?=\+1/\+1カウンターが.個未満であった)" value="の上にある" nodebug="true" />
     <regex target="text" pattern="クリーチャー１体かプレインズウォーカー１体かプレイヤーを対象とする。" value="クリーチャー１体かプレインズウォーカー１体かプレイヤー１人を対象とする。" nodebug="true" />
     <regex target="text" pattern="(?&lt;=食物は、?|それらは、?)「\(Ｔ\),このアーティファクトを生け贄に捧げる：あなたは３点のライフを得る。」" value="「(２),(Ｔ),このアーティファクトを生け贄に捧げる：あなたは３点のライフを得る。」" nodebug="true" />
+    <regex target="text" pattern="\n。" value="。" nodebug="true" />
     <regex target="text" pattern="をの上に" value="の上に" nodebug="true" />
     <regex target="text" pattern="をし引く" value="を引く" nodebug="true" />
     <regex target="text" pattern="永遠はそ" value="永遠は" nodebug="true" />
+    <regex target="text" pattern="以下にに" value="以下に" nodebug="true" />
     <regex target="text" pattern="点マナ総量" value="マナ総量" nodebug="true" />
     <regex target="text" pattern="なあなたの" value="あなたの" nodebug="true" />
-    <regex target="text" pattern="以下にに" value="以下に" nodebug="true" />
     <regex target="text" pattern="対象ととする" value="対象とする" nodebug="true" />
-    <regex target="text" pattern="トークンを１体を" value="トークン１体を" nodebug="true" />
-    <regex target="text" pattern="プレイヤー１人をか" value="プレイヤー１人か" nodebug="true" />
-    <regex target="text" pattern="を１つをタップする" value="１つをタップする" nodebug="true" />
     <regex target="text" pattern="一方にになる" value="一方になる" nodebug="true" />
     <regex target="text" pattern="していいない" value="していない" nodebug="true" />
-    <regex target="text" pattern="されて続けている" value="され続けている" nodebug="true" />
     <regex target="text" pattern="見せてもよい" value="見てもよい" nodebug="true" />
+    <regex target="text" pattern="望む枚数の呪文" value="望む数の呪文" nodebug="true" />
+    <regex target="text" pattern="されて続けている" value="され続けている" nodebug="true" />
     <regex target="text" pattern="対象ににならない" value="対象にならない" nodebug="true" />
-    <regex target="text" pattern="望む枚数のクリーチャーを" value="望む数のクリーチャーを" nodebug="true" />
+    <regex target="text" pattern="トークンを１体を" value="トークン１体を" nodebug="true" />
     <regex target="text" pattern="soそのプレイヤー" value="そのプレイヤー" nodebug="true" />
+    <regex target="text" pattern="プレイヤー１人をか" value="プレイヤー１人か" nodebug="true" />
+    <regex target="text" pattern="を１つをタップする" value="１つをタップする" nodebug="true" />
     <regex target="text" pattern="この呪文死より得るもの" value="この呪文" nodebug="true" />
-    <regex target="text" pattern="\n。" value="。" nodebug="true" />
+    <regex target="text" pattern="望む枚数のクリーチャーを" value="望む数のクリーチャーを" nodebug="true" />
     <regex target="name" pattern="’" value="'" />
     <regex target="type" pattern=" - " value=" ― " />
     <regex target="type|text" pattern="ミノタウロス" value="ミノタウルス" />
@@ -2286,7 +2287,9 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="追放領域にあるあなたがオーナーである" value="追放領域にありあなたがオーナーである" nodebug="true" />
     <regex target="text" pattern="を持つ(?=.であり.である)" value="を持ち" nodebug="true" />
     <regex target="text" pattern="オーナーである(?=[^。]*か[^。]*であるカード|[^。]*・カード(?:１枚)?か[^。]*・カード|[^。]*でないカード)" value="オーナーであり" nodebug="true" />
-    <regex target="text" pattern="していてアンタップ状態であるクリーチャー" value="しているアンタップ状態のクリーチャー" nodebug="true" />
+    <regex target="text" pattern="していて(アン)?タップ状態であるクリーチャー" value="している$1タップ状態のクリーチャー" nodebug="true" />
+    <regex target="text" pattern="していてマナ総量が(.(?:以上|以下)?)である" value="しているマナ総量が$1の" nodebug="true" />
+    <regex target="text" pattern="(?&lt;=(?:^|・|,|は|が|から)マナ総量が.(?:以上|以下)?)である(?=クリーチャー|カード|呪文)" value="の" nodebug="true" />
     <!-- テンプレート変更：手札/墓地から -->
     <regex target="text" pattern="(?m)(?&lt;=^|・|：|とき、|時に、|場合、)いずれかの墓地にある(?=[^。]*カード１枚を対象)" value="墓地から" nodebug="true" />
     <regex target="text" pattern="墓地にある(?=インスタント・カード１枚かソーサリー・カード１枚を)" value="墓地から" nodebug="true" />
@@ -2323,7 +2326,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="(?&lt;=あなたのアップキープの開始時に、装備しているクリーチャーが[白青黒赤緑])ならば、(?=その上に)" value="であるなら、" nodebug="true" />
     <regex target="text" pattern="(?&lt;=戦場に出たとき、)それを唱えるために(.+)が支払われていたなら" value="これを唱えるために$1が支払われていた場合" nodebug="true" />
     <!-- テンプレート変更：誘発型能力の条件 -->
-    <regex target="text" pattern="呪文を１つ唱えるたび、" value="呪文を唱えるたび、" nodebug="true" />
+    <regex target="text" pattern="呪文(?:を１つ|１つを)唱えるたび、" value="呪文を唱えるたび、" nodebug="true" />
     <regex target="text" pattern="プレイヤー１人が(?=[^。]*呪文を唱えるたび、)" value="プレイヤーが" nodebug="true" />
     <regex target="text" pattern="プレイヤー１人がクリーチャーを" value="プレイヤーがクリーチャーを" nodebug="true" />
     <regex target="text" pattern="がプレイヤーに戦闘ダメージを与えるたび、" value="がプレイヤー１人に戦闘ダメージを与えるたび、" nodebug="true" />
@@ -2396,7 +2399,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="(?:にのみ|にしか|だけしか)(?:支払|使|用いる)(?:うことができる|える|えない|ことができる)" value="にのみ使用できる" nodebug="true" />
     <regex target="text" pattern="(?&lt;=[白青黒赤緑]\))が使われた" value="が支払われていた" nodebug="true" />
     <regex target="text" pattern="(?m)(?&lt;=^|[・：。、])攻撃しているクリーチャー" value="攻撃クリーチャー" nodebug="true" />
-    <regex target="text" pattern="攻撃(?:クリーチャー)?(?:１体)?かブロック(?:している|・)クリーチャー１体を対象" value="攻撃かブロックしているクリーチャー１体を対象" nodebug="true" />
+    <regex target="text" pattern="攻撃(?:クリーチャー)?(?:１体)?[かや]ブロック(?:している|・)クリーチャー１体を対象" value="攻撃かブロックしているクリーチャー１体を対象" nodebug="true" />
     <regex target="text" pattern="攻撃クリーチャーやブロック・クリーチャーのうち１体を対象" value="攻撃かブロックしているクリーチャー１体を対象" nodebug="true" />
     <regex target="text" pattern="(?m)(?&lt;=^|：|か、|飛行を持つ)ブロックしているクリーチャー１体を対象" value="ブロック・クリーチャー１体を対象" nodebug="true" />
     <regex target="text" pattern="のブロックしているクリーチャー１体を対象" value="をブロックしているクリーチャー１体を対象" nodebug="true" />
@@ -2509,7 +2512,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="天使・クリーチャー・カード１枚かデーモン・クリーチャー・カード１枚かドラゴン・クリーチャー・カード１枚" value="天使かデーモンかドラゴンであるクリーチャー・カード１枚" nodebug="true" />
     <regex target="text" pattern="[の・]呪文[とや]([^。]+)[の・]呪文を唱えるためのコストは" value="か$1である呪文を唱えるためのコストは" nodebug="true" />
     <!-- テンプレート変更：A or B (や) -->
-    <regex target="text" pattern="(?&lt;=アーティファクト|インスタント)や(インスタント|ソーサリー)や(?=(?:ソーサリー|ウィザード)である呪文を唱えるたび)" value="か$1か" nodebug="true" />
+    <regex target="text" pattern="(?&lt;=アーティファクト|インスタント)や(インスタント|ソーサリー)や(?=(?:ソーサリー|ウィザード)である呪文(?:を唱えるたび|１つを))" value="か$1か" nodebug="true" />
     <regex target="text" pattern="(?&lt;=アーティファクト|オーラ|クリーチャー|エンチャント|クリーチャー・エンチャント|装備品|インスタント)や(?=(?:エンチャント|土地|伝説のクリーチャー|プレインズウォーカー|祭殿|ソーサリー|機体)である(?:カード１枚を|呪文を唱えるたび|呪文１つを|各パーマネント|なら))" value="か" nodebug="true" />
     <regex target="text" pattern="(?&lt;!や)インスタントやソーサリーである(?=カード(?:１枚)?が追放されるまで|カードを公開するたび|カードが公開されたなら|カードなら|呪文１つ(?!につき)|(?&lt;!\)\(.+)呪文を唱え(?!るための|てもよい))" value="インスタントかソーサリーである" nodebug="true" />
     <regex target="text" pattern="次にインスタントやソーサリー(?=である呪文|でありマナ総量が.以下である呪文)" value="次にインスタントかソーサリー" nodebug="true" />
@@ -3732,7 +3735,6 @@ Venarian Goldが戦場に出たとき、エンチャントしているクリー�
 エンチャントしているクリーチャーは「(Ｔ)：占術１を行い、その後カード１枚を引く。」を持つ。（占術１を行うとは、「あなたのライブラリーの一番上のカードを見る。その後あなたはそのカードをあなたのライブラリーの一番下に置いてもよい。」ということである。）</card>
     <card name="Sower of Temptation" jaName="誘惑蒔き" type="クリーチャー ― フェアリー・ウィザード" pt="2/2">飛行
 誘惑蒔きが戦場に出たとき、クリーチャー１体を対象とする。誘惑蒔きが戦場に残り続けているかぎり、それのコントロールを得る。</card>
-    <card name="Spell Snare" jaName="呪文嵌め" type="インスタント">マナ総量が２の呪文１つを対象とし、それを打ち消す。</card>
     <card name="True-Name Nemesis" jaName="真の名の宿敵" type="クリーチャー ― マーフォーク・ならず者" pt="3/1">真の名の宿敵が戦場に出るに際し、プレイヤー１人を選ぶ。
 真の名の宿敵はプロテクション（その選ばれたプレイヤー）を持つ。</card>
     <card name="Fill with Fright" jaName="襲い掛かる恐怖" type="ソーサリー">プレイヤー１人を対象とする。そのプレイヤーはカード２枚を捨てる。
@@ -3989,8 +3991,6 @@ Venarian Goldが戦場に出たとき、エンチャントしているクリー�
     <card name="Crypt Rats" jaName="墓所のネズミ" type="クリーチャー ― ネズミ" pt="1/1">(Ｘ)：墓所のネズミは各クリーチャーと各プレイヤーにそれぞれＸ点のダメージを与える。Ｘは黒マナでのみ支払える。</card>
     <card name="Prohibit" jaName="禁制" type="インスタント">キッカー(２)（あなたはこの呪文を唱えるに際し、追加で(２)を支払ってもよい。）
 呪文１つを対象とする。それのマナ総量が２以下なら、それを打ち消す。この呪文がキッカーされていたなら、代わりに、それのマナ総量が４以下なら、それを打ち消す。</card>
-    <card name="Unearth" jaName="発掘" type="ソーサリー">あなたの墓地にあるマナ総量が３以下のクリーチャー・カード１枚を対象とし、それを戦場に戻す。
-サイクリング(２)（(２),このカードを捨てる：カード１枚を引く。）</card>
     <!-- M20 (新規) -->
     <card name="Embodiment of Agonies" jaName="苦悶の権化" type="クリーチャー ― デーモン" pt="0/0">飛行、接死
 苦悶の権化は、あなたの墓地にあり土地でないカードの中の異なるマナ・コスト１種類につき+1/+1カウンター１個が置かれた状態で戦場に出る。（たとえば、(２)(黒)と(１)(黒)(黒)は異なるマナ・コストである。）</card>
@@ -5235,8 +5235,6 @@ III ― 対戦相手１人を対象とする。そのプレイヤーがコント
     <card name="Witness the Future" jaName="未来の目撃" type="ソーサリー">プレイヤー１人と、そのプレイヤーの墓地にあるカード最大４枚を対象とする。そのプレイヤーは、それらのカードを自分のライブラリーに加えて切り直す。あなたはあなたのライブラリーの一番上からカード４枚を見て、そのうち１枚をあなたの手札に、残りをあなたのライブラリーの一番下に無作為の順番で置く。</card>
     
     <!-- VOW -->
-    <card name="Circle of Confinement" jaName="監禁の円環" type="エンチャント">監禁の円環が戦場に出たとき、対戦相手がコントロールしていてマナ総量が３以下のクリーチャー１体を対象とする。監禁の円環が戦場を離れるまでそれを追放する。
-対戦相手が監禁の円環によって追放されているカードと同じ名前を持つ吸血鬼・呪文を唱えるたび、あなたは２点のライフを得る。</card>
     <card name="Deadly Dancer" jaName="命取りの踊り手" type="クリーチャー ― 吸血鬼" pt="3/3" related="Alluring Suitor">トランプル
 このクリーチャーが命取りの踊り手に変身したとき、(赤)(赤)を加える。ターン終了時まで、このマナはステップやフェイズの終了に際して無くならない。
 (赤)(赤)：これでないクリーチャー１体を対象とする。ターン終了時まで、命取りの踊り手とそれはそれぞれ+1/+0の修整を受ける。</card>
@@ -5388,8 +5386,6 @@ III ― 対戦相手１人を対象とする。そのプレイヤーがコント
     <card name="Elspeth Resplendent" jaName="華やいだエルズペス" type="伝説のプレインズウォーカー ― エルズペス" pt="5">[+1]：クリーチャー最大１体を対象とする。それの上に+1/+1カウンター１個と、飛行や先制攻撃や絆魂や警戒のうち１種類のカウンター１個を置く。
 [-3]：あなたのライブラリーの一番上からカード７枚を見る。あなたはその中からマナ総量が３以下のパーマネント・カード１枚を、盾カウンター１個を置いた状態で戦場に出してもよい。残りをあなたのライブラリーの一番下に無作為の順番で置く。
 [-7]：飛行を持つ白の3/3の天使・クリーチャー・トークン５体を生成する。</card>
-    <card name="Knockout Blow" jaName="痛烈な一撃" type="インスタント">この呪文が赤のクリーチャーを対象とするなら、これを唱えるためのコストは(２)少なくなる。
-攻撃かブロックしているクリーチャー１体を対象とする。痛烈な一撃はそれに４点のダメージを与え、あなたは２点のライフを得る。</card>
     <card name="Rabble Rousing" jaName="大衆蜂起" type="エンチャント">秘匿５（このエンチャントが戦場に出たとき、あなたのライブラリーの一番上からカード５枚を見て、そのうち１枚を裏向きに追放し、その後残りを一番下に無作為の順番で置く。）
 あなたが１体以上のクリーチャーで攻撃するたび、その数に等しい数の緑白の1/1の市民・クリーチャー・トークンを生成する。その後、あなたが１０体以上のクリーチャーをコントロールしているなら、あなたはその追放されているカードをマナ・コストを支払うことなくプレイしてもよい。</card>
     
@@ -5443,7 +5439,6 @@ III ― 対戦相手１人を対象とする。そのプレイヤーがコント
     <card name="Raffine, Scheming Seer" jaName="策謀の予見者、ラフィーン" type="伝説のクリーチャー ― スフィンクス・デーモン" pt="1/4">飛行、護法(１)
 あなたが攻撃するたび、攻撃クリーチャー１体を対象とする。それは謀議Ｘを行う。Ｘは攻撃クリーチャーの数に等しい。（カードＸ枚を引き、その後カードＸ枚を捨てる。この方法で捨てて土地でないカード１枚につき、そのクリーチャーの上に+1/+1カウンター１個を置く。）</card>
     <card name="Riveteers Ascendancy" jaName="土建組一家の隆盛" type="エンチャント">あなたがクリーチャー１体を生け贄に捧げるたび、あなたの墓地にありマナ総量がそれ未満であるクリーチャー・カード１枚を対象とする。あなたはそれをタップ状態で戦場に戻してもよい。これは毎ターン１回のみ行える。</card>
-    <card name="Rocco, Cabaretti Caterer" jaName="舞台座一家の料理人、ロッコ" type="伝説のクリーチャー ― エルフ・ドルイド" pt="3/1">舞台座一家の料理人、ロッコが戦場に出たとき、あなたがこれを唱えていた場合、あなたは「あなたのライブラリーからマナ総量がＸ以下のクリーチャー・カード１枚を探し、戦場に出す。その後、ライブラリーを切り直す。」を選んでもよい。</card>
     <card name="Security Rhox" jaName="ロウクスの保安員" type="クリーチャー ― サイ・戦士" pt="5/4">あなたはこの呪文のマナ・コストを支払うのではなく、(赤)(緑)を支払ってもよい。この方法でこれを唱えるためには宝物からのマナでのみ支払える。</card>
     <card name="Soul of Emancipation" jaName="解脱の魂" type="クリーチャー ― アバター" pt="5/7">解脱の魂が戦場に出たとき、土地でもこれでもないパーマネント最大３つを対象とする。それらを破壊する。それらの各パーマネントにつきそれぞれ、それのコントローラーは飛行を持つ白の3/3の天使・クリーチャー・トークン１体を生成する。</card>
     <card name="Toluz, Clever Conductor" jaName="賢明な車掌、トルーズ" type="伝説のクリーチャー ― 人間・ならず者" pt="3/1">賢明な車掌、トルーズが戦場に出たとき、これは謀議する。（カード１枚を引き、その後カード１枚を捨てる。あなたが土地でないカードを捨てたなら、このクリーチャーの上に+1/+1カウンター１個を置く。）
@@ -5475,9 +5470,6 @@ III ― 対戦相手１人を対象とする。そのプレイヤーがコント
     <card name="Mask of the Schemer" jaName="策謀家の仮面" type="アーティファクト ― 装備品">装備しているクリーチャーがプレイヤー１人に戦闘ダメージを与えるたび、それは謀議Ｘを行う。Ｘはそれがそのプレイヤーに与えたダメージの点数に等しい。（あなたはカードＸ枚を引き、その後カードＸ枚を捨てる。この方法で捨てて土地でないカード１枚につき、そのクリーチャーの上に+1/+1カウンター１個を置く。）
 装備(２)</card>
     <card name="Sinister Concierge" jaName="悪意あるコンシェルジュ" type="クリーチャー ― 人間・ウィザード" pt="2/1">悪意あるコンシェルジュが死亡したとき、クリーチャー最大１体を対象とする。あなたは「これを追放し、その上に時間カウンター３個を置く。」を選んでもよい。そうしたなら、その対象にしたクリーチャーを追放し、それの上に時間カウンター３個を置く。この方法で追放されて待機を持っていないすべてのカードは待機を得る。（待機を持つ各カードにつき、それのオーナーのアップキープの開始時に、そのプレイヤーはそれの上から時間カウンター１個を取り除く。最後の１個を取り除いたとき、そのプレイヤーはそれをマナ・コストを支払うことなく唱える。それらのクリーチャー・呪文は速攻を持つ。）</card>
-    <card name="Skyway Robber" jaName="空道の盗人" type="クリーチャー ― 鳥・ならず者" pt="3/3">飛行
-脱出 ― (３)(青),あなたの墓地からこれでないカード５枚を追放する。（あなたはあなたの墓地からこのカードを脱出コストで唱えてもよい。）
-空道の盗人は「空道の盗人がプレイヤー１人に戦闘ダメージを与えるたび、あなたは空道の盗人によって追放されているカードのうちアーティファクトかインスタントかソーサリーである呪文１つをマナ・コストを支払うことなく唱えてもよい。」を持った状態で脱出する。</card>
     <card name="Storm of Forms" jaName="書類の嵐" type="インスタント">あなたがこの呪文を唱えたとき、あなたがコントロールしているすべてのパーマネントの中のカウンターの種類数１つにつきこれを１回コピーする。あなたはそれらのコピーの新しい対象を選んでもよい。
 土地でないパーマネント１つを対象とする。それをオーナーの手札に戻す。</card>
     
@@ -5504,7 +5496,6 @@ III ― 対戦相手１人を対象とする。そのプレイヤーがコント
 収賄者が戦場に出たとき、あなたがコントロールしているすべてのパーマネントの中のカウンター１種類につき、あなたは、+1/+1カウンターやその種類のカウンターのうち１個を収賄者の上に置いてもよい。</card>
     <card name="Caldaia Guardian" jaName="カルダイヤの守護者" type="クリーチャー ― 人間・兵士" pt="4/3">カルダイヤの守護者かあなたがコントロールしていてマナ総量が４以上でありこれでないクリーチャー１体が死亡するたび、緑白の1/1の市民・クリーチャー・トークン２体を生成する。
 奇襲(２)(緑)（あなたがこの呪文を奇襲コストで唱えたなら、これは速攻と「このクリーチャーが死亡したとき、カード１枚を引く。」を得る。次の終了ステップの開始時に、これを生け贄に捧げる。）</card>
-    <card name="Crash the Party" jaName="パーティー粉砕" type="インスタント">あなたがコントロールしているタップ状態のクリーチャー１体につき緑の4/4のサイ・戦士・クリーチャー・トークン１体をタップ状態で生成する。</card>
     <card name="Dodgy Jalopy" jaName="危険な廃車" type="アーティファクト ― 機体" pt="*/5">トランプル
 危険な廃車のパワーはあなたがコントロールしているすべてのクリーチャーの中の最大のマナ総量に等しい。
 搭乗３
@@ -5604,7 +5595,6 @@ III ― 対戦相手１人を対象とする。そのプレイヤーがコント
     <card name="Faerie Vandal" jaName="フェアリーの荒らし屋" type="クリーチャー ― フェアリー・ならず者" pt="1/2">瞬速
 飛行
 あなたが各ターンのあなたの２枚目のカードを引くたび、フェアリーの荒らし屋の上に+1/+1カウンター１個を置く。</card>
-    <card name="Disdainful Stroke" jaName="軽蔑的な一撃" type="インスタント">マナ総量が４以上の呪文１つを対象とする。それを打ち消す。</card>
     
     <!-- オラクル変更(DOM)の対象外 -->
     <card name="Firesong and Sunspeaker" jaName="ファイアソングとサンスピーカー" type="伝説のクリーチャー ― ミノタウルス・クレリック" pt="4/6">あなたがコントロールしていて赤でありインスタントかソーサリーである呪文は絆魂を持つ。
