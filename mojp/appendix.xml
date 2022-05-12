@@ -1547,8 +1547,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="U38  /  40 " sub="UMA" name="Raging Ravine" />
     <alt key="U39  /  40 " sub="UMA" name="Stirring Wildwood" />
     <alt key="U40  /  40 " sub="UMA" name="Urborg, Tomb of Yawgmoth" />
-    <!-- Eternal Night Card (MID, VOW, DBL) -->
-    <alt key=" " sub="MID" name="" />
+    <!-- Eternal Night Card (MID, VOW, DBL) / MID 312-325, VOW 318-328 -->
     <alt key="1 " sub="MID" name="Adeline, Resplendent Cathar" />
     <alt key="2a " sub="MID" name="Ambitious Farmhand" />
     <alt key="2b " sub="MID" name="Seasoned Cathar" />
@@ -1577,158 +1576,294 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="20 " sub="MID" name="Gavony Dawnguard" />
     <alt key="21 " sub="MID" name="Gavony Silversmith" />
     <alt key="22 " sub="MID" name="Gavony Trapper" />
-    <alt key="23 " sub="MID" name="" />
-    <alt key="24 " sub="MID" name="" />
-    <alt key="25 " sub="MID" name="" />
-    <alt key="26 " sub="MID" name="" />
+    <alt key="23 " sub="MID" name="Hedgewitch's Mask" />
+    <alt key="24 " sub="MID" name="Homestead Courage" />
+    <alt key="25 " sub="MID" name="Intrepid Adversary" />
+    <alt key="26 " sub="MID" name="Loyal Gryff" />
     <alt key="27a " sub="MID" name="Lunarch Veteran" />
     <alt key="27b " sub="MID" name="Luminous Phantom" />
     <alt key="28a " sub="MID" name="Mourning Patrol" />
     <alt key="28b " sub="MID" name="Morning Apparition" />
-    <alt key="29 " sub="MID" name="" />
-    <alt key="30 " sub="MID" name="" />
-    <alt key="31 " sub="MID" name="" />
-    <alt key="32 " sub="MID" name="" />
-    <alt key="33 " sub="MID" name="" />
-    <alt key="34 " sub="MID" name="" />
-    <alt key="35 " sub="MID" name="" />
-    <alt key="36 " sub="MID" name="" />
-    <alt key="37 " sub="MID" name="" />
-    <alt key="38 " sub="MID" name="" />
-    <alt key="39 " sub="MID" name="" />
-    <alt key="40 " sub="MID" name="" />
-    <alt key="41 " sub="MID" name="" />
+    <alt key="29 " sub="MID" name="Odric's Outrider" />
+    <alt key="30 " sub="MID" name="Ritual Guardian" />
+    <alt key="31 " sub="MID" name="Ritual of Hope" />
+    <alt key="32 " sub="MID" name="Search Party Captain" />
+    <alt key="33 " sub="MID" name="Sigarda's Splendor" />
+    <alt key="34 " sub="MID" name="Sigardian Savior" />
+    <alt key="35 " sub="MID" name="Soul-Guide Gryff" />
+    <alt key="36 " sub="MID" name="Sungold Barrage" />
+    <alt key="37 " sub="MID" name="Sungold Sentinel" />
+    <alt key="38 " sub="MID" name="Sunset Revelry" />
+    <alt key="39 " sub="MID" name="Thraben Exorcism" />
+    <alt key="40 " sub="MID" name="Unruly Mob" />
+    <alt key="41 " sub="MID" name="Vanquish the Horde" />
     <alt key="42a " sub="MID" name="Baithook Angler" />
     <alt key="42b " sub="MID" name="Hook-Haunt Drifter" />
-    <alt key="43 " sub="MID" name="" />
-    <alt key="44 " sub="MID" name="" />
+    <alt key="43 " sub="MID" name="Component Collector" />
+    <alt key="44 " sub="MID" name="Consider" />
     <alt key="45a " sub="MID" name="Covetous Castaway" />
     <alt key="45b " sub="MID" name="Ghostly Castigator" />
-    <alt key="46 " sub="MID" name="" />
+    <alt key="46 " sub="MID" name="Curse of Surveillance" />
     <alt key="47a " sub="MID" name="Delver of Secrets" />
     <alt key="47b " sub="MID" name="Insectile Aberration" />
-    <alt key="48 " sub="MID" name="" />
-    <alt key="49 " sub="MID" name="" />
-    <alt key="50 " sub="MID" name="" />
-    <alt key="51 " sub="MID" name="" />
-    <alt key="52 " sub="MID" name="" />
-    <alt key="53 " sub="MID" name="" />
-    <alt key="54 " sub="MID" name="" />
+    <alt key="48 " sub="MID" name="Devious Cover-Up" />
+    <alt key="49 " sub="MID" name="Dissipate" />
+    <alt key="50 " sub="MID" name="Drownyard Amalgam" />
+    <alt key="51 " sub="MID" name="Fading Hope" />
+    <alt key="52 " sub="MID" name="Falcon Abomination" />
+    <alt key="53 " sub="MID" name="Firmament Sage" />
+    <alt key="54 " sub="MID" name="Flip the Switch" />
     <alt key="55a " sub="MID" name="Galedrifter" />
     <alt key="55b " sub="MID" name="Waildrifter" />
-    <alt key="56 " sub="MID" name="" />
-    <alt key="57 " sub="MID" name="" />
-    <alt key="58 " sub="MID" name="" />
-    <alt key="59 " sub="MID" name="" />
-    <alt key="60 " sub="MID" name="" />
+    <alt key="56 " sub="MID" name="Geistwave" />
+    <alt key="57 " sub="MID" name="Grafted Identity" />
+    <alt key="58 " sub="MID" name="Larder Zombie" />
+    <alt key="59 " sub="MID" name="Lier, Disciple of the Drowned" />
+    <alt key="60 " sub="MID" name="Locked in the Cemetery" />
     <alt key="61a " sub="MID" name="Malevolent Hermit" />
     <alt key="61b " sub="MID" name="Benevolent Geist" />
-    <alt key="62 " sub="MID" name="" />
+    <alt key="62 " sub="MID" name="Memory Deluge" />
     <alt key="63a " sub="MID" name="Mysterious Tome" />
     <alt key="63b " sub="MID" name="Chilling Chronicle" />
-    <alt key="64 " sub="MID" name="" />
-    <alt key="65 " sub="MID" name="" />
-    <alt key="66 " sub="MID" name="" />
-    <alt key="67 " sub="MID" name="" />
+    <alt key="64 " sub="MID" name="Nebelgast Intruder" />
+    <alt key="65 " sub="MID" name="Ominous Roost" />
+    <alt key="66 " sub="MID" name="Organ Hoarder" />
+    <alt key="67 " sub="MID" name="Otherworldly Gaze" />
     <alt key="68a " sub="MID" name="Overwhelmed Archivist" />
     <alt key="68b " sub="MID" name="Archive Haunt" />
-    <alt key="69 " sub="MID" name="" />
-    <alt key="70s " sub="MID" name="" />
+    <alt key="69 " sub="MID" name="Patrician Geist" />
+    <alt key="70 " sub="MID" name="Phantom Carriage" />
     <alt key="71a " sub="MID" name="Poppet Stitcher" />
     <alt key="71b " sub="MID" name="Poppet Factory" />
-    <alt key="72 " sub="MID" name="" />
-    <alt key="73 " sub="MID" name="" />
-    <alt key="74 " sub="MID" name="" />
-    <alt key="75 " sub="MID" name="" />
-    <alt key="76 " sub="MID" name="" />
-    <alt key="77 " sub="MID" name="" />
-    <alt key="78 " sub="MID" name="" />
-    <alt key="79 " sub="MID" name="" />
+    <alt key="72 " sub="MID" name="Revenge of the Drowned" />
+    <alt key="73 " sub="MID" name="Secrets of the Key" />
+    <alt key="74 " sub="MID" name="Shipwreck Sifters" />
+    <alt key="75 " sub="MID" name="Skaab Wrangler" />
+    <alt key="76 " sub="MID" name="Sludge Monster" />
+    <alt key="77 " sub="MID" name="Spectral Adversary" />
+    <alt key="78 " sub="MID" name="Startle" />
+    <alt key="79 " sub="MID" name="Stormrider Spirit" />
     <alt key="80a " sub="MID" name="Suspicious Stowaway" />
     <alt key="80b " sub="MID" name="Seafaring Werewolf" />
-    <alt key="81 " sub="MID" name="" />
-    <alt key="82 " sub="MID" name="" />
-    <alt key="83 " sub="MID" name="" />
-    <alt key="84 " sub="MID" name="" />
+    <alt key="81 " sub="MID" name="Triskaidekaphile" />
+    <alt key="82 " sub="MID" name="Unblinking Observer" />
+    <alt key="83 " sub="MID" name="Vivisection" />
+    <alt key="84 " sub="MID" name="Arrogant Outlaw" />
     <alt key="85a " sub="MID" name="Baneblade Scoundrel" />
     <alt key="85b " sub="MID" name="Baneclaw Marauder" />
-    <alt key="86 " sub="MID" name="" />
-    <alt key="87 " sub="MID" name="" />
-    <alt key="88 " sub="MID" name="" />
-    <alt key="89 " sub="MID" name="" />
-    <alt key="90 " sub="MID" name="" />
-    <alt key="91 " sub="MID" name="" />
+    <alt key="86 " sub="MID" name="Bat Whisperer" />
+    <alt key="87 " sub="MID" name="Bladebrand" />
+    <alt key="88 " sub="MID" name="Blood Pact" />
+    <alt key="89 " sub="MID" name="Bloodline Culling" />
+    <alt key="90 " sub="MID" name="Bloodtithe Collector" />
+    <alt key="91 " sub="MID" name="Champion of the Perished" />
     <alt key="92a " sub="MID" name="Covert Cutpurse" />
     <alt key="92b " sub="MID" name="Covetous Geist" />
-    <alt key="93 " sub="MID" name="" />
+    <alt key="93 " sub="MID" name="Crawl from the Cellar" />
     <alt key="94a " sub="MID" name="Curse of Leeches" />
     <alt key="94b " sub="MID" name="Leeching Lurker" />
-    <alt key="95 " sub="MID" name="" />
-    <alt key="96 " sub="MID" name="" />
-    <alt key="97 " sub="MID" name="" />
-    <alt key="98 " sub="MID" name="" />
-    <alt key="99 " sub="MID" name="" />
+    <alt key="95 " sub="MID" name="Defenestrate" />
+    <alt key="96 " sub="MID" name="Diregraf Horde" />
+    <alt key="97 " sub="MID" name="Dreadhound" />
+    <alt key="98 " sub="MID" name="Duress" />
+    <alt key="99 " sub="MID" name="Eaten Alive" />
     <alt key="100a " sub="MID" name="Ecstatic Awakener" />
     <alt key="100b " sub="MID" name="Awoken Demon" />
-    <alt key="101 " sub="MID" name="" />
-    <alt key="102 " sub="MID" name="" />
-    <alt key="103 " sub="MID" name="" />
+    <alt key="101 " sub="MID" name="Foul Play" />
+    <alt key="102 " sub="MID" name="Ghoulish Procession" />
+    <alt key="103 " sub="MID" name="Gisa, Glorious Resurrector" />
     <alt key="104a " sub="MID" name="Graveyard Trespasser" />
     <alt key="104b " sub="MID" name="Graveyard Glutton" />
     <alt key="105a " sub="MID" name="Heirloom Mirror" />
     <alt key="105b " sub="MID" name="Inherited Fiend" />
+    <alt key="106 " sub="MID" name="Hobbling Zombie" />
+    <alt key="107 " sub="MID" name="Infernal Grasp" />
+    <alt key="108 " sub="MID" name="Jadar, Ghoulcaller of Nephalia" />
     <alt key="109a " sub="MID" name="Jerren, Corrupted Bishop" />
     <alt key="109b " sub="MID" name="Ormendahl, the Corrupter" />
+    <alt key="110 " sub="MID" name="Lord of the Forsaken" />
+    <alt key="111 " sub="MID" name="Mask of Griselbrand" />
+    <alt key="112 " sub="MID" name="The Meathook Massacre" />
+    <alt key="113 " sub="MID" name="Morbid Opportunist" />
+    <alt key="114 " sub="MID" name="Morkrut Behemoth" />
+    <alt key="115 " sub="MID" name="Necrosynthesis" />
+    <alt key="116 " sub="MID" name="No Way Out" />
+    <alt key="117 " sub="MID" name="Novice Occultist" />
+    <alt key="118 " sub="MID" name="Olivia's Midnight Ambush" />
+    <alt key="119 " sub="MID" name="Rotten Reunion" />
     <alt key="120a " sub="MID" name="Shady Traveler" />
     <alt key="120b " sub="MID" name="Stalking Predator" />
+    <alt key="121 " sub="MID" name="Siege Zombie" />
+    <alt key="122 " sub="MID" name="Slaughter Specialist" />
+    <alt key="123 " sub="MID" name="Stromkirk Bloodthief" />
+    <alt key="124 " sub="MID" name="Tainted Adversary" />
+    <alt key="125 " sub="MID" name="Vampire Interloper" />
     <alt key="126a " sub="MID" name="Vengeful Strangler" />
     <alt key="126b " sub="MID" name="Strangling Grasp" />
+    <alt key="127 " sub="MID" name="" />
+    <alt key="128 " sub="MID" name="" />
+    <alt key="129 " sub="MID" name="" />
+    <alt key="130 " sub="MID" name="" />
+    <alt key="131 " sub="MID" name="" />
+    <alt key="132 " sub="MID" name="" />
+    <alt key="133 " sub="MID" name="" />
+    <alt key="134 " sub="MID" name="" />
+    <alt key="135 " sub="MID" name="" />
+    <alt key="136 " sub="MID" name="" />
+    <alt key="137 " sub="MID" name="" />
+    <alt key="138 " sub="MID" name="" />
     <alt key="139a " sub="MID" name="Fangblade Brigand" />
     <alt key="139b " sub="MID" name="Fangblade Eviscerator" />
+    <alt key="140 " sub="MID" name="" />
     <alt key="141a " sub="MID" name="Flame Channeler" />
     <alt key="141b " sub="MID" name="Embodiment of Flame" />
+    <alt key="142 " sub="MID" name="" />
     <alt key="143a " sub="MID" name="Harvesttide Infiltrator" />
     <alt key="143b " sub="MID" name="Harvesttide Assailant" />
+    <alt key="144 " sub="MID" name="" />
+    <alt key="145 " sub="MID" name="" />
+    <alt key="146 " sub="MID" name="" />
+    <alt key="147 " sub="MID" name="" />
+    <alt key="148 " sub="MID" name="" />
+    <alt key="149 " sub="MID" name="" />
+    <alt key="150 " sub="MID" name="" />
+    <alt key="151 " sub="MID" name="" />
+    <alt key="152 " sub="MID" name="" />
+    <alt key="153 " sub="MID" name="" />
+    <alt key="154 " sub="MID" name="" />
+    <alt key="155 " sub="MID" name="" />
+    <alt key="156 " sub="MID" name="" />
     <alt key="157a " sub="MID" name="Reckless Stormseeker" />
     <alt key="157b " sub="MID" name="Storm-Charged Slasher" />
+    <alt key="158 " sub="MID" name="" />
     <alt key="159a " sub="MID" name="Smoldering Egg" />
     <alt key="159b " sub="MID" name="Ashmouth Dragon" />
     <alt key="160a " sub="MID" name="Spellrune Painter" />
     <alt key="160b " sub="MID" name="Spellrune Howler" />
+    <alt key="161 " sub="MID" name="" />
+    <alt key="162 " sub="MID" name="" />
     <alt key="163a " sub="MID" name="Tavern Ruffian" />
     <alt key="163b " sub="MID" name="Tavern Smasher" />
+    <alt key="164 " sub="MID" name="" />
     <alt key="165a " sub="MID" name="Village Watch" />
     <alt key="165b " sub="MID" name="Village Reavers" />
+    <alt key="166 " sub="MID" name="" />
+    <alt key="167 " sub="MID" name="" />
+    <alt key="168 " sub="MID" name="" />
     <alt key="169a " sub="MID" name="Bird Admirer" />
     <alt key="169b " sub="MID" name="Wing Shredder" />
+    <alt key="170 " sub="MID" name="" />
+    <alt key="171 " sub="MID" name="" />
+    <alt key="172 " sub="MID" name="" />
+    <alt key="173 " sub="MID" name="" />
     <alt key="174a " sub="MID" name="Burly Breaker" />
     <alt key="174b " sub="MID" name="Dire-Strain Demolisher" />
+    <alt key="175 " sub="MID" name="" />
+    <alt key="176 " sub="MID" name="" />
+    <alt key="177 " sub="MID" name="" />
+    <alt key="178 " sub="MID" name="" />
+    <alt key="179 " sub="MID" name="" />
+    <alt key="180 " sub="MID" name="" />
     <alt key="181a " sub="MID" name="Deathbonnet Sprout" />
     <alt key="181b " sub="MID" name="Deathbonnet Hulk" />
+    <alt key="182 " sub="MID" name="" />
+    <alt key="183 " sub="MID" name="" />
+    <alt key="184 " sub="MID" name="" />
+    <alt key="185 " sub="MID" name="" />
+    <alt key="186 " sub="MID" name="" />
     <alt key="187a " sub="MID" name="Hound Tamer" />
     <alt key="187b " sub="MID" name="Untamed Pup" />
+    <alt key="188 " sub="MID" name="" />
+    <alt key="189 " sub="MID" name="" />
     <alt key="190a " sub="MID" name="Outland Liberator" />
     <alt key="190b " sub="MID" name="Frenzied Trapbreaker" />
+    <alt key="191 " sub="MID" name="" />
+    <alt key="192 " sub="MID" name="" />
+    <alt key="193 " sub="MID" name="" />
+    <alt key="194 " sub="MID" name="" />
+    <alt key="195 " sub="MID" name="" />
+    <alt key="196 " sub="MID" name="" />
+    <alt key="197 " sub="MID" name="" />
+    <alt key="198 " sub="MID" name="" />
+    <alt key="199 " sub="MID" name="" />
+    <alt key="200 " sub="MID" name="" />
+    <alt key="201 " sub="MID" name="" />
+    <alt key="202 " sub="MID" name="" />
     <alt key="203a " sub="MID" name="Tireless Hauler" />
     <alt key="203b " sub="MID" name="Dire-Strain Brawler" />
     <alt key="204a " sub="MID" name="Tovolar's Huntmaster" />
     <alt key="204b " sub="MID" name="Tovolar's Packleader" />
+    <alt key="205 " sub="MID" name="" />
+    <alt key="206 " sub="MID" name="" />
+    <alt key="207 " sub="MID" name="" />
+    <alt key="208 " sub="MID" name="" />
+    <alt key="209 " sub="MID" name="" />
+    <alt key="210 " sub="MID" name="" />
     <alt key="211a " sub="MID" name="Arlinn, the Pack's Hope" />
     <alt key="211b " sub="MID" name="Arlinn, the Moon's Fury" />
+    <alt key="212 " sub="MID" name="" />
+    <alt key="213 " sub="MID" name="" />
+    <alt key="214 " sub="MID" name="" />
+    <alt key="215 " sub="MID" name="" />
+    <alt key="216 " sub="MID" name="" />
     <alt key="217a " sub="MID" name="Dennick, Pious Apprentice" />
     <alt key="217b " sub="MID" name="Dennick, Pious Apparition" />
     <alt key="218a " sub="MID" name="Devoted Grafkeeper" />
     <alt key="218b " sub="MID" name="Departed Soulkeeper" />
+    <alt key="219 " sub="MID" name="" />
+    <alt key="220 " sub="MID" name="" />
+    <alt key="221 " sub="MID" name="" />
+    <alt key="222 " sub="MID" name="" />
+    <alt key="223 " sub="MID" name="" />
+    <alt key="224 " sub="MID" name="" />
+    <alt key="225 " sub="MID" name="" />
+    <alt key="226 " sub="MID" name="" />
+    <alt key="227 " sub="MID" name="" />
+    <alt key="228 " sub="MID" name="" />
+    <alt key="229 " sub="MID" name="" />
+    <alt key="230 " sub="MID" name="" />
     <alt key="231a " sub="MID" name="Kessig Naturalist" />
     <alt key="231b " sub="MID" name="Lord of the Ulvenwald" />
+    <alt key="232 " sub="MID" name="" />
     <alt key="233a " sub="MID" name="Ludevic, Necrogenius" />
     <alt key="233b " sub="MID" name="Olag, Ludevic's Hubris" />
+    <alt key="234 " sub="MID" name="" />
+    <alt key="235 " sub="MID" name="" />
+    <alt key="236 " sub="MID" name="" />
+    <alt key="237 " sub="MID" name="" />
+    <alt key="238 " sub="MID" name="" />
+    <alt key="239 " sub="MID" name="" />
+    <alt key="240 " sub="MID" name="" />
+    <alt key="241 " sub="MID" name="" />
+    <alt key="242 " sub="MID" name="" />
+    <alt key="243 " sub="MID" name="" />
+    <alt key="244 " sub="MID" name="" />
+    <alt key="245 " sub="MID" name="" />
     <alt key="246a " sub="MID" name="Tovolar, Dire Overlord" />
     <alt key="246b " sub="MID" name="Tovolar, the Midnight Scourge" />
+    <alt key="247 " sub="MID" name="" />
+    <alt key="248 " sub="MID" name="" />
+    <alt key="249 " sub="MID" name="" />
+    <alt key="250 " sub="MID" name="" />
+    <alt key="251 " sub="MID" name="" />
+    <alt key="252 " sub="MID" name="" />
+    <alt key="253 " sub="MID" name="" />
+    <alt key="254 " sub="MID" name="" />
+    <alt key="255 " sub="MID" name="" />
     <alt key="256a " sub="MID" name="Mystic Skull" />
     <alt key="256b " sub="MID" name="Mystic Monstrosity" />
+    <alt key="257 " sub="MID" name="" />
+    <alt key="258 " sub="MID" name="" />
+    <alt key="259 " sub="MID" name="" />
+    <alt key="260 " sub="MID" name="" />
+    <alt key="261 " sub="MID" name="" />
+    <alt key="262 " sub="MID" name="" />
+    <alt key="263 " sub="MID" name="" />
     <alt key="264a " sub="MID" name="Hostile Hostel" />
     <alt key="264b " sub="MID" name="Creeping Inn" />
+    <alt key="265 " sub="MID" name="" />
+    <alt key="266 " sub="MID" name="" />
+    <alt key="267 " sub="MID" name="" />
     <alt key="312 " sub="MID" name="Adeline, Resplendent Cathar" />
     <alt key="313 " sub="MID" name="Lier, Disciple of the Drowned" />
     <alt key="314 " sub="MID" name="Gisa, Glorious Resurrector" />
