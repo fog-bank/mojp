@@ -1882,24 +1882,62 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="324 " sub="MID" name="Slogurk, the Overslime" />
     <alt key="325 " sub="MID" name="Vadrik, Astral Archmage" />
     
+    <alt key="268 " sub="VOW" name="Adamant Will" />
+    <alt key="269 " sub="VOW" name="Angelic Quartermaster" />
+    <alt key="270 " sub="VOW" name="Arm the Cathars" />
+    <alt key="271 " sub="VOW" name="Bride's Gown" />
+    <alt key="272 " sub="VOW" name="By Invitation Only" />
+    <alt key="273 " sub="VOW" name="Cemetery Protector" />
+    <alt key="274 " sub="VOW" name="Circle of Confinement" />
+    <alt key="275 " sub="VOW" name="Dawnhart Geist" />
     <alt key="276a " sub="VOW" name="Distracting Geist" />
     <alt key="276b " sub="VOW" name="Clever Distraction" />
     <alt key="277a " sub="VOW" name="Drogskol Infantry" />
     <alt key="277b " sub="VOW" name="Drogskol Armaments" />
+    <alt key="278 " sub="VOW" name="Estwald Shieldbasher" />
     <alt key="279a " sub="VOW" name="Faithbound Judge" />
     <alt key="279b " sub="VOW" name="Sinner's Judgment" />
+    <alt key="280 " sub="VOW" name="Fierce Retribution" />
+    <alt key="281 " sub="VOW" name="Fleeting Spirit" />
+    <alt key="282 " sub="VOW" name="Gryff Rider" />
+    <alt key="283 " sub="VOW" name="Gryffwing Cavalry" />
+    <alt key="284 " sub="VOW" name="Hallowed Haunting" />
+    <alt key="285 " sub="VOW" name="Heron of Hope" />
+    <alt key="286 " sub="VOW" name="Heron-Blessed Geist" />
+    <alt key="287 " sub="VOW" name="Hopeful Initiate" />
     <alt key="288a " sub="VOW" name="Katilda, Dawnhart Martyr" />
     <alt key="288b " sub="VOW" name="Katilda's Rising Dawn" />
     <alt key="289a " sub="VOW" name="Kindly Ancestor" />
     <alt key="289b " sub="VOW" name="Ancestor's Embrace" />
+    <alt key="290 " sub="VOW" name="Lantern Flare" />
+    <alt key="291 " sub="VOW" name="Militia Rallier" />
+    <alt key="292 " sub="VOW" name="Nebelgast Beguiler" />
+    <alt key="293 " sub="VOW" name="Nurturing Presence" />
+    <alt key="294 " sub="VOW" name="Ollenbock Escort" />
     <alt key="295a " sub="VOW" name="Panicked Bystander" />
     <alt key="295b " sub="VOW" name="Cackling Culprit" />
+    <alt key="296 " sub="VOW" name="Parish-Blade Trainee" />
+    <alt key="297 " sub="VOW" name="Piercing Light" />
     <alt key="298a " sub="VOW" name="Radiant Grace" />
     <alt key="298b " sub="VOW" name="Radiant Restraints" />
+    <alt key="299 " sub="VOW" name="Resistance Squad" />
+    <alt key="300 " sub="VOW" name="Sanctify" />
+    <alt key="301 " sub="VOW" name="Savior of Ollenbock" />
+    <alt key="302 " sub="VOW" name="Sigarda's Imprisonment" />
+    <alt key="303 " sub="VOW" name="Sigarda's Summons" />
+    <alt key="304 " sub="VOW" name="Supernatural Rescue" />
+    <alt key="305 " sub="VOW" name="Thalia, Guardian of Thraben" />
+    <alt key="306 " sub="VOW" name="Traveling Minister" />
     <alt key="307a " sub="VOW" name="Twinblade Geist" />
     <alt key="307b " sub="VOW" name="Twinblade Invocation" />
+    <alt key="308 " sub="VOW" name="Unholy Officiant" />
+    <alt key="309 " sub="VOW" name="Valorous Stance" />
+    <alt key="310 " sub="VOW" name="Vampire Slayer" />
+    <alt key="311 " sub="VOW" name="Voice of the Blessed" />
     <alt key="312a " sub="VOW" name="Wedding Announcement" />
     <alt key="312b " sub="VOW" name="Wedding Festivity" />
+    <alt key="313 " sub="VOW" name="Welcoming Vampire" />
+    <alt key="314 " sub="VOW" name="" />
     <alt key="315a " sub="VOW" name="Binding Geist" />
     <alt key="315b " sub="VOW" name="Spectral Binding" />
     <alt key="316a " sub="VOW" name="Biolume Egg" />
@@ -1922,16 +1960,32 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="328 " sub="VOW" name="Torens, Fist of the Angels" />
     <alt key="329a " sub="VOW" name="Gutter Skulker" />
     <alt key="329b " sub="VOW" name="Gutter Shortcut" />
+    <alt key="330 " sub="VOW" name="" />
+    <alt key="331 " sub="VOW" name="" />
     <alt key="332a " sub="VOW" name="Jacob Hauken, Inspector" />
     <alt key="332b " sub="VOW" name="Hauken's Insight" />
     <alt key="333a " sub="VOW" name="Lantern Bearer" />
     <alt key="333b " sub="VOW" name="Lanterns' Lift" />
+    <alt key="334 " sub="VOW" name="" />
     <alt key="335a " sub="VOW" name="Mirrorhall Mimic" />
     <alt key="335b " sub="VOW" name="Ghastly Mimicry" />
     <alt key="336a " sub="VOW" name="Mischievous Catgeist" />
     <alt key="336b " sub="VOW" name="Catlike Curiosity" />
+    <alt key="337 " sub="VOW" name="" />
+    <alt key="338 " sub="VOW" name="" />
+    <alt key="339 " sub="VOW" name="" />
+    <alt key="340 " sub="VOW" name="" />
+    <alt key="341 " sub="VOW" name="" />
+    <alt key="342 " sub="VOW" name="" />
+    <alt key="343 " sub="VOW" name="" />
+    <alt key="344 " sub="VOW" name="" />
+    <alt key="345 " sub="VOW" name="" />
     <alt key="346a " sub="VOW" name="Soulcipher Board" />
     <alt key="346b " sub="VOW" name="Cipherbound Spirit" />
+    <alt key="347 " sub="VOW" name="" />
+    <alt key="348 " sub="VOW" name="" />
+    <alt key="349 " sub="VOW" name="" />
+    <alt key="350 " sub="VOW" name="" />
     <alt key="364a " sub="VOW" name="Bloodsworn Squire" />
     <alt key="364b " sub="VOW" name="Bloodsworn Knight" />
     <alt key="366a " sub="VOW" name="Catapult Fodder" />
@@ -1996,6 +2050,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="513b " sub="VOW" name="Krothuss, Lord of the Deep" />
     <alt key="523a " sub="VOW" name="Foreboding Statue" />
     <alt key="523b " sub="VOW" name="Forsaken Thresher" />
+    <alt key="535 " sub="VOW" name="" />
     <alt key=" " sub="VOW" name="" />
     <!-- ZNE -->
     <alt key="01  /  30 " sub="ZNE" name="Flooded Strand" />
