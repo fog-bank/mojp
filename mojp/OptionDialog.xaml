@@ -169,7 +169,7 @@
                     <CheckBox.ToolTip>
                         <TextBlock Margin="0">
                             チェックを外すと、氷雪でない基本の平地、島、沼、山、森には反応しなくなります。<LineBreak />
-                            一部のフルアート版の基本土地にはこの設定に関わらず反応しません。
+                            前のカードの表示のままになるか、タイミングによっては、空表示になります。
                         </TextBlock>
                     </CheckBox.ToolTip>
                     <StackPanel Orientation="Horizontal">

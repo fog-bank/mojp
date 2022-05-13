@@ -546,8 +546,10 @@ namespace Mojp
 
                     var cloneCard = card.Clone();
                     foreach (var tup in regexes)
+                    {
                         Debug.WriteLineIf(ReplaceByRegex(cloneCard, tup.Item1, tup.Item2, tup.Item3),
                             card.Name + " には正規表現による検索（" + tup.Item2 + "）に一致する箇所があります。");
+                    }
                 }
             }
 
@@ -693,7 +695,8 @@ namespace Mojp
                 }
 
                 var newCard = FromXml(node);
-                Debug.WriteLineIf(newCard.RelatedCardName != null && !newCard.RelatedCardNames.All(cards.ContainsKey), newCard.Name + " の関連カードが見つかりません。");
+                Debug.WriteLineIf(newCard.RelatedCardName != null && !newCard.RelatedCardNames.All(cards.ContainsKey),
+                    newCard.Name + " の関連カードが見つかりません。");
                 Debug.WriteLineIf(!cardNamesToReplace.Add(newCard.Name), newCard.Name + " のテキスト置換を複数回行おうとしています。");
 
                 if (cards.TryGetValue(newCard.Name, out var oldCard))

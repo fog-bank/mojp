@@ -322,8 +322,8 @@ namespace Mojp
                 {
                     foreach (string text in IterateTextBlocks())
                     {
-                        // コレクター番号かぶり対策
-                        if (App.Cards.TryGetValue(text, out var card) && !IsKeywordText(text))
+                        // コレクター番号かぶり対策 (基本氷雪土地は MH1 対策)
+                        if (App.Cards.TryGetValue(text, out var card) && !IsKeywordText(text) && altKey != "Basic Snow Land")
                         {
                             ViewCard(card);
                             return true;
@@ -377,18 +377,19 @@ namespace Mojp
                 Debug.WriteLine(card.Name);
 
                 // 設定によっては基本土地 5 種の場合に表示を変えないようにする
-                if (!ViewModel.ShowBasicLands)
-                {
-                    switch (card.Name)
-                    {
-                        case "Plains":
-                        case "Island":
-                        case "Swamp":
-                        case "Mountain":
-                        case "Forest":
-                            return;
-                    }
-                }
+                // ViewModel.InvokeSetCard 側に移動し、altkey の場合でもオプション適用するように変更
+                //if (!ViewModel.ShowBasicLands)
+                //{
+                //    switch (card.Name)
+                //    {
+                //        case "Plains":
+                //        case "Island":
+                //        case "Swamp":
+                //        case "Mountain":
+                //        case "Forest":
+                //            return;
+                //    }
+                //}
 
                 // 見つかったカードが現在表示されているカードコレクションに含まれているかどうかを調べる
                 // 全体走査中のため、不要 (since VOW)
@@ -442,6 +443,7 @@ namespace Mojp
                     "Release" => IsUginFatePromo(),
                     "Oubliette" => ContainsText("Trapped Entry"),
                     "Vigilance" => ContainsText("Ikiral Outrider", "IKO"),
+                    //"Plains" or "Island" or "Swamp" or "Mountain" or "Forest" => ContainsText("MH1"),
                     _ => false,
                 };
 

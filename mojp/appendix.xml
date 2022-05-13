@@ -791,14 +791,85 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <wiki name="Black Lotus" wiki="Black Lotus" />
     <wiki name="Braingeyser" wiki="Braingeyser" />
     <wiki name="Captivating Vampire" wiki="蟲惑的な吸血鬼/Captivating Vampire" />
-    <!-- UND -->
-    <!--<alt key="88  /  96 " sub="UND" name="Plains" />
+    <!-- 基本土地 -->
+    <alt key="Basic Snow Land" sub="Plains" name="Snow-Covered Plains" /> <!-- MH1 -->
+    <alt key="Basic Snow Land" sub="Island" name="Snow-Covered Island" />
+    <alt key="Basic Snow Land" sub="Swamp" name="Snow-Covered Swamp" />
+    <alt key="Basic Snow Land" sub="Mountain" name="Snow-Covered Mountain" />
+    <alt key="Basic Snow Land" sub="Forest" name="Snow-Covered Forest" />
+    <alt key="119 " sub="SL2" name="Swamp" />
+    <alt key="539 " sub="SL2" name="Swamp" />
+    <alt key="239 " sub="SLD" name="Plains" />
+    <alt key="240 " sub="SLD" name="Island" />
+    <alt key="241 " sub="SLD" name="Swamp" />
+    <alt key="242 " sub="SLD" name="Mountain" />
+    <alt key="243 " sub="SLD" name="Forest" />
+    <alt key="325 " sub="SLD" name="Snow-Covered Plains" />
+    <alt key="326 " sub="SLD" name="Snow-Covered Island" />
+    <alt key="327 " sub="SLD" name="Snow-Covered Swamp" />
+    <alt key="328 " sub="SLD" name="Snow-Covered Mountain" />
+    <alt key="329 " sub="SLD" name="Snow-Covered Forest" />
+    <alt key="250  /  254 " sub="THB" name="Plains" />
+    <alt key="251  /  254 " sub="THB" name="Island" />
+    <alt key="252  /  254 " sub="THB" name="Swamp" />
+    <alt key="253  /  254 " sub="THB" name="Mountain" />
+    <alt key="254  /  254 " sub="THB" name="Forest" />
+    <alt key="88  /  96 " sub="UND" name="Plains" />
     <alt key="90  /  96 " sub="UND" name="Island" />
     <alt key="92  /  96 " sub="UND" name="Swamp" />
     <alt key="94  /  96 " sub="UND" name="Mountain" />
-    <alt key="96  /  96 " sub="UND" name="Forest" />-->
+    <alt key="96  /  96 " sub="UND" name="Forest" />
+    <alt key="373 " sub="2XM" name="Plains" />
+    <alt key="374 " sub="2XM" name="Plains" />
+    <alt key="375 " sub="2XM" name="Island" />
+    <alt key="376 " sub="2XM" name="Island" />
+    <alt key="377 " sub="2XM" name="Swamp" />
+    <alt key="378 " sub="2XM" name="Swamp" />
+    <alt key="379 " sub="2XM" name="Mountain" />
+    <alt key="380 " sub="2XM" name="Mountain" />
+    <alt key="381 " sub="2XM" name="Forest" />
+    <alt key="382 " sub="2XM" name="Forest" />
+    <alt key="268  /  277 " sub="MID" name="Plains" />
+    <alt key="269  /  277 " sub="MID" name="Plains" />
+    <alt key="270  /  277 " sub="MID" name="Island" />
+    <alt key="271  /  277 " sub="MID" name="Island" />
+    <alt key="272  /  277 " sub="MID" name="Swamp" />
+    <alt key="273  /  277 " sub="MID" name="Swamp" />
+    <alt key="274  /  277 " sub="MID" name="Mountain" />
+    <alt key="275  /  277 " sub="MID" name="Mountain" />
+    <alt key="276  /  277 " sub="MID" name="Forest" />
+    <alt key="277  /  277 " sub="MID" name="Forest" />
+    <alt key="268  /  277 " sub="VOW" name="Plains" />
+    <alt key="269  /  277 " sub="VOW" name="Plains" />
+    <alt key="270  /  277 " sub="VOW" name="Island" />
+    <alt key="271  /  277 " sub="VOW" name="Island" />
+    <alt key="272  /  277 " sub="VOW" name="Swamp" />
+    <alt key="273  /  277 " sub="VOW" name="Swamp" />
+    <alt key="274  /  277 " sub="VOW" name="Mountain" />
+    <alt key="275  /  277 " sub="VOW" name="Mountain" />
+    <alt key="276  /  277 " sub="VOW" name="Forest" />
+    <alt key="277  /  277 " sub="VOW" name="Forest" />
+    <alt key="293  /  302 " sub="NEO" name="Plains" />
+    <alt key="294  /  302 " sub="NEO" name="Plains" />
+    <alt key="295  /  302 " sub="NEO" name="Island" />
+    <alt key="296  /  302 " sub="NEO" name="Island" />
+    <alt key="297  /  302 " sub="NEO" name="Swamp" />
+    <alt key="298  /  302 " sub="NEO" name="Swamp" />
+    <alt key="299  /  302 " sub="NEO" name="Mountain" />
+    <alt key="300  /  302 " sub="NEO" name="Mountain" />
+    <alt key="301  /  302 " sub="NEO" name="Forest" />
+    <alt key="302  /  302 " sub="NEO" name="Forest" />
+    <alt key="272  /  281 " sub="SNC" name="Plains" />
+    <alt key="273  /  281 " sub="SNC" name="Plains" />
+    <alt key="274  /  281 " sub="SNC" name="Island" />
+    <alt key="275  /  281 " sub="SNC" name="Island" />
+    <alt key="276  /  281 " sub="SNC" name="Swamp" />
+    <alt key="277  /  281 " sub="SNC" name="Swamp" />
+    <alt key="278  /  281 " sub="SNC" name="Mountain" />
+    <alt key="279  /  281 " sub="SNC" name="Mountain" />
+    <alt key="280  /  281 " sub="SNC" name="Forest" />
+    <alt key="281  /  281 " sub="SNC" name="Forest" />
     <!-- SL2 -->
-    <!--<alt key="119  /   " sub="SL2" name="Swamp" />-->
     <alt key="138 " sub="SL2" name="Anguished Unmaking" />
     <alt key="139 " sub="SL2" name="Assassin's Trophy" />
     <alt key="140 " sub="SL2" name="Decimate" />
@@ -809,7 +880,6 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="145 " sub="SL2" name="Glenn, the Voice of Calm" />
     <alt key="146 " sub="SL2" name="Michonne, Ruthless Survivor" />
     <alt key="147 " sub="SL2" name="Negan, the Cold-Blooded" />
-    <!--<alt key="539  /   " sub="SL2" name="Swamp" />-->
     <alt key="581 " sub="SL2" name="Lucille" />
     <!-- SLD -->
     <alt key="115 " sub="SLD" name="Glen Elendra Archmage" />
@@ -827,11 +897,6 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="223 " sub="SLD" name="Grave Titan" />
     <alt key="224 " sub="SLD" name="Inferno Titan" />
     <alt key="225 " sub="SLD" name="Kroxa, Titan of Death's Hunger" />
-    <!--<alt key="239  /   " sub="SLD" name="Plains" />
-    <alt key="240  /   " sub="SLD" name="Island" />
-    <alt key="241  /   " sub="SLD" name="Swamp" />
-    <alt key="242  /   " sub="SLD" name="Mountain" />
-    <alt key="243  /   " sub="SLD" name="Forest" />-->
     <alt key="244 " sub="SLD" name="Shalai, Voice of Plenty" />
     <alt key="245 " sub="SLD" name="Ponder" />
     <alt key="246 " sub="SLD" name="Cultivate" />

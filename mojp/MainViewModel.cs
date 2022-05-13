@@ -328,6 +328,20 @@ namespace Mojp
             if (Cards != null && Cards.Count >= 1 && Cards[0] == card)
                 return;
 
+            // 設定によっては基本土地 5 種の場合に表示を変えないようにする
+            if (!ShowBasicLands)
+            {
+                switch (card.Name)
+                {
+                    case "Plains":
+                    case "Island":
+                    case "Swamp":
+                    case "Mountain":
+                    case "Forest":
+                        return;
+                }
+            }
+
             var cards = new List<Card>(card.RelatedCardName == null ? 1 : 4) { card };
 
             if (card.RelatedCardName != null)
