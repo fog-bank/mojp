@@ -18,8 +18,8 @@ namespace Mojp
             private readonly string PromoCollectorNumber = Settings.Default.PromoCodeNumber;
             private Process mtgoProc;
             private AutomationElement previewWnd;
-            private CacheRequest eventCacheReq = new CacheRequest();
-            private CacheRequest cacheReq = new CacheRequest();
+            private CacheRequest eventCacheReq = new();
+            private CacheRequest cacheReq = new();
 
             // Preview Window を探す
             private Condition prevWndCondition = new AndCondition(
@@ -169,7 +169,7 @@ namespace Mojp
                 }
 
                 // 一通り探して、カード名が見つからず、プロモやトークンであることが分かった場合
-                if (isPromo && App.Cards.TryGetValue("プロモ版のカード", out var prm))
+                if (isPromo && App.TryGetCard("プロモ版のカード", out var prm))
                 {
                     ViewModel.InvokeSetCard(prm);
                 }
@@ -276,7 +276,7 @@ namespace Mojp
             /// <remarks>無限ループになる可能性があるので、<see cref="SearchCardName"/> メソッドは呼ばないこと。</remarks>
             private bool TryFetchCard(string value)
             {
-                if (App.Cards.TryGetValue(value, out var card))
+                if (App.TryGetCard(value, out var card))
                 {
                     if (!IsKeywordText(value))
                     {
@@ -323,7 +323,7 @@ namespace Mojp
                     foreach (string text in IterateTextBlocks())
                     {
                         // コレクター番号かぶり対策 (基本氷雪土地は MH1 対策)
-                        if (App.Cards.TryGetValue(text, out var card) && !IsKeywordText(text) && altKey != "Basic Snow Land")
+                        if (App.TryGetCard(text, out var card) && !IsKeywordText(text) && altKey != "Basic Snow Land")
                         {
                             ViewCard(card);
                             return true;
@@ -337,11 +337,11 @@ namespace Mojp
                         }
 
                         // 第 2 段階
-                        if (App.AltCardSubKeys.Contains(text) && App.AltCards.TryGetValue(altKey + text, out var alt))
+                        if (App.AltCardSubKeys.Contains(text) && App.TryGetAltCard(altKey + text, out var alt))
                         {
                             Debug.WriteLine(altKey + " " + alt.SubKey + " => " + alt.CardName);
 
-                            if (App.Cards.TryGetValue(alt.CardName, out card))
+                            if (App.TryGetCard(alt.CardName, out card))
                             {
                                 // エルドレインの王権のカードだったとき、カードタイプが出来事の場合、呪文側を手前に表示する
                                 if (alt.SubKey == "ELD" && IsAdventure())
@@ -360,7 +360,7 @@ namespace Mojp
 
                 bool ViewCardDirectly(string name)
                 {
-                    if (App.Cards.TryGetValue(name, out var card2))
+                    if (App.TryGetCard(name, out var card2))
                     {
                         ViewModel.InvokeSetCard(card2);
                         return true;

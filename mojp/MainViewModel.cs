@@ -348,7 +348,7 @@ namespace Mojp
             {
                 foreach (string relatedName in card.RelatedCardNames)
                 {
-                    if (App.Cards.TryGetValue(relatedName, out var card2))
+                    if (App.TryGetCard(relatedName, out var card2))
                         cards.Add(card2);
                 }
             }

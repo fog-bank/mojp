@@ -34,8 +34,7 @@ namespace Mojp
 
 #if !OFFLINE
         // card_name -> (tix_info, expire_time)
-        private static readonly ConcurrentDictionary<string, Tuple<string, DateTime>> prices
-            = new ConcurrentDictionary<string, Tuple<string, DateTime>>();
+        private static readonly ConcurrentDictionary<string, Tuple<string, DateTime>> prices = new();
 
         private static volatile bool usingScryfall = false;
         private static DateTime requestTime = DateTime.UtcNow - TimeSpan.FromMilliseconds(200);
@@ -95,22 +94,21 @@ namespace Mojp
             var now = DateTime.UtcNow;
             var culture = CultureInfo.InvariantCulture;
 
-            using (var sr = File.OpenText(App.GetPath(CacheFileName)))
+            using var sr = File.OpenText(App.GetPath(CacheFileName));
+
+            while (!sr.EndOfStream)
             {
-                while (!sr.EndOfStream)
+                string name = sr.ReadLine();
+                string tix = sr.ReadLine();
+                string expire = sr.ReadLine();
+
+                if (DateTime.TryParseExact(expire, "o", culture, DateTimeStyles.RoundtripKind, out var expireTime))
                 {
-                    string name = sr.ReadLine();
-                    string tix = sr.ReadLine();
-                    string expire = sr.ReadLine();
+                    // 念のため UTC 時刻に変換
+                    expireTime = expireTime.ToUniversalTime();
 
-                    if (DateTime.TryParseExact(expire, "o", culture, DateTimeStyles.RoundtripKind, out var expireTime))
-                    {
-                        // 念のため UTC 時刻に変換
-                        expireTime = expireTime.ToUniversalTime();
-
-                        if (expireTime > now)
-                            prices.TryAdd(name, Tuple.Create(tix, expireTime));
-                    }
+                    if (expireTime > now)
+                        prices.TryAdd(name, Tuple.Create(tix, expireTime));
                 }
             }
         }
@@ -126,22 +124,21 @@ namespace Mojp
             var now = DateTime.UtcNow;
             var culture = CultureInfo.InvariantCulture;
 
-            using (var sw = File.CreateText(App.GetPath(CacheFileName)))
+            using var sw = File.CreateText(App.GetPath(CacheFileName));
+
+            foreach (var pair in prices)
             {
-                foreach (var pair in prices)
-                {
-                    // 取得中 or 取得失敗のデータは破棄
-                    if (string.IsNullOrEmpty(pair.Value?.Item1) || pair.Value.Item1 == HttpErrorMsg)
-                        continue;
+                // 取得中 or 取得失敗のデータは破棄
+                if (string.IsNullOrEmpty(pair.Value?.Item1) || pair.Value.Item1 == HttpErrorMsg)
+                    continue;
 
-                    // 有効期限切れの価格情報は破棄
-                    if (pair.Value.Item2 < now)
-                        continue;
+                // 有効期限切れの価格情報は破棄
+                if (pair.Value.Item2 < now)
+                    continue;
 
-                    sw.WriteLine(pair.Key);
-                    sw.WriteLine(pair.Value.Item1);
-                    sw.WriteLine(pair.Value.Item2.ToUniversalTime().ToString("o", culture));
-                }
+                sw.WriteLine(pair.Key);
+                sw.WriteLine(pair.Value.Item1);
+                sw.WriteLine(pair.Value.Item2.ToUniversalTime().ToString("o", culture));
             }
         }
 
@@ -188,44 +185,42 @@ namespace Mojp
             // 初回であるか、少なくとも前回から 1 日は経過している
             if (forceCheck || !exists || DateTime.UtcNow - lastCheckTime > TimeSpan.FromDays(1))
             {
-                using (var req = new HttpRequestMessage(HttpMethod.Get, "http://pdmtgo.com/legal_cards.txt"))
+                using var req = new HttpRequestMessage(HttpMethod.Get, "http://pdmtgo.com/legal_cards.txt");
+
+                // 最終更新日をチェックして通信量を減らす
+                if (!forceCheck && exists)
+                    req.Headers.IfModifiedSince = lastModifiedTime;
+
+                try
                 {
-                    // 最終更新日をチェックして通信量を減らす
-                    if (!forceCheck && exists)
-                        req.Headers.IfModifiedSince = lastModifiedTime;
+                    using var resp = await App.HttpClient.Value.SendAsync(req, HttpCompletionOption.ResponseHeadersRead);
 
-                    try
+                    Debug.WriteLine("PD カードリストの取得結果：HttpStatusCode." + resp.StatusCode);
+
+                    if (resp.StatusCode != HttpStatusCode.NotModified)
                     {
-                        using (var resp = await App.HttpClient.Value.SendAsync(req, HttpCompletionOption.ResponseHeadersRead))
+                        if (resp.IsSuccessStatusCode)
                         {
-                            Debug.WriteLine("PD カードリストの取得結果：HttpStatusCode." + resp.StatusCode);
+                            using (var file = File.Create(App.GetPath(PDLegalFileName)))
+                                await resp.Content.CopyToAsync(file);
 
-                            if (resp.StatusCode != HttpStatusCode.NotModified)
-                            {
-                                if (resp.IsSuccessStatusCode)
-                                {
-                                    using (var file = File.Create(App.GetPath(PDLegalFileName)))
-                                        await resp.Content.CopyToAsync(file);
-
-                                    result = exists ? GetPDListResult.Update : GetPDListResult.New;
-                                    lastModifiedTime = resp.Content.Headers.LastModified?.UtcDateTime ?? DateTime.UtcNow;
-                                }
-                                else
-                                    return GetPDListResult.NotFound;
-                            }
-                            else
-                                result = GetPDListResult.NotModified;
+                            result = exists ? GetPDListResult.Update : GetPDListResult.New;
+                            lastModifiedTime = resp.Content.Headers.LastModified?.UtcDateTime ?? DateTime.UtcNow;
                         }
+                        else
+                            return GetPDListResult.NotFound;
                     }
-                    catch
-                    {
-                        Debug.WriteLine("PD カードリストのダウンロード中にエラーが発生しました。");
-                        return GetPDListResult.Error;
-                    }
+                    else
+                        result = GetPDListResult.NotModified;
+                }
+                catch
+                {
+                    Debug.WriteLine("PD カードリストのダウンロード中にエラーが発生しました。");
+                    return GetPDListResult.Error;
                 }
             }
 
-            var pdLegalCards = new HashSet<string>();
+            var legalCards = new HashSet<string>();
             var separator = new[] { " // " };
 
             foreach (string line in File.ReadLines(App.GetPath(PDLegalFileName)))
@@ -235,17 +230,17 @@ namespace Mojp
                 {
                     string cardName = Card.NormalizeName(name);
 
-                    if (!App.Cards.ContainsKey(cardName))
+                    if (!App.TryGetCard(cardName, out _))
                     {
                         Debug.WriteLine(cardName);
                         return GetPDListResult.Conflict;
                     }
-                    pdLegalCards.Add(cardName);
+                    legalCards.Add(cardName);
                 }
             }
 
             // 枚数をチェック (少なくとも基本土地5枚は入る)
-            if (pdLegalCards.Count < 5)
+            if (legalCards.Count < 5)
                 return GetPDListResult.Conflict;
 
             // ローテ直後はサーバー上のファイルが頻繁に更新される場合があるので、カードリスト全体の確認が取れてから最終確認日時を記録する
@@ -255,7 +250,7 @@ namespace Mojp
             if (result == GetPDListResult.New || result == GetPDListResult.Update)
                 App.SettingsCache.PDServerLastTimeUtc = lastModifiedTime.ToString("o", culture);
 
-            CardPrice.pdLegalCards = pdLegalCards;
+            pdLegalCards = legalCards;
             return result;
         }
 
@@ -319,7 +314,7 @@ namespace Mojp
             // 分割カード名は修正したうえで scryfall.com に問い合わせ
             string query = card.WikiLink != null && card.WikiLink.Contains("/") ? card.WikiLink.Split('/')[1] : card.Name;
             string tix = await GetCardPrice(query);
-            
+
             if (tix == null)
             {
                 // リクエスト間隔が短すぎたか、ネットワークが遅い場合
@@ -381,11 +376,10 @@ namespace Mojp
             string json = null;
             try
             {
-                using (var response = await App.HttpClient.Value.GetAsync(uri, HttpCompletionOption.ResponseHeadersRead))
-                {
-                    if (response.IsSuccessStatusCode)
-                        json = await response.Content.ReadAsStringAsync();
-                }
+                using var response = await App.HttpClient.Value.GetAsync(uri, HttpCompletionOption.ResponseHeadersRead);
+
+                if (response.IsSuccessStatusCode)
+                    json = await response.Content.ReadAsStringAsync();
             }
             catch { Debug.WriteLine("Scryfall へのアクセスに失敗しました。"); }
 
@@ -496,4 +490,4 @@ namespace Mojp
         /// </summary>
         Conflict
     }
-    }
+}

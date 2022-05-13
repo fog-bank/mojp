@@ -83,22 +83,21 @@ namespace Mojp
             const string AppGuid = "{B99B5E4E-C7AA-4D4C-8674-DBAC723D29D5}";
 
             // 多重起動防止
-            using (var sema = new Semaphore(0, 1, AppGuid, out bool createdNew))
-            {
-                if (createdNew)
-                {
-#if !OFFLINE
-                    var domain = AppDomain.CurrentDomain;
-                    IsClickOnce = domain.ActivationContext?.Identity.FullName != null;
+            using var sema = new Semaphore(0, 1, AppGuid, out bool createdNew);
 
-                    if (IsClickOnce)
-                        DataDirectory = domain.GetData("DataDirectory") as string;
+            if (createdNew)
+            {
+#if !OFFLINE
+                var domain = AppDomain.CurrentDomain;
+                IsClickOnce = domain.ActivationContext?.Identity.FullName != null;
+
+                if (IsClickOnce)
+                    DataDirectory = domain.GetData("DataDirectory") as string;
 #endif
 
-                    var app = new App();
-                    app.InitializeComponent();
-                    app.Run();
-                }
+                var app = new App();
+                app.InitializeComponent();
+                app.Run();
             }
         }
 
@@ -216,6 +215,10 @@ namespace Mojp
         /// </summary>
         public static void SetCardInfosFromXml(string file) => SetCardInfosFromXml(XDocument.Load(file));
 #endif
+
+        public static bool TryGetCard(string name, out Card card) => Cards.TryGetValue(name, out card);
+
+        public static bool TryGetAltCard(string name, out AltCard altCard) => AltCards.TryGetValue(name, out altCard);
 
 #if !OFFLINE
         /// <summary>

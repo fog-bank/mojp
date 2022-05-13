@@ -37,35 +37,37 @@ namespace Mojp
             UpdatePDRotationTime();
 
             // フォントリストの初期化
-            var vm = viewModel as MainViewModel;
-            var fonts = Fonts.SystemFontFamilies;
-            var fontNames = new List<string>(fonts.Count);
-            var lang = Language;
-
-            foreach (var font in fonts)
+            if (viewModel is MainViewModel vm)
             {
-                // フォント名に日本語があるなら、それを使う
-                if (!font.FamilyNames.TryGetValue(lang, out string source))
-                    source = font.Source;
+                var fonts = Fonts.SystemFontFamilies;
+                var fontNames = new List<string>(fonts.Count);
+                var lang = Language;
 
-                fontNames.Add(source);
+                foreach (var font in fonts)
+                {
+                    // フォント名に日本語があるなら、それを使う
+                    if (!font.FamilyNames.TryGetValue(lang, out string source))
+                        source = font.Source;
 
-                // フォント名を日本語で表示する前のバージョンのための措置 (~ 1.2.11030.7)
-                if (font.Source == vm.FontFamily)
-                    vm.FontFamily = source;
+                    fontNames.Add(source);
+
+                    // フォント名を日本語で表示する前のバージョンのための措置 (~ 1.2.11030.7)
+                    if (font.Source == vm.FontFamily)
+                        vm.FontFamily = source;
+                }
+                fontNames.Sort();
+                cmbFonts.ItemsSource = fontNames;
+
+                // CardDisplayNameType 型リストの設定
+                cmbCardDisplayName.SelectedIndex = vm.CardDisplayNameType switch
+                {
+                    CardDisplayNameType.JananeseEnglish => 1,
+                    CardDisplayNameType.EnglishJapanese => 2,
+                    CardDisplayNameType.English => 3,
+                    _ => 0,
+                };
+                DataContext = vm;
             }
-            fontNames.Sort();
-            cmbFonts.ItemsSource = fontNames;
-
-            // CardDisplayNameType 型リストの設定
-            cmbCardDisplayName.SelectedIndex = vm.CardDisplayNameType switch
-            {
-                CardDisplayNameType.JananeseEnglish => 1,
-                CardDisplayNameType.EnglishJapanese => 2,
-                CardDisplayNameType.English => 3,
-                _ => 0,
-            };
-            DataContext = vm;
         }
 
         public MainViewModel ViewModel => DataContext as MainViewModel;
@@ -186,7 +188,7 @@ namespace Mojp
 
             text = text.Trim();
 
-            if (!App.Cards.TryGetValue(text, out var target))
+            if (!App.TryGetCard(text, out var target))
             {
                 foreach (var card in App.Cards.Values)
                 {

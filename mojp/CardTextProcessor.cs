@@ -528,9 +528,9 @@ namespace Mojp
                 Debug.WriteLineIf(card.RelatedCardName != null && !card.RelatedCardNames.All(cards.ContainsKey),
                     card.Name + " の関連カードが見つかりません。");
 
-                if (cards.ContainsKey(card.Name))
+                if (cards.TryGetValue(card.Name, out var origCard))
                 {
-                    var mofidiedCard = cards[card.Name].Clone();
+                    var mofidiedCard = origCard.Clone();
 
                     foreach (var tup in regexes)
                         ReplaceByRegex(mofidiedCard, tup.Item1, tup.Item2, tup.Item3);
@@ -770,10 +770,10 @@ namespace Mojp
             var jaNames = new Dictionary<string, Card>();
             foreach (var card in cards.Values)
             {
-                if (jaNames.ContainsKey(card.JapaneseName))
+                if (jaNames.TryGetValue(card.JapaneseName, out var otherCard))
                 {
                     Debug.WriteLineIf(!card.Name.EndsWith("(Alt.)"),
-                        "日本語カード名の重複：≪" + card.FullName + "≫ ≪" + jaNames[card.JapaneseName].FullName + "≫");
+                        "日本語カード名の重複：≪" + card.FullName + "≫ ≪" + otherCard.FullName + "≫");
                 }
                 else
                     jaNames.Add(card.JapaneseName, card);
