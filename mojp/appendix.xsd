@@ -2,11 +2,11 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
   <xs:attributeGroup name="cardAttributes">
     <xs:attribute name="name" type="xs:string" use="required" />
-    <xs:attribute name="jaName" type="xs:string" use="required" />
+    <xs:attribute name="ja" type="xs:string" use="required" />
     <xs:attribute name="type" type="xs:string" use="required" />
     <xs:attribute name="pt" type="xs:string" />
-    <xs:attribute name="related" type="xs:string" />
-    <xs:attribute name="wikilink" type="xs:string" />
+    <xs:attribute name="rel" type="xs:string" />
+    <xs:attribute name="wiki" type="xs:string" />
   </xs:attributeGroup>
   <xs:element name="mojp">
     <xs:complexType>
@@ -29,16 +29,16 @@
                   <xs:attribute name="pt" type="xs:string" use="required" />
                 </xs:complexType>
               </xs:element>
-              <xs:element name="related" minOccurs="0" maxOccurs="unbounded">
+              <xs:element name="rel" minOccurs="0" maxOccurs="unbounded">
                 <xs:complexType>
                   <xs:attribute name="name" type="xs:string" use="required" />
-                  <xs:attribute name="related" type="xs:string" use="required" />
+                  <xs:attribute name="rel" type="xs:string" use="required" />
                 </xs:complexType>
               </xs:element>
-              <xs:element name="wikilink" minOccurs="0" maxOccurs="unbounded">
+              <xs:element name="wiki" minOccurs="0" maxOccurs="unbounded">
                 <xs:complexType>
                   <xs:attribute name="name" type="xs:string" use="required" />
-                  <xs:attribute name="wikilink" type="xs:string" use="required" />
+                  <xs:attribute name="wiki" type="xs:string" use="required" />
                 </xs:complexType>
               </xs:element>
               <xs:element name="alt" minOccurs="0" maxOccurs="unbounded">
@@ -59,7 +59,7 @@
                   <xs:attribute name="target" type="xs:string" use="required" />
                   <xs:attribute name="pattern" type="xs:string" use="required" />
                   <xs:attribute name="value" type="xs:string" use="required" />
-                  <xs:attribute name="nodebug" type="xs:boolean" />
+                  <xs:attribute name="debug" type="xs:boolean" />
                 </xs:complexType>
               </xs:element>
               <xs:element name="card" minOccurs="0" maxOccurs="unbounded">
@@ -77,10 +77,10 @@
                   <xs:attribute name="type" type="xs:string" use="required" />
                 </xs:complexType>
               </xs:element>
-              <xs:element name="related" minOccurs="0" maxOccurs="unbounded">
+              <xs:element name="rel" minOccurs="0" maxOccurs="unbounded">
                 <xs:complexType>
                   <xs:attribute name="name" type="xs:string" use="required" />
-                  <xs:attribute name="related" type="xs:string" use="required" />
+                  <xs:attribute name="rel" type="xs:string" use="required" />
                 </xs:complexType>
               </xs:element>
             </xs:sequence>
@@ -94,7 +94,7 @@
                   <xs:attribute name="name" type="xs:string" use="required" />
                 </xs:complexType>
               </xs:element>
-              <xs:element name="jaName" minOccurs="0" maxOccurs="unbounded">
+              <xs:element name="ja" minOccurs="0" maxOccurs="unbounded">
                 <xs:complexType>
                   <xs:attribute name="name" type="xs:string" use="required" />
                 </xs:complexType>

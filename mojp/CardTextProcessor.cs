@@ -507,16 +507,16 @@ namespace Mojp
                 string targets = (string)node.Attribute("target");
 
                 if (targets.Contains("all"))
-                    targets = "name|jaName|type|pt|related|wikilink|text";
+                    targets = "name|ja|type|pt|rel|wiki|text";
 
                 string pattern = (string)node.Attribute("pattern");
                 try
                 {
                     var regex = new Regex(pattern);
                     string value = (string)node.Attribute("value");
-                    bool? nodebug = (bool?)node.Attribute("nodebug");
+                    bool? debug = (bool?)node.Attribute("debug");
 
-                    regexes.Add(Tuple.Create(targets.Split('|'), regex, value, nodebug.GetValueOrDefault()));
+                    regexes.Add(Tuple.Create(targets.Split('|'), regex, value, debug.GetValueOrDefault()));
                 }
                 catch { Debug.WriteLine("正規表現の構築に失敗しました。パターン：" + pattern); }
             }
@@ -525,7 +525,8 @@ namespace Mojp
             foreach (var node in doc.Root.Element("add").Elements("card"))
             {
                 var card = FromXml(node);
-                Debug.WriteLineIf(card.RelatedCardName != null && !card.RelatedCardNames.All(cards.ContainsKey), card.Name + " の関連カードが見つかりません。");
+                Debug.WriteLineIf(card.RelatedCardName != null && !card.RelatedCardNames.All(cards.ContainsKey),
+                    card.Name + " の関連カードが見つかりません。");
 
                 if (cards.ContainsKey(card.Name))
                 {
@@ -565,30 +566,31 @@ namespace Mojp
             }
 
             // 関連カードだけ追加
-            foreach (var node in doc.Root.Element("add").Elements("related"))
+            foreach (var node in doc.Root.Element("add").Elements("rel"))
             {
                 string name = (string)node.Attribute("name");
 
                 if (cards.TryGetValue(name, out var card))
                 {
                     Debug.WriteLineIf(card.RelatedCardName != null, card.Name + " には既に関連カードの情報があります。");
-                    card.RelatedCardName = (string)node.Attribute("related");
+                    card.RelatedCardName = (string)node.Attribute("rel");
 
-                    Debug.WriteLineIf(card.RelatedCardName != null && !card.RelatedCardNames.All(cards.ContainsKey), card.Name + " に追加される関連カードが見つかりません。");
+                    Debug.WriteLineIf(card.RelatedCardName != null && !card.RelatedCardNames.All(cards.ContainsKey),
+                        card.Name + " に追加される関連カードが見つかりません。");
                 }
                 else
                     Debug.WriteLine("関連カード情報の追加先となる " + name + " のカード情報がありません。");
             }
 
             // Wiki へのリンクだけ追加
-            foreach (var node in doc.Root.Element("add").Elements("wikilink"))
+            foreach (var node in doc.Root.Element("add").Elements("wiki"))
             {
                 string name = (string)node.Attribute("name");
 
                 if (cards.TryGetValue(name, out var card))
                 {
                     Debug.WriteLineIf(card.WikiLink != null, card.Name + " には既に wiki へのリンク情報があります。");
-                    card.WikiLink = (string)node.Attribute("wikilink");
+                    card.WikiLink = (string)node.Attribute("wiki");
                 }
                 else
                     Debug.WriteLine("リンク情報の追加先となる " + name + " のカード情報がありません。");
@@ -622,7 +624,7 @@ namespace Mojp
             }
 
             // 暫定日本語カード名の削除
-            foreach (var node in doc.Root.Elements("remove").Elements("jaName"))
+            foreach (var node in doc.Root.Elements("remove").Elements("ja"))
             {
                 string name = (string)node.Attribute("name");
 
@@ -646,7 +648,7 @@ namespace Mojp
             {
                 var xml = card.ToXml();
                 bool replaced = false;
-                bool nodebug = true;
+                bool debug = false;
 
                 for (int i = 0; i < regexes.Count; i++)
                 {
@@ -663,12 +665,12 @@ namespace Mojp
                     if (applied)
                     {
                         replaced = true;
-                        nodebug &= regexes[i].Item4;
+                        debug |= regexes[i].Item4;
                         appliedCount[i]++;
                     }
                 }
 
-                if (replaced && !nodebug)
+                if (replaced && debug)
                 {
                     beforeNodes.Add(xml);
                     replacedNodes.Add(card.ToXml());
@@ -711,8 +713,10 @@ namespace Mojp
 
                         var cloneCard = newCard.Clone();
                         foreach (var tup in regexes)
+                        {
                             Debug.WriteLineIf(ReplaceByRegex(cloneCard, tup.Item1, tup.Item2, tup.Item3), 
                                 newCard.Name + " には正規表現による検索（" + tup.Item2 + "）に一致する箇所があります。");
+                        }
                     }
                 }
                 else
@@ -745,14 +749,15 @@ namespace Mojp
             }
 
             // 関連カードだけ書き換え
-            foreach (var node in doc.Root.Element("replace").Elements("related"))
+            foreach (var node in doc.Root.Element("replace").Elements("rel"))
             {
                 string name = (string)node.Attribute("name");
 
                 if (cards.TryGetValue(name, out var card))
                 {
-                    card.RelatedCardName = (string)node.Attribute("related");
-                    Debug.WriteLineIf(card.RelatedCardName != null && !card.RelatedCardNames.All(cards.ContainsKey), card.Name + " に追加される関連カードが見つかりません。");
+                    card.RelatedCardName = (string)node.Attribute("rel");
+                    Debug.WriteLineIf(card.RelatedCardName != null && !card.RelatedCardNames.All(cards.ContainsKey),
+                        card.Name + " に追加される関連カードが見つかりません。");
                 }
                 else
                     Debug.WriteLine("関連カード情報の追加先となる " + name + " のカード情報がありません。");
@@ -804,7 +809,7 @@ namespace Mojp
                         }
                         break;
 
-                    case "jaName":
+                    case "ja":
                         string jaName = regex.Replace(card.JapaneseName, value);
 
                         if (card.JapaneseName != jaName)
@@ -834,7 +839,7 @@ namespace Mojp
                         }
                         break;
 
-                    case "related":
+                    case "rel":
                         string related = regex.Replace(card.RelatedCardName, value);
 
                         if (card.RelatedCardName != related)
@@ -844,7 +849,7 @@ namespace Mojp
                         }
                         break;
 
-                    case "wikilink":
+                    case "wiki":
                         string wikilink = regex.Replace(card.WikiLink, value);
 
                         if (card.WikiLink != wikilink)

@@ -175,17 +175,17 @@ namespace Mojp
             var xml = new XElement("card");
 
             xml.Add(new XAttribute("name", Name));
-            xml.Add(new XAttribute("jaName", JapaneseName));
+            xml.Add(new XAttribute("ja", JapaneseName));
             xml.Add(new XAttribute("type", Type));
 
             if (PT != null)
                 xml.Add(new XAttribute("pt", PT));
 
             if (RelatedCardName != null)
-                xml.Add(new XAttribute("related", RelatedCardName));
+                xml.Add(new XAttribute("rel", RelatedCardName));
 
             if (WikiLink != null)
-                xml.Add(new XAttribute("wikilink", WikiLink));
+                xml.Add(new XAttribute("wiki", WikiLink));
 
             xml.Add(Text);
 
@@ -210,11 +210,11 @@ namespace Mojp
             return new Card
             {
                 Name = (string)cardElement.Attribute("name"),
-                JapaneseName = (string)cardElement.Attribute("jaName"),
+                JapaneseName = (string)cardElement.Attribute("ja"),
                 Type = (string)cardElement.Attribute("type"),
                 PT = (string)cardElement.Attribute("pt"),
-                RelatedCardName = (string)cardElement.Attribute("related"),
-                WikiLink = (string)cardElement.Attribute("wikilink"),
+                RelatedCardName = (string)cardElement.Attribute("rel"),
+                WikiLink = (string)cardElement.Attribute("wiki"),
                 Text = cardElement.Value
             };
         }
