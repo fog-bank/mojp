@@ -274,7 +274,7 @@ namespace Mojp
             if (string.IsNullOrEmpty(card.Type))
                 return true;
 
-            if (card.Name is "Gleemox" or "Vitu-Ghazi" or "Morph" or "Manifest")
+            if (card.Name is "Gleemox" or "Legitimate Businessperson" or "Vitu-Ghazi" or "Morph" or "Manifest")
                 return true;
 
             if (card.Type.StartsWith("トークン") || card.Type.StartsWith("次元"))
