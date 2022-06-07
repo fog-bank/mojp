@@ -3230,6 +3230,69 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="61  /  63 " sub="STA" name="Growth Spiral" />
     <alt key="62  /  63 " sub="STA" name="Lightning Helix" />
     <alt key="63  /  63 " sub="STA" name="Putrefy" />
+    <alt key="64 " sub="STA" name="Approach of the Second Sun" />
+    <alt key="65 " sub="STA" name="Day of Judgment" />
+    <alt key="66 " sub="STA" name="Defiant Strike" />
+    <alt key="67 " sub="STA" name="Divine Gambit" />
+    <alt key="68 " sub="STA" name="Ephemerate" />
+    <alt key="69 " sub="STA" name="Gift of Estates" />
+    <alt key="70 " sub="STA" name="Gods Willing" />
+    <alt key="71 " sub="STA" name="Mana Tithe" />
+    <alt key="72 " sub="STA" name="Revitalize" />
+    <alt key="73 " sub="STA" name="Swords to Plowshares" />
+    <alt key="74 " sub="STA" name="Teferi's Protection" />
+    <alt key="75 " sub="STA" name="Blue Sun's Zenith" />
+    <alt key="76 " sub="STA" name="Brainstorm" />
+    <alt key="77 " sub="STA" name="Compulsive Research" />
+    <alt key="78 " sub="STA" name="Counterspell" />
+    <alt key="79 " sub="STA" name="Memory Lapse" />
+    <alt key="80 " sub="STA" name="Mind's Desire" />
+    <alt key="81 " sub="STA" name="Negate" />
+    <alt key="82 " sub="STA" name="Opt" />
+    <alt key="83 " sub="STA" name="Strategic Planning" />
+    <alt key="84 " sub="STA" name="Tezzeret's Gambit" />
+    <alt key="85 " sub="STA" name="Time Warp" />
+    <alt key="86 " sub="STA" name="Whirlwind Denial" />
+    <alt key="87 " sub="STA" name="Agonizing Remorse" />
+    <alt key="88 " sub="STA" name="Crux of Fate" />
+    <alt key="89 " sub="STA" name="Dark Ritual" />
+    <alt key="90 " sub="STA" name="Demonic Tutor" />
+    <alt key="91 " sub="STA" name="Doom Blade" />
+    <alt key="92 " sub="STA" name="Duress" />
+    <alt key="93 " sub="STA" name="Eliminate" />
+    <alt key="94 " sub="STA" name="Inquisition of Kozilek" />
+    <alt key="95 " sub="STA" name="Sign in Blood" />
+    <alt key="96 " sub="STA" name="Tainted Pact" />
+    <alt key="97 " sub="STA" name="Tendrils of Agony" />
+    <alt key="98 " sub="STA" name="Village Rites" />
+    <alt key="99 " sub="STA" name="Chaos Warp" />
+    <alt key="100 " sub="STA" name="Claim the Firstborn" />
+    <alt key="101 " sub="STA" name="Faithless Looting" />
+    <alt key="102 " sub="STA" name="Grapeshot" />
+    <alt key="103 " sub="STA" name="Increasing Vengeance" />
+    <alt key="104 " sub="STA" name="Infuriate" />
+    <alt key="105 " sub="STA" name="Lightning Bolt" />
+    <alt key="106 " sub="STA" name="Mizzix's Mastery" />
+    <alt key="107 " sub="STA" name="Shock" />
+    <alt key="108 " sub="STA" name="Stone Rain" />
+    <alt key="109 " sub="STA" name="Thrill of Possibility" />
+    <alt key="110 " sub="STA" name="Urza's Rage" />
+    <alt key="111 " sub="STA" name="Abundant Harvest" />
+    <alt key="112 " sub="STA" name="Adventurous Impulse" />
+    <alt key="113 " sub="STA" name="Channel" />
+    <alt key="114 " sub="STA" name="Cultivate" />
+    <alt key="115 " sub="STA" name="Harmonize" />
+    <alt key="116 " sub="STA" name="Krosan Grip" />
+    <alt key="117 " sub="STA" name="Natural Order" />
+    <alt key="118 " sub="STA" name="Primal Command" />
+    <alt key="119 " sub="STA" name="Regrowth" />
+    <alt key="120 " sub="STA" name="Snakeskin Veil" />
+    <alt key="121 " sub="STA" name="Weather the Storm" />
+    <alt key="122 " sub="STA" name="Despark" />
+    <alt key="123 " sub="STA" name="Electrolyze" />
+    <alt key="124 " sub="STA" name="Growth Spiral" />
+    <alt key="125 " sub="STA" name="Lightning Helix" />
+    <alt key="126 " sub="STA" name="Putrefy" />
     <!-- 英雄譚 (DOM, C19, THB, KHM, MH2, NEO, CLB) -->
     <alt key="018  /  269 " sub="DOM" name="Fall of the Thran" />
     <alt key="021  /  269 " sub="DOM" name="History of Benalia" />
