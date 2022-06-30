@@ -1597,6 +1597,84 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0113  /  1158 " sub="NEC" name="Kaima, the Fractured Calm" />
     <alt key="0114  /  1158 " sub="NEC" name="Kotori, Pilot Prodigy" />
     <alt key="0116  /  1158 " sub="NEC" name="Shorikai, Genesis Engine" />
+    <!-- 2X2 variants -->
+    <alt key="0001  /  1158 " sub="2X2" name="Seeker of the Way" />
+    <alt key="0002  /  1158 " sub="2X2" name="Wall of Omens" />
+    <alt key="0003  /  1158 " sub="2X2" name="Mentor of the Meek" />
+    <alt key="0004  /  1158 " sub="2X2" name="Flickerwisp" />
+    <alt key="0006  /  1158 " sub="2X2" name="Teferi's Protection" />
+    <alt key="0007  /  1158 " sub="2X2" name="Smothering Tithe" />
+    <alt key="0008  /  1158 " sub="2X2" name="Emiel the Blessed" />
+    <alt key="0009  /  1158 " sub="2X2" name="Thought Scour" />
+    <alt key="0010  /  1158 " sub="2X2" name="Spell Pierce" />
+    <alt key="0011  /  1158 " sub="2X2" name="Mulldrifter" />
+    <alt key="0012  /  1158 " sub="2X2" name="Force of Negation" />
+    <alt key="0013  /  1158 " sub="2X2" name="Gifts Ungiven" />
+    <alt key="0014  /  1158 " sub="2X2" name="Mana Drain" />
+    <alt key="0015  /  1158 " sub="2X2" name="Unearth" />
+    <alt key="0016  /  1158 " sub="2X2" name="Blood Artist" />
+    <alt key="0017  /  1158 " sub="2X2" name="Inquisition of Kozilek" />
+    <alt key="0018  /  1158 " sub="2X2" name="Damnation" />
+    <alt key="0019  /  1158 " sub="2X2" name="Surgical Extraction" />
+    <alt key="0020  /  1158 " sub="2X2" name="Imperial Seal" />
+    <alt key="0022  /  1158 " sub="2X2" name="Monastery Swiftspear" />
+    <alt key="0023  /  1158 " sub="2X2" name="Young Pyromancer" />
+    <alt key="0024  /  1158 " sub="2X2" name="Lightning Bolt" />
+    <alt key="0025  /  1158 " sub="2X2" name="Chaos Warp" />
+    <alt key="0026  /  1158 " sub="2X2" name="Anger of the Gods" />
+    <alt key="0027  /  1158 " sub="2X2" name="Dockside Extortionist" />
+    <alt key="0028  /  1158 " sub="2X2" name="Seasoned Pyromancer" />
+    <alt key="0029  /  1158 " sub="2X2" name="Rampant Growth" />
+    <alt key="0030  /  1158 " sub="2X2" name="Eternal Witness" />
+    <alt key="0031  /  1158 " sub="2X2" name="Bloom Tender" />
+    <alt key="0032  /  1158 " sub="2X2" name="Oracle of Mul Daya" />
+    <alt key="0033  /  1158 " sub="2X2" name="Hardened Scales" />
+    <alt key="0034  /  1158 " sub="2X2" name="Allosaurus Shepherd" />
+    <alt key="0035  /  1158 " sub="2X2" name="Concordant Crossroads" />
+    <alt key="0036  /  1158 " sub="2X2" name="Burning-Tree Emissary" />
+    <alt key="0037  /  1158 " sub="2X2" name="Qasali Pridemage" />
+    <alt key="0038  /  1158 " sub="2X2" name="Coiling Oracle" />
+    <alt key="0039  /  1158 " sub="2X2" name="Terminate" />
+    <alt key="0040  /  1158 " sub="2X2" name="Bloodbraid Elf" />
+    <alt key="0041  /  1158 " sub="2X2" name="Grand Arbiter Augustin IV" />
+    <alt key="0042  /  1158 " sub="2X2" name="Glimpse the Unthinkable" />
+    <alt key="0043  /  1158 " sub="2X2" name="Supreme Verdict" />
+    <alt key="0044  /  1158 " sub="2X2" name="Kolaghan's Command" />
+    <alt key="0045  /  1158 " sub="2X2" name="Privileged Position" />
+    <alt key="0046  /  1158 " sub="2X2" name="Grim Flayer" />
+    <alt key="0047  /  1158 " sub="2X2" name="Assassin's Trophy" />
+    <alt key="0049  /  1158 " sub="2X2" name="Thousand-Year Storm" />
+    <alt key="0050  /  1158 " sub="2X2" name="Marchesa, the Black Rose" />
+    <alt key="0051  /  1158 " sub="2X2" name="The Mimeoplasm" />
+    <alt key="0053  /  1158 " sub="2X2" name="Dragonlord Dromoka" />
+    <alt key="0054  /  1158 " sub="2X2" name="Elenda, the Dusk Rose" />
+    <alt key="0055  /  1158 " sub="2X2" name="Sedris, the Traitor King" />
+    <alt key="0056  /  1158 " sub="2X2" name="Muldrotha, the Gravetide" />
+    <alt key="0057  /  1158 " sub="2X2" name="Sensei's Divining Top" />
+    <alt key="0058  /  1158 " sub="2X2" name="Aether Vial" />
+    <alt key="0059  /  1158 " sub="2X2" name="Vedalken Orrery" />
+    <alt key="0060  /  1158 " sub="2X2" name="Bloodforged Battle-Axe" />
+    <alt key="0061  /  1158 " sub="2X2" name="Pithing Needle" />
+    <alt key="0062  /  1158 " sub="2X2" name="Phyrexian Altar" />
+    <alt key="0063  /  1158 " sub="2X2" name="Panharmonicon" />
+    <alt key="0064  /  1158 " sub="2X2" name="Crucible of Worlds" />
+    <alt key="0065  /  1158 " sub="2X2" name="Mana Vault" />
+    <alt key="0066  /  1158 " sub="2X2" name="Ulamog, the Infinite Gyre" />
+    <alt key="0067  /  1158 " sub="2X2" name="Emrakul, the Aeons Torn" />
+    <alt key="0068  /  1158 " sub="2X2" name="Kozilek, Butcher of Truth" />
+    <alt key="0069  /  1158 " sub="2X2" name="Azorius Chancery" />
+    <alt key="0070  /  1158 " sub="2X2" name="Dimir Aqueduct" />
+    <alt key="0071  /  1158 " sub="2X2" name="Rakdos Carnarium" />
+    <alt key="0072  /  1158 " sub="2X2" name="Gruul Turf" />
+    <alt key="0073  /  1158 " sub="2X2" name="Selesnya Sanctuary" />
+    <alt key="0074  /  1158 " sub="2X2" name="Orzhov Basilica" />
+    <alt key="0075  /  1158 " sub="2X2" name="Golgari Rot Farm" />
+    <alt key="0076  /  1158 " sub="2X2" name="Simic Growth Chamber" />
+    <alt key="0077  /  1158 " sub="2X2" name="Izzet Boilerworks" />
+    <alt key="0078  /  1158 " sub="2X2" name="Boros Garrison" />
+    <alt key="0079  /  1158 " sub="2X2" name="City of Brass" />
+    <alt key="0080  /  1158 " sub="2X2" name="Forbidden Orchard" />
+    <alt key="0081  /  1158 " sub="2X2" name="Cavern of Souls" />
     <!-- Ultimate Box toppers (UMA) -->
     <alt key="U01  /  40 " sub="UMA" name="Emrakul, the Aeons Torn" />
     <alt key="U02  /  40 " sub="UMA" name="Karn Liberated" />
@@ -2455,6 +2533,8 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="124 " sub="STA" name="Growth Spiral" />
     <alt key="125 " sub="STA" name="Lightning Helix" />
     <alt key="126 " sub="STA" name="Putrefy" />
+    <!-- 2X2 -->
+    <alt key="332 " sub="2X2" name="Cryptic Spires" />
     <!-- 英雄譚 (DOM, C19, THB, KHM, MH2, NEO, CLB) -->
     <alt key="018  /  269 " sub="DOM" name="Fall of the Thran" />
     <alt key="021  /  269 " sub="DOM" name="History of Benalia" />
