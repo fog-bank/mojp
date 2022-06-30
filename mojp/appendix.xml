@@ -124,7 +124,7 @@
     <card name="Vitu-Ghazi" ja="ヴィトゥ＝ガジー" type="伝説の土地・クリーチャー ― エレメンタル" pt="0/0" wiki="ヴィトゥ＝ガジーの目覚め/Awakening of Vitu-Ghazi">速攻
 （訳注：これは《ヴィトゥ＝ガジーの目覚め》によりクリーチャー化した土地です。元の土地タイプや能力はそのままですが、元の名前が判別できないため、ここには表示されません。）</card>
     <!-- SLD (Street Fighter) -->
-    <card name="E. Honda, Sumo Champion" ja="E. Honda, Sumo Champion" type="伝説のクリーチャー ― 人間・戦士" pt="0/7">肩屋入り ― あなたのターンであるかぎり、各クリーチャーはそれぞれ、パワーではなくタフネスに等しい点数の戦闘ダメージを割り振る。
+    <!--<card name="E. Honda, Sumo Champion" ja="E. Honda, Sumo Champion" type="伝説のクリーチャー ― 人間・戦士" pt="0/7">肩屋入り ― あなたのターンであるかぎり、各クリーチャーはそれぞれ、パワーではなくタフネスに等しい点数の戦闘ダメージを割り振る。
 百裂張り手 ― E. Honda, Sumo Championが攻撃するたび、クリーチャー最大１００体を対象とする。ターン終了時まで、それらはそれぞれ+0/+Xの修整を受ける。Ｘはあなたの手札にあるカードの枚数に等しい。</card>
     <card name="Ryu, World Warrior" ja="Ryu, World Warrior" type="伝説のクリーチャー ― 人間・戦士" pt="2/4">訓練（このクリーチャーが、これより大きなパワーを持つ１体以上のクリーチャーと攻撃するたび、このクリーチャーの上に+1/+1カウンター１個を置く。）
 波動拳 ― (４)(赤),(Ｑ),カード１枚を捨てる：クリーチャーやプレインズウォーカーやプレイヤーのうち１つを対象とする。Ryu, World Warriorはそれに自身のパワーに等しい点数のダメージを与える。これによりクリーチャーが余剰のダメージを受けたなら、カード１枚を引く。（(Ｑ)はアンタップ・シンボルである。）</card>
@@ -146,9 +146,9 @@ Chun-Li, Countless Kicksが戦場に出たとき、あなたの墓地にある�
 ・サマーソルトキック ― ターン終了時まで、Guile, Sonic Soldierは絆魂と破壊不能を得る。</card>
     <card name="Zangief, the Red Cyclone" ja="Zangief, the Red Cyclone" type="伝説のクリーチャー ― 人間・戦士" pt="7/4">Zangief, the Red Cycloneは、可能ならブロックされなければならない。
 アイアンマッスル ― あなたのターンであるかぎり、Zangief, the Red Cycloneは破壊不能を持つ。
-スクリューパイルドライバー ― Zangief, the Red Cycloneがクリーチャー１体にダメージを与えるたび、このターンにそのクリーチャーが余剰のダメージを受けていた場合、そのクリーチャーのコントローラーはクリーチャーでも土地でもないパーマネント１つを生け贄に捧げる。</card>
+スクリューパイルドライバー ― Zangief, the Red Cycloneがクリーチャー１体にダメージを与えるたび、このターンにそのクリーチャーが余剰のダメージを受けていた場合、そのクリーチャーのコントローラーはクリーチャーでも土地でもないパーマネント１つを生け贄に捧げる。</card>-->
     <!-- SLD (Stranger Things) -->
-    <card name="Chief Jim Hopper" ja="Chief Jim Hopper" type="伝説のクリーチャー ― 人間・兵士" pt="4/4">威迫
+    <!--<card name="Chief Jim Hopper" ja="Chief Jim Hopper" type="伝説のクリーチャー ― 人間・兵士" pt="4/4">威迫
 Chief Jim Hopperが攻撃するたび、トークンでない攻撃クリーチャー１体につき調査を１回行う。
 Friends forever（両方がfriends foreverを持つなら、あなたは２体の統率者を使用できる。）</card>
     <card name="Dustin, Gadget Genius" ja="Dustin, Gadget Genius" type="伝説のクリーチャー ― 人間" pt="2/3">(Ｔ)：(◇)(◇)を加える。このマナは、アーティファクト・呪文を唱えるためか、アーティファクトの能力を起動するためにのみ使用できる。
@@ -172,7 +172,7 @@ Friends forever（両方がfriends foreverを持つなら、あなたは２体�
 あなたの終了ステップの開始時に、このターンにあなたが３つ以上の手掛かりを生け贄に捧げていた場合、Hawkins National Laboratoryを変身させる。</card>
     <card name="The Upside Down" ja="The Upside Down" type="伝説の土地" rel="Hawkins National Laboratory">この土地がThe Upside Downに変身したとき、あなたの墓地にあるクリーチャー・カード１枚を対象とする。それを戦場に戻す。
 The Upside Downによって戦場に出たクリーチャーが戦場を離れたとき、The Upside Downを変身させる。
-(Ｔ),１点のライフを支払う：(黒)を加える。</card>
+(Ｔ),１点のライフを支払う：(黒)を加える。</card>-->
     <!-- SL2 -->
     <card name="Rick, Steadfast Leader" ja="Rick, Steadfast Leader" type="伝説のクリーチャー ― 人間・兵士" pt="3/4">Rick, Steadfast Leaderが戦場に出るに際し、先制攻撃か警戒か絆魂のうち能力２つを選ぶ。
 あなたがコントロールしている人間は選ばれた各能力を持つ。
@@ -192,10 +192,29 @@ Michonne, Ruthless Survivorとゾンビ２体以上が攻撃するたび、タ�
 装備(４)</card>
     <!-- Heroes of the Realm 2017 -->
     <card name="M'Odo, the Gnarled Oracle" ja="M'Odo, the Gnarled Oracle" type="クリーチャー ― ゾンビ・エルフ・ウィザード" pt="0/3">威光 ― (Ｘ),カード１枚を捨てる：プレイヤー１人を対象とする。そのプレイヤーは、マナ総量がＸ以下のクリーチャー・カードが公開されるまで、自分のライブラリーの一番上から１枚ずつ公開する。そのカードをあなたのコントロール下で戦場に出し、その後、そのプレイヤーは残りを自分のライブラリーに加えて切り直す。M'Odo, the Gnarled Oracleが戦場か統率領域にあるときにのみ起動できる。</card>
-    <!-- Gift Pack (M19) -->
+    <!-- Gift Pack 2018 (M19) -->
     <card name="Vengeant Vampire" ja="Vengeant Vampire" type="クリーチャー ― 吸血鬼" pt="4/4">絆魂
 Vengeant Vampireが死亡したとき、対戦相手がコントロールしているクリーチャー１体を対象とする。それを破壊し、あなたは４点のライフを得る。</card>
-    <!-- Game Night (M19) -->
+    <!-- Game Night Free-For-All (GN3) -->
+    <card name="Zamriel, Seraph of Steel" ja="鋼の熾天使、ザムリエル" type="伝説のクリーチャー ― 天使" pt="3/4">飛行
+あなたのターンであるかぎり、あなたがコントロールしていて装備品がついているクリーチャーは破壊不能を持つ。</card>
+    <card name="Maeve, Insidious Singer" ja="腹黒い歌い手、メイヴ" type="伝説のクリーチャー ― セイレーン" pt="3/4">(２)(青)：クリーチャー１体を対象とする。それを使嗾する。このターン、そのクリーチャーがあなたの対戦相手１人を攻撃するたび、あなたはカード１枚を引く。（あなたの次のターンまで、使嗾されたクリーチャーは、可能なら各戦闘で攻撃し、可能ならあなたでないプレイヤーを攻撃する。）</card>
+    <card name="Vogar, Necropolis Tyrant" ja="死滅都市の暴君、ヴォーガー" type="伝説のクリーチャー ― ゾンビ・巨人" pt="4/4">威迫
+あなたのターン中にこれでないクリーチャー１体が死亡するたび、死滅都市の暴君、ヴォーガーの上に+1/+1カウンター１個を置く。
+死滅都市の暴君、ヴォーガーが死亡したとき、これの上に置かれている+1/+1カウンター１個につきカード１枚を引く。</card>
+    <card name="Nogi, Draco-Zealot" ja="ドラゴン狂、ノギー" type="伝説のクリーチャー ― コボルド・シャーマン" pt="3/3">あなたがドラゴン・呪文を唱えるためのコストは(１)少なくなる。
+ドラゴン狂、ノギーが攻撃するたび、あなたが３体以上のドラゴンをコントロールしている場合、ターン終了時まで、ドラゴン狂、ノギーは基本のパワーとタフネスが5/5のドラゴンになり、飛行を得る。</card>
+    <card name="Imaryll, Elfhame Elite" ja="エルフェイムの精鋭、イマリール" type="伝説のクリーチャー ― エルフ・戦士" pt="3/3">エルフェイムの精鋭、イマリールが攻撃するたび、ターン終了時まで、これは+X/+Xの修整を受ける。Ｘはあなたがコントロールしていてこれでないエルフの数に等しい。
+あなたは「エルフェイムの精鋭、イマリールは、ブロックされなかったかのように戦闘ダメージを割り振る。」を選んでもよい。</card>
+    <!-- Game Night 2019 (GN2) -->
+    <card name="Highcliff Felidar" ja="Highcliff Felidar" type="クリーチャー ― 猫・ビースト" pt="5/5">警戒
+Highcliff Felidarが戦場に出たとき、対戦相手１人につき、そのプレイヤーがコントロールしているクリーチャーの中で最大のパワーを持つクリーチャー１体を選ぶ。それらのクリーチャーを破壊する。</card>
+    <card name="Sphinx of Enlightenment" ja="Sphinx of Enlightenment" type="クリーチャー ― スフィンクス" pt="5/5">飛行
+Sphinx of Enlightenmentが戦場に出たとき、対戦相手１人を対象とする。そのプレイヤーはカード１枚を引き、あなたはカード３枚を引く。</card>
+    <card name="Fiendish Duo" ja="Fiendish Duo" type="クリーチャー ― デビル" pt="5/5">発生源が対戦相手にダメージを与えるなら、代わりに、それはそのプレイヤーにその点数の２倍のダメージを与える。</card>
+    <card name="Earthshaker Giant" ja="Earthshaker Giant" type="クリーチャー ― 巨人・ドルイド" pt="6/6">トランプル
+Earthshaker Giantが戦場に出たとき、ターン終了時まで、他の、あなたがコントロールしているクリーチャーは+3/+3の修整を受けトランプルを得る。</card>
+    <!-- Game Night (GNT) -->
     <card name="Avatar of Growth" ja="Avatar of Growth" type="クリーチャー ― エレメンタル・アバター" pt="4/4">この呪文を唱えるためのコストは対戦相手１人につき(１)少なくなる。
 トランプル
 Avatar of Growthが戦場に出たとき、各プレイヤーはそれぞれ、自分のライブラリーから基本土地・カード最大２枚を探し、戦場に出す。その後、ライブラリーを切り直す。</card>
@@ -205,14 +224,6 @@ Avatar of Growthが戦場に出たとき、各プレイヤーはそれぞれ、�
 Militant Angelが戦場に出たとき、このターンにあなたが攻撃した対戦相手の総数に等しい数の、警戒を持つ白の2/2の騎士・クリーチャー・トークンを生成する。</card>
     <card name="Rot Hulk" ja="Rot Hulk" type="クリーチャー ― ゾンビ" pt="5/5">威迫
 Rot Hulkが戦場に出たとき、あなたの墓地からゾンビ・カード最大Ｘ枚を対象とし、それらを戦場に戻す。Ｘは対戦相手の人数に等しい。</card>
-    <!-- Game Night 2019 -->
-    <card name="Highcliff Felidar" ja="Highcliff Felidar" type="クリーチャー ― 猫・ビースト" pt="5/5">警戒
-Highcliff Felidarが戦場に出たとき、対戦相手１人につき、そのプレイヤーがコントロールしているクリーチャーの中で最大のパワーを持つクリーチャー１体を選ぶ。それらのクリーチャーを破壊する。</card>
-    <card name="Sphinx of Enlightenment" ja="Sphinx of Enlightenment" type="クリーチャー ― スフィンクス" pt="5/5">飛行
-Sphinx of Enlightenmentが戦場に出たとき、対戦相手１人を対象とする。そのプレイヤーはカード１枚を引き、あなたはカード３枚を引く。</card>
-    <card name="Fiendish Duo" ja="Fiendish Duo" type="クリーチャー ― デビル" pt="5/5">発生源が対戦相手にダメージを与えるなら、代わりに、それはそのプレイヤーにその点数の２倍のダメージを与える。</card>
-    <card name="Earthshaker Giant" ja="Earthshaker Giant" type="クリーチャー ― 巨人・ドルイド" pt="6/6">トランプル
-Earthshaker Giantが戦場に出たとき、ターン終了時まで、他の、あなたがコントロールしているクリーチャーは+3/+3の修整を受けトランプルを得る。</card>
     <!-- Global Series: Jiang Yanggu and Mu Yanling -->
     <card name="Mu Yanling" ja="Mu Yanling" type="伝説のプレインズウォーカー ― ヤンリン" pt="5">[+2]：クリーチャー１体を対象とする。このターン、それはブロックされない。
 [-3]：カード２枚を引く。
@@ -2886,14 +2897,15 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="修正" value="修整" />
     <regex target="text" pattern="プレインズウォーカー１人" value="プレインズウォーカー１体" />
     <regex target="text" pattern="が装備しているクリーチャーが" value="か装備しているクリーチャーが" />
-    <regex target="text" pattern="コントール" value="コントロール" />
-    <regex target="text" pattern="(?&lt;!に)よって" value="によって" />
     <regex target="text" pattern="２倍する" value="２倍にする" />
+    <regex target="text" pattern="コントール" value="コントロール" />
+    <regex target="text" pattern="修整を得る。" value="修整を受ける。" />
+    <regex target="text" pattern="(?&lt;!に)よって" value="によって" />
     <regex target="text" pattern="ときのみ唱えられる" value="ときにのみ唱えられる" />
     <regex target="text" pattern="(?&lt;=カウンター.個)取り除く" value="を取り除く" />
     <regex target="text" pattern="していている" value="している" />
-    <regex target="text" pattern="カードを１枚を対象" value="カード１枚を対象" />
     <regex target="text" pattern="\n(?=。|そうしたなら)" value="" />
+    <regex target="text" pattern="カードを１枚を対象" value="カード１枚を対象" />
     <regex target="text" pattern="この呪文があなたの墓地から" value="この呪文が墓地から" />
     <regex target="ja|text" pattern="パルヘリオン\?" value="パルヘリオンⅡ" />
     <regex target="ja" pattern="正気の\?ぎ取り、ゼルリクス" value="正気の剝ぎ取り、ゼルリクス" />
@@ -2930,7 +2942,6 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="行ってる間" value="行っている間" />
     <regex target="text" pattern="攻撃してる" value="攻撃している" />
     <regex target="text" pattern="手札に加る。" value="手札に加える。" />
-    <regex target="text" pattern="修整を得る。" value="修整を受ける。" />
     <regex target="text" pattern="支払に加えて" value="支払いに加えて" />
     <regex target="text" pattern="選ばれてない" value="選ばれていない" />
     <regex target="text" pattern="唱えるためコスト" value="唱えるためのコスト" />
