@@ -322,8 +322,7 @@ namespace Mojp
         /// </summary>
         public void SetCard(Card card)
         {
-            if (card == null)
-                card = Card.Empty;
+            card ??= Card.Empty;
 
             if (Cards != null && Cards.Count >= 1 && Cards[0] == card)
                 return;

@@ -48,9 +48,7 @@ namespace Mojp
         {
             get
             {
-                if (lines == null)
-                    lines = Text?.Split('\n');
-
+                lines ??= Text?.Split('\n');
                 return lines;
             }
         }
