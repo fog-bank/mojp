@@ -51,6 +51,7 @@ namespace Mojp
                     // Junún Efreet や Lim-Dûl the Necromancer など
                     case 'ú':
                     case 'û':
+                    case 'ü':
                         sb.Append("u");
                         replaced = true;
                         break;
