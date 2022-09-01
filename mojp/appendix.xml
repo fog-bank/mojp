@@ -1575,11 +1575,11 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="279  /  281 " sub="SNC" name="Mountain" />
     <alt key="280  /  281 " sub="SNC" name="Forest" />
     <alt key="281  /  281 " sub="SNC" name="Forest" />
-    <alt key="277  /  281 " sub="UND" name="Plains" />
-    <alt key="278  /  281 " sub="UND" name="Island" />
-    <alt key="279  /  281 " sub="UND" name="Swamp" />
-    <alt key="280  /  281 " sub="UND" name="Mountain" />
-    <alt key="281  /  281 " sub="UND" name="Forest" />
+    <alt key="277  /  281 " sub="DMU" name="Plains" />
+    <alt key="278  /  281 " sub="DMU" name="Island" />
+    <alt key="279  /  281 " sub="DMU" name="Swamp" />
+    <alt key="280  /  281 " sub="DMU" name="Mountain" />
+    <alt key="281  /  281 " sub="DMU" name="Forest" />
     <!-- SL2 -->
     <alt key="138 " sub="SL2" name="Anguished Unmaking" />
     <alt key="139 " sub="SL2" name="Assassin's Trophy" />
@@ -3641,6 +3641,8 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="21b  /  21 " sub="TOK" name="昼／夜" />
     <!-- イニシアチブ (CLB) -->
     <alt key="20  /  20 " sub="CLB" name="The Initiative" />
+    <!-- 名前違い -->
+    <alt key="Sol'kanar the Tainted" sub="DMU" name="Sol'Kanar the Tainted" />
   </add>
   <replace>
     <!-- 誤字脱字 -->
