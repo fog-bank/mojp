@@ -230,9 +230,13 @@ namespace Mojp
                 {
                     string cardName = Card.NormalizeName(name);
 
+                    // HACK: PD S26 (DMU) にバグ
+                    if (cardName == "Tura Kenner")
+                        continue;
+
                     if (!App.TryGetCard(cardName, out _))
                     {
-                        Debug.WriteLine(cardName);
+                        Debug.WriteLine("PD カードリスト：" + cardName);
                         return GetPDListResult.Conflict;
                     }
                     legalCards.Add(cardName);

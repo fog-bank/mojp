@@ -50,8 +50,8 @@ namespace Mojp
                 case GetPDListResult.NotFound:
                 case GetPDListResult.Error:
                 case GetPDListResult.Conflict:
-                    pdError.Visibility = Visibility.Visible;
                     pdSuccess.Visibility = Visibility.Collapsed;
+                    pdError.Visibility = Visibility.Visible;
                     CardPrice.ClearPDLegalList();
                     break;
 
