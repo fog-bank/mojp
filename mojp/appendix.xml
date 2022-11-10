@@ -15,10 +15,9 @@
 (５)：ターン終了時まで、あなたがコントロールしている各クリーチャーは+1/+1の修整を受ける。</card>
     <card name="Calamity's Wake" ja="災厄の痕跡" type="インスタント">すべての墓地を追放する。このターン、各プレイヤーはクリーチャーでない呪文を唱えられない。災厄の痕跡を追放する。</card>
     <card name="Deadly Riposte" ja="手厳しい反撃" type="インスタント">タップ状態のクリーチャー１体を対象とする。手厳しい反撃はそれに３点のダメージを与え、あなたは２点のライフを得る。</card>
-    <card name="Disenchant" ja="解呪" type="インスタント">アーティファクトやエンチャントのうち１つを対象とする。それを破壊する。</card>
     <card name="Great Desert Prospector" ja="大砂漠探鉱者" type="クリーチャー ― 人間・工匠" pt="3/2">大砂漠探鉱者が戦場に出たとき、あなたがコントロールしていてこれでないクリーチャー１体につきパワーストーン・トークン１つをタップ状態で生成する。（それらは、「(Ｔ)：(◇)を加える。このマナはアーティファクトでない呪文を唱えるためには支払えない。」を持つアーティファクトである。）</card>
     <card name="In the Trenches" ja="戦闘態勢" type="エンチャント">あなたがコントロールしている各クリーチャーは+1/+1の修整を受ける。
-(５)(白)：あなたがコントロールしておらず土地でもないパーマネント１つを対象とする。戦闘態勢が戦場を離れるまで、それを追放する。起動はソーサリーとしてのみ行い、１回のみ起動できる。</card>
+(５)(白)：あなたがコントロールしておらず土地でもないパーマネント１つを対象とする。戦闘態勢が戦場を離れるまで、それを追放する。ソーサリーとしてのみ、かつ、１回のみ起動できる。</card>
     <card name="Kayla's Command" ja="カイラの命令" type="ソーサリー">以下から２つを選ぶ。
 ・無色の2/2の構築物・アーティファクト・クリーチャー・トークン１体を生成する。
 ・あなたがコントロールしているクリーチャー１体の上に+1/+1カウンター１個を置く。ターン終了時まで、それは二段攻撃を得る。
@@ -94,8 +93,6 @@
 蘇生(白)（(白)：あなたの墓地からこのカードを戦場に戻す。これは速攻を得る。次の終了ステップの開始時に、またはこれが戦場を離れるなら、これを追放する。蘇生はソーサリーとしてのみ行う。）</card>
     
     <card name="Air Marshal" ja="空挺司令官" type="クリーチャー ― 人間・兵士" pt="2/1">(３)：兵士１体を対象とする。ターン終了時まで、それは飛行を得る。</card>
-    <card name="Curate" ja="情報収集" type="インスタント">諜報２を行う。（あなたのライブラリーの一番上からカード２枚を見て、そのうちの望む枚数をあなたの墓地に、残りをあなたのライブラリーの一番上に望む順番で置く。）
-カード１枚を引く。</card>
     <card name="Defabricate" ja="組立分解" type="インスタント">以下から１つを選ぶ。
 ・アーティファクトかエンチャントである呪文１つを対象とする。それを打ち消す。これによりその呪文が打ち消されたなら、それをオーナーの墓地に置く代わりに追放する。
 ・起動型か誘発型である能力１つを対象とする。それを打ち消す。</card>
@@ -202,11 +199,7 @@
     <card name="Battlefield Butcher" ja="戦場の解体屋" type="クリーチャー ― 人間・兵士" pt="1/4">(５),(Ｔ)：各対戦相手はそれぞれ２点のライフを失う。この能力を起動するためのコストは、あなたの墓地にあるクリーチャー・カード１枚につき(１)少なくなる。</card>
     <card name="Carrion Locust" ja="屍肉蝗" type="クリーチャー ― 昆虫・ホラー" pt="2/1">飛行
 屍肉蝗が戦場に出たとき、対戦相手の墓地にあるカード１枚を対象とする。それを追放する。それがクリーチャー・カードであったなら、そのプレイヤーは１点のライフを失う。</card>
-    <card name="Corrupt" ja="堕落" type="ソーサリー">クリーチャーやプレインズウォーカーやプレイヤーのうち１つを対象とする。堕落はそれに、あなたがコントロールしている沼の数に等しい点数のダメージを与える。あなたはこれにより与えたダメージに等しい点数のライフを得る。</card>
-    <card name="Diabolic Intent" ja="悪魔の意図" type="ソーサリー">この呪文を唱えるための追加コストとして、クリーチャー１体を生け贄に捧げる。
-あなたのライブラリーからカード１枚を探し、あなたの手札に加える。その後、ライブラリーを切り直す。</card>
     <card name="Disciples of Gix" ja="ギックスの信奉者" type="クリーチャー ― ファイレクシアン・人間" pt="4/4">ギックスの信奉者が戦場に出たとき、あなたのライブラリーからアーティファクト・カード最大３枚を探し、あなたの墓地に置く。その後、ライブラリーを切り直す。</card>
-    <card name="Disfigure" ja="見栄え損ない" type="インスタント">クリーチャー１体を対象とする。ターン終了時まで、それは-2/-2の修整を受ける。</card>
     <card name="Dreams of Steel and Oil" ja="鋼と油の夢" type="ソーサリー">対戦相手１人を対象とする。そのプレイヤーは自分の手札を公開する。あなたはその中からアーティファクトかクリーチャーであるカード１枚を選ぶ。その後、そのプレイヤーの墓地からアーティファクトかクリーチャーであるカード１枚を選ぶ。それらの選ばれたカードを追放する。</card>
     <card name="Emergency Weld" ja="応急溶接" type="ソーサリー">あなたの墓地にありアーティファクトかクリーチャーであるカード１枚を対象とする。それをあなたの手札に戻す。無色の1/1の兵士・アーティファクト・クリーチャー・トークン１体を生成する。</card>
     <card name="Fateful Handoff" ja="運命的連携" type="ソーサリー">アーティファクトやクリーチャーのうちあなたがコントロールしている１つを対象とする。それのマナ総量に等しい枚数のカードを引く。対戦相手１人はそのパーマネントのコントロールを得る。</card>
@@ -225,7 +218,6 @@
     <card name="Gixian Skullflayer" ja="ギックスの頭蓋剥ぎ" type="クリーチャー ― ファイレクシアン・人間・暗殺者" pt="2/3">あなたのアップキープの開始時に、あなたの墓地に３枚以上のクリーチャー・カードがある場合、ギックスの頭蓋剥ぎの上に+1/+1カウンター１個を置く。</card>
     <card name="Gnawing Vermin" ja="かじりつく害獣" type="クリーチャー ― ネズミ" pt="1/1">かじりつく害獣が戦場に出たとき、プレイヤー１人を対象とする。そのプレイヤーはカード２枚を切削する。
 かじりつく害獣が死亡したとき、あなたがコントロールしていないクリーチャー１体を対象とする。ターン終了時まで、それは-1/-1の修整を受ける。</card>
-    <card name="Go for the Throat" ja="喉首狙い" type="インスタント">アーティファクトでないクリーチャー１体を対象とする。それを破壊する。</card>
     <card name="Gruesome Realization" ja="陰惨な実現" type="ソーサリー">以下から１つを選ぶ。
 ・あなたはカード２枚を引き、２点のライフを失う。
 ・ターン終了時まで、対戦相手がコントロールしている各クリーチャーは-1/-1の修整を受ける。</card>
@@ -242,7 +234,6 @@
 あなたの墓地にあるクリーチャー・カード１枚を対象とする。それを戦場に戻す。</card>
     <card name="Overwhelming Remorse" ja="やり場のない悔恨" type="インスタント">この呪文を唱えるためのコストは、あなたの墓地にあるクリーチャー・カード１枚につき(１)少なくなる。
 クリーチャーやプレインズウォーカーのうち１体を対象とする。それを追放する。</card>
-    <card name="Painful Quandary" ja="痛ましい苦境" type="エンチャント">対戦相手が呪文を唱えるたび、そのプレイヤーはカード１枚を捨てないかぎり５点のライフを失う。</card>
     <card name="Powerstone Fracture" ja="パワーストーン破砕" type="ソーサリー">この呪文を唱えるための追加コストとして、アーティファクトやクリーチャーのうち１つを生け贄に捧げる。
 クリーチャーやプレインズウォーカーのうち１体を対象とする。それを破壊する。</card>
     <card name="Ravenous Gigamole" ja="貪欲な巨大モグラ" type="クリーチャー ― モグラ・ホラー" pt="2/3">貪欲な巨大モグラが戦場に出たとき、カード３枚を切削する。あなたはこれにより切削されたカードの中からクリーチャー・カード１枚をあなたの手札に加えてもよい。そうしないなら、貪欲な巨大モグラの上に+1/+1カウンター１個を置く。（カードを切削するとは、あなたのライブラリーの一番上からカードをあなたの墓地に置くことである。）</card>
@@ -315,8 +306,6 @@
     <card name="Mishra's Onslaught" ja="ミシュラの猛攻" type="インスタント">以下から１つを選ぶ。
 ・無色の1/1の兵士・アーティファクト・クリーチャー・トークン２体を生成する。
 ・ターン終了時まで、あなたがコントロールしている各クリーチャーは+2/+0の修整を受ける。</card>
-    <card name="Monastery Swiftspear" ja="僧院の速槍" type="クリーチャー ― 人間・モンク" pt="1/2">速攻
-果敢（あなたがクリーチャーでない呪文を唱えるたび、ターン終了時まで、このクリーチャーは+1/+1の修整を受ける。）</card>
     <card name="Obliterating Bolt" ja="抹消する稲妻" type="ソーサリー">クリーチャーやプレインズウォーカーのうち１体を対象とする。抹消する稲妻はそれに４点のダメージを与える。このターン、そのクリーチャーかプレインズウォーカーが死亡するなら、代わりにそれを追放する。</card>
     <card name="Over the Top" ja="やり過ぎ" type="ソーサリー">各プレイヤーはそれぞれ、自分のライブラリーの一番上から、自分がコントロールしていて土地でないパーマネントの数に等しい枚数のカードを公開し、これにより自分が公開したすべてのパーマネント・カードを戦場に出し、残りを自分の墓地に置く。</card>
     <card name="Penregon Strongbull" ja="ペンレゴンの剛牛" type="クリーチャー ― ミノタウルス" pt="2/3">(１),アーティファクト１つを生け贄に捧げる：ターン終了時まで、ペンレゴンの剛牛は+1/+1の修整を受け、各対戦相手にそれぞれ１点のダメージを与える。</card>
@@ -371,30 +360,23 @@
 エンチャントしているクリーチャーは+2/+0の修整を受けトランプルを持つ。
 無鉄砲が戦場から墓地に置かれたとき、カード１枚を引く。</card>
     <card name="Awaken the Woods" ja="森林の目覚め" type="ソーサリー">緑の1/1の森・ドライアド・土地・クリーチャー・トークンＸ体を生成する。（それらは召喚酔いの影響を受ける。）</card>
-    <card name="Blanchwood Armor" ja="ブランチウッドの鎧" type="エンチャント ― オーラ">エンチャント（クリーチャー）
-エンチャントしているクリーチャーは、あなたがコントロールしている森１つにつき+1/+1の修整を受ける。</card>
     <card name="Blanchwood Prowler" ja="ブランチウッドのうろつくもの" type="クリーチャー ― エレメンタル" pt="1/1">ブランチウッドのうろつくものが戦場に出たとき、カード３枚を切削する。あなたは、これにより切削されたカードの中から土地・カード１枚をあなたの手札に加えてもよい。そうしないなら、ブランチウッドのうろつくものの上に+1/+1カウンター１個を置く。（カードを切削するとは、あなたのライブラリーの一番上からカードをあなたの墓地に置くことである。）</card>
     <card name="Burrowing Razormaw" ja="穴掘り剃刀大口" type="クリーチャー ― ビースト" pt="4/2">穴掘り剃刀大口が死亡したとき、カード４枚を切削する。（あなたのライブラリーの一番上からカード４枚をあなたの墓地に置く。）</card>
     <card name="Bushwhack" ja="薮打ち" type="ソーサリー">以下から１つを選ぶ。
 ・あなたのライブラリーから基本土地・カード１枚を探し、公開し、あなたの手札に加える。その後、ライブラリーを切り直す。
 ・あなたがコントロールしているクリーチャー１体と、あなたがコントロールしていないクリーチャー１体を対象とする。その前者はその後者と格闘を行う。（それぞれはもう一方に自身のパワーに等しい点数のダメージを与える。）</card>
     <card name="Citanul Stalwart" ja="シタヌールの重鎮" type="クリーチャー ― エルフ・ドルイド・兵士" pt="1/1">(Ｔ),アーティファクトやクリーチャーのうちあなたがコントロールしていてアンタップ状態である１つをタップする：好きな色１色のマナ１点を加える。</card>
-    <card name="Epic Confrontation" ja="勇壮な対決" type="ソーサリー">あなたがコントロールしているクリーチャー１体と、あなたがコントロールしていないクリーチャー１体を対象とする。ターン終了時まで、その前者は+1/+2の修整を受ける。その前者はその後者と格闘を行う。（それぞれはもう一方に自身のパワーに等しい点数のダメージを与える。）</card>
     <card name="Fade from History" ja="歴史の彼方" type="ソーサリー">アーティファクトかエンチャントをコントロールしている各プレイヤーはそれぞれ、緑の2/2の熊・クリーチャー・トークン１体を生成する。その後、すべてのアーティファクトとすべてのエンチャントを破壊する。</card>
     <card name="Fallaji Excavation" ja="ファラジの発掘" type="ソーサリー">パワーストーン・トークン３つをタップ状態で生成する。あなたは３点のライフを得る。（それらのトークンは「(Ｔ)：(◇)を加える。このマナはアーティファクトでない呪文を唱えるためには支払えない。」を持つアーティファクトである。）</card>
-    <card name="Fauna Shaman" ja="獣相のシャーマン" type="クリーチャー ― エルフ・シャーマン" pt="2/2">(緑),(Ｔ),クリーチャー・カード１枚を捨てる：あなたのライブラリーからクリーチャー・カード１枚を探し、公開し、あなたの手札に加える。その後、ライブラリーを切り直す。</card>
     <card name="Fog of War" ja="戦の霧" type="インスタント">あなたは戦場にあるクリーチャー１体につき１点のライフを得る。このターン、パワーが３以下の各クリーチャーが与えるすべての戦闘ダメージを軽減する。</card>
     <card name="Gaea's Courser" ja="ガイアの狩猟者" type="クリーチャー ― ケンタウルス・兵士" pt="4/5">ガイアの狩猟者が攻撃するたび、あなたの墓地に３枚以上のクリーチャー・カードがある場合、カード１枚を引く。</card>
     <card name="Gaea's Gift" ja="ガイアの贈り物" type="インスタント">あなたがコントロールしているクリーチャー１体を対象とする。それの上に+1/+1カウンター１個を置く。ターン終了時まで、それは到達とトランプルと呪禁と破壊不能を得る。（それは対戦相手がコントロールしている呪文や能力の対象にならない。ダメージや「破壊」と書かれた効果では、それは破壊されない。）</card>
-    <card name="Giant Growth" ja="巨大化" type="インスタント">クリーチャー１体を対象とする。ターン終了時まで、それは+3/+3の修整を受ける。</card>
     <card name="Gnarlroot Pallbearer" ja="節くれ根の棺担ぎ" type="クリーチャー ― ツリーフォーク・ドルイド" pt="5/5">トランプル
 節くれ根の棺担ぎが戦場に出たとき、クリーチャー１体を対象とする。ターン終了時まで、それは+X/+Xの修整を受ける。Ｘはあなたの墓地にあるクリーチャー・カードの枚数に等しい。</card>
     <card name="Gwenna, Eyes of Gaea" ja="ガイアの眼、グウェナ" type="伝説のクリーチャー ― エルフ・ドルイド・スカウト" pt="2/3">(Ｔ)：望む色の組み合わせのマナ２点を加える。このマナは、クリーチャー・呪文を唱えるためか、クリーチャーかクリーチャー・カードの能力を起動するためにのみ使用できる。
 あなたがパワーが５以上のクリーチャー・呪文を唱えるたび、ガイアの眼、グウェナの上に+1/+1カウンター１個を置き、これをアンタップする。</card>
     <card name="Hoarding Recluse" ja="溜め込むイトグモ" type="クリーチャー ― 蜘蛛" pt="2/3">到達、接死
 溜め込むイトグモが死亡したとき、墓地にありこれでないカード最大１枚を対象とする。それをオーナーのライブラリーの一番下に置く。</card>
-    <card name="Obstinate Baloth" ja="強情なベイロス" type="クリーチャー ― ビースト" pt="4/4">強情なベイロスが戦場に出たとき、あなたは４点のライフを得る。
-対戦相手がコントロールしている呪文や能力によってあなたが強情なベイロスを捨てるなら、これをあなたの墓地に置く代わりに戦場に出す。</card>
     <card name="Perimeter Patrol" ja="防衛線の巡回兵" type="クリーチャー ― 人間・兵士" pt="3/3">アーティファクト１つがあなたのコントロール下で戦場に出るたび、ターン終了時まで、防衛線の巡回兵は+1/+0の修整を受ける。</card>
     <card name="Sarinth Steelseeker" ja="サリンスの鋼探し" type="クリーチャー ― 人間・工匠・スカウト" pt="1/2">アーティファクト１つがあなたのコントロール下で戦場に出るたび、あなたのライブラリーの一番上のカードを見る。それが土地・カードであるなら、あなたは「それを公開し、あなたの手札に加える。」を選んでもよい。あなたがそのカードをあなたの手札に加えなかったなら、あなたはそれをあなたの墓地に置いてもよい。</card>
     <card name="Shoot Down" ja="撃ち落とし" type="ソーサリー">アーティファクトやエンチャントや飛行を持つクリーチャーのうち１つを対象とする。それを追放する。</card>
@@ -534,32 +516,19 @@
     <card name="Tower Worker" ja="塔の作業員" type="アーティファクト・クリーチャー ― 組立作業員" pt="1/3">到達
 (Ｔ)：(◇)を加える。あなたが《鉱山の作業員》という名前を持つクリーチャーと《魔力炉の作業員》という名前を持つクリーチャーを両方ともコントロールしているなら、代わりに(◇)(◇)(◇)を加える。</card>
     
-    <card name="Battlefield Forge" ja="戦場の鍛冶場" type="土地">(Ｔ)：(◇)を加える。
-(Ｔ)：(赤)か(白)を加える。戦場の鍛冶場はあなたに１点のダメージを与える。</card>
-    <card name="Blast Zone" ja="爆発域" type="土地">爆発域は蓄積カウンター１個が置かれた状態で戦場に出る。
-(Ｔ)：(◇)を加える。
-(Ｘ)(Ｘ),(Ｔ)：爆発域の上に蓄積カウンターＸ個を置く。
-(３),(Ｔ),爆発域を生け贄に捧げる：マナ総量が爆発域の上にある蓄積カウンターの個数に等しく土地でない各パーマネントをそれぞれ破壊する。</card>
-    <card name="Brushland" ja="低木林地" type="土地">(Ｔ)：(◇)を加える。
-(Ｔ)：(緑)か(白)を加える。低木林地はあなたに１点のダメージを与える。</card>
     <card name="Demolition Field" ja="解体爆破場" type="土地">(Ｔ)：(◇)を加える。
 (２),(Ｔ),解体爆破場を生け贄に捧げる：対戦相手がコントロールしていて基本でない土地１つを対象とする。それを破壊する。その土地のコントローラーは「自分のライブラリーから基本土地・カード１枚を探し、戦場に出す。その後、ライブラリーを切り直す。」を選んでもよい。あなたは「あなたのライブラリーから基本土地・カード１枚を探し、戦場に出す。その後、ライブラリーを切り直す。」を選んでもよい。</card>
-    <card name="Evolving Wilds" ja="進化する未開地" type="土地">(Ｔ),進化する未開地を生け贄に捧げる：あなたのライブラリーから基本土地・カード１枚を探し、タップ状態で戦場に出す。その後、ライブラリーを切り直す。</card>
     <card name="Fortified Beachhead" ja="要塞化した海岸堡" type="土地">要塞化した海岸堡が戦場に出るに際し、あなたはあなたの手札から兵士・カード１枚を公開してもよい。あなたがこれにより兵士・カードを公開しておらず兵士をコントロールもしていないなら、要塞化した海岸堡はタップ状態で戦場に出る。
 (Ｔ)：(白)か(青)を加える。
 (５),(Ｔ)：ターン終了時まで、あなたがコントロールしている各兵士は+1/+1の修整を受ける。</card>
     <card name="Hall of Tagsin" ja="タグシンの広間" type="土地">(Ｔ)：(◇)を加える。
 (１),(Ｔ)：好きな色１色のマナ１点を加える。
 (４),(Ｔ)：パワーストーン・トークン１つをタップ状態で生成する。（それは、「(Ｔ)：(◇)を加える。このマナはアーティファクトでない呪文を唱えるためには支払えない。」を持つアーティファクトである。）</card>
-    <card name="Llanowar Wastes" ja="ラノワールの荒原" type="土地">(Ｔ)：(◇)を加える。
-(Ｔ)：(黒)か(緑)を加える。ラノワールの荒原はあなたに１点のダメージを与える。</card>
     <card name="Mishra's Foundry" ja="ミシュラの鋳造所" type="土地">(Ｔ)：(◇)を加える。
 (２)：ターン終了時まで、ミシュラの鋳造所は2/2の組立作業員・アーティファクト・クリーチャーになる。これは土地でもある。
 (１),(Ｔ)：攻撃している組立作業員１体を対象とする。ターン終了時まで、それは+2/+2の修整を受ける。</card>
     <card name="Tocasia's Dig Site" ja="トカシアの採掘場" type="土地">(Ｔ)：(◇)を加える。
 (３),(Ｔ)：諜報１を行う。（あなたのライブラリーの一番上のカードを見る。あなたはそのカードをあなたの墓地に置いてもよい。）</card>
-    <card name="Underground River" ja="地底の大河" type="土地">(Ｔ)：(◇)を加える。
-(Ｔ)：(青)か(黒)を加える。地底の大河はあなたに１点のダメージを与える。</card>
     
     <card name="Phyrexian Dragon Engine" ja="ファイレクシアのドラゴン・エンジン" type="アーティファクト・クリーチャー ― ファイレクシアン・ドラゴン" pt="2/2">二段攻撃
 ファイレクシアのドラゴン・エンジンがあなたの墓地から戦場に出たとき、あなたはあなたの手札を捨ててもよい。そうしたなら、カード３枚を引く。
@@ -790,7 +759,6 @@ III ― クリーチャーやプレインズウォーカーやプレイヤーの
     <card name="Replicated Ring" ja="複製された指輪" type="トークン・氷雪アーティファクト" wiki="複製する指輪/Replicating Ring">(Ｔ)：好きな色１色のマナ１点を加える。</card>
     <card name="Rock" ja="岩" type="トークン・アーティファクト ― 装備品" wiki="ゴブリンの武器職人、トッゴ/Toggo, Goblin Weaponsmith">装備しているクリーチャーは「(１),(Ｔ),岩を生け贄に捧げる：クリーチャー１体かプレインズウォーカー１体かプレイヤー１人を対象とする。このクリーチャーはそれに２点のダメージを与える。」を持つ。
 装備(１)</card>
-    <card name="Scrap" ja="屑鉄" type="トークン・アーティファクト" wiki="実業的な回収者、ファリド/Farid, Enterprising Salvager"></card>
     <card name="Smoke Blessing" ja="煙の恵み" type="トークン・エンチャント ― オーラ" wiki="煙の精霊の助け/Smoke Spirits' Aid">エンチャント（クリーチャー）
 エンチャントしているクリーチャーが死亡したとき、それはそれのコントローラーに１点のダメージを与え、あなたは宝物・トークン１つを生成する。</card>
     <card name="Stoneforged Blade" ja="石鍛冶製の剣" type="トークン・アーティファクト ― 装備品" wiki="石術師、ナヒリ/Nahiri, the Lithomancer">破壊不能
@@ -2551,116 +2519,117 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0055  /  1158 " sub="DMU" name="Plaza of Heroes" />
     <alt key="0056  /  1158 " sub="DMU" name="Thran Portal" />
     <!-- BRO variants -->
-    <!--<alt key="0000  /  1158 " sub="BRO" name="In the Trenches" />
-    <alt key="0000  /  1158 " sub="BRO" name="Kayla's Command" />
-    <alt key="0000  /  1158 " sub="BRO" name="Kayla's Reconstruction" />
-    <alt key="0000  /  1158 " sub="BRO" name="Loran of the Third Path" />
-    <alt key="0000  /  1158 " sub="BRO" name="Myrel, Shield of Argive" />
-    <alt key="0000  /  1158 " sub="BRO" name="Siege Veteran" />
-    <alt key="0000  /  1158 " sub="BRO" name="Soul Partition" />
-    <alt key="0000  /  1158 " sub="BRO" name="Tocasia's Welcome" />
-    <alt key="0000  /  1158 " sub="BRO" name="Autonomous Assembler" />
-    <alt key="0000  /  1158 " sub="BRO" name="Platoon Dispenser" />
-    <alt key="0000  /  1158 " sub="BRO" name="Steel Seraph" />
-    <alt key="0000  /  1158 " sub="BRO" name="Urza's Sylex" />
-    <alt key="0000  /  1158 " sub="BRO" name="Rescue Retriever" />
-    <alt key="0000  /  1158 " sub="BRO" name="Drafna, Founder of Lat-Nam" />
-    <alt key="0000  /  1158 " sub="BRO" name="Hurkyl, Master Wizard" />
-    <alt key="0000  /  1158 " sub="BRO" name="Hurkyl's Final Meditation" />
-    <alt key="0000  /  1158 " sub="BRO" name="One with the Multiverse" />
-    <alt key="0000  /  1158 " sub="BRO" name="Skystrike Officer" />
-    <alt key="0000  /  1158 " sub="BRO" name="Urza's Command" />
-    <alt key="0000  /  1158 " sub="BRO" name="Arcane Proxy" />
-    <alt key="0000  /  1158 " sub="BRO" name="Surge Engine" />
-    <alt key="0000  /  1158 " sub="BRO" name="The Temporal Anchor" />
-    <alt key="0000  /  1158 " sub="BRO" name="Terisian Mindbreaker" />
-    <alt key="0000  /  1158 " sub="BRO" name="Geology Enthusiast" />
-    <alt key="0000  /  1158 " sub="BRO" name="Ashnod, Flesh Mechanist" />
-    <alt key="0000  /  1158 " sub="BRO" name="Diabolic Intent" />
-    <alt key="0000  /  1158 " sub="BRO" name="Fateful Handoff" />
-    <alt key="0000  /  1158 " sub="BRO" name="Gix, Yawgmoth Praetor" />
-    <alt key="0000  /  1158 " sub="BRO" name="Gix's Command" />
-    <alt key="0000  /  1158 " sub="BRO" name="Gixian Puppeteer" />
-    <alt key="0000  /  1158 " sub="BRO" name="Hostile Negotiations" />
-    <alt key="0000  /  1158 " sub="BRO" name="Misery's Shadow" />
-    <alt key="0000  /  1158 " sub="BRO" name="Painful Quandary" />
-    <alt key="0000  /  1158 " sub="BRO" name="Phyrexian Fleshgorger" />
-    <alt key="0000  /  1158 " sub="BRO" name="Razorlash Transmogrant" />
-    <alt key="0000  /  1158 " sub="BRO" name="Transmogrant's Crown" />
-    <alt key="0000  /  1158 " sub="BRO" name="Terror Ballista" />
-    <alt key="0000  /  1158 " sub="BRO" name="Brotherhood's End" />
-    <alt key="0000  /  1158 " sub="BRO" name="Draconic Destiny" />
-    <alt key="0000  /  1158 " sub="BRO" name="Feldon, Ronom Excavator" />
-    <alt key="0000  /  1158 " sub="BRO" name="Mechanized Warfare" />
-    <alt key="0000  /  1158 " sub="BRO" name="Mishra's Command" />
-    <alt key="0000  /  1158 " sub="BRO" name="Over the Top" />
-    <alt key="0000  /  1158 " sub="BRO" name="Tyrant of Kher Ridges" />
-    <alt key="0000  /  1158 " sub="BRO" name="Visions of Phyrexia" />
-    <alt key="0000  /  1158 " sub="BRO" name="Skitterbeam Battalion" />
-    <alt key="0000  /  1158 " sub="BRO" name="Artificer's Dragon" />
-    <alt key="0000  /  1158 " sub="BRO" name="Awaken the Woods" />
-    <alt key="0000  /  1158 " sub="BRO" name="Fade from History" />
-    <alt key="0000  /  1158 " sub="BRO" name="Fauna Shaman" />
-    <alt key="0000  /  1158 " sub="BRO" name="Gwenna, Eyes of Gaea" />
-    <alt key="0000  /  1158 " sub="BRO" name="Teething Wurmlet" />
-    <alt key="0000  /  1158 " sub="BRO" name="Titania's Command" />
-    <alt key="0000  /  1158 " sub="BRO" name="Perennial Behemoth" />
-    <alt key="0000  /  1158 " sub="BRO" name="Rootwise Amalgam" />
-    <alt key="0000  /  1158 " sub="BRO" name="Simian Simulacrum" />
-    <alt key="0000  /  1158 " sub="BRO" name="Woodcaller Automaton" />
-    <alt key="0000  /  1158 " sub="BRO" name="Mishra, Tamer of Mak Fawa" />
-    <alt key="0000  /  1158 " sub="BRO" name="Urza, Prince of Kroog" />
-    <alt key="0000  /  1158 " sub="BRO" name="Deathbloom Ritualist" />
-    <alt key="0000  /  1158 " sub="BRO" name="Hajar, Loyal Bodyguard" />
-    <alt key="0000  /  1158 " sub="BRO" name="Legions to Ashes" />
-    <alt key="0000  /  1158 " sub="BRO" name="Queen Kayla bin-Kroog" />
-    <alt key="0000  /  1158 " sub="BRO" name="Sarinth Greatwurm" />
-    <alt key="0000  /  1158 " sub="BRO" name="Tawnos, the Toymaker" />
-    <alt key="0000  /  1158 " sub="BRO" name="Tocasia, Dig Site Mentor" />
-    <alt key="0000  /  1158 " sub="BRO" name="Bladecoil Serpent" />
-    <alt key="0000  /  1158 " sub="BRO" name="Clay Champion" />
-    <alt key="0000  /  1158 " sub="BRO" name="Cityscape Leveler" />
-    <alt key="0000  /  1158 " sub="BRO" name="Liberator, Urza's Battlethopter" />
-    <alt key="0000  /  1158 " sub="BRO" name="Portal to Phyrexia" />
-    <alt key="0000  /  1158 " sub="BRO" name="The Stasis Coffin" />
-    <alt key="0000  /  1158 " sub="BRO" name="The Stone Brain" />
-    <alt key="0000  /  1158 " sub="BRO" name="Thran Spider" />
-    <alt key="0000  /  1158 " sub="BRO" name="Blast Zone" />
-    <alt key="0000  /  1158 " sub="BRO" name="Battlefiled Forge" />
-    <alt key="0000  /  1158 " sub="BRO" name="Brushland" />
-    <alt key="0000  /  1158 " sub="BRO" name="Llanowar Wastes" />
-    <alt key="0000  /  1158 " sub="BRO" name="Underground River" />
-    <alt key="0000  /  1158 " sub="BRO" name="Blast Zone" />
-    <alt key="0000  /  1158 " sub="BRO" name="Fortified Beachhead" />
-    <alt key="0000  /  1158 " sub="BRO" name="Hall of Tagsin" />
-    <alt key="0000  /  1158 " sub="BRO" name="Mishra's Foundry" />-->
+    <alt key="0002  /  1158 " sub="BRO" name="Rescue Retriever" />
+    <alt key="0004  /  1158 " sub="BRO" name="Steel Seraph" />
+    <alt key="0008  /  1158 " sub="BRO" name="Autonomous Assembler" />
+    <alt key="0011  /  1158 " sub="BRO" name="Loran of the Third Path" />
+    <alt key="0012  /  1158 " sub="BRO" name="Siege Veteran" />
+    <alt key="0013  /  1158 " sub="BRO" name="Soul Partition" />
+    <alt key="0014  /  1158 " sub="BRO" name="Kayla's Command" />
+    <alt key="0015  /  1158 " sub="BRO" name="Tocasia's Welcome" />
+    <alt key="0016  /  1158 " sub="BRO" name="Kayla's Reconstruction" />
+    <alt key="0017  /  1158 " sub="BRO" name="Myrel, Shield of Argive" />
+    <alt key="0018  /  1158 " sub="BRO" name="Platoon Dispenser" />
+    <alt key="0019  /  1158 " sub="BRO" name="Urza's Sylex" />
+    <alt key="0020  /  1158 " sub="BRO" name="In the Trenches" />
+    <alt key="0021  /  1158 " sub="BRO" name="Geology Enthusiast" />
+    <alt key="0023  /  1158 " sub="BRO" name="Drafna, Founder of Lat-Nam" />
+    <alt key="0027  /  1158 " sub="BRO" name="Skystrike Officer" />
+    <alt key="0029  /  1158 " sub="BRO" name="The Temporal Anchor" />
+    <alt key="0030  /  1158 " sub="BRO" name="Terisian Mindbreaker" />
+    <alt key="0031  /  1158 " sub="BRO" name="Urza's Command" />
+    <alt key="0032  /  1158 " sub="BRO" name="Hurkyl's Final Meditation" />
+    <alt key="0033  /  1158 " sub="BRO" name="Surge Engine" />
+    <alt key="0035  /  1158 " sub="BRO" name="Hurkyl, Master Wizard" />
+    <alt key="0036  /  1158 " sub="BRO" name="Arcane Proxy" />
+    <alt key="0037  /  1158 " sub="BRO" name="One with the Multiverse" />
+    <alt key="0040  /  1158 " sub="BRO" name="Ashnod, Flesh Mechanist" />
+    <alt key="0044  /  1158 " sub="BRO" name="Misery's Shadow" />
+    <alt key="0047  /  1158 " sub="BRO" name="Gixian Puppeteer" />
+    <alt key="0049  /  1158 " sub="BRO" name="Transmogrant's Crown" />
+    <alt key="0050  /  1158 " sub="BRO" name="Diabolic Intent" />
+    <alt key="0051  /  1158 " sub="BRO" name="Gix's Command" />
+    <alt key="0052  /  1158 " sub="BRO" name="Hostile Negotiations" />
+    <alt key="0053  /  1158 " sub="BRO" name="Fateful Handoff" />
+    <alt key="0054  /  1158 " sub="BRO" name="Painful Quandary" />
+    <alt key="0055  /  1158 " sub="BRO" name="Razorlash Transmogrant" />
+    <alt key="0056  /  1158 " sub="BRO" name="Gix, Yawgmoth Praetor" />
+    <alt key="0057  /  1158 " sub="BRO" name="Phyrexian Fleshgorger" />
+    <alt key="0059  /  1158 " sub="BRO" name="Feldon, Ronom Excavator" />
+    <alt key="0063  /  1158 " sub="BRO" name="Tyrant of Kher Ridges" />
+    <alt key="0065  /  1158 " sub="BRO" name="Mechanized Warfare" />
+    <alt key="0066  /  1158 " sub="BRO" name="Brotherhood's End" />
+    <alt key="0067  /  1158 " sub="BRO" name="Visions of Phyrexia" />
+    <alt key="0068  /  1158 " sub="BRO" name="Mishra's Command" />
+    <alt key="0069  /  1158 " sub="BRO" name="Over the Top" />
+    <alt key="0070  /  1158 " sub="BRO" name="Skitterbeam Battalion" />
+    <alt key="0071  /  1158 " sub="BRO" name="Draconic Destiny" />
+    <alt key="0072  /  1158 " sub="BRO" name="Teething Wurmlet" />
+    <alt key="0073  /  1158 " sub="BRO" name="Fauna Shaman" />
+    <alt key="0074  /  1158 " sub="BRO" name="Gwenna, Eyes of Gaea" />
+    <alt key="0075  /  1158 " sub="BRO" name="Simian Simulacrum" />
+    <alt key="0076  /  1158 " sub="BRO" name="Fade from History" />
+    <alt key="0077  /  1158 " sub="BRO" name="Perennial Behemoth" />
+    <alt key="0078  /  1158 " sub="BRO" name="Titania's Command" />
+    <alt key="0080  /  1158 " sub="BRO" name="Rootwire Amalgam" />
+    <alt key="0082  /  1158 " sub="BRO" name="Awaken the Woods" />
+    <alt key="0083  /  1158 " sub="BRO" name="Harbin, Vanguard Aviator" />
+    <alt key="0084  /  1158 " sub="BRO" name="Urza, Prince of Kroog" />
+    <alt key="0085  /  1158 " sub="BRO" name="Mishra, Tamer of Mak Fawa" />
+    <alt key="0087  /  1158 " sub="BRO" name="Hajar, Loyal Bodyguard" />
+    <alt key="0088  /  1158 " sub="BRO" name="Legions to Ashes" />
+    <alt key="0089  /  1158 " sub="BRO" name="Deathbloom Ritualist" />
+    <alt key="0091  /  1158 " sub="BRO" name="Queen Kayla bin-Kroog" />
+    <alt key="0092  /  1158 " sub="BRO" name="Tawnos, the Toymaker" />
+    <alt key="0093  /  1158 " sub="BRO" name="Tocasia, Dig Site Mentor" />
+    <alt key="0095  /  1158 " sub="BRO" name="Clay Champion" />
+    <alt key="0101  /  1158 " sub="BRO" name="Bladecoil Serpent" />
+    <alt key="0102  /  1158 " sub="BRO" name="Sarinth Greatwurm" />
+    <alt key="0139  /  1158 " sub="BRO" name="Artificer's Dragon" />
+    <alt key="0141  /  1158 " sub="BRO" name="Liberator, Urza's Battlethopter" />
+    <alt key="0144  /  1158 " sub="BRO" name="Terror Ballista" />
+    <alt key="0146  /  1158 " sub="BRO" name="Thran Spider" />
+    <alt key="0149  /  1158 " sub="BRO" name="Woodcaller Automaton" />
+    <alt key="0151  /  1158 " sub="BRO" name="The Stone Brain" />
+    <alt key="0155  /  1158 " sub="BRO" name="The Stasis Coffin" />
+    <alt key="0224  /  1158 " sub="BRO" name="Cityscape Leveler" />
+    <alt key="0225  /  1158 " sub="BRO" name="Portal to Phyrexia" />
+    <alt key="0259  /  1158 " sub="BRO" name="Mishra's Foundry" />
+    <alt key="0260  /  1158 " sub="BRO" name="Hall of Tagsin" />
+    <alt key="0261  /  1158 " sub="BRO" name="Blast Zone" />
+    <alt key="0262  /  1158 " sub="BRO" name="Fortified Beachhead" />
+    <alt key="0263  /  1158 " sub="BRO" name="Underground River" />
+    <alt key="0264  /  1158 " sub="BRO" name="Brushland" />
+    <alt key="0265  /  1158 " sub="BRO" name="Llanowar Wastes" />
+    <alt key="0266  /  1158 " sub="BRO" name="Battlefield Forge" />
     <!-- BRC variants -->
-    <!--<alt key="0000  /  1158 " sub="BRC" name="Disciple of Caelus Nin" />
-    <alt key="0000  /  1158 " sub="BRC" name="Sanwell, Avenger Ace" />
-    <alt key="0000  /  1158 " sub="BRC" name="Scholar of New Horizons" />
-    <alt key="0000  /  1158 " sub="BRC" name="Tawnos, Solemn Survivor" />
-    <alt key="0000  /  1158 " sub="BRC" name="Glint Raker" />
-    <alt key="0000  /  1158 " sub="BRC" name="March of Progress" />
-    <alt key="0000  /  1158 " sub="BRC" name="Terisiare's Devastation" />
-    <alt key="0000  /  1158 " sub="BRC" name="Wire Surgeons" />
-    <alt key="0000  /  1158 " sub="BRC" name="Wreck Hunter" />
-    <alt key="0000  /  1158 " sub="BRC" name="Sardian Avenger" />
-    <alt key="0000  /  1158 " sub="BRC" name="Blast-Furnace Hellkite" />
-    <alt key="0000  /  1158 " sub="BRC" name="Farid, Enterprising Salvager" />
-    <alt key="0000  /  1158 " sub="BRC" name="Rootpath Purifier" />
-    <alt key="0000  /  1158 " sub="BRC" name="Titania, Nature's Force" />
-    <alt key="0000  /  1158 " sub="BRC" name="The Archimandrite" />
-    <alt key="0000  /  1158 " sub="BRC" name="Mishra, Eminent One" />
-    <alt key="0000  /  1158 " sub="BRC" name="Urza, Chief Artificer" />
-    <alt key="0000  /  1158 " sub="BRC" name="Staff of Titania" />
-    <alt key="0000  /  1158 " sub="BRC" name="Hexavus" />
-    <alt key="0000  /  1158 " sub="BRC" name="Kayla's Music Box" />
-    <alt key="0000  /  1158 " sub="BRC" name="Machine God's Effigy" />
-    <alt key="0000  /  1158 " sub="BRC" name="Scavenged Brawler" />
-    <alt key="0000  /  1158 " sub="BRC" name="Smelting Vat" />
-    <alt key="0000  /  1158 " sub="BRC" name="Thopter Shop" />
-    <alt key="0000  /  1158 " sub="BRC" name="Wondrous Crucible" />
-    <alt key="0000  /  1158 " sub="BRC" name="Urza's Workshop" />-->
+    <alt key="0003  /  1158 " sub="BRC" name="Scholar of New Horizons" />
+    <alt key="0007  /  1158 " sub="BRC" name="Sanwell, Avenger Ace" />
+    <alt key="0010  /  1158 " sub="BRC" name="Disciple of Caelus Nin" />
+    <alt key="0022  /  1158 " sub="BRC" name="March of Progress" />
+    <alt key="0026  /  1158 " sub="BRC" name="Glint Raker" />
+    <alt key="0034  /  1158 " sub="BRC" name="Tawnos, Solemn Survivor" />
+    <alt key="0039  /  1158 " sub="BRC" name="Wreck Hunter" />
+    <alt key="0043  /  1158 " sub="BRC" name="Wire Surgeons" />
+    <alt key="0046  /  1158 " sub="BRC" name="Terisiare's Devastation" />
+    <alt key="0058  /  1158 " sub="BRC" name="Sardian Avenger" />
+    <alt key="0060  /  1158 " sub="BRC" name="Farid, Enterprising Salvager" />
+    <alt key="0062  /  1158 " sub="BRC" name="Blast-Furnace Hellkite" />
+    <alt key="0079  /  1158 " sub="BRC" name="Rootpath Purifier" />
+    <alt key="0081  /  1158 " sub="BRC" name="Titania, Nature's Force" />
+    <alt key="0086  /  1158 " sub="BRC" name="The Archimandrite" />
+    <alt key="0094  /  1158 " sub="BRC" name="Urza, Chief Artificer" />
+    <alt key="0097  /  1158 " sub="BRC" name="Mishra, Eminent One" />
+    <alt key="0099  /  1158 " sub="BRC" name="Ashnod the Uncaring" />
+    <alt key="0140  /  1158 " sub="BRC" name="Thopter Shop" />
+    <alt key="0145  /  1158 " sub="BRC" name="Hexavus" />
+    <alt key="0150  /  1158 " sub="BRC" name="Kayla's Music Box" />
+    <alt key="0154  /  1158 " sub="BRC" name="Scavenged Brawler" />
+    <alt key="0157  /  1158 " sub="BRC" name="Machine God's Effigy" />
+    <alt key="0159  /  1158 " sub="BRC" name="Wondrous Crucible" />
+    <alt key="0161  /  1158 " sub="BRC" name="Smelting Vat" />
+    <alt key="0163  /  1158 " sub="BRC" name="Staff of Titania" />
+    <alt key="0258  /  1158 " sub="BRC" name="Urza's Workshop" />
     <!-- Ultimate Box toppers (UMA) -->
     <alt key="U01  /  40 " sub="UMA" name="Emrakul, the Aeons Torn" />
     <alt key="U02  /  40 " sub="UMA" name="Karn Liberated" />
@@ -4304,7 +4273,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="(?m)(?&lt;=^(?:トークンでない)?(?:他の)?(?:[青黒]の|パワーが[３５]以上の|1/1の|ツリーフォーク・)?)クリーチャーがあなたのコントロール下で戦場に出るたび、" value="クリーチャーが１体あなたのコントロール下で戦場に出るたび、" />
     <regex target="text" pattern="(?&lt;=他の(?:人間|ゾンビ|同盟者))があなたのコントロール下で戦場に出るたび、" value="が１体あなたのコントロール下で戦場に出るたび、" />
     <regex target="text" pattern="(?&lt;=(?&lt;!以上の)アーティファクト|装備品|土地|沼|森|パーマネント)が(あなたのコントロール下で)?戦場に出るたび、" value="が１つ$1戦場に出るたび、" />
-    <regex target="text" pattern="(?&lt;=(?&lt;!この|装備している|体以上の)クリーチャー|侍)が死亡するたび、" value="が１体死亡するたび、" />
+    <regex target="text" pattern="(?&lt;=(?&lt;!この|装備している|体以上の(?:アーティファクト・)?)クリーチャー|侍)が死亡するたび、" value="が１体死亡するたび、" />
     <regex target="text" pattern="クリーチャーが戦場から(?=[^。]*墓地に置かれるたび、)" value="クリーチャーが１体戦場から" />
     <regex target="text" pattern="(?&lt;=クリーチャー|クリーチャー・トークン)が戦場を離れるたび、" value="が１体戦場を離れるたび、" />
     <regex target="text" pattern="(?&lt;!１体以上の)クリーチャーを生け贄に捧げるたび" value="クリーチャーを１体生け贄に捧げるたび" />
@@ -4357,7 +4326,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="その点数と同じ" value="その点数に等しい" />
     <regex target="text" pattern="等しい[量数]の(?=\(.\)を加え)" value="等しい点数の" />
     <regex target="text" pattern="(?&lt;=クリーチャー|エルフ|島)の総数に等しい" value="の数に等しい" />
-    <regex target="text" pattern="(?&lt;=がコントロールしている(?:土地|アーティファクト))の総数" value="の数" />
+    <regex target="text" pattern="(?&lt;!各対戦相手がコントロール[^。]+)(?&lt;=がコントロールしている(?:土地|アーティファクト))の総数" value="の数" />
     <regex target="text" pattern="(?&lt;=の上に置かれている.{1,2}カウンター)の総数に等しい" value="の数に等しい" />
     <!-- テンプレート変更 -->
     <regex target="text" pattern="(?&lt;=エンチャント（.+(?:\n.*)+)(?&lt;!コントロール(?:する|している|していて)、?)エンチャントされている(?=クリーチャー|アーティファクト|装備品|エンチャント|土地|パーマネント|カード|インスタント・カード|プレイヤー|対戦相手|壁|山|森|沼|平地|状態で)" value="エンチャントしている" />
@@ -5169,8 +5138,6 @@ Venarian Goldが戦場に出たとき、エンチャントしているクリー�
     <card name="Lord of the Pit" ja="奈落の王" type="クリーチャー ― デーモン" pt="7/7">飛行、トランプル
 あなたのアップキープの開始時に、奈落の王以外のクリーチャー１体を生け贄に捧げる。それができないなら、奈落の王はあなたに７点のダメージを与える。</card>
     <card name="Martial Coup" ja="軍部政変" type="ソーサリー">白の1/1の兵士・クリーチャー・トークンＸ体を生成する。Ｘが５以上であるなら、他のクリーチャーをすべて破壊する。</card>
-    <card name="Obstinate Baloth" ja="強情なベイロス" type="クリーチャー ― ビースト" pt="4/4">強情なベイロスが戦場に出たとき、あなたは４点のライフを得る。
-対戦相手がコントロールしている呪文や能力によってあなたが強情なベイロスを捨てるなら、これをあなたの墓地に置く代わりに戦場に出す。</card>
     <card name="Phantom Tiger" ja="幻影の虎" type="クリーチャー ― 猫・スピリット" pt="1/0">幻影の虎は、+1/+1カウンター２個が置かれた状態で戦場に出る。
 幻影の虎にダメージが与えられるなら、そのダメージを軽減する。幻影の虎の上から+1/+1カウンターを１個取り除く。</card>
     <card name="Sage-Eye Avengers" ja="賢者眼の報復者" type="クリーチャー ― ジン・モンク" pt="4/5">果敢（あなたがクリーチャーでない呪文を唱えるたび、ターン終了時まで、このクリーチャーは+1/+1の修整を受ける。）
@@ -7813,6 +7780,16 @@ III ― あなたから始めて、各プレイヤーはそれぞれクリーチ
 皇帝陛下の御加護 ― あなたがコントロールしている統率者はプロテクション（すべて）を持つ。</card>
     <card name="Winged Hive Tyrant" ja="有翼ハイヴタイラント" type="クリーチャー ― ティラニッド" pt="4/4">飛行、速攻
 群巣意識の総意 ― あなたがコントロールしていてカウンターが置かれていてこれでない各クリーチャーは飛行と速攻を持つ。</card>
+    
+    <!-- BRO (再録) -->
+    <card name="Blast Zone" ja="爆発域" type="土地">爆発域は蓄積カウンター１個が置かれた状態で戦場に出る。
+(Ｔ)：(◇)を加える。
+(Ｘ)(Ｘ),(Ｔ)：爆発域の上に蓄積カウンターＸ個を置く。
+(３),(Ｔ),爆発域を生け贄に捧げる：マナ総量が爆発域の上にある蓄積カウンターの個数に等しく土地でない各パーマネントをそれぞれ破壊する。</card>
+    <card name="Corrupt" ja="堕落" type="ソーサリー">クリーチャーやプレインズウォーカーやプレイヤーのうち１つを対象とする。堕落はそれに、あなたがコントロールしている沼の数に等しい点数のダメージを与える。あなたはこれにより与えたダメージに等しい点数のライフを得る。</card>
+    <card name="Disenchant" ja="解呪" type="インスタント">アーティファクトやエンチャントのうち１つを対象とする。それを破壊する。</card>
+    <card name="Obstinate Baloth" ja="強情なベイロス" type="クリーチャー ― ビースト" pt="4/4">強情なベイロスが戦場に出たとき、あなたは４点のライフを得る。
+対戦相手がコントロールしている呪文や能力によってあなたが強情なベイロスを捨てるなら、これをあなたの墓地に置く代わりに戦場に出す。</card>
     
     <!-- オラクル変更(DOM)の対象外 -->
     <card name="Firesong and Sunspeaker" ja="ファイアソングとサンスピーカー" type="伝説のクリーチャー ― ミノタウルス・クレリック" pt="4/6">あなたがコントロールしていて赤でありインスタントかソーサリーである呪文は絆魂を持つ。
