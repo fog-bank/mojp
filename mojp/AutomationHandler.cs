@@ -98,7 +98,7 @@ namespace Mojp
                 }
                 catch { Debug.WriteLine("Preview Pane の取得に失敗しました。"); }
 
-                // 他のスレッドで処理が先行した
+                // 他のスレッドで処理が先行した?
                 if (previewWnd != currentPreviewWnd)
                     return;
 
@@ -219,12 +219,13 @@ namespace Mojp
                 //string name = GetNamePropertyValue(sender as AutomationElement);
                 //Debug.Assert(!string.IsNullOrEmpty(GetNamePropertyValue(sender as AutomationElement)));
 
-                string name = Card.NormalizeName(e.NewValue as string);
+                string name = e.NewValue as string;
+                //name = Card.NormalizeName(e.NewValue as string);
 
                 if (string.IsNullOrEmpty(name))
                     return;
 
-                Debug.WriteLine("[NameChanged] " + name.Replace(Environment.NewLine, "\\n"));
+                //Debug.WriteLine("[NameChanged] " + name.Replace(Environment.NewLine, "\\n"));
 
                 //if (TryFetchCard(name))
                 //    return;
@@ -264,7 +265,7 @@ namespace Mojp
                     if (name == null)
                         yield break;
 
-                    Debug.WriteLine("[FindAll] " + name.Replace(Environment.NewLine, "\\n"));
+                    //Debug.WriteLine("[FindAll] " + name.Replace(Environment.NewLine, "\\n"));
                     yield return name;
                 }
             }
@@ -296,7 +297,7 @@ namespace Mojp
                 if (value.StartsWith(triggerPrefix))
                 {
                     value = value.Substring(triggerPrefix.Length);
-                    Debug.WriteLine(value);
+                    Debug.WriteLine("Triggered ability => " + value);
 
                     return ViewCardDirectly(value);
                 }

@@ -66,7 +66,23 @@ namespace Mojp
         /// <summary>
         /// 関連するカードの名前のリストを取得します。
         /// </summary>
-        public IEnumerable<string> RelatedCardNames => RelatedCardName?.Split('|');
+        public IEnumerable<string> RelatedCardNames
+        {
+            get
+            {
+                int start = 0;
+
+                for (int i = 0; i < RelatedCardName.Length; i++)
+                {
+                    if (RelatedCardName[i] == '|')
+                    {
+                        yield return RelatedCardName.Substring(start, i - start);
+                        start = i + 1;
+                    }
+                }
+                yield return RelatedCardName.Substring(start);
+            }
+        }
 
         /// <summary>
         /// 日本語名/英語名 で MTG Wiki に移動できない場合の、http://mtgwiki.com/wiki/ 以下の代替リンクを取得または設定します。
@@ -141,11 +157,11 @@ namespace Mojp
                 PT == other.PT && RelatedCardName == other.RelatedCardName && WikiLink == other.WikiLink;
         }
 
-        public override bool Equals(object obj) => Equals(obj as Card);
+        public sealed override bool Equals(object obj) => Equals(obj as Card);
 
-        public override int GetHashCode() => Name == null ? 0 : Name.GetHashCode();
+        public sealed override int GetHashCode() => Name == null ? 0 : Name.GetHashCode();
 
-        public override string ToString() => Name;
+        public sealed override string ToString() => Name;
 
 #if !OFFLINE
         public Card Clone()

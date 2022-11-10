@@ -17,7 +17,7 @@ namespace Mojp
         private readonly SettingsCache settings = App.SettingsCache;
         private readonly AutomationHandler automation;
         private DispatcherTimer timer;
-        private List<Card> displayCards;
+        private ObservableCollection<Card> displayCards = new();
         private int selectedIndex = -1;
 
         public MainViewModel()
@@ -268,15 +268,7 @@ namespace Mojp
         /// <summary>
         /// 表示中のカードのコレクションを取得します。
         /// </summary>
-        public List<Card> Cards
-        {
-            get => displayCards;
-            set
-            {
-                displayCards = value;
-                OnPropertyChanged();
-            }
-        }
+        public ObservableCollection<Card> Cards => displayCards;
 
         /// <summary>
         /// <see cref="System.Windows.Controls.TabControl"/> で手前に表示しているカードのインデックス番号を取得または設定します。
@@ -341,50 +333,38 @@ namespace Mojp
                 }
             }
 
-            var cards = new List<Card>(card.RelatedCardName == null ? 1 : 4) { card };
+            if (Cards.Count > 0)
+                Cards[0] = card;
+            else
+                Cards.Add(card);
+
+            SelectedIndex = 0;
+            int count = 1;
 
             if (card.RelatedCardName != null)
             {
                 foreach (string relatedName in card.RelatedCardNames)
                 {
                     if (App.TryGetCard(relatedName, out var card2))
-                        cards.Add(card2);
+                    {
+                        if (count < Cards.Count)
+                            Cards[count] = card2;
+                        else
+                            Cards.Add(card2);
+
+                        count++;
+                    }
                 }
             }
-            SetCards(cards);
+
+            for (int i = Cards.Count - 1; i >= count; i--)
+                Cards.RemoveAt(i);
         }
 
         /// <summary>
         /// UI スレッド上で、指定したカードを表示します。
         /// </summary>
         public void InvokeSetCard(Card card) => App.CurrentDispatcher.Invoke(() => SetCard(card));
-
-        /// <summary>
-        /// 指定した複数のカードを表示します。
-        /// </summary>
-        public void SetCards(List<Card> cards)
-        {
-            //int j = 0;
-
-            //for (int i = 0; i < Cards.Count && j < cards.Count; i++, j++)
-            //    Cards[i] = cards[j];
-
-            //// 項目数が減る場合：末端から削除
-            //for (int i = Cards.Count - 1; i >= cards.Count; i--)
-            //    Cards.RemoveAt(i);
-
-            //// 項目数が増える場合：継続して追加
-            //for (; j < cards.Count; j++)
-            //    Cards.Add(cards[j]);
-
-            Cards = cards;
-            SelectedIndex = 0;
-        }
-
-        /// <summary>
-        /// UI スレッド上で、指定した複数のカードを表示します。
-        /// </summary>
-        public void InvokeSetCards(List<Card> cards) => App.CurrentDispatcher.Invoke(() => SetCards(cards));
 
         /// <summary>
         /// 設定の値を使ってツールバーの配置を変更します。
@@ -456,7 +436,7 @@ namespace Mojp
                 timer.Tick -= OnCapture;
                 timer = null;
             }
-            Cards = null;
+            Cards.Clear();
 
             Task.Run(automation.Release);
         }
