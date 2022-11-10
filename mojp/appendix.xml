@@ -598,9 +598,132 @@
 ガイアの具現、ティタニアが戦場に出たとき、あなたの墓地からすべての土地・カードをタップ状態で戦場に戻す。
 (３)(緑)：あなたがコントロールしている土地１つを対象とする。それの上に+1/+1カウンター４個を置く。それは速攻を持つ0/0のエレメンタル・クリーチャーになる。それは土地でもある。</card>
     
+    <card name="Rescue Retriever" ja="救助レトリバー" type="クリーチャー ― 犬・兵士" pt="3/3">瞬速
+救助レトリバーが戦場に出たとき、あなたがコントロールしていてこれでない各兵士の上にそれぞれ+1/+1カウンター１個を置く。
+あなたがコントロールしていて攻撃していてこれでない各兵士が受けるすべてのダメージを軽減する。</card>
+    <card name="Geology Enthusiast" ja="地質学狂い" type="クリーチャー ― 人間・工匠" pt="2/5">あなたの終了ステップの開始時に、パワーストーン・トークン１つをタップ状態で生成する。（それは、「(Ｔ)：(◇)を加える。このマナはアーティファクトでない呪文を唱えるためには支払えない。」を持つアーティファクトである。）
+(６)：カード１枚を引き、地質学狂いの上に+1/+1カウンター１個を置く。</card>
+    <card name="Terror Ballista" ja="恐怖のバリスタ" type="アーティファクト・クリーチャー ― 構築物" pt="5/3">威迫
+恐怖のバリスタが攻撃するたび、あなたはこれでないクリーチャー１体を生け贄に捧げてもよい。そうしたとき、対戦相手がコントロールしているクリーチャー１体を対象とする。それを破壊する。
+蘇生(３)(黒)(黒)（(３)(黒)(黒)：あなたの墓地からこのカードを戦場に戻す。これは速攻を得る。次の終了ステップの開始時に、またはこれが戦場を離れるなら、これを追放する。蘇生はソーサリーとしてのみ行う。）</card>
+    <card name="Artificer's Dragon" ja="工匠のドラゴン" type="アーティファクト・クリーチャー ― ドラゴン" pt="4/4">飛行
+(赤)：ターン終了時まで、あなたがコントロールしている各アーティファクト・クリーチャーは+1/+0の修整を受ける。
+蘇生(３)(赤)(赤)（(３)(赤)(赤)：あなたの墓地からこのカードを戦場に戻す。これは速攻を得る。次の終了ステップの開始時に、またはこれが戦場を離れるなら、これを追放する。蘇生はソーサリーとしてのみ行う。）</card>
+    <card name="Woodcaller Automaton" ja="森呼び自動機械" type="アーティファクト・クリーチャー ― 構築物" pt="8/8">森呼び自動機械が戦場に出たとき、あなたがこれを唱えていた場合、あなたがコントロールしている土地１つを対象とする。それをアンタップする。それは速攻を持ち基本のパワーとタフネスが森呼び自動機械のパワーとタフネスに等しいツリーフォーク・クリーチャーになる。それは土地でもある。
+//
+(２)(緑)(緑)
+試作（あなたはこの呪文を、異なるマナ・コスト、色、サイズで唱えてもよい。これは能力とタイプを保持する。）
+3/3</card>
+    
     <!-- BRC -->
+    <card name="Disciple of Caelus Nin" ja="カイラス・ニンの信奉者" type="クリーチャー ― 人間・ウィザード" pt="3/4">カイラス・ニンの信奉者が戦場に出たとき、あなたから開始して各プレイヤーはそれぞれ、自分がコントロールしているパーマネント最大５つを選ぶ。これにより選ばれもせずこれでもないすべてのパーマネントはフェイズ・アウトする。
+各パーマネントはフェイズ・インできない。</card>
+    <card name="The Brothers' War" ja="兄弟戦争" type="エンチャント ― 英雄譚">（この英雄譚が出た際とあなたのドロー・ステップの後に、伝承カウンター１個を加える。IIIの後に、生け贄に捧げる。）
+I ― パワーストーン・トークン２つをタップ状態で生成する。
+II ― プレイヤー２人を対象とする。あなたの次のターンまで、各戦闘で、それらのプレイヤーがコントロールしている各クリーチャーはそれぞれ、可能なら対象にしたもう１人のプレイヤーを攻撃する。
+III ― クリーチャーやプレインズウォーカーやプレイヤーのうち１つと、クリーチャーやプレインズウォーカーやプレイヤーのうちそれでない１つを対象とする。兄弟戦争はその前者にＸ点、その後者にＸ点のダメージを与える。Ｘはあなたがコントロールしているアーティファクトの数に等しい。</card>
+    <card name="Sardian Avenger" ja="サルディアの報復者" type="クリーチャー ― ゴブリン・戦士" pt="1/1">先制攻撃、トランプル
+サルディアの報復者が攻撃するたび、ターン終了時まで、これは+X/+0の修整を受ける。Ｘは各対戦相手がコントロールしているアーティファクトの総数に等しい。
+対戦相手がコントロールしているアーティファクト１つが戦場から墓地に置かれるたび、サルディアの報復者はそのプレイヤーに１点のダメージを与える。</card>
+    <card name="Rootpath Purifier" ja="根の道の浄化師" type="クリーチャー ― エルフ・ドルイド" pt="3/4">あなたがコントロールしている土地と、あなたのライブラリーにある土地・カードは基本である。</card>
+    <card name="Titania, Nature's Force" ja="自然の力、ティタニア" type="伝説のクリーチャー ― エレメンタル" pt="6/6">あなたはあなたの墓地から森をプレイしてもよい。
+森１つがあなたのコントロール下で戦場に出るたび、緑の5/3のエレメンタル・クリーチャー・トークン１体を生成する。
+あなたがコントロールしているエレメンタル１体が死亡するたび、あなたはカード３枚を切削してもよい。</card>
+    <card name="The Archimandrite" ja="最高機構長" type="伝説のクリーチャー ― 人間・アドバイザー" pt="0/5">あなたのアップキープの開始時に、あなたはＸ点のライフを得る。Ｘはあなたの手札にあるカードの枚数から４を引いた値に等しい。
+あなたがライフを得るたび、ターン終了時まで、あなたがコントロールしている各アドバイザーや工匠やモンクは警戒を得て+X/+0の修整を受ける。Ｘはあなたが得たライフの点数に等しい。
+アドバイザーや工匠やモンクのうちあなたがコントロールしているアンタップ状態の３体をタップする：カード１枚を引く。</card>
+    <card name="Staff of Titania" ja="ティタニアの杖" type="アーティファクト ― 装備品">装備しているクリーチャーは+X/+Xの修整を受ける。Ｘはあなたがコントロールしている森の数に等しい。
+装備しているクリーチャーが攻撃するたび、緑の1/1の森・ドライアド・土地・クリーチャー・トークン１体を生成する。（それは召喚酔いの影響を受ける。）
+装備(３)</card>
+    <card name="Urza's Workshop" ja="ウルザの作業場" type="土地 ― ウルザの">(Ｔ)：(◇)を加える。
+金属術 ― (Ｔ)：あなたがコントロールしているウルザの・土地１つにつき(◇)を加える。あなたが３つ以上のアーティファクトをコントロールしているときにのみ起動できる。</card>
     
     <!-- BOT -->
+    <card name="Prowl, Stoic Strategist" ja="冷静な戦略家、プロール" type="伝説のアーティファクト・クリーチャー ― ロボット" pt="3/3" rel="Prowl, Pursuit Vehicle">見た目以上のもの(２)(白)（あなたは(２)(白)を支払ってこのカードをトランスフォームした状態で唱えてもよい。）
+冷静な戦略家、プロールが攻撃するたび、クリーチャーや機体のうちタップ状態でありこれでない最大１体を対象とする。それを追放する。そのカードが追放され続けているかぎり、それのオーナーはそれをプレイしてもよい。
+プレイヤーが冷静な戦略家、プロールによって追放されたカードをプレイするたび、あなたはカード１枚を引き、冷静な戦略家、プロールをトランスフォームさせる。</card>
+    <card name="Prowl, Pursuit Vehicle" ja="追跡車、プロール" type="伝説のアーティファクト ― 機体" pt="2/3" rel="Prowl, Stoic Strategist">金属生命体（あなたのターンの間、この機体はクリーチャーでもある。）
+クリーチャーや機体のうちこれでない１体があなたのコントロール下で戦場に出るたび、追跡車、プロールの上に+1/+1カウンター１個を置く。この能力が解決したのがこのターン内の２回目であるなら、追跡車、プロールをトランスフォームさせる。</card>
+    <card name="Ratchet, Field Medic" ja="戦場軍医、ラチェット" type="伝説のアーティファクト・クリーチャー ― ロボット" pt="2/4" rel="Ratchet, Rescue Racer">見た目以上のもの(１)(白)（あなたは(１)(白)を支払ってこのカードをトランスフォームした状態で唱えてもよい。）
+絆魂
+あなたがライフを得るたび、あなたは戦場軍医、ラチェットをトランスフォームさせてもよい。そうしたとき、あなたの墓地にありマナ総量がこのターンにあなたが得たライフの点数以下であるアーティファクト・カード１枚を対象とする。それをタップ状態で戦場に戻す。</card>
+    <card name="Ratchet, Rescue Racer" ja="救命救急車、ラチェット" type="伝説のアーティファクト ― 機体" pt="1/4" rel="Ratchet, Field Medic">金属生命体（あなたのターンの間、この機体はクリーチャーでもある。）
+絆魂
+あなたがコントロールしていてトークンでない１つ以上のアーティファクトが戦場から墓地に置かれるたび、救命救急車、ラチェットをトランスフォームさせる。この能力は、毎ターン１回のみ誘発する。</card>
+    <card name="Jetfire, Ingenious Scientist" ja="独創的な科学者、ジェットファイヤー" type="伝説のアーティファクト・クリーチャー ― ロボット" pt="3/4" rel="Jetfire, Air Guardian">見た目以上のもの(３)(青)（あなたは(３)(青)を支払ってこのカードをトランスフォームした状態で唱えてもよい。）
+飛行
+あなたがコントロールしているアーティファクトの中から１個以上の+1/+1カウンターを取り除く：プレイヤー１人を対象とする。そのプレイヤーはその個数に等しい点数の(◇)を加える。このマナはアーティファクトでない呪文を唱えるためには支払えない。独創的な科学者、ジェットファイヤーをトランスフォームさせる。</card>
+    <card name="Jetfire, Air Guardian" ja="空中警護員、ジェットファイヤー" type="伝説のアーティファクト ― 機体" pt="3/4" rel="Jetfire, Ingenious Scientist">金属生命体（あなたのターンの間、この機体はクリーチャーでもある。）
+飛行
+(青)(青)(青)：空中警護員、ジェットファイヤーをトランスフォームさせる。その後、順応３を行う。（これの上に+1/+1カウンターがないなら、これの上に+1/+1カウンター３個を置く。）</card>
+    <card name="Blitzwing, Cruel Tormentor" ja="卑劣な拷問者、ブリッツウィング" type="伝説のアーティファクト・クリーチャー ― ロボット" pt="6/5" rel="Blitzwing, Adaptive Assailant">見た目以上のもの(３)(黒)（あなたは(３)(黒)を支払ってこのカードをトランスフォームした状態で唱えてもよい。）
+あなたの終了ステップの開始時に、対戦相手１人を対象とする。そのプレイヤーは自分がこのターンに失ったライフの点数に等しい点数のライフを失う。これによりライフを失わなかったなら、卑劣な拷問者、ブリッツウィングをトランスフォームさせる。</card>
+    <card name="Blitzwing, Adaptive Assailant" ja="万能襲撃者、ブリッツウィング" type="伝説のアーティファクト ― 機体" pt="3/5" rel="Blitzwing, Cruel Tormentor">金属生命体（あなたのターンの間、この機体はクリーチャーでもある。）
+あなたのターンの戦闘の開始時に、飛行や破壊不能のうち１つを無作為に選ぶ。ターン終了時まで、万能襲撃者、ブリッツウィングはその能力を得る。
+万能襲撃者、ブリッツウィングがプレイヤー１人に戦闘ダメージを与えるたび、これをトランスフォームさせる。</card>
+    <card name="Starscream, Power Hungry" ja="力を欲する者、スタースクリーム" type="伝説のアーティファクト・クリーチャー ― ロボット" pt="2/3" rel="Starscream, Seeker Leader">見た目以上のもの(２)(黒)（あなたは(２)(黒)を支払ってこのカードをトランスフォームした状態で唱えてもよい。）
+飛行
+あなたがカード１枚を引くたび、あなたが統治者である場合、対戦相手１人を対象とする。そのプレイヤーは２点のライフを失う。
+１体以上のクリーチャーがあなたに戦闘ダメージを与えるたび、力を欲する者、スタースクリームをトランスフォームさせる。</card>
+    <card name="Starscream, Seeker Leader" ja="シーカーの隊長、スタースクリーム" type="伝説のアーティファクト ― 機体" pt="2/3" rel="Starscream, Power Hungry">金属生命体（あなたのターンの間、この機体はクリーチャーでもある。）
+飛行、威迫、速攻
+シーカーの隊長、スタースクリームがプレイヤー１人に戦闘ダメージを与えるたび、統治者がいなかった場合、そのプレイヤーが統治者になる。
+あなたが統治者になるたび、シーカーの隊長、スタースクリームをトランスフォームさせる。</card>
+    <card name="Slicer, Hired Muscle" ja="雇われの剛力、スライサー" type="伝説のアーティファクト・クリーチャー ― ロボット" pt="3/4" rel="Slicer, High-Speed Antagonist">見た目以上のもの(２)(赤)（あなたは(２)(赤)を支払ってこのカードをトランスフォームした状態で唱えてもよい。）
+二段攻撃、速攻
+各対戦相手のアップキープの開始時に、あなたは「ターン終了時まで、そのプレイヤーは雇われの剛力、スライサーのコントロールを得る。」を選んでもよい。そうしたなら、雇われの剛力、スライサーをアンタップし、使嗾する。このターン、これは生け贄に捧げられない。そうしないなら、これをトランスフォームさせる。</card>
+    <card name="Slicer, High-Speed Antagonist" ja="高速の敵対者、スライサー" type="伝説のアーティファクト ― 機体" pt="3/2" rel="Slicer, Hired Muscle">金属生命体（あなたのターンの間、この機体はクリーチャーでもある。）
+先制攻撃、速攻
+高速の敵対者、スライサーがプレイヤー１人に戦闘ダメージを与えるたび、戦闘終了時に、これをトランスフォームさせる。</card>
+    <card name="Arcee, Sharpshooter" ja="名射手、アーシー" type="伝説のアーティファクト・クリーチャー ― ロボット" pt="2/2" rel="Arcee, Acrobatic Coupe">見た目以上のもの(赤)(白)（あなたは(赤)(白)を支払ってこのカードをトランスフォームした状態で唱えてもよい。）
+先制攻撃
+(１),名射手、アーシーの上から１個以上の+1/+1カウンターを取り除く：クリーチャー１体を対象とする。これはそのクリーチャーに、その個数に等しい点数のダメージを与える。名射手、アーシーをトランスフォームさせる。</card>
+    <card name="Arcee, Acrobatic Coupe" ja="軽業のオープンカー、アーシー" type="伝説のアーティファクト ― 機体" pt="2/2" rel="Arcee, Sharpshooter">金属生命体（あなたのターンの間、この機体はクリーチャーでもある。）
+あなたが、クリーチャーや機体のうちあなたがコントロールしている１体以上を対象とする呪文を唱えるたび、軽業のオープンカー、アーシーの上にその対象の数に等しい個数の+1/+1カウンターを置く。軽業のオープンカー、アーシーをトランスフォームさせる。</card>
+    <card name="Blaster, Combat DJ" ja="戦闘DJ、ブラスター" type="伝説のアーティファクト・クリーチャー ― ロボット" pt="3/3" rel="Blaster, Morale Booster">見た目以上のもの(１)(赤)(緑)（あなたは(１)(赤)(緑)を支払ってこのカードをトランスフォームした状態で唱えてもよい。）
+あなたがコントロールしていてトークンでもこれでもない各アーティファクト・クリーチャーや機体は接合１を持つ。（接合を持つパーマネントは+1/+1カウンターが追加で１個置かれた状態で戦場に出る。それが死亡したとき、アーティファクト・クリーチャー１体を対象とする。あなたはその死亡したパーマネントのすべての+1/+1カウンターを対象にしたクリーチャーの上に置いてもよい。）
+あなたが戦闘DJ、ブラスターの上に１個以上の+1/+1カウンターを置くたび、これをトランスフォームさせる。</card>
+    <card name="Blaster, Morale Booster" ja="鼓舞する者、ブラスター" type="伝説のアーティファクト" rel="Blaster, Combat DJ">接合３
+(Ｘ),(Ｔ)：これでないアーティファクト１つを対象とする。鼓舞する者、ブラスターの上から+1/+1カウンターＸ個をそれの上に動かす。ターン終了時まで、そのアーティファクトは速攻を得る。鼓舞する者、ブラスターの上に+1/+1カウンターがないなら、これをトランスフォームさせる。起動はソーサリーとしてのみ行う。</card>
+    <card name="Cyclonus, the Saboteur" ja="妨害工作員、サイクロナス" type="伝説のアーティファクト・クリーチャー ― ロボット" pt="2/5" rel="Cyclonus, Cybertronian Fighter">見た目以上のもの(５)(青)(黒)（あなたは(５)(青)(黒)を支払ってこのカードをトランスフォームした状態で唱えてもよい。）
+飛行
+妨害工作員、サイクロナスがプレイヤー１人に戦闘ダメージを与えるたび、これは謀議する。その後、妨害工作員、サイクロナスのパワーが５以上であるなら、これをトランスフォームさせる。（クリーチャーが謀議するとは「カード１枚を引き、その後カード１枚を捨てる。あなたが土地でないカードを捨てたなら、そのクリーチャーの上に+1/+1カウンター１個を置く。」を意味する。）</card>
+    <card name="Cyclonus, Cybertronian Fighter" ja="サイバトロンの戦闘機、サイクロナス" type="伝説のアーティファクト ― 機体" pt="5/5" rel="Cyclonus, the Saboteur">金属生命体（あなたのターンの間、この機体はクリーチャーでもある。）
+飛行
+サイバトロンの戦闘機、サイクロナスがプレイヤー１人に戦闘ダメージを与えるたび、これをトランスフォームさせる。そうしたなら、このフェイズの後に追加の開始フェイズを加える。（開始フェイズは、アンタップとアップキープとドローの各ステップからなる。）</card>
+    <card name="Flamewar, Brash Veteran" ja="無作法な古参兵、フレイムウォー" type="伝説のアーティファクト・クリーチャー ― ロボット" pt="3/2" rel="Flamewar, Streetwise Operative">見た目以上のもの(黒)(赤)（あなたは(黒)(赤)を支払ってこのカードをトランスフォームした状態で唱えてもよい。）
+これでないアーティファクト１つを生け贄に捧げる：無作法な古参兵、フレイムウォーの上に+1/+1カウンター１個を置き、これをトランスフォームさせる。起動はソーサリーとしてのみ行う。
+(１),あなたの手札を捨てる：追放領域にありあなたがオーナーであり情報カウンターが置かれているすべてのカードをあなたの手札に加える。</card>
+    <card name="Flamewar, Streetwise Operative" ja="世慣れた工作員、フレイムウォー" type="伝説のアーティファクト ― 機体" pt="2/1" rel="Flamewar, Brash Veteran">金属生命体（あなたのターンの間、この機体はクリーチャーでもある。）
+威迫、接死
+世慣れた工作員、フレイムウォーがプレイヤー１人に戦闘ダメージを与えるたび、あなたのライブラリーの一番上からその点数に等しい枚数のカードを裏向きに追放する。それらの上にそれぞれ情報カウンター１個を置く。世慣れた工作員、フレイムウォーをトランスフォームさせる。</card>
+    <card name="Goldbug, Humanity's Ally" ja="人類の友、ゴールドバッグ" type="伝説のアーティファクト・クリーチャー ― ロボット" pt="3/3" rel="Goldbug, Scrappy Scout">見た目以上のもの(白)(青)（あなたは(白)(青)を支払ってこのカードをトランスフォームした状態で唱えてもよい。）
+あなたがコントロールしていて攻撃している人間が受けるすべての戦闘ダメージを軽減する。
+あなたが各ターン内のあなたの２つ目の呪文を唱えるたび、人類の友、ゴールドバッグをトランスフォームさせる。</card>
+    <card name="Goldbug, Scrappy Scout" ja="気の強い斥候、ゴールドバッグ" type="伝説のアーティファクト ― 機体" pt="1/3" rel="Goldbug, Humanity's Ally">金属生命体（あなたのターンの間、この機体はクリーチャーでもある。）
+あなたがコントロールしている人間・呪文は打ち消されない。
+気の強い斥候、ゴールドバッグと１体以上の人間が攻撃するたび、カード１枚を引き、気の強い斥候、ゴールドバッグをトランスフォームさせる。</card>
+    <card name="Megatron, Tyrant" ja="暴君、メガトロン" type="伝説のアーティファクト・クリーチャー ― ロボット" pt="7/5" rel="Megatron, Destructive Force">見た目以上のもの(１)(赤)(白)(黒)（あなたは(１)(赤)(白)(黒)を支払ってこのカードをトランスフォームした状態で唱えてもよい。）
+戦闘中、対戦相手は呪文を唱えられない。
+あなたの戦闘後メイン・フェイズの開始時に、あなたは暴君、メガトロンをトランスフォームさせてもよい。そうしたなら、このターンに対戦相手が失ったライフ１点につき(◇)を加える。</card>
+    <card name="Megatron, Destructive Force" ja="破壊的な力、メガトロン" type="伝説のアーティファクト ― 機体" pt="4/5" rel="Megatron, Tyrant">金属生命体（あなたのターンの間、この機体はクリーチャーでもある。）
+破壊的な力、メガトロンが攻撃するたび、あなたはこれでないアーティファクト１つを生け贄に捧げてもよい。そうしたとき、クリーチャー１体を対象とする。破壊的な力、メガトロンはそれに、生け贄に捧げられたアーティファクトのマナ総量に等しい点数のダメージを与える。これによりそのクリーチャーが余剰のダメージを受けるなら、代わりにそのダメージをそのクリーチャーのコントローラーに与え、あなたは破壊的な力、メガトロンをトランスフォームさせる。</card>
+    <card name="Optimus Prime, Hero" ja="英雄、オプティマスプライム" type="伝説のアーティファクト・クリーチャー ― ロボット" pt="4/8" rel="Optimus Prime, Autobot Leader">見た目以上のもの(２)(青)(赤)(白)（あなたは(２)(青)(赤)(白)を支払ってこのカードをトランスフォームした状態で唱えてもよい。）
+各終了ステップの開始時に、鼓舞１を行う。（あなたがコントロールしているクリーチャーの中で最も小さいタフネスを持つクリーチャー１体を選び、それの上に+1/+1カウンター１個を置く。）
+英雄、オプティマスプライムが死亡したとき、これをオーナーのコントロール下でトランスフォームした状態で戦場に戻す。</card>
+    <card name="Optimus Prime, Autobot Leader" ja="オートボット部隊長、オプティマスプライム" type="伝説のアーティファクト ― 機体" pt="6/8" rel="Optimus Prime, Hero">金属生命体（あなたのターンの間、この機体はクリーチャーでもある。）
+トランプル
+あなたが攻撃するたび、鼓舞２を行う。ターン終了時まで、その選ばれたクリーチャーはトランプルを得る。このターン、そのクリーチャーがプレイヤー１人に戦闘ダメージを与えたとき、オートボット部隊長、オプティマスプライムをトランスフォームさせる。</card>
+    <card name="Soundwave, Sonic Spy" ja="音波のスパイ、サウンドウェーブ" type="伝説のアーティファクト・クリーチャー ― ロボット" pt="5/4" rel="Soundwave, Superior Captain">見た目以上のもの(２)(白)(青)(黒)（あなたは(２)(白)(青)(黒)を支払ってこのカードをトランスフォームした状態で唱えてもよい。）
+あなたがコントロールしている１体以上のクリーチャー・トークンがプレイヤー１人に戦闘ダメージを与えるたび、そのプレイヤーの墓地にありそのダメージの点数に等しいマナ総量を持ちインスタントかソーサリーであるカード１枚を対象とする。それを追放する。それをコピーする。あなたはそのコピーを、マナ・コストを支払うことなく唱えてもよい。そうしたなら、音波のスパイ、サウンドウェーブをトランスフォームさせる。</card>
+    <card name="Soundwave, Superior Captain" ja="上級隊長、サウンドウェーブ" type="伝説のアーティファクト" rel="Soundwave, Sonic Spy">あなたがマナ総量が奇数である呪文を唱えるたび、上級隊長、サウンドウェーブをトランスフォームさせる。そうしたなら、《ラヴィッジ》という名前で威迫と接死を持つ黒の3/3の伝説のロボット・アーティファクト・クリーチャー・トークン１体を生成する。
+あなたがマナ総量が偶数である呪文を唱えるたび、上級隊長、サウンドウェーブをトランスフォームさせる。そうしたなら、《レーザービーク》という名前で飛行と呪禁を持つ青の2/2の伝説のロボット・アーティファクト・クリーチャー・トークン１体を生成する。</card>
+    <card name="Ultra Magnus, Tactician" ja="戦術家、ウルトラマグナス" type="伝説のアーティファクト・クリーチャー ― ロボット" pt="7/7" rel="Ultra Magnus, Armored Carrier">見た目以上のもの(２)(赤)(緑)(白)（あなたは(２)(赤)(緑)(白)を支払ってこのカードをトランスフォームした状態で唱えてもよい。）
+護法(２)
+戦術家、ウルトラマグナスが攻撃するたび、あなたはあなたの手札からアーティファクト・クリーチャー・カード１枚を、タップ状態かつ攻撃している状態で戦場に出してもよい。そうしたなら、戦闘終了時に、戦術家、ウルトラマグナスをトランスフォームさせる。</card>
+    <card name="Ultra Magnus, Armored Carrier" ja="装甲運搬車、ウルトラマグナス" type="伝説のアーティファクト ― 機体" pt="4/7" rel="Ultra Magnus, Tactician">金属生命体（あなたのターンの間、この機体はクリーチャーでもある。）
+速攻
+圧倒 ― 装甲運搬車、ウルトラマグナスが攻撃するたび、ターン終了時まで、あなたがコントロールしている各攻撃クリーチャーは破壊不能を得る。それらのクリーチャーのパワーの合計が８以上であるなら、装甲運搬車、ウルトラマグナスをトランスフォームさせる。</card>
     
     <!-- 定義済みトークン -->
     <card name="Blood Token" ja="血・トークン" type="トークン・アーティファクト ― 血" wiki="血">(１),(Ｔ),カード１枚を捨てる,このアーティファクトを生け贄に捧げる：カード１枚を引く。</card>
@@ -647,6 +770,7 @@
     <card name="Keimi" ja="哇魅" type="トークン・伝説のクリーチャー ― カエル" pt="3/3" wiki="カエル乗り、達成/Tatsunari, Toad Rider">あなたがエンチャント・呪文を唱えるたび、各対戦相手はそれぞれ１点のライフを失い、あなたは１点のライフを得る。</card>
     <card name="Kelp" ja="ケルプ" type="トークン・クリーチャー ― 植物・壁" pt="0/1" wiki="Wall of Kelp">防衛</card>
     <card name="Koma's Coil" ja="コーマの分体" type="トークン・クリーチャー ― 海蛇" pt="3/3" wiki="星界の大蛇、コーマ/Koma, Cosmos Serpent"></card>
+    <card name="Laserbeak" ja="レーザービーク" type="トークン・伝説のアーティファクト・クリーチャー ― ロボット" pt="2/2" wiki="上級隊長、サウンドウェーブ/Soundwave, Superior Captain">飛行、呪禁</card>
     <card name="Lightning Rager" ja="稲妻の憤怒獣" type="トークン・クリーチャー ― エレメンタル" pt="5/1" wiki="荒れ狂う嵐の儀式/Rite of the Raging Storm">トランプル、速攻
 終了ステップの開始時に、このクリーチャーを生け贄に捧げる。</card>
     <card name="Marit Lage" ja="マリット・レイジ" type="トークン・伝説のクリーチャー ― アバター" pt="20/20">飛行、破壊不能</card>
@@ -655,6 +779,7 @@
     <card name="Minor Demon" ja="マイナー・デーモン" type="トークン・クリーチャー ― デーモン" pt="1/1" wiki="Boris Devilboon"></card>
     <card name="Plaguebearer of Nurgle" ja="プレーグベアラー・オヴ・ナーグル" type="トークン・クリーチャー ― デーモン" pt="1/3" wiki=""></card>
     <card name="Ragavan" ja="ラガバン" type="トークン・伝説のクリーチャー ― 猿" pt="2/1" wiki="航空船を強襲する者、カーリ・ゼヴ/Kari Zev, Skyship Raider"></card>
+    <card name="Ravage" ja="ラヴィッジ" type="トークン・伝説のアーティファクト・クリーチャー ― ロボット" pt="3/3" wiki="上級隊長、サウンドウェーブ/Soundwave, Superior Captain">威迫、接死</card>
     <card name="Stangg Twin" ja="スタングの双子" type="トークン・伝説のクリーチャー ― 人間・戦士" pt="3/4" wiki="スタング/Stangg"></card>
     <card name="Tombspawn" ja="屍鬼" type="トークン・クリーチャー ― ゾンビ" pt="2/2" wiki="墓石の階段/Tombstone Stairwell">速攻</card>
     <card name="Tuktuk the Returned" ja="復活のタクタク" type="トークン・伝説のアーティファクト・クリーチャー ― ゴブリン・ゴーレム" pt="5/5" wiki="探検家タクタク/Tuktuk the Explorer"></card>
@@ -1554,6 +1679,14 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="272 " sub="SLD" name="Fractured Identity" />
     <alt key="273 " sub="SLD" name="Fracturing Gust" />
     <alt key="SL3AprilFoolsArtless" sub="NOT YET IMPLEMENTED" name="Terramorphic Expanse" />
+    <!-- 2X2 -->
+    <alt key="332 " sub="2X2" name="Cryptic Spires" />
+    <!-- SCD -->
+    <alt key="1 " sub="SCD" name="Atarka, World Render" />
+    <alt key="2 " sub="SCD" name="Emmara, Soul of the Accord" />
+    <alt key="3 " sub="SCD" name="Gisa and Geralf" />
+    <alt key="4 " sub="SCD" name="Isperia, Supreme Judge" />
+    <alt key="5 " sub="SCD" name="Kardur, Doomscourge" />
     <!-- PRM (KHM: 1-114, STX&C21: 1-193) -->
     <alt key="0115  /  1158 " sub="P " name="Culmination of Studies" />
     <alt key="0116  /  1158 " sub="P " name="Reinterpret" />
@@ -2307,7 +2440,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0079  /  1158 " sub="2X2" name="City of Brass" />
     <alt key="0080  /  1158 " sub="2X2" name="Forbidden Orchard" />
     <alt key="0081  /  1158 " sub="2X2" name="Cavern of Souls" />
-    <!-- 2X2 variants -->
+    <!-- DMU variants -->
     <alt key="0001  /  1158 " sub="DMU" name="Serra Paragon" />
     <alt key="0002  /  1158 " sub="DMU" name="Valiant Veteran" />
     <alt key="0003  /  1158 " sub="DMU" name="Serra Redeemer" />
@@ -2351,7 +2484,6 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0043  /  1158 " sub="DMU" name="Llanowar Greenwidow" />
     <alt key="0044  /  1158 " sub="DMU" name="Threats Undetected" />
     <alt key="0045  /  1158 " sub="DMU" name="Herd Migration" />
-    <!--<alt key="0047  /  1158 " sub="DMU" name="" />-->
     <alt key="0049  /  1158 " sub="DMU" name="Adarkar Wastes" />
     <alt key="0050  /  1158 " sub="DMU" name="Sulfurous Springs" />
     <alt key="0051  /  1158 " sub="DMU" name="Karplusan Forest" />
@@ -2360,6 +2492,117 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0054  /  1158 " sub="DMU" name="Yavimaya Coast" />
     <alt key="0055  /  1158 " sub="DMU" name="Plaza of Heroes" />
     <alt key="0056  /  1158 " sub="DMU" name="Thran Portal" />
+    <!-- BRO variants -->
+    <!--<alt key="0000  /  1158 " sub="BRO" name="In the Trenches" />
+    <alt key="0000  /  1158 " sub="BRO" name="Kayla's Command" />
+    <alt key="0000  /  1158 " sub="BRO" name="Kayla's Reconstruction" />
+    <alt key="0000  /  1158 " sub="BRO" name="Loran of the Third Path" />
+    <alt key="0000  /  1158 " sub="BRO" name="Myrel, Shield of Argive" />
+    <alt key="0000  /  1158 " sub="BRO" name="Siege Veteran" />
+    <alt key="0000  /  1158 " sub="BRO" name="Soul Partition" />
+    <alt key="0000  /  1158 " sub="BRO" name="Tocasia's Welcome" />
+    <alt key="0000  /  1158 " sub="BRO" name="Autonomous Assembler" />
+    <alt key="0000  /  1158 " sub="BRO" name="Platoon Dispenser" />
+    <alt key="0000  /  1158 " sub="BRO" name="Steel Seraph" />
+    <alt key="0000  /  1158 " sub="BRO" name="Urza's Sylex" />
+    <alt key="0000  /  1158 " sub="BRO" name="Rescue Retriever" />
+    <alt key="0000  /  1158 " sub="BRO" name="Drafna, Founder of Lat-Nam" />
+    <alt key="0000  /  1158 " sub="BRO" name="Hurkyl, Master Wizard" />
+    <alt key="0000  /  1158 " sub="BRO" name="Hurkyl's Final Meditation" />
+    <alt key="0000  /  1158 " sub="BRO" name="One with the Multiverse" />
+    <alt key="0000  /  1158 " sub="BRO" name="Skystrike Officer" />
+    <alt key="0000  /  1158 " sub="BRO" name="Urza's Command" />
+    <alt key="0000  /  1158 " sub="BRO" name="Arcane Proxy" />
+    <alt key="0000  /  1158 " sub="BRO" name="Surge Engine" />
+    <alt key="0000  /  1158 " sub="BRO" name="The Temporal Anchor" />
+    <alt key="0000  /  1158 " sub="BRO" name="Terisian Mindbreaker" />
+    <alt key="0000  /  1158 " sub="BRO" name="Geology Enthusiast" />
+    <alt key="0000  /  1158 " sub="BRO" name="Ashnod, Flesh Mechanist" />
+    <alt key="0000  /  1158 " sub="BRO" name="Diabolic Intent" />
+    <alt key="0000  /  1158 " sub="BRO" name="Fateful Handoff" />
+    <alt key="0000  /  1158 " sub="BRO" name="Gix, Yawgmoth Praetor" />
+    <alt key="0000  /  1158 " sub="BRO" name="Gix's Command" />
+    <alt key="0000  /  1158 " sub="BRO" name="Gixian Puppeteer" />
+    <alt key="0000  /  1158 " sub="BRO" name="Hostile Negotiations" />
+    <alt key="0000  /  1158 " sub="BRO" name="Misery's Shadow" />
+    <alt key="0000  /  1158 " sub="BRO" name="Painful Quandary" />
+    <alt key="0000  /  1158 " sub="BRO" name="Phyrexian Fleshgorger" />
+    <alt key="0000  /  1158 " sub="BRO" name="Razorlash Transmogrant" />
+    <alt key="0000  /  1158 " sub="BRO" name="Transmogrant's Crown" />
+    <alt key="0000  /  1158 " sub="BRO" name="Terror Ballista" />
+    <alt key="0000  /  1158 " sub="BRO" name="Brotherhood's End" />
+    <alt key="0000  /  1158 " sub="BRO" name="Draconic Destiny" />
+    <alt key="0000  /  1158 " sub="BRO" name="Feldon, Ronom Excavator" />
+    <alt key="0000  /  1158 " sub="BRO" name="Mechanized Warfare" />
+    <alt key="0000  /  1158 " sub="BRO" name="Mishra's Command" />
+    <alt key="0000  /  1158 " sub="BRO" name="Over the Top" />
+    <alt key="0000  /  1158 " sub="BRO" name="Tyrant of Kher Ridges" />
+    <alt key="0000  /  1158 " sub="BRO" name="Visions of Phyrexia" />
+    <alt key="0000  /  1158 " sub="BRO" name="Skitterbeam Battalion" />
+    <alt key="0000  /  1158 " sub="BRO" name="Artificer's Dragon" />
+    <alt key="0000  /  1158 " sub="BRO" name="Awaken the Woods" />
+    <alt key="0000  /  1158 " sub="BRO" name="Fade from History" />
+    <alt key="0000  /  1158 " sub="BRO" name="Fauna Shaman" />
+    <alt key="0000  /  1158 " sub="BRO" name="Gwenna, Eyes of Gaea" />
+    <alt key="0000  /  1158 " sub="BRO" name="Teething Wurmlet" />
+    <alt key="0000  /  1158 " sub="BRO" name="Titania's Command" />
+    <alt key="0000  /  1158 " sub="BRO" name="Perennial Behemoth" />
+    <alt key="0000  /  1158 " sub="BRO" name="Rootwise Amalgam" />
+    <alt key="0000  /  1158 " sub="BRO" name="Simian Simulacrum" />
+    <alt key="0000  /  1158 " sub="BRO" name="Woodcaller Automaton" />
+    <alt key="0000  /  1158 " sub="BRO" name="Mishra, Tamer of Mak Fawa" />
+    <alt key="0000  /  1158 " sub="BRO" name="Urza, Prince of Kroog" />
+    <alt key="0000  /  1158 " sub="BRO" name="Deathbloom Ritualist" />
+    <alt key="0000  /  1158 " sub="BRO" name="Hajar, Loyal Bodyguard" />
+    <alt key="0000  /  1158 " sub="BRO" name="Legions to Ashes" />
+    <alt key="0000  /  1158 " sub="BRO" name="Queen Kayla bin-Kroog" />
+    <alt key="0000  /  1158 " sub="BRO" name="Sarinth Greatwurm" />
+    <alt key="0000  /  1158 " sub="BRO" name="Tawnos, the Toymaker" />
+    <alt key="0000  /  1158 " sub="BRO" name="Tocasia, Dig Site Mentor" />
+    <alt key="0000  /  1158 " sub="BRO" name="Bladecoil Serpent" />
+    <alt key="0000  /  1158 " sub="BRO" name="Clay Champion" />
+    <alt key="0000  /  1158 " sub="BRO" name="Cityscape Leveler" />
+    <alt key="0000  /  1158 " sub="BRO" name="Liberator, Urza's Battlethopter" />
+    <alt key="0000  /  1158 " sub="BRO" name="Portal to Phyrexia" />
+    <alt key="0000  /  1158 " sub="BRO" name="The Stasis Coffin" />
+    <alt key="0000  /  1158 " sub="BRO" name="The Stone Brain" />
+    <alt key="0000  /  1158 " sub="BRO" name="Thran Spider" />
+    <alt key="0000  /  1158 " sub="BRO" name="Blast Zone" />
+    <alt key="0000  /  1158 " sub="BRO" name="Battlefiled Forge" />
+    <alt key="0000  /  1158 " sub="BRO" name="Brushland" />
+    <alt key="0000  /  1158 " sub="BRO" name="Llanowar Wastes" />
+    <alt key="0000  /  1158 " sub="BRO" name="Underground River" />
+    <alt key="0000  /  1158 " sub="BRO" name="Blast Zone" />
+    <alt key="0000  /  1158 " sub="BRO" name="Fortified Beachhead" />
+    <alt key="0000  /  1158 " sub="BRO" name="Hall of Tagsin" />
+    <alt key="0000  /  1158 " sub="BRO" name="Mishra's Foundry" />-->
+    <!-- BRC variants -->
+    <!--<alt key="0000  /  1158 " sub="BRC" name="Disciple of Caelus Nin" />
+    <alt key="0000  /  1158 " sub="BRC" name="Sanwell, Avenger Ace" />
+    <alt key="0000  /  1158 " sub="BRC" name="Scholar of New Horizons" />
+    <alt key="0000  /  1158 " sub="BRC" name="Tawnos, Solemn Survivor" />
+    <alt key="0000  /  1158 " sub="BRC" name="Glint Raker" />
+    <alt key="0000  /  1158 " sub="BRC" name="March of Progress" />
+    <alt key="0000  /  1158 " sub="BRC" name="Terisiare's Devastation" />
+    <alt key="0000  /  1158 " sub="BRC" name="Wire Surgeons" />
+    <alt key="0000  /  1158 " sub="BRC" name="Wreck Hunter" />
+    <alt key="0000  /  1158 " sub="BRC" name="Sardian Avenger" />
+    <alt key="0000  /  1158 " sub="BRC" name="Blast-Furnace Hellkite" />
+    <alt key="0000  /  1158 " sub="BRC" name="Farid, Enterprising Salvager" />
+    <alt key="0000  /  1158 " sub="BRC" name="Rootpath Purifier" />
+    <alt key="0000  /  1158 " sub="BRC" name="Titania, Nature's Force" />
+    <alt key="0000  /  1158 " sub="BRC" name="The Archimandrite" />
+    <alt key="0000  /  1158 " sub="BRC" name="Mishra, Eminent One" />
+    <alt key="0000  /  1158 " sub="BRC" name="Urza, Chief Artificer" />
+    <alt key="0000  /  1158 " sub="BRC" name="Staff of Titania" />
+    <alt key="0000  /  1158 " sub="BRC" name="Hexavus" />
+    <alt key="0000  /  1158 " sub="BRC" name="Kayla's Music Box" />
+    <alt key="0000  /  1158 " sub="BRC" name="Machine God's Effigy" />
+    <alt key="0000  /  1158 " sub="BRC" name="Scavenged Brawler" />
+    <alt key="0000  /  1158 " sub="BRC" name="Smelting Vat" />
+    <alt key="0000  /  1158 " sub="BRC" name="Thopter Shop" />
+    <alt key="0000  /  1158 " sub="BRC" name="Wondrous Crucible" />
+    <alt key="0000  /  1158 " sub="BRC" name="Urza's Workshop" />-->
     <!-- Ultimate Box toppers (UMA) -->
     <alt key="U01  /  40 " sub="UMA" name="Emrakul, the Aeons Torn" />
     <alt key="U02  /  40 " sub="UMA" name="Karn Liberated" />
@@ -3060,7 +3303,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="533 " sub="VOW" name="Sundown Pass" />
     <alt key="534 " sub="VOW" name="Voldaren Estate" />
     <alt key="535 " sub="SLD" name="Endless Ranks of the Dead" />
-    <!-- ZNE -->
+    <!-- Zendikar Rising Expeditions -->
     <alt key="01  /  30 " sub="ZNE" name="Flooded Strand" />
     <alt key="02  /  30 " sub="ZNE" name="Polluted Delta" />
     <alt key="03  /  30 " sub="ZNE" name="Bloodstained Mire" />
@@ -3218,8 +3461,6 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="124 " sub="STA" name="Growth Spiral" />
     <alt key="125 " sub="STA" name="Lightning Helix" />
     <alt key="126 " sub="STA" name="Putrefy" />
-    <!-- 2X2 -->
-    <alt key="332 " sub="2X2" name="Cryptic Spires" />
     <!-- 英雄譚 -->
     <alt key="018  /  269 " sub="DOM" name="Fall of the Thran" />
     <alt key="021  /  269 " sub="DOM" name="History of Benalia" />
@@ -3306,6 +3547,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="107  /  168 " sub="40K" name="Birth of the Imperium" />
     <alt key="121  /  168 " sub="40K" name="The First Tyrannic War" />
     <alt key="126  /  168 " sub="40K" name="The Horus Heresy" />
+    <alt key="22  /  36 " sub="BRC" name="The Brothers' War" />
     <!-- 出来事 (ELD, AFC, CLB) -->
     <alt key="005  /  269 " sub="ELD" name="Ardenvale Tactician" />
     <alt key="011  /  269 " sub="ELD" name="Faerie Guidemother" />
@@ -3560,6 +3802,29 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="230  /  281 " sub="AFR" name="Rogue Class" />
     <alt key="233  /  281 " sub="AFR" name="Sorcerer Class" />
     <alt key="663 " sub="CLB" name="Artificer Class" />
+    <!-- 試作 (BRO) -->
+    <alt key="034  /  287 " sub="BRO" name="Autonomous Assembler" />
+    <alt key="035  /  287 " sub="BRO" name="Combat Thresher" />
+    <alt key="038  /  287 " sub="BRO" name="Steel Seraph" />
+    <alt key="075  /  287 " sub="BRO" name="Arcane Proxy" />
+    <alt key="078  /  287 " sub="BRO" name="Depth Charge Colossus" />
+    <alt key="079  /  287 " sub="BRO" name="Hulking Metamorph" />
+    <alt key="080  /  287 " sub="BRO" name="Spotter Thopter" />
+    <alt key="120  /  287 " sub="BRO" name="Goring Warplow" />
+    <alt key="121  /  287 " sub="BRO" name="Phyrexian Fleshgorger" />
+    <alt key="158  /  287 " sub="BRO" name="Blitz Automaton" />
+    <alt key="159  /  287 " sub="BRO" name="Fallaji Dragon Engine" />
+    <alt key="165  /  287 " sub="BRO" name="Skitterbeam Battalion" />
+    <alt key="197  /  287 " sub="BRO" name="Boulderbranch Golem" />
+    <alt key="198  /  287 " sub="BRO" name="Cradle Clearcutter" />
+    <alt key="200  /  287 " sub="BRO" name="Iron-Craw Crusher" />
+    <alt key="203  /  287 " sub="BRO" name="Rootwire Amalgam" />
+    <alt key="204  /  287 " sub="BRO" name="Rust Goliath" />
+    <alt key="292  /  287 " sub="BRO" name="Woodcaller Automaton" />
+    <!-- 合体カード裏面 (BRO) -->
+    <alt key="163b  /  287 " sub="BRO" name="Mishra, Lost to Phyrexia" />
+    <alt key="238b  /  287 " sub="BRO" name="Urza, Planeswalker" />
+    <alt key="256b  /  287 " sub="BRO" name="Titania, Gaea Incarnate" />
     <!-- 完成化 PW -->
     <alt key="238  /  302 " sub="NEO" name="Tamiyo, Compleated Sage" />
     <!-- ダンジョン (AFR) -->
