@@ -3330,6 +3330,174 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="533 " sub="VOW" name="Sundown Pass" />
     <alt key="534 " sub="VOW" name="Voldaren Estate" />
     <alt key="535 " sub="SLD" name="Endless Ranks of the Dead" />
+    <!-- Warhammer 40,000 Commander -->
+    <alt key="001  /  168 " sub="40K" name="Szarekh, the Silent King" />
+    <alt key="002  /  168 " sub="40K" name="Abaddon the Despoiler" />
+    <alt key="003  /  168 " sub="40K" name="Inquisitor Greyfax" />
+    <alt key="004  /  168 " sub="40K" name="The Swarmlord" />
+    <alt key="006  /  168 " sub="40K" name="Be'lakor, the Dark Master" />
+    <alt key="007  /  168 " sub="40K" name="Magus Lucea Kane" />
+    <alt key="008  /  168 " sub="40K" name="Marneus Calgar" />
+    <alt key="009  /  168 " sub="40K" name="And They Shall Know No Fear" />
+    <alt key="010  /  168 " sub="40K" name="Celestine, the Living Saint" />
+    <alt key="011  /  168 " sub="40K" name="Defenders of Humanity" />
+    <alt key="012  /  168 " sub="40K" name="For the Emperor!" />
+    <alt key="013  /  168 " sub="40K" name="Grey Knight Paragon" />
+    <alt key="014  /  168 " sub="40K" name="Space Marine Devastator" />
+    <alt key="015  /  168 " sub="40K" name="Space Marine Scout" />
+    <alt key="016  /  168 " sub="40K" name="Thunderwolf Cavalry" />
+    <alt key="017  /  168 " sub="40K" name="Triumph of Saint Katherine" />
+    <alt key="018  /  168 " sub="40K" name="Ultramarines Honour Guard" />
+    <alt key="019  /  168 " sub="40K" name="Vexilus Praetor" />
+    <alt key="020  /  168 " sub="40K" name="Zephyrim" />
+    <alt key="021  /  168 " sub="40K" name="Genestealer Locus" />
+    <alt key="022  /  168 " sub="40K" name="Genestealer Patriarch" />
+    <alt key="023  /  168 " sub="40K" name="Heralds of Tzeentch" />
+    <alt key="024  /  168 " sub="40K" name="Lord of Change" />
+    <alt key="025  /  168 " sub="40K" name="Sicarian Infiltrator" />
+    <alt key="026  /  168 " sub="40K" name="Sister of Silence" />
+    <alt key="027  /  168 " sub="40K" name="Vanguard Suppressor" />
+    <alt key="028  /  168 " sub="40K" name="Anrakyr the Traveller" />
+    <alt key="029  /  168 " sub="40K" name="Arco-Flagellant" />
+    <alt key="030  /  168 " sub="40K" name="Biotransference" />
+    <alt key="031  /  168 " sub="40K" name="Blight Grenade" />
+    <alt key="032  /  168 " sub="40K" name="Chronomancer" />
+    <alt key="033  /  168 " sub="40K" name="Cryptek" />
+    <alt key="034  /  168 " sub="40K" name="Flayed One" />
+    <alt key="035  /  168 " sub="40K" name="Great Unclean One" />
+    <alt key="036  /  168 " sub="40K" name="Hexmark Destroyer" />
+    <alt key="037  /  168 " sub="40K" name="Illuminor Szeras" />
+    <alt key="038  /  168 " sub="40K" name="Lokhust Heavy Destroyer" />
+    <alt key="039  /  168 " sub="40K" name="Lychguard" />
+    <alt key="040  /  168 " sub="40K" name="Mandate of Abaddon" />
+    <alt key="041  /  168 " sub="40K" name="Mortarion, Daemon Primarch" />
+    <alt key="042  /  168 " sub="40K" name="Necron Deathmark" />
+    <alt key="043  /  168 " sub="40K" name="Necron Overlord" />
+    <alt key="044  /  168 " sub="40K" name="Nurgle's Conscription" />
+    <alt key="045  /  168 " sub="40K" name="Nurgle's Rot" />
+    <alt key="046  /  168 " sub="40K" name="Out of the Tombs" />
+    <alt key="047  /  168 " sub="40K" name="Plague Drone" />
+    <alt key="048  /  168 " sub="40K" name="Plasmancer" />
+    <alt key="049  /  168 " sub="40K" name="Poxwalkers" />
+    <alt key="050  /  168 " sub="40K" name="Primaris Eliminator" />
+    <alt key="051  /  168 " sub="40K" name="Psychomancer" />
+    <alt key="052  /  168 " sub="40K" name="Royal Warden" />
+    <alt key="053  /  168 " sub="40K" name="Sanguinary Priest" />
+    <alt key="054  /  168 " sub="40K" name="Sautekh Immortal" />
+    <alt key="055  /  168 " sub="40K" name="Shard of the Nightbringer" />
+    <alt key="056  /  168 " sub="40K" name="Shard of the Void Dragon" />
+    <alt key="057  /  168 " sub="40K" name="Skorpekh Destroyer" />
+    <alt key="058  /  168 " sub="40K" name="Skorpekh Lord" />
+    <alt key="059  /  168 " sub="40K" name="Sloppity Bilepiper" />
+    <alt key="060  /  168 " sub="40K" name="Tallyman of Nurgle" />
+    <alt key="061  /  168 " sub="40K" name="Technomancer" />
+    <alt key="062  /  168 " sub="40K" name="Their Name Is Death" />
+    <alt key="063  /  168 " sub="40K" name="Their Number Is Legion" />
+    <alt key="064  /  168 " sub="40K" name="Tomb Blade" />
+    <alt key="065  /  168 " sub="40K" name="Trazyn the Infinite" />
+    <alt key="066  /  168 " sub="40K" name="Triarch Praetorian" />
+    <alt key="067  /  168 " sub="40K" name="Triarch Stalker" />
+    <alt key="068  /  168 " sub="40K" name="Venomcrawler" />
+    <alt key="069  /  168 " sub="40K" name="The War in Heaven" />
+    <alt key="070  /  168 " sub="40K" name="Acolyte Hybrid" />
+    <alt key="071  /  168 " sub="40K" name="Aspiring Champion" />
+    <alt key="072  /  168 " sub="40K" name="Bloodcrusher of Khorne" />
+    <alt key="073  /  168 " sub="40K" name="Bloodthirster" />
+    <alt key="074  /  168 " sub="40K" name="Chaos Terminator Lord" />
+    <alt key="075  /  168 " sub="40K" name="Dark Apostle" />
+    <alt key="076  /  168 " sub="40K" name="Exocrine" />
+    <alt key="077  /  168 " sub="40K" name="Herald of Slaanesh" />
+    <alt key="078  /  168 " sub="40K" name="Keeper of Secrets" />
+    <alt key="079  /  168 " sub="40K" name="Kharn the Betrayer" />
+    <alt key="080  /  168 " sub="40K" name="Knight Rampager" />
+    <alt key="081  /  168 " sub="40K" name="Let the Galaxy Burn" />
+    <alt key="082  /  168 " sub="40K" name="Noise Marine" />
+    <alt key="083  /  168 " sub="40K" name="The Red Terror" />
+    <alt key="084  /  168 " sub="40K" name="Screamer-Killer" />
+    <alt key="085  /  168 " sub="40K" name="Seeker of Slaanesh" />
+    <alt key="086  /  168 " sub="40K" name="Aberrant" />
+    <alt key="087  /  168 " sub="40K" name="Biophagus" />
+    <alt key="088  /  168 " sub="40K" name="Bone Sabres" />
+    <alt key="089  /  168 " sub="40K" name="Broodlord" />
+    <alt key="090  /  168 " sub="40K" name="Clamavus" />
+    <alt key="091  /  168 " sub="40K" name="Haruspex" />
+    <alt key="092  /  168 " sub="40K" name="Hierophant Bio-Titan" />
+    <alt key="093  /  168 " sub="40K" name="Hormagaunt Horde" />
+    <alt key="094  /  168 " sub="40K" name="Lictor" />
+    <alt key="095  /  168 " sub="40K" name="Nexos" />
+    <alt key="096  /  168 " sub="40K" name="Old One Eye" />
+    <alt key="097  /  168 " sub="40K" name="Purestrain Genestealer" />
+    <alt key="098  /  168 " sub="40K" name="Sporocyst" />
+    <alt key="099  /  168 " sub="40K" name="Termagant Swarm" />
+    <alt key="100  /  168 " sub="40K" name="Tervigon" />
+    <alt key="101  /  168 " sub="40K" name="Toxicrene" />
+    <alt key="102  /  168 " sub="40K" name="Tyranid Invasion" />
+    <alt key="103  /  168 " sub="40K" name="Tyrant Guard" />
+    <alt key="104  /  168 " sub="40K" name="Assault Intercessor" />
+    <alt key="105  /  168 " sub="40K" name="Atalan Jackal" />
+    <alt key="106  /  168 " sub="40K" name="Belisarius Cawl" />
+    <alt key="107  /  168 " sub="40K" name="Birth of the Imperium" />
+    <alt key="108  /  168 " sub="40K" name="Blood for the Blood God!" />
+    <alt key="109  /  168 " sub="40K" name="Callidus Assassin" />
+    <alt key="110  /  168 " sub="40K" name="Chaos Defiler" />
+    <alt key="111  /  168 " sub="40K" name="Chaos Mutation" />
+    <alt key="112  /  168 " sub="40K" name="Commissar Severina Raine" />
+    <alt key="113  /  168 " sub="40K" name="Company Commander" />
+    <alt key="114  /  168 " sub="40K" name="Cybernetica Datasmith" />
+    <alt key="115  /  168 " sub="40K" name="Deathleaper, Terror Weapon" />
+    <alt key="116  /  168 " sub="40K" name="Deny the Witch" />
+    <alt key="117  /  168 " sub="40K" name="Drach'Nyen" />
+    <alt key="118  /  168 " sub="40K" name="Epistolary Librarian" />
+    <alt key="119  /  168 " sub="40K" name="Exalted Flamer of Tzeentch" />
+    <alt key="120  /  168 " sub="40K" name="Exterminatus" />
+    <alt key="121  /  168 " sub="40K" name="The First Tyrannic War" />
+    <alt key="122  /  168 " sub="40K" name="The Flesh Is Weak" />
+    <alt key="123  /  168 " sub="40K" name="Gargoyle Flock" />
+    <alt key="124  /  168 " sub="40K" name="Ghyrson Starn, Kelermorph" />
+    <alt key="125  /  168 " sub="40K" name="Helbrute" />
+    <alt key="126  /  168 " sub="40K" name="The Horus Heresy" />
+    <alt key="127  /  168 " sub="40K" name="Inquisitor Eisenhorn" />
+    <alt key="128  /  168 " sub="40K" name="Kill! Maim! Burn!" />
+    <alt key="129  /  168 " sub="40K" name="The Lost and the Damned" />
+    <alt key="130  /  168 " sub="40K" name="Lucius the Eternal" />
+    <alt key="131  /  168 " sub="40K" name="Magnus the Red" />
+    <alt key="132  /  168 " sub="40K" name="Malanthrope" />
+    <alt key="133  /  168 " sub="40K" name="Mawloc" />
+    <alt key="134  /  168 " sub="40K" name="Mutalith Vortex Beast" />
+    <alt key="135  /  168 " sub="40K" name="Neyam Shai Murad" />
+    <alt key="136  /  168 " sub="40K" name="Pink Horror" />
+    <alt key="137  /  168 " sub="40K" name="Primaris Chaplain" />
+    <alt key="138  /  168 " sub="40K" name="Ravener" />
+    <alt key="139  /  168 " sub="40K" name="The Ruinous Powers" />
+    <alt key="140  /  168 " sub="40K" name="Shadow in the Warp" />
+    <alt key="141  /  168 " sub="40K" name="Sister Hospitaller" />
+    <alt key="142  /  168 " sub="40K" name="Sister Repentia" />
+    <alt key="143  /  168 " sub="40K" name="Trygon Prime" />
+    <alt key="144  /  168 " sub="40K" name="Tyranid Harridan" />
+    <alt key="145  /  168 " sub="40K" name="Tyranid Prime" />
+    <alt key="146  /  168 " sub="40K" name="Tzaangor Shaman" />
+    <alt key="147  /  168 " sub="40K" name="Venomthrope" />
+    <alt key="148  /  168 " sub="40K" name="Winged Hive Tyrant" />
+    <alt key="149  /  168 " sub="40K" name="Zoanthrope" />
+    <alt key="150  /  168 " sub="40K" name="Canoptek Scarab Swarm" />
+    <alt key="151  /  168 " sub="40K" name="Canoptek Spyder" />
+    <alt key="152  /  168 " sub="40K" name="Canoptek Tomb Sentinel" />
+    <alt key="153  /  168 " sub="40K" name="Canoptek Wraith" />
+    <alt key="154  /  168 " sub="40K" name="Convergence of Dominion" />
+    <alt key="155  /  168 " sub="40K" name="Cryptothrall" />
+    <alt key="156  /  168 " sub="40K" name="Ghost Ark" />
+    <alt key="157  /  168 " sub="40K" name="The Golden Throne" />
+    <alt key="158  /  168 " sub="40K" name="Goliath Truck" />
+    <alt key="159  /  168 " sub="40K" name="Inquisitorial Rosette" />
+    <alt key="160  /  168 " sub="40K" name="Knight Paladin" />
+    <alt key="161  /  168 " sub="40K" name="Necron Monolith" />
+    <alt key="162  /  168 " sub="40K" name="Night Scythe" />
+    <alt key="163  /  168 " sub="40K" name="Reaver Titan" />
+    <alt key="164  /  168 " sub="40K" name="Redemptor Dreadnought" />
+    <alt key="165  /  168 " sub="40K" name="Resurrection Orb" />
+    <alt key="166  /  168 " sub="40K" name="Sceptre of Eternal Glory" />
+    <alt key="167  /  168 " sub="40K" name="Thunderhawk Gunship" />
+    <alt key="168  /  168 " sub="40K" name="Tomb Fortress" />
     <!-- Zendikar Rising Expeditions -->
     <alt key="01  /  30 " sub="ZNE" name="Flooded Strand" />
     <alt key="02  /  30 " sub="ZNE" name="Polluted Delta" />
@@ -3488,6 +3656,37 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="124 " sub="STA" name="Growth Spiral" />
     <alt key="125 " sub="STA" name="Lightning Helix" />
     <alt key="126 " sub="STA" name="Putrefy" />
+    <!-- Transformers -->
+    <alt key="1a  /  15 " sub="BOT" name="Prowl, Stoic Strategist" />
+    <alt key="1b  /  15 " sub="BOT" name="Prowl, Pursuit Vehicle" />
+    <alt key="2a  /  15 " sub="BOT" name="Ratchet, Field Medic" />
+    <alt key="2b  /  15 " sub="BOT" name="Ratchet, Rescue Racer" />
+    <alt key="3a  /  15 " sub="BOT" name="Jetfire, Ingenious Scientist" />
+    <alt key="3b  /  15 " sub="BOT" name="Jetfire, Air Guardian" />
+    <alt key="4a  /  15 " sub="BOT" name="Blitzwing, Cruel Tormentor" />
+    <alt key="4b  /  15 " sub="BOT" name="Blitzwing, Adaptive Assailant" />
+    <alt key="5a  /  15 " sub="BOT" name="Starscream, Power Hungry" />
+    <alt key="5b  /  15 " sub="BOT" name="Starscream, Seeker Leader" />
+    <alt key="6a  /  15 " sub="BOT" name="Slicer, Hired Muscle" />
+    <alt key="6b  /  15 " sub="BOT" name="Slicer, High-Speed Antagonist" />
+    <alt key="7a  /  15 " sub="BOT" name="Arcee, Sharpshooter" />
+    <alt key="7b  /  15 " sub="BOT" name="Arcee, Acrobatic Coupe" />
+    <alt key="8a  /  15 " sub="BOT" name="Blaster, Combat DJ" />
+    <alt key="8b  /  15 " sub="BOT" name="Blaster, Morale Booster" />
+    <alt key="9a  /  15 " sub="BOT" name="Cyclonus, the Saboteur" />
+    <alt key="9b  /  15 " sub="BOT" name="Cyclonus, Cybertronian Fighter" />
+    <alt key="10a  /  15 " sub="BOT" name="Flamewar, Brash Veteran" />
+    <alt key="10b  /  15 " sub="BOT" name="Flamewar, Streetwise Operative" />
+    <alt key="11a  /  15 " sub="BOT" name="Goldbug, Humanity's Ally" />
+    <alt key="11b  /  15 " sub="BOT" name="Goldbug, Scrappy Scout" />
+    <alt key="12a  /  15 " sub="BOT" name="Megatron, Tyrant" />
+    <alt key="12b  /  15 " sub="BOT" name="Megatron, Destructive Force" />
+    <alt key="13a  /  15 " sub="BOT" name="Optimus Prime, Hero" />
+    <alt key="13b  /  15 " sub="BOT" name="Optimus Prime, Autobot Leader" />
+    <alt key="14a  /  15 " sub="BOT" name="Soundwave, Sonic Spy" />
+    <alt key="14b  /  15 " sub="BOT" name="Soundwave, Superior Captain" />
+    <alt key="15a  /  15 " sub="BOT" name="Ultra Magnus, Tactician" />
+    <alt key="15b  /  15 " sub="BOT" name="Ultra Magnus, Armored Carrier" />
     <!-- 英雄譚 -->
     <alt key="018  /  269 " sub="DOM" name="Fall of the Thran" />
     <alt key="021  /  269 " sub="DOM" name="History of Benalia" />
@@ -3570,10 +3769,10 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="153  /  281 " sub="DMU" name="Yotia Declares War" />
     <alt key="188  /  281 " sub="DMU" name="The Weatherseed Treaty" />
     <alt key="189  /  281 " sub="DMU" name="The World Spell" />
-    <alt key="069  /  168 " sub="40K" name="The War in Heaven" />
+    <!--<alt key="069  /  168 " sub="40K" name="The War in Heaven" />
     <alt key="107  /  168 " sub="40K" name="Birth of the Imperium" />
     <alt key="121  /  168 " sub="40K" name="The First Tyrannic War" />
-    <alt key="126  /  168 " sub="40K" name="The Horus Heresy" />
+    <alt key="126  /  168 " sub="40K" name="The Horus Heresy" />-->
     <alt key="22  /  36 " sub="BRC" name="The Brothers' War" />
     <!-- 出来事 (ELD, AFC, CLB) -->
     <alt key="005  /  269 " sub="ELD" name="Ardenvale Tactician" />
