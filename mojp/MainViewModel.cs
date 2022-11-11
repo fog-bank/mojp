@@ -16,8 +16,8 @@ namespace Mojp
     {
         private readonly SettingsCache settings = App.SettingsCache;
         private readonly AutomationHandler automation;
+        private readonly ObservableCollection<Card> displayCards = new();
         private DispatcherTimer timer;
-        private ObservableCollection<Card> displayCards = new();
         private int selectedIndex = -1;
 
         public MainViewModel()
