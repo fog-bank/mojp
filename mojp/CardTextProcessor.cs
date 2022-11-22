@@ -394,7 +394,7 @@ namespace Mojp
                     {
                         case "　英語名":
                             // 新しいカードの行に入った
-                            if (card.Name != null)
+                            if (card?.Name != null)
                                 yield return ProcessCard(card, texts);
 
                             card = new Card
@@ -414,21 +414,14 @@ namespace Mojp
                             break;
 
                         case "日本語名":
-                            //string jaName = tokens[1];
-
-                            // 読みがついているなら、取り除く
-                            //int hiragana = jaName.IndexOf('（');
-                            //if (hiragana >= 0)
-                            //    jaName = jaName.Substring(0, hiragana);
-
-                            //card.JapaneseName = jaName.Trim();
-                            card.JapaneseName = tokens[1];
+                            if (card != null)
+                                card.JapaneseName = tokens[1];
                             break;
 
                         case "　Ｐ／Ｔ":
                         case "　忠誠度":
                             // 両面 PW カードの裏の忠誠度が空白の場合があるので、そのときは設定しない
-                            if (!string.IsNullOrWhiteSpace(tokens[1]))
+                            if (card != null && !string.IsNullOrWhiteSpace(tokens[1]))
                             {
                                 // Lv アップクリーチャーは P/T 行が複数あるので、各 P/T は通常テキストに加える
                                 if (card.PT == null && !lvCard)
@@ -439,14 +432,18 @@ namespace Mojp
                             break;
 
                         case "　タイプ":
-                            //card.Type = RemoveParenthesis(tokens[1]).Replace("---", "―");
-                            card.Type = tokens[1];
+                            if (card != null)
+                                card.Type = tokens[1];
                             break;
 
                         case "　コスト":
                         case "　色指標":
                         case "イラスト":
+                            break;
+
                         case "　セット":
+                            if (tokens[1] is "Unglued" or "Unhinged" or "Unstable" or "Unsanctioned" or "Unfinity")
+                                card = null;
                             break;
 
                         case "　稀少度":
@@ -455,18 +452,17 @@ namespace Mojp
                             break;
 
                         default:
-                            //texts.Add(RemoveParenthesis(line));
                             texts.Add(line.TrimEnd());
                             break;
                     }
                 }
             }
 
-            if (card.Name != null)
+            if (card?.Name != null)
                 yield return ProcessCard(card, texts);
         }
 
-        private static Card ProcessCard(Card card, IEnumerable<string> texts)
+        private static Card ProcessCard(Card card, List<string> texts)
         {
             card.Text = string.Join("\n", texts);
 
@@ -878,71 +874,5 @@ namespace Mojp
             return applied;
         }
 #endif
-
-        ///// <summary>
-        ///// サブタイプの英語名を削除した文字列にします。
-        ///// </summary>
-        //private static string RemoveParenthesis(string line)
-        //{
-        //    var text = new StringBuilder(line.Length);
-        //    var parenthesis = new StringBuilder();
-        //    var sb = text;
-
-        //    for (int i = 0; i < line.Length; i++)
-        //    {
-        //        char c = line[i];
-        //        switch (c)
-        //        {
-        //            case '(':
-        //                sb = parenthesis;
-        //                break;
-
-        //            case ')':
-        //                bool english = parenthesis.Length >= 2;
-
-        //                for (int j = 0; j < parenthesis.Length; j++)
-        //                {
-        //                    char parChr = parenthesis[j];
-
-        //                    if (parChr >= 'a' && parChr <= 'z')
-        //                        continue;
-
-        //                    if (parChr >= 'A' && parChr <= 'Z')
-        //                        continue;
-
-        //                    // 「Bolas's Meditation Realm」「Urza's」「Power-Plant」
-        //                    if (parChr == ' ' || parChr == '\'' || parChr == '-')
-        //                        continue;
-
-        //                    english = false;
-        //                    break;
-        //                }
-        //                sb = text;
-
-        //                if (english)
-        //                {
-        //                    // サブタイプとタイプの間にあるべき中点が抜けている場合を修正
-        //                    if (i + 1 < line.Length && line[i + 1] != '・')
-        //                    {
-        //                        string follow = line.Substring(i + 1);
-
-        //                        if (follow.StartsWith("クリーチャー") || follow.StartsWith("アーティファクト") || follow.StartsWith("土地") ||
-        //                            follow.StartsWith("呪文") || follow.StartsWith("パーマネント") || follow.StartsWith("カード"))
-        //                            sb.Append('・');
-        //                    }
-        //                }
-        //                else
-        //                    sb.Append('(').Append(parenthesis.ToString()).Append(')');
-
-        //                parenthesis.Clear();
-        //                break;
-
-        //            default:
-        //                sb.Append(c);
-        //                break;
-        //        }
-        //    }
-        //    return text.ToString();
-        //}
     }
 }
