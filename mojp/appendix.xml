@@ -133,6 +133,47 @@
     <card name="Vitu-Ghazi" ja="ヴィトゥ＝ガジー" type="伝説の土地・クリーチャー ― エレメンタル" pt="0/0" wiki="ヴィトゥ＝ガジーの目覚め/Awakening of Vitu-Ghazi">速攻
 （この土地が持っていた名前を失い、《ヴィトゥ＝ガジー》になる。持っていたタイプや能力は残る。）</card>
     
+    <!-- UNF -->
+    <card name="Aerialephant" ja="空象" type="クリーチャー ― 象・パフォーマー" pt="3/2">飛行
+空象が戦場に出たとき、あなたは(ＴＫ)を得て、その後、あなたがオーナーであり土地でないパーマネント１つにステッカー１枚を貼ってもよい。</card>
+    <card name="_______ Bird Gets the Worm" ja="＿＿＿鳥は虫を捕る" type="クリーチャー ― 鳥・ゲスト" pt="2/4">飛行
+このクリーチャーが戦場に出たとき、あなたはこれに名前ステッカー１枚を貼ってもよい。あなたはＸ点のライフを得る。Ｘはそのステッカーにある母音の種類数に等しい。（母音はＡ，Ｅ，Ｉ，Ｏ，Ｕ，Ｙである。）</card>
+    <card name="Clowning Around" ja="おどけまわり" type="ソーサリー">白の1/1の道化師・ロボット・アーティファクト・クリーチャー・トークン２体を生成し、その後、１個の６面体サイコロを振る。その出目があなたがコントロールしているロボットの数以下なら、白の1/1の道化師・ロボット・アーティファクト・クリーチャー・トークン１体を生成する。</card>
+    <card name="Complaints Clerk" ja="苦情係" type="クリーチャー ― ビースト・従業員" pt="3/3">苦情係が戦場に出たとき、アトラクション１つを開く。（あなたのアトラクション・デッキの一番上のカードを戦場に出す。）
+あなたが１の出目１つを出すたび、白の1/1の道化師・ロボット・アーティファクト・クリーチャー・トークン１体を生成する。</card>
+    <card name="A Good Day to Pie" ja="パイにはいい日だ" type="インスタント">クリーチャー最大２体を対象とする。それらをタップする。
+あなたがクリーチャー１体に名前ステッカー１枚を貼るたび、あなたはあなたの墓地からパイにはいい日だをあなたの手札に戻してもよい。</card>
+    <card name="Park Bleater" ja="パークのメ～惑" type="クリーチャー ― ヤギ・従業員" pt="2/2">あなたがオーナーでありこれでないクリーチャー１体が戦場に出るたび、あなたは(ＴＫ)を得る。
+(白),(Ｔ)：あなたはあなたがオーナーでありこのターンに戦場に出たクリーチャー１体にステッカー１枚を貼ってもよい。</card>
+    <card name="Pin Collection" ja="ピンバッジのコレクション" type="アーティファクト ― 装備品">ピンバッジのコレクションが戦場に出たとき、あなたはこれにチケット・コストがＸ以下の能力ステッカー１枚をチケット・コストを支払うことなく貼ってもよい。
+装備しているクリーチャーは+1/+1の修整を受け、ピンバッジのコレクションに貼られている能力ステッカーのすべての能力を持つ。
+装備(２)</card>
+    <card name="Ride Guide" ja="ライド・ガイド" type="クリーチャー ― 人間・従業員" pt="4/4">ライド・ガイドが戦場に出たとき、アトラクション１つを開く。（あなたのアトラクション・デッキの一番上のカードを戦場に出す。）</card>
+    <card name="Robo-Pinata" ja="ロボ・ピニャータ" type="アーティファクト・クリーチャー ― 道化師・ロボット" pt="2/1">ロボ・ピニャータが死亡したとき、以下から１つを選ぶ。
+・あなたは(ＴＫ)(ＴＫ)を得る。
+・あなたはあなたがオーナーであり土地でないパーマネント１つにステッカー１枚を貼ってもよい。</card>
+    <card name="Sanguine Sipper" ja="血こぼし飲み歩き" type="クリーチャー ― 吸血鬼・ゲスト" pt="3/1">あなたがステッカーが貼られているパーマネントをコントロールしているかぎり、血こぼし飲み歩きは絆魂を持つ。</card>
+    <card name="Starlight Spectacular" ja="星明かりの豪華ショー" type="エンチャント">パレード！ ― あなたのターンの戦闘開始時に、あなたがコントロールしているすべてのクリーチャーが選ばれるまで、あなたがコントロールしているクリーチャーを１体ずつ選ぶ。ターン終了時まで、それらのクリーチャーはそれぞれ、それより前に選ばれたクリーチャー１体につき+1/+1の修整を受ける。（皆並ぼう！ 最初に並んだクリーチャーは+0/+0の修整を受ける。）</card>
+    <card name="Sword-Swallowing Seraph" ja="剣呑み芸の熾天使" type="クリーチャー ― 天使・パフォーマー" pt="4/4">飛行、警戒
+剣呑み芸の熾天使が戦場に出たとき、あなたはあなたがオーナーであり土地でないパーマネント１つに名前ステッカー１枚を貼ってもよい。
+(１)(白),(Ｔ)：名前ステッカーが貼られていてこれでないクリーチャー１体を対象とする。それの上に+1/+1カウンター１個を置く。起動はソーサリーとしてのみ行う。</card>
+    <card name="Baaallerina" ja="舞姫ェ～" type="クリーチャー ― 羊・パフォーマー" pt="3/3">飛行
+舞姫ェ～が戦場に出たとき、あなたはあなたがオーナーであり土地でないパーマネント１つに名前ステッカー１枚を貼ってもよい。
+(２)(青)：名前ステッカーが貼られていてこれでないクリーチャー１体を対象とする。ターン終了時まで、それは飛行を得る。</card>
+    <card name="Bamboozling Beeble" ja="まどわしビーブル" type="クリーチャー ― ビーブル" pt="1/1">プロテクション（ロボット）
+(１),(Ｔ)：プレイヤー１人を対象とする。このターン、次にそのプレイヤーが１個以上のサイコロを振るなら、代わりに、そのプレイヤーはそれに１を足した個数のサイコロを振り、それらの出目のうちあなたが選んだ１つを無視する。</card>
+    <card name="Bioluminary" ja="発光生体" type="クリーチャー ― マーフォーク・パフォーマー" pt="1/3">発光生体がプレイヤー１人に戦闘ダメージを与えるたび、あなたは(ＴＫ)(ＴＫ)を得て、その後、あなたはあなたがオーナーであり土地でないパーマネント１つにステッカー１枚を貼ってもよい。</card>
+    <card name="Boing!" ja="ボイーン！" type="インスタント">クリーチャー１体を対象とする。それをオーナーの手札に戻し、その後、１個の６面体サイコロを振る。その出目が３以下なら、その出目に等しい枚数の占術を行う。</card>
+    <card name="Command Performance" ja="命令パフォーマンス" type="ソーサリー">以下から２つを選ぶ。
+・アトラクション１つを開く。（あなたのアトラクション・デッキの一番上のカードを戦場に出す。）
+・アトラクションを観覧するためサイコロを振る。
+・あなたは(ＴＫ)(ＴＫ)を得る。
+・あなたはあなたがオーナーであり土地でないパーマネント１つにステッカー１枚を貼ってもよい。</card>
+    <card name="Croakid Amphibonaut" ja="蛙声の両生飛行士" type="クリーチャー ― カエル・ゲスト" pt="4/3">あなたがステッカーが貼られているパーマネントをコントロールしているかぎり、蛙声の両生飛行士は飛行を持つ。</card>
+    <card name="Exchange of Words" ja="文章交換" type="エンチャント">文章交換が戦場に出たとき、クリーチャー２体を対象とする。文章交換が戦場に残り続けているかぎり、それらのクリーチャーの文章欄を交換する。</card>
+    <card name="Glitterflitter" ja="煌き飛び" type="クリーチャー ― フェアリー・パフォーマー" pt="2/2">飛行
+煌き飛びが戦場に出たとき、あなたは(ＴＫ)を得て、その後、あなたはあなたがオーナーであり土地でないパーマネント１つにステッカー１枚を貼ってもよい。</card>
+    
     <!-- SLD (Street Fighter) -->
     <!--<card name="E. Honda, Sumo Champion" ja="E. Honda, Sumo Champion" type="伝説のクリーチャー ― 人間・戦士" pt="0/7">肩屋入り ― あなたのターンであるかぎり、各クリーチャーはそれぞれ、パワーではなくタフネスに等しい点数の戦闘ダメージを割り振る。
 百裂張り手 ― E. Honda, Sumo Championが攻撃するたび、クリーチャー最大１００体を対象とする。ターン終了時まで、それらはそれぞれ+0/+Xの修整を受ける。Ｘはあなたの手札にあるカードの枚数に等しい。</card>
@@ -276,6 +317,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <card name="Confidence from Strength" ja="Confidence from Strength" type="ソーサリー">クリーチャー１体を対象とする。ターン終了時まで、それは+4/+4の修整を受けトランプルを得る。（それは余剰の戦闘ダメージをそれが攻撃しているプレイヤーかプレインズウォーカーに与えることができる。）</card>
     <card name="Journey for the Elixir" ja="Journey for the Elixir" type="ソーサリー">あなたのライブラリーやあなたの墓地から基本土地・カード１枚と《Jiang Yanggu》という名前のカード１枚を探し、公開し、あなたの手札に加える。その後、ライブラリーを切り直す。</card>
     <card name="Cleansing Screech" ja="Cleansing Screech" type="ソーサリー">クリーチャー１体かプレインズウォーカー１体かプレイヤー１人を対象とする。Cleansing Screechはそれに４点のダメージを与える。</card>
+    
     <!-- Vanguard -->
     <card name="Avatar - Akroma, Angel of Wrath" ja="Akroma, Angel of Wrath Avatar" type="ヴァンガード" pt="手札 +1/ライフ +7" wiki="Akroma, Angel of Wrath Avatar">クリーチャー１体があなたのコントロール下で戦場に出るたび、飛行、先制攻撃、トランプル、速攻、プロテクション（黒）、プロテクション（赤）、警戒の中から能力２つを無作為に選ぶ。そのクリーチャーはそれらの選ばれた能力を得る。</card>
     <card name="Avatar - Arcanis, the Omnipotent" ja="Arcanis, the Omnipotent Avatar" type="ヴァンガード" pt="手札 +1/ライフ -3" wiki="Arcanis, the Omnipotent Avatar">(Ｘ),あなたがコントロールしているマナ総量がＸのクリーチャー１体をオーナーの手札に戻す：０からＸまでの数１つを無作為に選び、その選ばれた数に等しい枚数のカードを引く。Ｘは０にできない。</card>
@@ -7492,6 +7534,35 @@ III ― あなたから始めて、各プレイヤーはそれぞれクリーチ
     <card name="When" />
     <card name="Where" />
     <!-- Unstable どんぐりカード -->
+    <card name="Standard Procedure" />
+    <card name="Assembled Ensemble" />
+    <card name="Bar Entry" />
+    <card name="Far Out" />
+    <card name="Form of the Approach of the Second Sun" />
+    <card name="Get Your Head in the Game" />
+    <card name="Gobsmacked" />
+    <card name="Hat Trick" />
+    <card name="Impounding Lot-Bot" />
+    <card name="Jetpack Janitor" />
+    <card name="Katerina of Myra's Marvels" />
+    <card name="Knight in ________ Armor" />
+    <card name="Leading Performance" />
+    <card name="Main Event Horizon" />
+    <card name="Now You See Me ..." />
+    <card name="Park Re-Entry" />
+    <card name="Solaflora, Intergalactic Icon" />
+    <card name="Surprise Party" />
+    <card name="T.A.P.P.E.R." />
+    <card name="Trapeze Artist" />
+    <card name="Animate Object" />
+    <card name="Astroquarium" />
+    <card name="Bag Check" />
+    <card name="Blufferfish" />
+    <card name="Busted!" />
+    <card name="Decisions, Decisions" />
+    <card name="Fluros of Myra's Marvels" />
+    <card name="Focused Funambulist" />
+    
     <card name="Omniclown Colossus" />
     <!-- Mystery Booster (120 cards w/o vanguard) -->
     <card name="A Good Thing" />
