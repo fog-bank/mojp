@@ -219,8 +219,8 @@ Vengeant Vampireが死亡したとき、対戦相手がコントロールして�
     <!-- Game Night 2019 (GN2) -->
     <card name="Highcliff Felidar" ja="Highcliff Felidar" type="クリーチャー ― 猫・ビースト" pt="5/5">警戒
 Highcliff Felidarが戦場に出たとき、対戦相手１人につき、そのプレイヤーがコントロールしているクリーチャーの中で最大のパワーを持つクリーチャー１体を選ぶ。それらのクリーチャーを破壊する。</card>
-    <card name="Sphinx of Enlightenment" ja="Sphinx of Enlightenment" type="クリーチャー ― スフィンクス" pt="5/5">飛行
-Sphinx of Enlightenmentが戦場に出たとき、対戦相手１人を対象とする。そのプレイヤーはカード１枚を引き、あなたはカード３枚を引く。</card>
+    <card name="Sphinx of Enlightenment" ja="啓蒙のスフィンクス" type="クリーチャー ― スフィンクス" pt="5/5">飛行
+啓蒙のスフィンクスが戦場に出たとき、対戦相手１人を対象とする。そのプレイヤーはカード１枚を引き、あなたはカード３枚を引く。</card>
     <card name="Fiendish Duo" ja="Fiendish Duo" type="クリーチャー ― デビル" pt="5/5">発生源が対戦相手にダメージを与えるなら、代わりに、それはそのプレイヤーにその点数の２倍のダメージを与える。</card>
     <card name="Earthshaker Giant" ja="Earthshaker Giant" type="クリーチャー ― 巨人・ドルイド" pt="6/6">トランプル
 Earthshaker Giantが戦場に出たとき、ターン終了時まで、他の、あなたがコントロールしているクリーチャーは+3/+3の修整を受けトランプルを得る。</card>
@@ -3500,6 +3500,12 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="(?&lt;=《[^《/》]+)(?&lt;!《昼|《夜)/[^《/》]+(?=》)" value="" />
     <regex target="text" pattern="//---試作部分---//" value="//" />
     <regex target="text" pattern="^\([白青黒赤緑]\)$" value="" />
+    <!-- 新規日本語カード名 -->
+    <regex target="ja" pattern="^満ち潮$" value="満潮" />
+    <regex target="ja" pattern="^神秘のコバンザメ$" value="神秘的負荷" />
+    <regex target="ja|text" pattern="^透翼のキツネザル$|Hyalopterous Lemure" value="透け羽の霊命" />
+    <regex target="ja" pattern="^樹界$" value="アルボリア" />
+    <regex target="text" pattern="Elvish Spirit Guide" value="エルフの指導霊" />
     <!-- オラクル更新 -->
     <regex target="name|ja|text" pattern="AE" value="Ae" />
     <regex target="text" pattern="(?&lt;=トークンを[０-９Ｘ]+体)戦場に出す" value="生成する" />
@@ -3800,7 +3806,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="を探して戦場に出" value="を探し、戦場に出" />
     <regex target="text" pattern="(?&lt;=(?:「|あなたのライブラリー|自分のライブラリー)[^。]+(?:加え|捨て))、(?:その後、?)?ライブラリーを切り直す。(?!その後)" value="る。その後、ライブラリーを切り直す。" />
     <regex target="text" pattern="(?&lt;=(?:「|あなたのライブラリー|自分のライブラリー)[^。]+)出し、(?:その後、?)?ライブラリーを切り直す。(Ｘは[^。]+(?:に等しい|である)。)?" value="出す。$1その後、ライブラリーを切り直す。" />
-    <regex target="text" pattern="を探し、それを公開し、その後ライブラリーを切り直し、(?:そのカードを一番上に|一番上にそのカードを)置く。" value="を探し、公開する。その後、ライブラリーを切り直し、そのカードを一番上に置く。" />
+    <regex target="text" pattern="を探し、(?:それ|そのカード)を公開し、その後ライブラリーを切り直し[、て](?:そのカードを一番上に|一番上にそのカードを)置く。" value="を探し、公開する。その後、ライブラリーを切り直し、そのカードを一番上に置く。" />
     <regex target="text" pattern="(?&lt;=加える。|出す。)その後ライブラリーを切り直す。" value="その後、ライブラリーを切り直す。" />
     <regex target="text" pattern="公開し、あなたの手札に加える。その後あなたのライブラリーを切り直す。」" value="公開し、あなたの手札に加える。その後、ライブラリーを切り直す。」" />
     <!-- テンプレート変更：文章連結 -->
@@ -7679,7 +7685,6 @@ III ― あなたから始めて、各プレイヤーはそれぞれクリーチ
     <ja name="An-Havva Township" />
     <ja name="An-Zerrin Ruins" />
     <ja name="Apocalypse Chime" />
-    <ja name="Arboria" />
     <ja name="Arctic Foxes" />
     <ja name="Arcum's Sleigh" />
     <ja name="Arcum's Whistle" />
@@ -7842,7 +7847,6 @@ III ― あなたから始めて、各プレイヤーはそれぞれクリーチ
     <ja name="Elvish Healer" />
     <ja name="Elvish Hunter" />
     <ja name="Elvish Scout" />
-    <ja name="Elvish Spirit Guide" />
     <ja name="Enchanted Being" />
     <ja name="Energy Arc" />
     <ja name="Energy Storm" />
@@ -7971,7 +7975,6 @@ III ― あなたから始めて、各プレイヤーはそれぞれクリーチ
     <ja name="Hematite Talisman" />
     <ja name="Heroism" />
     <ja name="Hidden Path" />
-    <ja name="High Tide" />
     <ja name="Hoar Shade" />
     <ja name="Holy Light" />
     <ja name="Homarid" />
@@ -7980,7 +7983,6 @@ III ― あなたから始めて、各プレイヤーはそれぞれクリーチ
     <ja name="Hornet Cobra" />
     <ja name="Hot Springs" />
     <ja name="Hunding Gjornersen" />
-    <ja name="Hyalopterous Lemure" />
     <ja name="Hymn of Rebirth" />
     <ja name="Hyperion Blacksmith" />
     <ja name="Icatian Infantry" />
@@ -8132,7 +8134,6 @@ III ― あなたから始めて、各プレイヤーはそれぞれクリーチ
     <ja name="Musician" />
     <ja name="Mystic Decree" />
     <ja name="Mystic Might" />
-    <ja name="Mystic Remora" />
     <ja name="Nacre Talisman" />
     <ja name="Naked Singularity" />
     <ja name="Nameless Race" />
