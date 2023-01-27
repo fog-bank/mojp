@@ -606,7 +606,7 @@ namespace Mojp
                 string sub = (string)node.Attribute("sub");
                 string name = (string)node.Attribute("name");
 
-                if (!cards.ContainsKey(name))
+                if (!cards.ContainsKey(name) && !cards.ContainsKey(name.Replace("Ae", "AE")))
                     Debug.WriteLine("代替テキスト (" + key + " " + sub + ") の参照先となる " + name + " のカード情報がありません。");
 
                 App.AltCardKeys.Add(key);
