@@ -1879,83 +1879,6 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="56 " sub="ONC" name="Glissa's Retriever" />
     <alt key="57 " sub="ONC" name="Wurmquake" />
     <alt key="58 " sub="ONC" name="Glistening Sphere" />
-    <!-- PRM (KHM: 1-114, STX&C21: 1-193) -->
-    <alt key="0115  /  1158 " sub="P " name="Culmination of Studies" />
-    <alt key="0116  /  1158 " sub="P " name="Reinterpret" />
-    <alt key="0117  /  1158 " sub="P " name="Elemental Expressionist" />
-    <alt key="0118  /  1158 " sub="P " name="Prismari Command" />
-    <!--<alt key="0118  /  1158 " sub="M " name="Nurturing Peatland" />-->
-    <alt key="0119  /  1158 " sub="P " name="Venerable Warsinger" />
-    <alt key="0120  /  1158 " sub="P " name="Blade Historian" />
-    <alt key="0121  /  1158 " sub="P " name="Radiant Scrollwielder" />
-    <alt key="0122  /  1158 " sub="P " name="Lorehold Command" />
-    <alt key="0123  /  1158 " sub="P " name="Wake the Past" />
-    <alt key="0124  /  1158 " sub="P " name="Revival Experiment" />
-    <alt key="0125  /  1158 " sub="P " name="Oversimplify" />
-    <alt key="0126  /  1158 " sub="P " name="Selfless Glyphweaver" />
-    <alt key="0127  /  1158 " sub="P " name="Deadly Vanity" />
-    <alt key="0128  /  1158 " sub="P " name="Shaile, Dean of Radiance" />
-    <alt key="0129  /  1158 " sub="P " name="Embrose, Dean of Shadow" />
-    <alt key="0130  /  1158 " sub="P " name="Pestilent Cauldron" />
-    <alt key="0131  /  1158 " sub="P " name="Restorative Burst" />
-    <alt key="0132  /  1158 " sub="P " name="Valentin, Dean of the Vein" />
-    <alt key="0133  /  1158 " sub="P " name="Lisette, Dean of the Root" />
-    <alt key="0134  /  1158 " sub="P " name="Augmenter Pugilist" />
-    <alt key="0135  /  1158 " sub="P " name="Echoing Equation" />
-    <alt key="0136  /  1158 " sub="P " name="Kianne, Dean of Substance" />
-    <alt key="0137  /  1158 " sub="P " name="Imbraham, Dean of Theory" />
-    <alt key="0138  /  1158 " sub="P " name="Torrent Sculptor" />
-    <alt key="0139  /  1158 " sub="P " name="Flamethrower Sonata" />
-    <alt key="0140  /  1158 " sub="P " name="Uvilda, Dean of Perfection" />
-    <alt key="0141  /  1158 " sub="P " name="Nassari, Dean of Expression" />
-    <alt key="0142  /  1158 " sub="P " name="Flamescroll Celebrant" />
-    <alt key="0143  /  1158 " sub="P " name="Revel in Silence" />
-    <alt key="0144  /  1158 " sub="P " name="Plargg, Dean of Chaos" />
-    <alt key="0145  /  1158 " sub="P " name="Augusta, Dean of Order" />
-    <alt key="0146  /  1158 " sub="P " name="Breena, the Demagogue" />
-    <alt key="0147  /  1158 " sub="P " name="Blot Out the Sky" />
-    <alt key="0148  /  1158 " sub="P " name="Felisa, Fang of Silverquill" />
-    <alt key="0149  /  1158 " sub="P " name="Harness Infinity" />
-    <alt key="0151  /  1158 " sub="P " name="Body of Research" />
-    <alt key="0152  /  1158 " sub="P " name="Magma Opus" />
-    <alt key="0153  /  1158 " sub="P " name="Hofri Ghostforge" />
-    <alt key="0154  /  1158 " sub="P " name="Zaffai, Thunder Conductor" />
-    <alt key="0155  /  1158 " sub="P " name="Veyran, Voice of Duality" />
-    <alt key="0156  /  1158 " sub="P " name="Osgir, the Reconstructor" />
-    <alt key="0157  /  1158 " sub="P " name="Alibou, Ancient Witness" />
-    <alt key="0158  /  1158 " sub="P " name="Willowdusk, Essence Seer" />
-    <alt key="0159  /  1158 " sub="P " name="Gyome, Master Chef" />
-    <alt key="0160  /  1158 " sub="P " name="Adrix and Nev, Twincasters" />
-    <alt key="0161  /  1158 " sub="P " name="Extus, Oriq Overlord" />
-    <alt key="0162  /  1158 " sub="P " name="Esix, Fractal Bloom" />
-    <alt key="0163  /  1158 " sub="P " name="Awaken the Blood Avatar" />
-    <alt key="0164  /  1158 " sub="P " name="Blex, Vexing Pest" />
-    <alt key="0165  /  1158 " sub="P " name="Search for Blex" />
-    <alt key="0166  /  1158 " sub="P " name="Jadzi, Oracle of Arcavios" />
-    <alt key="0167  /  1158 " sub="P " name="Journey to the Oracle" />
-    <alt key="0170  /  1158 " sub="P " name="Mila, Crafty Companion" />
-    <alt key="0172  /  1158 " sub="P " name="Shadrix Silverquill" />
-    <alt key="0173  /  1158 " sub="P " name="Beledros Witherbloom" />
-    <alt key="0174  /  1158 " sub="P " name="Tanazir Quandrix" />
-    <alt key="0175  /  1158 " sub="P " name="Galazeth Prismari" />
-    <alt key="0176  /  1158 " sub="P " name="Velomachus Lorehold" />
-    <alt key="0177  /  1158 " sub="P " name="Strixhaven Stadium" />
-    <alt key="0178  /  1158 " sub="P " name="Tempting Contract" />
-    <alt key="0179  /  1158 " sub="P " name="Codie, Vociferous Codex" />
-    <alt key="0180  /  1158 " sub="P " name="Elementalist's Palette" />
-    <alt key="0181  /  1158 " sub="P " name="Triplicate Titan" />
-    <alt key="0182  /  1158 " sub="P " name="Geometric Nexus" />
-    <alt key="0183  /  1158 " sub="P " name="Wandering Archaic" />
-    <alt key="0184  /  1158 " sub="P " name="Explore the Vastlands" />
-    <alt key="0185  /  1158 " sub="P " name="Mascot Exhibition" />
-    <alt key="0186  /  1158 " sub="P " name="Shineshadow Snarl" />
-    <alt key="0187  /  1158 " sub="P " name="Frostboil Snarl" />
-    <alt key="0188  /  1158 " sub="P " name="Necroblossom Snarl" />
-    <alt key="0189  /  1158 " sub="P " name="Furycalm Snarl" />
-    <alt key="0190  /  1158 " sub="P " name="Vineglimmer Snarl" />
-    <alt key="0191  /  1158 " sub="P " name="Hall of Oracles" />
-    <alt key="0192  /  1158 " sub="P " name="The Biblioplex" />
-    <alt key="0193  /  1158 " sub="P " name="Witch's Clinic" />
     <!-- ZNR variants -->
     <alt key="0109  /  1158 " sub="ZNR" name="Needleverge Pathway" />
     <alt key="0110  /  1158 " sub="ZNR" name="Pillarverge Pathway" />
@@ -8453,17 +8376,8 @@ III ― あなたから始めて、各プレイヤーはそれぞれクリーチ
 オーガの戦争術師が攻撃するたび、あなたの墓地にありインスタントかソーサリーであるカード１枚を対象とする。あなたはそれを、それの他のコストに加えて(赤)(赤)を支払って唱えてもよい。その呪文が墓地に置かれるなら、代わりにそれを追放する。あなたがその呪文を唱えたとき、ターン終了時まで、オーガの戦争術師は+X/+0の修整を受ける。Ｘはその呪文のマナ総量に等しい。</card>
     
     <!-- ONE (再録) -->
-    <card name="Duress" ja="強迫" type="ソーサリー">対戦相手１人を対象とする。そのプレイヤーは自分の手札を公開する。あなたはその中からクリーチャーでも土地でもないカード１枚を選ぶ。そのプレイヤーはそのカードを捨てる。</card>
-    <card name="Phyrexian Arena" ja="ファイレクシアの闘技場" type="エンチャント">あなたのアップキープの開始時に、あなたはカード１枚を引き、１点のライフを失う。</card>
-    <card name="Phyrexian Obliterator" ja="ファイレクシアの抹消者" type="クリーチャー ― ファイレクシアン・ホラー" pt="5/5">トランプル
-発生源１つがファイレクシアの抹消者にダメージを与えるたび、その発生源のコントローラーはその点数に等しい数のパーマネントを生け贄に捧げる。</card>
-    <card name="Prophetic Prism" ja="予言のプリズム" type="アーティファクト">予言のプリズムが戦場に出たとき、カード１枚を引く。
-(１),(Ｔ)：好きな色１色のマナ１点を加える。</card>
-    <card name="Thrill of Possibility" ja="胸躍る可能性" type="インスタント">この呪文を唱えるための追加コストとして、カード１枚を捨てる。
-カード２枚を引く。</card>
     <card name="Thrummingbird" ja="かき鳴らし鳥" type="クリーチャー ― ファイレクシアン・鳥・ホラー" pt="1/1">飛行
 かき鳴らし鳥がプレイヤー１人に戦闘ダメージを与えるたび、増殖を行う。（望む数のパーマネントやプレイヤーを選び、その後すでにそこにあるカウンター１種類につき、そのカウンター１個を与える。）</card>
-    <card name="Titanic Growth" ja="剛力化" type="インスタント">クリーチャー１体を対象とする。ターン終了時まで、それは+4/+4の修整を受ける。</card>
     <card name="Volt Charge" ja="電位の負荷" type="インスタント">クリーチャーやプレインズウォーカーやプレイヤーのうち１つを対象とする。電位の負荷はそれに３点のダメージを与える。増殖を行う。（望む数のパーマネントやプレイヤーを選び、その後、すでにそこにあるカウンター１種類につき、そのカウンターをもう１個与える。）</card>
     <card name="Blackcleave Cliffs" ja="黒割れの崖" type="土地">あなたがこれでない３つ以上の土地をコントロールしているなら、黒割れの崖はタップ状態で戦場に出る。
 (Ｔ)：(黒)か(赤)を加える。</card>
@@ -8475,7 +8389,6 @@ III ― あなたから始めて、各プレイヤーはそれぞれクリーチ
 (Ｔ)：(緑)か(白)を加える。</card>
     <card name="Seachrome Coast" ja="金属海の沿岸" type="土地">あなたがこれでない３つ以上の土地をコントロールしているなら、金属海の沿岸はタップ状態で戦場に出る。
 (Ｔ)：(白)か(青)を加える。</card>
-    <card name="Terramorphic Expanse" ja="広漠なる変幻地" type="土地">(Ｔ),広漠なる変幻地を生け贄に捧げる：あなたのライブラリーから基本土地・カード１枚を探し、タップ状態で戦場に出す。その後、ライブラリーを切り直す。</card>
     
     <!-- 合体カード -->
     <rel name="Gisela, the Broken Blade" rel="Bruna, the Fading Light|Brisela, Voice of Nightmares" />
