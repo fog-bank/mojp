@@ -171,7 +171,7 @@
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
                 <Image Source="Resources/Checkmark.png" Height="16" />
-                <TextBlock Grid.Column="1" Margin="4,0,0,0" TextTrimming="CharacterEllipsis">Penny Dreadful カードリストを取得しました。</TextBlock>
+                <TextBlock Grid.Column="1" Margin="4,0,0,0" TextTrimming="CharacterEllipsis">PD カードリストを取得しました。</TextBlock>
                 <Button Grid.Column="2" BorderBrush="{x:Null}" Background="{x:Null}"
                         ToolTip="この通知を消します。設定で Penny Dreadful への対応を無効にできます。" Click="OnClosePdSuccess">
                     <Image Source="Resources/Close.png" Height="14" />
@@ -187,7 +187,7 @@
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
                 <Image Source="Resources/Warning.png" Height="16" />
-                <TextBlock Grid.Column="1" Margin="4,0,0,0" TextTrimming="CharacterEllipsis">Penny Dreadful カードリストの取得に失敗しました。</TextBlock>
+                <TextBlock Grid.Column="1" Margin="4,0,0,0" TextTrimming="CharacterEllipsis">PD カードリストの取得・解析に失敗しました。</TextBlock>
                 <Button Grid.Column="2" BorderBrush="{x:Null}" Background="{x:Null}"
                         ToolTip="この通知を消します。Penny Dreadful で使用可能かどうかの判定は表示されません。" Click="OnClosePdError">
                     <Image Source="Resources/Close.png" Height="14" />

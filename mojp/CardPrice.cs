@@ -230,8 +230,8 @@ namespace Mojp
                 {
                     string cardName = Card.NormalizeName(name);
 
-                    // HACK: PD S26 (DMU) にバグ
-                    if (cardName == "Tura Kenner")
+                    // HACK: PD S28 (ONE) にバグ
+                    if (cardName.EndsWith(" - Sketch"))
                         continue;
 
                     if (!App.TryGetCard(cardName, out _))
