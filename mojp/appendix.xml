@@ -773,7 +773,7 @@ III ― ターン終了時まで、あなたがコントロールしている各
     <card name="Mirror-Style Master" ja="鏡流の達人" type="クリーチャー ― 人間・戦士" pt="3/3">賛助１（このクリーチャーが戦場に出たとき、クリーチャー１体を対象とする。それの上に+1/+1カウンター１個を置く。それがこれでないクリーチャーなら、ターン終了時まで、それは以下の能力を得る。）
 このクリーチャーが攻撃するたび、あなたがコントロールしていて改善されている各攻撃クリーチャーにつきそれぞれ、そのクリーチャーのコピーであるトークン１体をタップ状態かつ攻撃している状態で生成する。戦闘終了時に、それらのトークンを追放する。（装備品やあなたがコントロールしているオーラがついているかカウンターが置かれているクリーチャーは改善されている。）</card>
     <card name="Pain Distributor" ja="苦痛分配者" type="クリーチャー ― デビル・市民" pt="2/3">威迫
-プレイヤー１人が各ターン内の自分の１つ目の呪文を唱えるたび、そのプレイヤーは宝物・トークン１つを生成する。
+プレイヤーが各ターン内の自分の１つ目の呪文を唱えるたび、そのプレイヤーは宝物・トークン１つを生成する。
 対戦相手がコントロールしているアーティファクト１つが戦場から墓地に置かれるたび、苦痛分配者はそのプレイヤーに１点のダメージを与える。</card>
     <card name="Path of the Pyromancer" ja="紅蓮術師の道" type="ソーサリー">あなたの手札にあるすべてのカードを捨てる。これにより捨てられたカード１枚につき(赤)を加える。その後、その枚数に１を足した枚数のカードを引く。
 プレインズウォーカーの議決 ― あなたから始めて各プレイヤーは「プレインズウォーク(Planeswalk)」または「カオス(Chaos)」のいずれかに投票する。「プレインズウォーク」がより多くの票を得たなら、プレインズウォークする。「カオス」がより多くの票を得た、あるいは票が同数だったなら、カオスが起こる。</card>
@@ -1443,7 +1443,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
 カオスが起こるたび、各プレイヤーはそれぞれアーティファクトでないクリーチャー１体を生け贄に捧げる。</card>
     <card name="Riptide Island" ja="激浪島" type="次元 ― ドミナリア" wiki="激浪島/Riptide Island (次元カード)">あなたが激浪島にプレインズウォークしたとき、ならびに、あなたのアップキープの開始時に、無色の1/1のスリヴァー・クリーチャー・トークン２体を生成する。
 カオスが起こるたび、ターン終了時まで、あなたがコントロールしている各スリヴァーは速攻を得て+X/+Xの修整を受ける。Ｘはあなたがコントロールしているスリヴァーの数に等しい。</card>
-    <card name="Strixhaven" ja="ストリクスヘイヴン" type="次元 ― アルケヴィオス" wiki="ストリクスヘイヴン/Strixhaven (次元カード)">プレイヤーが唱えてインスタントやソーサリーである呪文は実演を持つ。（プレイヤー１人がインスタントかソーサリーである呪文を唱えるたび、そのプレイヤーはそれをコピーしてもよい。そうしたなら、そのプレイヤーは対戦相手１人を選び、それをコピーさせる。両プレイヤーは自分のコピーの新しい対象を選んでもよい。）
+    <card name="Strixhaven" ja="ストリクスヘイヴン" type="次元 ― アルケヴィオス" wiki="ストリクスヘイヴン/Strixhaven (次元カード)">プレイヤーが唱えてインスタントやソーサリーである呪文は実演を持つ。（プレイヤーがインスタントかソーサリーである呪文を唱えるたび、そのプレイヤーはそれをコピーしてもよい。そうしたなら、そのプレイヤーは対戦相手１人を選び、それをコピーさせる。両プレイヤーは自分のコピーの新しい対象を選んでもよい。）
 カオスが起こるたび、墓地にありインスタントかソーサリーであるカード最大１枚を対象とする。それをオーナーの手札に戻す。</card>
     <card name="Ten Wizards Mountain" ja="十巫山" type="次元 ― 沈夢" wiki="十巫山/Ten Wizards Mountain (次元カード)">あなたが次元ダイスを振るたび、クリーチャー最大１体を対象とする。それの上に+1/+1カウンター１個を置く。
 カオスが起こるたび、ターン終了時まで、あなたがコントロールしている各クリーチャーは飛行を得る。</card>
@@ -2142,104 +2142,160 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="57 " sub="ONC" name="Wurmquake" />
     <alt key="58 " sub="ONC" name="Glistening Sphere" />
     <!-- MOM -->
-    <alt key="0292a " sub="MOM" name="Elesh Norn" />
-    <alt key="0292b " sub="MOM" name="The Argent Etchings" />
-    <alt key="0293a " sub="MOM" name="Heliod, the Radiant Dawn" />
-    <alt key="0293b " sub="MOM" name="Heliod, the Warped Eclipse" />
-    <alt key="0294a " sub="MOM" name="Jin-Gitaxias" />
-    <alt key="0294b " sub="MOM" name="The Great Synthesis" />
-    <alt key="0295 " sub="MOM" name="" />
-    <alt key="0296a " sub="MOM" name="Ayara, Widow of the Realm" />
-    <alt key="0296b " sub="MOM" name="Ayara, Furnace Queen" />
-    <alt key="0297 " sub="MOM" name="" />
-    <alt key="0298a " sub="MOM" name="Etali, Primal Conqueror" />
-    <alt key="0298b " sub="MOM" name="Etali, Primal Sickness" />
-    <alt key="0299 " sub="MOM" name="" />
-    <alt key="0300a " sub="MOM" name="Polukranos Reborn" />
-    <alt key="0300b " sub="MOM" name="Polukranos, Engine of Ruin" />
-    <alt key="0301 " sub="MOM" name="" />
-    <alt key="0302 " sub="MOM" name="Baral and Kari Zev" />
-    <alt key="0303 " sub="MOM" name="Borborygmos and Fblthp" />
-    <alt key="0304 " sub="MOM" name="" />
-    <alt key="0305 " sub="MOM" name="Drana and Linvala" />
-    <alt key="0306 " sub="MOM" name="" />
-    <alt key="0307 " sub="MOM" name="Ghalta and Mavren" />
-    <alt key="0308 " sub="MOM" name="Glissa, Herald of Predation" />
-    <alt key="0309 " sub="MOM" name="Hidetsugu and Kairi" />
-    <alt key="0310 " sub="MOM" name="Inga and Esika" />
-    <alt key="0311 " sub="MOM" name="Kogla and Yidaro" />
-    <alt key="0312 " sub="MOM" name="" />
-    <alt key="0313 " sub="MOM" name="Omnath, Locus of All" />
-    <alt key="0314 " sub="MOM" name="Quintorius, Loremaster" />
-    <alt key="0315 " sub="MOM" name="Rankle and Torbran" />
-    <alt key="0316 " sub="MOM" name="Thalia and The Gitrog Monster" />
-    <alt key="0317 " sub="MOM" name="Yargle and Multani" />
-    <alt key="0318 " sub="MOM" name="" />
-    <alt key="0319 " sub="MOM" name="Zurgo and Ojutai" />
-    <alt key="0338 " sub="MOM" name="" />
-    <alt key="0339a " sub="MOM" name="Jin-Gitaxias" />
-    <alt key="0339b " sub="MOM" name="The Great Synthesis" />
-    <alt key="0340 " sub="MOM" name="" />
-    <alt key="0341 " sub="MOM" name="" />
-    <alt key="0342 " sub="MOM" name="" />
-    <alt key="0343 " sub="MOM" name="Boon-Bringer Valkyrie" />
-    <alt key="0344 " sub="MOM" name="" />
-    <alt key="0345 " sub="MOM" name="Guardian of Ghirapur" />
-    <alt key="0346 " sub="MOM" name="Knight-Errant of Eos" />
-    <alt key="0347 " sub="MOM" name="Monastery Mentor" />
-    <alt key="0348 " sub="MOM" name="" />
-    <alt key="0349 " sub="MOM" name="" />
-    <alt key="0350 " sub="MOM" name="Chrome Host Seedshark" />
-    <alt key="0351 " sub="MOM" name="" />
-    <alt key="0352 " sub="MOM" name="Faerie Mastermind" />
-    <alt key="0353 " sub="MOM" name="" />
-    <alt key="0354 " sub="MOM" name="Transcendent Message" />
-    <alt key="0355 " sub="MOM" name="" />
-    <alt key="0356 " sub="MOM" name="" />
-    <alt key="0357 " sub="MOM" name="" />
-    <alt key="0358 " sub="MOM" name="Breach the Multiverse" />
-    <alt key="0359 " sub="MOM" name="Grafted Butcher" />
-    <alt key="0360 " sub="MOM" name="Hoarding Broodlord" />
-    <alt key="0361 " sub="MOM" name="" />
-    <alt key="0362 " sub="MOM" name="" />
-    <alt key="0363 " sub="MOM" name="City on Fire" />
-    <alt key="0364 " sub="MOM" name="Into the Fire" />
-    <alt key="0365 " sub="MOM" name="" />
-    <alt key="0366 " sub="MOM" name="" />
-    <alt key="0367 " sub="MOM" name="Voldaren Thrillseeker" />
-    <alt key="0368 " sub="MOM" name="" />
-    <alt key="0369 " sub="MOM" name="" />
-    <alt key="0370 " sub="MOM" name="" />
-    <alt key="0371 " sub="MOM" name="" />
-    <alt key="0372 " sub="MOM" name="" />
-    <alt key="0373 " sub="MOM" name="" />
-    <alt key="0374 " sub="MOM" name="Realmbreaker, the Invasion Tree" />
-    <alt key="0375 " sub="MOM" name="Sword of Once and Future" />
-    <alt key="0376 " sub="MOM" name="Essence of Orthodoxy" />
-    <alt key="0377 " sub="MOM" name="Interdisciplinary Mascot" />
-    <alt key="0378 " sub="MOM" name="Terror of Towashi" />
-    <alt key="0379 " sub="MOM" name="Orthion, Hero of Lavabrink" />
-    <alt key="0380 " sub="MOM" name="Surrak and Goreclaw" />
-    <alt key="0387 " sub="MOM" name="Omnath, Locus of All" />
+    <alt key="292a " sub="MOM" name="Elesh Norn" />
+    <alt key="292b " sub="MOM" name="The Argent Etchings" />
+    <alt key="293a " sub="MOM" name="Heliod, the Radiant Dawn" />
+    <alt key="293b " sub="MOM" name="Heliod, the Warped Eclipse" />
+    <alt key="294a " sub="MOM" name="Jin-Gitaxias" />
+    <alt key="294b " sub="MOM" name="The Great Synthesis" />
+    <alt key="295a " sub="MOM" name="Rona, Herald of Invasion" />
+    <alt key="295b " sub="MOM" name="Rona, Tolarian Obliterator" />
+    <alt key="296a " sub="MOM" name="Ayara, Widow of the Realm" />
+    <alt key="296b " sub="MOM" name="Ayara, Furnace Queen" />
+    <alt key="297a " sub="MOM" name="Sheoldred" />
+    <alt key="297b " sub="MOM" name="The True Scriptures" />
+    <alt key="298a " sub="MOM" name="Etali, Primal Conqueror" />
+    <alt key="298b " sub="MOM" name="Etali, Primal Sickness" />
+    <alt key="299a " sub="MOM" name="Urabrask" />
+    <alt key="299b " sub="MOM" name="The Great Work" />
+    <alt key="300a " sub="MOM" name="Polukranos Reborn" />
+    <alt key="300b " sub="MOM" name="Polukranos, Engine of Ruin" />
+    <alt key="301a " sub="MOM" name="Vorinclex" />
+    <alt key="301b " sub="MOM" name="The Grand Evolution" />
+    <alt key="303 " sub="MOM" name="Borborygmos and Fblthp" />
+    <alt key="304 " sub="MOM" name="Djeru and Hazoret" />
+    <alt key="305 " sub="MOM" name="Drana and Linvala" />
+    <alt key="306 " sub="MOM" name="Errant and Giada" />
+    <alt key="307 " sub="MOM" name="Ghalta and Mavren" />
+    <alt key="308 " sub="MOM" name="Glissa, Herald of Predation" />
+    <alt key="309 " sub="MOM" name="Hidetsugu and Kairi" />
+    <alt key="310 " sub="MOM" name="Inga and Esika" />
+    <alt key="311 " sub="MOM" name="Kogla and Yidaro" />
+    <alt key="312 " sub="MOM" name="Kroxa and Kunoros" />
+    <alt key="313 " sub="MOM" name="Omnath, Locus of All" />
+    <alt key="314 " sub="MOM" name="Quintorius, Loremaster" />
+    <alt key="315 " sub="MOM" name="Rankle and Torbran" />
+    <alt key="316 " sub="MOM" name="Thalia and The Gitrog Monster" />
+    <alt key="317 " sub="MOM" name="Yargle and Multani" />
+    <alt key="318 " sub="MOM" name="Zimone and Dina" />
+    <alt key="319 " sub="MOM" name="Zurgo and Ojutai" />
+    <alt key="338a " sub="MOM" name="Elesh Norn" />
+    <alt key="338b " sub="MOM" name="The Argent Etchings" />
+    <alt key="339a " sub="MOM" name="Jin-Gitaxias" />
+    <alt key="339b " sub="MOM" name="The Great Synthesis" />
+    <alt key="340a " sub="MOM" name="Sheoldred" />
+    <alt key="340b " sub="MOM" name="The True Scriptures" />
+    <alt key="341a " sub="MOM" name="Urabrask" />
+    <alt key="341b " sub="MOM" name="The Great Work" />
+    <alt key="342a " sub="MOM" name="Vorinclex" />
+    <alt key="342b " sub="MOM" name="The Grand Evolution" />
+    <alt key="343 " sub="MOM" name="Boon-Bringer Valkyrie" />
+    <alt key="344 " sub="MOM" name="Dusk Legion Duelist" />
+    <alt key="345 " sub="MOM" name="Guardian of Ghirapur" />
+    <alt key="346 " sub="MOM" name="Knight-Errant of Eos" />
+    <alt key="347 " sub="MOM" name="Monastery Mentor" />
+    <alt key="348 " sub="MOM" name="Progenitor Exarch" />
+    <alt key="349 " sub="MOM" name="Sunfall" />
+    <alt key="350 " sub="MOM" name="Chrome Host Seedshark" />
+    <alt key="351 " sub="MOM" name="Complete the Circuit" />
+    <alt key="352 " sub="MOM" name="Faerie Mastermind" />
+    <alt key="353 " sub="MOM" name="See Double" />
+    <alt key="354 " sub="MOM" name="Transcendent Message" />
+    <alt key="355 " sub="MOM" name="Zephyr Singer" />
+    <alt key="356 " sub="MOM" name="Archpriest of Shadows" />
+    <alt key="357 " sub="MOM" name="Bloated Processor" />
+    <alt key="358 " sub="MOM" name="Breach the Multiverse" />
+    <alt key="359 " sub="MOM" name="Grafted Butcher" />
+    <alt key="360 " sub="MOM" name="Hoarding Broodlord" />
+    <alt key="361 " sub="MOM" name="Pile On" />
+    <alt key="362 " sub="MOM" name="Bloodfeather Phoenix" />
+    <alt key="363 " sub="MOM" name="City on Fire" />
+    <alt key="364 " sub="MOM" name="Into the Fire" />
+    <alt key="365 " sub="MOM" name="Nahiri's Warcrafting" />
+    <alt key="366 " sub="MOM" name="Rampaging Raptor" />
+    <alt key="367 " sub="MOM" name="Voldaren Thrillseeker" />
+    <alt key="368 " sub="MOM" name="Ancient Imperiosaur" />
+    <alt key="369 " sub="MOM" name="Deeproot Wayfinder" />
+    <alt key="370 " sub="MOM" name="Doomskar Warrior" />
+    <alt key="371 " sub="MOM" name="Glistening Dawn" />
+    <alt key="372 " sub="MOM" name="Ozolith, the Shattered Spire" />
+    <alt key="373 " sub="MOM" name="Tribute to the World Tree" />
+    <alt key="374 " sub="MOM" name="Realmbreaker, the Invasion Tree" />
+    <alt key="375 " sub="MOM" name="Sword of Once and Future" />
+    <alt key="376 " sub="MOM" name="Essence of Orthodoxy" />
+    <alt key="377 " sub="MOM" name="Interdisciplinary Mascot" />
+    <alt key="378 " sub="MOM" name="Terror of Towashi" />
+    <alt key="379 " sub="MOM" name="Orthion, Hero of Lavabrink" />
+    <alt key="380 " sub="MOM" name="Surrak and Goreclaw" />
+    <alt key="381 " sub="MOM" name="Norn's Inquisitor" />
+    <alt key="382 " sub="MOM" name="Scrappy Bruiser" />
+    <alt key="383 " sub="MOM" name="Kami of Whispered Hopes" />
+    <alt key="384 " sub="MOM" name="Botanical Brawler" />
+    <alt key="385 " sub="MOM" name="Halo Forager" />
+    <alt key="387 " sub="MOM" name="Omnath, Locus of All" />
     <!-- MOC -->
-    <alt key="0088 " sub="MOC" name="Bright-Palm, Soul Awakener" />
-    <alt key="0089 " sub="MOC" name="Brimaz, Blight of Oreskos" />
-    <alt key="0090 " sub="MOC" name="" />
-    <alt key="0091 " sub="MOC" name="Gimbal, Gremlin Prodigy" />
-    <alt key="0092 " sub="MOC" name="Kasla, the Broken Halo" />
-    <alt key="0093 " sub="MOC" name="" />
-    <alt key="0094 " sub="MOC" name="" />
-    <alt key="0095 " sub="MOC" name="" />
-    <alt key="0096 " sub="MOC" name="" />
-    <alt key="0097 " sub="MOC" name="Sidar Jabari of Zhalfir" />
-    <alt key="0134 " sub="MOC" name="Bright-Palm, Soul Awakener" />
-    <alt key="0135 " sub="MOC" name="Brimaz, Blight of Oreskos" />
-    <alt key="0136 " sub="MOC" name="Gimbal, Gremlin Prodigy" />
-    <alt key="0137 " sub="MOC" name="Kasla, the Broken Halo" />
-    <alt key="0138 " sub="MOC" name="Sidar Jabari of Zhalfir" />
-    <alt key="0448 " sub="MOC" name="Goro-Goro and Satoru" />
-    <alt key="0449 " sub="MOC" name="Katilda and Lier" />
-    <alt key="0450 " sub="MOC" name="Slimefoot and Squee" />
+    <alt key="80 " sub="MOC" name="Elspeth's Talent" />
+    <alt key="81 " sub="MOC" name="Firemane Commando" />
+    <alt key="82 " sub="MOC" name="Teferi's Talent" />
+    <alt key="83 " sub="MOC" name="Infernal Sovereign" />
+    <alt key="84 " sub="MOC" name="Liliana's Talent" />
+    <alt key="85 " sub="MOC" name="Rowan's Talent" />
+    <alt key="86 " sub="MOC" name="Vivien's Talent" />
+    <alt key="87 " sub="MOC" name="Begin the Invasion" />
+    <alt key="88 " sub="MOC" name="Bright-Palm, Soul Awakener" />
+    <alt key="89 " sub="MOC" name="Brimaz, Blight of Oreskos" />
+    <alt key="90 " sub="MOC" name="Elenda and Azor" />
+    <alt key="91 " sub="MOC" name="Gimbal, Gremlin Prodigy" />
+    <alt key="92 " sub="MOC" name="Kasla, the Broken Halo" />
+    <alt key="93 " sub="MOC" name="Moira and Teshar" />
+    <alt key="94 " sub="MOC" name="Rashmi and Ragavan" />
+    <alt key="95 " sub="MOC" name="Saint Traft and Rem Karolus" />
+    <alt key="96 " sub="MOC" name="Shalai and Hallar" />
+    <alt key="97 " sub="MOC" name="Sidar Jabari of Zhalfir" />
+    <alt key="98 " sub="MOC" name="Chivalric Alliance" />
+    <alt key="99 " sub="MOC" name="Conjurer's Mantle" />
+    <alt key="100 " sub="MOC" name="Darksteel Splicer" />
+    <alt key="101 " sub="MOC" name="Excise the Imperfect" />
+    <alt key="102 " sub="MOC" name="Filigree Vector" />
+    <alt key="103 " sub="MOC" name="Guardian Scalelord" />
+    <alt key="104 " sub="MOC" name="Nesting Dovehawk" />
+    <alt key="105 " sub="MOC" name="Path of the Ghosthunter" />
+    <alt key="106 " sub="MOC" name="Vulpine Harvester" />
+    <alt key="107 " sub="MOC" name="Wand of the Worldsoul" />
+    <alt key="108 " sub="MOC" name="Deluxe Dragster" />
+    <alt key="109 " sub="MOC" name="Herald of Hoofbeats" />
+    <alt key="110 " sub="MOC" name="Path of the Enigma" />
+    <alt key="111 " sub="MOC" name="Schema Thief" />
+    <alt key="112 " sub="MOC" name="Blight Titan" />
+    <alt key="113 " sub="MOC" name="Exsanguinator Cavalry" />
+    <alt key="114 " sub="MOC" name="Locthwain Lancer" />
+    <alt key="115 " sub="MOC" name="Path of the Schemer" />
+    <alt key="116 " sub="MOC" name="Dance with Calamity" />
+    <alt key="117 " sub="MOC" name="Death-Greeter's Champion" />
+    <alt key="118 " sub="MOC" name="Hedron Detonator" />
+    <alt key="119 " sub="MOC" name="Mirror-Style Master" />
+    <alt key="120 " sub="MOC" name="Pain Distributor" />
+    <alt key="121 " sub="MOC" name="Path of the Pyromancer" />
+    <alt key="122 " sub="MOC" name="Uncivil Unrest" />
+    <alt key="123 " sub="MOC" name="Conclave Sledge-Captain" />
+    <alt key="124 " sub="MOC" name="Emergent Woodwurm" />
+    <alt key="125 " sub="MOC" name="Path of the Animist" />
+    <alt key="126 " sub="MOC" name="Sandsteppe War Riders" />
+    <alt key="127 " sub="MOC" name="Cutthroat Negotiator" />
+    <alt key="128 " sub="MOC" name="Flockchaser Phantom" />
+    <alt key="129 " sub="MOC" name="Mistmeadow Vanisher" />
+    <alt key="130 " sub="MOC" name="Vodalian Wave-Knight" />
+    <alt key="131 " sub="MOC" name="Wildfire Awakener" />
+    <alt key="132 " sub="MOC" name="Bitterthorn, Nissa's Animus" />
+    <alt key="133 " sub="MOC" name="Ichor Elixir" />
+    <alt key="134 " sub="MOC" name="Bright-Palm, Soul Awakener" />
+    <alt key="135 " sub="MOC" name="Brimaz, Blight of Oreskos" />
+    <alt key="136 " sub="MOC" name="Gimbal, Gremlin Prodigy" />
+    <alt key="137 " sub="MOC" name="Kasla, the Broken Halo" />
+    <alt key="138 " sub="MOC" name="Sidar Jabari of Zhalfir" />
+    <alt key="448 " sub="MOC" name="Goro-Goro and Satoru" />
+    <alt key="449 " sub="MOC" name="Katilda and Lier" />
+    <alt key="450 " sub="MOC" name="Slimefoot and Squee" />
     <!-- ZNR variants -->
     <alt key="0109  /  1158 " sub="ZNR" name="Needleverge Pathway" />
     <alt key="0110  /  1158 " sub="ZNR" name="Pillarverge Pathway" />
@@ -4265,6 +4321,133 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="14b  /  15 " sub="BOT" name="Soundwave, Superior Captain" />
     <alt key="15a  /  15 " sub="BOT" name="Ultra Magnus, Tactician" />
     <alt key="15b  /  15 " sub="BOT" name="Ultra Magnus, Armored Carrier" />
+    <!-- MUL -->
+          <alt key="1 " sub="MUL" name="Anafenza, Kin-Tree Spirit" />
+    <alt key="2 " sub="MUL" name="Daxos, Blessed by the Sun" />
+    <alt key="3 " sub="MUL" name="Elesh Norn, Grand Cenobite" />
+    <alt key="4 " sub="MUL" name="Kenrith, the Returned King" />
+    <alt key="5 " sub="MUL" name="Kwende, Pride of Femeref" />
+    <alt key="7 " sub="MUL" name="Thalia, Guardian of Thraben" />
+    <alt key="9 " sub="MUL" name="Emry, Lurker of the Loch" />
+    <alt key="10 " sub="MUL" name="Inga Rune-Eyes" />
+    <alt key="11 " sub="MUL" name="Jin-Gitaxias, Core Augur" />
+    <alt key="12 " sub="MUL" name="Tetsuko Umezawa, Fugitive" />
+    <alt key="13 " sub="MUL" name="Ayara, First of Locthwain" />
+    <alt key="14 " sub="MUL" name="Horobi, Death's Wail" />
+    <alt key="15 " sub="MUL" name="Seizan, Perverter of Truth" />
+    <alt key="16 " sub="MUL" name="Sheoldred, Whispering One" />
+    <alt key="17 " sub="MUL" name="Skithiryx, the Blight Dragon" />
+    <alt key="18 " sub="MUL" name="Tymaret, Chosen from Death" />
+    <alt key="19 " sub="MUL" name="Yargle, Glutton of Urborg" />
+    <alt key="20 " sub="MUL" name="Captain Lannery Storm" />
+    <alt key="22 " sub="MUL" name="Squee, the Immortal" />
+    <alt key="23 " sub="MUL" name="Urabrask the Hidden" />
+    <alt key="24 " sub="MUL" name="Valduk, Keeper of the Flame" />
+    <alt key="25 " sub="MUL" name="Zada, Hedron Grinder" />
+    <alt key="26 " sub="MUL" name="Fynn, the Fangbearer" />
+    <alt key="27 " sub="MUL" name="Goreclaw, Terror of Qal Sisma" />
+    <alt key="28 " sub="MUL" name="Renata, Called to the Hunt" />
+    <alt key="29 " sub="MUL" name="Vorinclex, Voice of Hunger" />
+    <alt key="30 " sub="MUL" name="Yedora, Grave Gardener" />
+    <alt key="31 " sub="MUL" name="Aegar, the Freezing Flame" />
+    <alt key="32 " sub="MUL" name="Arixmethes, Slumbering Isle" />
+    <alt key="33 " sub="MUL" name="Atraxa, Praetors' Voice" />
+    <alt key="34 " sub="MUL" name="Atris, Oracle of Half-Truths" />
+    <alt key="35 " sub="MUL" name="Aurelia, the Warleader" />
+    <alt key="36 " sub="MUL" name="Brudiclad, Telchor Engineer" />
+    <alt key="37 " sub="MUL" name="Dina, Soul Steeper" />
+    <alt key="38 " sub="MUL" name="Ezuri, Claw of Progress" />
+    <alt key="39 " sub="MUL" name="Firesong and Sunspeaker" />
+    <alt key="40 " sub="MUL" name="Firja, Judge of Valor" />
+    <alt key="41 " sub="MUL" name="Grimgrin, Corpse-Born" />
+    <alt key="42 " sub="MUL" name="Gyruda, Doom of Depths" />
+    <alt key="43 " sub="MUL" name="Imoti, Celebrant of Bounty" />
+    <alt key="44 " sub="MUL" name="Jegantha, the Wellspring" />
+    <alt key="45 " sub="MUL" name="Judith, the Scourge Diva" />
+    <alt key="46 " sub="MUL" name="Juri, Master of the Revue" />
+    <alt key="47 " sub="MUL" name="Kaheera, the Orphanguard" />
+    <alt key="48 " sub="MUL" name="Keruga, the Macrosage" />
+    <alt key="49 " sub="MUL" name="Kroxa, Titan of Death's Hunger" />
+    <alt key="50 " sub="MUL" name="Lathiel, the Bounteous Dawn" />
+    <alt key="51 " sub="MUL" name="Lurrus of the Dream-Den" />
+    <alt key="52 " sub="MUL" name="Lutri, the Spellchaser" />
+    <alt key="53 " sub="MUL" name="Niv-Mizzet Reborn" />
+    <alt key="54 " sub="MUL" name="Obosh, the Preypiercer" />
+    <alt key="55 " sub="MUL" name="Radha, Coalition Warlord" />
+    <alt key="56 " sub="MUL" name="Raff, Weatherlight Stalwart" />
+    <alt key="58 " sub="MUL" name="Rona, Sheoldred's Faithful" />
+    <alt key="59 " sub="MUL" name="Shanna, Sisay's Legacy" />
+    <alt key="60 " sub="MUL" name="Taigam, Ojutai Master" />
+    <alt key="61 " sub="MUL" name="Teysa Karlov" />
+    <alt key="62 " sub="MUL" name="Umori, the Collector" />
+    <alt key="63 " sub="MUL" name="Yarok, the Desecrated" />
+    <alt key="64 " sub="MUL" name="Yorion, Sky Nomad" />
+    <alt key="65 " sub="MUL" name="Zirda, the Dawnwaker" />
+    <alt key="66 " sub="MUL" name="Anafenza, Kin-Tree Spirit" />
+    <alt key="67 " sub="MUL" name="Daxos, Blessed by the Sun" />
+    <alt key="68 " sub="MUL" name="Elesh Norn, Grand Cenobite" />
+    <alt key="69 " sub="MUL" name="Kenrith, the Returned King" />
+    <alt key="70 " sub="MUL" name="Kwende, Pride of Femeref" />
+    <alt key="71 " sub="MUL" name="Sram, Senior Edificer" />
+    <alt key="72 " sub="MUL" name="Thalia, Guardian of Thraben" />
+    <alt key="73 " sub="MUL" name="Baral, Chief of Compliance" />
+    <alt key="74 " sub="MUL" name="Emry, Lurker of the Loch" />
+    <alt key="75 " sub="MUL" name="Inga Rune-Eyes" />
+    <alt key="76 " sub="MUL" name="Jin-Gitaxias, Core Augur" />
+    <alt key="77 " sub="MUL" name="Tetsuko Umezawa, Fugitive" />
+    <alt key="78 " sub="MUL" name="Ayara, First of Locthwain" />
+    <alt key="79 " sub="MUL" name="Horobi, Death's Wail" />
+    <alt key="80 " sub="MUL" name="Seizan, Perverter of Truth" />
+    <alt key="81 " sub="MUL" name="Sheoldred, Whispering One" />
+    <alt key="82 " sub="MUL" name="Skithiryx, the Blight Dragon" />
+    <alt key="83 " sub="MUL" name="Tymaret, Chosen from Death" />
+    <alt key="84 " sub="MUL" name="Yargle, Glutton of Urborg" />
+    <alt key="85 " sub="MUL" name="Captain Lannery Storm" />
+    <alt key="86 " sub="MUL" name="Ragavan, Nimble Pilferer" />
+    <alt key="87 " sub="MUL" name="Squee, the Immortal" />
+    <alt key="88 " sub="MUL" name="Urabrask the Hidden" />
+    <alt key="89 " sub="MUL" name="Valduk, Keeper of the Flame" />
+    <alt key="90 " sub="MUL" name="Zada, Hedron Grinder" />
+    <alt key="91 " sub="MUL" name="Fynn, the Fangbearer" />
+    <alt key="92 " sub="MUL" name="Goreclaw, Terror of Qal Sisma" />
+    <alt key="93 " sub="MUL" name="Renata, Called to the Hunt" />
+    <alt key="94 " sub="MUL" name="Vorinclex, Voice of Hunger" />
+    <alt key="95 " sub="MUL" name="Yedora, Grave Gardener" />
+    <alt key="96 " sub="MUL" name="Aegar, the Freezing Flame" />
+    <alt key="97 " sub="MUL" name="Arixmethes, Slumbering Isle" />
+    <alt key="98 " sub="MUL" name="Atraxa, Praetors' Voice" />
+    <alt key="99 " sub="MUL" name="Atris, Oracle of Half-Truths" />
+    <alt key="100 " sub="MUL" name="Aurelia, the Warleader" />
+    <alt key="101 " sub="MUL" name="Brudiclad, Telchor Engineer" />
+    <alt key="102 " sub="MUL" name="Dina, Soul Steeper" />
+    <alt key="103 " sub="MUL" name="Ezuri, Claw of Progress" />
+    <alt key="104 " sub="MUL" name="Firesong and Sunspeaker" />
+    <alt key="105 " sub="MUL" name="Firja, Judge of Valor" />
+    <alt key="106 " sub="MUL" name="Grimgrin, Corpse-Born" />
+    <alt key="107 " sub="MUL" name="Gyruda, Doom of Depths" />
+    <alt key="108 " sub="MUL" name="Imoti, Celebrant of Bounty" />
+    <alt key="109 " sub="MUL" name="Jegantha, the Wellspring" />
+    <alt key="110 " sub="MUL" name="Judith, the Scourge Diva" />
+    <alt key="111 " sub="MUL" name="Juri, Master of the Revue" />
+    <alt key="112 " sub="MUL" name="Kaheera, the Orphanguard" />
+    <alt key="113 " sub="MUL" name="Keruga, the Macrosage" />
+    <alt key="114 " sub="MUL" name="Kroxa, Titan of Death's Hunger" />
+    <alt key="115 " sub="MUL" name="Lathiel, the Bounteous Dawn" />
+    <alt key="116 " sub="MUL" name="Lurrus of the Dream-Den" />
+    <alt key="117 " sub="MUL" name="Lutri, the Spellchaser" />
+    <alt key="118 " sub="MUL" name="Niv-Mizzet Reborn" />
+    <alt key="119 " sub="MUL" name="Obosh, the Preypiercer" />
+    <alt key="120 " sub="MUL" name="Radha, Coalition Warlord" />
+    <alt key="121 " sub="MUL" name="Raff, Weatherlight Stalwart" />
+    <alt key="122 " sub="MUL" name="Reyav, Master Smith" />
+    <alt key="123 " sub="MUL" name="Rona, Sheoldred's Faithful" />
+    <alt key="124 " sub="MUL" name="Shanna, Sisay's Legacy" />
+    <alt key="125 " sub="MUL" name="Taigam, Ojutai Master" />
+    <alt key="126 " sub="MUL" name="Teysa Karlov" />
+    <alt key="127 " sub="MUL" name="Umori, the Collector" />
+    <alt key="128 " sub="MUL" name="Yarok, the Desecrated" />
+    <alt key="129 " sub="MUL" name="Yorion, Sky Nomad" />
+    <alt key="130 " sub="MUL" name="Zirda, the Dawnwaker" />
     <!-- 英雄譚 -->
     <alt key="018  /  269 " sub="DOM" name="Fall of the Thran" />
     <alt key="021  /  269 " sub="DOM" name="History of Benalia" />
@@ -4352,7 +4535,8 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="121  /  168 " sub="40K" name="The First Tyrannic War" />
     <alt key="126  /  168 " sub="40K" name="The Horus Heresy" />-->
     <alt key="22  /  36 " sub="BRC" name="The Brothers' War" />
-    <!-- 出来事 (ELD, AFC, CLB) -->
+    <alt key="266 " sub="MOC" name="Phyrexian Scriptures" />
+    <!-- 出来事 (ELD, AFC, CLB, MOC) -->
     <alt key="005  /  269 " sub="ELD" name="Ardenvale Tactician" />
     <alt key="011  /  269 " sub="ELD" name="Faerie Guidemother" />
     <alt key="014  /  269 " sub="ELD" name="Giant Killer" />
@@ -4414,7 +4598,11 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="792 " sub="CLB" name="Embereth Shieldbreaker" />
     <alt key="819 " sub="CLB" name="Beanstalk Giant" />
     <alt key="827 " sub="CLB" name="Lovestruck Beast" />
-    <!-- 変容 (IKO, C20, DMC) -->
+    <alt key="258 " sub="MOC" name="Murderous Rider" />
+    <alt key="249 " sub="MOC" name="Foulmire Knight" />
+    <alt key="261 " sub="MOC" name="Order of Midnight" />
+    <alt key="268 " sub="MOC" name="Smitten Swordmaster" />
+    <!-- 変容 (IKO, C20, DMC, MOC) -->
     <alt key="003  /  274 " sub="IKO" name="Mysterious Egg" />
     <alt key="007  /  274 " sub="IKO" name="Cubwarden" />
     <alt key="016  /  274 " sub="IKO" name="Huntmaster Liger" />
@@ -4455,6 +4643,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="064  /  322 " sub="C20" name="Sawtusk Demolisher" />
     <alt key="154 " sub="DMC" name="Illuna, Apex of Wishes" />
     <alt key="163 " sub="DMC" name="Nethroi, Apex of Death" />
+    <alt key="275 " sub="MOC" name="Everquill Phoenix" />
     <!-- モーダル両面カード (ZNR, KHM, STX) -->
     <alt key="12a  /  280 " sub="ZNR" name="Emeria's Call" />
     <alt key="12b  /  280 " sub="ZNR" name="Emeria, Shattered Skyclave" />
@@ -4631,6 +4820,105 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="256b  /  287 " sub="BRO" name="Titania, Gaea Incarnate" />
     <!-- 完成化 PW -->
     <alt key="238  /  302 " sub="NEO" name="Tamiyo, Compleated Sage" />
+    <!-- 包囲戦 (MOM) -->
+    <alt key="01a  /  291 " sub="MOM" name="Invasion of Ravnica" />
+    <alt key="20a  /  291 " sub="MOM" name="Invasion of Belenon" />
+    <alt key="21a  /  291 " sub="MOM" name="Invasion of Dominaria" />
+    <alt key="22a  /  291 " sub="MOM" name="Invasion of Gobakhan" />
+    <alt key="23a  /  291 " sub="MOM" name="Invasion of Theros" />
+    <alt key="61a  /  291 " sub="MOM" name="Invasion of Arcavios" />
+    <alt key="62a  /  291 " sub="MOM" name="Invasion of Kamigawa" />
+    <alt key="63a  /  291 " sub="MOM" name="Invasion of Segovia" />
+    <alt key="64a  /  291 " sub="MOM" name="Invasion of Vryn" />
+    <alt key="113a  /  291 " sub="MOM" name="Invasion of Eldraine" />
+    <alt key="114a  /  291 " sub="MOM" name="Invasion of Fiora" />
+    <alt key="115a  /  291 " sub="MOM" name="Invasion of Innistrad" />
+    <alt key="116a  /  291 " sub="MOM" name="Invasion of Ulgrotha" />
+    <alt key="145a  /  291 " sub="MOM" name="Invasion of Kaldheim" />
+    <alt key="146a  /  291 " sub="MOM" name="Invasion of Karsus" />
+    <alt key="147a  /  291 " sub="MOM" name="Invasion of Mercadia" />
+    <alt key="148a  /  291 " sub="MOM" name="Invasion of Regatha" />
+    <alt key="149a  /  291 " sub="MOM" name="Invasion of Tarkir" />
+    <alt key="190a  /  291 " sub="MOM" name="Invasion of Ikoria" />
+    <alt key="191a  /  291 " sub="MOM" name="Invasion of Ixalan" />
+    <alt key="192a  /  291 " sub="MOM" name="Invasion of Muraganda" />
+    <alt key="193a  /  291 " sub="MOM" name="Invasion of Shandalar" />
+    <alt key="194a  /  291 " sub="MOM" name="Invasion of Zendikar" />
+    <alt key="230a  /  291 " sub="MOM" name="Invasion of Alara" />
+    <alt key="231a  /  291 " sub="MOM" name="Invasion of Amonkhet" />
+    <alt key="232a  /  291 " sub="MOM" name="Invasion of Azgol" />
+    <alt key="233a  /  291 " sub="MOM" name="Invasion of Ergamon" />
+    <alt key="234a  /  291 " sub="MOM" name="Invasion of Kaladesh" />
+    <alt key="235a  /  291 " sub="MOM" name="Invasion of Kylem" />
+    <alt key="236a  /  291 " sub="MOM" name="Invasion of Lorwyn" />
+    <alt key="237a  /  291 " sub="MOM" name="Invasion of Moag" />
+    <alt key="238a  /  291 " sub="MOM" name="Invasion of New Capenna" />
+    <alt key="239a  /  291 " sub="MOM" name="Invasion of New Phyrexia" />
+    <alt key="240a  /  291 " sub="MOM" name="Invasion of Pyrulea" />
+    <alt key="241a  /  291 " sub="MOM" name="Invasion of Tolvada" />
+    <alt key="242a  /  291 " sub="MOM" name="Invasion of Xerex" />
+    <!-- 両面カード第2面 (MOM) -->
+    <alt key="01b  /  291 " sub="MOM" name="Guildpact Paragon" />
+    <alt key="12b  /  291 " sub="MOM" name="The Argent Etchings" />
+    <alt key="17b  /  291 " sub="MOM" name="Heliod, the Warped Eclipse" />
+    <alt key="20b  /  291 " sub="MOM" name="Belenon War Anthem" />
+    <alt key="21b  /  291 " sub="MOM" name="Serra Faithkeeper" />
+    <alt key="22b  /  291 " sub="MOM" name="Lightshield Array" />
+    <alt key="23b  /  291 " sub="MOM" name="Ephara, Ever-Sheltering" />
+    <alt key="36b  /  291 " sub="MOM" name="Seraph of New Phyrexia" />
+    <alt key="38b  /  291 " sub="MOM" name="Furnace-Blessed Conqueror" />
+    <alt key="43b  /  291 " sub="MOM" name="Burnished Dunestomper" />
+    <alt key="49b  /  291 " sub="MOM" name="Compleated Conjurer" />
+    <alt key="61b  /  291 " sub="MOM" name="Invocation of the Founders" />
+    <alt key="62b  /  291 " sub="MOM" name="Rooftop Saboteurs" />
+    <alt key="63b  /  291 " sub="MOM" name="Caetus, Sea Tyrant of Segovia" />
+    <alt key="64b  /  291 " sub="MOM" name="Overloaded Mage-Ring" />
+    <alt key="65b  /  291 " sub="MOM" name="The Great Synthesis" />
+    <alt key="72b  /  291 " sub="MOM" name="Order of the Alabaster Host" />
+    <alt key="75b  /  291 " sub="MOM" name="Rona, Tolarian Obliterator" />
+    <alt key="78b  /  291 " sub="MOM" name="Skyclave Invader" />
+    <alt key="88b  /  291 " sub="MOM" name="Gitaxian Mindstinger" />
+    <alt key="90b  /  291 " sub="MOM" name="Ayara, Furnace Queen" />
+    <alt key="92b  /  291 " sub="MOM" name="Blightsower Thallid" />
+    <alt key="113b  /  291 " sub="MOM" name="Prickle Faeries" />
+    <alt key="114b  /  291 " sub="MOM" name="Marchesa, Resolute Monarch" />
+    <alt key="115b  /  291 " sub="MOM" name="Deluge of the Dead" />
+    <alt key="116b  /  291 " sub="MOM" name="Grandmother Ravi Sengir" />
+    <alt key="119b  /  291 " sub="MOM" name="Hideous Fleshwheeler" />
+    <alt key="125b  /  291 " sub="MOM" name="The True Scriptures" />
+    <alt key="137b  /  291 " sub="MOM" name="Etali, Primal Sickness" />
+    <alt key="143b  /  291 " sub="MOM" name="Phyrexian Skyflayer" />
+    <alt key="145b  /  291 " sub="MOM" name="Pyre of the World Tree" />
+    <alt key="146b  /  291 " sub="MOM" name="Refraction Elemental" />
+    <alt key="147b  /  291 " sub="MOM" name="Kyren Flamewright" />
+    <alt key="148b  /  291 " sub="MOM" name="Disciples of the Inferno" />
+    <alt key="149b  /  291 " sub="MOM" name="Defiant Thundermaw" />
+    <alt key="151b  /  291 " sub="MOM" name="Gitaxian Spellstalker" />
+    <alt key="157b  /  291 " sub="MOM" name="Glistening Goremonger" />
+    <alt key="169b  /  291 " sub="MOM" name="The Great Work" />
+    <alt key="178b  /  291 " sub="MOM" name="Plated Kilnbeast" />
+    <alt key="188b  /  291 " sub="MOM" name="Chrome Host Hulk" />
+    <alt key="189b  /  291 " sub="MOM" name="Malady Invoker" />
+    <alt key="190b  /  291 " sub="MOM" name="Zilortha, Apex of Ikoria" />
+    <alt key="191b  /  291 " sub="MOM" name="Belligerent Regisaur" />
+    <alt key="192b  /  291 " sub="MOM" name="Primordial Plasm" />
+    <alt key="193b  /  291 " sub="MOM" name="Leyline Surge" />
+    <alt key="194b  /  291 " sub="MOM" name="Awakened Skyclave" />
+    <alt key="200b  /  291 " sub="MOM" name="Polukranos, Engine of Ruin" />
+    <alt key="213b  /  291 " sub="MOM" name="The Grand Evolution" />
+    <alt key="230b  /  291 " sub="MOM" name="Awaken the Maelstrom" />
+    <alt key="231b  /  291 " sub="MOM" name="Lazotep Convert" />
+    <alt key="232b  /  291 " sub="MOM" name="Ashen Reaper" />
+    <alt key="233b  /  291 " sub="MOM" name="Truga Cliffcharger" />
+    <alt key="234b  /  291 " sub="MOM" name="Aetherwing, Golden-Scale Flagship" />
+    <alt key="235b  /  291 " sub="MOM" name="Valor's Reach Tag Team" />
+    <alt key="236b  /  291 " sub="MOM" name="Winnowing Forces" />
+    <alt key="237b  /  291 " sub="MOM" name="Bloomwielder Dryads" />
+    <alt key="238b  /  291 " sub="MOM" name="Holy Frazzle-Cannon" />
+    <alt key="239b  /  291 " sub="MOM" name="Teferi Akosa of Zhalfir" />
+    <alt key="240b  /  291 " sub="MOM" name="Gargantuan Slabhorn" />
+    <alt key="241b  /  291 " sub="MOM" name="The Broken Sky" />
+    <alt key="242b  /  291 " sub="MOM" name="Vertex Paladin" />
     <!-- ダンジョン (AFR) -->
     <alt key="Yawning Portal" sub="Dungeon Level" name="Dungeon of the Mad Mage" />
     <alt key="Cave Entrance" sub="Goblin Lair" name="Lost Mine of Phandelver" />
@@ -4800,7 +5088,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="\([a-zA-Z'\- ]+\)・?(?=クリーチャー|アーティファクト|土地|カード|呪文|パーマネント)" value="・" />
     <regex target="type" pattern="(?&lt;!ウルザの)\(Urza’s\)" value="ウルザの" />
     <regex target="type" pattern="(?&lt;!ク＝タン)\(C’tan\)" value="ク＝タン" />
-    <regex target="type|text" pattern="\([a-zA-Z'\- ]+\)" value="" />
+    <regex target="type|text" pattern="\((?!Planeswalk|Chaos)[a-zA-Z'\- ]+\)" value="" />
     <regex target="text" pattern="(?&lt;=《[^《/》]+)(?&lt;!《昼|《夜)/[^《/》]+(?=》)" value="" />
     <regex target="text" pattern="//---試作部分---//" value="//" />
     <regex target="text" pattern="^\([白青黒赤緑]\)$" value="" />
@@ -5319,7 +5607,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <!-- テンプレート対抗：A or B (や) -->
     <regex target="text" pattern="(?&lt;=アーティファクト|クリーチャー|インスタント)や(エンチャント|インスタント|ソーサリー)や(?=(?:プレインズウォーカー|ソーサリー|ウィザード)である(?:呪文を唱えるたび|呪文１つを|カード１枚))" value="か$1か" />
     <regex target="text" pattern="(?&lt;=アーティファクト|エンチャント|クリーチャー|クリーチャー・エンチャント|インスタント|オーラ|装備品)や(?=(?:エンチャント|クリーチャー|伝説のクリーチャー|ソーサリー|土地|プレインズウォーカー|機体|装備品|祭殿)である(?:単色の|赤の)?(?:カード１枚を|カード最大１枚を|呪文を唱えるたび|呪文１つを|各パーマネント|なら))" value="か" />
-    <regex target="text" pattern="(?&lt;!や)インスタントやソーサリーである(?=カード(?:１枚)?が追放されるまで|カードを公開するたび|カードが公開されたなら|カード(?:である)?なら|呪文１つ(?!につき)|(?&lt;!\)\(.+)呪文を唱え(?!るための|てもよい))" value="インスタントかソーサリーである" />
+    <regex target="text" pattern="(?&lt;!や|つ以上の)インスタントやソーサリーである(?=カード(?:１枚)?が追放されるまで|カードを公開するたび|カードが公開されたなら|カード(?:である)?なら|呪文１つ(?!につき)|(?&lt;!\)\(.+)呪文を唱え(?!るための|てもよい))" value="インスタントかソーサリーである" />
     <regex target="text" pattern="(?&lt;=次に|最初に唱えて)インスタントやソーサリー(?=である呪文|でありマナ総量が.以下である呪文)" value="インスタントかソーサリー" />
     <regex target="text" pattern="クリーチャーやプレインズウォーカーが死亡するなら" value="クリーチャーかプレインズウォーカーが死亡するなら" />
     <regex target="text" pattern="(?&lt;=エンチャント（[^）]*(?:アーティファクト|クリーチャー|プレインズウォーカー))や(?=クリーチャー|プレインズウォーカー|機体|手掛かり)" value="か" />
