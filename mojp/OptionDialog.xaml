@@ -48,13 +48,13 @@
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <TextBlock>リリース バージョン</TextBlock>
-                <TextBlock Grid.Column="2">2.24.0</TextBlock>
+                <TextBlock Grid.Column="2">2.25.0</TextBlock>
                 <TextBlock Name="grpGoGitHub" Grid.Column="3">
                     <Hyperlink ToolTip="https://github.com/fog-bank/mojp/releases" Click="OnClickHyperlink">GitHub に移動</Hyperlink>
                 </TextBlock>
                 <TextBlock Grid.Row="1" VerticalAlignment="Top">対応最新セット</TextBlock>
                 <StackPanel Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2">
-                    <TextBlock>ファイレクシア：完全なる統一</TextBlock>
+                    <TextBlock>機械兵団の進軍</TextBlock>
                     <!--<TextBlock Margin="2,0,2,4">ダブルマスターズ2022</TextBlock>-->
                 </StackPanel>
                 <CheckBox Name="grpAutoCheck" Grid.Row="2" Grid.ColumnSpan="4" Margin="0,4,0,0"
