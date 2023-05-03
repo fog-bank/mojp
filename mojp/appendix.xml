@@ -5,6 +5,105 @@
 このカードは禁止されている。</card>
     <card name="プロモ版のカード" ja="プロモ版のカード" type="" wiki="">（カード名を判別できないカード枠のため、日本語テキストを表示できません。）</card>
     
+    <!-- MAT -->
+    <card name="Coppercoat Vanguard" ja="銅纏いの先兵" type="クリーチャー ― 人間・兵士" pt="2/2">あなたがコントロールしていてこれでない各人間は+1/+0の修整を受け護法(１)を持つ。（それが対戦相手がコントロールしている呪文や能力の対象になるたび、そのプレイヤーが(１)を支払わないかぎり、その呪文や能力を打ち消す。）</card>
+    <card name="Deification" ja="神格化" type="エンチャント">神格化が戦場に出るに際し、プレインズウォーカー・タイプ１つを選ぶ。
+あなたがコントロールしていてその選ばれたタイプを持つ各プレインズウォーカーは呪禁を持つ。
+あなたがクリーチャーをコントロールしているかぎり、あなたがコントロールしていてその選ばれたタイプを持つプレインズウォーカーが受けたダメージの結果それの上にあるすべての忠誠カウンターが取り除かれるなら、代わりにそれらのカウンターのうち１個を除くすべてを取り除く。</card>
+    <card name="Harnessed Snubhorn" ja="装具つなぎの短角獣" type="クリーチャー ― 恐竜" pt="2/5">警戒
+装具つなぎの短角獣がプレイヤー１人に戦闘ダメージを与えるたび、あなたの墓地にありアーティファクトかエンチャントであるカード１枚を対象とする。それを戦場に戻す。</card>
+    <card name="Metropolis Reformer" ja="大都市の改革家" type="クリーチャー ― 天使・クレリック" pt="2/3">飛行、警戒
+あなたは呪禁を持つ。
+大都市の改革家がダメージを受けるたび、あなたはその点数に等しい点数のライフを得る。</card>
+    <card name="Spark Rupture" ja="灯の破裂" type="エンチャント">灯の破裂が戦場に出たとき、カード１枚を引く。
+１個以上の忠誠カウンターが置かれている各プレインズウォーカーはそれぞれ、すべての能力を失い、パワーとタフネスがそれぞれその上にある忠誠カウンターの個数に等しいクリーチャーである。</card>
+    <card name="Tazri, Stalwart Survivor" ja="確固たる生存者、タズリ" type="伝説のクリーチャー ― 人間・戦士" pt="3/3">あなたがコントロールしている各クリーチャーは「(Ｔ)：このクリーチャーの色のうち好きな色１色のマナ１点を加える。このマナは、クリーチャーの能力を起動するためにのみ使用できる。この能力は、このクリーチャーに他の起動型能力があるときにのみ起動できる。」を持つ。
+(白)(青)(黒)(赤)(緑),(Ｔ)：カード５枚を切削する。その切削されたカードの中から、マナ能力でない起動型能力を持つすべてのクリーチャー・カードをあなたの手札に加える。</card>
+    <card name="Filter Out" ja="濾過" type="インスタント">クリーチャーでも土地でもないすべてのパーマネントをオーナーの手札に戻す。</card>
+    <card name="Tolarian Contempt" ja="トレイリアの侮辱" type="エンチャント">トレイリアの侮辱が戦場に出たとき、対戦相手がコントロールしている各クリーチャーの上にそれぞれ拒絶カウンター１個を置く。
+あなたの終了ステップの開始時に、各対戦相手につきそれぞれ、そのプレイヤーがコントロールしていて拒絶カウンターが置かれているクリーチャー最大１体を対象とする。そのクリーチャーのオーナーはそれを自分のライブラリーの一番上か一番下に置く。</card>
+    <card name="Vesuvan Drifter" ja="ヴェズーヴァの漂う者" type="クリーチャー ― 多相の戦士" pt="2/4">飛行
+あなたはいつでもあなたのライブラリーの一番上のカードを見てよい。
+各戦闘の開始時に、あなたはあなたのライブラリーの一番上のカードを公開してもよい。これによりあなたがクリーチャー・カードを公開したなら、ターン終了時まで、ヴェズーヴァの漂う者は飛行を持つことを除き、そのカードのコピーになる。</card>
+    <card name="Ayara's Oathsworn" ja="アヤーラの誓約者" type="クリーチャー ― 人間・騎士" pt="2/2">威迫
+アヤーラの誓約者がプレイヤー１人に戦闘ダメージを与えるたび、これの上にある+1/+1カウンターが４個より少ない場合、これの上に+1/+1カウンター１個を置く。その後、これの上にある+1/+1カウンターがちょうど４個なら、あなたのライブラリーからカード１枚を探し、あなたの手札に加える。その後、ライブラリーを切り直す。</card>
+    <card name="Blot Out" ja="覆い隠し" type="インスタント">対戦相手１人を対象とする。そのプレイヤーは、自分がコントロールしているクリーチャーやプレインズウォーカーのうち、それらの中で最大のマナ総量を持つ１体を追放する。</card>
+    <card name="Death-Rattle Oni" ja="死鳴らし鬼" type="クリーチャー ― デーモン・スピリット" pt="5/4">瞬速
+この呪文を唱えるためのコストは、このターンに死亡したクリーチャー１体につき(２)少なくなる。
+死鳴らし鬼が戦場に出たとき、このターンにダメージを受けていてこれでないすべてのクリーチャーを破壊する。</card>
+    <card name="Markov Baron" ja="マルコフ男爵" type="クリーチャー ― 吸血鬼・貴族" pt="2/2">召集（あなたのクリーチャーが、この呪文を唱える助けとなる。この呪文を唱える段階であなたがタップした各クリーチャーはそれぞれ(１)かそのクリーチャーの色のマナ１点を支払う。）
+絆魂
+あなたがコントロールしていてこれでない各吸血鬼は+1/+1の修整を受ける。
+マッドネス(２)(黒)（あなたがこのカードを捨てるなら、これを追放領域に捨てる。そうしたとき、マッドネス・コストでこれを唱えるか、これをあなたの墓地に置く。）</card>
+    <card name="Urborg Scavengers" ja="アーボーグの掃除屋" type="クリーチャー ― スピリット" pt="2/2">アーボーグの掃除屋が戦場に出るか攻撃するたび、墓地にあるカード１枚を対象とする。それを追放する。アーボーグの掃除屋の上に+1/+1カウンター１個を置く。
+アーボーグの掃除屋により追放されているカードが飛行を持っているかぎり、これは飛行を持つ。先制攻撃、二段攻撃、接死、速攻、呪禁、破壊不能、絆魂、威迫、到達、トランプル、警戒についても同様である。</card>
+    <card name="Arni Metalbrow" ja="鉄頭のアーニ" type="伝説のクリーチャー ― 人間・狂戦士" pt="3/3">あなたがコントロールしているクリーチャー１体が攻撃するか、クリーチャー１体があなたのコントロール下で攻撃している状態で戦場に出るたび、あなたは(１)(赤)を支払ってもよい。そうしたなら、あなたはあなたの手札からマナ総量がそのクリーチャーのマナ総量より小さいクリーチャー・カード１枚をタップ状態かつ攻撃している状態で戦場に出してもよい。</card>
+    <card name="Kolaghan Warmonger" ja="コラガンの戦争屋" type="クリーチャー ― オーガ・戦士" pt="3/2">速攻
+コラガンの戦争屋が攻撃するたび、あなたのライブラリーの一番上からカード６枚を見る。あなたは「その中からドラゴン・カード１枚を公開し、あなたの手札に加える。」を選んでもよい。残りをあなたのライブラリーの一番下に無作為の順番で置く。</card>
+    <card name="Plargg and Nassari" ja="プラーグとナサーリ" type="伝説のクリーチャー ― オーク・イフリート" pt="5/4">あなたのアップキープの開始時に、各プレイヤーはそれぞれ、土地でないカードが追放されるまで、自分のライブラリーの一番上から１枚ずつ追放する。対戦相手１人はこれにより追放されて土地でないカード１枚を選ぶ。あなたはこれにより追放されていて選ばれなかったカードの中から呪文最大２つを、マナ・コストを支払うことなく唱えてもよい。</card>
+    <card name="Reckless Handling" ja="無謀な始末" type="ソーサリー">あなたのライブラリーからアーティファクト・カード１枚を探し、公開し、あなたの手札に加え、ライブラリーを切り直す。その後、カード１枚を無作為に選んで捨てる。これによりアーティファクト・カードが捨てられたなら、無謀な始末は各対戦相手にそれぞれ２点のダメージを与える。</card>
+    <card name="Animist's Might" ja="精霊信者の力" type="ソーサリー">この呪文があなたがコントロールしている伝説のクリーチャーを対象とするなら、これを唱えるためのコストは(２)少なくなる。
+あなたがコントロールしているクリーチャー１体と、クリーチャーやプレインズウォーカーのうちあなたがコントロールしていない１体を対象とする。その前者はその後者に、自身のパワーの２倍に等しい点数のダメージを与える。</card>
+    <card name="Leyline Immersion" ja="力線の浸透" type="エンチャント ― オーラ">エンチャント（伝説のクリーチャー）
+エンチャントしているクリーチャーは護法(２)と「(Ｔ)：望む色の組み合わせのマナ５点を加える。このマナは、呪文を唱えるためにのみ使用できる。」を持つ。</card>
+    <card name="Nissa, Resurgent Animist" ja="復活した精霊信者、ニッサ" type="伝説のクリーチャー ― エルフ・スカウト" pt="3/3">上陸 ― 土地１つがあなたのコントロール下で戦場に出るたび、好きな色１色のマナ１点を加える。その後、この能力が解決されたのがこのターン内で２回目なら、エルフかエレメンタルであるカードが公開されるまで、あなたのライブラリーの一番上から１枚ずつ公開する。そのカードをあなたの手札に、残りをあなたのライブラリーの一番下に無作為の順番で置く。</card>
+    <card name="Open the Way" ja="道を開けよ" type="ソーサリー">Ｘはこのゲームのプレイヤーの人数より大きくできない。
+土地・カードＸ枚が公開されるまで、あなたのライブラリーの一番上から１枚ずつ公開する。それらの土地・カードをタップ状態で戦場に、残りをあなたのライブラリーの一番下に無作為の順番で置く。</card>
+    <card name="Tranquil Frillback" ja="温厚な襞背" type="クリーチャー ― 恐竜" pt="3/3">温厚な襞背が戦場に出たとき、あなたは(緑)を最大３回支払ってもよい。あなたがこのコストを１回以上支払ったとき、以下からその回数以下の数だけ選ぶ。
+・アーティファクトやエンチャントのうち１つを対象とする。それを破壊する。
+・プレイヤー１人を対象とする。そのプレイヤーの墓地を追放する。
+・あなたは４点のライフを得る。</card>
+    <card name="Undercity Upheaval" ja="地底街の激動" type="ソーサリー">宿根 ― あなたがコントロールしている望む数のクリーチャーを対象とし、Ｘ個分を割り振る。それらの上にその割り振った個数の+1/+1カウンターを置く。Ｘはこの呪文を唱えるに際し、あなたの墓地にあるクリーチャー・カードの枚数に等しい。ターン終了時まで、あなたがコントロールしている各クリーチャーは警戒を得る。</card>
+    <card name="Calix, Guided by Fate" ja="運命に導かれし者、ケイリクス" type="伝説のクリーチャー・エンチャント ― 人間・ドルイド" pt="2/2">星座 ― 運命に導かれし者、ケイリクスかこれでないエンチャント１つがあなたのコントロール下で戦場に出るたび、クリーチャー１体を対象とする。それの上に+1/+1カウンター１個を置く。
+運命に導かれし者、ケイリクスか、あなたがコントロールしていてオーラがついているクリーチャー１体がプレイヤー１人に戦闘ダメージを与えるたび、あなたはあなたがコントロールしていて伝説でないエンチャント１つのコピーであるトークン１つを生成してもよい。これは毎ターン１回のみ行える。</card>
+    <card name="Campus Renovation" ja="構内の改装" type="ソーサリー">あなたの墓地にありアーティファクトかエンチャントであるカード最大１枚を対象とする。それを戦場に戻す。あなたのライブラリーの一番上からカード２枚を追放する。あなたの次のターンの終了時まで、あなたはそれらのカードをプレイしてもよい。</card>
+    <card name="Cosmic Rebirth" ja="星界の再誕" type="インスタント">あなたの墓地にあるパーマネント・カード１枚を対象とする。それのマナ総量が３以下なら、あなたはそれを戦場に出してもよい。それを戦場に出さないなら、それをあなたの手札に加える。
+あなたは３点のライフを得る。</card>
+    <card name="Danitha, New Benalia's Light" ja="新ベナリアの光、ダニサ" type="伝説のクリーチャー ― 人間・騎士" pt="2/2">警戒、トランプル、絆魂
+あなたの各ターン中に１回、あなたはあなたの墓地からオーラか装備品である呪文１つを唱えてもよい。</card>
+    <card name="Feast of the Victorious Dead" ja="勝利した死者の饗宴" type="エンチャント">あなたの終了ステップの開始時に、このターンに１体以上のクリーチャーが死亡していた場合、あなたはその数に等しい点数のライフを得て、その数に等しい個数の+1/+1カウンターをあなたがコントロールしているクリーチャーの上に望むように割り振って置く。</card>
+    <card name="Gold-Forged Thopteryx" ja="黄金造りの飛竜機械" type="アーティファクト・クリーチャー ― 恐竜・飛行機械" pt="1/3">飛行、絆魂
+あなたがコントロールしている伝説の各パーマネントは護法(２)を持つ。（それが対戦相手がコントロールしている呪文や能力の対象になるたび、そのプレイヤーが(２)を支払わないかぎり、その呪文や能力を打ち消す。）</card>
+    <card name="Jirina, Dauntless General" ja="不屈の将軍、ジリーナ" type="伝説のクリーチャー ― 人間・兵士" pt="2/2">不屈の将軍、ジリーナが戦場に出たとき、プレイヤー１人を対象とする。そのプレイヤーの墓地を追放する。
+不屈の将軍、ジリーナを生け贄に捧げる：ターン終了時まで、あなたがコントロールしている各人間は呪禁と破壊不能を得る。</card>
+    <card name="Jolrael, Voice of Zhalfir" ja="ザルファーの声、ジョルレイル" type="伝説のクリーチャー ― 人間・ドルイド" pt="3/3">あなたのターンの戦闘の開始時に、あなたがコントロールしている土地最大１つを対象とする。ターン終了時まで、それは飛行と速攻を持つ緑青のX/Xの鳥・クリーチャーになる。Ｘはあなたの手札にあるカードの枚数に等しい。それは土地でもある。
+あなたがコントロールしている土地・クリーチャー１体がプレイヤー１人に戦闘ダメージを与えるたび、カード１枚を引く。</card>
+    <card name="The Kenriths' Royal Funeral" ja="ケンリス王家の葬送" type="伝説のエンチャント">ケンリス王家の葬送が戦場に出たとき、あなたの墓地にある伝説のクリーチャー・カード最大２枚を対象とする。それらを追放する。あなたはカードＸ枚を引き、Ｘ点のライフを失う。Ｘはこれにより追放されたカードの中のマナ総量の最大値に等しい。
+あなたが伝説の呪文を唱えるためのコストは、ケンリス王家の葬送により追放されているカード１枚につき(１)少なくなる。</card>
+    <card name="Kiora, Sovereign of the Deep" ja="深海の君主、キオーラ" type="伝説のクリーチャー ― マーフォーク・貴族" pt="4/5">警戒、護法(３)
+あなたがあなたの手札からクラーケンかリバイアサンかタコか海蛇である呪文を唱えるたび、あなたのライブラリーの一番上からカードＸ枚を見る。Ｘはその呪文のマナ総量に等しい。あなたはその中から、マナ総量がＸより小さい呪文１つをマナ・コストを支払うことなく唱えてもよい。残りをあなたのライブラリーの一番下に無作為の順番で置く。</card>
+    <card name="Nahiri, Forged in Fury" ja="激情で錬磨された者、ナヒリ" type="伝説のクリーチャー ― コー・工匠" pt="5/4">親和（装備品）（この呪文を唱えるためのコストは、あなたがコントロールしている装備品１つにつき(１)少なくなる。）
+あなたがコントロールしていて装備品がついているクリーチャー１体が攻撃するたび、あなたのライブラリーの一番上のカードを追放する。このターン、あなたはそのカードをプレイしてもよい。あなたはこれにより装備品・呪文をマナ・コストを支払うことなく唱えてもよい。</card>
+    <card name="Nahiri's Resolve" ja="ナヒリの決意" type="エンチャント">あなたがコントロールしている各クリーチャーは+1/+0の修整を受け速攻を持つ。
+あなたの終了ステップの開始時に、アーティファクトやクリーチャーのうちあなたがコントロールしていてトークンでない望む数を追放する。あなたの次のアップキープの開始時に、それらのカードをオーナーのコントロール下で戦場に戻す。</card>
+    <card name="Narset, Enlightened Exile" ja="悟った喪失者、ナーセット" type="伝説のクリーチャー ― 人間・モンク" pt="3/4">あなたがコントロールしている各クリーチャーは果敢を持つ。
+悟った喪失者、ナーセットが攻撃するたび、墓地にありマナ総量が悟った喪失者、ナーセットのパワーより小さくクリーチャーでも土地でもないカード１枚を対象とする。それを追放し、コピーする。あなたはそのコピーをマナ・コストを支払うことなく唱えてもよい。</card>
+    <card name="Nashi, Moon's Legacy" ja="月の後裔、ナシ" type="伝説のクリーチャー ― ネズミ・シャーマン" pt="3/4">威迫、護法(１)
+月の後裔、ナシが攻撃するたび、あなたの墓地にあり伝説かネズミであるカード最大１枚を対象とする。それを追放し、コピーする。あなたはそのコピーを唱えてもよい。（そのコストは支払う必要がある。パーマネント・呪文のコピーはトークンになる。）</card>
+    <card name="Niv-Mizzet, Supreme" ja="至高の者、ニヴ＝ミゼット" type="伝説のクリーチャー ― ドラゴン・アバター" pt="5/5">飛行、単色からの呪禁
+あなたの墓地にありちょうど２色でありインスタントやソーサリーである各カードは再活を持つ。（あなたは、あなたの墓地からそのカードを、他のコストの支払いに加えてカード１枚を捨てることで唱えてもよい。その後、それを追放する。）</card>
+    <card name="Ob Nixilis, Captive Kingpin" ja="囚われの黒幕、オブ・ニクシリス" type="伝説のクリーチャー ― デーモン" pt="4/3">飛行、トランプル
+１人以上の対戦相手がそれぞれちょうど１点のライフを失うたび、囚われの黒幕、オブ・ニクシリスの上に+1/+1カウンター１個を置く。あなたのライブラリーの一番上のカードを追放する。あなたの次の終了ステップまで、あなたはそのカードをプレイしてもよい。</card>
+    <card name="Pia Nalaar, Consul of Revival" ja="復興の領事、ピア・ナラー" type="伝説のクリーチャー ― 人間・工匠" pt="2/3">あなたがコントロールしている各飛行機械は速攻を持つ。
+あなたが追放領域から土地をプレイするか追放領域から呪文を唱えるたび、飛行を持つ無色の1/1の飛行機械・アーティファクト・クリーチャー・トークン１体を生成する。</card>
+    <card name="Rebuild the City" ja="都市改修" type="ソーサリー">土地１つを対象とする。他のタイプに加えて3/3のクリーチャーであり、警戒と威迫を持つことを除き、それのコピーであるトークン３つを生成する。（それらは召喚酔いの影響を受ける。）</card>
+    <card name="Rocco, Street Chef" ja="街角の料理人、ロッコ" type="伝説のクリーチャー ― エルフ・ドルイド" pt="2/4">あなたの終了ステップの開始時に、各プレイヤーはそれぞれ自分のライブラリーの一番上のカードを追放する。あなたの次の終了ステップまで、各プレイヤーはこれにより自分が追放しているカードをプレイしてもよい。
+プレイヤー１人が追放領域から土地をプレイするか追放領域から呪文を唱えるたび、クリーチャー１体を対象とする。あなたはそれの上に+1/+1カウンター１個を置き、食物・トークン１つを生成する。（それは、「(２),(Ｔ),このアーティファクトを生け贄に捧げる：あなたは３点のライフを得る。」を持つアーティファクトである。）</card>
+    <card name="Samut, Vizier of Naktamun" ja="ナクタムンの侍臣、サムト" type="伝説のクリーチャー ― 人間・戦士・クレリック" pt="2/3">先制攻撃、警戒、速攻
+あなたがコントロールしているクリーチャー１体がプレイヤー１人に戦闘ダメージを与えるたび、そのクリーチャーが戦場に出たのがこのターンであった場合、カード１枚を引く。</card>
+    <card name="Sarkhan, Soul Aflame" ja="燃える魂、サルカン" type="伝説のクリーチャー ― 人間・シャーマン" pt="2/4">あなたがドラゴン・呪文を唱えるためのコストは(１)少なくなる。
+ドラゴン１体があなたのコントロール下で戦場に出るたび、あなたは「ターン終了時まで、燃える魂、サルカンは名前が『燃える魂、サルカン』であり、他のタイプに加えて伝説であることを除き、それのコピーになる。」を選んでもよい。</card>
+    <card name="Sigarda, Font of Blessings" ja="祝福の泉、シガルダ" type="伝説のクリーチャー ― 天使" pt="4/4">飛行
+あなたがコントロールしていてこれでない各パーマネントは呪禁を持つ。
+あなたはいつでもあなたのライブラリーの一番上のカードを見てよい。
+あなたはあなたのライブラリーの一番上から天使や人間である呪文を唱えてもよい。</card>
+    <card name="Tyvar the Bellicose" ja="敵意に満ちた者、タイヴァー" type="伝説のクリーチャー ― エルフ・戦士" pt="5/4">あなたがコントロールしている１体以上のエルフが攻撃するたび、ターン終了時まで、それらは接死を得る。
+あなたがコントロールしている各クリーチャーは「このクリーチャーのマナ能力が解決されるたび、これの上にこのクリーチャーが生み出したマナの点数に等しい個数の+1/+1カウンターを置く。この能力は、毎ターン１回のみ誘発する。」を持つ。</card>
+    <card name="Karn, Legacy Reforged" ja="再鍛されたレガシー、カーン" type="伝説のアーティファクト・クリーチャー ― ゴーレム" pt="*/*">再鍛されたレガシー、カーンのパワーとタフネスはそれぞれ、あなたがコントロールしているアーティファクトの中のマナ総量の最大値に等しい。
+あなたのアップキープの開始時に、あなたがコントロールしているアーティファクト１つにつき(◇)を加える。このマナはアーティファクトでない呪文を唱えるためには支払えない。ターン終了時まで、このマナはステップやフェイズの終了に際して無くならない。</card>
+    <card name="Drannith Ruins" ja="ドラニス遺跡" type="土地">(Ｔ)：(◇)を加える。
+(２),(Ｔ)：このターンに戦場に出た人間でないクリーチャー１体を対象とする。それの上に+1/+1カウンター２個を置く。</card>
+    
     <!-- 定義済みトークン -->
     <card name="Blood Token" ja="血・トークン" type="トークン・アーティファクト ― 血" wiki="血">(１),(Ｔ),カード１枚を捨てる,このアーティファクトを生け贄に捧げる：カード１枚を引く。</card>
     <card name="Clue Token" ja="手掛かり・トークン" type="トークン・アーティファクト ― 手掛かり" wiki="手掛かり">(２),このアーティファクトを生け贄に捧げる：カード１枚を引く。</card>
@@ -1499,6 +1598,136 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="448 " sub="MOC" name="Goro-Goro and Satoru" />
     <alt key="449 " sub="MOC" name="Katilda and Lier" />
     <alt key="450 " sub="MOC" name="Slimefoot and Squee" />
+    <!-- MAT -->
+    <alt key="51 " sub="MAT" name="Coppercoat Vanguard" />
+    <alt key="52 " sub="MAT" name="Deification" />
+    <alt key="53 " sub="MAT" name="Harnessed Snubhorn" />
+    <alt key="54 " sub="MAT" name="Metropolis Reformer" />
+    <alt key="55 " sub="MAT" name="Spark Rupture" />
+    <alt key="56 " sub="MAT" name="Tazri, Stalwart Survivor" />
+    <alt key="57 " sub="MAT" name="Filter Out" />
+    <alt key="58 " sub="MAT" name="Tolarian Contempt" />
+    <alt key="59 " sub="MAT" name="Training Grounds" />
+    <alt key="60 " sub="MAT" name="Vesuvan Drifter" />
+    <alt key="61 " sub="MAT" name="Ayara's Oathsworn" />
+    <alt key="62 " sub="MAT" name="Blot Out" />
+    <alt key="63 " sub="MAT" name="Death-Rattle Oni" />
+    <alt key="64 " sub="MAT" name="Markov Baron" />
+    <alt key="65 " sub="MAT" name="Urborg Scavengers" />
+    <alt key="66 " sub="MAT" name="Arni Metalbrow" />
+    <alt key="67 " sub="MAT" name="Kolaghan Warmonger" />
+    <alt key="68 " sub="MAT" name="Plargg and Nassari" />
+    <alt key="69 " sub="MAT" name="Reckless Handling" />
+    <alt key="74 " sub="MAT" name="Tranquil Frillback" />
+    <alt key="75 " sub="MAT" name="Undercity Upheaval" />
+    <alt key="76 " sub="MAT" name="Calix, Guided by Fate" />
+    <alt key="77 " sub="MAT" name="Campus Renovation" />
+    <alt key="78 " sub="MAT" name="Cosmic Rebirth" />
+    <alt key="79 " sub="MAT" name="Danitha, New Benalia's Light" />
+    <alt key="80 " sub="MAT" name="Feast of the Victorious Dead" />
+    <alt key="81 " sub="MAT" name="Gold-Forged Thopteryx" />
+    <alt key="82 " sub="MAT" name="Jirina, Dauntless General" />
+    <alt key="84 " sub="MAT" name="The Kenriths' Royal Funeral" />
+    <alt key="85 " sub="MAT" name="Kiora, Sovereign of the Deep" />
+    <alt key="86 " sub="MAT" name="Nahiri, Forged in Fury" />
+    <alt key="87 " sub="MAT" name="Nahiri's Resolve" />
+    <alt key="88 " sub="MAT" name="Narset, Enlightened Exile" />
+    <alt key="89 " sub="MAT" name="Nashi, Moon's Legacy" />
+    <alt key="90 " sub="MAT" name="Niv-Mizzet, Supreme" />
+    <alt key="91 " sub="MAT" name="Ob Nixilis, Captive Kingpin" />
+    <alt key="93 " sub="MAT" name="Rebuild the City" />
+    <alt key="94 " sub="MAT" name="Rocco, Street Chef" />
+    <alt key="95 " sub="MAT" name="Samut, Vizier of Naktamun" />
+    <alt key="96 " sub="MAT" name="Sarkhan, Soul Aflame" />
+    <alt key="97 " sub="MAT" name="Sigarda, Font of Blessings" />
+    <alt key="98 " sub="MAT" name="Tyvar the Bellicose" />
+    <alt key="100 " sub="MAT" name="Drannith Ruins" />
+    <alt key="101 " sub="MAT" name="Coppercoat Vanguard" />
+    <alt key="102 " sub="MAT" name="Deification" />
+    <alt key="103 " sub="MAT" name="Harnessed Snubhorn" />
+    <alt key="104 " sub="MAT" name="Metropolis Reformer" />
+    <alt key="105 " sub="MAT" name="Spark Rupture" />
+    <alt key="106 " sub="MAT" name="Tazri, Stalwart Survivor" />
+    <alt key="107 " sub="MAT" name="Filter Out" />
+    <alt key="108 " sub="MAT" name="Tolarian Contempt" />
+    <alt key="109 " sub="MAT" name="Training Grounds" />
+    <alt key="110 " sub="MAT" name="Vesuvan Drifter" />
+    <alt key="111 " sub="MAT" name="Ayara's Oathsworn" />
+    <alt key="112 " sub="MAT" name="Blot Out" />
+    <alt key="113 " sub="MAT" name="Death-Rattle Oni" />
+    <alt key="114 " sub="MAT" name="Markov Baron" />
+    <alt key="115 " sub="MAT" name="Urborg Scavengers" />
+    <alt key="116 " sub="MAT" name="Arni Metalbrow" />
+    <alt key="117 " sub="MAT" name="Kolaghan Warmonger" />
+    <alt key="118 " sub="MAT" name="Plargg and Nassari" />
+    <alt key="119 " sub="MAT" name="Reckless Handling" />
+    <alt key="120 " sub="MAT" name="Animist's Might" />
+    <alt key="121 " sub="MAT" name="Leyline Immersion" />
+    <alt key="122 " sub="MAT" name="Nissa, Resurgent Animist" />
+    <alt key="123 " sub="MAT" name="Open the Way" />
+    <alt key="124 " sub="MAT" name="Tranquil Frillback" />
+    <alt key="125 " sub="MAT" name="Undercity Upheaval" />
+    <alt key="126 " sub="MAT" name="Calix, Guided by Fate" />
+    <alt key="127 " sub="MAT" name="Campus Renovation" />
+    <alt key="128 " sub="MAT" name="Cosmic Rebirth" />
+    <alt key="129 " sub="MAT" name="Danitha, New Benalia's Light" />
+    <alt key="130 " sub="MAT" name="Feast of the Victorious Dead" />
+    <alt key="131 " sub="MAT" name="Gold-Forged Thopteryx" />
+    <alt key="132 " sub="MAT" name="Jirina, Dauntless General" />
+    <alt key="133 " sub="MAT" name="Jolrael, Voice of Zhalfir" />
+    <alt key="134 " sub="MAT" name="The Kenriths' Royal Funeral" />
+    <alt key="135 " sub="MAT" name="Kiora, Sovereign of the Deep" />
+    <alt key="136 " sub="MAT" name="Nahiri, Forged in Fury" />
+    <alt key="137 " sub="MAT" name="Nahiri's Resolve" />
+    <alt key="138 " sub="MAT" name="Narset, Enlightened Exile" />
+    <alt key="139 " sub="MAT" name="Nashi, Moon's Legacy" />
+    <alt key="140 " sub="MAT" name="Niv-Mizzet, Supreme" />
+    <alt key="141 " sub="MAT" name="Ob Nixilis, Captive Kingpin" />
+    <alt key="142 " sub="MAT" name="Pia Nalaar, Consul of Revival" />
+    <alt key="143 " sub="MAT" name="Rebuild the City" />
+    <alt key="144 " sub="MAT" name="Rocco, Street Chef" />
+    <alt key="145 " sub="MAT" name="Samut, Vizier of Naktamun" />
+    <alt key="146 " sub="MAT" name="Sarkhan, Soul Aflame" />
+    <alt key="147 " sub="MAT" name="Sigarda, Font of Blessings" />
+    <alt key="148 " sub="MAT" name="Tyvar the Bellicose" />
+    <alt key="149 " sub="MAT" name="Karn, Legacy Reforged" />
+    <alt key="150 " sub="MAT" name="Drannith Ruins" />
+    <alt key="151 " sub="MAT" name="Deification" />
+    <alt key="152 " sub="MAT" name="Metropolis Reformer" />
+    <alt key="153 " sub="MAT" name="Spark Rupture" />
+    <alt key="154 " sub="MAT" name="Tazri, Stalwart Survivor" />
+    <alt key="155 " sub="MAT" name="Training Grounds" />
+    <alt key="156 " sub="MAT" name="Vesuvan Drifter" />
+    <alt key="157 " sub="MAT" name="Ayara's Oathsworn" />
+    <alt key="158 " sub="MAT" name="Urborg Scavengers" />
+    <alt key="159 " sub="MAT" name="Arni Metalbrow" />
+    <alt key="160 " sub="MAT" name="Plargg and Nassari" />
+    <alt key="161 " sub="MAT" name="Leyline Immersion" />
+    <alt key="162 " sub="MAT" name="Nissa, Resurgent Animist" />
+    <alt key="163 " sub="MAT" name="Open the Way" />
+    <alt key="164 " sub="MAT" name="Tranquil Frillback" />
+    <alt key="165 " sub="MAT" name="Calix, Guided by Fate" />
+    <alt key="166 " sub="MAT" name="Danitha, New Benalia's Light" />
+    <alt key="167 " sub="MAT" name="Jirina, Dauntless General" />
+    <alt key="168 " sub="MAT" name="Jolrael, Voice of Zhalfir" />
+    <alt key="169 " sub="MAT" name="The Kenriths' Royal Funeral" />
+    <alt key="170 " sub="MAT" name="Kiora, Sovereign of the Deep" />
+    <alt key="171 " sub="MAT" name="Nahiri, Forged in Fury" />
+    <alt key="172 " sub="MAT" name="Nahiri's Resolve" />
+    <alt key="173 " sub="MAT" name="Narset, Enlightened Exile" />
+    <alt key="174 " sub="MAT" name="Nashi, Moon's Legacy" />
+    <alt key="175 " sub="MAT" name="Niv-Mizzet, Supreme" />
+    <alt key="176 " sub="MAT" name="Ob Nixilis, Captive Kingpin" />
+    <alt key="177 " sub="MAT" name="Pia Nalaar, Consul of Revival" />
+    <alt key="178 " sub="MAT" name="Rebuild the City" />
+    <alt key="179 " sub="MAT" name="Rocco, Street Chef" />
+    <alt key="180 " sub="MAT" name="Samut, Vizier of Naktamun" />
+    <alt key="181 " sub="MAT" name="Sarkhan, Soul Aflame" />
+    <alt key="182 " sub="MAT" name="Sigarda, Font of Blessings" />
+    <alt key="183 " sub="MAT" name="Tyvar the Bellicose" />
+    <alt key="184 " sub="MAT" name="Karn, Legacy Reforged" />
+    <alt key="185 " sub="MAT" name="Drannith Ruins" />
+    <alt key="230 " sub="MAT" name="Jolrael, Voice of Zhalfir" />
     <!-- ZNR variants -->
     <alt key="0109  /  1158 " sub="ZNR" name="Needleverge Pathway" />
     <alt key="0110  /  1158 " sub="ZNR" name="Pillarverge Pathway" />
@@ -8445,6 +8674,9 @@ III ― ターン終了時まで、あなたは墓地からインスタントや
     <card name="Unseal the Necropolis" ja="死滅都市の開封" type="インスタント">各プレイヤーはそれぞれカード３枚を切削する。その後、あなたはあなたの墓地からクリーチャー・カード最大２枚をあなたの手札に戻す。（カード３枚を切削するとは、自分のライブラリーの一番上からカード３枚を自分の墓地に置くことである。）</card>
     <card name="Zilortha, Apex of Ikoria" ja="イコリアの頂点、ジローサ" type="伝説のクリーチャー ― 恐竜" pt="8/8" rel="Invasion of Ikoria">到達
 あなたがコントロールしていて人間でない各クリーチャーにつきそれぞれ、あなたはそのクリーチャーの戦闘ダメージをそれがブロックされなかったかのように割り振ってもよい。</card>
+    
+    <!-- MAT (再録) -->
+    <card name="Training Grounds" ja="訓練場" type="エンチャント">あなたがコントロールしているクリーチャーの起動型能力を起動するためのコストは(２)少なくなる。この効果は、そのコストに含まれるマナの点数を１点未満に減らせない。</card>
     
     <!-- 合体カード -->
     <rel name="Gisela, the Broken Blade" rel="Bruna, the Fading Light|Brisela, Voice of Nightmares" />
