@@ -38,13 +38,13 @@ namespace Mojp
                     case 'á':
                     case 'â':
                     case 'à':
-                        sb.Append("a");
+                        sb.Append('a');
                         replaced = true;
                         break;
 
                     // Ifh-Bíff Efreet
                     case 'í':
-                        sb.Append("i");
+                        sb.Append('i');
                         replaced = true;
                         break;
 
@@ -52,19 +52,25 @@ namespace Mojp
                     case 'ú':
                     case 'û':
                     case 'ü':
-                        sb.Append("u");
+                        sb.Append('u');
                         replaced = true;
                         break;
 
                     // Séance など
                     case 'é':
-                        sb.Append("e");
+                        sb.Append('e');
+                        replaced = true;
+                        break;
+
+                    // Éowyn, Lady of Rohan
+                    case 'É':
+                        sb.Append('E');
                         replaced = true;
                         break;
 
                     // Jötun Owl Keeper など (PD カードリスト用。MO では o になっている)
                     case 'ö':
-                        sb.Append("o");
+                        sb.Append('o');
                         replaced = true;
                         break;
 
