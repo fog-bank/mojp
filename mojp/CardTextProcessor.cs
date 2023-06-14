@@ -62,7 +62,7 @@ namespace Mojp
                         replaced = true;
                         break;
 
-                    // Éowyn, Lady of Rohan
+                    // Éowyn, Lady of Rohan など
                     case 'É':
                         sb.Append('E');
                         replaced = true;
