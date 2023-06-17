@@ -33,11 +33,13 @@ namespace Mojp
                     //  sb.Append("AE");
                     //  replaced = true;
                     //  break;
+                    // 検索用：á|â|à|ä|í|ú|û|ü|é|É|ó|ö
 
-                    // Márton Stromgald や Dandân や Déjà Vu など
+                    // Márton Stromgald や Dandân や Déjà Vu や Song of Eärendil など
                     case 'á':
                     case 'â':
                     case 'à':
+                    case 'ä':
                         sb.Append('a');
                         replaced = true;
                         break;
@@ -69,8 +71,8 @@ namespace Mojp
                         break;
 
                     // Jötun Owl Keeper など (PD カードリスト用。MO では o になっている)
-                    case 'ö':
                     case 'ó':
+                    case 'ö':
                         sb.Append('o');
                         replaced = true;
                         break;
