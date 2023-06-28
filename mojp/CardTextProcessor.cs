@@ -604,25 +604,6 @@ namespace Mojp
                     Debug.WriteLine("リンク情報の追加先となる " + name + " のカード情報がありません。");
             }
 
-            // 代替テキスト検索を追加
-            App.AltCardKeys.Clear();
-            App.AltCardSubKeys.Clear();
-            App.AltCards.Clear();
-
-            foreach (var node in doc.Root.Element("add").Elements("alt"))
-            {
-                string key = (string)node.Attribute("key");
-                string sub = (string)node.Attribute("sub");
-                string name = (string)node.Attribute("name");
-
-                if (!cards.ContainsKey(name) && !cards.ContainsKey(name.Replace("Ae", "AE")))
-                    Debug.WriteLine("代替テキスト (" + key + " " + sub + ") の参照先となる " + name + " のカード情報がありません。");
-
-                App.AltCardKeys.Add(key);
-                App.AltCardSubKeys.Add(sub);
-                App.AltCards.Add(key + sub, new AltCard(key, sub, name));
-            }
-
             // カードの削除
             foreach (var node in doc.Root.Elements("remove").Elements("card"))
             {
@@ -770,6 +751,25 @@ namespace Mojp
                 }
                 else
                     Debug.WriteLine("関連カード情報の追加先となる " + name + " のカード情報がありません。");
+            }
+
+            // 代替テキスト検索を追加
+            App.AltCardKeys.Clear();
+            App.AltCardSubKeys.Clear();
+            App.AltCards.Clear();
+
+            foreach (var node in doc.Root.Element("add").Elements("alt"))
+            {
+                string key = (string)node.Attribute("key");
+                string sub = (string)node.Attribute("sub");
+                string name = (string)node.Attribute("name");
+
+                if (!cards.ContainsKey(name))
+                    Debug.WriteLine("代替テキスト (" + key + " " + sub + ") の参照先となる " + name + " のカード情報がありません。");
+
+                App.AltCardKeys.Add(key);
+                App.AltCardSubKeys.Add(sub);
+                App.AltCards.Add(key + sub, new AltCard(key, sub, name));
             }
 
             // 日本語カード名の重複チェック
