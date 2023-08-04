@@ -345,7 +345,7 @@ namespace Mojp
                             if (App.TryGetCard(alt.CardName, out card))
                             {
                                 // エルドレインの王権のカードだったとき、カードタイプが出来事の場合、呪文側を手前に表示する
-                                if (alt.SubKey is "ELD" or "AFC" or "CLB" or "MOC" && IsAdventure())
+                                if (alt.SubKey is "ELD" or "AFC" or "CLB" or "MOC" or "CMM" && IsAdventure())
                                 {
                                     Debug.WriteLine(altKey + " " + alt.SubKey + " => " + alt.CardName + " => " + card.RelatedCardName);
 
@@ -476,6 +476,7 @@ namespace Mojp
                         switch (value)
                         {
                             case "PRM":
+                            case "CMM":
                                 isPromo = true;
                                 break;
 

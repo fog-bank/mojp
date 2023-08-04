@@ -989,6 +989,16 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="92  /  96 " sub="UND" name="Swamp" />
     <alt key="94  /  96 " sub="UND" name="Mountain" />
     <alt key="96  /  96 " sub="UND" name="Forest" />
+    <alt key="235  /  244 " sub="UNF" name="Plains" />
+    <alt key="236  /  244 " sub="UNF" name="Island" />
+    <alt key="237  /  244 " sub="UNF" name="Swamp" />
+    <alt key="238  /  244 " sub="UNF" name="Mountain" />
+    <alt key="239  /  244 " sub="UNF" name="Forest" />
+    <alt key="240  /  244 " sub="UNF" name="Plains" />
+    <alt key="241  /  244 " sub="UNF" name="Island" />
+    <alt key="242  /  244 " sub="UNF" name="Swamp" />
+    <alt key="243  /  244 " sub="UNF" name="Mountain" />
+    <alt key="244  /  244 " sub="UNF" name="Forest" />
     <alt key="373 " sub="2XM" name="Plains" />
     <alt key="374 " sub="2XM" name="Plains" />
     <alt key="375 " sub="2XM" name="Island" />
@@ -1637,6 +1647,310 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="184 " sub="MAT" name="Karn, Legacy Reforged" />
     <alt key="185 " sub="MAT" name="Drannith Ruins" />
     <alt key="230 " sub="MAT" name="Jolrael, Voice of Zhalfir" />
+    <!-- CMM -->
+    <alt key="452 " sub="CMM" name="Kozilek, the Great Distortion" />
+    <alt key="453 " sub="CMM" name="Morophon, the Boundless" />
+    <alt key="454 " sub="CMM" name="Ulamog, the Ceaseless Hunger" />
+    <alt key="455 " sub="CMM" name="Alms Collector" />
+    <alt key="456 " sub="CMM" name="Angelic Field Marshal" />
+    <alt key="457 " sub="CMM" name="Avacyn, Angel of Hope" />
+    <alt key="458 " sub="CMM" name="Balan, Wandering Knight" />
+    <alt key="459 " sub="CMM" name="Flawless Maneuver" />
+    <alt key="460 " sub="CMM" name="Grand Abolisher" />
+    <alt key="461 " sub="CMM" name="Heavenly Blademaster" />
+    <alt key="462 " sub="CMM" name="Heliod, Sun-Crowned" />
+    <alt key="463 " sub="CMM" name="Jazal Goldmane" />
+    <alt key="464 " sub="CMM" name="Land Tax" />
+    <alt key="465 " sub="CMM" name="Loyal Retainers" />
+    <alt key="466 " sub="CMM" name="Mangara, the Diplomat" />
+    <alt key="467 " sub="CMM" name="Nahiri, the Lithomancer" />
+    <alt key="468 " sub="CMM" name="Odric, Master Tactician" />
+    <alt key="469 " sub="CMM" name="Puresteel Paladin" />
+    <alt key="470 " sub="CMM" name="Righteous Confluence" />
+    <alt key="471 " sub="CMM" name="Sephara, Sky's Blade" />
+    <alt key="472 " sub="CMM" name="Sevinne's Reclamation" />
+    <alt key="473 " sub="CMM" name="Smothering Tithe" />
+    <alt key="474 " sub="CMM" name="Steelshaper's Gift" />
+    <alt key="475 " sub="CMM" name="Sublime Exhalation" />
+    <alt key="476 " sub="CMM" name="Wakening Sun's Avatar" />
+    <alt key="477 " sub="CMM" name="Wrath of God" />
+    <alt key="478 " sub="CMM" name="Zetalpa, Primal Dawn" />
+    <alt key="479 " sub="CMM" name="Aminatou's Augury" />
+    <alt key="480 " sub="CMM" name="Azami, Lady of Scrolls" />
+    <alt key="481 " sub="CMM" name="Braids, Conjurer Adept" />
+    <alt key="482 " sub="CMM" name="Bribery" />
+    <alt key="483 " sub="CMM" name="Capture of Jingzhou" />
+    <alt key="484 " sub="CMM" name="Commandeer" />
+    <alt key="485 " sub="CMM" name="Cyclonic Rift" />
+    <alt key="486 " sub="CMM" name="Day's Undoing" />
+    <alt key="487 " sub="CMM" name="Evacuation" />
+    <alt key="488 " sub="CMM" name="Faerie Artisans" />
+    <alt key="489 " sub="CMM" name="Fierce Guardianship" />
+    <alt key="490 " sub="CMM" name="Lorthos, the Tidemaker" />
+    <alt key="491 " sub="CMM" name="Minds Aglow" />
+    <alt key="492 " sub="CMM" name="Mystic Confluence" />
+    <alt key="493 " sub="CMM" name="Personal Tutor" />
+    <alt key="494 " sub="CMM" name="Sai, Master Thopterist" />
+    <alt key="495 " sub="CMM" name="Spellseeker" />
+    <alt key="496 " sub="CMM" name="Stitcher Geralf" />
+    <alt key="497 " sub="CMM" name="Stormsurge Kraken" />
+    <alt key="498 " sub="CMM" name="Sun Quan, Lord of Wu" />
+    <alt key="499 " sub="CMM" name="Talrand, Sky Summoner" />
+    <alt key="500 " sub="CMM" name="Teferi, Temporal Archmage" />
+    <alt key="501 " sub="CMM" name="Torrential Gearhulk" />
+    <alt key="502 " sub="CMM" name="Urza, Lord High Artificer" />
+    <alt key="503 " sub="CMM" name="Archfiend of Despair" />
+    <alt key="504 " sub="CMM" name="Bloodchief Ascension" />
+    <alt key="505 " sub="CMM" name="Chainer, Dementia Master" />
+    <alt key="506 " sub="CMM" name="Curtains' Call" />
+    <alt key="507 " sub="CMM" name="Deadly Rollick" />
+    <alt key="508 " sub="CMM" name="Decree of Pain" />
+    <alt key="509 " sub="CMM" name="Demonic Tutor" />
+    <alt key="510 " sub="CMM" name="Demonlord Belzenlok" />
+    <alt key="511 " sub="CMM" name="Endrek Sahr, Master Breeder" />
+    <alt key="512 " sub="CMM" name="Ghoulcaller Gisa" />
+    <alt key="513 " sub="CMM" name="Grave Pact" />
+    <alt key="514 " sub="CMM" name="Imp's Mischief" />
+    <alt key="515 " sub="CMM" name="Kindred Dominance" />
+    <alt key="516 " sub="CMM" name="Mikaeus, the Unhallowed" />
+    <alt key="517 " sub="CMM" name="Ob Nixilis of the Black Oath" />
+    <alt key="518 " sub="CMM" name="Ogre Slumlord" />
+    <alt key="519 " sub="CMM" name="Rankle, Master of Pranks" />
+    <alt key="520 " sub="CMM" name="Razaketh, the Foulblooded" />
+    <alt key="521 " sub="CMM" name="Rune-Scarred Demon" />
+    <alt key="522 " sub="CMM" name="Sower of Discord" />
+    <alt key="523 " sub="CMM" name="Toxic Deluge" />
+    <alt key="524 " sub="CMM" name="Twilight Prophet" />
+    <alt key="525 " sub="CMM" name="Vindictive Lich" />
+    <alt key="526 " sub="CMM" name="Wake the Dead" />
+    <alt key="527 " sub="CMM" name="Wretched Confluence" />
+    <alt key="528 " sub="CMM" name="Ashling the Pilgrim" />
+    <alt key="529 " sub="CMM" name="Avatar of Slaughter" />
+    <alt key="530 " sub="CMM" name="Balefire Dragon" />
+    <alt key="531 " sub="CMM" name="Daretti, Scrap Savant" />
+    <alt key="532 " sub="CMM" name="Deflecting Swat" />
+    <alt key="533 " sub="CMM" name="Disrupt Decorum" />
+    <alt key="534 " sub="CMM" name="Divergent Transformations" />
+    <alt key="535 " sub="CMM" name="Drakuseth, Maw of Flames" />
+    <alt key="536 " sub="CMM" name="Fiery Confluence" />
+    <alt key="537 " sub="CMM" name="Godo, Bandit Warlord" />
+    <alt key="538 " sub="CMM" name="Grenzo, Havoc Raiser" />
+    <alt key="539 " sub="CMM" name="Heartless Hidetsugu" />
+    <alt key="540 " sub="CMM" name="Hellkite Charger" />
+    <alt key="541 " sub="CMM" name="Inferno Titan" />
+    <alt key="542 " sub="CMM" name="Insurrection" />
+    <alt key="543 " sub="CMM" name="Krenko, Mob Boss" />
+    <alt key="544 " sub="CMM" name="Magus of the Wheel" />
+    <alt key="545 " sub="CMM" name="Neheb, the Eternal" />
+    <alt key="546 " sub="CMM" name="Nesting Dragon" />
+    <alt key="547 " sub="CMM" name="Purphoros, God of the Forge" />
+    <alt key="548 " sub="CMM" name="Savage Beating" />
+    <alt key="549 " sub="CMM" name="Scourge of the Throne" />
+    <alt key="550 " sub="CMM" name="Star of Extinction" />
+    <alt key="551 " sub="CMM" name="Tempt with Vengeance" />
+    <alt key="552 " sub="CMM" name="Treasure Nabber" />
+    <alt key="553 " sub="CMM" name="Arachnogenesis" />
+    <alt key="554 " sub="CMM" name="Azusa, Lost but Seeking" />
+    <alt key="555 " sub="CMM" name="Bloodspore Thrinax" />
+    <alt key="556 " sub="CMM" name="Craterhoof Behemoth" />
+    <alt key="557 " sub="CMM" name="Doubling Season" />
+    <alt key="558 " sub="CMM" name="Ezuri's Predation" />
+    <alt key="559 " sub="CMM" name="Finale of Devastation" />
+    <alt key="560 " sub="CMM" name="Freyalise, Llanowar's Fury" />
+    <alt key="561 " sub="CMM" name="Ghalta, Primal Hunger" />
+    <alt key="562 " sub="CMM" name="The Great Henge" />
+    <alt key="563 " sub="CMM" name="Heroic Intervention" />
+    <alt key="564 " sub="CMM" name="Jolrael, Mwonvuli Recluse" />
+    <alt key="565 " sub="CMM" name="Lifeblood Hydra" />
+    <alt key="566 " sub="CMM" name="Obscuring Haze" />
+    <alt key="567 " sub="CMM" name="Ohran Frostfang" />
+    <alt key="568 " sub="CMM" name="Omnath, Locus of Mana" />
+    <alt key="569 " sub="CMM" name="Regal Behemoth" />
+    <alt key="570 " sub="CMM" name="Sakiko, Mother of Summer" />
+    <alt key="571 " sub="CMM" name="Selvala, Heart of the Wilds" />
+    <alt key="572 " sub="CMM" name="Song of the Dryads" />
+    <alt key="573 " sub="CMM" name="Stonehoof Chieftain" />
+    <alt key="574 " sub="CMM" name="Tooth and Nail" />
+    <alt key="575 " sub="CMM" name="Verdant Confluence" />
+    <alt key="576 " sub="CMM" name="Wayward Swordtooth" />
+    <alt key="577 " sub="CMM" name="Yisan, the Wanderer Bard" />
+    <alt key="578 " sub="CMM" name="Experiment Kraj" />
+    <alt key="579 " sub="CMM" name="Gisela, Blade of Goldnight" />
+    <alt key="580 " sub="CMM" name="Hanna, Ship's Navigator" />
+    <alt key="581 " sub="CMM" name="Karador, Ghost Chieftain" />
+    <alt key="582 " sub="CMM" name="Kykar, Wind's Fury" />
+    <alt key="583 " sub="CMM" name="Maelstrom Wanderer" />
+    <alt key="584 " sub="CMM" name="Meren of Clan Nel Toth" />
+    <alt key="585 " sub="CMM" name="Mirri, Weatherlight Duelist" />
+    <alt key="586 " sub="CMM" name="Mizzix of the Izmagnus" />
+    <alt key="587 " sub="CMM" name="Nekusar, the Mindrazer" />
+    <alt key="588 " sub="CMM" name="Queen Marchesa" />
+    <alt key="589 " sub="CMM" name="Rafiq of the Many" />
+    <alt key="590 " sub="CMM" name="The Scarab God" />
+    <alt key="591 " sub="CMM" name="Sek'Kuar, Deathkeeper" />
+    <alt key="592 " sub="CMM" name="Sidisi, Brood Tyrant" />
+    <alt key="593 " sub="CMM" name="Teysa Karlov" />
+    <alt key="594 " sub="CMM" name="The Ur-Dragon" />
+    <alt key="595 " sub="CMM" name="Xantcha, Sleeper Agent" />
+    <alt key="596 " sub="CMM" name="Yennett, Cryptic Sovereign" />
+    <alt key="597 " sub="CMM" name="Yuriko, the Tiger's Shadow" />
+    <alt key="598 " sub="CMM" name="Zacama, Primal Calamity" />
+    <alt key="599 " sub="CMM" name="Zilortha, Strength Incarnate" />
+    <alt key="600 " sub="CMM" name="Boompile" />
+    <alt key="601 " sub="CMM" name="Champion's Helm" />
+    <alt key="602 " sub="CMM" name="Chromatic Lantern" />
+    <alt key="603 " sub="CMM" name="Emerald Medallion" />
+    <alt key="604 " sub="CMM" name="Extraplanar Lens" />
+    <alt key="605 " sub="CMM" name="Gilded Lotus" />
+    <alt key="606 " sub="CMM" name="Hammer of Nazahn" />
+    <alt key="607 " sub="CMM" name="Idol of Oblivion" />
+    <alt key="608 " sub="CMM" name="The Immortal Sun" />
+    <alt key="609 " sub="CMM" name="Inspiring Statuary" />
+    <alt key="610 " sub="CMM" name="Jet Medallion" />
+    <alt key="611 " sub="CMM" name="Jeweled Lotus" />
+    <alt key="612 " sub="CMM" name="Pearl Medallion" />
+    <alt key="613 " sub="CMM" name="Ruby Medallion" />
+    <alt key="614 " sub="CMM" name="Sapphire Medallion" />
+    <alt key="615 " sub="CMM" name="Scytheclaw" />
+    <alt key="616 " sub="CMM" name="Sword of the Animist" />
+    <alt key="617 " sub="CMM" name="Rejuvenating Springs" />
+    <alt key="618 " sub="CMM" name="Spectator Seating" />
+    <alt key="619 " sub="CMM" name="Training Center" />
+    <alt key="620 " sub="CMM" name="Undergrowth Stadium" />
+    <alt key="621 " sub="CMM" name="Vault of Champions" />
+    <alt key="622 " sub="CMM" name="All That Glitters" />
+    <alt key="623 " sub="CMM" name="Darksteel Mutation" />
+    <alt key="624 " sub="CMM" name="Generous Gift" />
+    <alt key="625 " sub="CMM" name="Grand Abolisher" />
+    <alt key="626 " sub="CMM" name="Path to Exile" />
+    <alt key="627 " sub="CMM" name="Puresteel Paladin" />
+    <alt key="628 " sub="CMM" name="Return to Dust" />
+    <alt key="629 " sub="CMM" name="Steelshaper's Gift" />
+    <alt key="630 " sub="CMM" name="Counterspell" />
+    <alt key="631 " sub="CMM" name="Fact or Fiction" />
+    <alt key="632 " sub="CMM" name="Frantic Search" />
+    <alt key="633 " sub="CMM" name="Personal Tutor" />
+    <alt key="634 " sub="CMM" name="Reality Shift" />
+    <alt key="635 " sub="CMM" name="Spellseeker" />
+    <alt key="636 " sub="CMM" name="Bloodchief Ascension" />
+    <alt key="637 " sub="CMM" name="Dread Return" />
+    <alt key="638 " sub="CMM" name="Exsanguinate" />
+    <alt key="639 " sub="CMM" name="Grave Pact" />
+    <alt key="640 " sub="CMM" name="Kindred Dominance" />
+    <alt key="641 " sub="CMM" name="Nadier's Nightblade" />
+    <alt key="642 " sub="CMM" name="Faithless Looting" />
+    <alt key="643 " sub="CMM" name="Magus of the Wheel" />
+    <alt key="644 " sub="CMM" name="Storm-Kiln Artist" />
+    <alt key="645 " sub="CMM" name="Treasure Nabber" />
+    <alt key="646 " sub="CMM" name="Vandalblast" />
+    <alt key="647 " sub="CMM" name="Arachnogenesis" />
+    <alt key="648 " sub="CMM" name="Elvish Mystic" />
+    <alt key="649 " sub="CMM" name="Kodama's Reach" />
+    <alt key="650 " sub="CMM" name="Ohran Frostfang" />
+    <alt key="651 " sub="CMM" name="Regal Behemoth" />
+    <alt key="652 " sub="CMM" name="Tooth and Nail" />
+    <alt key="653 " sub="CMM" name="Arcane Signet" />
+    <alt key="654 " sub="CMM" name="Champion's Helm" />
+    <alt key="655 " sub="CMM" name="Commander's Sphere" />
+    <alt key="656 " sub="CMM" name="Extraplanar Lens" />
+    <alt key="657 " sub="CMM" name="Fellwar Stone" />
+    <alt key="658 " sub="CMM" name="Thran Dynamo" />
+    <alt key="659 " sub="CMM" name="Command Tower" />
+    <alt key="660 " sub="CMM" name="Myriad Landscape" />
+    <alt key="661 " sub="CMM" name="Path of Ancestry" />
+    <alt key="662 " sub="CMM" name="Rejuvenating Springs" />
+    <alt key="663 " sub="CMM" name="Reliquary Tower" />
+    <alt key="664 " sub="CMM" name="Spectator Seating" />
+    <alt key="665 " sub="CMM" name="Training Center" />
+    <alt key="666 " sub="CMM" name="Undergrowth Stadium" />
+    <alt key="667 " sub="CMM" name="Vault of Champions" />
+    <alt key="668 " sub="CMM" name="Kozilek, the Great Distortion" />
+    <alt key="669 " sub="CMM" name="Morophon, the Boundless" />
+    <alt key="670 " sub="CMM" name="Ulamog, the Ceaseless Hunger" />
+    <alt key="671 " sub="CMM" name="Kemba, Kha Regent" />
+    <alt key="672 " sub="CMM" name="Azami, Lady of Scrolls" />
+    <alt key="673 " sub="CMM" name="Talrand, Sky Summoner" />
+    <alt key="674 " sub="CMM" name="Urza, Lord High Artificer" />
+    <alt key="675 " sub="CMM" name="Mikaeus, the Unhallowed" />
+    <alt key="676 " sub="CMM" name="Shirei, Shizo's Caretaker" />
+    <alt key="677 " sub="CMM" name="Grenzo, Havoc Raiser" />
+    <alt key="678 " sub="CMM" name="Neheb, the Eternal" />
+    <alt key="679 " sub="CMM" name="Azusa, Lost but Seeking" />
+    <alt key="680 " sub="CMM" name="Omnath, Locus of Mana" />
+    <alt key="681 " sub="CMM" name="Selvala, Heart of the Wilds" />
+    <alt key="682 " sub="CMM" name="Gisela, Blade of Goldnight" />
+    <alt key="683 " sub="CMM" name="Kykar, Wind's Fury" />
+    <alt key="684 " sub="CMM" name="Maelstrom Wanderer" />
+    <alt key="685 " sub="CMM" name="Meren of Clan Nel Toth" />
+    <alt key="686 " sub="CMM" name="Slimefoot, the Stowaway" />
+    <alt key="687 " sub="CMM" name="Tatyova, Benthic Druid" />
+    <alt key="688 " sub="CMM" name="Teysa Karlov" />
+    <alt key="689 " sub="CMM" name="The Ur-Dragon" />
+    <alt key="690 " sub="CMM" name="Yuriko, the Tiger's Shadow" />
+    <alt key="691 " sub="CMM" name="Zacama, Primal Calamity" />
+    <alt key="692 " sub="CMM" name="Flawless Maneuver" />
+    <alt key="693 " sub="CMM" name="Smothering Tithe" />
+    <alt key="694 " sub="CMM" name="Fierce Guardianship" />
+    <alt key="695 " sub="CMM" name="Deadly Rollick" />
+    <alt key="696 " sub="CMM" name="Demonic Tutor" />
+    <alt key="697 " sub="CMM" name="Balefire Dragon" />
+    <alt key="698 " sub="CMM" name="Deflecting Swat" />
+    <alt key="699 " sub="CMM" name="Insurrection" />
+    <alt key="700 " sub="CMM" name="Finale of Devastation" />
+    <alt key="701 " sub="CMM" name="Obscuring Haze" />
+    <alt key="702 " sub="CMM" name="Jeweled Lotus" />
+    <alt key="703 " sub="CMM" name="Sol Ring" />
+    <alt key="744 " sub="CMM" name="Abstruse Archaic" />
+    <alt key="745 " sub="CMM" name="Calamity of the Titans" />
+    <alt key="746 " sub="CMM" name="Desecrate Reality" />
+    <alt key="747 " sub="CMM" name="Flayer of Loyalties" />
+    <alt key="748 " sub="CMM" name="Omarthis, Ghostfire Initiate" />
+    <alt key="749 " sub="CMM" name="Rise of the Eldrazi" />
+    <alt key="750 " sub="CMM" name="Skittering Cicada" />
+    <alt key="751 " sub="CMM" name="Ugin's Mastery" />
+    <alt key="752 " sub="CMM" name="Zhulodok, Void Gorger" />
+    <alt key="753 " sub="CMM" name="Boon of the Spirit Realm" />
+    <alt key="754 " sub="CMM" name="Gatewatch Beacon" />
+    <alt key="755 " sub="CMM" name="Onakke Oathkeeper" />
+    <alt key="756 " sub="CMM" name="Ondu Spiritdancer" />
+    <alt key="757 " sub="CMM" name="Regal Sliver" />
+    <alt key="758 " sub="CMM" name="Sparkshaper Visionary" />
+    <alt key="759 " sub="CMM" name="Taunting Sliver" />
+    <alt key="760 " sub="CMM" name="Titan of Littjara" />
+    <alt key="761 " sub="CMM" name="Cacophony Unleashed" />
+    <alt key="762 " sub="CMM" name="Demon of Fate's Design" />
+    <alt key="763 " sub="CMM" name="Ghoulish Impetus" />
+    <alt key="764 " sub="CMM" name="Lazotep Sliver" />
+    <alt key="765 " sub="CMM" name="Capricious Sliver" />
+    <alt key="766 " sub="CMM" name="Descendants' Fury" />
+    <alt key="767 " sub="CMM" name="Guff Rewrites History" />
+    <alt key="768 " sub="CMM" name="Jaya's Phoenix" />
+    <alt key="769 " sub="CMM" name="Composer of Spring" />
+    <alt key="770 " sub="CMM" name="For the Ancestors" />
+    <alt key="771 " sub="CMM" name="Hatchery Sliver" />
+    <alt key="772 " sub="CMM" name="Nyxborn Behemoth" />
+    <alt key="773 " sub="CMM" name="Anikthea, Hand of Erebos" />
+    <alt key="774 " sub="CMM" name="Leori, Sparktouched Hunter" />
+    <alt key="775 " sub="CMM" name="Narci, Fable Singer" />
+    <alt key="776 " sub="CMM" name="Rukarumel, Biologist" />
+    <alt key="777 " sub="CMM" name="Sliver Gravemother" />
+    <alt key="778 " sub="CMM" name="Darksteel Monolith" />
+    <alt key="779 " sub="CMM" name="Zhulodok, Void Gorger" />
+    <alt key="780 " sub="CMM" name="Anikthea, Hand of Erebos" />
+    <alt key="781 " sub="CMM" name="Commodore Guff" />
+    <alt key="782 " sub="CMM" name="Sliver Gravemother" />
+    <alt key="1067 " sub="CMM" name="Disrupt Decorum" />
+    <!-- UNF -->
+    <alt key="277 " sub="UNF" name="Hallowed Fountain" />
+    <alt key="278 " sub="UNF" name="Watery Grave" />
+    <alt key="279 " sub="UNF" name="Blood Crypt" />
+    <alt key="280 " sub="UNF" name="Stomping Ground" />
+    <alt key="281 " sub="UNF" name="Temple Garden" />
+    <alt key="282 " sub="UNF" name="Godless Shrine" />
+    <alt key="283 " sub="UNF" name="Steam Vents" />
+    <alt key="284 " sub="UNF" name="Overgrown Tomb" />
+    <alt key="285 " sub="UNF" name="Sacred Foundry" />
+    <alt key="286 " sub="UNF" name="Breeding Pool" />
     <!-- ZNR variants -->
     <alt key="0109  /  1158 " sub="ZNR" name="Needleverge Pathway" />
     <alt key="0110  /  1158 " sub="ZNR" name="Pillarverge Pathway" />
@@ -4678,7 +4992,13 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="22  /  36 " sub="BRC" name="The Brothers' War" />
     <alt key="266 " sub="MOC" name="Phyrexian Scriptures" />
     <alt key="719 " sub="CMM" name="Battle at the Helvault" />
-    <!-- 出来事 (ELD, AFC, CLB, MOC) -->
+    <alt key="827 " sub="CMM" name="Love Song of Night and Day" />
+    <alt key="867 " sub="CMM" name="The Eldest Reborn" />
+    <alt key="886 " sub="CMM" name="The Binding of the Titans" />
+    <alt key="902 " sub="CMM" name="The Mending of Dominaria" />
+    <alt key="916 " sub="CMM" name="Battle for Bretagard" />
+    <alt key="917 " sub="CMM" name="Binding the Old Gods" />
+    <!-- 出来事 (ELD, AFC, CLB, MOC, CMM) : SearchAltSubKey method の追記が必要 -->
     <alt key="005  /  269 " sub="ELD" name="Ardenvale Tactician" />
     <alt key="011  /  269 " sub="ELD" name="Faerie Guidemother" />
     <alt key="014  /  269 " sub="ELD" name="Giant Killer" />
@@ -4744,6 +5064,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="249 " sub="MOC" name="Foulmire Knight" />
     <alt key="261 " sub="MOC" name="Order of Midnight" />
     <alt key="268 " sub="MOC" name="Smitten Swordmaster" />
+    <alt key="275 " sub="CMM" name="Beanstalk Giant" />
     <!-- 変容 (IKO, C20, DMC, MOC) -->
     <alt key="003  /  274 " sub="IKO" name="Mysterious Egg" />
     <alt key="007  /  274 " sub="IKO" name="Cubwarden" />
