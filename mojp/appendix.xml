@@ -87,7 +87,7 @@ IV ― ターン終了時まで、あなたがコントロールしている各�
     <card name="Bitter Chill" ja="厳寒" type="エンチャント ― オーラ">エンチャント（クリーチャー）
 厳寒が戦場に出たとき、エンチャントしているクリーチャーをタップする。
 エンチャントしているクリーチャーは、それのコントローラーのアンタップ・ステップにアンタップしない。
-厳寒が戦場から墓地に置かれたとき、あなたは(１)を支払ってもよい。そうしたなら、占術１を行い、その後、カード１枚を引く。</card>
+厳寒が戦場から墓地に置かれたとき、あなたは(１)を支払ってもよい。そうしたなら、占術１を行い、その後カード１枚を引く。</card>
     <card name="Chancellor of Tales" ja="伝承の大長" type="クリーチャー ― フェアリー・アドバイザー" pt="2/3">飛行
 あなたが出来事・呪文を唱えるたび、あなたはその呪文をコピーしてもよい。あなたはそのコピーの新しい対象を選んでもよい。</card>
     <card name="Diminisher Witch" ja="縮小術の魔女" type="クリーチャー ― 人間・邪術師" pt="3/2">協約（この呪文を唱えるに際し、アーティファクトやエンチャントやトークンのうち１つを生け贄に捧げてもよい。）
@@ -144,7 +144,7 @@ III ― このターン、あなたが次にマナ総量が３以下でありイ
     <card name="Talion's Messenger" ja="タリオンの伝書使" type="クリーチャー ― フェアリー・貴族" pt="1/3">飛行
 あなたが１体以上のフェアリーで攻撃するたび、カード１枚を引く。その後、カード１枚を捨てる。あなたがこれによりカード１枚を捨てたとき、あなたがコントロールしているフェアリー１体を対象とする。それの上に+1/+1カウンター１個を置く。</card>
     <card name="Tenacious Tomeseeker" ja="執拗な秘本探し" type="クリーチャー ― 人間・騎士" pt="3/2">協約（この呪文を唱えるに際し、アーティファクトやエンチャントやトークンのうち１つを生け贄に捧げてもよい。）
-執拗な秘本探しが戦場に出たとき、これが協約されていた場合、あなたの墓地にあるインスタントかソーサリーであるカード１枚を対象とする。それをあなたの手札に戻す。</card>
+執拗な秘本探しが戦場に出たとき、これが協約されていた場合、あなたの墓地にありインスタントかソーサリーであるカード１枚を対象とする。それをあなたの手札に戻す。</card>
     <card name="Vantress Transmuter" ja="ヴァントレスの変成者" type="クリーチャー ― 人間・ウィザード" pt="3/4" rel="Croaking Curse"></card>
     <card name="Croaking Curse" ja="カエル声の呪い" type="ソーサリー ― 出来事" rel="Vantress Transmuter">クリーチャー１体を対象とする。それをタップする。呪われし者・役割・トークン１つをそれについた状態で生成する。（エンチャントしているクリーチャーは1/1である。）</card>
     <card name="Virtue of Knowledge" ja="知識の徳目" type="エンチャント" rel="Vantress Visions">パーマネント１つが戦場に出たことによりあなたがコントロールしているパーマネントの誘発型能力１つが誘発するなら、その能力は追加でもう１回誘発する。</card>
@@ -192,7 +192,7 @@ III ― このターン、あなたが次にマナ総量が３以下でありイ
 あなたのドロー・ステップの開始時に、あなたがオーラがついているクリーチャーをコントロールしている場合、あなたは１点のライフを失い、追加でカード１枚を引く。</card>
     <card name="Lord Skitter's Butcher" ja="駆け抜け侯の解体屋" type="クリーチャー ― ネズミ・農民" pt="2/3">駆け抜け侯の解体屋が戦場に出たとき、以下から１つを選ぶ。
 ・「このクリーチャーではブロックできない。」を持つ黒の1/1のネズミ・クリーチャー・トークン１体を生成する。
-・あなたはこれでないクリーチャー１体を生け贄に捧げてもよい。そうしたなら、占術２を行い、その後、カード１枚を引く。
+・あなたはこれでないクリーチャー１体を生け贄に捧げてもよい。そうしたなら、占術２を行い、その後カード１枚を引く。
 ・ターン終了時まで、あなたがコントロールしている各クリーチャーは威迫を得る。</card>
     <card name="Lord Skitter, Sewer King" ja="下水王、駆け抜け侯" type="伝説のクリーチャー ― ネズミ・貴族" pt="3/3">これでないネズミ１体があなたのコントロール下で戦場に出るたび、対戦相手の墓地にあるカード最大１枚を対象とする。それを追放する。
 あなたのターンの戦闘の開始時に、「このクリーチャーではブロックできない。」を持つ黒の1/1のネズミ・クリーチャー・トークン１体を生成する。</card>
@@ -262,7 +262,7 @@ III ― あなたがコントロールしているクリーチャー１体を対
 祝祭 ― このターンに土地でない２つ以上のパーマネントがあなたのコントロール下で戦場に出たかぎり、擬態する歓楽者、ゴドリックは飛行と「(赤)：ターン終了時まで、あなたがコントロールしている各ドラゴンは+1/+0の修整を受ける。」を持ち基本のパワーとタフネスが4/4のドラゴンになる。（これは他のすべてのクリーチャー・タイプを失う。）</card>
     <card name="Grabby Giant" ja="がめつい巨人" type="クリーチャー ― 巨人" pt="4/3" rel="That's Mine">到達
 (２)(赤),アーティファクトや土地のうち１つを生け贄に捧げる：カード１枚を引く。</card>
-    <card name="That's Mine" ja="それは俺のだ" type="インスタント ― 出来事" rel="Grabby Giant">宝物・トークン１つを生成する。（その後、これを追放する。後で追放領域からこのクリーチャーを唱えてもよい。）</card>
+    <card name="That's Mine" ja="それは俺のだ" type="インスタント ― 出来事" rel="Grabby Giant">宝物・トークン１つを生成する。（その後、このカードを追放する。後で追放領域からこのクリーチャーを唱えてもよい。）</card>
     <card name="Grand Ball Guest" ja="大餐会の客人" type="クリーチャー ― 人間・農民" pt="2/2">祝祭 ― このターンに土地でない２つ以上のパーマネントがあなたのコントロール下で戦場に出たかぎり、大餐会の客人は+1/+1の修整を受けトランプルを持つ。</card>
     <card name="Harried Spearguard" ja="攻め立てられる槍護衛" type="クリーチャー ― 人間・兵士" pt="1/1">速攻
 攻め立てられる槍護衛が死亡したとき、「このクリーチャーではブロックできない。」を持つ黒の1/1のネズミ・クリーチャー・トークン１体を生成する。</card>
@@ -561,6 +561,38 @@ III ― あなたがコントロールしているすべての反射を生け贄
 (３)(緑)(青)：ターン終了時まで、眠らずの蔓茎はトランプルを持つ緑青の5/5の植物・クリーチャーになる。これは土地でもある。
 眠らずの蔓茎が攻撃するたび、これでないクリーチャー最大１体を対象とする。ターン終了時まで、それの基本のパワーとタフネスは3/3になる。</card>
     
+    <card name="Food Coma" ja="食後の眠気" type="エンチャント">食後の眠気が戦場に出たとき、対戦相手がコントロールしているクリーチャー１体を対象とする。食後の眠気が戦場を離れるまで、それを追放する。食物・トークン１つを生成する。（それは、「(２),(Ｔ),このアーティファクトを生け贄に捧げる：あなたは３点のライフを得る。」を持つアーティファクトである。）</card>
+    <card name="Lady of Laughter" ja="笑いの淑女" type="クリーチャー ― フェアリー・貴族" pt="4/5">飛行
+祝祭 ― あなたの終了ステップの開始時に、このターンに土地でない２つ以上のパーマネントがあなたのコントロール下で戦場に出た場合、カード１枚を引く。</card>
+    <card name="Pests of Honor" ja="名誉の害獣" type="クリーチャー ― ハツカネズミ" pt="2/2">祝祭 ― あなたのターンの戦闘の開始時に、このターンに土地でない２つ以上のパーマネントがあなたのコントロール下で戦場に出た場合、名誉の害獣の上に+1/+1カウンター１個を置く。</card>
+    <card name="Faerie Slumber Party" ja="フェアリーのまどろみパーティ" type="ソーサリー">すべてのクリーチャーをオーナーの手札に戻す。あなたは、これにより戻されたクリーチャーをコントロールしていた対戦相手１人につき、飛行と「このクリーチャーは飛行を持つクリーチャーのみをブロックできる。」を持つ青の1/1のフェアリー・クリーチャー・トークン２体を生成する。</card>
+    <card name="Rowdy Research" ja="騒々しい物探し" type="インスタント">この呪文を唱えるためのコストは、このターンに攻撃したクリーチャー１体につき(１)少なくなる。
+カード３枚を引く。</card>
+    <card name="Storyteller Pixie" ja="語り部のピクシー" type="クリーチャー ― フェアリー・ウィザード" pt="3/3">飛行
+あなたが出来事・呪文を唱えるたび、カード１枚を引く。</card>
+    <card name="Experimental Confectioner" ja="実験的な菓子職人" type="クリーチャー ― 人間・農民" pt="2/3">実験的な菓子職人が戦場に出たとき、食物・トークン１つを生成する。（それは、「(２),(Ｔ),このアーティファクトを生け贄に捧げる：あなたは３点のライフを得る。」を持つアーティファクトである。）
+あなたが食物１つを生け贄に捧げるたび、「このクリーチャーではブロックできない。」を持つ黒の1/1のネズミ・クリーチャー・トークン１体を生成する。</card>
+    <card name="Malevolent Witchkite" ja="邪悪なウィッチカイト" type="クリーチャー ― ドラゴン・邪術師" pt="5/4">飛行
+邪悪なウィッチカイトが戦場に出たとき、アーティファクトやエンチャントやトークンのうち望む数を生け贄に捧げる。その後、その数に等しい枚数のカードを引く。</card>
+    <card name="Old Flitterfang" ja="老いたる飛び牙" type="伝説のクリーチャー ― ネズミ・フェアリー" pt="3/4">飛行
+各終了ステップの開始時に、このターンにクリーチャーが死亡していた場合、食物・トークン１つを生成する。（それは、「(２),(Ｔ),このアーティファクトを生け贄に捧げる：あなたは３点のライフを得る。」を持つアーティファクトである。）
+(２)(黒),アーティファクトやクリーチャーのうちこれでない１つを生け贄に捧げる：ターン終了時まで、老いたる飛び牙は+2/+2の修整を受ける。</card>
+    <card name="Become Brutes" ja="凶獣化" type="ソーサリー">クリーチャー１体か２体を対象とする。ターン終了時まで、それらは速攻を得る。それらの各クリーチャーにつきそれぞれ、怪物・役割・トークン１つをそれについた状態で生成する。（あなたがコントロールしている役割がすでにそれについていたなら、その役割を墓地に置く。エンチャントしているクリーチャーは+1/+1の修整を受けトランプルを持つ。）</card>
+    <card name="Charging Hooligan" ja="突進する悪党" type="クリーチャー ― 人間・農民" pt="3/3">突進する悪党が攻撃するたび、ターン終了時まで、これは攻撃クリーチャー１体につき+1/+0の修整を受ける。ネズミが攻撃しているなら、ターン終了時まで、突進する悪党はトランプルを得る。</card>
+    <card name="Ogre Chitterlord" ja="オーガの囀王" type="クリーチャー ― オーガ・戦士" pt="6/5">威迫
+オーガの囀王が戦場に出るか攻撃するたび、「このクリーチャーではブロックできない。」を持つ黒の1/1のネズミ・クリーチャー・トークン２体を生成する。その後、あなたが５体以上のネズミをコントロールしているなら、ターン終了時まで、あなたがコントロールしている各ネズミは+2/+0の修整を受ける。</card>
+    <card name="Intrepid Trufflesnout" ja="剛胆なトリュフ嗅ぎ" type="クリーチャー ― 猪" pt="3/1" rel="Go Hog Wild">剛胆なトリュフ嗅ぎが単独で攻撃するたび、食物・トークン１つを生成する。（それは、「(２),(Ｔ),このアーティファクトを生け贄に捧げる：あなたは３点のライフを得る。」を持つアーティファクトである。）</card>
+    <card name="Go Hog Wild" ja="猪突猛進" type="インスタント ― 出来事" rel="Intrepid Trufflesnout">クリーチャー１体を対象とする。ターン終了時まで、それは+2/+2の修整を受ける。（その後、このカードを追放する。後で追放領域からこのクリーチャーを唱えてもよい。）</card>
+    <card name="Provisions Merchant" ja="食糧の商人" type="クリーチャー ― ビースト・農民" pt="3/3">食糧の商人が戦場に出たとき、食物・トークン１つを生成する。（それは、「(２),(Ｔ),このアーティファクトを生け贄に捧げる：あなたは３点のライフを得る。」を持つアーティファクトである。）
+食糧の商人が攻撃するたび、あなたは食物１つを生け贄に捧げてもよい。そうしたなら、ターン終了時まで、各攻撃クリーチャーは+1/+1の修整を受けトランプルを得る。</card>
+    <card name="Wildwood Mentor" ja="僻森の師" type="クリーチャー ― ツリーフォーク" pt="1/1">トークン１つがあなたのコントロール下で戦場に出るたび、僻森の師の上に+1/+1カウンター１個を置く。
+僻森の師が攻撃するたび、これでない攻撃クリーチャー１体を対象とする。ターン終了時まで、それは+X/+Xの修整を受ける。Ｘは僻森の師のパワーに等しい。</card>
+    
+    <!-- WOC -->
+    <card name="Tegwyll, Duke of Splendor" ja="壮麗公爵、テグウィル" type="伝説のクリーチャー ― フェアリー・貴族" pt="2/3">飛行、接死
+あなたがコントロールしていてこれでない各フェアリーは+1/+1の修整を受ける。
+あなたがコントロールしていてこれでないフェアリー１体が死亡するたび、あなたはカード１枚を引き、１点のライフを失う。</card>
+    
     <!-- 定義済みトークン -->
     <card name="Blood Token" ja="血・トークン" type="トークン・アーティファクト ― 血" wiki="血">(１),(Ｔ),カード１枚を捨てる,このアーティファクトを生け贄に捧げる：カード１枚を引く。</card>
     <card name="Clue Token" ja="手掛かり・トークン" type="トークン・アーティファクト ― 手掛かり" wiki="手掛かり">(２),このアーティファクトを生け贄に捧げる：カード１枚を引く。</card>
@@ -693,7 +725,7 @@ III ― あなたがコントロールしているすべての反射を生け贄
 地下墓地/Catacombs ― 威迫を持つ黒の4/1のスケルトン・クリーチャー・トークン１体を生成する。
 死せる三者の玉座/Throne of the Dead Three ― あなたのライブラリーの一番上からカード１０枚を公開する。その中からクリーチャー・カード１枚を+1/+1カウンター３個が置かれた状態で戦場に出す。あなたの次のターンまで、それは呪禁を得る。その後、ライブラリーを切り直す。</card>
     <!-- 名前を変更するカード -->
-    <card name="Everflame, Heroes’ Legacy" ja="英雄の遺産、エヴァーフレイム" type="伝説のアーティファクト ― 装備品" wiki="アイレンクラッグ/The Irencrag">装備しているクリーチャーは+3/+3の修整を受ける。
+    <card name="Everflame, Heroes' Legacy" ja="英雄の遺産、エヴァーフレイム" type="伝説のアーティファクト ― 装備品" wiki="アイレンクラッグ/The Irencrag">装備しているクリーチャーは+3/+3の修整を受ける。
 装備(３)</card>
     <card name="Legitimate Businessperson" ja="れっきとした実業家" type="クリーチャー ― 市民" pt="1/1" wiki="証人保護/Witness Protection">（このクリーチャーは他の色やカード・タイプやサブタイプや名前を失う。）</card>
     <card name="Mishra's Warform" ja="ミシュラの戦機" type="トークン・アーティファクト・クリーチャー ― 構築物" pt="4/4" wiki="高名な者、ミシュラ/Mishra, Eminent One">（このトークンはコピーしたアーティファクトの能力や他のタイプを持つ。）</card>
@@ -1642,6 +1674,11 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="289  /  291 " sub="MOM" name="Mountain" />
     <alt key="290  /  291 " sub="MOM" name="Forest" />
     <alt key="291  /  291 " sub="MOM" name="Forest" />
+    <alt key="262  /  276 " sub="WOE" name="Plains" />
+    <alt key="263  /  276 " sub="WOE" name="Island" />
+    <alt key="264  /  276 " sub="WOE" name="Swamp" />
+    <alt key="265  /  276 " sub="WOE" name="Mountain" />
+    <alt key="266  /  276 " sub="WOE" name="Forest" />
     <!-- SL2 -->
     <alt key="138 " sub="SLD" name="Anguished Unmaking" />
     <alt key="139 " sub="SLD" name="Assassin's Trophy" />
@@ -2509,6 +2546,95 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="284 " sub="UNF" name="Overgrown Tomb" />
     <alt key="285 " sub="UNF" name="Sacred Foundry" />
     <alt key="286 " sub="UNF" name="Breeding Pool" />
+    <!-- WOE -->
+    <alt key="277 " sub="WOE" name="Virtue of Loyalty" />
+    <alt key="278 " sub="WOE" name="Horned Loch-Whale" />
+    <alt key="279 " sub="WOE" name="Virtue of Knowledge" />
+    <alt key="280 " sub="WOE" name="Gumdrop Poisoner" />
+    <alt key="281 " sub="WOE" name="Virtue of Persistence" />
+    <alt key="282 " sub="WOE" name="Virtue of Courage" />
+    <alt key="283 " sub="WOE" name="Bramble Familiar" />
+    <alt key="284 " sub="WOE" name="Virtue of Strength" />
+    <alt key="285 " sub="WOE" name="Beluna Grandsquall" />
+    <alt key="286 " sub="WOE" name="Cruel Somnophage" />
+    <alt key="287 " sub="WOE" name="Decadent Dragon" />
+    <alt key="288 " sub="WOE" name="Devouring Sugarmaw" />
+    <alt key="289 " sub="WOE" name="Elusive Otter" />
+    <alt key="290 " sub="WOE" name="Heartflame Duelist" />
+    <alt key="291 " sub="WOE" name="Kellan, the Fae-Blooded" />
+    <alt key="292 " sub="WOE" name="Mosswood Dreadknight" />
+    <alt key="293 " sub="WOE" name="Pollen-Shield Hare" />
+    <alt key="294 " sub="WOE" name="Questing Druid" />
+    <alt key="295 " sub="WOE" name="Scalding Viper" />
+    <alt key="296 " sub="WOE" name="Twining Twins" />
+    <alt key="298 " sub="WOE" name="Kellan, the Fae-Blooded" />
+    <alt key="299 " sub="WOE" name="Eriette of the Charmed Apple" />
+    <alt key="300 " sub="WOE" name="Rowan, Scion of War" />
+    <alt key="301 " sub="WOE" name="Talion, the Kindly Lord" />
+    <alt key="302 " sub="WOE" name="Will, Scion of Peace" />
+    <alt key="303 " sub="WOE" name="Restless Bivouac" />
+    <alt key="304 " sub="WOE" name="Restless Cottage" />
+    <alt key="305 " sub="WOE" name="Restless Fortress" />
+    <alt key="306 " sub="WOE" name="Restless Spire" />
+    <alt key="307 " sub="WOE" name="Restless Vinestalk" />
+    <alt key="323 " sub="WOE" name="Archon of the Wild Rose" />
+    <alt key="324 " sub="WOE" name="Expel the Interlopers" />
+    <alt key="325 " sub="WOE" name="Moonshaker Cavalry" />
+    <alt key="326 " sub="WOE" name="Regal Bunnicorn" />
+    <alt key="327 " sub="WOE" name="Spellbook Vendor" />
+    <alt key="328 " sub="WOE" name="A Tale for the Ages" />
+    <alt key="329 " sub="WOE" name="Werefox Bodyguard" />
+    <alt key="330 " sub="WOE" name="Asinine Antics" />
+    <alt key="331 " sub="WOE" name="Extraordinary Journey" />
+    <alt key="332 " sub="WOE" name="Farsight Ritual" />
+    <alt key="333 " sub="WOE" name="Ingenious Prodigy" />
+    <alt key="334 " sub="WOE" name="Sleep-Cursed Faerie" />
+    <alt key="335 " sub="WOE" name="Talion's Messenger" />
+    <alt key="336 " sub="WOE" name="Beseech the Mirror" />
+    <alt key="337 " sub="WOE" name="The End" />
+    <alt key="338 " sub="WOE" name="Lich-Knights' Conquest" />
+    <alt key="339 " sub="WOE" name="Lord Skitter, Sewer King" />
+    <alt key="340 " sub="WOE" name="Lord Skitter's Blessing" />
+    <alt key="341 " sub="WOE" name="Rankle's Prank" />
+    <alt key="342 " sub="WOE" name="Specter of Mortality" />
+    <alt key="343 " sub="WOE" name="Spiteful Hexmage" />
+    <alt key="344 " sub="WOE" name="Tangled Colony" />
+    <alt key="345 " sub="WOE" name="Charming Scoundrel" />
+    <alt key="346 " sub="WOE" name="Food Fight" />
+    <alt key="347 " sub="WOE" name="Goddric, Cloaked Reveler" />
+    <alt key="348 " sub="WOE" name="Imodane, the Pyrohammer" />
+    <alt key="349 " sub="WOE" name="Raging Battle Mouse" />
+    <alt key="350 " sub="WOE" name="Realm-Scorcher Hellkite" />
+    <alt key="351 " sub="WOE" name="Redcap Gutter-Dweller" />
+    <alt key="352 " sub="WOE" name="Rotisserie Elemental" />
+    <alt key="353 " sub="WOE" name="Song of Totentanz" />
+    <alt key="354 " sub="WOE" name="Blossoming Tortoise" />
+    <alt key="355 " sub="WOE" name="Elvish Archivist" />
+    <alt key="356 " sub="WOE" name="Feral Encounter" />
+    <alt key="357 " sub="WOE" name="Gruff Triplets" />
+    <alt key="358 " sub="WOE" name="Sentinel of Lost Lore" />
+    <alt key="359 " sub="WOE" name="Thunderous Debut" />
+    <alt key="360 " sub="WOE" name="Agatha of the Vile Cauldron" />
+    <alt key="361 " sub="WOE" name="Faunsbane Troll" />
+    <alt key="362 " sub="WOE" name="The Goose Mother" />
+    <alt key="363 " sub="WOE" name="Hylda of the Icy Crown" />
+    <alt key="364 " sub="WOE" name="Likeness Looter" />
+    <alt key="365 " sub="WOE" name="Yenna, Redtooth Regent" />
+    <alt key="366 " sub="WOE" name="Agatha's Soul Cauldron" />
+    <alt key="367 " sub="WOE" name="Hylda's Crown of Winter" />
+    <alt key="368 " sub="WOE" name="The Irencrag" />
+    <alt key="369 " sub="WOE" name="Syr Ginger, the Meal Ender" />
+    <alt key="370 " sub="WOE" name="Lady of Laughter" />
+    <alt key="371 " sub="WOE" name="Faerie Slumber Party" />
+    <alt key="372 " sub="WOE" name="Malevolent Witchkite" />
+    <alt key="373 " sub="WOE" name="Ogre Chitterlord" />
+    <alt key="374 " sub="WOE" name="Wildwood Mentor" />
+    <alt key="375 " sub="WOE" name="Stroke of Midnight" />
+    <alt key="376 " sub="WOE" name="Sleight of Hand" />
+    <alt key="377 " sub="WOE" name="Faerie Dreamthief" />
+    <alt key="378 " sub="WOE" name="Torch the Tower" />
+    <alt key="379 " sub="WOE" name="Tanglespan Lookout" />
+    <alt key="381 " sub="WOE" name="Expel the Interlopers" />
     <!-- ZNR variants -->
     <alt key="0109  /  1158 " sub="ZNR" name="Needleverge Pathway" />
     <alt key="0110  /  1158 " sub="ZNR" name="Pillarverge Pathway" />
@@ -5556,7 +5682,15 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="902 " sub="CMM" name="The Mending of Dominaria" />
     <alt key="916 " sub="CMM" name="Battle for Bretagard" />
     <alt key="917 " sub="CMM" name="Binding the Old Gods" />
-    <!-- 出来事 (ELD, AFC, CLB, MOC, CMM) : SearchAltSubKey method の追記が必要 -->
+    <alt key="023  /  276 " sub="WOE" name="The Princess Takes Flight" />
+    <alt key="035  /  276 " sub="WOE" name="Three Blind Mice" />
+    <alt key="051  /  276 " sub="WOE" name="Gadwick's First Duel" />
+    <alt key="119  /  276 " sub="WOE" name="The Witch's Vanity" />
+    <alt key="139  /  276 " sub="WOE" name="Korvold and the Noble Thief" />
+    <alt key="176  /  276 " sub="WOE" name="The Huntsman's Redemption" />
+    <alt key="198  /  276 " sub="WOE" name="Welcome to Sweettooth" />
+    <alt key="200  /  276 " sub="WOE" name="The Apprentice's Folly" />
+    <!-- 出来事 (ELD, AFC, CLB, MOC, CMM, WOE) : SearchAltSubKey method の追記が必要 -->
     <alt key="005  /  269 " sub="ELD" name="Ardenvale Tactician" />
     <alt key="011  /  269 " sub="ELD" name="Faerie Guidemother" />
     <alt key="014  /  269 " sub="ELD" name="Giant Killer" />
@@ -5623,6 +5757,60 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="261 " sub="MOC" name="Order of Midnight" />
     <alt key="268 " sub="MOC" name="Smitten Swordmaster" />
     <alt key="275 " sub="CMM" name="Beanstalk Giant" />
+    <alt key="004  /  276 " sub="WOE" name="Besotted Knight" />
+    <alt key="007  /  276 " sub="WOE" name="Cheeky House-Mouse" />
+    <alt key="038  /  276 " sub="WOE" name="Virtue of Loyalty" />
+    <alt key="040  /  276 " sub="WOE" name="Aquatic Alchemist" />
+    <alt key="043  /  276 " sub="WOE" name="Beluna's Gatekeeper" />
+    <alt key="052  /  276 " sub="WOE" name="Galvanic Giant" />
+    <alt key="053  /  276 " sub="WOE" name="Horned Loch-Whale" />
+    <alt key="063  /  276 " sub="WOE" name="Obyra's Attendants" />
+    <alt key="064  /  276 " sub="WOE" name="Picklock Prankster" />
+    <alt key="075  /  276 " sub="WOE" name="Vantress Transmuter" />
+    <alt key="076  /  276 " sub="WOE" name="Virtue of Knowledge" />
+    <alt key="084  /  276 " sub="WOE" name="Conceited Witch" />
+    <alt key="092  /  276 " sub="WOE" name="Fell Horseman" />
+    <alt key="093  /  276 " sub="WOE" name="Gumdrop Poisoner" />
+    <alt key="115  /  276 " sub="WOE" name="Virtue of Persistence" />
+    <alt key="121  /  276 " sub="WOE" name="Bellowing Bruiser" />
+    <alt key="133  /  276 " sub="WOE" name="Grabby Giant" />
+    <alt key="136  /  276 " sub="WOE" name="Hearth Elemental" />
+    <alt key="141  /  276 " sub="WOE" name="Minecart Daredevil" />
+    <alt key="144  /  276 " sub="WOE" name="Ratcatcher Trainee" />
+    <alt key="155  /  276 " sub="WOE" name="Two-Headed Hunter" />
+    <alt key="157  /  276 " sub="WOE" name="Virtue of Courage" />
+    <alt key="161  /  276 " sub="WOE" name="Beanstalk Wurm" />
+    <alt key="164  /  276 " sub="WOE" name="Bramble Familiar" />
+    <alt key="170  /  276 " sub="WOE" name="Ferocious Werefox" />
+    <alt key="174  /  276 " sub="WOE" name="Hollow Scavenger" />
+    <alt key="187  /  276 " sub="WOE" name="Stormkeld Vanguard" />
+    <alt key="197  /  276 " sub="WOE" name="Virtue of Strength" />
+    <alt key="220  /  276 " sub="WOE" name="Beluna Grandsquall" />
+    <alt key="221  /  276 " sub="WOE" name="Callous Sell-Sword" />
+    <alt key="222  /  276 " sub="WOE" name="Cruel Somnophage" />
+    <alt key="223  /  276 " sub="WOE" name="Decadent Dragon" />
+    <alt key="224  /  276 " sub="WOE" name="Devouring Sugarmaw" />
+    <alt key="225  /  276 " sub="WOE" name="Elusive Otter" />
+    <alt key="226  /  276 " sub="WOE" name="Frolicking Familiar" />
+    <alt key="227  /  276 " sub="WOE" name="Gingerbread Hunter" />
+    <alt key="228  /  276 " sub="WOE" name="Heartflame Duelist" />
+    <alt key="229  /  276 " sub="WOE" name="Imodane's Recruiter" />
+    <alt key="230  /  276 " sub="WOE" name="Kellan, the Fae-Blooded" />
+    <alt key="231  /  276 " sub="WOE" name="Mosswood Dreadknight" />
+    <alt key="232  /  276 " sub="WOE" name="Picnic Ruiner" />
+    <alt key="233  /  276 " sub="WOE" name="Pollen-Shield Hare" />
+    <alt key="234  /  276 " sub="WOE" name="Questing Druid" />
+    <alt key="235  /  276 " sub="WOE" name="Scalding Viper" />
+    <alt key="236  /  276 " sub="WOE" name="Shrouded Shepherd" />
+    <alt key="237  /  276 " sub="WOE" name="Spellscorn Coven" />
+    <alt key="238  /  276 " sub="WOE" name="Tempest Hart" />
+    <alt key="239  /  276 " sub="WOE" name="Threadbind Clique" />
+    <alt key="240  /  276 " sub="WOE" name="Twining Twins" />
+    <alt key="241  /  276 " sub="WOE" name="Woodland Acolyte" />
+    <alt key="320 " sub="WOE" name="Intrepid Trufflesnout" />
+    <alt key="71 " sub="WOC" name="Realm-Cloaked Giant" />
+    <alt key="85 " sub="WOC" name="Brazen Borrower" />
+    <alt key="96 " sub="WOC" name="Hypnotic Sprite" />
     <!-- 変容 (IKO, C20, DMC, MOC) -->
     <alt key="003  /  274 " sub="IKO" name="Mysterious Egg" />
     <alt key="007  /  274 " sub="IKO" name="Cubwarden" />
