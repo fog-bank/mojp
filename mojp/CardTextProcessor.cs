@@ -352,6 +352,7 @@ namespace Mojp
         //    return false;
         //}
 
+#if !OFFLINE
         /// <summary>
         /// WHISPER の検索結果テキストを解析し、カード情報を列挙します。
         /// </summary>
@@ -451,7 +452,7 @@ namespace Mojp
                             break;
 
                         case "　セット":
-                            if (tokens[1] is "Unglued" or "Unhinged" or "Unstable" or "Unsanctioned" or "Unfinity")
+                            if (tokens[1] is "Special" or "Astral Set" or "Dreamcast's Original" or "Mystery Booster" or "Unglued" or "Unhinged" or "Unstable" or "Unsanctioned" or "Unfinity")
                                 card = null;
                             break;
 
@@ -470,7 +471,9 @@ namespace Mojp
             if (card?.Name != null)
                 yield return ProcessCard(card, texts);
         }
+#endif
 
+#if !OFFLINE
         private static Card ProcessCard(Card card, List<string> texts)
         {
             card.Text = string.Join("\n", texts);
@@ -495,6 +498,7 @@ namespace Mojp
             }
             return card;
         }
+#endif
 
 #if !OFFLINE
         /// <summary>
