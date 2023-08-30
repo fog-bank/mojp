@@ -626,7 +626,7 @@ III ― あなたがコントロールしているすべての反射を生け贄
 あなたがコントロールしている１体以上のフェアリーがプレイヤー１人に戦闘ダメージを与えるたび、フェアリーの刃造りの上に+1/+1カウンター１個を置く。
 フェアリーの刃造りが死亡したとき、各対戦相手はそれぞれＸ点のライフを失い、あなたはＸ点のライフを得る。Ｘはこれのパワーに等しい。</card>
     <card name="Nettling Nuisance" ja="苛立たせる厄介者" type="クリーチャー ― フェアリー・ならず者" pt="3/1">飛行
-あなたがコントロールしている１体以上のフェアリーがプレイヤー１人に戦闘ダメージを与えるたび、そのプレイヤーは「このクリーチャーではブロックできない。」を持つ、赤の4/2の海賊・クリーチャー・トークン１体を生成する。このゲームの間、そのトークンは使嗾される。（それは各戦闘で可能なら攻撃し、可能ならあなたでないプレイヤーを攻撃する。）</card>
+あなたがコントロールしている１体以上のフェアリーがプレイヤー１人に戦闘ダメージを与えるたび、そのプレイヤーは「このクリーチャーではブロックできない。」を持つ、赤の4/2の海賊・クリーチャー・トークン１体を生成する。このゲームの間、そのトークンは使嗾される。（それは可能なら各戦闘で攻撃し、可能ならあなたでないプレイヤーを攻撃する。）</card>
     <card name="Tegwyll's Scouring" ja="テグウィルの一掃" type="ソーサリー">あなたはテグウィルの一掃を、他のコストの支払いに加えて、あなたがコントロールしていて飛行を持つアンタップ状態のクリーチャー３体をタップすることで瞬速を持っているかのように唱えてもよい。
 すべてのクリーチャーを破壊する。飛行を持つ黒の1/1のフェアリー・ならず者・クリーチャー・トークン３体を生成する。</card>
     <card name="Giant Inheritance" ja="巨人の遺伝" type="エンチャント ― オーラ">エンチャント（クリーチャー）
@@ -2699,6 +2699,37 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="378 " sub="WOE" name="Torch the Tower" />
     <alt key="379 " sub="WOE" name="Tanglespan Lookout" />
     <alt key="381 " sub="WOE" name="Expel the Interlopers" />
+    <!-- WOC -->
+    <alt key="29 " sub="WOC" name="Court of Ardenvale" />
+    <alt key="30 " sub="WOC" name="Court of Vantress" />
+    <alt key="31 " sub="WOC" name="Court of Locthwain" />
+    <alt key="32 " sub="WOC" name="Court of Embereth" />
+    <alt key="33 " sub="WOC" name="Court of Garenbrig" />
+    <alt key="34 " sub="WOC" name="Alela, Cunning Conqueror" />
+    <alt key="35 " sub="WOC" name="Brenard, Ginger Sculptor" />
+    <alt key="36 " sub="WOC" name="Ellivere of the Wild Court" />
+    <alt key="37 " sub="WOC" name="Gylwain, Casting Director" />
+    <alt key="38 " sub="WOC" name="Korvold, Gleeful Glutton" />
+    <alt key="39 " sub="WOC" name="Tegwyll, Duke of Splendor" />
+    <alt key="40 " sub="WOC" name="Throne of Eldraine" />
+    <alt key="41 " sub="WOC" name="Liberated Livestock" />
+    <alt key="42 " sub="WOC" name="Ox Drover" />
+    <alt key="43 " sub="WOC" name="Songbirds' Blessing" />
+    <alt key="44 " sub="WOC" name="Unfinished Business" />
+    <alt key="45 " sub="WOC" name="Archmage of Echoes" />
+    <alt key="46 " sub="WOC" name="Malleable Impostor" />
+    <alt key="47 " sub="WOC" name="Misleading Signpost" />
+    <alt key="48 " sub="WOC" name="Shadow Puppeteers" />
+    <alt key="49 " sub="WOC" name="Blightwing Bandit" />
+    <alt key="50 " sub="WOC" name="Faerie Bladecrafter" />
+    <alt key="51 " sub="WOC" name="Nettling Nuisance" />
+    <alt key="52 " sub="WOC" name="Tegwyll's Scouring" />
+    <alt key="53 " sub="WOC" name="Giant Inheritance" />
+    <alt key="54 " sub="WOC" name="Knickknack Ouphe" />
+    <alt key="55 " sub="WOC" name="Loamcrafter Faun" />
+    <alt key="56 " sub="WOC" name="Timber Paladin" />
+    <alt key="57 " sub="WOC" name="Ellivere of the Wild Court" />
+    <alt key="58 " sub="WOC" name="Tegwyll, Duke of Splendor" />
     <!-- ZNR variants -->
     <alt key="0109  /  1158 " sub="ZNR" name="Needleverge Pathway" />
     <alt key="0110  /  1158 " sub="ZNR" name="Pillarverge Pathway" />
@@ -6973,7 +7004,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="土地や両面であるカード" value="土地か両面であるカード" />
     <regex target="text" pattern="起動型や誘発型である能力１つ" value="起動型か誘発型である能力１つ" />
     <regex target="text" pattern="トランプルや速攻を持つクリーチャー最大１体" value="トランプルか速攻を持つクリーチャー最大１体" />
-    <regex target="text" pattern="あなたの手札やあなたの墓地から(?=土地|オーラ)" value="あなたの手札かあなたの墓地から" />
+    <regex target="text" pattern="(?&lt;!それぞれ[^。]+)あなたの手札やあなたの墓地から(?=土地|オーラ)" value="あなたの手札かあなたの墓地から" />
     <regex target="text" pattern="戦場や統率領域にあり" value="戦場か統率領域にあり" />
     <regex target="text" pattern="(?&lt;!や|体以上の)(狼|ゴブリン|忍者|エルフ)や(狼男|オーク|ならず者|エレメンタル)(?=をコントロールしている|をコントロールしていない|１体が死亡するたび|であるクリーチャー１体|である１体以上のクリーチャー|であるクリーチャー・カード最大１枚|であるカードが公開されるまで|であったなら)" value="$1か$2" />
     <regex target="text" pattern="(?:クラーケンやリバイアサンやタコや海蛇|海蛇やクラーケンやタコやリバイアサン)(?=であるクリーチャー・カードである|である呪文を唱える|であったなら)" value="クラーケンかリバイアサンかタコか海蛇" />
