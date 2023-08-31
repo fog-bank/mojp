@@ -1825,6 +1825,8 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <wiki name="Black Lotus" wiki="Black Lotus" />
     <wiki name="Braingeyser" wiki="Braingeyser" />
     <wiki name="Captivating Vampire" wiki="蟲惑的な吸血鬼/Captivating Vampire" />
+    
+    <!-- ★特殊カード枠 -->
     <!-- 基本土地 -->
     <alt key="Basic Snow Land" sub="Plains" name="Snow-Covered Plains" /> <!-- MH1 -->
     <alt key="Basic Snow Land" sub="Island" name="Snow-Covered Island" />
@@ -1995,7 +1997,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="SL3AprilFoolsArtless" sub="NOT YET IMPLEMENTED" name="Terramorphic Expanse" />
     <!-- 2X2 -->
     <alt key="0332" sub="2X2" name="Cryptic Spires" />
-    <!-- SCD -->
+    <!-- Starter Commander -->
     <alt key="0001" sub="SCD" name="Atarka, World Render" />
     <alt key="0002" sub="SCD" name="Emmara, Soul of the Accord" />
     <alt key="0003" sub="SCD" name="Gisa and Geralf" />
@@ -2919,6 +2921,8 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0056" sub="WOC" name="Timber Paladin" />
     <alt key="0057" sub="WOC" name="Ellivere of the Wild Court" />
     <alt key="0058" sub="WOC" name="Tegwyll, Duke of Splendor" />
+    
+    <!-- ★PRMセット扱い -->
     <!-- ZNR variants -->
     <alt key="0109" sub="ZNR" name="Needleverge Pathway" />
     <alt key="0110" sub="ZNR" name="Pillarverge Pathway" />
@@ -3195,19 +3199,19 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0107" sub="AFC" name="Wulfgar of Icewind Dale" />
     <!-- MID variants -->
     <alt key="0001" sub="MID" name="Intrepid Adversary" />
-    <alt key="0002" sub="MID" name="Sigardian Savior" />
-    <alt key="0004" sub="MID" name="Enduring Angel" />
+    <alt key="0002" sub="David Rapoza" tri="MID" name="Sigardian Savior" />
+    <alt key="0004" sub="Irina Nordsol" tri="MID" name="Enduring Angel" />
     <alt key="0006" sub="MID" name="Sungold Sentinel" />
     <alt key="0009" sub="MID" name="Sigarda's Splendor" />
     <alt key="0011" sub="MID" name="Fateful Absence" />
-    <alt key="0013" sub="MID" name="Curse of Silence" />
+    <alt key="0013" sub="Irina Nordsol" tri="MID" name="Curse of Silence" />
     <alt key="0015" sub="MID" name="Vanquish the Horde" />
     <alt key="0018" sub="MID" name="Spectral Adversary" />
     <alt key="0019" sub="Simon Dominic" tri="MID" name="Poppet Stitcher" />
     <alt key="0021" sub="MID" name="Triskaidekaphile" />
     <alt key="0024" sub="MID" name="Patrician Geist" />
     <alt key="0026" sub="MID" name="Sludge Monster" />
-    <alt key="0028" sub="MID" name="Memory Deluge" />
+    <alt key="0028" sub="Lake Hurwitz" tri="MID" name="Memory Deluge" />
     <alt key="0030" sub="MID" name="Grafted Identity" />
     <alt key="0032" sub="MID" name="Curse of Surveillance" />
     <alt key="0035" sub="MID" name="Malevolent Hermit" />
@@ -3215,7 +3219,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0038" sub="MID" name="Lord of the Forsaken" />
     <alt key="0039" sub="MID" name="The Meathook Massacre" />
     <alt key="0041" sub="MID" name="Hostile Hostel" />
-    <alt key="0042" sub="MID" name="Champion of the Perished" />
+    <alt key="0042" sub="Kekai Kotaki" tri="MID" name="Champion of the Perished" />
     <alt key="0044" sub="MID" name="Champion of the Perished" />
     <alt key="0046" sub="MID" name="Slaughter Specialist" />
     <alt key="0049" sub="MID" name="Bloodline Culling" />
@@ -3226,34 +3230,34 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0058" sub="MID" name="Sunstreak Phoenix" />
     <alt key="0059" sub="MID" name="Falkenrath Pit Fighter" />
     <alt key="0060" sub="MID" name="Light Up the Night" />
-    <alt key="0061" sub="MID" name="Curse of Shaken Faith" />
+    <alt key="0061" sub="Campbell White" tri="MID" name="Curse of Shaken Faith" />
     <alt key="0062" sub="MID" name="Geistflame Reservoir" />
-    <alt key="0063" sub="MID" name="Burn Down the House" />
+    <alt key="0063" sub="Campbell White" tri="MID" name="Burn Down the House" />
     <alt key="0066" sub="MID" name="Smoldering Egg" />
-    <alt key="0068" sub="MID" name="Primal Adversary" />
+    <alt key="0068" sub="Ilse Gort" tri="MID" name="Primal Adversary" />
     <alt key="0069" sub="MID" name="Consuming Blob" />
     <alt key="0072" sub="MID" name="Willow Geist" />
     <alt key="0074" sub="MID" name="Augur of Autumn" />
     <alt key="0076" sub="MID" name="Briarbridge Tracker" />
     <alt key="0079" sub="MID" name="Unnatural Growth" />
     <alt key="0081" sub="MID" name="Storm the Festival" />
-    <alt key="0092" sub="MID" name="Hallowed Respite" />
+    <!--<alt key="0092" sub="Jason A. Engle" tri="MID" name="Hallowed Respite" />-->
     <alt key="0093" sub="MID" name="Siphon Insight" />
-    <alt key="0094" sub="MID" name="Wake to Slaughter" />
+    <alt key="0094" sub="Chris Cold" tri="MID" name="Wake to Slaughter" />
     <alt key="0095" sub="MID" name="Dire-Strain Rampage" />
     <alt key="0096" sub="MID" name="Rite of Harmony" />
     <alt key="0097" sub="MID" name="Can't Stay Away" />
     <alt key="0098" sub="MID" name="Galvanic Iteration" />
     <alt key="0099" sub="MID" name="Ghoulcaller's Harvest" />
-    <alt key="0100" sub="MID" name="Angelfire Ignition" />
+    <alt key="0100" sub="Yeong-Hao Han" tri="MID" name="Angelfire Ignition" />
     <alt key="0101" sub="MID" name="Croaking Counterpart" />
     <alt key="0102" sub="MID" name="Pithing Needle" />
     <alt key="0103" sub="MID" name="The Celestus" />
-    <alt key="0105" sub="MID" name="Deserted Beach" />
+    <alt key="0105" sub="Piotr Dura" tri="MID" name="Deserted Beach" />
     <alt key="0106" sub="MID" name="Shipwreck Marsh" />
     <alt key="0107" sub="MID" name="Haunted Ridge" />
     <alt key="0108" sub="MID" name="Rockfall Vale" />
-    <alt key="0109" sub="MID" name="Overgrown Farmland" />
+    <alt key="0109" sub="Donato Giancola" tri="MID" name="Overgrown Farmland" />
     <!-- MIC variants -->
     <alt key="0003" sub="MIC" name="Avacyn's Memorial" />
     <alt key="0007" sub="MIC" name="Wall of Mourning" />
@@ -3297,8 +3301,8 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0001" sub="VOW" name="Hopeful Initiate" />
     <alt key="0004" sub="VOW" name="Voice of the Blessed" />
     <alt key="0007" sub="VOW" name="Lantern Flare" />
-    <alt key="0009" sub="VOW" name="Sigarda's Summons" />
-    <alt key="0012" sub="VOW" name="By Invitation Only" />
+    <alt key="0009" sub="Nestor Ossandon Leal" tri="VOW" name="Sigarda's Summons" />
+    <alt key="0012" sub="Micah Epstein" tri="VOW" name="By Invitation Only" />
     <alt key="0014" sub="VOW" name="Wedding Announcement" />
     <alt key="0016" sub="VOW" name="Cemetery Protector" />
     <alt key="0018" sub="VOW" name="Savior of Ollenbock" />
@@ -3316,7 +3320,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0041" sub="VOW" name="Necroduality" />
     <alt key="0044" sub="VOW" name="Headless Rider" />
     <alt key="0047" sub="VOW" name="Graf Reaver" />
-    <alt key="0049" sub="VOW" name="Dreadfeast Demon" />
+    <alt key="0049" sub="Andrew Mar" tri="VOW" name="Dreadfeast Demon" />
     <alt key="0051" sub="VOW" name="Dying to Serve" />
     <alt key="0053" sub="VOW" name="Path of Peril" />
     <alt key="0054" sub="VOW" name="Demonic Bargain" />
@@ -3324,13 +3328,13 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0059" sub="VOW" name="Cemetery Desecrator" />
     <alt key="0061" sub="VOW" name="Kessig Wolfrider" />
     <alt key="0063" sub="VOW" name="Creepy Puppeteer" />
-    <alt key="0068" sub="VOW" name="Alchemist's Gambit" />
+    <alt key="0068" sub="Zoltan Boros" tri="VOW" name="Alchemist's Gambit" />
     <alt key="0070" sub="VOW" name="Curse of Hospitality" />
     <alt key="0072" sub="VOW" name="Change of Fortune" />
     <alt key="0073" sub="VOW" name="Stensia Uprising" />
     <alt key="0075" sub="VOW" name="Ill-Tempered Loner" />
     <alt key="0078" sub="VOW" name="Manaform Hellkite" />
-    <alt key="0079" sub="VOW" name="Volatile Arsonist" />
+    <alt key="0079" sub="Gabor Szikszai" tri="VOW" name="Volatile Arsonist" />
     <alt key="0081" sub="VOW" name="Ascendant Packleader" />
     <alt key="0082" sub="VOW" name="Hamlet Vanguard" />
     <alt key="0083" sub="VOW" name="Hiveheart Shaman" />
@@ -3342,7 +3346,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0092" sub="VOW" name="Howlpack Piper" />
     <alt key="0095" sub="VOW" name="Cemetery Prowler" />
     <alt key="0096" sub="VOW" name="Cultivator Colossus" />
-    <alt key="0097" sub="VOW" name="Avabruck Caretaker" />
+    <alt key="0097" sub="Heonhwa Choe" tri="VOW" name="Avabruck Caretaker" />
     <alt key="0105" sub="VOW" name="Investigator's Journal" />
     <alt key="0106" sub="VOW" name="Dollhouse of Horrors" />
     <alt key="0107" sub="VOW" name="Shattered Sanctum" />
@@ -3759,6 +3763,8 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0161" sub="BRC" name="Smelting Vat" />
     <alt key="0163" sub="BRC" name="Staff of Titania" />
     <alt key="0258" sub="BRC" name="Urza's Workshop" />
+    
+    <!-- ★セット全体が特殊枠 -->
     <!-- Eternal Night Card (DBL) -->
     <alt key="0001" sub="DBL" name="Adeline, Resplendent Cathar" />
     <alt key="0002" sub="DBL" name="Ambitious Farmhand" />
@@ -5589,7 +5595,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0013" sub="BOT" name="Optimus Prime, Hero" />
     <alt key="0014" sub="BOT" name="Soundwave, Sonic Spy" />
     <alt key="0015" sub="BOT" name="Ultra Magnus, Tactician" />
-    <!-- MUL -->
+    <!-- Multiverse Legends -->
     <alt key="0001" sub="MUL" name="Anafenza, Kin-Tree Spirit" />
     <alt key="0002" sub="MUL" name="Daxos, Blessed by the Sun" />
     <alt key="0003" sub="MUL" name="Elesh Norn, Grand Cenobite" />
@@ -5716,7 +5722,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0128" sub="MUL" name="Yarok, the Desecrated" />
     <alt key="0129" sub="MUL" name="Yorion, Sky Nomad" />
     <alt key="0130" sub="MUL" name="Zirda, the Dawnwaker" />
-    <!-- WOT -->
+    <!-- Wilds of Eldraine: Enchanting Tales -->
     <alt key="0001" sub="WOT" name="Blind Obedience" />
     <alt key="0002" sub="WOT" name="Dawn of Hope" />
     <alt key="0003" sub="WOT" name="Grasp of Fate" />
@@ -5801,6 +5807,169 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0082" sub="WOT" name="Nature's Will" />
     <alt key="0083" sub="WOT" name="Parallel Lives" />
     
+    <!-- ★カードタイプ依存 -->
+    <!-- 両面カード -->
+    <alt key="0001" sub="V17" name="Archangel Avacyn" />
+    <alt key="0004" sub="V17" name="Bloodline Keeper" />
+    <alt key="0007" sub="V17" name="Delver of Secrets" />
+    <alt key="0008" sub="V17" name="Elbrus, the Binding Blade" />
+    <alt key="0011" sub="V17" name="Huntmaster of the Fells" />
+    <alt key="0005" sub="SOI" name="Archangel Avacyn" />
+    <alt key="0006" sub="SOI" name="Avacynian Missionaries" />
+    <alt key="0021" sub="SOI" name="Hanweir Militia Captain" />
+    <alt key="0034" sub="SOI" name="Pious Evangel" />
+    <alt key="0046" sub="SOI" name="Town Gossipmonger" />
+    <alt key="0049" sub="SOI" name="Aberrant Researcher" />
+    <alt key="0054" sub="SOI" name="Daring Sleuth" />
+    <alt key="0088" sub="SOI" name="Startled Awake" />
+    <alt key="0092" sub="SOI" name="Thing in the Ice" />
+    <alt key="0094" sub="SOI" name="Uninvited Geist" />
+    <alt key="0097" sub="SOI" name="Accursed Witch" />
+    <alt key="0108" sub="SOI" name="Elusive Tormentor" />
+    <alt key="0116" sub="SOI" name="Heir of Falkenrath" />
+    <alt key="0119" sub="SOI" name="Kindly Stranger" />
+    <alt key="0147" sub="SOI" name="Breakneck Rider" />
+    <alt key="0149" sub="SOI" name="Convicted Killer" />
+    <alt key="0158" sub="SOI" name="Gatstaf Arsonists" />
+    <alt key="0159" sub="SOI" name="Geier Reach Bandit" />
+    <alt key="0169" sub="SOI" name="Kessig Forgemaster" />
+    <alt key="0182" sub="SOI" name="Skin Invasion" />
+    <alt key="0190" sub="SOI" name="Village Messenger" />
+    <alt key="0194" sub="SOI" name="Autumnal Gloom" />
+    <alt key="0203" sub="SOI" name="Duskwatch Recruiter" />
+    <alt key="0209" sub="SOI" name="Hermit of the Natterknolls" />
+    <alt key="0210" sub="SOI" name="Hinterland Logger" />
+    <alt key="0215" sub="SOI" name="Lambholt Pacifist" />
+    <alt key="0225" sub="SOI" name="Sage of Ancient Lore" />
+    <alt key="0229" sub="SOI" name="Solitary Hunter" />
+    <alt key="0256" sub="SOI" name="Harvest Hand" />
+    <alt key="0260" sub="SOI" name="Neglected Heirloom" />
+    <alt key="0266" sub="SOI" name="Thraben Gargoyle" />
+    <alt key="0281" sub="SOI" name="Westvale Abbey" />
+    <alt key="0191" sub="EMN" name="Ulrich of the Krallenhorde" />
+    <alt key="0002" sub="Bryan Sola" tri="MID" name="Ambitious Farmhand" />
+    <alt key="0003" sub="MID" name="Beloved Beggar" />
+    <alt key="0004" sub="Zara Alfonso" tri="MID" name="Bereaved Survivor" />
+    <alt key="0007" sub="MID" name="Brutal Cathar" />
+    <alt key="0013" sub="Anastasia Ovchinnikova" tri="MID" name="Chaplain of Alms" />
+    <alt key="0017" sub="MID" name="Enduring Angel" />
+    <alt key="0027" sub="MID" name="Lunarch Veteran" />
+    <alt key="0028" sub="Greg Opalinski" tri="MID" name="Mourning Patrol" />
+    <alt key="0042" sub="Uriah Voth" tri="MID" name="Baithook Angler" />
+    <alt key="0045" sub="MID" name="Covetous Castaway" />
+    <alt key="0047" sub="MID" name="Delver of Secrets" />
+    <alt key="0055" sub="MID" name="Galedrifter" />
+    <alt key="0061" sub="Daarken" tri="MID" name="Malevolent Hermit" />
+    <alt key="0063" sub="David Auden Nash" tri="MID" name="Mysterious Tome" />
+    <alt key="0068" sub="Cristi Balanescu" tri="MID" name="Overwhelmed Archivist" />
+    <alt key="0071" sub="MID" name="Poppet Stitcher" />
+    <alt key="0080" sub="MID" name="Suspicious Stowaway" />
+    <alt key="0085" sub="MID" name="Baneblade Scoundrel" />
+    <alt key="0092" sub="John Stanko" tri="MID" name="Covert Cutpurse" />
+    <alt key="0094" sub="Uriah Voth" tri="MID" name="Curse of Leeches" />
+    <alt key="0100" sub="Tuan Duong Chu" tri="MID" name="Ecstatic Awakener" />
+    <alt key="0104" sub="MID" name="Graveyard Trespasser" />
+    <alt key="0105" sub="Josh Hass" tri="MID" name="Heirloom Mirror" />
+    <alt key="0109" sub="Yongjae Choi" tri="MID" name="Jerren, Corrupted Bishop" />
+    <alt key="0120" sub="MID" name="Shady Traveler" />
+    <alt key="0126" sub="MID" name="Vengeful Strangler" />
+    <alt key="0139" sub="MID" name="Fangblade Brigand" />
+    <alt key="0141" sub="MID" name="Flame Channeler" />
+    <alt key="0143" sub="MID" name="Harvesttide Infiltrator" />
+    <alt key="0157" sub="MID" name="Reckless Stormseeker" />
+    <alt key="0159" sub="MID" name="Smoldering Egg" />
+    <alt key="0160" sub="MID" name="Spellrune Painter" />
+    <alt key="0163" sub="MID" name="Tavern Ruffian" />
+    <alt key="0165" sub="MID" name="Village Watch" />
+    <alt key="0169" sub="MID" name="Bird Admirer" />
+    <alt key="0174" sub="MID" name="Burly Breaker" />
+    <alt key="0181" sub="MID" name="Deathbonnet Sprout" />
+    <alt key="0187" sub="MID" name="Hound Tamer" />
+    <alt key="0190" sub="MID" name="Outland Liberator" />
+    <alt key="0203" sub="MID" name="Tireless Hauler" />
+    <alt key="0204" sub="MID" name="Tovolar's Huntmaster" />
+    <alt key="0211" sub="MID" name="Arlinn, the Pack's Hope" />
+    <alt key="0217" sub="MID" name="Dennick, Pious Apprentice" />
+    <alt key="0218" sub="MID" name="Devoted Grafkeeper" />
+    <alt key="0231" sub="MID" name="Kessig Naturalist" />
+    <alt key="0233" sub="MID" name="Ludevic, Necrogenius" />
+    <alt key="0246" sub="MID" name="Tovolar, Dire Overlord" />
+    <alt key="0256" sub="MID" name="Mystic Skull" />
+    <alt key="0264" sub="MID" name="Hostile Hostel" />
+    <alt key="0009" sub="Andrew Mar" tri="VOW" name="Distracting Geist" />
+    <alt key="0010" sub="VOW" name="Drogskol Infantry" />
+    <alt key="0012" sub="Svetlin Velinov" tri="VOW" name="Faithbound Judge" />
+    <alt key="0021" sub="Manuel Castanon" tri="VOW" name="Katilda, Dawnhart Martyr" />
+    <alt key="0022" sub="VOW" name="Kindly Ancestor" />
+    <alt key="0028" sub="VOW" name="Panicked Bystander" />
+    <alt key="0031" sub="VOW" name="Radiant Grace" />
+    <alt key="0040" sub="VOW" name="Twinblade Geist" />
+    <alt key="0045" sub="VOW" name="Wedding Announcement" />
+    <alt key="0048" sub="VOW" name="Binding Geist" />
+    <alt key="0049" sub="Filip Burburan" tri="VOW" name="Biolume Egg" />
+    <alt key="0062" sub="VOW" name="Gutter Skulker" />
+    <alt key="0065" sub="VOW" name="Jacob Hauken, Inspector" />
+    <alt key="0066" sub="VOW" name="Lantern Bearer" />
+    <alt key="0068" sub="Justine Cruz" tri="VOW" name="Mirrorhall Mimic" />
+    <alt key="0069" sub="VOW" name="Mischievous Catgeist" />
+    <alt key="0079" sub="Caio Monteiro" tri="VOW" name="Soulcipher Board" />
+    <alt key="0097" sub="Darren Tan" tri="VOW" name="Bloodsworn Squire" />
+    <alt key="0099" sub="VOW" name="Catapult Fodder" />
+    <alt key="0101" sub="VOW" name="Concealing Curtains" />
+    <alt key="0104" sub="VOW" name="Desperate Farmer" />
+    <alt key="0119" sub="VOW" name="Henrika Domnathi" />
+    <alt key="0121" sub="VOW" name="Innocent Traveler" />
+    <alt key="0127" sub="VOW" name="Ragged Recluse" />
+    <alt key="0128" sub="VOW" name="Restless Bloodseeker" />
+    <alt key="0137" sub="VOW" name="Voldaren Bloodcaster" />
+    <alt key="0141" sub="VOW" name="Alluring Suitor" />
+    <alt key="0143" sub="VOW" name="Ballista Watcher" />
+    <alt key="0157" sub="VOW" name="Fearful Villager" />
+    <alt key="0162" sub="VOW" name="Ill-Tempered Loner" />
+    <alt key="0167" sub="VOW" name="Lambholt Raconteur" />
+    <alt key="0181" sub="VOW" name="Volatile Arsonist" />
+    <alt key="0183" sub="VOW" name="Voltaic Visionary" />
+    <alt key="0184" sub="VOW" name="Weary Prisoner" />
+    <alt key="0187" sub="VOW" name="Avabruck Caretaker" />
+    <alt key="0198" sub="VOW" name="Dormant Grove" />
+    <alt key="0203" sub="VOW" name="Hookhand Mariner" />
+    <alt key="0205" sub="VOW" name="Howlpack Piper" />
+    <alt key="0206" sub="VOW" name="Infestation Expert" />
+    <alt key="0212" sub="VOW" name="Oakshade Stalker" />
+    <alt key="0225" sub="VOW" name="Ulvenwald Oddity" />
+    <alt key="0226" sub="VOW" name="Weaver of Blossoms" />
+    <alt key="0229" sub="VOW" name="Wolfkin Outcast" />
+    <alt key="0233" sub="VOW" name="Brine Comber" />
+    <alt key="0234" sub="VOW" name="Child of the Pack" />
+    <alt key="0235" sub="VOW" name="Dorothea, Vengeful Victim" />
+    <alt key="0236" sub="VOW" name="Edgar, Charmed Groom" />
+    <alt key="0246" sub="VOW" name="Runo Stromkirk" />
+    <alt key="0256" sub="VOW" name="Foreboding Statue" />
+    <alt key="0012" sub="MOM" name="Elesh Norn" />
+    <alt key="0017" sub="MOM" name="Heliod, the Radiant Dawn" />
+    <alt key="0036" sub="MOM" name="Seraph of New Capenna" />
+    <alt key="0038" sub="MOM" name="Sun-Blessed Guardian" />
+    <alt key="0043" sub="MOM" name="Tarkir Duneshaper" />
+    <alt key="0049" sub="MOM" name="Captive Weird" />
+    <alt key="0065" sub="MOM" name="Jin-Gitaxias" />
+    <alt key="0072" sub="MOM" name="Order of the Mirror" />
+    <alt key="0075" sub="MOM" name="Rona, Herald of Invasion" />
+    <alt key="0078" sub="MOM" name="Skyclave Aerialist" />
+    <alt key="0088" sub="MOM" name="Aetherblade Agent" />
+    <alt key="0090" sub="MOM" name="Ayara, Widow of the Realm" />
+    <alt key="0092" sub="MOM" name="Blightreaper Thallid" />
+    <alt key="0119" sub="MOM" name="Nezumi Freewheeler" />
+    <alt key="0125" sub="MOM" name="Sheoldred" />
+    <alt key="0137" sub="MOM" name="Etali, Primal Conqueror" />
+    <alt key="0143" sub="MOM" name="Harried Artisan" />
+    <alt key="0151" sub="MOM" name="Khenra Spellspear" />
+    <alt key="0157" sub="MOM" name="Pyretic Prankster" />
+    <alt key="0169" sub="MOM" name="Urabrask" />
+    <alt key="0178" sub="MOM" name="Bonded Herdbeast" />
+    <alt key="0188" sub="MOM" name="Gnottvold Hermit" />
+    <alt key="0189" sub="MOM" name="Herbology Instructor" />
+    <alt key="0200" sub="MOM" name="Polukranos Reborn" />
+    <alt key="0213" sub="MOM" name="Vorinclex" />
     <!-- 英雄譚 -->
     <alt key="0018" sub="DOM" name="Fall of the Thran" />
     <alt key="0021" sub="DOM" name="History of Benalia" />
@@ -5853,7 +6022,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0012" sub="Andrew Mar" tri="NEO" name="The Fall of Lord Konda" />
     <alt key="0029" sub="Volkan Baga" tri="NEO" name="Michiko's Reign of Truth" />
     <alt key="0034" sub="Titus Lunter" tri="NEO" name="The Restoration of Eiganjo" />
-    <alt key="0048" sub="Ravenna Tran" tri="NEO" name="Behold the Unspeakable" />
+    <alt key="0048" sub="Jenn Ravenna Tran" tri="NEO" name="Behold the Unspeakable" />
     <alt key="0057" sub="Nestor Ossandon Leal" tri="NEO" name="Inventive Iteration" />
     <alt key="0066" sub="NEO" name="The Modern Age" />
     <alt key="0108" sub="Sidharth Chaturvedi" tri="NEO" name="Life of Toshiro Umezawa" />
@@ -6148,6 +6317,8 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0230" sub="AFR" name="Rogue Class" />
     <alt key="0233" sub="AFR" name="Sorcerer Class" />
     <alt key="0663" sub="CLB" name="Artificer Class" />
+    <!-- 完成化 PW (NEO) -->
+    <alt key="0238" sub="NEO" name="Tamiyo, Compleated Sage" />
     <!-- 試作 (BRO) -->
     <alt key="0034" sub="BRO" name="Autonomous Assembler" />
     <alt key="0035" sub="Victor Harmatiuk" tri="BRO" name="Combat Thresher" />
@@ -6171,8 +6342,6 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0163" sub="BRO" name="Mishra, Lost to Phyrexia" />
     <alt key="238b  /  287 " sub="BRO" name="Urza, Planeswalker" />
     <alt key="0256" sub="BRO" name="Titania, Gaea Incarnate" />
-    <!-- 完成化 PW -->
-    <alt key="0238" sub="NEO" name="Tamiyo, Compleated Sage" />
     <!-- 包囲戦 (MOM) -->
     <alt key="0001" sub="MOM" name="Invasion of Ravnica" />
     <alt key="0020" sub="MOM" name="Invasion of Belenon" />

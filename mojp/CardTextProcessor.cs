@@ -33,7 +33,7 @@ namespace Mojp
                     //  sb.Append("AE");
                     //  replaced = true;
                     //  break;
-                    // 検索用：á|â|à|ä|í|ú|û|ü|é|É|ó|ö
+                    // 検索用：á|â|à|ä|í|ú|û|ü|é|É|ó|ö|ñ
 
                     // Márton Stromgald や Dandân や Déjà Vu や Song of Eärendil など
                     case 'á':
