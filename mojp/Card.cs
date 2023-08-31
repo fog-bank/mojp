@@ -241,6 +241,8 @@ namespace Mojp
     /// </summary>
     public class AltCard
     {
+        private AltCard() { }
+
         public AltCard(string key, string subKey, string cardName)
         {
             Key = key;
@@ -248,17 +250,21 @@ namespace Mojp
             CardName = cardName;
         }
 
-        public string Key { get; }
+        public string Key { get; private set; }
 
         /// <summary>
         /// 追加の検索条件を取得します。
         /// </summary>
-        public string SubKey { get; }
+        public string SubKey { get; private set; }
+
+        public string CompositeKey => Key + SubKey;
+
+        public string TriKey { get; private set; }
 
         /// <summary>
         /// 参照先のカード名を取得します。
         /// </summary>
-        public string CardName { get; }
+        public string CardName { get; private set; }
 
 #if !OFFLINE
         public XElement ToXml()
@@ -267,10 +273,25 @@ namespace Mojp
 
             xml.Add(new XAttribute("key", Key));
             xml.Add(new XAttribute("sub", SubKey));
+            
+            if (!string.IsNullOrEmpty(TriKey))
+                xml.Add(new XAttribute("tri", TriKey));
+
             xml.Add(new XAttribute("name", CardName));
 
             return xml;
         }
 #endif
+
+        public static AltCard FromXml(XElement node)
+        {
+            return new AltCard
+            {
+                Key = (string)node.Attribute("key"),
+                SubKey = (string)node.Attribute("sub"),
+                TriKey = (string)node.Attribute("tri"),
+                CardName = (string)node.Attribute("name")
+            };
+        }
     }
 }
