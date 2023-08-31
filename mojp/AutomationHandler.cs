@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 using System.Threading;
 using System.Windows.Automation;
@@ -149,20 +150,24 @@ namespace Mojp
                     if (TryFetchCard(value))
                         return;
 
-                    if (!isPromo && value.Length == PromoCollectorNumber.Length)
-                    {
-                        isPromo = true;
+                    // PRM は "0***  /  1158 " のような形式なので、5文字目以降が一致するかどうかで判定
+                    //if (!isPromo && value.Length == PromoCollectorNumber.Length)
+                    //{
+                    //    isPromo = true;
 
-                        // "0***  /  1158 " のような形式なので、5文字目以降が一致するかどうかで判定
-                        for (int i = 4; i < value.Length; i++)
-                        {
-                            if (value[i] != PromoCollectorNumber[i])
-                            {
-                                isPromo = false;
-                                break;
-                            }
-                        }
-                    }
+                    //    for (int i = 0; i < value.Length; i++)
+                    //    {
+                    //        if (value[i] != PromoCollectorNumber[i])
+                    //        {
+                    //            isPromo = false;
+                    //            break;
+                    //        }
+                    //    }
+                    //}
+
+                    // だったが、WOE 実装時にこの手のカードはすべて 0000 になった。
+                    if (!isPromo && value == PromoCollectorNumber)
+                        isPromo = true;
 
                     if (!isToken && value.StartsWith("Token"))
                         isToken = true;
@@ -351,6 +356,14 @@ namespace Mojp
 
                                     return ViewCardDirectly(card.RelatedCardName);
                                 }
+
+                                if (!string.IsNullOrEmpty(alt.TriKey))
+                                {
+                                    if (IterateTextBlocks().Contains(alt.TriKey))
+                                        Debug.WriteLine(altKey + " " + alt.SubKey + " (" + alt.TriKey + ") => " + alt.CardName);
+                                    else
+                                        return false;
+                                }
                                 ViewModel.InvokeSetCard(card);
                                 return true;
                             }
@@ -367,6 +380,26 @@ namespace Mojp
                         return true;
                     }
                     return false;
+                }
+
+                /// <summary>
+                /// Automation ID が CardType の値を調べて、出来事かどうかをチェックする
+                /// </summary>
+                bool IsAdventure()
+                {
+                    AutomationElement element = null;
+                    try
+                    {
+                        using (cacheReq.Activate())
+                        {
+                            element = previewWnd?.FindFirst(TreeScope.Descendants, cardTypeCondition);
+                        }
+                    }
+                    catch { Debug.WriteLine("CardType 要素の取得に失敗しました。"); }
+
+                    string cardType = GetNamePropertyValue(element);
+
+                    return cardType != null && (cardType.EndsWith("Adventure") || cardType.Contains("Adventure"));
                 }
             }
 
@@ -488,26 +521,6 @@ namespace Mojp
                     }
                     return isPromo && !containsCatch;
                 }
-            }
-
-            /// <summary>
-            /// Automation ID が CardType の値を調べて、出来事かどうかをチェックする
-            /// </summary>
-            private bool IsAdventure()
-            {
-                AutomationElement element = null;
-                try
-                {
-                    using (cacheReq.Activate())
-                    {
-                        element = previewWnd?.FindFirst(TreeScope.Descendants, cardTypeCondition);
-                    }
-                }
-                catch { Debug.WriteLine("CardType 要素の取得に失敗しました。"); }
-
-                string cardType = GetNamePropertyValue(element);
-
-                return cardType != null && (cardType.EndsWith("Adventure") || cardType.Contains("Adventure"));
             }
 
             /// <summary>

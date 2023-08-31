@@ -45,6 +45,7 @@
                 <xs:complexType>
                   <xs:attribute name="key" type="xs:string" use="required" />
                   <xs:attribute name="sub" type="xs:string" use="required" />
+                  <xs:attribute name="tri" type="xs:string" />
                   <xs:attribute name="name" type="xs:string" use="required" />
                 </xs:complexType>
               </xs:element>

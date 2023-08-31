@@ -179,11 +179,10 @@ namespace Mojp
                             break;
 
                         case "alt":
-                            string key = (string)element.Attribute("key");
-                            string sub = (string)element.Attribute("sub");
-                            AltCardKeys.Add(key);
-                            AltCardSubKeys.Add(sub);
-                            AltCards.Add(key + sub, new AltCard(key, sub, (string)element.Attribute("name")));
+                            var alt = AltCard.FromXml(element);
+                            AltCardKeys.Add(alt.Key);
+                            AltCardSubKeys.Add(alt.SubKey);
+                            AltCards.Add(alt.CompositeKey, alt);
                             break;
                     }
                 }

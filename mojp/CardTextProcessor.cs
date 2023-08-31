@@ -33,7 +33,7 @@ namespace Mojp
                     //  sb.Append("AE");
                     //  replaced = true;
                     //  break;
-                    // 検索用：á|â|à|ä|í|ú|û|ü|é|É|ó|ö
+                    // 検索用：á|â|à|ä|í|ú|û|ü|é|É|ó|ö|ñ
 
                     // Márton Stromgald や Dandân や Déjà Vu や Song of Eärendil など
                     case 'á':
@@ -74,6 +74,12 @@ namespace Mojp
                     case 'ó':
                     case 'ö':
                         sb.Append('o');
+                        replaced = true;
+                        break;
+
+                    // Robo-Piñata
+                    case 'ñ':
+                        sb.Append('n');
                         replaced = true;
                         break;
 
@@ -508,6 +514,7 @@ namespace Mojp
         {
             var cards = App.Cards;
             var doc = XDocument.Load(file);
+            var relNotFound = new List<Card>();
 
             // 正規表現の構築
             var regexes = new List<Tuple<string[], Regex, string, bool>>();
@@ -535,8 +542,9 @@ namespace Mojp
             foreach (var node in doc.Root.Element("add").Elements("card"))
             {
                 var card = FromXml(node);
-                Debug.WriteLineIf(card.RelatedCardName != null && !card.RelatedCardNames.All(cards.ContainsKey),
-                    card.Name + " の関連カードが見つかりません。");
+
+                if (card.RelatedCardName != null && !card.RelatedCardNames.All(cards.ContainsKey))
+                    relNotFound.Add(card);
 
                 if (cards.TryGetValue(card.Name, out var origCard))
                 {
@@ -764,16 +772,21 @@ namespace Mojp
 
             foreach (var node in doc.Root.Element("add").Elements("alt"))
             {
-                string key = (string)node.Attribute("key");
-                string sub = (string)node.Attribute("sub");
-                string name = (string)node.Attribute("name");
+                var alt = AltCard.FromXml(node);
 
-                if (!cards.ContainsKey(name))
-                    Debug.WriteLine("代替テキスト (" + key + " " + sub + ") の参照先となる " + name + " のカード情報がありません。");
+                if (!cards.ContainsKey(alt.CardName))
+                    Debug.WriteLine("代替テキスト (" + alt.Key + " " + alt.SubKey + ") の参照先となる " + alt.CardName + " のカード情報がありません。");
 
-                App.AltCardKeys.Add(key);
-                App.AltCardSubKeys.Add(sub);
-                App.AltCards.Add(key + sub, new AltCard(key, sub, name));
+                App.AltCardKeys.Add(alt.Key);
+                App.AltCardSubKeys.Add(alt.SubKey);
+                App.AltCards.Add(alt.CompositeKey, alt);
+            }
+
+            foreach (var alt in App.AltCards.Values.Where(alt => !string.IsNullOrEmpty(alt.TriKey)))
+            {
+                Debug.WriteLineIf(App.TryGetAltCard(alt.Key + alt.TriKey, out var alt2),
+                    alt.Key + " " + alt.SubKey + " => " + alt.CardName + " に対して、既に第 3 キーを使った組み合わせ (" +
+                    alt2?.Key + " " + alt2?.SubKey + " => " + alt2?.CardName + ") が存在します。");
             }
 
             // 日本語カード名の重複チェック
@@ -787,6 +800,13 @@ namespace Mojp
                 }
                 else
                     jaNames.Add(card.JapaneseName, card);
+            }
+
+            // 関連カードの存在チェック
+            foreach (var card in relNotFound)
+            {
+                Debug.WriteLineIf(card.RelatedCardName != null && !card.RelatedCardNames.All(cards.ContainsKey),
+                    "追加された " + card.Name + " の関連カード (" + card.RelatedCardName + ") が見つかりません。");
             }
 
             var beforeRoot = new XElement("mojp", beforeNodes);
