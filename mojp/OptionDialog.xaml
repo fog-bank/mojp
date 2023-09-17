@@ -48,7 +48,7 @@
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <TextBlock>リリース バージョン</TextBlock>
-                <TextBlock Grid.Column="2">2.28.0</TextBlock>
+                <TextBlock Grid.Column="2">2.28.1</TextBlock>
                 <TextBlock Name="grpGoGitHub" Grid.Column="3">
                     <Hyperlink ToolTip="https://github.com/fog-bank/mojp/releases" Click="OnClickHyperlink">GitHub に移動</Hyperlink>
                 </TextBlock>
