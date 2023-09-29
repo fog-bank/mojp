@@ -315,8 +315,16 @@ namespace Mojp
                     return;
             }
 
-            // 分割カード名は修正したうえで scryfall.com に問い合わせ
-            string query = card.WikiLink != null && card.WikiLink.Contains("/") ? card.WikiLink.Split('/')[1] : card.Name;
+            // 分割カードは wikilink を利用して連結したカード名を使う。UNF のステッカー系カードは除外
+            string query = card.Name;
+
+            if (card.WikiLink != null && !card.WikiLink.Contains("＿"))
+            {
+                int slashIndex = card.WikiLink.IndexOf('/');
+
+                if (slashIndex > 0)
+                    query = card.WikiLink.Substring(slashIndex + 1);
+            }
             string tix = await GetCardPrice(query);
 
             if (tix == null)
@@ -371,10 +379,6 @@ namespace Mojp
             usingScryfall = true;
 
             string uri = "https://api.scryfall.com/cards/search?order=tix&q=" + Uri.EscapeUriString(cardName);
-
-            if (cardName == "Gleemox")
-                uri = "https://api.scryfall.com/cards/named?exact=gleemox";
-
             Debug.WriteLine(uri + " (" + DateTime.Now.TimeOfDay + ")");
 
             string json = null;
@@ -393,26 +397,21 @@ namespace Mojp
             if (json == null)
                 return HttpErrorMsg;
 
-            int startIndex = 0;
+            // ヒット件数の確認
+            const string TotalCardsTag = "\"total_cards\":";
+            int startIndex = json.IndexOf(TotalCardsTag);
 
-            if (cardName != "Gleemox")
+            if (startIndex == -1)
+                return NoPrice;
+
+            if (TrySubstring(json, startIndex + TotalCardsTag.Length, 2) != "1,")
             {
-                // ヒット件数の確認
-                const string TotalCardsTag = "\"total_cards\":";
-                startIndex = json.IndexOf(TotalCardsTag);
+                // exact サーチじゃないので、複数ヒットする可能性がある
+                const string CardTag = "\"name\":";
+                startIndex = json.IndexOf(CardTag + "\"" + cardName.Replace("+", " // ") + "\"");
 
                 if (startIndex == -1)
                     return NoPrice;
-
-                if (TrySubstring(json, startIndex + TotalCardsTag.Length, 2) != "1,")
-                {
-                    // exact サーチじゃないので、複数ヒットする可能性がある
-                    const string CardTag = "\"name\":";
-                    startIndex = json.IndexOf(CardTag + "\"" + cardName.Replace("+", " // ") + "\"");
-
-                    if (startIndex == -1)
-                        return NoPrice;
-                }
             }
 
             // tix 情報を探す範囲をカード 1 種類分に絞る
