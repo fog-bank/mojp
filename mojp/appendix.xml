@@ -5907,7 +5907,6 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0190" sub="MID" name="Outland Liberator" />
     <alt key="0203" sub="MID" name="Tireless Hauler" />
     <alt key="0204" sub="MID" name="Tovolar's Huntmaster" />
-    <alt key="0211" sub="MID" name="Arlinn, the Pack's Hope" />
     <alt key="0217" sub="MID" name="Dennick, Pious Apprentice" />
     <alt key="0218" sub="MID" name="Devoted Grafkeeper" />
     <alt key="0231" sub="MID" name="Kessig Naturalist" />
@@ -5989,6 +5988,44 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0189" sub="MOM" name="Herbology Instructor" />
     <alt key="0200" sub="MOM" name="Polukranos Reborn" />
     <alt key="0213" sub="MOM" name="Vorinclex" />
+    <!-- 両面カード (片面だけ) -->
+    <alt key="0023" sub="ORI" name="Kytheon, Hero of Akros" />
+    <alt key="0060" sub="ORI" name="Jace, Vryn's Prodigy" />
+    <alt key="0106" sub="ORI" name="Liliana, Heretical Healer" />
+    <alt key="0135" sub="ORI" name="Chandra, Fire of Kaladesh" />
+    <alt key="0189" sub="ORI" name="Nissa, Vastwood Seer" />
+    <alt key="0023" sub="EMN" name="Extricator of Sin" />
+    <alt key="0033" sub="EMN" name="Lone Rider" />
+    <alt key="0054" sub="EMN" name="Curious Homunculus" />
+    <alt key="0056" sub="EMN" name="Docent of Perfection" />
+    <alt key="0063" sub="EMN" name="Grizzled Angler" />
+    <alt key="0111" sub="EMN" name="Voldaren Pariah" />
+    <alt key="0124" sub="EMN" name="Conduit of Storms" />
+    <alt key="0142" sub="EMN" name="Smoldering Werewolf" />
+    <alt key="0148" sub="EMN" name="Vildin-Pack Outcast" />
+    <alt key="0163" sub="EMN" name="Kessig Prowler" />
+    <alt key="0168" sub="EMN" name="Shrill Howler" />
+    <alt key="0174" sub="EMN" name="Tangleclaw Werewolf" />
+    <alt key="0175" sub="EMN" name="Ulvenwald Captive" />
+    <alt key="0193" sub="EMN" name="Cryptolith Fragment" />
+    <alt key="0022" sub="XLN" name="Legion's Landing" />
+    <alt key="0074" sub="XLN" name="Search for Azcanta" />
+    <alt key="0090" sub="XLN" name="Arguel's Blood Fast" />
+    <alt key="0173" sub="XLN" name="Vance's Blasting Cannons" />
+    <alt key="0191" sub="XLN" name="Growing Rites of Itlimoc" />
+    <alt key="0235" sub="XLN" name="Dowsing Dagger" /> <!-- XLN のうち Conqueror's Galleon のみ免れる -->
+    <alt key="0243" sub="XLN" name="Primal Amulet" />
+    <alt key="0249" sub="XLN" name="Thaumatic Compass" />
+    <alt key="0250" sub="XLN" name="Treasure Map" />
+    <alt key="0179" sub="RIX" name="Golden Guardian" />
+    <alt key="0176" sub="RIX" name="Azor's Gateway" />
+    <alt key="0173" sub="RIX" name="Storm the Vault" />
+    <alt key="0166" sub="RIX" name="Profane Procession" />
+    <alt key="0165" sub="RIX" name="Path of Mettle" />
+    <alt key="0160" sub="RIX" name="Journey to Eternity" />
+    <alt key="0158" sub="RIX" name="Hadana's Climb" />
+    <alt key="0218" sub="M19" name="Nicol Bolas, the Ravager" />
+    <alt key="0211" sub="MID" name="Arlinn, the Moon's Fury" /> <!-- 第2面のみ -->
     <!-- 英雄譚 -->
     <alt key="0018" sub="DOM" name="Fall of the Thran" />
     <alt key="0021" sub="DOM" name="History of Benalia" />
