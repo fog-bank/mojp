@@ -11124,6 +11124,13 @@ III ― ターン終了時まで、サラマンダー１体がプレイヤー１
     <!-- タイプ誤り -->
     <type name="The Master, Gallifrey's End" type="伝説のクリーチャー ― タイムロード・ならず者" />
     
+    <!-- オラクル更新 (LCI) -->
+    <type name="Rakshasa Deathdealer" type="クリーチャー ― デーモン" />
+    <type name="Rakshasa Debaser" type="クリーチャー ― デーモン" />
+    <type name="Rakshasa Gravecaller" type="クリーチャー ― デーモン" />
+    <type name="Rakshasa Vizier" type="クリーチャー ― デーモン" />
+    <type name="Mahadi, Emporium Master" type="伝説のクリーチャー ― デビル" />
+    
     <!-- 合体カード -->
     <rel name="Gisela, the Broken Blade" rel="Bruna, the Fading Light|Brisela, Voice of Nightmares" />
     <rel name="Bruna, the Fading Light" rel="Gisela, the Broken Blade|Brisela, Voice of Nightmares" />
