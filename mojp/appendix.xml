@@ -943,6 +943,60 @@ Minas Tirith Garrisonが攻撃するたび、あなたはあなたがコント�
 トランプル、速攻
 あなたの終了ステップの開始時に、このターンにRiders of the Markが攻撃していた場合、これをオーナーの手札に戻す。そうしたなら、これのタフネスに等しい数の白の1/1の人間・兵士・クリーチャー・トークンを生成する。</card>
     <card name="Mirkwood Channeler" ja="Mirkwood Channeler" type="クリーチャー ― エルフ・ドルイド" pt="3/3">あなたのターンの戦闘の開始時に、あなたがコントロールしているエルフ１体を対象とする。ターン終了時まで、それは+X/+Xの修整を受けトランプルを得る。Ｘはあなたがコントロールしている森の数に等しい。</card>
+    
+    <!-- LTC -->
+    <card name="Anduril, Narsil Reforged" ja="Anduril, Narsil Reforged" type="伝説のアーティファクト ― 装備品">昇殿（あなたが１０個以上のパーマネントをコントロールしているなら、このゲームの間、あなたは都市の承認を得る。）
+装備しているクリーチャーが攻撃するたび、あなたがコントロールしている各クリーチャーの上にそれぞれ+1/+1カウンター１個を置く。あなたが都市の承認を持っているなら、代わりに、あなたがコントロールしている各クリーチャーの上にそれぞれ+1/+1カウンター２個を置く。</card>
+    <card name="Aragorn, Hornburg Hero" ja="Aragorn, Hornburg Hero" type="伝説のクリーチャー ― 人間・兵士" pt="4/4">あなたがコントロールしている各攻撃クリーチャーは先制攻撃と高名１を持つ。（高名１を持つクリーチャーがプレイヤー１人に戦闘ダメージを与えたとき、それが高名でない場合、それの上に+1/+1カウンター１個を置く。それは高名になる。）
+あなたがコントロールしていて高名であるクリーチャー１体がプレイヤー１人に戦闘ダメージを与えるたび、それの上に置かれている+1/+1カウンターの個数を２倍にする。</card>
+    <card name="Legolas's Quick Reflexes" ja="Legolas's Quick Reflexes" type="インスタント">刹那（この呪文がスタック上にあるかぎり、プレイヤーは呪文を唱えられず、マナ能力でない起動型能力を起動できない。）
+クリーチャー１体を対象とする。それをアンタップする。ターン終了時まで、それは呪禁と到達と「このクリーチャーがタップ状態になるたび、クリーチャー最大１体を対象とする。これはそれに自身のパワーに等しい点数のダメージを与える。」を得る。</card>
+    <card name="Gimli's Reckless Might" ja="Gimli's Reckless Might" type="エンチャント">あなたがコントロールしている各クリーチャーは速攻を持つ。
+圧倒 ― あなたが攻撃するたび、あなたがコントロールしているクリーチャーのパワーの合計が８以上である場合、あなたがコントロールしている攻撃クリーチャー１体と、あなたがコントロールしていないクリーチャー最大１体を対象とする。その前者はその後者と格闘を行う。</card>
+    <card name="Isengard Unleashed" ja="Isengard Unleashed" type="ソーサリー">このターン、ダメージは軽減できない。このターン、あなたがコントロールしている発生源が対戦相手か対戦相手がコントロールしているパーマネントにダメージを与えるなら、代わりに、それはその点数の３倍の点数のダメージを与える。
+フラッシュバック(４)(赤)(赤)(赤)（あなたはあなたの墓地からこのカードをフラッシュバック・コストで唱えてもよい。その後、これを追放する。）</card>
+    <card name="Rohirrim Chargers" ja="Rohirrim Chargers" type="クリーチャー ― 人間・騎士" pt="4/4">Rohirrim Chargersが攻撃するに際し、あなたはこれを督励してもよい。（これはあなたの次のアンタップ・ステップにアンタップしない。）
+あなたがクリーチャー１体を督励するたび、装備品・カードが公開されるまで、あなたのライブラリーの一番上から１枚ずつ公開する。そのカードをそのクリーチャーにつけた状態で戦場に出す。その後、残りをあなたのライブラリーの一番下に無作為の順番で置く。</card>
+    <card name="Arboreal Alliance" ja="Arboreal Alliance" type="エンチャント">Arboreal Allianceが戦場に出たとき、緑のX/Xのツリーフォーク・クリーチャー・トークン１体を生成する。
+あなたが１体以上のエルフで攻撃するたび、居住を行う。（あなたがコントロールしているクリーチャー・トークン１体のコピーであるトークン１体を生成する。）</card>
+    <card name="Galadriel, Light of Valinor" ja="Galadriel, Light of Valinor" type="伝説のクリーチャー ― エルフ・貴族" pt="3/3">団結 ― これでないクリーチャー１体があなたのコントロール下で戦場に出るたび、以下からこのターンにまだ選ばれていない１つを選ぶ。
+・(緑)(緑)(緑)を加える。
+・あなたがコントロールしている各クリーチャーの上にそれぞれ+1/+1カウンター１個を置く。
+・占術２を行い、その後カード１枚を引く。</card>
+    <card name="Rally the Galadhrim" ja="Rally the Galadhrim" type="ソーサリー">あなたがコントロールしているクリーチャー１体を対象とする。それのコピーであるトークン１体を生成する。
+共謀（あなたがこの呪文を唱えるに際し、あなたはあなたがコントロールしていてこの呪文と共通の色を持つアンタップ状態のクリーチャー２体をタップしてもよい。そうしたとき、この呪文をコピーする。あなたはそのコピーの新しい対象を選んでもよい。）</card>
+    <card name="Galadriel's Dismissal" ja="Galadriel's Dismissal" type="インスタント">キッカー(２)(白)（この呪文を唱えるに際し、追加で(２)(白)を支払ってもよい。）
+クリーチャー１体を対象とする。それはフェイズ・アウトする。この呪文がキッカーされていたなら、代わりに、プレイヤー１人を対象とする。そのプレイヤーがコントロールしている各クリーチャーはフェイズ・アウトする。（それらのコントローラーの次のターンまで、フェイズ・アウトしたクリーチャーやそれらについているすべてのものは存在しないかのように扱う。）</card>
+    <card name="Mists of Lorien" ja="Mists of Lorien" type="ソーサリー">複製(青)（あなたがこの呪文を唱えたとき、あなたが複製コストを支払った回数と同じ回数、これをコピーする。あなたはそれらのコピーの新しい対象を選んでもよい。）
+土地でないパーマネント１つを対象とする。それと、それと等しいマナ総量を持ち土地でなくそれでない各パーマネントをそれぞれオーナーの手札に戻す。</card>
+    <card name="Galadhrim Brigade" ja="Galadhrim Brigade" type="クリーチャー ― エルフ・兵士" pt="2/2">分隊(１)(緑)（この呪文を唱えるための追加コストとして、あなたは望む回数の(１)(緑)を支払ってもよい。このクリーチャーが戦場に出たとき、その回数に等しい数の、これのコピーであるトークンを生成する。）
+あなたがコントロールしていてこれでない各エルフは+1/+1の修整を受ける。</card>
+    <card name="Olorin's Searing Light" ja="Olorin's Searing Light" type="インスタント">各対戦相手はそれぞれ、自分がコントロールしているクリーチャーの中で最大のパワーを持つクリーチャー１体を追放する。
+魔巧 ― あなたの墓地にインスタントやソーサリーであるカードが２枚以上あるなら、Olorin's Searing Lightは各対戦相手にそれぞれ、そのプレイヤーが追放したクリーチャーのパワーに等しい点数のダメージを与える。</card>
+    <card name="Sorcerous Squall" ja="Sorcerous Squall" type="ソーサリー">探査（この呪文を唱える段階であなたがあなたの墓地から追放した各カードはそれぞれ(１)を支払う。）
+対戦相手１人を対象とする。そのプレイヤーはカード９枚を切削する。その後、あなたはそのプレイヤーの墓地からインスタントかソーサリーである呪文１つをマナ・コストを支払うことなく唱えてもよい。その呪文が墓地に置かれるなら、代わりにそれを追放する。</card>
+    <card name="Rammas Echor, Ancient Shield" ja="Rammas Echor, Ancient Shield" type="伝説のアーティファクト">あなたが各ターン内のあなたの２つ目の呪文を唱えるたび、カード１枚を引く。その後、防衛を持つ白の0/3の壁・クリーチャー・トークン１体を生成する。
+あなたのターンの戦闘の開始時に、ターン終了時まで、あなたがコントロールしていて防衛を持つ各クリーチャーは賛美を得る。（あなたがコントロールしているクリーチャーが単独で攻撃するたび、ターン終了時まで、それは、あなたがコントロールしているパーマネントの中の賛美能力１つにつき+1/+1の修整を受ける。）</card>
+    <card name="Courageous Resolve" ja="Courageous Resolve" type="インスタント">あなたがコントロールしているクリーチャー最大１体を対象とする。ターン終了時まで、それはプロテクション（各対戦相手）を得る。カード１枚を引く。（それは、それらのプレイヤーがコントロールしているものによっては、ブロックされず、対象にならず、ダメージを与えられず、エンチャントされず、装備されない。）
+窮地 ― あなたのライフが５点以下であるなら、このターン、あなたはライフを失うことができず、あなたはこのゲームに敗北することができず、対戦相手はこのゲームに勝利することができない。</card>
+    <card name="Gandalf of the Secret Fire" ja="Gandalf of the Secret Fire" type="伝説のクリーチャー ― アバター・ウィザード" pt="3/4">対戦相手のターン中にあなたがあなたの手札からインスタントかソーサリーである呪文を唱えるたび、それの解決に際し、そのカードをあなたの墓地に置く代わりに、それを時間カウンター３個が置かれた状態で追放する。その後、その追放したカードが待機を持っていないなら、それは待機を得る。（あなたのアップキープの開始時に、そのカードの上から時間カウンター１個を取り除く。最後の１個を取り除いたとき、それをマナ・コストを支払うことなくプレイする。）</card>
+    <card name="Fell Beast's Shriek" ja="Fell Beast's Shriek" type="ソーサリー">各対戦相手はそれぞれ、自分がコントロールしているクリーチャー１体を選ぶ。選ばれたクリーチャーをタップし、使嗾する。（あなたの次のターンまで、それらのクリーチャーは、可能なら各戦闘で攻撃し、可能ならあなたでないプレイヤーを攻撃する。）
+連繋（インスタントかソーサリー）(２)(青)(赤)（あなたがインスタントかソーサリーである呪文を唱えるに際し、あなたはあなたの手札からこのカードを公開して、連繋コストを支払ってもよい。そうしたなら、このカードの効果をその呪文に加える。）</card>
+    <card name="Call Forth the Tempest" ja="Call Forth the Tempest" type="ソーサリー">続唱、続唱（あなたがこの呪文を唱えたとき、コストがこれより低く土地でないカードが追放されるまで、あなたのライブラリーの一番上から１枚ずつ追放する。それをマナ・コストを支払うことなく唱えてもよい。追放したカードをあなたのライブラリーの一番下に無作為の順番で置く。その後、それをもう一度行う。）
+Call Forth the Tempestは対戦相手がコントロールしている各クリーチャーにそれぞれ、このターンにあなたが唱えたこれでない呪文のマナ総量の合計に等しい点数のダメージを与える。</card>
+    <card name="Nazgul Battle-Mace" ja="Nazgul Battle-Mace" type="アーティファクト ― 装備品">装備しているクリーチャーは威迫と接死と滅殺１と「対戦相手がトークンでないパーマネント１つを生け贄に捧げるたび、そのプレイヤーが３点のライフを支払わないかぎり、そのカードをあなたのコントロール下で戦場に出す。」を持つ。（滅殺１を持つクリーチャー１体が攻撃するたび、防御プレイヤーはパーマネント１つを生け贄に捧げる。）
+装備(３)</card>
+    <card name="Witch-king, Sky Scourge" ja="Witch-king, Sky Scourge" type="伝説のクリーチャー ― レイス・貴族" pt="5/5">飛行
+あなたが１体以上のレイスで攻撃するたび、あなたのライブラリーの一番上からカードＸ枚を追放する。Ｘはそれらのパワーの合計に等しい。このターン、あなたはそれらのカードをプレイしてもよい。
+不死（このクリーチャーが死亡したとき、これの上に+1/+1カウンターがなかった場合、これを+1/+1カウンター１個が置かれた状態でオーナーのコントロール下で戦場に戻す。）</card>
+    <card name="Mordor on the March" ja="Mordor on the March" type="ソーサリー">あなたの墓地からクリーチャー・カード１枚を追放する。それのコピーであるトークン１体を生成する。ターン終了時まで、それは速攻を得る。次の終了ステップの開始時に、それを追放する。
+ストーム（あなたがこの呪文を唱えたとき、これを、このターンにこれより前に唱えられた呪文の数と同じ回数コピーする。）</card>
+    <card name="Fell Beast of Mordor" ja="Fell Beast of Mordor" type="クリーチャー ― ドレイク・ビースト" pt="3/3">飛行
+貪食１（これが戦場に出るに際し、あなたは望む数のクリーチャーを生け贄に捧げてもよい。このクリーチャーは、その数に等しい数の+1/+1カウンターが置かれた状態で戦場に出る。）
+Fell Beast of Mordorが戦場に出るか攻撃するたび、対戦相手１人を対象とする。そのプレイヤーはＸ点のライフを失い、あなたはＸ点のライフを得る。Ｘはこれの上にある+1/+1カウンターの数に等しい。</card>
+    <card name="Minas Morgul, Dark Fortress" ja="Minas Morgul, Dark Fortress" type="伝説の土地">Minas Morgul, Dark Fortressはタップ状態で戦場に出る。
+(Ｔ)：(黒)を加える。
+(３)(黒),(Ｔ)：クリーチャー１体を対象とする。それの上にシャドー・カウンター１個を置く。そのクリーチャーの上にシャドー・カウンターがあるかぎり、それは他のタイプに加えてレイスである。（シャドーを持つクリーチャーは、シャドーを持つクリーチャーしかブロックできず、シャドーを持つクリーチャーにしかブロックされない。）</card>
           
     <!-- UNF -->
     <card name="Aerialephant" ja="空象" type="クリーチャー ― 象・パフォーマー" pt="3/2">飛行
@@ -6072,6 +6126,125 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0408" sub="LTC" name="Sol Ring" />
     <alt key="0409" sub="LTC" name="Sol Ring" />
     <alt key="0410" sub="LTC" name="Sol Ring" />
+    <alt key="0411" sub="LTC" name="Beregond of the Guard" />
+    <alt key="0412" sub="LTC" name="Champions of Minas Tirith" />
+    <alt key="0413" sub="LTC" name="Field-Tested Frying Pan" />
+    <alt key="0414" sub="LTC" name="The Gaffer" />
+    <alt key="0415" sub="LTC" name="Gilraen, Dunedain Protector" />
+    <alt key="0416" sub="LTC" name="Grey Host Reinforcements" />
+    <alt key="0417" sub="LTC" name="Gwaihir, Greatest of the Eagles" />
+    <alt key="0418" sub="LTC" name="Lossarnach Captain" />
+    <alt key="0419" sub="LTC" name="Of Herbs and Stewed Rabbit" />
+    <alt key="0420" sub="LTC" name="Archivist of Gondor" />
+    <alt key="0421" sub="LTC" name="Corsairs of Umbar" />
+    <alt key="0422" sub="LTC" name="Denethor, Stone Seer" />
+    <alt key="0423" sub="LTC" name="Fealty to the Realm" />
+    <alt key="0424" sub="LTC" name="Monstrosity of the Lake" />
+    <alt key="0425" sub="LTC" name="Raise the Palisade" />
+    <alt key="0426" sub="LTC" name="Subjugate the Hobbits" />
+    <alt key="0427" sub="LTC" name="Trap the Trespassers" />
+    <alt key="0428" sub="LTC" name="Gollum, Obsessed Stalker" />
+    <alt key="0429" sub="LTC" name="Lobelia, Defender of Bag End" />
+    <alt key="0430" sub="LTC" name="Rapacious Guest" />
+    <alt key="0431" sub="LTC" name="Shelob, Dread Weaver" />
+    <alt key="0432" sub="LTC" name="Call for Aid" />
+    <alt key="0433" sub="LTC" name="Cavern-Hoard Dragon" />
+    <alt key="0434" sub="LTC" name="Gimli of the Glittering Caves" />
+    <alt key="0435" sub="LTC" name="Orcish Siegemaster" />
+    <alt key="0436" sub="LTC" name="Rampaging War Mammoth" />
+    <alt key="0437" sub="LTC" name="Arwen, Weaver of Hope" />
+    <alt key="0438" sub="LTC" name="Assemble the Entmoot" />
+    <alt key="0439" sub="LTC" name="Feasting Hobbit" />
+    <alt key="0440" sub="LTC" name="Galadhrim Ambush" />
+    <alt key="0441" sub="LTC" name="Haldir, Lorien Lieutenant" />
+    <alt key="0442" sub="LTC" name="Legolas Greenleaf" />
+    <alt key="0443" sub="LTC" name="Mirkwood Elk" />
+    <alt key="0444" sub="LTC" name="Motivated Pony" />
+    <alt key="0445" sub="LTC" name="Prize Pig" />
+    <alt key="0446" sub="LTC" name="Travel Through Caradhras" />
+    <alt key="0447" sub="LTC" name="Windswift Slice" />
+    <alt key="0448" sub="LTC" name="Aragorn, King of Gondor" />
+    <alt key="0449" sub="LTC" name="The Balrog of Moria" />
+    <alt key="0450" sub="LTC" name="Banquet Guests" />
+    <alt key="0451" sub="LTC" name="Bilbo, Birthday Celebrant" />
+    <alt key="0452" sub="LTC" name="Boromir, Gondor's Hope" />
+    <alt key="0453" sub="LTC" name="Cirdan the Shipwright" />
+    <alt key="0454" sub="LTC" name="Elrond of the White Council" />
+    <alt key="0455" sub="LTC" name="Eomer, King of Rohan" />
+    <alt key="0456" sub="LTC" name="Eowyn, Shieldmaiden" />
+    <alt key="0457" sub="LTC" name="Erestor of the Council" />
+    <alt key="0458" sub="LTC" name="Faramir, Steward of Gondor" />
+    <alt key="0459" sub="LTC" name="Farmer Cotton" />
+    <alt key="0460" sub="LTC" name="Forth Eorlingas!" />
+    <alt key="0461" sub="LTC" name="Frodo, Adventurous Hobbit" />
+    <alt key="0462" sub="LTC" name="Galadriel, Elven-Queen" />
+    <alt key="0463" sub="LTC" name="Gandalf, Westward Voyager" />
+    <alt key="0464" sub="LTC" name="Grima, Saruman's Footman" />
+    <alt key="0465" sub="LTC" name="In the Darkness Bind Them" />
+    <alt key="0466" sub="LTC" name="Lidless Gaze" />
+    <alt key="0467" sub="LTC" name="Lord of the Nazgul" />
+    <alt key="0468" sub="LTC" name="Merry, Warden of Isengard" />
+    <alt key="0469" sub="LTC" name="Mirkwood Trapper" />
+    <alt key="0470" sub="LTC" name="Moria Scavenger" />
+    <alt key="0471" sub="LTC" name="Oath of Eorl" />
+    <alt key="0472" sub="LTC" name="Pippin, Warden of Isengard" />
+    <alt key="0473" sub="LTC" name="Radagast, Wizard of Wilds" />
+    <alt key="0474" sub="LTC" name="Riders of Rohan" />
+    <alt key="0475" sub="LTC" name="Sail into the West" />
+    <alt key="0476" sub="LTC" name="Sam, Loyal Attendant" />
+    <alt key="0477" sub="LTC" name="Saruman, the White Hand" />
+    <alt key="0478" sub="LTC" name="Sauron, Lord of the Rings" />
+    <alt key="0479" sub="LTC" name="Song of Earendil" />
+    <alt key="0480" sub="LTC" name="Summons of Saruman" />
+    <alt key="0481" sub="LTC" name="Taunt from the Rampart" />
+    <alt key="0482" sub="LTC" name="Too Greedily, Too Deep" />
+    <alt key="0483" sub="LTC" name="Treebeard, Gracious Host" />
+    <alt key="0484" sub="LTC" name="Wake the Dragon" />
+    <alt key="0485" sub="LTC" name="Crown of Gondor" />
+    <alt key="0486" sub="LTC" name="Hithlain Rope" />
+    <alt key="0487" sub="LTC" name="Lothlorien Blade" />
+    <alt key="0488" sub="LTC" name="Model of Unity" />
+    <alt key="0489" sub="LTC" name="Relic of Sauron" />
+    <alt key="0490" sub="LTC" name="The Black Gate" />
+    <alt key="0491" sub="LTC" name="Anduril, Narsil Reforged" />
+    <alt key="0492" sub="LTC" name="Aragorn, Hornburg Hero" />
+    <alt key="0493" sub="LTC" name="Legolas's Quick Reflexes" />
+    <alt key="0494" sub="LTC" name="Gimli's Reckless Might" />
+    <alt key="0495" sub="LTC" name="Isengard Unleashed" />
+    <alt key="0496" sub="LTC" name="Rohirrim Chargers" />
+    <alt key="0497" sub="LTC" name="Arboreal Alliance" />
+    <alt key="0498" sub="LTC" name="Galadriel, Light of Valinor" />
+    <alt key="0499" sub="LTC" name="Rally the Galadhrim" />
+    <alt key="0500" sub="LTC" name="Galadriel's Dismissal" />
+    <alt key="0501" sub="LTC" name="Mists of Lorien" />
+    <alt key="0502" sub="LTC" name="Galadhrim Brigade" />
+    <alt key="0503" sub="LTC" name="Olorin's Searing Light" />
+    <alt key="0504" sub="LTC" name="Sorcerous Squall" />
+    <alt key="0505" sub="LTC" name="Rammas Echor, Ancient Shield" />
+    <alt key="0506" sub="LTC" name="Courageous Resolve" />
+    <alt key="0507" sub="LTC" name="Gandalf of the Secret Fire" />
+    <alt key="0508" sub="LTC" name="Fell Beast's Shriek" />
+    <alt key="0509" sub="LTC" name="Call Forth the Tempest" />
+    <alt key="0510" sub="LTC" name="Nazgul Battle-Mace" />
+    <alt key="0511" sub="LTC" name="Witch-king, Sky Scourge" />
+    <alt key="0512" sub="LTC" name="Mordor on the March" />
+    <alt key="0513" sub="LTC" name="Fell Beast of Mordor" />
+    <alt key="0514" sub="LTC" name="Minas Morgul, Dark Fortress" />
+    <alt key="0520" sub="LTC" name="Soul's Attendant" />
+    <alt key="0521" sub="LTC" name="Stonehewer Giant" />
+    <alt key="0522" sub="LTC" name="Worship" />
+    <alt key="0523" sub="LTC" name="Pact of Negation" />
+    <alt key="0524" sub="LTC" name="River Kelpie" />
+    <alt key="0525" sub="LTC" name="Abyssal Persecutor" />
+    <alt key="0526" sub="LTC" name="Diabolic Intent" />
+    <alt key="0527" sub="LTC" name="Elvish Harbinger" />
+    <alt key="0528" sub="LTC" name="Explore" />
+    <alt key="0529" sub="LTC" name="Seasons Past" />
+    <alt key="0530" sub="LTC" name="Second Harvest" />
+    <alt key="0531" sub="LTC" name="Sylvan Tutor" />
+    <alt key="0532" sub="LTC" name="Tempt with Discovery" />
+    <alt key="0533" sub="LTC" name="Timber Protector" />
+    <alt key="0534" sub="LTC" name="Myriad Landscape" />
     <!-- Zendikar Rising Expeditions -->
     <alt key="0001" sub="ZNE" name="Flooded Strand" />
     <alt key="0002" sub="ZNE" name="Polluted Delta" />
