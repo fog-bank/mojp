@@ -931,6 +931,19 @@ III ― すべての壁を破壊する。この英雄譚を追放する。その
     <card name="Vitu-Ghazi" ja="ヴィトゥ＝ガジー" type="伝説の土地・クリーチャー ― エレメンタル" pt="0/0" wiki="ヴィトゥ＝ガジーの目覚め/Awakening of Vitu-Ghazi">速攻
 （この土地が持っていた名前を失い、《ヴィトゥ＝ガジー》になる。持っていたタイプや能力は残る。）</card>
     
+    <!-- LTR Jumpstart Booster Vol.2 -->
+    <card name="Eagle of Deliverance" ja="Eagle of Deliverance" type="クリーチャー ― 鳥・兵士" pt="5/5">飛行
+Eagle of Deliveranceが戦場に出たとき、あなたがコントロールしていてこれでないクリーチャー１体を対象とする。それの上に破壊不能カウンター１個を置く。そのクリーチャーのパワーが２以下なら、カード１枚を引く。</card>
+    <card name="Minas Tirith Garrison" ja="Minas Tirith Garrison" type="クリーチャー ― 人間・兵士" pt="*/5">Minas Tirith Garrisonのパワーは、あなたの手札にあるカードの枚数に等しい。
+Minas Tirith Garrisonが攻撃するたび、あなたはあなたがコントロールしていてアンタップ状態である望む数の人間をタップしてもよい。これによりタップされた人間１体につき、カード１枚を引く。</card>
+    <card name="Warg Rider" ja="Warg Rider" type="クリーチャー ― オーク・戦士" pt="4/3">威迫
+ゴブリンやオークのうちあなたがコントロールしていてこれでないクリーチャーは威迫を持つ。
+あなたのターンの戦闘の開始時に、オーク動員２を行う。（あなたがコントロールしている軍団１体の上に+1/+1カウンター２個を置く。それはオークでもある。あなたが軍団をコントロールしていないなら、その前に、黒の0/0のオーク・軍団・クリーチャー・トークン１体を生成する。）</card>
+    <card name="Riders of the Mark" ja="Riders of the Mark" type="クリーチャー ― 人間・騎士" pt="7/4">この呪文を唱えるためのコストは、あなたがコントロールしている人間１体につき(１)少なくなる。
+トランプル、速攻
+あなたの終了ステップの開始時に、このターンにRiders of the Markが攻撃していた場合、これをオーナーの手札に戻す。そうしたなら、これのタフネスに等しい数の白の1/1の人間・兵士・クリーチャー・トークンを生成する。</card>
+    <card name="Mirkwood Channeler" ja="Mirkwood Channeler" type="クリーチャー ― エルフ・ドルイド" pt="3/3">あなたのターンの戦闘の開始時に、あなたがコントロールしているエルフ１体を対象とする。ターン終了時まで、それは+X/+Xの修整を受けトランプルを得る。Ｘはあなたがコントロールしている森の数に等しい。</card>
+          
     <!-- UNF -->
     <card name="Aerialephant" ja="空象" type="クリーチャー ― 象・パフォーマー" pt="3/2">飛行
 空象が戦場に出たとき、あなたは(ＴＫ)を得る。その後、あなたはあなたがオーナーであり土地でないパーマネント１つにステッカー１枚を貼ってもよい。</card>
@@ -5409,6 +5422,305 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0449" sub="LTR" name="Samwise the Stouthearted" />
     <alt key="0450" sub="LTR" name="Gollum, Patient Plotter" />
     <alt key="0451" sub="LTR" name="The One Ring" />
+    <alt key="0452" sub="LTR" name="Banish from Edoras" />
+    <alt key="0453" sub="LTR" name="The Battle of Bywater" />
+    <alt key="0454" sub="LTR" name="Bill the Pony" />
+    <alt key="0455" sub="LTR" name="Boromir, Warden of the Tower" />
+    <alt key="0456" sub="LTR" name="Dawn of a New Age" />
+    <alt key="0457" sub="LTR" name="Dunedain Blade" />
+    <alt key="0458" sub="LTR" name="Eagles of the North" />
+    <alt key="0459" sub="LTR" name="Eastfarthing Farmer" />
+    <alt key="0460" sub="LTR" name="East-Mark Cavalier" />
+    <alt key="0461" sub="LTR" name="Eowyn, Lady of Rohan" />
+    <alt key="0462" sub="LTR" name="Errand-Rider of Gondor" />
+    <alt key="0463" sub="LTR" name="Escape from Orthanc" />
+    <alt key="0464" sub="LTR" name="Esquire of the King" />
+    <alt key="0465" sub="LTR" name="Faramir, Field Commander" />
+    <alt key="0466" sub="LTR" name="Flowering of the White Tree" />
+    <alt key="0467" sub="LTR" name="Fog on the Barrow-Downs" />
+    <alt key="0468" sub="LTR" name="Forge Anew" />
+    <alt key="0469" sub="LTR" name="Frodo, Sauron's Bane" />
+    <alt key="0470" sub="LTR" name="Gandalf the White" />
+    <alt key="0471" sub="LTR" name="Hobbit's Sting" />
+    <alt key="0472" sub="LTR" name="Landroval, Horizon Witness" />
+    <alt key="0473" sub="LTR" name="Lost to Legend" />
+    <alt key="0474" sub="LTR" name="Nimble Hobbit" />
+    <alt key="0475" sub="LTR" name="Now for Wrath, Now for Ruin!" />
+    <alt key="0476" sub="LTR" name="Protector of Gondor" />
+    <alt key="0477" sub="LTR" name="Reprieve" />
+    <alt key="0478" sub="LTR" name="Rosie Cotton of South Lane" />
+    <alt key="0479" sub="LTR" name="Samwise the Stouthearted" />
+    <alt key="0480" sub="LTR" name="Second Breakfast" />
+    <alt key="0481" sub="LTR" name="Shire Shirriff" />
+    <alt key="0482" sub="LTR" name="Slip On the Ring" />
+    <alt key="0483" sub="LTR" name="Soldier of the Grey Host" />
+    <alt key="0484" sub="LTR" name="Stalwarts of Osgiliath" />
+    <alt key="0485" sub="LTR" name="Tale of Tinuviel" />
+    <alt key="0486" sub="LTR" name="Took Reaper" />
+    <alt key="0487" sub="LTR" name="War of the Last Alliance" />
+    <alt key="0488" sub="LTR" name="Westfold Rider" />
+    <alt key="0489" sub="LTR" name="You Cannot Pass!" />
+    <alt key="0490" sub="LTR" name="Arwen's Gift" />
+    <alt key="0491" sub="LTR" name="The Bath Song" />
+    <alt key="0492" sub="LTR" name="Bewitching Leechcraft" />
+    <alt key="0493" sub="LTR" name="Bill Ferny, Bree Swindler" />
+    <alt key="0494" sub="LTR" name="Birthday Escape" />
+    <alt key="0495" sub="LTR" name="Borne Upon a Wind" />
+    <alt key="0496" sub="LTR" name="Captain of Umbar" />
+    <alt key="0497" sub="LTR" name="Council's Deliberation" />
+    <alt key="0498" sub="LTR" name="Deceive the Messenger" />
+    <alt key="0499" sub="LTR" name="Dreadful as the Storm" />
+    <alt key="0500" sub="LTR" name="Elrond, Lord of Rivendell" />
+    <alt key="0501" sub="LTR" name="Gandalf, Friend of the Shire" />
+    <alt key="0502" sub="LTR" name="Glorious Gale" />
+    <alt key="0503" sub="LTR" name="Goldberry, River-Daughter" />
+    <alt key="0504" sub="LTR" name="Grey Havens Navigator" />
+    <alt key="0505" sub="LTR" name="Hithlain Knots" />
+    <alt key="0506" sub="LTR" name="Horses of the Bruinen" />
+    <alt key="0507" sub="LTR" name="Ioreth of the Healing House" />
+    <alt key="0508" sub="LTR" name="Isolation at Orthanc" />
+    <alt key="0509" sub="LTR" name="Ithilien Kingfisher" />
+    <alt key="0510" sub="LTR" name="Knights of Dol Amroth" />
+    <alt key="0511" sub="LTR" name="Lorien Revealed" />
+    <alt key="0512" sub="LTR" name="Lost Isle Calling" />
+    <alt key="0513" sub="LTR" name="Meneldor, Swift Savior" />
+    <alt key="0514" sub="LTR" name="Nimrodel Watcher" />
+    <alt key="0515" sub="LTR" name="Pelargir Survivor" />
+    <alt key="0516" sub="LTR" name="Press the Enemy" />
+    <alt key="0517" sub="LTR" name="Rangers of Ithilien" />
+    <alt key="0518" sub="LTR" name="Saruman the White" />
+    <alt key="0519" sub="LTR" name="Saruman's Trickery" />
+    <alt key="0520" sub="LTR" name="Scroll of Isildur" />
+    <alt key="0521" sub="LTR" name="Soothing of Smeagol" />
+    <alt key="0522" sub="LTR" name="Stern Scolding" />
+    <alt key="0523" sub="LTR" name="Storm of Saruman" />
+    <alt key="0524" sub="LTR" name="Surrounded by Orcs" />
+    <alt key="0525" sub="LTR" name="Treason of Isengard" />
+    <alt key="0526" sub="LTR" name="The Watcher in the Water" />
+    <alt key="0527" sub="LTR" name="Willow-Wind" />
+    <alt key="0528" sub="LTR" name="Bitter Downfall" />
+    <alt key="0529" sub="LTR" name="The Black Breath" />
+    <alt key="0530" sub="LTR" name="Call of the Ring" />
+    <alt key="0531" sub="LTR" name="Cirith Ungol Patrol" />
+    <alt key="0532" sub="LTR" name="Claim the Precious" />
+    <alt key="0533" sub="LTR" name="Dunland Crebain" />
+    <alt key="0534" sub="LTR" name="Easterling Vanguard" />
+    <alt key="0535" sub="LTR" name="Gollum, Patient Plotter" />
+    <alt key="0536" sub="LTR" name="Gollum's Bite" />
+    <alt key="0537" sub="LTR" name="Gorbag of Minas Morgul" />
+    <alt key="0538" sub="LTR" name="Gothmog, Morgul Lieutenant" />
+    <alt key="0539" sub="LTR" name="Grima Wormtongue" />
+    <alt key="0540" sub="LTR" name="Grond, the Gatebreaker" />
+    <alt key="0541" sub="LTR" name="Haunt of the Dead Marshes" />
+    <alt key="0542" sub="LTR" name="Isildur's Fateful Strike" />
+    <alt key="0543" sub="LTR" name="Lash of the Balrog" />
+    <alt key="0544" sub="LTR" name="Lobelia Sackville-Baggins" />
+    <alt key="0545" sub="LTR" name="March from the Black Gate" />
+    <alt key="0546" sub="LTR" name="Mirkwood Bats" />
+    <alt key="0547" sub="LTR" name="Mordor Muster" />
+    <alt key="0548" sub="LTR" name="Mordor Trebuchet" />
+    <alt key="0549" sub="LTR" name="Morgul-Knife Wound" />
+    <alt key="0550" sub="LTR" name="Nasty End" />
+    <alt key="0551" sub="LTR" name="Nazgul" />
+    <alt key="0552" sub="LTR" name="Oath of the Grey Host" />
+    <alt key="0553" sub="LTR" name="One Ring to Rule Them All" />
+    <alt key="0554" sub="LTR" name="Orcish Bowmasters" />
+    <alt key="0555" sub="LTR" name="Orcish Medicine" />
+    <alt key="0556" sub="LTR" name="Sam's Desperate Rescue" />
+    <alt key="0557" sub="LTR" name="Sauron, the Necromancer" />
+    <alt key="0558" sub="LTR" name="Shadow of the Enemy" />
+    <alt key="0559" sub="LTR" name="Shelob's Ambush" />
+    <alt key="0560" sub="LTR" name="Snarling Warg" />
+    <alt key="0561" sub="LTR" name="The Torment of Gollum" />
+    <alt key="0562" sub="LTR" name="Troll of Khazad-dum" />
+    <alt key="0563" sub="LTR" name="Uruk-hai Berserker" />
+    <alt key="0564" sub="LTR" name="Voracious Fell Beast" />
+    <alt key="0565" sub="LTR" name="Witch-king of Angmar" />
+    <alt key="0566" sub="LTR" name="Battle-Scarred Goblin" />
+    <alt key="0567" sub="LTR" name="Book of Mazarbul" />
+    <alt key="0568" sub="LTR" name="Breaking of the Fellowship" />
+    <alt key="0569" sub="LTR" name="Cast into the Fire" />
+    <alt key="0570" sub="LTR" name="Display of Power" />
+    <alt key="0571" sub="LTR" name="Eomer, Marshal of Rohan" />
+    <alt key="0572" sub="LTR" name="Eomer of the Riddermark" />
+    <alt key="0573" sub="LTR" name="Erebor Flamesmith" />
+    <alt key="0574" sub="LTR" name="Erkenbrand, Lord of Westfold" />
+    <alt key="0575" sub="LTR" name="Fall of Cair Andros" />
+    <alt key="0576" sub="LTR" name="Fear, Fire, Foes!" />
+    <alt key="0577" sub="LTR" name="Fiery Inscription" />
+    <alt key="0578" sub="LTR" name="Fire of Orthanc" />
+    <alt key="0579" sub="LTR" name="Foray of Orcs" />
+    <alt key="0580" sub="LTR" name="Gimli, Counter of Kills" />
+    <alt key="0581" sub="LTR" name="Gimli's Axe" />
+    <alt key="0582" sub="LTR" name="Gimli's Fury" />
+    <alt key="0583" sub="LTR" name="Gloin, Dwarf Emissary" />
+    <alt key="0584" sub="LTR" name="Goblin Fireleaper" />
+    <alt key="0585" sub="LTR" name="Grishnakh, Brash Instigator" />
+    <alt key="0586" sub="LTR" name="Haradrim Spearmaster" />
+    <alt key="0587" sub="LTR" name="Hew the Entwood" />
+    <alt key="0588" sub="LTR" name="Improvised Club" />
+    <alt key="0589" sub="LTR" name="Moria Marauder" />
+    <alt key="0590" sub="LTR" name="Oliphaunt" />
+    <alt key="0591" sub="LTR" name="Olog-hai Crusher" />
+    <alt key="0592" sub="LTR" name="Quarrel's End" />
+    <alt key="0593" sub="LTR" name="Rally at the Hornburg" />
+    <alt key="0594" sub="LTR" name="Ranger's Firebrand" />
+    <alt key="0595" sub="LTR" name="Relentless Rohirrim" />
+    <alt key="0596" sub="LTR" name="Rising of the Day" />
+    <alt key="0597" sub="LTR" name="Rohirrim Lancer" />
+    <alt key="0598" sub="LTR" name="Rush the Room" />
+    <alt key="0599" sub="LTR" name="Smite the Deathless" />
+    <alt key="0600" sub="LTR" name="Spiteful Banditry" />
+    <alt key="0601" sub="LTR" name="Swarming of Moria" />
+    <alt key="0602" sub="LTR" name="There and Back Again" />
+    <alt key="0603" sub="LTR" name="Warbeast of Gorgoroth" />
+    <alt key="0604" sub="LTR" name="Bag End Porter" />
+    <alt key="0605" sub="LTR" name="Bombadil's Song" />
+    <alt key="0606" sub="LTR" name="Brandywine Farmer" />
+    <alt key="0607" sub="LTR" name="Celeborn the Wise" />
+    <alt key="0608" sub="LTR" name="Chance-Met Elves" />
+    <alt key="0609" sub="LTR" name="Delighted Halfling" />
+    <alt key="0610" sub="LTR" name="Dunedain Rangers" />
+    <alt key="0611" sub="LTR" name="Elven Chorus" />
+    <alt key="0612" sub="LTR" name="Elven Farsight" />
+    <alt key="0613" sub="LTR" name="Enraged Huorn" />
+    <alt key="0614" sub="LTR" name="Entish Restoration" />
+    <alt key="0615" sub="LTR" name="Ent's Fury" />
+    <alt key="0616" sub="LTR" name="Fall of Gil-galad" />
+    <alt key="0617" sub="LTR" name="Fangorn, Tree Shepherd" />
+    <alt key="0618" sub="LTR" name="Galadhrim Bow" />
+    <alt key="0619" sub="LTR" name="Galadhrim Guide" />
+    <alt key="0620" sub="LTR" name="Generous Ent" />
+    <alt key="0621" sub="LTR" name="Gift of Strands" />
+    <alt key="0622" sub="LTR" name="Glorfindel, Dauntless Rescuer" />
+    <alt key="0623" sub="LTR" name="Last March of the Ents" />
+    <alt key="0624" sub="LTR" name="Legolas, Master Archer" />
+    <alt key="0625" sub="LTR" name="Long List of the Ents" />
+    <alt key="0626" sub="LTR" name="Lothlorien Lookout" />
+    <alt key="0627" sub="LTR" name="Many Partings" />
+    <alt key="0628" sub="LTR" name="Meriadoc Brandybuck" />
+    <alt key="0629" sub="LTR" name="Mirkwood Spider" />
+    <alt key="0630" sub="LTR" name="Mirrormere Guardian" />
+    <alt key="0631" sub="LTR" name="Mushroom Watchdogs" />
+    <alt key="0632" sub="LTR" name="Peregrin Took" />
+    <alt key="0633" sub="LTR" name="Pippin's Bravery" />
+    <alt key="0634" sub="LTR" name="Quickbeam, Upstart Ent" />
+    <alt key="0635" sub="LTR" name="Radagast the Brown" />
+    <alt key="0636" sub="LTR" name="Revive the Shire" />
+    <alt key="0637" sub="LTR" name="The Ring Goes South" />
+    <alt key="0638" sub="LTR" name="Shortcut to Mushrooms" />
+    <alt key="0639" sub="LTR" name="Shower of Arrows" />
+    <alt key="0640" sub="LTR" name="Stew the Coneys" />
+    <alt key="0641" sub="LTR" name="Wose Pathfinder" />
+    <alt key="0642" sub="LTR" name="Aragorn, Company Leader" />
+    <alt key="0643" sub="LTR" name="Aragorn, the Uniter" />
+    <alt key="0644" sub="LTR" name="Arwen, Mortal Queen" />
+    <alt key="0645" sub="LTR" name="Arwen Undomiel" />
+    <alt key="0646" sub="LTR" name="The Balrog, Durin's Bane" />
+    <alt key="0647" sub="LTR" name="Bilbo, Retired Burglar" />
+    <alt key="0648" sub="LTR" name="Butterbur, Bree Innkeeper" />
+    <alt key="0649" sub="LTR" name="Denethor, Ruling Steward" />
+    <alt key="0650" sub="LTR" name="Doors of Durin" />
+    <alt key="0651" sub="LTR" name="Elrond, Master of Healing" />
+    <alt key="0652" sub="LTR" name="Eowyn, Fearless Knight" />
+    <alt key="0653" sub="LTR" name="Faramir, Prince of Ithilien" />
+    <alt key="0654" sub="LTR" name="Flame of Anor" />
+    <alt key="0655" sub="LTR" name="Friendly Rivalry" />
+    <alt key="0656" sub="LTR" name="Frodo Baggins" />
+    <alt key="0657" sub="LTR" name="Galadriel of Lothlorien" />
+    <alt key="0658" sub="LTR" name="Gandalf the Grey" />
+    <alt key="0659" sub="LTR" name="Gandalf's Sanction" />
+    <alt key="0660" sub="LTR" name="Gimli, Mournful Avenger" />
+    <alt key="0661" sub="LTR" name="Gwaihir the Windlord" />
+    <alt key="0662" sub="LTR" name="King of the Oathbreakers" />
+    <alt key="0663" sub="LTR" name="Legolas, Counter of Kills" />
+    <alt key="0664" sub="LTR" name="Lotho, Corrupt Shirriff" />
+    <alt key="0665" sub="LTR" name="Mauhur, Uruk-hai Captain" />
+    <alt key="0666" sub="LTR" name="Merry, Esquire of Rohan" />
+    <alt key="0667" sub="LTR" name="The Mouth of Sauron" />
+    <alt key="0668" sub="LTR" name="Old Man Willow" />
+    <alt key="0669" sub="LTR" name="Pippin, Guard of the Citadel" />
+    <alt key="0670" sub="LTR" name="Prince Imrahil the Fair" />
+    <alt key="0671" sub="LTR" name="Ringsight" />
+    <alt key="0672" sub="LTR" name="Rise of the Witch-king" />
+    <alt key="0673" sub="LTR" name="Samwise Gamgee" />
+    <alt key="0674" sub="LTR" name="Saruman of Many Colors" />
+    <alt key="0675" sub="LTR" name="Sauron, the Dark Lord" />
+    <alt key="0676" sub="LTR" name="Sauron's Ransom" />
+    <alt key="0677" sub="LTR" name="Shadow Summoning" />
+    <alt key="0678" sub="LTR" name="Shadowfax, Lord of Horses" />
+    <alt key="0679" sub="LTR" name="Shagrat, Loot Bearer" />
+    <alt key="0680" sub="LTR" name="Sharkey, Tyrant of the Shire" />
+    <alt key="0681" sub="LTR" name="Shelob, Child of Ungoliant" />
+    <alt key="0682" sub="LTR" name="Smeagol, Helpful Guide" />
+    <alt key="0683" sub="LTR" name="Strider, Ranger of the North" />
+    <alt key="0684" sub="LTR" name="Theoden, King of Rohan" />
+    <alt key="0685" sub="LTR" name="Tom Bombadil" />
+    <alt key="0686" sub="LTR" name="Ugluk of the White Hand" />
+    <alt key="0687" sub="LTR" name="Anduril, Flame of the West" />
+    <alt key="0688" sub="LTR" name="Barrow-Blade" />
+    <alt key="0689" sub="LTR" name="Ent-Draught Basin" />
+    <alt key="0690" sub="LTR" name="Glamdring" />
+    <alt key="0691" sub="LTR" name="Horn of Gondor" />
+    <alt key="0692" sub="LTR" name="Horn of the Mark" />
+    <alt key="0693" sub="LTR" name="Inherited Envelope" />
+    <alt key="0694" sub="LTR" name="Lembas" />
+    <alt key="0695" sub="LTR" name="Mirror of Galadriel" />
+    <alt key="0696" sub="LTR" name="Mithril Coat" />
+    <alt key="0697" sub="LTR" name="The One Ring" />
+    <alt key="0698" sub="LTR" name="Palantir of Orthanc" />
+    <alt key="0699" sub="LTR" name="Phial of Galadriel" />
+    <alt key="0700" sub="LTR" name="Shire Scarecrow" />
+    <alt key="0701" sub="LTR" name="Sting, the Glinting Dagger" />
+    <alt key="0702" sub="LTR" name="Stone of Erech" />
+    <alt key="0703" sub="LTR" name="Wizard's Rockets" />
+    <alt key="0704" sub="LTR" name="Barad-dur" />
+    <alt key="0705" sub="LTR" name="Great Hall of the Citadel" />
+    <alt key="0706" sub="LTR" name="The Grey Havens" />
+    <alt key="0707" sub="LTR" name="Minas Tirith" />
+    <alt key="0708" sub="LTR" name="Mines of Moria" />
+    <alt key="0709" sub="LTR" name="Mount Doom" />
+    <alt key="0710" sub="LTR" name="Rivendell" />
+    <alt key="0711" sub="LTR" name="The Shire" />
+    <alt key="0712" sub="LTR" name="Shire Terrace" />
+    <alt key="0723" sub="LTR" name="Nazgul" />
+    <alt key="0724" sub="LTR" name="Nazgul" />
+    <alt key="0725" sub="LTR" name="Nazgul" />
+    <alt key="0726" sub="LTR" name="Nazgul" />
+    <alt key="0727" sub="LTR" name="Nazgul" />
+    <alt key="0728" sub="LTR" name="Nazgul" />
+    <alt key="0729" sub="LTR" name="Nazgul" />
+    <alt key="0730" sub="LTR" name="Nazgul" />
+    <alt key="0731" sub="LTR" name="Dawn of a New Age" />
+    <alt key="0732" sub="LTR" name="Gandalf the White" />
+    <alt key="0733" sub="LTR" name="Storm of Saruman" />
+    <alt key="0734" sub="LTR" name="The Watcher in the Water" />
+    <alt key="0735" sub="LTR" name="Shadow of the Enemy" />
+    <alt key="0736" sub="LTR" name="Witch-king of Angmar" />
+    <alt key="0737" sub="LTR" name="Hew the Entwood" />
+    <alt key="0738" sub="LTR" name="Spiteful Banditry" />
+    <alt key="0739" sub="LTR" name="Last March of the Ents" />
+    <alt key="0740" sub="LTR" name="Radagast the Brown" />
+    <alt key="0741" sub="LTR" name="Aragorn, the Uniter" />
+    <alt key="0742" sub="LTR" name="Arwen, Mortal Queen" />
+    <alt key="0743" sub="LTR" name="Saruman of Many Colors" />
+    <alt key="0744" sub="LTR" name="Sauron, the Dark Lord" />
+    <alt key="0745" sub="LTR" name="Tom Bombadil" />
+    <alt key="0746" sub="LTR" name="Anduril, Flame of the West" />
+    <alt key="0747" sub="LTR" name="Glamdring" />
+    <alt key="0748" sub="LTR" name="The One Ring" />
+    <alt key="0749" sub="LTR" name="Palantir of Orthanc" />
+    <alt key="0750" sub="LTR" name="Mount Doom" />
+    <alt key="0824" sub="LTR" name="Eagle of Deliverance" />
+    <alt key="0825" sub="LTR" name="Minas Tirith Garrison" />
+    <alt key="0826" sub="LTR" name="Warg Rider" />
+    <alt key="0827" sub="LTR" name="Riders of the Mark" />
+    <alt key="0828" sub="LTR" name="Mirkwood Channeler" />
+    <alt key="0829" sub="LTR" name="Eagle of Deliverance" />
+    <alt key="0830" sub="LTR" name="Minas Tirith Garrison" />
+    <alt key="0831" sub="LTR" name="Warg Rider" />
+    <alt key="0832" sub="LTR" name="Riders of the Mark" />
+    <alt key="0833" sub="LTR" name="Mirkwood Channeler" />
     <!-- LTC -->
     <alt key="0001" sub="LTC" name="Eowyn, Shieldmaiden" />
     <alt key="0002" sub="LTC" name="Frodo, Adventurous Hobbit" />
