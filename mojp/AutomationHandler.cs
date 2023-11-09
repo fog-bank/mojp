@@ -350,7 +350,7 @@ namespace Mojp
                             if (App.TryGetCard(alt.CardName, out card))
                             {
                                 // 特定のセットのカードで、カードタイプが出来事の場合、呪文側を手前に表示する
-                                if (alt.SubKey is "ELD" or "AFC" or "CLB" or "MOC" or "CMM" or "WOE" or "WOC" or "LCI" && IsAdventure())
+                                if (alt.SubKey is "ELD" or "AFC" or "CLB" or "MOC" or "CMM" or "WOE" or "WOC" or "LCI" or "LCC" && IsAdventure())
                                 {
                                     Debug.WriteLine(altKey + " " + alt.SubKey + " => " + alt.CardName + " => " + card.RelatedCardName);
 

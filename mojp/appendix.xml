@@ -616,7 +616,7 @@ IV ― ターン終了時まで、あなたがコントロールしている各�
     
     <card name="Admiral Brass, Unsinkable" ja="沈まぬ者、鉄面提督" type="伝説のクリーチャー ― 人間・海賊" pt="3/3">沈まぬ者、鉄面提督が戦場に出たとき、カード４枚を切削する。
 あなたのターンの戦闘の開始時に、あなたの墓地にある海賊・クリーチャー・カード１枚を対象とする。あなたはそれを最終カウンター１個が置かれた状態で戦場に戻してもよい。それの基本のパワーとタフネスは4/4である。ターン終了時まで、それは速攻を得る。（最終カウンターが置かれたクリーチャーが死亡するなら、代わりにそれを追放する。）</card>
-    <card name="Clavileño, First of the Blessed" ja="最初の福者、クラヴィレーニョ" type="伝説のクリーチャー ― 吸血鬼・クレリック" pt="2/2">あなたが攻撃するたび、攻撃していてデーモンでない吸血鬼１体を対象とする。それは他のタイプに加えてデーモンになる。それは「このクリーチャーが死亡したとき、カード１枚を引き、飛行を持つ白黒の4/3の吸血鬼・デーモン・クリーチャー・トークン１体をタップ状態で生成する。」を得る。</card>
+    <card name="Clavileno, First of the Blessed" ja="最初の福者、クラヴィレーニョ" type="伝説のクリーチャー ― 吸血鬼・クレリック" pt="2/2">あなたが攻撃するたび、攻撃していてデーモンでない吸血鬼１体を対象とする。それは他のタイプに加えてデーモンになる。それは「このクリーチャーが死亡したとき、カード１枚を引き、飛行を持つ白黒の4/3の吸血鬼・デーモン・クリーチャー・トークン１体をタップ状態で生成する。」を得る。</card>
     <card name="Hakbal of the Surging Soul" ja="うねる魂のハクバル" type="伝説のクリーチャー ― マーフォーク・スカウト" pt="3/3">あなたのターンの戦闘の開始時に、あなたがコントロールしている各マーフォーク・クリーチャーはそれぞれ探検を行う。（あなたのライブラリーの一番上のカードを公開する。それが土地なら、そのカードをあなたの手札に加える。そうでないなら、探検を行ったクリーチャーの上に+1/+1カウンター１個を置く。その後、そのカードを戻すかあなたの墓地に置く。）
 うねる魂のハクバルが攻撃するたび、あなたはあなたの手札から土地・カード１枚を戦場に出してもよい。そうしないなら、カード１枚を引く。</card>
     <card name="Pantlaza, Sun-Favored" ja="太陽の寵児、パントラザ" type="伝説のクリーチャー ― 恐竜" pt="4/4">太陽の寵児、パントラザか、これでない恐竜１体があなたのコントロール下で戦場に出るたび、あなたは発見Ｘを行ってもよい。Ｘはそのクリーチャーのタフネスに等しい。これは毎ターン１回のみ行える。（マナ総量がそれ以下で土地でないカードが追放されるまで、あなたのライブラリーの一番上から１枚ずつ追放する。それをマナ・コストを支払うことなく唱えるか、あなたの手札に加える。残りを一番下に無作為の順番で置く。）</card>
@@ -2101,6 +2101,11 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0264" sub="WOE" name="Swamp" />
     <alt key="0265" sub="WOE" name="Mountain" />
     <alt key="0266" sub="WOE" name="Forest" />
+    <alt key="0287" sub="LCI" name="Plains" />
+    <alt key="0288" sub="LCI" name="Island" />
+    <alt key="0289" sub="LCI" name="Swamp" />
+    <alt key="0290" sub="LCI" name="Mountain" />
+    <alt key="0291" sub="LCI" name="Forest" />
     <!-- SL2 -->
     <alt key="0138" sub="SLD" name="Anguished Unmaking" />
     <alt key="0139" sub="SLD" name="Assassin's Trophy" />
@@ -3072,6 +3077,189 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0056" sub="WOC" name="Timber Paladin" />
     <alt key="0057" sub="WOC" name="Ellivere of the Wild Court" />
     <alt key="0058" sub="WOC" name="Tegwyll, Duke of Splendor" />
+    <!-- LCI -->
+    <alt key="0292" sub="LCI" name="Akal Pakal, First Among Equals" />
+    <alt key="0293" sub="LCI" name="Malcolm, Alluring Scoundrel" />
+    <alt key="0294" sub="LCI" name="Breeches, Eager Pillager" />
+    <alt key="0295" sub="LCI" name="Inti, Seneschal of the Sun" />
+    <alt key="0296" sub="LCI" name="Huatli, Poet of Unity" />
+    <alt key="0297" sub="LCI" name="Abuelo, Ancestral Echo" />
+    <alt key="0298" sub="LCI" name="Akawalli, the Seething Tower" />
+    <alt key="0299" sub="LCI" name="Amalia Benavides Aguirre" />
+    <alt key="0300" sub="LCI" name="Anim Pakal, Thousandth Moon" />
+    <alt key="0301" sub="LCI" name="Bartolome del Presidio" />
+    <alt key="0302" sub="LCI" name="Caparocti Sunborn" />
+    <alt key="0303" sub="LCI" name="Captain Storm, Cosmium Raider" />
+    <alt key="0304" sub="LCI" name="Kutzil, Malamet Exemplar" />
+    <alt key="0305" sub="LCI" name="The Mycotyrant" />
+    <alt key="0306" sub="LCI" name="Nicanzil, Current Conductor" />
+    <alt key="0308" sub="LCI" name="Saheeli, the Sun's Brilliance" />
+    <alt key="0309" sub="LCI" name="Sovereign Okinec Ahau" />
+    <alt key="0310" sub="LCI" name="Uchbenbak, the Great Mistake" />
+    <alt key="0311" sub="LCI" name="Vito, Fanatic of Aclazotz" />
+    <alt key="0312" sub="LCI" name="Zoyowa Lava-Tongue" />
+    <alt key="0313" sub="LCI" name="Throne of the Grim Captain" />
+    <alt key="0314" sub="LCI" name="Ojer Taq, Deepest Foundation" />
+    <alt key="0315" sub="LCI" name="Ojer Pakpatiq, Deepest Epoch" />
+    <alt key="0316" sub="LCI" name="Aclazotz, Deepest Betrayal" />
+    <alt key="0317" sub="LCI" name="Ojer Axonil, Deepest Might" />
+    <alt key="0318" sub="LCI" name="Ojer Kaslem, Deepest Growth" />
+    <alt key="0319" sub="LCI" name="The Ancient One" />
+    <alt key="0320" sub="LCI" name="Belligerent Yearling" />
+    <alt key="0321" sub="LCI" name="Bonehoard Dracosaur" />
+    <alt key="0322" sub="LCI" name="Rampaging Ceratops" />
+    <alt key="0323" sub="LCI" name="Scytheclaw Raptor" />
+    <alt key="0324" sub="LCI" name="Trumpeting Carnosaur" />
+    <alt key="0325" sub="LCI" name="Earthshaker Dreadmaw" />
+    <alt key="0326" sub="LCI" name="Ghalta, Stampede Tyrant" />
+    <alt key="0327" sub="LCI" name="Hulking Raptor" />
+    <alt key="0328" sub="LCI" name="Pugnacious Hammerskull" />
+    <alt key="0329" sub="LCI" name="Thrashing Brontodon" />
+    <alt key="0330" sub="LCI" name="Gishath, Sun's Avatar" />
+    <alt key="0331" sub="LCI" name="Itzquinth, Firstborn of Gishath" />
+    <alt key="0332" sub="LCI" name="Palani's Hatcher" />
+    <alt key="0333" sub="LCI" name="Get Lost" />
+    <alt key="0334" sub="LCI" name="Resplendent Angel" />
+    <alt key="0335" sub="LCI" name="Tishana's Tidebinder" />
+    <alt key="0336" sub="LCI" name="Bloodletter of Aclazotz" />
+    <alt key="0337" sub="LCI" name="Bringer of the Last Gift" />
+    <alt key="0338" sub="LCI" name="Starving Revenant" />
+    <alt key="0339" sub="LCI" name="Huatli, Poet of Unity" />
+    <alt key="0340" sub="LCI" name="The Skullspore Nexus" />
+    <alt key="0341" sub="LCI" name="Kellan, Daring Traveler" />
+    <alt key="0342" sub="LCI" name="Molten Collapse" />
+    <alt key="0343" sub="LCI" name="Wail of the Forgotten" />
+    <alt key="0344" sub="LCI" name="Roaming Throne" />
+    <alt key="0345" sub="LCI" name="Cavern of Souls" />
+    <alt key="0346" sub="LCI" name="Echoing Deeps" />
+    <alt key="0347" sub="LCI" name="Restless Anchorage" />
+    <alt key="0348" sub="LCI" name="Restless Prairie" />
+    <alt key="0349" sub="LCI" name="Restless Reef" />
+    <alt key="0350" sub="LCI" name="Restless Ridgeline" />
+    <alt key="0351" sub="LCI" name="Restless Vents" />
+    <alt key="0353" sub="LCI" name="Abuelo's Awakening" />
+    <alt key="0354" sub="LCI" name="Fabrication Foundry" />
+    <alt key="0355" sub="LCI" name="Kutzil's Flanker" />
+    <alt key="0356" sub="LCI" name="Sanguine Evangelist" />
+    <alt key="0357" sub="LCI" name="Thousand Moons Smithy" />
+    <alt key="0358" sub="LCI" name="Unstable Glyphbridge" />
+    <alt key="0359" sub="LCI" name="Warden of the Inner Sky" />
+    <alt key="0360" sub="LCI" name="Braided Net" />
+    <alt key="0361" sub="LCI" name="Deeproot Pilgrimage" />
+    <alt key="0362" sub="LCI" name="The Enigma Jewel" />
+    <alt key="0363" sub="LCI" name="The Everflowing Well" />
+    <alt key="0364" sub="LCI" name="Kitesail Larcenist" />
+    <alt key="0365" sub="LCI" name="Subterranean Schooner" />
+    <alt key="0366" sub="LCI" name="Corpses of the Lost" />
+    <alt key="0367" sub="LCI" name="Preacher of the Schism" />
+    <alt key="0368" sub="LCI" name="Queen's Bay Paladin" />
+    <alt key="0369" sub="LCI" name="Souls of the Lost" />
+    <alt key="0370" sub="LCI" name="Stalactite Stalker" />
+    <alt key="0371" sub="LCI" name="Tarrian's Journal" />
+    <alt key="0372" sub="LCI" name="Terror Tide" />
+    <alt key="0373" sub="LCI" name="Brass's Tunnel-Grinder" />
+    <alt key="0374" sub="LCI" name="Dire Flail" />
+    <alt key="0375" sub="LCI" name="Hit the Mother Lode" />
+    <alt key="0376" sub="LCI" name="Magmatic Galleon" />
+    <alt key="0377" sub="LCI" name="Poetic Ingenuity" />
+    <alt key="0378" sub="LCI" name="Bedrock Tortoise" />
+    <alt key="0379" sub="LCI" name="Cosmium Confluence" />
+    <alt key="0380" sub="LCI" name="Growing Rites of Itlimoc" />
+    <alt key="0381" sub="LCI" name="Intrepid Paleontologist" />
+    <alt key="0382" sub="LCI" name="Jadelight Spelunker" />
+    <alt key="0383" sub="LCI" name="Sentinel of the Nameless City" />
+    <alt key="0384" sub="LCI" name="The Belligerent" />
+    <alt key="0385" sub="LCI" name="Deepfathom Echo" />
+    <alt key="0386" sub="LCI" name="Squirming Emergence" />
+    <alt key="0387" sub="LCI" name="Matzalantli, the Great Door" />
+    <alt key="0388" sub="LCI" name="The Millennium Calendar" />
+    <alt key="0389" sub="LCI" name="Tarrian's Soulcleaver" />
+    <alt key="0390" sub="LCI" name="Threefold Thunderhulk" />
+    <alt key="0391" sub="LCI" name="Treasure Map" />
+    <alt key="0392" sub="LCI" name="Sunken Citadel" />
+    <alt key="0403" sub="LCI" name="Jadelight Spelunker" />
+    <alt key="0405" sub="LCI" name="Spyglass Siren" />
+    <alt key="0406" sub="LCI" name="Deep-Cavern Bat" />
+    <alt key="0407" sub="LCI" name="Geological Appraiser" />
+    <alt key="0408" sub="LCI" name="Cenote Scout" />
+    <alt key="0409" sub="LCI" name="Bartolome del Presidio" />
+    <!-- LCC -->
+    <alt key="0017" sub="LCC" name="Admiral Brass, Unsinkable" />
+    <alt key="0018" sub="LCC" name="Clavileno, First of the Blessed" />
+    <alt key="0019" sub="LCC" name="Hakbal of the Surging Soul" />
+    <alt key="0020" sub="LCC" name="Pantlaza, Sun-Favored" />
+    <alt key="0021" sub="LCC" name="Illustrious Wanderglyph" />
+    <alt key="0022" sub="LCC" name="Altar of the Wretched" />
+    <alt key="0023" sub="LCC" name="Ore-Rich Stalactite" />
+    <alt key="0024" sub="LCC" name="Contest of Claws" />
+    <alt key="0025" sub="LCC" name="Admiral Brass, Unsinkable" />
+    <alt key="0026" sub="LCC" name="Carmen, Cruel Skymarcher" />
+    <alt key="0027" sub="LCC" name="Clavileno, First of the Blessed" />
+    <alt key="0028" sub="LCC" name="Don Andres, the Renegade" />
+    <alt key="0029" sub="LCC" name="Hakbal of the Surging Soul" />
+    <alt key="0030" sub="LCC" name="Pantlaza, Sun-Favored" />
+    <alt key="0031" sub="LCC" name="Tetzin, Gnome Champion" />
+    <alt key="0032" sub="LCC" name="Wayta, Trainer Prodigy" />
+    <alt key="0033" sub="LCC" name="Xavier Sal, Infested Captain" />
+    <alt key="0034" sub="LCC" name="Xolatoyac, the Smiling Flood" />
+    <alt key="0035" sub="LCC" name="Eye of Ojer Taq" />
+    <alt key="0036" sub="LCC" name="Paleontologist's Pick-Axe" />
+    <alt key="0037" sub="LCC" name="Bronzebeak Foragers" />
+    <alt key="0038" sub="LCC" name="Charismatic Conqueror" />
+    <alt key="0039" sub="LCC" name="Elenda's Hierophant" />
+    <alt key="0040" sub="LCC" name="From the Rubble" />
+    <alt key="0041" sub="LCC" name="March of the Canonized" />
+    <alt key="0042" sub="LCC" name="Redemption Choir" />
+    <alt key="0043" sub="LCC" name="The Indomitable" />
+    <alt key="0044" sub="LCC" name="Mist Dancer" />
+    <alt key="0045" sub="LCC" name="Ripples of Potential" />
+    <alt key="0046" sub="LCC" name="Storm Fleet Negotiator" />
+    <alt key="0047" sub="LCC" name="Wave Goodbye" />
+    <alt key="0048" sub="LCC" name="Dusk Legion Sergeant" />
+    <alt key="0049" sub="LCC" name="Francisco, Fowl Marauder" />
+    <alt key="0050" sub="LCC" name="The Grim Captain's Locker" />
+    <alt key="0051" sub="LCC" name="Master of Dark Rites" />
+    <alt key="0052" sub="LCC" name="Promise of Aclazotz" />
+    <alt key="0053" sub="LCC" name="Skeleton Crew" />
+    <alt key="0054" sub="LCC" name="Broadside Bombardiers" />
+    <alt key="0055" sub="LCC" name="Gemcutter Buccaneer" />
+    <alt key="0056" sub="LCC" name="Wrathful Raptors" />
+    <alt key="0057" sub="LCC" name="Bygone Marvels" />
+    <alt key="0058" sub="LCC" name="Curious Altisaur" />
+    <alt key="0059" sub="LCC" name="Deeproot Historian" />
+    <alt key="0060" sub="LCC" name="Dinosaur Egg" />
+    <alt key="0061" sub="LCC" name="Scion of Calamity" />
+    <alt key="0062" sub="LCC" name="Sunfrill Imitator" />
+    <alt key="0063" sub="LCC" name="Topography Tracker" />
+    <alt key="0064" sub="LCC" name="Tributary Instructor" />
+    <alt key="0065" sub="LCC" name="Order of Sacred Dusk" />
+    <alt key="0066" sub="LCC" name="Singer of Swift Rivers" />
+    <alt key="0067" sub="LCC" name="Arm-Mounted Anchor" />
+    <alt key="0068" sub="LCC" name="Progenitor's Icon" />
+    <alt key="0101" sub="LCC" name="Archaeomancer's Map" />
+    <alt key="0102" sub="LCC" name="Wedding Ring" />
+    <alt key="0103" sub="LCC" name="Amulet of Vigor" />
+    <alt key="0104" sub="LCC" name="Arcane Signet" />
+    <alt key="0105" sub="LCC" name="Chalice of the Void" />
+    <alt key="0106" sub="LCC" name="Chimil, the Inner Sun" />
+    <alt key="0107" sub="LCC" name="Chromatic Orrery" />
+    <alt key="0108" sub="LCC" name="Coat of Arms" />
+    <alt key="0109" sub="LCC" name="Coercive Portal" />
+    <alt key="0110" sub="LCC" name="Colossus Hammer" />
+    <alt key="0111" sub="LCC" name="Everflowing Chalice" />
+    <alt key="0112" sub="LCC" name="Expedition Map" />
+    <alt key="0113" sub="LCC" name="Fist of Suns" />
+    <alt key="0114" sub="LCC" name="Lightning Greaves" />
+    <alt key="0115" sub="LCC" name="Mimic Vat" />
+    <alt key="0116" sub="LCC" name="Strionic Resonator" />
+    <alt key="0117" sub="LCC" name="Temple Bell" />
+    <alt key="0118" sub="LCC" name="Thought Vessel" />
+    <alt key="0119" sub="LCC" name="Whispersilk Cloak" />
+    <alt key="0120" sub="LCC" name="Worn Powerstone" />
+    <alt key="0121" sub="LCC" name="Admiral Brass, Unsinkable" />
+    <alt key="0122" sub="LCC" name="Clavileno, First of the Blessed" />
+    <alt key="0123" sub="LCC" name="Hakbal of the Surging Soul" />
+    <alt key="0124" sub="LCC" name="Pantlaza, Sun-Favored" />
     
     <!-- ★PRMセット扱い -->
     <!-- ZNR variants -->
@@ -5957,6 +6145,57 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0081" sub="WOT" name="Doubling Season" />
     <alt key="0082" sub="WOT" name="Nature's Will" />
     <alt key="0083" sub="WOT" name="Parallel Lives" />
+    <!-- Jurassic World Collection -->
+    <alt key="0001" sub="REX" name="Don't Move" />
+    <alt key="0002" sub="REX" name="Cresting Mosasaurus" />
+    <alt key="0003" sub="REX" name="Spitting Dilophosaurus" />
+    <alt key="0004" sub="REX" name="Hunting Velociraptor" />
+    <alt key="0005" sub="REX" name="Life Finds a Way" />
+    <alt key="0006" sub="REX" name="Savage Order" />
+    <alt key="0007" sub="REX" name="Welcome to . . ." />
+    <alt key="0008" sub="REX" name="Blue, Loyal Raptor" />
+    <alt key="0009" sub="REX" name="Compy Swarm" />
+    <alt key="0010" sub="REX" name="Ellie and Alan, Paleontologists" />
+    <alt key="0011" sub="REX" name="Grim Giganotosaurus" />
+    <alt key="0012" sub="REX" name="Henry Wu, InGen Geneticist" />
+    <alt key="0013" sub="REX" name="Ian Malcolm, Chaotician" />
+    <alt key="0014" sub="REX" name="Indominus Rex, Alpha" />
+    <alt key="0015" sub="REX" name="Indoraptor, the Perfect Hybrid" />
+    <alt key="0016" sub="REX" name="Owen Grady, Raptor Trainer" />
+    <alt key="0017" sub="REX" name="Permission Denied" />
+    <alt key="0018" sub="REX" name="Ravenous Tyrannosaurus" />
+    <alt key="0019" sub="REX" name="Swooping Pteranodon" />
+    <alt key="0020" sub="REX" name="Dino DNA" />
+    <alt key="0021" sub="REX" name="Plains" />
+    <alt key="0022" sub="REX" name="Plains" />
+    <alt key="0023" sub="REX" name="Island" />
+    <alt key="0024" sub="REX" name="Island" />
+    <alt key="0025" sub="REX" name="Swamp" />
+    <alt key="0026" sub="REX" name="Swamp" />
+    <alt key="0027" sub="REX" name="Mountain" />
+    <alt key="0028" sub="REX" name="Mountain" />
+    <alt key="0029" sub="REX" name="Forest" />
+    <alt key="0030" sub="REX" name="Forest" />
+    <alt key="0031" sub="REX" name="Command Tower" />
+    <alt key="0032" sub="REX" name="Command Tower" />
+    <!-- The Lost Caverns of Ixalan Special Guests -->
+    <alt key="0001" sub="SPG" name="Lord of Atlantis" />
+    <alt key="0002" sub="SPG" name="Malcolm, Keen-Eyed Navigator" />
+    <alt key="0003" sub="SPG" name="Bridge from Below" />
+    <alt key="0004" sub="SPG" name="Mephidross Vampire" />
+    <alt key="0005" sub="SPG" name="Pitiless Plunderer" />
+    <alt key="0006" sub="SPG" name="Breeches, Brazen Plunderer" />
+    <alt key="0007" sub="SPG" name="Dargo, the Shipwrecker" />
+    <alt key="0008" sub="SPG" name="Rampaging Ferocidon" />
+    <alt key="0009" sub="SPG" name="Underworld Breach" />
+    <alt key="0010" sub="SPG" name="Carnage Tyrant" />
+    <alt key="0011" sub="SPG" name="Ghalta, Primal Hunger" />
+    <alt key="0012" sub="SPG" name="Polyraptor" />
+    <alt key="0013" sub="SPG" name="Kalamax, the Stormsire" />
+    <alt key="0015" sub="SPG" name="Mirri, Weatherlight Duelist" />
+    <alt key="0016" sub="SPG" name="Thrasios, Triton Hero" />
+    <alt key="0017" sub="SPG" name="Mana Crypt" />
+    <alt key="0018" sub="SPG" name="Star Compass" />
     
     <!-- ★カードタイプ依存 -->
     <!-- 両面カード -->
@@ -6120,6 +6359,28 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0189" sub="MOM" name="Herbology Instructor" />
     <alt key="0200" sub="MOM" name="Polukranos Reborn" />
     <alt key="0213" sub="MOM" name="Vorinclex" />
+    <alt key="0006" sub="LCI" name="Clay-Fired Bricks" />
+    <alt key="0029" sub="LCI" name="Oteclan Landmark" />
+    <alt key="0036" sub="LCI" name="Spring-Loaded Sawblades" />
+    <alt key="0041" sub="LCI" name="Unstable Glyphbridge" />
+    <alt key="0047" sub="LCI" name="Braided Net" />
+    <alt key="0060" sub="LCI" name="Inverted Iceberg" />
+    <alt key="0062" sub="LCI" name="Lodestone Needle" />
+    <alt key="0083" sub="LCI" name="Waterlogged Hulk" />
+    <alt key="0128" sub="LCI" name="Tithing Blade" />
+    <alt key="0129" sub="LCI" name="Visage of Dread" />
+    <alt key="0145" sub="LCI" name="Dire Flail" />
+    <alt key="0155" sub="LCI" name="Idol of the Deep King" />
+    <alt key="0164" sub="LCI" name="Saheeli's Lattice" />
+    <alt key="0189" sub="LCI" name="Huatli, Poet of Unity" />
+    <alt key="0195" sub="LCI" name="Jade Seedstones" />
+    <alt key="0197" sub="LCI" name="Kaslem's Stonetree" />
+    <alt key="0262" sub="LCI" name="Sunbird Standard" />
+    <alt key="0266" sub="LCI" name="Throne of the Grim Captain" />
+    <alt key="0010" sub="LCC" name="Altar of the Wretched" />
+    <alt key="0011" sub="LCC" name="Ore-Rich Stalactite" />
+    <alt key="0015" sub="LCC" name="Eye of Ojer Taq" />
+    <alt key="0016" sub="LCC" name="Paleontologist's Pick-Axe" />
     <!-- 両面カード (片面だけ) -->
     <alt key="0023" sub="ORI" name="Kytheon, Hero of Akros" />
     <alt key="0060" sub="ORI" name="Jace, Vryn's Prodigy" />
@@ -6158,6 +6419,20 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0158" sub="RIX" name="Hadana's Climb" />
     <alt key="0218" sub="M19" name="Nicol Bolas, the Ravager" />
     <alt key="0211" sub="MID" name="Arlinn, the Moon's Fury" /> <!-- 第2面のみ -->
+    <alt key="0026" sub="LCI" name="Ojer Taq, Deepest Foundation" />
+    <alt key="0055" sub="LCI" name="Locus of Enlightenment" /> <!-- 第2面のみ -->
+    <alt key="0067" sub="LCI" name="Ojer Pakpatiq, Deepest Epoch" />
+    <alt key="0088" sub="LCI" name="Aclazotz, Deepest Betrayal" />
+    <alt key="0108" sub="LCI" name="Grasping Shadows" />
+    <alt key="0146" sub="LCI" name="Dowsing Device" />
+    <alt key="0158" sub="LCI" name="Ojer Axonil, Deepest Might" />
+    <alt key="0188" sub="LCI" name="Growing Rites of Itlimoc" />
+    <alt key="0204" sub="LCI" name="Ojer Kaslem, Deepest Growth" />
+    <alt key="0217" sub="LCI" name="Twists and Turns" />
+    <alt key="0233" sub="LCI" name="Master's Manufactory" /> <!-- 第2面のみ -->
+    <alt key="0256" sub="LCI" name="Matzalantli, the Great Door" />
+    <alt key="0267" sub="LCI" name="Treasure Map" />
+    <alt key="0013" sub="LCC" name="The Golden-Gear Colossus" /> <!-- 第2面のみ -->
     <!-- 英雄譚 -->
     <alt key="0018" sub="DOM" name="Fall of the Thran" />
     <alt key="0021" sub="DOM" name="History of Benalia" />
@@ -6258,7 +6533,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0198" sub="WOE" name="Welcome to Sweettooth" />
     <alt key="0200" sub="WOE" name="The Apprentice's Folly" />
     <alt key="0272" sub="LCC" name="King Narfi's Betrayal" />
-    <!-- 出来事 (ELD, AFC, CLB, MOC, CMM, WOE) : SearchAltSubKey method の追記が必要 -->
+    <!-- 出来事 : SearchAltSubKey method の追記が必要 -->
     <alt key="0005" sub="ELD" name="Ardenvale Tactician" />
     <alt key="0011" sub="ELD" name="Faerie Guidemother" />
     <alt key="0014" sub="ELD" name="Giant Killer" />
@@ -6380,6 +6655,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0085" sub="WOC" name="Brazen Borrower" />
     <alt key="0096" sub="WOC" name="Hypnotic Sprite" />
     <alt key="0231" sub="LCI" name="Kellan, Daring Traveler" />
+    <alt key="0084" sub="LCC" name="Promise of Aclazotz" />
     <!-- 変容 (IKO, C20, DMC, MOC) -->
     <alt key="0003" sub="IKO" name="Mysterious Egg" />
     <alt key="0007" sub="IKO" name="Cubwarden" />
@@ -9770,9 +10046,6 @@ IV ― あなたがコントロールしているクリーチャー１体と、�
     <card name="Mech Hangar" ja="メカ格納庫" type="土地">(Ｔ)：(◇)を加える。
 (Ｔ)：好きな色１色のマナ１点を加える。このマナは、操縦士か機体である呪文を唱えるためにのみ使用できる。
 (３),(Ｔ)：機体１体を対象とする。ターン終了時まで、それはアーティファクト・クリーチャーになる。</card>
-    <card name="Secluded Courtyard" ja="閑静な中庭" type="土地">閑静な中庭が戦場に出るに際し、クリーチャー・タイプ１つを選ぶ。
-(Ｔ)：(◇)を加える。
-(Ｔ)：好きな色１色のマナ１点を加える。このマナは、その選ばれたタイプのクリーチャー・呪文を唱えるためか、その選ばれたタイプのクリーチャーかクリーチャー・カードの能力を起動するためにのみ使用できる。</card>
     
     <!-- NEO (から) -->
     <card name="Nashi, Moon Sage's Scion" ja="月の賢者の養子、ナシ" type="伝説のクリーチャー ― ネズミ・忍者" pt="3/2">忍術(３)(黒)（(３)(黒),あなたがコントロールしていてブロックされなかった攻撃クリーチャー１体を手札に戻す：あなたの手札からこのカードをタップ状態かつ攻撃している状態で戦場に出す。）
@@ -11082,7 +11355,7 @@ III ― ターン終了時まで、サラマンダー１体がプレイヤー１
     <card name="The Twelfth Doctor" ja="12代目ドクター" type="伝説のクリーチャー ― タイムロード・ドクター" pt="4/4">各ターン内であなたがあなたの手札以外から唱える１つ目の呪文は実演を持つ。（あなたがその呪文を唱えたとき、あなたはそれをコピーしてもよい。そうしたなら、対戦相手１人を選び、それをコピーさせる。パーマネント・呪文のコピーはトークンになる。）
 あなたが呪文１つをコピーするたび、12代目ドクターの上に+1/+1カウンター１個を置く。</card>
     
-    <!-- 再録 (LCI) -->
+    <!-- 再録 (LCI,LCC) -->
     <card name="Cavern of Souls" ja="魂の洞窟" type="土地">魂の洞窟が戦場に出るに際し、クリーチャー・タイプ１つを選ぶ。
 (Ｔ)：(◇)を加える。
 (Ｔ)：好きな色１色のマナ１点を加える。このマナは、その選ばれたタイプのクリーチャー・呪文を唱えるためにのみ使用でき、その呪文は打ち消されない。</card>
@@ -11093,6 +11366,9 @@ III ― ターン終了時まで、サラマンダー１体がプレイヤー１
     <card name="Resplendent Angel" ja="輝かしい天使" type="クリーチャー ― 天使" pt="3/3">飛行
 各終了ステップの開始時に、このターンにあなたが５点以上のライフを得ていた場合、飛行と警戒を持つ白の4/4の天使・クリーチャー・トークン１体を生成する。
 (３)(白)(白)(白)：ターン終了時まで、輝かしい天使は+2/+2の修整を受け絆魂を得る。</card>
+    <card name="Secluded Courtyard" ja="閑静な中庭" type="土地">閑静な中庭が戦場に出るに際し、クリーチャー・タイプ１つを選ぶ。
+(Ｔ)：(◇)を加える。
+(Ｔ)：好きな色１色のマナ１点を加える。このマナは、その選ばれたタイプのクリーチャー・呪文を唱えるためか、その選ばれたタイプのクリーチャーである発生源の能力を起動するためにのみ使用できる。</card>
     <card name="Sorcerous Spyglass" ja="魔術遠眼鏡" type="アーティファクト">魔術遠眼鏡が戦場に出るに際し、対戦相手１人の手札を見て、その後、カード名１つを選ぶ。
 その選ばれた名前を持つ発生源の起動型能力は、それがマナ能力でないかぎり起動できない。</card>
     <card name="Thrashing Brontodon" ja="打ち壊すブロントドン" type="クリーチャー ― 恐竜" pt="3/4">(１),打ち壊すブロントドンを生け贄に捧げる：アーティファクトやエンチャントのうち１つを対象とする。それを破壊する。</card>
