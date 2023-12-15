@@ -486,7 +486,7 @@ Enkira, Hostile Scavengerと２体以上のゾンビが攻撃するたび、タ�
 装備(４)</card>
     <card name="Gregor, Shrewd Magistrate" ja="Gregor, Shrewd Magistrate" type="伝説のクリーチャー ― 人間・アドバイザー" pt="1/3">潜伏（このクリーチャーは、これより大きなパワーを持つクリーチャーによってはブロックされない。）
 Gregor, Shrewd Magistrateがプレイヤー１人に戦闘ダメージを与えるたび、これのパワーに等しい枚数のカードを引く。</card>
-    <card name="Greymond, Avacyn's Stalwart" ja="Greymond, Avacyn's Stalwart" type="伝説のクリーチャー ― 人間・兵士" pt="3/4">Greymond, Avacyn's Stalwartが戦場に出るに際し、先制攻撃か警戒か絆魂のうち能力２つを選ぶ。
+    <card name="Greymond, Avacyn's Stalwart" ja="Greymond, Avacyn's Stalwart" type="伝説のクリーチャー ― 人間・兵士" pt="3/4">Greymond, Avacyn's Stalwartが戦場に出るに際し、先制攻撃や警戒や絆魂のうち能力２つを選ぶ。
 あなたがコントロールしている人間は選ばれた各能力を持つ。
 あなたが４体以上の人間をコントロールしているかぎり、あなたがコントロールしている人間は+2/+2の修整を受ける。</card>
     <card name="Hansk, Slayer Zealot" ja="Hansk, Slayer Zealot" type="伝説のクリーチャー ― 人間・射手" pt="4/4">あなたのアップキープの開始時に、対戦相手１人を対象とする。そのプレイヤーはウォーカー・トークン３体を生成する。（それらは黒の2/2のゾンビ・クリーチャーである。）
@@ -510,7 +510,7 @@ Sophina, Spearsage Deserterが攻撃するたび、トークンでない攻撃�
     <card name="Wernog, Rider's Chaplain" ja="Wernog, Rider's Chaplain" type="伝説のクリーチャー ― 人間" pt="1/2">Wernog, Rider's Chaplainが戦場に出たか戦場を離れたとき、各対戦相手はそれぞれ調査を行ってもよい。そうしなかった各対戦相手はそれぞれ１点のライフを失う。あなたは調査をＸ回行う。Ｘはこれにより調査を行った対戦相手の人数に１を足した値に等しい。
 永遠の友（両方が永遠の友を持つなら、あなたは２体の統率者を使用できる。）</card>
     <!-- SL2 -->
-    <card name="Rick, Steadfast Leader" ja="Rick, Steadfast Leader" type="伝説のクリーチャー ― 人間・兵士" pt="3/4">Rick, Steadfast Leaderが戦場に出るに際し、先制攻撃か警戒か絆魂のうち能力２つを選ぶ。
+    <card name="Rick, Steadfast Leader" ja="Rick, Steadfast Leader" type="伝説のクリーチャー ― 人間・兵士" pt="3/4">Rick, Steadfast Leaderが戦場に出るに際し、先制攻撃や警戒や絆魂のうち能力２つを選ぶ。
 あなたがコントロールしている人間は選ばれた各能力を持つ。
 あなたが４体以上の人間をコントロールしているかぎり、あなたがコントロールしている人間は+2/+2の修整を受ける。</card>
     <card name="Daryl, Hunter of Walkers" ja="Daryl, Hunter of Walkers" type="伝説のクリーチャー ― 人間・射手" pt="4/4">あなたのアップキープの開始時に、対戦相手１人を対象とする。そのプレイヤーはウォーカー・トークン３体を生成する。
@@ -602,6 +602,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <card name="Confidence from Strength" ja="Confidence from Strength" type="ソーサリー">クリーチャー１体を対象とする。ターン終了時まで、それは+4/+4の修整を受けトランプルを得る。</card>
     <card name="Journey for the Elixir" ja="Journey for the Elixir" type="ソーサリー">あなたのライブラリーやあなたの墓地から基本土地・カード１枚と《Jiang Yanggu》という名前のカード１枚を探し、公開し、あなたの手札に加える。その後、ライブラリーを切り直す。</card>
     <card name="Cleansing Screech" ja="Cleansing Screech" type="ソーサリー">１つを対象とする。Cleansing Screechはそれに４点のダメージを与える。</card>
+    
     <!-- Vanguard -->
     <card name="Avatar - Akroma, Angel of Wrath" ja="Akroma, Angel of Wrath Avatar" type="ヴァンガード" pt="手札 +1/ライフ +7" wiki="Akroma, Angel of Wrath Avatar">クリーチャー１体があなたのコントロール下で戦場に出るたび、飛行、先制攻撃、トランプル、速攻、プロテクション（黒）、プロテクション（赤）、警戒の中から能力２つを無作為に選ぶ。そのクリーチャーはそれらの選ばれた能力を得る。</card>
     <card name="Avatar - Arcanis, the Omnipotent" ja="Arcanis, the Omnipotent Avatar" type="ヴァンガード" pt="手札 +1/ライフ -3" wiki="Arcanis, the Omnipotent Avatar">(Ｘ),あなたがコントロールしているマナ総量がＸのクリーチャー１体をオーナーの手札に戻す：０からＸまでの数１つを無作為に選び、その選ばれた数に等しい枚数のカードを引く。Ｘは０にできない。</card>
@@ -6592,7 +6593,6 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="ライラブラリー|ラブラリー|ライブラリ(?!ー|アン)" value="ライブラリー" />
     <regex target="text" pattern="においてもよい" value="に置いてもよい" />
     <regex target="text" pattern="修正" value="修整" />
-    <regex target="text" pattern="[\[{]Demon}" value="デーモン・" />
     <regex target="text" pattern="をフェイズ・アウトする" value="はフェイズ・アウトする" />
     <regex target="text" pattern="プレインズウォーカー１人" value="プレインズウォーカー１体" />
     <regex target="text" pattern="が装備しているクリーチャーが" value="か装備しているクリーチャーが" />
@@ -6633,7 +6633,6 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="は各対戦相手は" value="は各対戦相手に" />
     <regex target="text" pattern="生け贄に下げる" value="生け贄に捧げる" />
     <regex target="text" pattern="ターンを始まる" value="ターンを始める" />
-    <regex target="text" pattern="[\[{]Vampire}" value="吸血鬼・" />
     <regex target="text" pattern="の枚数の等しい。" value="の枚数に等しい。" />
     <regex target="text" pattern="ビリヤン兵団長 ― " value="ピリヤン兵団長 ― " />
     <regex target="text" pattern="ガラス製の心臓を血" value="ガラス製の心臓と血" />
@@ -6756,19 +6755,22 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="(?&lt;=ターン[^。]+)(?&lt;!から)始めて" value="初めて" />
     <regex target="text" pattern="コントロールしてて" value="コントロールしていて" />
     <regex target="text" pattern="がが" value="が" />
+    <!-- タイプの誤り -->
+    <regex target="type" pattern="(?&lt;!ウルザの)\(Urza’s\)" value="ウルザの(Urza's)" />
+    <regex target="type" pattern="(?&lt;!ク＝タン)\(C’tan\)" value="ク＝タン(C'tan)" />
+    <regex target="type" pattern="\(Snail\)" value="カタツムリ(Snail)" />
+    <regex target="type" pattern="タイム\(Time\)・ロード\(Lord\)" value="タイムロード(Time Lord)" />
+    <regex target="text" pattern="\(Vechile\)" value="機体(Vehicle)" />
+    <regex target="text" pattern="\(Fangus\)" value="ファンガス(Fungus)" />
+    <regex target="text" pattern="\(Girffin\)" value="グリフィン(Griffin)" />
+    <regex target="text" pattern="\(Skelton\)" value="スケルトン(Skeleton)" />
+    <regex target="text" pattern="[\[{]Demon}" value="デーモン(Demon)" />
+    <regex target="text" pattern="[\[{]Vampire}(?=クリーチャー|デーモン)" value="吸血鬼(Vampire)・" />
     <!-- 基本 -->
     <regex target="ja" pattern="（.+）$" value="" />
     <regex target="type" pattern=" \-\-\- " value=" ― " />
-    <regex target="text" pattern="\(Vechile\)" value="機体" />
-    <regex target="text" pattern="\(Fangus\)" value="ファンガス" />
-    <regex target="text" pattern="\(Girffin\)" value="グリフィン" />
-    <regex target="text" pattern="\(Skelton\)" value="スケルトン" />
     <regex target="text" pattern="\([a-zA-Z'\- ]+\)・?(?=クリーチャー|アーティファクト|土地|カード|呪文|パーマネント)" value="・" />
-    <regex target="type" pattern="(?&lt;!ウルザの)\(Urza’s\)" value="ウルザの" />
-    <regex target="type" pattern="(?&lt;!ク＝タン)\(C’tan\)" value="ク＝タン" />
-    <regex target="type" pattern="\(Snail\)" value="カタツムリ" />
     <regex target="type|text" pattern="\([a-zA-Z'\- ]+\)(?!」)" value="" />
-    <regex target="type" pattern="タイム・ロード" value="タイムロード" />
     <regex target="text" pattern="(?&lt;=《[^《/》]+)(?&lt;!《昼|《夜)/[^《/》]+(?=》)" value="" />
     <regex target="text" pattern="//---試作部分---//" value="//" />
     <regex target="text" pattern="^\([白青黒赤緑]\)$" value="" />
@@ -6815,7 +6817,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="(?&lt;=平地|島|沼|山|森|砂漠|洞窟|恐竜|昆虫|兵士|同盟者|機体|装備品|英雄譚|呪文)カード" value="・カード" />
     <regex target="text" pattern="(?&lt;=オーラ|ルーン|装備品|統率者|猫|天使|恐竜|巨人|エルフ|ゾンビ|ドクター|ドラゴン|コボルド|クレリック|スピリット|エレメンタル|マーフォーク|ミノタウルス)呪文" value="・呪文" />
     <regex target="text" pattern="(?&lt;=土地|猫|犬|鳥|馬|熊|狼|蛇|侍|人間|市民|植物|苗木|戦士|兵士|騎士|恐竜|昆虫|海賊|軍団|反射|墨獣|祭殿|雄牛|吸血鬼|同盟者|邪魔者|落とし子|ならず者|ちらつき蛾|組立作業員)クリーチャー" value="・クリーチャー" />
-    <regex target="text" pattern="(?&lt;=装備品|機体|兵士|彫像|飛行機械|霊気装置|手掛かり)アーティファクト" value="・アーティファクト" />
+    <regex target="text" pattern="(?&lt;=装備品|兵士|彫像|飛行機械|霊気装置|手掛かり)アーティファクト" value="・アーティファクト" />
     <regex target="text" pattern="砂漠土地" value="砂漠・土地" />
     <regex target="text" pattern="(?&lt;=金|血|宝物|食物|地図|破片|役割|培養器|手掛かり)トークン" value="・トークン" />
     <regex target="text" pattern="ファイレクシア病カウンター" value="ファイレクシア病・カウンター" />
@@ -7367,13 +7369,13 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="(?&lt;=ゴブリンやオークのうち[^。]+)すべては" value="各クリーチャーは" />
     <regex target="text" pattern="(?&lt;=クリーチャーやプレインズウォーカーのうち[^。]+)すべてを(?=追放する)" value="各パーマネントを" />
     <!-- テンプレート対抗：あなたは -->
-    <regex target="text" pattern="(?&lt;!（[^\n]*)(?&lt;=^|。|：| ― |\n・|「)(?!あなたは|.*対戦相手|.*プレイヤー|.*コントローラー|.*オーナーは|その後)(?=[^、：。（\n]+(?:捨て|戦場に出し|墓地に置い|一番.に置い|オーナーの手札に戻し|切削し|切り直し|追放し|生け贄に捧げ|支払っ|唱え)てもよい。)" value="あなたは" />
+    <regex target="text" pattern="(?&lt;!（[^\n]*)(?&lt;=^|。|：| ― |\n・|「)(?!あなたは|.*対戦相手|.*プレイヤー|.*コントローラー|.*オーナーは|その後)(?=[^、：。（」\n]+(?:捨て|出し|置い|加え|戻し|切削し|切り直し|追放し|タップし|生け贄に捧げ|支払っ|唱え)てもよい。)" value="あなたは" />
     <regex target="text" pattern="。(?=(?:その|それらの)コピーの新しい対象を選んでもよい。|プレインズウォークしてもよい。)" value="。あなたは" />
-    <regex target="text" pattern="(?&lt;!（[^\n]*|あなたは[^。]+)(?&lt;=なら|場合|たび|とき|時に|まで|かぎり|その後|代わりに|につきそれぞれ|ターン|１回)、(?!あなたは|[^。]*対戦相手|.*プレイヤー|.*コントローラー|.*オーナーは|代わりに)(?=[^、。「]+(?:公開し|捨て|生成し|コピーし|戦場に[出戻]し|手札に戻し|タップし|表向きにし|割り振っ|取り除い|動かし|追放し|生け贄に捧げ|置い|プレイし|唱え|支払っ)てもよ)" value="、あなたは" />
+    <regex target="text" pattern="(?&lt;!（[^\n]*|あなたは[^。]+)(?&lt;=なら|場合|たび|とき|時に|まで|かぎり|その後|代わりに|につきそれぞれ|ターン|１回)、(?!あなたは|[^。]*対戦相手|.*プレイヤー|.*コントローラー|.*オーナーは|代わりに)(?=[^、。「]+(?:公開し|捨て|出し|置い|戻し|切削し|生成し|コピーし|表向きにし|割り振っ|取り除い|動かし|行っ|追放し|タップし|生け贄に捧げ|支払っ|唱え|プレイし)てもよ)" value="、あなたは" />
     <regex target="text" pattern="(?&lt;=。|：|なら、|たび、|とき、|その後、)「(?=[^」]+」を(?:選んでもよい|持つ紋章を得る))" value="あなたは「" />
     <regex target="text" pattern="(?m)^あなたの(?=ライブラリーの一番上から[^。]+を(?:唱え|プレイし)てもよい。)" value="あなたはあなたの" />
     <regex target="text" pattern="(?m)^あなたのアンタップ・ステップに、(?=[^。]+を選んでもよい。)" value="あなたは、あなたのアンタップ・ステップに" />
-    <regex target="text" pattern="(?m)(?&lt;=^|：)カード(?=.枚を引き、.点のライフを失う。)" value="あなたはカード" />
+    <regex target="text" pattern="(?m)(?&lt;=^|：|とき、|場合、)カード(?=.枚を引き、?.点のライフを失う。)" value="あなたはカード" />
     <regex target="text" pattern="(?m)^あなたはカード１枚を引く。$" value="カード１枚を引く。" />
     <!-- テンプレート対抗：A or B (や) -->
     <regex target="text" pattern="(?&lt;=アーティファクト|クリーチャー|エンチャント|インスタント)や(エンチャント|インスタント|ソーサリー)や(?=(?:プレインズウォーカー|ソーサリー|土地|バトル|ウィザード|フェアリー)である(?:呪文を唱えるたび|呪文１つを|カード１枚))" value="か$1か" />
@@ -11232,31 +11234,15 @@ III ― すべての壁を破壊する。この英雄譚を追放する。その
 最深の基盤、オヘル・タクが死亡したとき、これをオーナーのコントロール下でタップ状態かつ変身させた状態で戦場に戻す。</card>
     
     <!-- 「あなたは」抜け (LCI) -->
-    <card name="Admiral Brass, Unsinkable" ja="沈まぬ者、鉄面提督" type="伝説のクリーチャー ― 人間・海賊" pt="3/3">沈まぬ者、鉄面提督が戦場に出たとき、カード４枚を切削する。
-あなたのターンの戦闘の開始時に、あなたの墓地にある海賊・クリーチャー・カード１枚を対象とする。あなたはそれを最終カウンター１個が置かれた状態で戦場に戻してもよい。それの基本のパワーとタフネスは4/4である。ターン終了時まで、それは速攻を得る。（最終カウンターが置かれたクリーチャーが死亡するなら、代わりにそれを追放する。）</card>
     <card name="Cosmium Catalyst" ja="コズミュームの触媒" type="アーティファクト" rel="Ore-Rich Stalactite">(１)(赤),(Ｔ)：コズミュームの触媒を作製するために追放されているカード１枚を無作為に選ぶ。あなたはそのカードを、マナ・コストを支払うことなく唱えてもよい。</card>
-    <card name="Deathcap Marionette" ja="死天狗茸の操り人形" type="クリーチャー ― ファンガス" pt="1/1">接死
-死天狗茸の操り人形が戦場に出たとき、あなたはカード２枚を切削してもよい。（あなたのライブラリーの一番上からカード２枚をあなたの墓地に置いてもよい。）</card>
-    <card name="Dinosaur Egg" ja="恐竜の卵" type="クリーチャー ― 恐竜・卵" pt="0/3">進化（クリーチャー１体があなたのコントロール下で戦場に出るたび、そのクリーチャーのパワーかタフネスがこのクリーチャーよりも大きい場合、このクリーチャーの上に+1/+1カウンター１個を置く。）
-恐竜の卵が死亡したとき、あなたは発見Ｘを行ってもよい。Ｘはこれのタフネスに等しい。</card>
-    <card name="Dread Osseosaur" ja="戦慄のオセオザウルス" type="クリーチャー ― 恐竜・スケルトン・ホラー" pt="5/4" rel="Visage of Dread">威迫
-戦慄のオセオザウルスが戦場に出るか攻撃するたび、あなたはカード２枚を切削してもよい。（あなたのライブラリーの一番上からカード２枚をあなたの墓地に置いてもよい。）</card>
     <card name="Echoing Deeps" ja="残響する深淵" type="土地 ― 洞窟">あなたは残響する深淵を、他のタイプに加えて洞窟であることを除き、墓地にある土地・カード１枚のコピーとしてタップ状態で戦場に出してもよい。
 (Ｔ)：(◇)を加える。</card>
-    <card name="Iceberg Titan" ja="氷山のタイタン" type="アーティファクト・クリーチャー ― ゴーレム" pt="6/6" rel="Inverted Iceberg">氷山のタイタンが攻撃するたび、アーティファクトやクリーチャーのうち１つを対象とする。あなたはそれをタップまたはアンタップしてもよい。</card>
-    <card name="In the Presence of Ages" ja="歴史との対峙" type="インスタント">あなたのライブラリーの一番上からカード４枚を公開する。あなたはその中からクリーチャー・カード最大１枚と土地・カード最大１枚をあなたの手札に加えてもよい。残りをあなたの墓地に置く。</card>
     <card name="Jadeheart Attendant" ja="翡翠心の従者" type="アーティファクト・クリーチャー ― ゴーレム" pt="7/7" rel="Jade Seedstones">翡翠心の従者が戦場に出たとき、あなたはこれを作製するために追放されているカードのマナ総量に等しい点数のライフを得る。</card>
     <card name="Locus of Enlightenment" ja="啓蒙の神座" type="伝説のアーティファクト" rel="The Enigma Jewel">啓蒙の神座はこれを作製するために追放されているすべてのカードのすべての起動型能力を持つ。あなたはそれらの各能力をそれぞれ、毎ターン１回のみ起動してもよい。
 あなたがマナ能力でない能力１つを起動するたび、それをコピーする。あなたはそのコピーの新しい対象を選んでもよい。</card>
-    <card name="Mephitic Draught" ja="毒気の薬" type="アーティファクト">毒気の薬が戦場に出たか戦場から墓地に置かれたとき、あなたはカード１枚を引き、１点のライフを失う。</card>
-    <card name="Mineshaft Spider" ja="竪坑の蜘蛛" type="クリーチャー ― 蜘蛛" pt="3/4">到達
-竪坑の蜘蛛が戦場に出たとき、あなたはカード２枚を切削してもよい。（あなたのライブラリーの一番上からカード２枚をあなたの墓地に置いてもよい。）</card>
-    <card name="Pantlaza, Sun-Favored" ja="太陽の寵児、パントラザ" type="伝説のクリーチャー ― 恐竜" pt="4/4">太陽の寵児、パントラザか、これでない恐竜１体があなたのコントロール下で戦場に出るたび、あなたは発見Ｘを行ってもよい。Ｘはそのクリーチャーのタフネスに等しい。これは毎ターン１回のみ行える。（マナ総量がそれ以下で土地でないカードが追放されるまで、あなたのライブラリーの一番上から１枚ずつ追放する。それをマナ・コストを支払うことなく唱えるか、あなたの手札に加える。残りを一番下に無作為の順番で置く。）</card>
     <card name="Queen's Bay Paladin" ja="女王湾の聖騎士" type="クリーチャー ― 吸血鬼・騎士" pt="5/4">女王湾の聖騎士が戦場に出るか攻撃するたび、あなたの墓地にある吸血鬼・カード最大１枚を対象とする。それを最終カウンター１個が置かれた状態で戦場に戻す。あなたはそれのマナ総量に等しい点数のライフを失う。（最終カウンターが置かれているクリーチャーが死亡するなら、代わりにそれを追放する。）</card>
     <card name="Starving Revenant" ja="飢えた亡霊" type="クリーチャー ― スピリット・ホラー" pt="4/4">飢えた亡霊が戦場に出たとき、諜報２を行う。その後、あなたのライブラリーの一番上に置いた各カードにつきそれぞれ、あなたはカード１枚を引き３点のライフを失う。
 落魄８ ― あなたがカード１枚を引くたび、あなたの墓地に８枚以上のパーマネント・カードがある場合、対戦相手１人を対象とする。そのプレイヤーは１点のライフを失い、あなたは１点のライフを得る。</card>
-    <card name="Stinging Cave Crawler" ja="洞窟を這い刺すもの" type="クリーチャー ― 昆虫・ホラー" pt="1/3">接死
-落魄４ ― 洞窟を這い刺すものが攻撃するたび、あなたの墓地に４枚以上のパーマネント・カードがある場合、あなたはカード１枚を引き、１点のライフを失う。</card>
     
     <!-- 再録 (LCI,LCC) -->
     <card name="Cavern of Souls" ja="魂の洞窟" type="土地">魂の洞窟が戦場に出るに際し、クリーチャー・タイプ１つを選ぶ。
