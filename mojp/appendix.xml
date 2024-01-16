@@ -6638,6 +6638,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="ガラス製の心臓を血" value="ガラス製の心臓と血" />
     <regex target="text" pattern="パワーがタフネスが" value="パワーかタフネスが" />
     <regex target="text" pattern="あなたはテフェリー" value="あなたがテフェリー" />
+    <regex target="text" pattern="カウンターを１個おき" value="カウンターを１個置き" />
     <regex target="text" pattern="：(?=[^、。「\n]+：)" value="," />
     <regex target="text" pattern="この能力を唱えるために" value="この呪文を唱えるために" />
     <regex target="text" pattern="ビーコン・オブ・ホープ ― " value="ビーコン・オヴ・ホープ ― " />
@@ -7484,16 +7485,21 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="「証拠」か「賄賂」" value="「証拠(Evidence)」か「賄賂(Bribery)」" />
     <regex target="text" pattern="「支配」か「導き」" value="「支配(Dominion)」か「導き(Guidance)」" />
     <regex target="text" pattern="「時」または「金」" value="「時(Time)」または「金(Money)」" />
+    <regex target="text" pattern="「死」または「税」" value="「死(Death)」または「税(Taxes)」" />
+    <regex target="text" pattern="「質」または「量」" value="「質(Strength)」または「量(Numbers)」" />
     <regex target="text" pattern="「死」または「拷問」" value="「死(Death)」または「拷問(Torture)」" />
     <regex target="text" pattern="「羽」または「羽ペン」" value="「羽(Feather)」または「羽ペン(Quill)」" />
     <regex target="text" pattern="「野生」または「解放」" value="「野生(Wild)」または「解放(Free)」" />
+    <regex target="text" pattern="「否定」または「複製」" value="「否定(Denial)」または「複製(Duplication)」" />
     <regex target="text" pattern="「帰還」または「出航」" value="「帰還(Return)」または「出航(Embark)」" />
     <regex target="text" pattern="「殺戮」または「忠誠」" value="「殺戮(Carnage)」または「忠誠(Homage)」" />
     <regex target="text" pattern="「時間」または「知識」" value="「時間(Time)」または「知識(Knowledge)」" />
     <regex target="text" pattern="「仲間」または「救援」" value="「仲間(Fellowship)」または「救援(Aid)」" />
-    <regex target="text" pattern="「恩寵」または「糾弾」" value="「恩寵(Grace)」または「糾弾(Condemnation)」" />
+    <regex target="text" pattern="「新芽」または「収穫」" value="「新芽(Sprout)」または「収穫(Harvest)」" />
     <regex target="text" pattern="「無罪」または「有罪」" value="「無罪(Innocent)」または「有罪(Guilty)」" />
+    <regex target="text" pattern="「恩寵」または「糾弾」" value="「恩寵(Grace)」または「糾弾(Condemnation)」" />
     <regex target="text" pattern="「真実」または「報い」" value="「真実(Truth)」または「報い(Consequences)」" />
+    <regex target="text" pattern="「身体疾患」または「精神疾患」" value="「身体疾患(Sickness)」または「精神疾患(Psychosis)」" />
     <regex target="text" pattern="「赤角山道」または「モリアの坑道」" value="「赤角山道(Redhorn Pass)」または「モリアの坑道(Mines of Moria)」" />
     <regex target="text" pattern="「プレインズウォーク」または「カオス」" value="「プレインズウォーク(Planeswalk)」または「カオス(Chaos)」" />
     <regex target="text" pattern="「金銭」「友人」「秘密」" value="「金銭(Money)」「友人(Friends)」「秘密(Secrets)」" />
