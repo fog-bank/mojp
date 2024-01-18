@@ -2561,6 +2561,45 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0122" sub="LCC" name="Clavileno, First of the Blessed" />
     <alt key="0123" sub="LCC" name="Hakbal of the Surging Soul" />
     <alt key="0124" sub="LCC" name="Pantlaza, Sun-Favored" />
+    <!-- RVR -->
+    <alt key="0292" sub="RVR" name="Blood Crypt" />
+    <alt key="0293" sub="RVR" name="Breeding Pool" />
+    <alt key="0294" sub="RVR" name="Godless Shrine" />
+    <alt key="0295" sub="RVR" name="Hallowed Fountain" />
+    <alt key="0296" sub="RVR" name="Overgrown Tomb" />
+    <alt key="0297" sub="RVR" name="Sacred Foundry" />
+    <alt key="0298" sub="RVR" name="Steam Vents" />
+    <alt key="0299" sub="RVR" name="Stomping Ground" />
+    <alt key="0300" sub="RVR" name="Temple Garden" />
+    <alt key="0301" sub="RVR" name="Watery Grave" />
+    <alt key="0416" sub="RVR" name="Divine Visitation" />
+    <alt key="0417" sub="RVR" name="Tomik, Distinguished Advokist" />
+    <alt key="0418" sub="RVR" name="Bruvac the Grandiloquent" />
+    <alt key="0419" sub="RVR" name="Cyclonic Rift" />
+    <alt key="0420" sub="RVR" name="Fblthp, the Lost" />
+    <alt key="0421" sub="RVR" name="Spark Double" />
+    <alt key="0422" sub="RVR" name="Tidespout Tyrant" />
+    <alt key="0423" sub="RVR" name="Crypt Ghast" />
+    <alt key="0424" sub="RVR" name="Lord of the Void" />
+    <alt key="0425" sub="RVR" name="Massacre Girl" />
+    <alt key="0426" sub="RVR" name="Pack Rat" />
+    <alt key="0427" sub="RVR" name="Arclight Phoenix" />
+    <alt key="0428" sub="RVR" name="Hellkite Tyrant" />
+    <alt key="0429" sub="RVR" name="Ilharg, the Raze-Boar" />
+    <alt key="0430" sub="RVR" name="Krenko, Mob Boss" />
+    <alt key="0431" sub="RVR" name="Utvara Hellkite" />
+    <alt key="0432" sub="RVR" name="Birds of Paradise" />
+    <alt key="0433" sub="RVR" name="Guardian Project" />
+    <alt key="0434" sub="RVR" name="Life from the Loam" />
+    <alt key="0435" sub="RVR" name="Protean Hulk" />
+    <alt key="0436" sub="RVR" name="Aurelia, Exemplar of Justice" />
+    <alt key="0437" sub="RVR" name="Karlov of the Ghost Council" />
+    <alt key="0438" sub="RVR" name="Niv-Mizzet, Parun" />
+    <alt key="0439" sub="RVR" name="Prime Speaker Zegana" />
+    <alt key="0440" sub="RVR" name="Savra, Queen of the Golgari" />
+    <alt key="0441" sub="RVR" name="Teysa, Orzhov Scion" />
+    <alt key="0442" sub="RVR" name="Chromatic Lantern" />
+    <alt key="0443" sub="RVR" name="Cloudstone Curio" />
     
     <!-- ★PRMセット扱い -->
     <!-- ZNR variants -->
@@ -5898,23 +5937,34 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0031" sub="REX" name="Command Tower" />
     <alt key="0032" sub="REX" name="Command Tower" />
     <!-- The Lost Caverns of Ixalan Special Guests -->
-    <alt key="0001" sub="SPG" name="Lord of Atlantis" />
-    <alt key="0002" sub="SPG" name="Malcolm, Keen-Eyed Navigator" />
-    <alt key="0003" sub="SPG" name="Bridge from Below" />
-    <alt key="0004" sub="SPG" name="Mephidross Vampire" />
-    <alt key="0005" sub="SPG" name="Pitiless Plunderer" />
-    <alt key="0006" sub="SPG" name="Breeches, Brazen Plunderer" />
-    <alt key="0007" sub="SPG" name="Dargo, the Shipwrecker" />
-    <alt key="0008" sub="SPG" name="Rampaging Ferocidon" />
-    <alt key="0009" sub="SPG" name="Underworld Breach" />
-    <alt key="0010" sub="SPG" name="Carnage Tyrant" />
-    <alt key="0011" sub="SPG" name="Ghalta, Primal Hunger" />
-    <alt key="0012" sub="SPG" name="Polyraptor" />
-    <alt key="0013" sub="SPG" name="Kalamax, the Stormsire" />
-    <alt key="0015" sub="SPG" name="Mirri, Weatherlight Duelist" />
-    <alt key="0016" sub="SPG" name="Thrasios, Triton Hero" />
-    <alt key="0017" sub="SPG" name="Mana Crypt" />
-    <alt key="0018" sub="SPG" name="Star Compass" />
+    <alt key="0001" sub="LCI Special Guest" name="Lord of Atlantis" />
+    <alt key="0002" sub="LCI Special Guest" name="Malcolm, Keen-Eyed Navigator" />
+    <alt key="0003" sub="LCI Special Guest" name="Bridge from Below" />
+    <alt key="0004" sub="LCI Special Guest" name="Mephidross Vampire" />
+    <alt key="0005" sub="LCI Special Guest" name="Pitiless Plunderer" />
+    <alt key="0006" sub="LCI Special Guest" name="Breeches, Brazen Plunderer" />
+    <alt key="0007" sub="LCI Special Guest" name="Dargo, the Shipwrecker" />
+    <alt key="0008" sub="LCI Special Guest" name="Rampaging Ferocidon" />
+    <alt key="0009" sub="LCI Special Guest" name="Underworld Breach" />
+    <alt key="0010" sub="LCI Special Guest" name="Carnage Tyrant" />
+    <alt key="0011" sub="LCI Special Guest" name="Ghalta, Primal Hunger" />
+    <alt key="0012" sub="LCI Special Guest" name="Polyraptor" />
+    <alt key="0013" sub="LCI Special Guest" name="Kalamax, the Stormsire" />
+    <alt key="0015" sub="LCI Special Guest" name="Mirri, Weatherlight Duelist" />
+    <alt key="0016" sub="LCI Special Guest" name="Thrasios, Triton Hero" />
+    <alt key="0017" sub="LCI Special Guest" name="Mana Crypt" />
+    <alt key="0018" sub="LCI Special Guest" name="Star Compass" />
+    <!-- Murders at Karlov Manor Special Guests -->
+    <alt key="0019" sub="MKM Special Guest" name="Ghostly Prison" />
+    <alt key="0020" sub="MKM Special Guest" name="Fabricate" />
+    <alt key="0021" sub="MKM Special Guest" name="Show and Tell" />
+    <alt key="0022" sub="MKM Special Guest" name="Tragic Slip" />
+    <alt key="0023" sub="MKM Special Guest" name="Victimize" />
+    <alt key="0024" sub="MKM Special Guest" name="Gamble" />
+    <alt key="0025" sub="MKM Special Guest" name="Crashing Footfalls" />
+    <alt key="0026" sub="MKM Special Guest" name="Tireless Tracker" />
+    <alt key="0027" sub="MKM Special Guest" name="Drown in the Loch" />
+    <alt key="0028" sub="MKM Special Guest" name="Field of the Dead" />
     
     <!-- ★カードタイプ依存 -->
     <!-- 両面カード -->
