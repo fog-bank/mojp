@@ -1370,7 +1370,7 @@ Vengeant Vampireが死亡したとき、対戦相手がコントロールして�
 Highcliff Felidarが戦場に出たとき、対戦相手１人につき、そのプレイヤーがコントロールしているクリーチャーの中で最大のパワーを持つクリーチャー１体を選ぶ。それらのクリーチャーを破壊する。</card>
     <card name="Sphinx of Enlightenment" ja="啓蒙のスフィンクス" type="クリーチャー ― スフィンクス" pt="5/5">飛行
 啓蒙のスフィンクスが戦場に出たとき、対戦相手１人を対象とする。そのプレイヤーはカード１枚を引き、あなたはカード３枚を引く。</card>
-    <card name="Fiendish Duo" ja="Fiendish Duo" type="クリーチャー ― デビル" pt="5/5">発生源が対戦相手にダメージを与えるなら、代わりに、それはそのプレイヤーにその点数の２倍のダメージを与える。</card>
+    <card name="Fiendish Duo" ja="極悪な二人組" type="クリーチャー ― デビル" pt="5/5">発生源１つが対戦相手１人にダメージを与えるなら、代わりに、それはそのプレイヤーにその２倍の点数のダメージを与える。</card>
     <card name="Earthshaker Giant" ja="Earthshaker Giant" type="クリーチャー ― 巨人・ドルイド" pt="6/6">トランプル
 Earthshaker Giantが戦場に出たとき、ターン終了時まで、他の、あなたがコントロールしているクリーチャーは+3/+3の修整を受けトランプルを得る。</card>
     <!-- Game Night (GNT) -->
@@ -3441,6 +3441,233 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0441" sub="RVR" name="Teysa, Orzhov Scion" />
     <alt key="0442" sub="RVR" name="Chromatic Lantern" />
     <alt key="0443" sub="RVR" name="Cloudstone Curio" />
+    <!-- MKM -->
+    <alt key="0287" sub="MKM" name="Assemble the Players" />
+    <alt key="0288" sub="MKM" name="Auspicious Arrival" />
+    <alt key="0289" sub="MKM" name="Call a Surprise Witness" />
+    <alt key="0290" sub="MKM" name="Makeshift Binding" />
+    <alt key="0291" sub="MKM" name="Not on My Watch" />
+    <alt key="0292" sub="MKM" name="On the Job" />
+    <alt key="0293" sub="MKM" name="Deduce" />
+    <alt key="0294" sub="MKM" name="Dramatic Accusation" />
+    <alt key="0295" sub="MKM" name="Fae Flight" />
+    <alt key="0296" sub="MKM" name="Intrude on the Mind" />
+    <alt key="0297" sub="MKM" name="Reenact the Crime" />
+    <alt key="0298" sub="MKM" name="Unauthorized Exit" />
+    <alt key="0299" sub="MKM" name="It Doesn't Add Up" />
+    <alt key="0300" sub="MKM" name="Murder" />
+    <alt key="0301" sub="MKM" name="Slice from the Shadows" />
+    <alt key="0302" sub="MKM" name="Soul Enervation" />
+    <alt key="0303" sub="MKM" name="Anzrag's Rampage" />
+    <alt key="0304" sub="MKM" name="The Chase Is On" />
+    <alt key="0305" sub="MKM" name="Convenient Target" />
+    <alt key="0306" sub="MKM" name="Demand Answers" />
+    <alt key="0307" sub="MKM" name="Expose the Culprit" />
+    <alt key="0308" sub="MKM" name="Analyze the Pollen" />
+    <alt key="0309" sub="MKM" name="Audience with Trostani" />
+    <alt key="0310" sub="MKM" name="Fanatical Strength" />
+    <alt key="0311" sub="MKM" name="Coerced to Kill" />
+    <alt key="0312" sub="MKM" name="Deadly Complication" />
+    <alt key="0313" sub="MKM" name="Insidious Roots" />
+    <alt key="0314" sub="MKM" name="Officious Interrogation" />
+    <alt key="0315" sub="MKM" name="Warleader's Call" />
+    <alt key="0316" sub="MKM" name="Worldsoul's Rage" />
+    <alt key="0317" sub="MKM" name="Aurelia, the Law Above" />
+    <alt key="0318" sub="MKM" name="Lazav, Wearer of Faces" />
+    <alt key="0319" sub="MKM" name="Niv-Mizzet, Guildpact" />
+    <alt key="0320" sub="MKM" name="Rakdos, Patron of Chaos" />
+    <alt key="0321" sub="MKM" name="Teysa, Opulent Oligarch" />
+    <alt key="0322" sub="MKM" name="Trostani, Three Whispers" />
+    <alt key="0323" sub="MKM" name="Vannifar, Evolved Enigma" />
+    <alt key="0324" sub="MKM" name="Commercial District" />
+    <alt key="0325" sub="MKM" name="Elegant Parlor" />
+    <alt key="0326" sub="MKM" name="Hedge Maze" />
+    <alt key="0327" sub="MKM" name="Lush Portico" />
+    <alt key="0328" sub="MKM" name="Meticulous Archive" />
+    <alt key="0329" sub="MKM" name="Raucous Theater" />
+    <alt key="0330" sub="MKM" name="Shadowy Backstreet" />
+    <alt key="0331" sub="MKM" name="Thundering Falls" />
+    <alt key="0332" sub="MKM" name="Undercity Sewers" />
+    <alt key="0333" sub="MKM" name="Underground Mortuary" />
+    <alt key="0334" sub="MKM" name="Kellan, Inquisitive Prodigy" />
+    <alt key="0336" sub="MKM" name="Aurelia's Vindicator" />
+    <alt key="0337" sub="MKM" name="Delney, Streetwise Lookout" />
+    <alt key="0338" sub="MKM" name="Doorkeeper Thrull" />
+    <alt key="0339" sub="MKM" name="Neighborhood Guardian" />
+    <alt key="0340" sub="MKM" name="Wojek Investigator" />
+    <alt key="0341" sub="MKM" name="Conspiracy Unraveler" />
+    <alt key="0342" sub="MKM" name="Forensic Gadgeteer" />
+    <alt key="0343" sub="MKM" name="Homicide Investigator" />
+    <alt key="0344" sub="MKM" name="Massacre Girl, Known Killer" />
+    <alt key="0345" sub="MKM" name="Persuasive Interrogators" />
+    <alt key="0346" sub="MKM" name="Vein Ripper" />
+    <alt key="0347" sub="MKM" name="Frantic Scapegoat" />
+    <alt key="0348" sub="MKM" name="Fugitive Codebreaker" />
+    <alt key="0349" sub="MKM" name="Incinerator of the Guilty" />
+    <alt key="0350" sub="MKM" name="Krenko, Baron of Tin Street" />
+    <alt key="0351" sub="MKM" name="Culvert Ambusher" />
+    <alt key="0352" sub="MKM" name="The Pride of Hull Clade" />
+    <alt key="0353" sub="MKM" name="Sharp-Eyed Rookie" />
+    <alt key="0354" sub="MKM" name="Agrus Kos, Spirit of Justice" />
+    <alt key="0355" sub="MKM" name="Alquist Proft, Master Sleuth" />
+    <alt key="0356" sub="MKM" name="Anzrag, the Quake-Mole" />
+    <alt key="0357" sub="MKM" name="Aurelia, the Law Above" />
+    <alt key="0358" sub="MKM" name="Curious Cadaver" />
+    <alt key="0359" sub="MKM" name="Etrata, Deadly Fugitive" />
+    <alt key="0360" sub="MKM" name="Ezrim, Agency Chief" />
+    <alt key="0361" sub="MKM" name="Gleaming Geardrake" />
+    <alt key="0362" sub="MKM" name="Izoni, Center of the Web" />
+    <alt key="0363" sub="MKM" name="Judith, Carnage Connoisseur" />
+    <alt key="0364" sub="MKM" name="Kraul Whipcracker" />
+    <alt key="0365" sub="MKM" name="Kylox, Visionary Inventor" />
+    <alt key="0366" sub="MKM" name="Lazav, Wearer of Faces" />
+    <alt key="0367" sub="MKM" name="Meddling Youths" />
+    <alt key="0368" sub="MKM" name="Niv-Mizzet, Guildpact" />
+    <alt key="0369" sub="MKM" name="Rakdos, Patron of Chaos" />
+    <alt key="0370" sub="MKM" name="Teysa, Opulent Oligarch" />
+    <alt key="0371" sub="MKM" name="Tolsimir, Midnight's Light" />
+    <alt key="0372" sub="MKM" name="Trostani, Three Whispers" />
+    <alt key="0373" sub="MKM" name="Vannifar, Evolved Enigma" />
+    <alt key="0374" sub="MKM" name="Wispdrinker Vampire" />
+    <alt key="0375" sub="MKM" name="Yarus, Roar of the Old Gods" />
+    <alt key="0376" sub="MKM" name="Magnetic Snuffler" />
+    <alt key="0377" sub="MKM" name="Aurelia's Vindicator" />
+    <alt key="0378" sub="MKM" name="Delney, Streetwise Lookout" />
+    <alt key="0379" sub="MKM" name="Conspiracy Unraveler" />
+    <alt key="0380" sub="MKM" name="Massacre Girl, Known Killer" />
+    <alt key="0381" sub="MKM" name="Incinerator of the Guilty" />
+    <alt key="0382" sub="MKM" name="The Pride of Hull Clade" />
+    <alt key="0383" sub="MKM" name="Agrus Kos, Spirit of Justice" />
+    <alt key="0384" sub="MKM" name="Alquist Proft, Master Sleuth" />
+    <alt key="0385" sub="MKM" name="Anzrag, the Quake-Mole" />
+    <alt key="0386" sub="MKM" name="Etrata, Deadly Fugitive" />
+    <alt key="0387" sub="MKM" name="Rakdos, Patron of Chaos" />
+    <alt key="0388" sub="MKM" name="Trostani, Three Whispers" />
+    <alt key="0389" sub="MKM" name="Vannifar, Evolved Enigma" />
+    <alt key="0390" sub="MKM" name="No Witnesses" />
+    <alt key="0391" sub="MKM" name="Tenth District Hero" />
+    <alt key="0392" sub="MKM" name="Unyielding Gatekeeper" />
+    <alt key="0393" sub="MKM" name="Coveted Falcon" />
+    <alt key="0394" sub="MKM" name="Cryptic Coat" />
+    <alt key="0395" sub="MKM" name="Lost in the Maze" />
+    <alt key="0396" sub="MKM" name="Proft's Eidetic Memory" />
+    <alt key="0397" sub="MKM" name="Steamcore Scholar" />
+    <alt key="0398" sub="MKM" name="Barbed Servitor" />
+    <alt key="0399" sub="MKM" name="Deadly Cover-Up" />
+    <alt key="0400" sub="MKM" name="Hunted Bonebrute" />
+    <alt key="0401" sub="MKM" name="Illicit Masquerade" />
+    <alt key="0402" sub="MKM" name="Outrageous Robbery" />
+    <alt key="0403" sub="MKM" name="Connecting the Dots" />
+    <alt key="0404" sub="MKM" name="Expedited Inheritance" />
+    <alt key="0405" sub="MKM" name="Krenko's Buzzcrusher" />
+    <alt key="0406" sub="MKM" name="Lamplight Phoenix" />
+    <alt key="0407" sub="MKM" name="Pyrotechnic Performer" />
+    <alt key="0408" sub="MKM" name="Archdruid's Charm" />
+    <alt key="0409" sub="MKM" name="Axebane Ferox" />
+    <alt key="0410" sub="MKM" name="Hide in Plain Sight" />
+    <alt key="0411" sub="MKM" name="Undergrowth Recon" />
+    <alt key="0412" sub="MKM" name="Assassin's Trophy" />
+    <alt key="0413" sub="MKM" name="Blood Spatter Analysis" />
+    <alt key="0414" sub="MKM" name="Doppelgang" />
+    <alt key="0415" sub="MKM" name="Drag the Canal" />
+    <alt key="0416" sub="MKM" name="Ill-Timed Explosion" />
+    <alt key="0417" sub="MKM" name="Kylox's Voltstrider" />
+    <alt key="0418" sub="MKM" name="Leyline of the Guildpact" />
+    <alt key="0419" sub="MKM" name="Relive the Past" />
+    <alt key="0420" sub="MKM" name="Treacherous Greed" />
+    <alt key="0421" sub="MKM" name="Urgent Necropsy" />
+    <alt key="0422" sub="MKM" name="Cryptex" />
+    <alt key="0423" sub="MKM" name="Long Goodbye" />
+    <alt key="0424" sub="MKM" name="Gleaming Geardrake" />
+    <alt key="0425" sub="MKM" name="Kraul Whipcracker" />
+    <alt key="0426" sub="MKM" name="Lightning Helix" />
+    <alt key="0427" sub="MKM" name="No More Lies" />
+    <alt key="0429" sub="MKM" name="Wojek Investigator" />
+    <alt key="0433" sub="MKM" name="Vein Ripper" />
+    <!-- MKC -->
+    <alt key="0049" sub="MKC" name="Kaust, Eyes of the Glade" />
+    <alt key="0050" sub="MKC" name="Mirko, Obsessive Theorist" />
+    <alt key="0051" sub="MKC" name="Morska, Undersea Sleuth" />
+    <alt key="0052" sub="MKC" name="Nelly Borca, Impulsive Accuser" />
+    <alt key="0312" sub="MKC" name="Duskana, the Rage Mother" />
+    <alt key="0313" sub="MKC" name="Feather, Radiant Arbiter" />
+    <alt key="0314" sub="MKC" name="Kaust, Eyes of the Glade" />
+    <alt key="0315" sub="MKC" name="Marvo, Deep Operative" />
+    <alt key="0316" sub="MKC" name="Mirko, Obsessive Theorist" />
+    <alt key="0317" sub="MKC" name="Morska, Undersea Sleuth" />
+    <alt key="0318" sub="MKC" name="Nelly Borca, Impulsive Accuser" />
+    <alt key="0319" sub="MKC" name="Sophia, Dogged Detective" />
+    <alt key="0320" sub="MKC" name="Armed with Proof" />
+    <alt key="0321" sub="MKC" name="Immortal Obligation" />
+    <alt key="0322" sub="MKC" name="Merchant of Truth" />
+    <alt key="0323" sub="MKC" name="Otherworldly Escort" />
+    <alt key="0324" sub="MKC" name="Redemption Arc" />
+    <alt key="0325" sub="MKC" name="Serene Sleuth" />
+    <alt key="0326" sub="MKC" name="Trouble in Pairs" />
+    <alt key="0327" sub="MKC" name="True Identity" />
+    <alt key="0328" sub="MKC" name="Unexplained Absence" />
+    <alt key="0329" sub="MKC" name="Veiled Ascension" />
+    <alt key="0330" sub="MKC" name="Copy Catchers" />
+    <alt key="0331" sub="MKC" name="Detective of the Month" />
+    <alt key="0332" sub="MKC" name="Final-Word Phantom" />
+    <alt key="0333" sub="MKC" name="Follow the Bodies" />
+    <alt key="0334" sub="MKC" name="Tangletrove Kelp" />
+    <alt key="0335" sub="MKC" name="Watcher of Hours" />
+    <alt key="0336" sub="MKC" name="Charnel Serenade" />
+    <alt key="0337" sub="MKC" name="Eye of Duskmantle" />
+    <alt key="0338" sub="MKC" name="Foreboding Steamboat" />
+    <alt key="0339" sub="MKC" name="Unshakable Tail" />
+    <alt key="0340" sub="MKC" name="Boltbender" />
+    <alt key="0341" sub="MKC" name="Havoc Eater" />
+    <alt key="0342" sub="MKC" name="Hot Pursuit" />
+    <alt key="0343" sub="MKC" name="Mob Verdict" />
+    <alt key="0344" sub="MKC" name="Prisoner's Dilemma" />
+    <alt key="0345" sub="MKC" name="Showstopping Surprise" />
+    <alt key="0346" sub="MKC" name="Tesak, Judith's Hellhound" />
+    <alt key="0347" sub="MKC" name="Experiment Twelve" />
+    <alt key="0348" sub="MKC" name="Innocuous Researcher" />
+    <alt key="0349" sub="MKC" name="On the Trail" />
+    <alt key="0350" sub="MKC" name="Printlifter Ooze" />
+    <alt key="0351" sub="MKC" name="Counterpoint" />
+    <alt key="0352" sub="MKC" name="Knowledge Is Power" />
+    <alt key="0353" sub="MKC" name="Take the Bait" />
+    <alt key="0354" sub="MKC" name="Panoptic Projektor" />
+    <alt key="0355" sub="MKC" name="Ransom Note" />
+    <alt key="0356" sub="MKC" name="Ransom Note" />
+    <alt key="0357" sub="MKC" name="Ransom Note" />
+    <alt key="0358" sub="MKC" name="Ransom Note" />
+    <!-- CLU -->
+    <alt key="0001" sub="CLU" name="Apothecary White" />
+    <alt key="0002" sub="CLU" name="Senator Peacock" />
+    <alt key="0003" sub="CLU" name="Mastermind Plum" />
+    <alt key="0004" sub="CLU" name="Headliner Scarlett" />
+    <alt key="0005" sub="CLU" name="Emissary Green" />
+    <alt key="0006" sub="CLU" name="Commander Mustard" />
+    <alt key="0007" sub="CLU" name="Wrench" />
+    <alt key="0008" sub="CLU" name="Candlestick" />
+    <alt key="0009" sub="CLU" name="Lead Pipe" />
+    <alt key="0010" sub="CLU" name="Knife" />
+    <alt key="0011" sub="CLU" name="Rope" />
+    <alt key="0012" sub="CLU" name="Ballroom" />
+    <alt key="0013" sub="CLU" name="Billiard Room" />
+    <alt key="0014" sub="CLU" name="Conservatory" />
+    <alt key="0015" sub="CLU" name="Dining Room" />
+    <alt key="0016" sub="CLU" name="Hall" />
+    <alt key="0017" sub="CLU" name="Kitchen" />
+    <alt key="0018" sub="CLU" name="Library" />
+    <alt key="0019" sub="CLU" name="Lounge" />
+    <alt key="0020" sub="CLU" name="Secret Passage" />
+    <alt key="0021" sub="CLU" name="Study" />
+    <alt key="0274" sub="CLU" name="Blood Crypt" />
+    <alt key="0275" sub="CLU" name="Breeding Pool" />
+    <alt key="0276" sub="CLU" name="Godless Shrine" />
+    <alt key="0277" sub="CLU" name="Hallowed Fountain" />
+    <alt key="0278" sub="CLU" name="Overgrown Tomb" />
+    <alt key="0279" sub="CLU" name="Sacred Foundry" />
+    <alt key="0280" sub="CLU" name="Steam Vents" />
+    <alt key="0281" sub="CLU" name="Stomping Ground" />
+    <alt key="0282" sub="CLU" name="Temple Garden" />
+    <alt key="0283" sub="CLU" name="Watery Grave" />
     
     <!-- ★PRMセット扱い -->
     <!-- ZNR variants -->
@@ -7457,6 +7684,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0241" sub="MOM" name="Invasion of Tolvada" />
     <alt key="0242" sub="MOM" name="Invasion of Xerex" />
     <!-- 事件 (MKM) -->
+    <alt key="0000" sub="MKM" tri="Peter Polach" name="Case of the Gorgon's Kiss" />
     <alt key="0001" sub="MKM" name="Case of the Shattered Pact" />
     <alt key="0008" sub="MKM" name="Case of the Gateway Express" />
     <alt key="0009" sub="MKM" name="Case of the Pilfered Proof" />
