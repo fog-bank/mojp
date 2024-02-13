@@ -12,8 +12,16 @@
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <GenerateManifests>true</GenerateManifests>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <LangVersion>latest</LangVersion>
+    <NoWarn>IDE0180</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
     <IsWebBootstrapper>true</IsWebBootstrapper>
     <PublishUrl>..\docs\clickonce\</PublishUrl>
     <Install>true</Install>
@@ -43,46 +51,26 @@
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
-    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
-    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Offline|AnyCPU'">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Offline\</OutputPath>
     <DefineConstants>TRACE;OFFLINE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-    <Prefer32Bit>false</Prefer32Bit>
-    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Resources\dictionary.ico</ApplicationIcon>
-  </PropertyGroup>
-  <PropertyGroup>
-    <GenerateManifests>true</GenerateManifests>
-  </PropertyGroup>
-  <PropertyGroup>
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <PropertyGroup>
@@ -106,81 +94,77 @@
     <Reference Include="System.Net.Http" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ToolbarDialog.xaml.cs">
-      <DependentUpon>ToolbarDialog.xaml</DependentUpon>
-    </Compile>
     <Page Include="App.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Compile Include="AutomationHandler.cs" />
-    <Compile Include="Commands.cs" />
-    <Compile Include="SettingsCache.cs" />
-    <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
-      <SubType>Code</SubType>
     </Compile>
+    <Compile Include="AutomationHandler.cs" />
+    <Compile Include="Commands.cs" />
     <Compile Include="Card.cs" />
     <Compile Include="CardPrice.cs" />
     <Compile Include="CardTextProcessor.cs" />
     <Compile Include="MainViewModel.cs" />
+    <Compile Include="SettingsCache.cs" />
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
-      <SubType>Code</SubType>
     </Compile>
     <Page Include="OptionDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Compile Include="OptionDialog.xaml.cs">
+      <DependentUpon>OptionDialog.xaml</DependentUpon>
+    </Compile>
     <Page Include="ToolbarDialog.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Compile Include="ToolbarDialog.xaml.cs">
+      <DependentUpon>ToolbarDialog.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="OptionDialog.xaml.cs">
-      <DependentUpon>OptionDialog.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs">
-      <SubType>Code</SubType>
-    </Compile>
+    <AppDesigner Include="Properties\" />
+    <None Include="Properties\app.manifest" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="appendix.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Properties\app.manifest" />
     <None Include="Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="appendix.xsd">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\CopyEn.png" />
-    <Resource Include="Resources\Close.png" />
-    <Resource Include="Resources\Warning.png" />
-    <Resource Include="Resources\pd.png" />
+    <Resource Include="Resources\dictionary.ico" />
     <Resource Include="Resources\Alerts.png" />
     <Resource Include="Resources\Camera.png" />
-    <Resource Include="Resources\Gears.png" />
     <Resource Include="Resources\Checkmark.png" />
-    <Resource Include="Resources\Web.png" />
+    <Resource Include="Resources\Close.png" />
     <Resource Include="Resources\Copy.png" />
+    <Resource Include="Resources\CopyEn.png" />
+    <Resource Include="Resources\Gears.png" />
     <Resource Include="Resources\Information.png" />
-    <Resource Include="Resources\dictionary.ico" />
+    <Resource Include="Resources\pd.png" />
+    <Resource Include="Resources\Warning.png" />
+    <Resource Include="Resources\Web.png" />
   </ItemGroup>
   <ItemGroup Condition="'$(Configuration)' != 'Offline'">
     <Content Include="appendix.xml">

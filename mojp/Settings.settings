@@ -63,7 +63,7 @@
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="PromoCodeNumber" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">0000  /  1158 </Value>
+      <Value Profile="(Default)">0000</Value>
     </Setting>
   </Settings>
 </SettingsFile>
