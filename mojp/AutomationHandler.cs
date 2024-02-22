@@ -472,6 +472,7 @@ partial class MainViewModel
         {
             return cardName switch
             {
+                "Chaos" => ContainsText("40K"),
                 "Flash" => ContainsText("IKO"),
                 "Lifelink" => ContainsText("Transcendent Master", "Sorin, Vengeful Bloodlord", "IKO"),
                 "Release" => IsUginFatePromo(),
