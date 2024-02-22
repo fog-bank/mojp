@@ -4339,6 +4339,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0002" sub="40K" name="Abaddon the Despoiler" />
     <alt key="0003" sub="40K" name="Inquisitor Greyfax" />
     <alt key="0004" sub="40K" name="The Swarmlord" />
+    <alt key="0005" sub="40K" name="Szarekh, the Silent King" />
     <alt key="0006" sub="40K" name="Be'lakor, the Dark Master" />
     <alt key="0007" sub="40K" name="Magus Lucea Kane" />
     <alt key="0008" sub="40K" name="Marneus Calgar" />
@@ -4502,18 +4503,6 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0166" sub="40K" name="Sceptre of Eternal Glory" />
     <alt key="0167" sub="40K" name="Thunderhawk Gunship" />
     <alt key="0168" sub="40K" name="Tomb Fortress" />
-    <alt key="0169" sub="40K" name="Imotekh the Stormlord" />
-    <alt key="0170" sub="40K" name="Szarekh, the Silent King" />
-    <alt key="0171" sub="40K" name="Abaddon the Despoiler" />
-    <alt key="0172" sub="40K" name="Be'lakor, the Dark Master" />
-    <alt key="0173" sub="40K" name="Inquisitor Greyfax" />
-    <alt key="0174" sub="40K" name="Magus Lucea Kane" />
-    <alt key="0175" sub="40K" name="Marneus Calgar" />
-    <alt key="0176" sub="40K" name="The Swarmlord" />
-    <alt key="0177" sub="40K" name="Szarekh, the Silent King" />
-    <alt key="0178" sub="40K" name="Abaddon the Despoiler" />
-    <alt key="0179" sub="40K" name="Inquisitor Greyfax" />
-    <alt key="0180" sub="40K" name="The Swarmlord" />
     <alt key="0181" sub="40K" name="Fabricate" />
     <alt key="0182" sub="40K" name="Bastion Protector" />
     <alt key="0183" sub="40K" name="Collective Effort" />
@@ -4651,10 +4640,6 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0315" sub="40K" name="Mountain" />
     <alt key="0316" sub="40K" name="Mountain" />
     <alt key="0317" sub="40K" name="Forest" />
-    <alt key="0318" sub="40K" name="Szarekh, the Silent King" />
-    <alt key="0319" sub="40K" name="Abaddon the Despoiler" />
-    <alt key="0320" sub="40K" name="Inquisitor Greyfax" />
-    <alt key="0321" sub="40K" name="The Swarmlord" />
     <!-- LTR -->
     <alt key="0001" sub="LTR" name="Banish from Edoras" />
     <alt key="0002" sub="LTR" name="The Battle of Bywater" />
