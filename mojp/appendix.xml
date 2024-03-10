@@ -11554,6 +11554,11 @@ III ― すべての壁を破壊する。この英雄譚を追放する。その
     <!-- オラクル更新の非適用 (MKM) -->
     <card name="Outrageous Robbery" ja="極悪非道の盗人" type="インスタント">対戦相手１人を対象とする。そのプレイヤーは自分のライブラリーの一番上からカードＸ枚を裏向きで追放する。それらのカードが追放され続けているかぎり、あなたはそれらを見てもよく、プレイしてもよい。これによりあなたが呪文を唱えるなら、それを唱えるためにマナを望むタイプのマナであるかのように支払ってもよい。</card>
     
+    <!-- オラクル更新 (PIP) -->
+    <type name="Arboreal Grazer" type="クリーチャー ― ナマケモノ・ビースト" />
+    <type name="Complaints Clerk" type="クリーチャー ― ナマケモノ・ビースト・従業員" />
+    <type name="Relic Sloth" type="クリーチャー ― ナマケモノ・ビースト" />
+    
     <!-- 合体カード -->
     <rel name="Gisela, the Broken Blade" rel="Bruna, the Fading Light|Brisela, Voice of Nightmares" />
     <rel name="Bruna, the Fading Light" rel="Gisela, the Broken Blade|Brisela, Voice of Nightmares" />
