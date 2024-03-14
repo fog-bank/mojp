@@ -383,6 +383,7 @@ partial class Card
         var texts = new List<string>();
         bool lvCard = false;
         Card prevCard = null;
+        var colon = new[] { '：' };
 
         while (!sr.EndOfStream)
         {
@@ -397,7 +398,7 @@ partial class Card
                 lvCard = true;
 
             // 各行をコロンで区切り、各項目を探す
-            var tokens = line.Split('：');
+            var tokens = line.Split(colon, 2);
 
             if (tokens.Length == 1)
             {
