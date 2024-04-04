@@ -613,14 +613,38 @@
 砂漠・カード１枚がいずこかからあなたの墓地に置かれるたび、到達を持つ緑の4/2の植物・戦士・クリーチャー・トークン１体を生成する。</card>
       
     <!-- BIG -->
+    <card name="Grand Abolisher" ja="堂々たる撤廃者" type="クリーチャー ― 人間・クレリック" pt="2/2">あなたのターンの間、各対戦相手は呪文を唱えることも、アーティファクトやクリーチャーやエンチャントの能力を起動することもできない。</card>
     <card name="Oltec Matterweaver" ja="オルテカの現象織り" type="クリーチャー ― 人間・工匠" pt="2/4">あなたがクリーチャー・呪文を唱えるたび、以下から１つを選ぶ。
 ・無色の1/1のノーム・アーティファクト・クリーチャー・トークン１体を生成する。
 ・あなたがコントロールしているアーティファクト・トークン１つを対象とする。それのコピーであるトークン１つを生成する。</card>
+    <card name="Rest in Peace" ja="安らかなる眠り" type="エンチャント">安らかなる眠りが戦場に出たとき、すべての墓地を追放する。
+カードやトークンがいずこかから墓地に置かれるなら、代わりにそれを追放する。</card>
     
+    <card name="Esoteric Duplicator" ja="秘密の複製機" type="アーティファクト ― 手掛かり">あなたが秘密の複製機かこれでないアーティファクト１つを生け贄に捧げるたび、あなたは(２)を支払ってもよい。そうしたなら、次の終了ステップの開始時に、そのアーティファクトのコピーであるトークン１つを生成する。
+(２),秘密の複製機を生け贄に捧げる：カード１枚を引く。</card>
+    <card name="Simulacrum Synthesizer" ja="身代わり合成機" type="アーティファクト">身代わり合成機が戦場に出たとき、占術２を行う。
+マナ総量が３以上でありこれでないアーティファクト１つがあなたのコントロール下で戦場に出るたび、「このクリーチャーは、あなたがコントロールしているアーティファクト１つにつき+1/+1の修整を受ける。」を持つ無色の0/0の構築物・アーティファクト・クリーチャー・トークン１体を生成する。</card>
+    <card name="Worldwalker Helm" ja="世界歩きの兜" type="アーティファクト">あなたが１つ以上のアーティファクト・トークンを生成するなら、代わりに、それらのトークンと追加の地図・トークン１つを生成する。（それは「(１),(Ｔ),このアーティファクトを生け贄に捧げる：あなたがコントロールしているクリーチャー１体を対象とする。それは探検を行う。起動はソーサリーとしてのみ行う。」を持つアーティファクトである。）
+(１)(青),(Ｔ)：あなたがコントロールしているアーティファクト・トークン１つを対象とする。それのコピーであるトークン１つを生成する。</card>
+    
+    <card name="Legion Extruder" ja="軍団の成形機械" type="アーティファクト">軍団の成形機械が戦場に出たとき、１つを対象とする。これはそれに２点のダメージを与える。
+(２),(Ｔ),これでないアーティファクト１つを生け贄に捧げる：無色の3/3のゴーレム・アーティファクト・クリーチャー・トークン１体を生成する。</card>
+    <card name="Memory Vessel" ja="記憶の器" type="アーティファクト">(Ｔ),記憶の器を追放する：各プレイヤーはそれぞれ自分のライブラリーの一番上からカード７枚を追放する。あなたの次のターンまで、各プレイヤーはそれぞれ、これにより自分が追放したカードをプレイしてもよく、自分の手札からカードをプレイできない。起動はソーサリーとしてのみ行う。</card>
+    
+    <card name="Omenpath Journey" ja="領界路への旅" type="エンチャント">領界路への旅が戦場に出たとき、あなたのライブラリーから、異なる名前を持つ土地・カード最大５枚を探し、追放する。その後、ライブラリーを切り直す。
+あなたの終了ステップの開始時に、領界路への旅によって追放されているカード１枚を無作為に選び、タップ状態で戦場に出す。</card>
     <card name="Vaultborn Tyrant" ja="宝物庫生まれの暴君" type="クリーチャー ― 恐竜" pt="6/6">トランプル
 宝物庫生まれの暴君かパワーが４以上でありこれでないクリーチャー１体があなたのコントロール下で戦場に出るたび、あなたは３点のライフを得て、カード１枚を引く。
 宝物庫生まれの暴君が死亡したとき、これがトークンでない場合、他のタイプに加えてアーティファクトであることを除き、これのコピーであるトークン１体を生成する。</card>
     
+    <card name="Loot, the Key to Everything" ja="全ての鍵、おたから" type="伝説のクリーチャー ― ビースト・貴族" pt="1/2">護法(１)
+あなたのアップキープの開始時に、あなたのライブラリーの一番上からカードＸ枚を追放する。Ｘはあなたがコントロールしていて土地でもこれでもないパーマネントの中のカード・タイプの種類数に等しい。このターン、あなたはそれらのカードをプレイしてもよい。</card>
+    <card name="Pest Control" ja="害獣駆除" type="ソーサリー">マナ総量が１以下であり土地でないすべてのパーマネントを破壊する。
+サイクリング(２)（(２),このカードを捨てる：カード１枚を引く。）</card>
+    
+    <card name="Lotus Ring" ja="睡蓮の指輪" type="アーティファクト ― 装備品">破壊不能
+装備しているクリーチャーは+3/+3の修整を受け、警戒と「(Ｔ),このクリーチャーを生け贄に捧げる：好きな色１色のマナ３点を加える。」を持つ。
+装備(３)</card>
     <card name="Nexus of Becoming" ja="適合の結節点" type="アーティファクト">あなたのターンの戦闘の開始時に、カード１枚を引く。その後、あなたはあなたの手札からアーティファクトかクリーチャーであるカード１枚を追放してもよい。そうしたなら、他のタイプに加えて3/3のゴーレム・アーティファクト・クリーチャーであることを除き、その追放されたカードのコピーであるトークン１つを生成する。</card>
     <card name="Sword of Wealth and Power" ja="富と力の剣" type="アーティファクト ― 装備品">装備しているクリーチャーは+2/+2の修整を受けプロテクション（インスタント）とプロテクション（ソーサリー）を持つ。
 装備しているクリーチャーがプレイヤー１人に戦闘ダメージを与えるたび、宝物・トークン１つを生成する。このターン、あなたが次にインスタントかソーサリーである呪文を唱えたとき、その呪文をコピーする。あなたはそのコピーの新しい対象を選んでもよい。
@@ -2174,6 +2198,11 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0274" sub="MKM" name="Swamp" />
     <alt key="0275" sub="MKM" name="Mountain" />
     <alt key="0276" sub="MKM" name="Forest" />
+    <alt key="0272" sub="OTJ" name="Plains" />
+    <alt key="0273" sub="OTJ" name="Island" />
+    <alt key="0274" sub="OTJ" name="Swamp" />
+    <alt key="0275" sub="OTJ" name="Mountain" />
+    <alt key="0276" sub="OTJ" name="Forest" />
     <!-- SL2 -->
     <alt key="0138" sub="SLD" name="Anguished Unmaking" />
     <alt key="0139" sub="SLD" name="Assassin's Trophy" />
@@ -3594,6 +3623,92 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0281" sub="CLU" name="Stomping Ground" />
     <alt key="0282" sub="CLU" name="Temple Garden" />
     <alt key="0283" sub="CLU" name="Watery Grave" />
+    <!-- OTJ -->
+    <alt key="0287" sub="OTJ" name="Geralf, the Fleshwright" />
+    <alt key="0288" sub="OTJ" name="Gisa, the Hellraiser" />
+    <alt key="0289" sub="OTJ" name="Kaervek, the Punisher" />
+    <alt key="0290" sub="OTJ" name="Tinybones, the Pickpocket" />
+    <alt key="0291" sub="OTJ" name="Annie Flash, the Veteran" />
+    <alt key="0292" sub="OTJ" name="Breeches, the Blastmaker" />
+    <alt key="0293" sub="OTJ" name="Eriette, the Beguiler" />
+    <alt key="0294" sub="OTJ" name="Kellan, the Kid" />
+    <alt key="0295" sub="OTJ" name="Malcolm, the Eyes" />
+    <alt key="0296" sub="OTJ" name="Oko, the Ringleader" />
+    <alt key="0297" sub="OTJ" name="Rakdos, the Muscle" />
+    <alt key="0298" sub="OTJ" name="Satoru, the Infiltrator" />
+    <alt key="0299" sub="OTJ" name="Vraska, the Silencer" />
+    <alt key="0300" sub="OTJ" name="Blooming Marsh" />
+    <alt key="0301" sub="OTJ" name="Botanical Sanctum" />
+    <alt key="0302" sub="OTJ" name="Concealed Courtyard" />
+    <alt key="0303" sub="OTJ" name="Inspiring Vantage" />
+    <alt key="0304" sub="OTJ" name="Spirebluff Canal" />
+    <alt key="0307" sub="OTJ" name="Another Round" />
+    <alt key="0308" sub="OTJ" name="Archangel of Tithes" />
+    <alt key="0309" sub="OTJ" name="Aven Interrupter" />
+    <alt key="0310" sub="OTJ" name="Claim Jumper" />
+    <alt key="0311" sub="OTJ" name="Dust Animus" />
+    <alt key="0312" sub="OTJ" name="Final Showdown" />
+    <alt key="0313" sub="OTJ" name="Fortune, Loyal Steed" />
+    <alt key="0314" sub="OTJ" name="High Noon" />
+    <alt key="0315" sub="OTJ" name="One Last Job" />
+    <alt key="0316" sub="OTJ" name="Archmage's Newt" />
+    <alt key="0317" sub="OTJ" name="Double Down" />
+    <alt key="0318" sub="OTJ" name="Duelist of the Mind" />
+    <alt key="0319" sub="OTJ" name="Fblthp, Lost on the Range" />
+    <alt key="0320" sub="OTJ" name="The Key to the Vault" />
+    <alt key="0321" sub="OTJ" name="Step Between Worlds" />
+    <alt key="0322" sub="OTJ" name="Stoic Sphinx" />
+    <alt key="0323" sub="OTJ" name="Three Steps Ahead" />
+    <alt key="0324" sub="OTJ" name="Caustic Bronco" />
+    <alt key="0325" sub="OTJ" name="Insatiable Avarice" />
+    <alt key="0326" sub="OTJ" name="Pitiless Carnage" />
+    <alt key="0327" sub="OTJ" name="Rush of Dread" />
+    <alt key="0328" sub="OTJ" name="Tinybones Joins Up" />
+    <alt key="0329" sub="OTJ" name="Vadmir, New Blood" />
+    <alt key="0330" sub="OTJ" name="Calamity, Galloping Inferno" />
+    <alt key="0331" sub="OTJ" name="Great Train Heist" />
+    <alt key="0332" sub="OTJ" name="Hell to Pay" />
+    <alt key="0333" sub="OTJ" name="Hellspur Posse Boss" />
+    <alt key="0334" sub="OTJ" name="Magda, the Hoardmaster" />
+    <alt key="0335" sub="OTJ" name="Slickshot Show-Off" />
+    <alt key="0336" sub="OTJ" name="Stingerback Terror" />
+    <alt key="0337" sub="OTJ" name="Terror of the Peaks" />
+    <alt key="0338" sub="OTJ" name="Bristly Bill, Spine Sower" />
+    <alt key="0339" sub="OTJ" name="Colossal Rattlewurm" />
+    <alt key="0340" sub="OTJ" name="Freestrider Lookout" />
+    <alt key="0341" sub="OTJ" name="Goldvein Hydra" />
+    <alt key="0342" sub="OTJ" name="Ornery Tumblewagg" />
+    <alt key="0343" sub="OTJ" name="Outcaster Trailblazer" />
+    <alt key="0344" sub="OTJ" name="Railway Brawler" />
+    <alt key="0345" sub="OTJ" name="Smuggler's Surprise" />
+    <alt key="0346" sub="OTJ" name="Akul the Unrepentant" />
+    <alt key="0347" sub="OTJ" name="Annie Joins Up" />
+    <alt key="0348" sub="OTJ" name="Assimilation Aegis" />
+    <alt key="0349" sub="OTJ" name="Bonny Pall, Clearcutter" />
+    <alt key="0350" sub="OTJ" name="Bruse Tarl, Roving Rancher" />
+    <alt key="0351" sub="OTJ" name="Ghired, Mirror of the Wilds" />
+    <alt key="0352" sub="OTJ" name="The Gitrog, Ravenous Ride" />
+    <alt key="0353" sub="OTJ" name="Kambal, Profiteering Mayor" />
+    <alt key="0354" sub="OTJ" name="Kellan Joins Up" />
+    <alt key="0355" sub="OTJ" name="Laughing Jasper Flint" />
+    <alt key="0356" sub="OTJ" name="Lilah, Undefeated Slickshot" />
+    <alt key="0357" sub="OTJ" name="Marchesa, Dealer of Death" />
+    <alt key="0358" sub="OTJ" name="Obeka, Splitter of Seconds" />
+    <alt key="0359" sub="OTJ" name="Pillage the Bog" />
+    <alt key="0360" sub="OTJ" name="Rakdos Joins Up" />
+    <alt key="0361" sub="OTJ" name="Riku of Many Paths" />
+    <alt key="0362" sub="OTJ" name="Roxanne, Starfall Savant" />
+    <alt key="0363" sub="OTJ" name="Selvala, Eager Trailblazer" />
+    <alt key="0364" sub="OTJ" name="Seraphic Steed" />
+    <alt key="0365" sub="OTJ" name="Taii Wakeen, Perfect Shot" />
+    <alt key="0366" sub="OTJ" name="Vraska Joins Up" />
+    <alt key="0367" sub="OTJ" name="Wylie Duke, Atiin Hero" />
+    <alt key="0368" sub="OTJ" name="Frontier Seeker" />
+    <alt key="0369" sub="OTJ" name="Scorching Shot" />
+    <alt key="0370" sub="OTJ" name="Honest Rutstein" />
+    <alt key="0371" sub="OTJ" name="Make Your Own Luck" />
+    <alt key="0372" sub="OTJ" name="Ruthless Lawbringer" />
+    <alt key="0374" sub="OTJ" name="Magda, the Hoardmaster" />
     
     <!-- ★PRMセット扱い -->
     <!-- ZNR variants -->
@@ -6955,7 +7070,87 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0036" sub="OTJ Special Guest" name="Notion Thief" />
     <alt key="0037" sub="OTJ Special Guest" name="Desert" />
     <alt key="0038" sub="OTJ Special Guest" name="Prismatic Vista" />
-    
+    <!-- Outlaws of Thunder Junction Breaking News -->
+    <alt key="0001" sub="OTP" name="Fell the Mighty" />
+    <alt key="0002" sub="OTP" name="Fierce Retribution" />
+    <alt key="0003" sub="OTP" name="Journey to Nowhere" />
+    <alt key="0004" sub="OTP" name="Leyline Binding" />
+    <alt key="0005" sub="OTP" name="Pariah" />
+    <alt key="0006" sub="OTP" name="Path to Exile" />
+    <alt key="0007" sub="OTP" name="Archive Trap" />
+    <alt key="0008" sub="OTP" name="Archmage's Charm" />
+    <alt key="009" sub="OTP" name="Commandeer" />
+    <alt key="0010" sub="OTP" name="Essence Capture" />
+    <alt key="0011" sub="OTP" name="Mana Drain" />
+    <alt key="0012" sub="OTP" name="Mindbreak Trap" />
+    <alt key="0013" sub="OTP" name="Repulse" />
+    <alt key="0014" sub="OTP" name="Heartless Pillage" />
+    <alt key="0015" sub="OTP" name="Imp's Mischief" />
+    <alt key="0016" sub="OTP" name="Murder" />
+    <alt key="0017" sub="OTP" name="Overwhelming Forces" />
+    <alt key="0018" sub="OTP" name="Reanimate" />
+    <alt key="0019" sub="OTP" name="Surgical Extraction" />
+    <alt key="0020" sub="OTP" name="Thoughtseize" />
+    <alt key="0021" sub="OTP" name="Collective Defiance" />
+    <alt key="0022" sub="OTP" name="Crackle with Power" />
+    <alt key="0023" sub="OTP" name="Electrodominance" />
+    <alt key="0024" sub="OTP" name="Fling" />
+    <alt key="0025" sub="OTP" name="Indomitable Creativity" />
+    <alt key="0026" sub="OTP" name="Skewer the Critics" />
+    <alt key="0027" sub="OTP" name="Skullcrack" />
+    <alt key="0028" sub="OTP" name="Clear Shot" />
+    <alt key="0029" sub="OTP" name="Force of Vigor" />
+    <alt key="0030" sub="OTP" name="Pest Infestation" />
+    <alt key="0031" sub="OTP" name="Primal Command" />
+    <alt key="0032" sub="OTP" name="Primal Might" />
+    <alt key="0033" sub="OTP" name="Thornado" />
+    <alt key="0034" sub="OTP" name="Abrupt Decay" />
+    <alt key="0035" sub="OTP" name="Anguished Unmaking" />
+    <alt key="0036" sub="OTP" name="Back for More" />
+    <alt key="0037" sub="OTP" name="Bedevil" />
+    <alt key="0038" sub="OTP" name="Buried in the Garden" />
+    <alt key="0039" sub="OTP" name="Crime" />
+    <alt key="0040" sub="OTP" name="Cruel Ultimatum" />
+    <alt key="0041" sub="OTP" name="Decimate" />
+    <alt key="0042" sub="OTP" name="Decisive Denial" />
+    <alt key="0043" sub="OTP" name="Detention Sphere" />
+    <alt key="0044" sub="OTP" name="Endless Detour" />
+    <alt key="0045" sub="OTP" name="Fractured Identity" />
+    <alt key="0046" sub="OTP" name="Hindering Light" />
+    <alt key="0047" sub="OTP" name="Humiliate" />
+    <alt key="0048" sub="OTP" name="Hypothesizzle" />
+    <alt key="0049" sub="OTP" name="Ionize" />
+    <alt key="0050" sub="OTP" name="Oko, Thief of Crowns" />
+    <alt key="0051" sub="OTP" name="Outlaws' Merriment" />
+    <alt key="0052" sub="OTP" name="Ride Down" />
+    <alt key="0053" sub="OTP" name="Savage Smash" />
+    <alt key="0054" sub="OTP" name="Siphon Insight" />
+    <alt key="0055" sub="OTP" name="Terminal Agony" />
+    <alt key="0056" sub="OTP" name="Tyrant's Scorn" />
+    <alt key="0057" sub="OTP" name="Vanishing Verse" />
+    <alt key="0058" sub="OTP" name="Villainous Wealth" />
+    <alt key="0059" sub="OTP" name="Void Rend" />
+    <alt key="0060" sub="OTP" name="Voidslime" />
+    <alt key="0061" sub="OTP" name="Contagion Engine" />
+    <alt key="0062" sub="OTP" name="Grindstone" />
+    <alt key="0063" sub="OTP" name="Mindslaver" />
+    <alt key="0064" sub="OTP" name="Unlicensed Hearse" />
+    <alt key="0065" sub="OTP" name="Dust Bowl" />
+    <alt key="0066" sub="OTP" name="Leyline Binding" />
+    <alt key="0067" sub="OTP" name="Mana Drain" />
+    <alt key="0068" sub="OTP" name="Mindbreak Trap" />
+    <alt key="0069" sub="OTP" name="Overwhelming Forces" />
+    <alt key="0070" sub="OTP" name="Thoughtseize" />
+    <alt key="0071" sub="OTP" name="Crackle with Power" />
+    <alt key="0072" sub="OTP" name="Indomitable Creativity" />
+    <alt key="0073" sub="OTP" name="Force of Vigor" />
+    <alt key="0074" sub="OTP" name="Anguished Unmaking" />
+    <alt key="0075" sub="OTP" name="Crime" />
+    <alt key="0076" sub="OTP" name="Fractured Identity" />
+    <alt key="0077" sub="OTP" name="Oko, Thief of Crowns" />
+    <alt key="0078" sub="OTP" name="Contagion Engine" />
+    <alt key="0079" sub="OTP" name="Grindstone" />
+    <alt key="0080" sub="OTP" name="Mindslaver" />
     <!-- ★カードタイプ依存 -->
     <!-- 両面カード -->
     <alt key="0001" sub="V17" name="Archangel Avacyn" />
