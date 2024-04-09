@@ -701,7 +701,68 @@
 １枚以上の土地・カードがいずこかからあなたの墓地に置かれるたび、赤緑白の1/1の砂漠の民・戦士・クリーチャー・トークン１体を生成する。この能力は、毎ターン１回のみ誘発する。</card>
     <card name="We Ride at Dawn" ja="夜明けに旅立つ" type="エンチャント">あなたが唱える伝説の各クリーチャー・呪文は召集を持つ。（あなたのクリーチャーが、それらの呪文を唱える助けとなる。伝説のクリーチャー・呪文を唱える段階であなたがタップした各クリーチャーは、(１)かそのクリーチャーの色のマナ１点を支払う。）
 あなたの統率者１体が攻撃するたび、「(Ｔ)：あなたがコントロールしているクリーチャー１体を対象とする。ターン終了時まで、それは+1/+0の修整を受ける。起動はソーサリーとしてのみ行う。」を持つ赤の1/1の傭兵・クリーチャー・トークン１体を生成する。</card>
-    <card name="Arcane Heist" ja="秘儀の強奪"></card>
+    <card name="Arcane Heist" ja="秘儀の強奪" type="ソーサリー">対戦相手１人の墓地にありインスタントかソーサリーであるカード１枚を対象とする。あなたはそれを、マナ・コストを支払うことなく唱えてもよい。その呪文がそのプレイヤーの墓地に置かれるなら、代わりにそれを追放する。
+暗号（その後、あなたがコントロールしているクリーチャー１体に暗号化した状態で、この呪文・カードを追放してもよい。そのクリーチャーがプレイヤー１人に戦闘ダメージを与えるたび、それのコントローラーは、暗号化されているこのカードのコピーを、マナ・コストを支払うことなく唱えてもよい。）</card>
+    <card name="Forger's Foundry" ja="偽造者の鋳造所" type="アーティファクト">(Ｔ)：(青)を加える。あなたがこのマナを支払ってマナ総量が３以下でありインスタントかソーサリーである呪文１つを唱えたとき、あなたは、その呪文を解決するに際しそれをオーナーの墓地に置く代わりに、それを追放してもよい。
+(３)(青)(青),(Ｔ)：あなたは偽造者の鋳造所により追放されているカードの中から、望む数の呪文をマナ・コストを支払うことなく唱えてもよい。起動はソーサリーとしてのみ行う。</card>
+    <card name="Lock and Load" ja="射撃準備" type="ソーサリー">カード１枚を引く。その後、このターンにあなたが唱えてインスタントやソーサリーでありこれでない呪文１つにつきカード１枚を引く。
+計画(３)(青)（(３)(青)を支払ってあなたの手札からこのカードを追放してもよい。後のターンに、これをソーサリーとしてマナ・コストを支払うことなく唱えてもよい。計画はソーサリーとしてのみ行う。）</card>
+    <card name="Smirking Spelljacker" ja="嘲笑う呪文乗っ取り" type="クリーチャー ― ジン・ウィザード・ならず者" pt="3/3">瞬速
+飛行
+嘲笑う呪文乗っ取りが戦場に出たとき、対戦相手がコントロールしている呪文１つを対象とする。それを追放する。
+嘲笑う呪文乗っ取りが攻撃するたび、これによりカードが追放されている場合、あなたはその追放されているカードをマナ・コストを支払うことなく唱えてもよい。</card>
+    <card name="Thunderclap Drake" ja="雷音のドレイク" type="クリーチャー ― ドレイク" pt="2/1">飛行
+あなたがインスタントやソーサリーである呪文を唱えるためのコストは(１)少なくなる。
+(２)(青),雷音のドレイクを生け贄に捧げる：このターン、あなたがインスタントかソーサリーである呪文を次に唱えたとき、このゲームであなたが統率領域からあなたの統率者を唱えた１回につきそれを１回コピーする。あなたはそれらのコピーの新しい対象を選んでもよい。</card>
+    <card name="Back in Town" ja="町への帰還" type="ソーサリー">あなたの墓地にあり無法者であるクリーチャー・カードＸ枚を対象とする。それらを戦場に戻す。（暗殺者、傭兵、海賊、ならず者、邪術師が無法者である。）</card>
+    <card name="Charred Graverobber" ja="黒焦げの墓荒らし" type="クリーチャー ― スケルトン・傭兵" pt="3/1">黒焦げの墓荒らしが戦場に出たとき、あなたの墓地にあり無法者であるカード１枚を対象とする。それをあなたの手札に戻す。
+脱出 ― (３)(黒)(黒),あなたの墓地からこれでないカード４枚を追放する。（あなたの墓地からこのカードを脱出コストで唱えてもよい。）
+黒焦げの墓荒らしは+1/+1カウンター１個が置かれた状態で脱出する。</card>
+    <card name="Discreet Retreat" ja="秘密の溜まり場" type="エンチャント ― オーラ">エンチャント（土地）
+エンチャントしている土地は「(Ｔ)：好きな色１色のマナ２点を加える。このマナは、無法者である呪文を唱えるためか、無法者が発生源である能力を起動するためにのみ使用できる。」を持つ。（暗殺者、傭兵、海賊、ならず者、邪術師が無法者である。）
+あなたが各ターン内のあなたの１つ目の無法者である呪文を唱えるたび、あなたはカード１枚を引き、１点のライフを失う。</card>
+    <card name="Heartless Conscription" ja="心なき徴兵" type="ソーサリー">すべてのクリーチャーを追放する。これにより追放された各カードにつきそれぞれ、そのカードが追放され続けているかぎり、あなたはそれをプレイしてもよく、その呪文を唱えるために任意のタイプのマナを支払ってもよい。心なき徴兵を追放する。</card>
+    <card name="Orochi Soul-Reaver" ja="大蛇の魂裂き" type="クリーチャー ― 蛇・忍者・ならず者" pt="5/4">忍術(３)(黒)（(３)(黒),あなたがコントロールしていてブロックされなかった攻撃クリーチャー１体を手札に戻す：あなたの手札からこのカードをタップ状態かつ攻撃している状態で戦場に出す。）
+あなたがコントロールしている１体以上のクリーチャーがプレイヤー１人に戦闘ダメージを与えるたび、宝物・トークン１つを生成し、そのプレイヤーのライブラリーの一番上のカードを予示する。（それを裏向きで2/2のクリーチャーとして戦場に出す。それがクリーチャー・カードなら、そのマナ・コストで、いつでも表向きにしてよい。）</card>
+    <card name="Thieving Varmint" ja="泥棒の匪獣" type="クリーチャー ― 匪獣" pt="2/1">接死、絆魂
+(Ｔ),１点のライフを支払う：好きな色１色のマナ２点を加える。このマナは、あなたがオーナーでない呪文を唱えるためにのみ使用できる。</card>
+    <card name="Cataclysmic Prospecting" ja="激変の試掘" type="ソーサリー">激変の試掘は各クリーチャーにそれぞれＸ点のダメージを与える。この呪文を唱えるために支払われた砂漠からのマナ１点につき宝物・トークン１つをタップ状態で生成する。</card>
+    <card name="Crackling Spellslinger" ja="弾ける呪文飛ばし" type="クリーチャー ― 人間・ウィザード" pt="2/2">瞬速
+弾ける呪文飛ばしが戦場に出たとき、あなたがこれを唱えていた場合、このターンにあなたが唱えてインスタントかソーサリーである次の呪文はストームを持つ。（あなたがその呪文を唱えたとき、それを、このターンにそれより前に唱えられた呪文の数と同じ回数コピーする。それらのコピーの新しい対象を選んでもよい。）</card>
+    <card name="Dead Before Sunrise" ja="夜明け前の死" type="インスタント">ターン終了時まで、あなたがコントロールしていて無法者である各クリーチャーは+1/+0の修整を受け「(Ｔ)：クリーチャー１体を対象とする。このクリーチャーはそれに、これのパワーに等しい点数のダメージを与える。」を得る。（暗殺者、傭兵、海賊、ならず者、邪術師が無法者である。）</card>
+    <card name="Elemental Eruption" ja="精霊の噴火" type="ソーサリー">飛行と果敢を持つ赤の4/4のドラゴン・エレメンタル・クリーチャー・トークン１体を生成する。
+ストーム（あなたがこの呪文を唱えたとき、これを、このターンにこれより前に唱えられた呪文の数と同じ回数コピーする。）</card>
+    <card name="Embrace the Unknown" ja="未知の受け入れ" type="ソーサリー">あなたのライブラリーの一番上からカード２枚を追放する。あなたの次のターンの終了時まで、あなたはそれらのカードをプレイしてもよい。
+回顧（あなたの墓地からこのカードを、他のコストの支払いに加えて土地・カード１枚を捨てることで唱えてもよい。）</card>
+    <card name="Pyretic Charge" ja="紅蓮の突撃" type="ソーサリー">あなたの手札を捨て、その後、カード４枚を引く。ターン終了時まで、あなたがコントロールしている各クリーチャーは、これにより捨てたカード１枚につき+1/+0の修整を受ける。
+計画(３)(赤)（(３)(赤)を支払ってあなたの手札からこのカードを追放してもよい。後のターンに、これをソーサリーとしてマナ・コストを支払うことなく唱えてもよい。計画はソーサリーとしてのみ行う。）</card>
+    <card name="Smoldering Stagecoach" ja="くすぶる駅馬車" type="アーティファクト ― 機体" pt="*/5">くすぶる駅馬車のパワーは、あなたの墓地にありインスタントやソーサリーであるカードの枚数に等しい。
+くすぶる駅馬車が攻撃するたび、このターン、あなたが次に唱えるインスタント・呪文とあなたが次に唱えるソーサリー・呪文はそれぞれ続唱を持つ。
+搭乗２</card>
+    <card name="Dune Chanter" ja="砂丘の詠唱者" type="クリーチャー ― 植物・ドルイド" pt="2/3">到達
+あなたがコントロールしている各土地と、あなたがオーナーであり戦場にない各土地・カードは、他のタイプに加えて砂漠である。
+あなたがコントロールしている各土地は「(Ｔ)：好きな色１色のマナ１点を加える。」を持つ。
+(Ｔ)：カード２枚を切削する。あなたは、これにより切削した土地・カード１枚につき１点のライフを得る。</card>
+    <card name="Rumbleweed" ja="ランブルウィード" type="クリーチャー ― 植物・エレメンタル" pt="8/8">この呪文を唱えるためのコストは、あなたの墓地にある土地・カード１枚につき(１)少なくなる。
+警戒、到達、トランプル
+ランブルウィードが戦場に出たとき、ターン終了時まで、あなたがコントロールしていてこれでない各クリーチャーは+3/+3の修整を受けトランプルを得る。</card>
+    <card name="Savvy Trader" ja="抜け目ない交易商人" type="クリーチャー ― 人間・市民" pt="3/3">抜け目ない交易商人が戦場に出たとき、あなたの墓地にあるパーマネント・カード１枚を対象とする。それを追放する。そのカードが追放され続けているかぎり、あなたはそれをプレイしてもよい。
+あなたがあなたの手札以外から呪文を唱えるためのコストは(１)少なくなる。</card>
+    <card name="Tower Winder" ja="高閣這い" type="クリーチャー ― 蛇" pt="1/1">到達、接死
+高閣這いが戦場に出たとき、あなたのライブラリーやあなたの墓地から《統率の塔》という名前を持つカード１枚を探し、公開し、あなたの手札に加える。これによりあなたのライブラリーからカードを探したなら、ライブラリーを切り直す。</card>
+    <card name="Vengeful Regrowth" ja="復讐に燃えた芽吹き" type="ソーサリー">あなたの墓地にある土地・カード最大３枚を対象とする。それらをタップ状態で戦場に戻す。その枚数に等しい数の、到達を持つ緑の4/2の植物・戦士・クリーチャー・トークンを生成する。
+フラッシュバック(６)(緑)(緑)（あなたの墓地からこのカードを、これのフラッシュバック・コストで唱えてもよい。その後、これを追放する。）</card>
+    <card name="Graywater's Fixer" ja="グレイウォーターの仲介者" type="クリーチャー ― トカゲ・傭兵" pt="4/4">あなたの墓地にあり無法者である各クリーチャー・カードはそれぞれ再演(Ｘ)を持つ。Ｘはそれのマナ総量に等しい。（それを追放し、それの再演コストを支払う：各対戦相手につきそれぞれ、そのカードのコピーであり、このターン可能ならそのプレイヤーを攻撃するトークン１つを生成する。それらは速攻を得る。次の終了ステップの開始時に、それらを生け贄に捧げる。起動はソーサリーとしてのみ行う。）</card>
+    <card name="Bounty Board" ja="賞金首の掲示板" type="アーティファクト">(Ｔ)：好きな色１色のマナ１点を加える。
+(１),(Ｔ)：クリーチャー１体を対象とする。それの上に賞金カウンター１個を置く。起動はソーサリーとしてのみ行う。
+賞金カウンターが置かれているクリーチャー１体が死亡するたび、それのコントローラーの各対戦相手はそれぞれカード１枚を引き、２点のライフを得る。</card>
+    <card name="Dream-Thief's Bandana" ja="夢盗人のバンダナ" type="アーティファクト ― 装備品">装備しているクリーチャーがプレイヤー１人に戦闘ダメージを与えるたび、そのプレイヤーのライブラリーの一番上のカードを見て、裏向きで追放する。それが追放され続けているかぎり、あなたはそれをプレイしてもよく、その呪文を唱えるために任意のタイプのマナを支払ってもよい。
+装備(１)</card>
+    <card name="Leyline Dowser" ja="力線の探知機" type="アーティファクト">(１),(Ｔ)：カード１枚を切削する。あなたはこれにより切削したカードの中から、インスタントかソーサリーであるカード１枚をあなたの手札に加えてもよい。
+あなたがコントロールしていてアンタップ状態である伝説のクリーチャー１体をタップする：力線の探知機をアンタップする。</card>
+    <card name="Cactus Preserve" ja="サボテン保護区" type="土地 ― 砂漠">サボテン保護区はタップ状態で戦場に出る。
+(Ｔ)：あなたがコントロールしている土地が生み出すことのできるマナのタイプのうち望むタイプのマナ１点を加える。
+(３)：ターン終了時まで、サボテン保護区は到達を持つ緑のX/Xの植物・クリーチャーになる。Ｘはあなたの統率者の中のマナ総量の最大値に等しい。これは土地でもある。</card>
     
     <!-- OTC Bounty -->
     <card name="Bounty: Rissa &quot;Blades&quot; Lee" ja="賞金首：「複刃」リッサ・リー" type="">あなたの終了ステップの開始時に、このターンにあなたの墓地にインスタンやソーサリーであるカード２枚以上がある間にあなたがインスタントかソーサリーである呪文を唱えていた場合、あなたは報酬を手にする。</card>
@@ -1886,6 +1947,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <pt name="Recon Craft Theta" pt="4/4" />-->
     <pt name="Luxurious Locomotive" pt="6/5" />
     <pt name="Mobile Homestead" pt="3/3" />
+    <pt name="Smoldering Stagecoach" pt="*/5" />
     <!-- バトル (MOM) -->
     <pt name="Invasion of Ravnica" pt="4" />
     <pt name="Invasion of Belenon" pt="5" />
@@ -3768,6 +3830,109 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0371" sub="OTJ" name="Make Your Own Luck" />
     <alt key="0372" sub="OTJ" name="Ruthless Lawbringer" />
     <alt key="0374" sub="OTJ" name="Magda, the Hoardmaster" />
+    <!-- OTC -->
+    <alt key="0041" sub="OTC" name="Eris, Roar of the Storm" />
+    <alt key="0042" sub="OTC" name="Felix Five-Boots" />
+    <alt key="0043" sub="OTC" name="Kirri, Talented Sprout" />
+    <alt key="0044" sub="OTC" name="Vihaan, Goldwaker" />
+    <alt key="0045" sub="OTC" name="Angel of Indemnity" />
+    <alt key="0046" sub="OTC" name="Angelic Sell-Sword" />
+    <alt key="0047" sub="OTC" name="Sand Scout" />
+    <alt key="0048" sub="OTC" name="We Ride at Dawn" />
+    <alt key="0049" sub="OTC" name="Arcane Heist" />
+    <alt key="0050" sub="OTC" name="Forger's Foundry" />
+    <alt key="0051" sub="OTC" name="Lock and Load" />
+    <alt key="0052" sub="OTC" name="Smirking Spelljacker" />
+    <alt key="0053" sub="OTC" name="Thunderclap Drake" />
+    <alt key="0054" sub="OTC" name="Back in Town" />
+    <alt key="0055" sub="OTC" name="Charred Graverobber" />
+    <alt key="0056" sub="OTC" name="Discreet Retreat" />
+    <alt key="0057" sub="OTC" name="Heartless Conscription" />
+    <alt key="0058" sub="OTC" name="Orochi Soul-Reaver" />
+    <alt key="0059" sub="OTC" name="Thieving Varmint" />
+    <alt key="0060" sub="OTC" name="Cataclysmic Prospecting" />
+    <alt key="0061" sub="OTC" name="Crackling Spellslinger" />
+    <alt key="0062" sub="OTC" name="Dead Before Sunrise" />
+    <alt key="0063" sub="OTC" name="Elemental Eruption" />
+    <alt key="0064" sub="OTC" name="Embrace the Unknown" />
+    <alt key="0065" sub="OTC" name="Pyretic Charge" />
+    <alt key="0066" sub="OTC" name="Smoldering Stagecoach" />
+    <alt key="0067" sub="OTC" name="Dune Chanter" />
+    <alt key="0068" sub="OTC" name="Rumbleweed" />
+    <alt key="0069" sub="OTC" name="Savvy Trader" />
+    <alt key="0070" sub="OTC" name="Tower Winder" />
+    <alt key="0071" sub="OTC" name="Vengeful Regrowth" />
+    <alt key="0072" sub="OTC" name="Graywater's Fixer" />
+    <alt key="0073" sub="OTC" name="Bounty Board" />
+    <alt key="0074" sub="OTC" name="Dream-Thief's Bandana" />
+    <alt key="0075" sub="OTC" name="Leyline Dowser" />
+    <alt key="0076" sub="OTC" name="Cactus Preserve" />
+    <!-- BIG -->
+    <alt key="0031" sub="BIG" name="Collector's Cage" />
+    <alt key="0032" sub="BIG" name="Grand Abolisher" />
+    <alt key="0033" sub="BIG" name="Oltec Matterweaver" />
+    <alt key="0034" sub="BIG" name="Rest in Peace" />
+    <alt key="0035" sub="BIG" name="Esoteric Duplicator" />
+    <alt key="0036" sub="BIG" name="Simulacrum Synthesizer" />
+    <alt key="0037" sub="BIG" name="Worldwalker Helm" />
+    <alt key="0038" sub="BIG" name="Greed's Gambit" />
+    <alt key="0039" sub="BIG" name="Harvester of Misery" />
+    <alt key="0040" sub="BIG" name="Hostile Investigator" />
+    <alt key="0041" sub="BIG" name="Generous Plunderer" />
+    <alt key="0042" sub="BIG" name="Legion Extruder" />
+    <alt key="0043" sub="BIG" name="Memory Vessel" />
+    <alt key="0044" sub="BIG" name="Molten Duplication" />
+    <alt key="0045" sub="BIG" name="Territory Forge" />
+    <alt key="0046" sub="BIG" name="Ancient Cornucopia" />
+    <alt key="0047" sub="BIG" name="Bristlebud Farmer" />
+    <alt key="0048" sub="BIG" name="Omenpath Journey" />
+    <alt key="0049" sub="BIG" name="Sandstorm Salvager" />
+    <alt key="0050" sub="BIG" name="Vaultborn Tyrant" />
+    <alt key="0051" sub="BIG" name="Loot, the Key to Everything" />
+    <alt key="0052" sub="BIG" name="Pest Control" />
+    <alt key="0053" sub="BIG" name="Lost Jitte" />
+    <alt key="0054" sub="BIG" name="Lotus Ring" />
+    <alt key="0055" sub="BIG" name="Nexus of Becoming" />
+    <alt key="0056" sub="BIG" name="Sword of Wealth and Power" />
+    <alt key="0057" sub="BIG" name="Torpor Orb" />
+    <alt key="0058" sub="BIG" name="Transmutation Font" />
+    <alt key="0059" sub="BIG" name="Fomori Vault" />
+    <alt key="0060" sub="BIG" name="Tarnation Vista" />
+    <alt key="0061" sub="BIG" name="Vaultborn Tyrant" />
+    <alt key="0062" sub="BIG" name="Loot, the Key to Everything" />
+    <alt key="0063" sub="BIG" name="Lotus Ring" />
+    <alt key="0064" sub="BIG" name="Sword of Wealth and Power" />
+    <alt key="0065" sub="BIG" name="Tarnation Vista" />
+    <alt key="0066" sub="BIG" name="Collector's Cage" />
+    <alt key="0067" sub="BIG" name="Grand Abolisher" />
+    <alt key="0068" sub="BIG" name="Oltec Matterweaver" />
+    <alt key="0069" sub="BIG" name="Rest in Peace" />
+    <alt key="0070" sub="BIG" name="Esoteric Duplicator" />
+    <alt key="0071" sub="BIG" name="Simulacrum Synthesizer" />
+    <alt key="0072" sub="BIG" name="Worldwalker Helm" />
+    <alt key="0073" sub="BIG" name="Greed's Gambit" />
+    <alt key="0074" sub="BIG" name="Harvester of Misery" />
+    <alt key="0075" sub="BIG" name="Hostile Investigator" />
+    <alt key="0076" sub="BIG" name="Generous Plunderer" />
+    <alt key="0077" sub="BIG" name="Legion Extruder" />
+    <alt key="0078" sub="BIG" name="Memory Vessel" />
+    <alt key="0079" sub="BIG" name="Molten Duplication" />
+    <alt key="0080" sub="BIG" name="Territory Forge" />
+    <alt key="0081" sub="BIG" name="Ancient Cornucopia" />
+    <alt key="0082" sub="BIG" name="Bristlebud Farmer" />
+    <alt key="0083" sub="BIG" name="Omenpath Journey" />
+    <alt key="0084" sub="BIG" name="Sandstorm Salvager" />
+    <alt key="0085" sub="BIG" name="Vaultborn Tyrant" />
+    <alt key="0086" sub="BIG" name="Loot, the Key to Everything" />
+    <alt key="0087" sub="BIG" name="Pest Control" />
+    <alt key="0088" sub="BIG" name="Lost Jitte" />
+    <alt key="0089" sub="BIG" name="Lotus Ring" />
+    <alt key="0090" sub="BIG" name="Nexus of Becoming" />
+    <alt key="0091" sub="BIG" name="Sword of Wealth and Power" />
+    <alt key="0092" sub="BIG" name="Torpor Orb" />
+    <alt key="0093" sub="BIG" name="Transmutation Font" />
+    <alt key="0094" sub="BIG" name="Fomori Vault" />
+    <alt key="0095" sub="BIG" name="Tarnation Vista" />
     
     <!-- ★PRMセット扱い -->
     <!-- ZNR variants -->
@@ -7138,7 +7303,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0006" sub="OTP" name="Path to Exile" />
     <alt key="0007" sub="OTP" name="Archive Trap" />
     <alt key="0008" sub="OTP" name="Archmage's Charm" />
-    <alt key="009" sub="OTP" name="Commandeer" />
+    <alt key="0009" sub="OTP" name="Commandeer" />
     <alt key="0010" sub="OTP" name="Essence Capture" />
     <alt key="0011" sub="OTP" name="Mana Drain" />
     <alt key="0012" sub="OTP" name="Mindbreak Trap" />
@@ -7210,6 +7375,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0078" sub="OTP" name="Contagion Engine" />
     <alt key="0079" sub="OTP" name="Grindstone" />
     <alt key="0080" sub="OTP" name="Mindslaver" />
+    
     <!-- ★カードタイプ依存 -->
     <!-- 両面カード -->
     <alt key="0001" sub="V17" name="Archangel Avacyn" />
@@ -7546,6 +7712,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0198" sub="WOE" name="Welcome to Sweettooth" />
     <alt key="0200" sub="WOE" name="The Apprentice's Folly" />
     <alt key="0272" sub="LCC" name="King Narfi's Betrayal" />
+    <alt key="0197" sub="OTC" name="The Mending of Dominaria" />
     <!-- 出来事 : SearchAltSubKey method の追記が必要 -->
     <alt key="0005" sub="ELD" name="Ardenvale Tactician" />
     <alt key="0011" sub="ELD" name="Faerie Guidemother" />
