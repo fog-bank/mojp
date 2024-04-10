@@ -23,7 +23,7 @@ public partial class App : Application
     /// <summary>
     /// カードの英語名から、英語カード名・日本語カード名・日本語カードテキストを検索します。
     /// </summary>
-    public static Dictionary<string, Card> Cards { get; } = new Dictionary<string, Card>(27348);
+    public static Dictionary<string, Card> Cards { get; } = new(27687);
 
     /// <summary>
     /// 代替テキスト検索の主キーです。
@@ -38,7 +38,7 @@ public partial class App : Application
     /// <summary>
     /// 代替テキストによるカード検索を行います。
     /// </summary>
-    public static Dictionary<string, AltCard> AltCards { get; } = new Dictionary<string, AltCard>(5508);
+    public static Dictionary<string, AltCard> AltCards { get; } = new(5790);
 
     /// <summary>
     /// このアプリの設定を取得します。
