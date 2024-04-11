@@ -20,8 +20,6 @@
     <Prefer32Bit>false</Prefer32Bit>
     <LangVersion>latest</LangVersion>
     <NoWarn>IDE0180</NoWarn>
-  </PropertyGroup>
-  <PropertyGroup>
     <PublishUrl>..\docs\clickonce\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
@@ -49,6 +47,7 @@
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
+  <PropertyGroup />
   <PropertyGroup>
     <IsWebBootstrapper>true</IsWebBootstrapper>
   </PropertyGroup>
