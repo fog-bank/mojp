@@ -3805,6 +3805,10 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0372" sub="OTJ" name="Ruthless Lawbringer" />
     <alt key="0374" sub="OTJ" name="Magda, the Hoardmaster" />
     <!-- OTC -->
+    <alt key="0001" sub="OTC" name="Gonti, Canny Acquisitor" />
+    <alt key="0002" sub="OTC" name="Olivia, Opulent Outlaw" />
+    <alt key="0003" sub="OTC" name="Stella Lee, Wild Card" />
+    <alt key="0004" sub="OTC" name="Yuma, Proud Protector" />
     <alt key="0041" sub="OTC" name="Eris, Roar of the Storm" />
     <alt key="0042" sub="OTC" name="Felix Five-Boots" />
     <alt key="0043" sub="OTC" name="Kirri, Talented Sprout" />
@@ -8015,6 +8019,28 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0155" sub="MKM" name="Case of the Locked Hothouse" />
     <alt key="0156" sub="MKM" name="Case of the Trampled Garden" />
     <alt key="0019" sub="MKC" name="Case of the Shifting Visage" />
+    <!-- 放題 (OTJ) -->
+    <alt key="0011" sub="OTJ" name="Final Showdown" />
+    <alt key="0014" sub="OTJ" name="Getaway Glamer" />
+    <alt key="0022" sub="OTJ" name="One Last Job" />
+    <alt key="0026" sub="OTJ" name="Requisition Raid" />
+    <alt key="0027" sub="OTJ" name="Rustler Rampage" />
+    <alt key="0053" sub="OTJ" name="Jailbreak Scheme" />
+    <alt key="0057" sub="OTJ" name="Metamorphic Blast" />
+    <alt key="0061" sub="OTJ" name="Phantom Interference" />
+    <alt key="0066" sub="OTJ" name="Shifting Grift" />
+    <alt key="0075" sub="OTJ" name="Three Steps Ahead" />
+    <alt key="0091" sub="OTJ" name="Insatiable Avarice" />
+    <alt key="0093" sub="OTJ" name="Lively Dirge" />
+    <alt key="0104" sub="OTJ" name="Rush of Dread" />
+    <alt key="0111" sub="OTJ" name="Unfortunate Accident" />
+    <alt key="0117" sub="OTJ" name="Caught in the Crossfire" />
+    <alt key="0122" sub="OTJ" name="Explosive Derailment" />
+    <alt key="0125" sub="OTJ" name="Great Train Heist" />
+    <alt key="0142" sub="OTJ" name="Return the Favor" />
+    <alt key="0160" sub="OTJ" name="Dance of the Tumbleweeds" />
+    <alt key="0180" sub="OTJ" name="Smuggler's Surprise" />
+    <alt key="0186" sub="OTJ" name="Trash the Town" />
     <!-- ダンジョン (AFR) -->
     <alt key="Yawning Portal" sub="Dungeon Level" name="Dungeon of the Mad Mage" />
     <alt key="Cave Entrance" sub="Goblin Lair" name="Lost Mine of Phandelver" />
@@ -12860,15 +12886,10 @@ III ― 望む個数の(Ｅ)を支払う。これにより１個以上の(Ｅ)�
     <card name="Strength Bobblehead" />
     <card name="Survivor's Med Kit" />
     <card name="T-45 Power Armor" />
-    <card name="Desolate Mire" />
     <card name="Diamond City" />
-    <card name="Ferrous Lake" />
     <card name="HELIOS One" />
     <card name="Junktown" />
     <card name="Mariposa Military Base" />
-    <card name="Overflowing Basin" />
-    <card name="Sunscorched Divide" />
-    <card name="Viridescent Bog" />
     
     <!-- 公式日本語カード名が無いカード -->
     <ja name="Abbey Matron" />
