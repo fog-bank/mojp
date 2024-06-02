@@ -7480,6 +7480,22 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0078" sub="OTP" name="Contagion Engine" />
     <alt key="0079" sub="OTP" name="Grindstone" />
     <alt key="0080" sub="OTP" name="Mindslaver" />
+    <!-- Modern Horizons 3 Special Guests -->
+    <!--<alt key="0039" sub="MH3 Special Guest" name="Thought-Knot Seer" />
+    <alt key="0040" sub="MH3 Special Guest" name="Prismatic Ending" />
+    <alt key="0041" sub="MH3 Special Guest" name="Dismember" />
+    <alt key="0042" sub="MH3 Special Guest" name="Persist" />
+    <alt key="0043" sub="MH3 Special Guest" name="Expressive Iteration" />
+    <alt key="0044" sub="MH3 Special Guest" name="Solitude" />
+    <alt key="0045" sub="MH3 Special Guest" name="Subtlety" />
+    <alt key="0046" sub="MH3 Special Guest" name="Grief" />
+    <alt key="0047" sub="MH3 Special Guest" name="Fury" />
+    <alt key="0048" sub="MH3 Special Guest" name="Endurance" />
+    <alt key="0049" sub="MH3 Special Guest" name="Solitude" />
+    <alt key="0050" sub="MH3 Special Guest" name="Subtlety" />
+    <alt key="0051" sub="MH3 Special Guest" name="Grief" />
+    <alt key="0052" sub="MH3 Special Guest" name="Fury" />
+    <alt key="0053" sub="MH3 Special Guest" name="Endurance" />-->
     
     <!-- ★カードタイプ依存 -->
     <!-- 両面カード -->
@@ -8244,6 +8260,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="(?&lt;!に)よって" value="によって" />
     <regex target="text" pattern="カウンター１個置く" value="カウンター１個を置く" />
     <regex target="text" pattern="ときのみ唱えられる" value="ときにのみ唱えられる" />
+    <regex target="text" pattern="(?&lt;=（[^）\n]+)$" value="）" />
     <regex target="text" pattern="(?&lt;=生成する|に等しい)$" value="。" />
     <regex target="text" pattern="(?&lt;=カウンター.個)取り除く" value="を取り除く" />
     <regex target="text" pattern="」$" value="" />
