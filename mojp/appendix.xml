@@ -750,7 +750,7 @@ IV ― 望む数のクリーチャーを生け贄に捧げる。あなたのラ�
 あなたのターンの戦闘の開始時に、あなたは(Ｅ)(Ｅ)を支払ってもよい。そうしたとき、あなたがコントロールしていてこれでないクリーチャー１体を対象とする。オーロラの変幻者は、この能力と「このクリーチャーがプレイヤー１人に戦闘ダメージを与えるたび、あなたはその点数に等しい個数の(Ｅ)を得る。」を持つことを除き、それのコピーになる。</card>
     <card name="Benthic Anomaly" ja="水底の異形種" type="クリーチャー ― エルドラージ・海蛇" pt="7/8">欠色
 あなたがこの呪文を唱えたとき、各対戦相手につきそれぞれ、そのプレイヤーがコントロールしているクリーチャー１体を選ぶ。それのパワーがそれらのクリーチャーのパワーの合計に等しく、それのタフネスがそれらのクリーチャーのタフネスの合計に等しく、それが無色のエルドラージ・クリーチャーであることを除き、それらのクリーチャーのうち１体のコピーであるトークン１体を生成する。</card>
-    <card name="Copy Land" ja="土地複製" type="あなたは土地複製を、これが他のタイプに加えてエンチャントであることを除き、戦場にある土地１つのコピーとして戦場に出してもよい。"></card>
+    <card name="Copy Land" ja="土地複製" type="エンチャント">あなたは土地複製を、これが他のタイプに加えてエンチャントであることを除き、戦場にある土地１つのコピーとして戦場に出してもよい。</card>
     <card name="March from Velis Vel" ja="ヴェリズ・ヴェルからの進撃" type="ソーサリー">あなたがコントロールしているクリーチャー１体を対象とする。非基本土地タイプ１つを選ぶ。ターン終了時まで、あなたがコントロールしていてそのタイプである各土地はそのクリーチャーのコピーになり速攻を得る。
 フラッシュバック(４)(青)（あなたの墓地からこのカードをフラッシュバック・コストで唱えてもよい。その後、これを追放する。）</card>
     <card name="Wonderscape Sage" ja="壮観の賢者" type="クリーチャー ― ムーンフォーク・ウィザード" pt="1/3">飛行
@@ -2419,12 +2419,12 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0274" sub="OTJ" name="Swamp" />
     <alt key="0275" sub="OTJ" name="Mountain" />
     <alt key="0276" sub="OTJ" name="Forest" />
-    <!--<alt key="0304" sub="MH3" name="Plains" />
+    <alt key="0304" sub="MH3" name="Plains" />
     <alt key="0305" sub="MH3" name="Island" />
     <alt key="0306" sub="MH3" name="Swamp" />
     <alt key="0307" sub="MH3" name="Mountain" />
     <alt key="0308" sub="MH3" name="Forest" />
-    <alt key="0309" sub="MH3" name="Snow-Covered Wastes" />-->
+    <alt key="0309" sub="MH3" name="Snow-Covered Wastes" />
     <!-- SL2 -->
     <alt key="0138" sub="SLD" name="Anguished Unmaking" />
     <alt key="0139" sub="SLD" name="Assassin's Trophy" />
@@ -4038,6 +4038,266 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0093" sub="BIG" name="Transmutation Font" />
     <alt key="0094" sub="BIG" name="Fomori Vault" />
     <alt key="0095" sub="BIG" name="Tarnation Vista" />
+    <!-- MH3 -->
+    <alt key="0320" sub="MH3" name="Echoes of Eternity" />
+    <alt key="0321" sub="MH3" name="Flare of Fortitude" />
+    <alt key="0322" sub="MH3" name="Ocelot Pride" />
+    <alt key="0323" sub="MH3" name="Orim's Chant" />
+    <alt key="0324" sub="MH3" name="White Orchid Phantom" />
+    <alt key="0325" sub="MH3" name="Wrath of the Skies" />
+    <alt key="0326" sub="MH3" name="Flare of Denial" />
+    <alt key="0327" sub="MH3" name="Strix Serenade" />
+    <alt key="0328" sub="MH3" name="Ugin's Binding" />
+    <alt key="0329" sub="MH3" name="Volatile Stormdrake" />
+    <alt key="0330" sub="MH3" name="Chthonian Nightmare" />
+    <alt key="0331" sub="MH3" name="Flare of Malice" />
+    <alt key="0332" sub="MH3" name="Warren Soultrader" />
+    <alt key="0333" sub="MH3" name="Flare of Duplication" />
+    <alt key="0334" sub="MH3" name="Party Thrasher" />
+    <alt key="0335" sub="MH3" name="Powerbalance" />
+    <alt key="0336" sub="MH3" name="Wheel of Potential" />
+    <alt key="0337" sub="MH3" name="Birthing Ritual" />
+    <alt key="0338" sub="MH3" name="Flare of Cultivation" />
+    <alt key="0339" sub="MH3" name="Primal Prayers" />
+    <alt key="0340" sub="MH3" name="Sowing Mycospawn" />
+    <alt key="0341" sub="MH3" name="Springheart Nantuko" />
+    <alt key="0342" sub="MH3" name="Abstruse Appropriation" />
+    <alt key="0343" sub="MH3" name="Kaalia of the Vast" />
+    <alt key="0344" sub="MH3" name="Psychic Frog" />
+    <alt key="0345" sub="MH3" name="Emerald Medallion" />
+    <alt key="0346" sub="MH3" name="Jet Medallion" />
+    <alt key="0347" sub="MH3" name="Pearl Medallion" />
+    <alt key="0348" sub="MH3" name="Ruby Medallion" />
+    <alt key="0349" sub="MH3" name="Sapphire Medallion" />
+    <alt key="0350" sub="MH3" name="Archway of Innovation" />
+    <alt key="0351" sub="MH3" name="Arena of Glory" />
+    <alt key="0352" sub="MH3" name="Bloodstained Mire" />
+    <alt key="0353" sub="MH3" name="Flooded Strand" />
+    <alt key="0354" sub="MH3" name="Monumental Henge" />
+    <alt key="0355" sub="MH3" name="Phyrexian Tower" />
+    <alt key="0356" sub="MH3" name="Polluted Delta" />
+    <alt key="0357" sub="MH3" name="Shifting Woodland" />
+    <alt key="0358" sub="MH3" name="Spymaster's Vault" />
+    <alt key="0359" sub="MH3" name="Ugin's Labyrinth" />
+    <alt key="0360" sub="MH3" name="Windswept Heath" />
+    <alt key="0361" sub="MH3" name="Wooded Foothills" />
+    <alt key="0362" sub="MH3" name="Herigast, Erupting Nullkite" />
+    <alt key="0363" sub="MH3" name="Pearl-Ear, Imperial Advisor" />
+    <alt key="0364" sub="MH3" name="Phelia, Exuberant Shepherd" />
+    <alt key="0365" sub="MH3" name="K'rrik, Son of Yawgmoth" />
+    <alt key="0366" sub="MH3" name="Shilgengar, Sire of Famine" />
+    <alt key="0367" sub="MH3" name="Ashling, Flame Dancer" />
+    <alt key="0368" sub="MH3" name="Laelia, the Blade Reforged" />
+    <alt key="0369" sub="MH3" name="Eladamri, Korvecdal" />
+    <alt key="0370" sub="MH3" name="Six" />
+    <alt key="0371" sub="MH3" name="Arna Kennerud, Skycaptain" />
+    <alt key="0372" sub="MH3" name="Breya, Etherium Shaper" />
+    <alt key="0373" sub="MH3" name="Genku, Future Shaper" />
+    <alt key="0374" sub="MH3" name="Imskir Iron-Eater" />
+    <alt key="0375" sub="MH3" name="Kaalia of the Vast" />
+    <alt key="0376" sub="MH3" name="Kudo, King Among Bears" />
+    <alt key="0377" sub="MH3" name="Nadu, Winged Wisdom" />
+    <alt key="0378" sub="MH3" name="The Necrobloom" />
+    <alt key="0379" sub="MH3" name="Phlage, Titan of Fire's Fury" />
+    <alt key="0380" sub="MH3" name="Rosheen, Roaring Prophet" />
+    <alt key="0381" sub="MH3" name="Emrakul, the World Anew" />
+    <alt key="0382" sub="MH3" name="Kozilek, the Broken Reality" />
+    <alt key="0383" sub="MH3" name="Ulamog, the Defiler" />
+    <alt key="0442" sub="MH3" name="Ajani, Nacatl Pariah" />
+    <alt key="0443" sub="MH3" name="Tamiyo, Inquisitive Student" />
+    <alt key="0444" sub="MH3" name="Sorin of House Markov" />
+    <alt key="0445" sub="MH3" name="Ral, Monsoon Mage" />
+    <alt key="0446" sub="MH3" name="Grist, Voracious Larva" />
+    <alt key="0447" sub="MH3" name="Argent Dais" />
+    <alt key="0448" sub="MH3" name="Guide of Souls" />
+    <alt key="0449" sub="MH3" name="Amphibian Downpour" />
+    <alt key="0450" sub="MH3" name="Dreamtide Whale" />
+    <alt key="0451" sub="MH3" name="Harbinger of the Seas" />
+    <alt key="0452" sub="MH3" name="Crabomination" />
+    <alt key="0453" sub="MH3" name="Emperor of Bones" />
+    <alt key="0454" sub="MH3" name="Nethergoyf" />
+    <alt key="0455" sub="MH3" name="Ripples of Undeath" />
+    <alt key="0456" sub="MH3" name="Aether Revolt" />
+    <alt key="0457" sub="MH3" name="Detective's Phoenix" />
+    <alt key="0458" sub="MH3" name="Fanatic of Rhonas" />
+    <alt key="0459" sub="MH3" name="Invert Polarity" />
+    <alt key="0460" sub="MH3" name="Wight of the Reliquary" />
+    <alt key="0461" sub="MH3" name="Disruptor Flute" />
+    <alt key="0462" sub="MH3" name="Winter Moon" />
+    <alt key="0463" sub="MH3" name="Bloodstained Mire" />
+    <alt key="0464" sub="MH3" name="Flooded Strand" />
+    <alt key="0465" sub="MH3" name="Polluted Delta" />
+    <alt key="0466" sub="MH3" name="Windswept Heath" />
+    <alt key="0467" sub="MH3" name="Wooded Foothills" />
+    <alt key="0473" sub="MH3" name="Emrakul, the World Anew" />
+    <alt key="0474" sub="MH3" name="Herigast, Erupting Nullkite" />
+    <alt key="0475" sub="MH3" name="Kozilek, the Broken Reality" />
+    <alt key="0476" sub="MH3" name="Ulamog, the Defiler" />
+    <alt key="0477" sub="MH3" name="Pearl-Ear, Imperial Advisor" />
+    <alt key="0478" sub="MH3" name="Phelia, Exuberant Shepherd" />
+    <alt key="0479" sub="MH3" name="K'rrik, Son of Yawgmoth" />
+    <alt key="0480" sub="MH3" name="Shilgengar, Sire of Famine" />
+    <alt key="0481" sub="MH3" name="Ashling, Flame Dancer" />
+    <alt key="0482" sub="MH3" name="Laelia, the Blade Reforged" />
+    <alt key="0483" sub="MH3" name="Eladamri, Korvecdal" />
+    <alt key="0484" sub="MH3" name="Six" />
+    <alt key="0485" sub="MH3" name="Arna Kennerud, Skycaptain" />
+    <alt key="0486" sub="MH3" name="Breya, Etherium Shaper" />
+    <alt key="0487" sub="MH3" name="Genku, Future Shaper" />
+    <alt key="0488" sub="MH3" name="Imskir Iron-Eater" />
+    <alt key="0489" sub="MH3" name="Kaalia of the Vast" />
+    <alt key="0490" sub="MH3" name="Kudo, King Among Bears" />
+    <alt key="0491" sub="MH3" name="Nadu, Winged Wisdom" />
+    <alt key="0492" sub="MH3" name="The Necrobloom" />
+    <alt key="0493" sub="MH3" name="Phlage, Titan of Fire's Fury" />
+    <alt key="0494" sub="MH3" name="Rosheen, Roaring Prophet" />
+    <!-- M3C -->
+    <alt key="0009" sub="M3C" name="Azlask, the Swelling Scourge" />
+    <alt key="0010" sub="M3C" name="Cayth, Famed Mechanist" />
+    <alt key="0011" sub="M3C" name="Coram, the Undertaker" />
+    <alt key="0012" sub="M3C" name="Disa the Restless" />
+    <alt key="0013" sub="M3C" name="Jyoti, Moag Ancient" />
+    <alt key="0014" sub="M3C" name="Omo, Queen of Vesuva" />
+    <alt key="0015" sub="M3C" name="Satya, Aetherflux Genius" />
+    <alt key="0016" sub="M3C" name="Ulalek, Fused Atrocity" />
+    <alt key="0017" sub="M3C" name="Azlask, the Swelling Scourge" />
+    <alt key="0018" sub="M3C" name="Cayth, Famed Mechanist" />
+    <alt key="0019" sub="M3C" name="Coram, the Undertaker" />
+    <alt key="0020" sub="M3C" name="Disa the Restless" />
+    <alt key="0021" sub="M3C" name="Jyoti, Moag Ancient" />
+    <alt key="0022" sub="M3C" name="Omo, Queen of Vesuva" />
+    <alt key="0023" sub="M3C" name="Satya, Aetherflux Genius" />
+    <alt key="0024" sub="M3C" name="Ulalek, Fused Atrocity" />
+    <alt key="0025" sub="M3C" name="Azlask, the Swelling Scourge" />
+    <alt key="0026" sub="M3C" name="Cayth, Famed Mechanist" />
+    <alt key="0027" sub="M3C" name="Coram, the Undertaker" />
+    <alt key="0028" sub="M3C" name="Disa the Restless" />
+    <alt key="0029" sub="M3C" name="Jyoti, Moag Ancient" />
+    <alt key="0030" sub="M3C" name="Omo, Queen of Vesuva" />
+    <alt key="0031" sub="M3C" name="Satya, Aetherflux Genius" />
+    <alt key="0040" sub="M3C" name="Hourglass of the Lost" />
+    <alt key="0041" sub="M3C" name="Localized Destruction" />
+    <alt key="0042" sub="M3C" name="Razorfield Ripper" />
+    <alt key="0043" sub="M3C" name="Salvation Colossus" />
+    <alt key="0044" sub="M3C" name="Silverquill Lecturer" />
+    <alt key="0045" sub="M3C" name="Aurora Shifter" />
+    <alt key="0047" sub="M3C" name="Copy Land" />
+    <alt key="0048" sub="M3C" name="March from Velis Vel" />
+    <alt key="0049" sub="M3C" name="Wonderscape Sage" />
+    <alt key="0050" sub="M3C" name="Barrowgoyf" />
+    <alt key="0052" sub="M3C" name="Final Act" />
+    <alt key="0054" sub="M3C" name="Aether Refinery" />
+    <alt key="0055" sub="M3C" name="Blaster Hulk" />
+    <alt key="0056" sub="M3C" name="Filigree Racer" />
+    <alt key="0058" sub="M3C" name="Overclocked Electromancer" />
+    <alt key="0059" sub="M3C" name="Pyrogoyf" />
+    <alt key="0060" sub="M3C" name="Sawhorn Nemesis" />
+    <alt key="0061" sub="M3C" name="Siege-Gang Lieutenant" />
+    <alt key="0062" sub="M3C" name="Tempt with Mayhem" />
+    <alt key="0064" sub="M3C" name="Desert Warfare" />
+    <alt key="0065" sub="M3C" name="Polygoyf" />
+    <alt key="0066" sub="M3C" name="Rampant Frogantua" />
+    <alt key="0067" sub="M3C" name="Sage of the Maze" />
+    <alt key="0068" sub="M3C" name="Tarmogoyf Nest" />
+    <alt key="0069" sub="M3C" name="Aggressive Biomancy" />
+    <alt key="0070" sub="M3C" name="Bloodbraid Challenger" />
+    <alt key="0071" sub="M3C" name="Broodmate Tyrant" />
+    <alt key="0072" sub="M3C" name="Exterminator Magmarch" />
+    <alt key="0073" sub="M3C" name="Gluttonous Hellkite" />
+    <alt key="0074" sub="M3C" name="Infested Thrinax" />
+    <alt key="0075" sub="M3C" name="Sphinx of the Revelation" />
+    <alt key="0076" sub="M3C" name="Conversion Apparatus" />
+    <alt key="0077" sub="M3C" name="Stone Idol Generator" />
+    <alt key="0078" sub="M3C" name="Horizon of Progress" />
+    <alt key="0079" sub="M3C" name="Lazotep Quarry" />
+    <alt key="0080" sub="M3C" name="Planar Nexus" />
+    <alt key="0081" sub="M3C" name="Sunken Palace" />
+    <alt key="0082" sub="M3C" name="Talon Gates of Madara" />
+    <alt key="0083" sub="M3C" name="Trenchpost" />
+    <alt key="0136" sub="M3C" name="Azlask, the Swelling Scourge" />
+    <alt key="0137" sub="M3C" name="Cayth, Famed Mechanist" />
+    <alt key="0138" sub="M3C" name="Coram, the Undertaker" />
+    <alt key="0139" sub="M3C" name="Disa the Restless" />
+    <alt key="0140" sub="M3C" name="Jyoti, Moag Ancient" />
+    <alt key="0141" sub="M3C" name="Omo, Queen of Vesuva" />
+    <alt key="0142" sub="M3C" name="Satya, Aetherflux Genius" />
+    <alt key="0143" sub="M3C" name="Ulalek, Fused Atrocity" />
+    
+    <!-- ★旧枠 -->
+    <!-- MH3 -->
+    <!--<alt key="Illus. Brent Hollowell" sub="384" name="Emrakul, the World Anew" />
+    <alt key="Illus. Alex Konstad" sub="385" name="It That Heralds the End" />
+    <alt key="Illus. Brent Hollowell" sub="386" name="Kozilek, the Broken Reality" />
+    <alt key="Illus. Milivoj Ceran" sub="387" name="Null Elemental Blast" />
+    <alt key="Illus. Johann Bodin" sub="388" name="Nulldrifter" />
+    <alt key="Illus. Chase Stone" sub="389" name="Ulamog, the Defiler" />
+    <alt key="Illus. Eli Minaya" sub="390" name="Charitable Levy" />
+    <alt key="Illus. Winona Nelson" sub="391" name="Flare of Fortitude" />
+    <alt key="Illus. Steven Russell Black" sub="392" name="Jolted Awake" />
+    <alt key="Illus. Volkan Baga" sub="393" name="Metastatic Evangel" />
+    <alt key="Illus. Chris Seaman" sub="394" name="Ocelot Pride" />
+    <alt key="Illus. Eric Wilkerson" sub="395" name="Recruiter of the Guard" />
+    <alt key="Illus. Zoltan Boros" sub="396" name="White Orchid Phantom" />
+    <alt key="Illus. Franz Vohwinkel" sub="397" name="Wrath of the Skies" />
+    <alt key="Illus. Campbell White" sub="398" name="Aether Spike" />
+    <alt key="Illus. Liiga Smilshkalne" sub="399" name="Brainsurge" />
+    <alt key="Illus. Jason A. Engle" sub="400" name="Flare of Denial" />
+    <alt key="Illus. Jesper Ejsing" sub="401" name="Kappa Cannoneer" />
+    <alt key="Illus. Danny Schwartz" sub="402" name="Shadow of the Second Sun" />
+    <alt key="Illus. Marzena Nereida Piwowar" sub="403" name="Tune the Narrative" />
+    <alt key="Illus. Campbell White" sub="404" name="Volatile Stormdrake" />
+    <alt key="Illus. Paolo Parente" sub="405" name="Accursed Marauder" />
+    <alt key="Illus. Josu Solano" sub="406" name="Chthonian Nightmare" />
+    <alt key="Illus. Andrew Theophilopoulos" sub="407" name="Consuming Corruption" />
+    <alt key="Illus. David Palumbo" sub="408" name="Flare of Malice" />
+    <alt key="Illus. David Astruga" sub="409" name="Grim Servant" />
+    <alt key="Illus. Steve Ellis" sub="410" name="Marionette Apprentice" />
+    <alt key="Illus. Robin Olausson" sub="411" name="Necrodominance" />
+    <alt key="Illus. Svetlin Velinov" sub="412" name="Toxic Deluge" />
+    <alt key="Illus. Craig J Spearing" sub="413" name="Victimize" />
+    <alt key="Illus. Pete Venters" sub="414" name="Warren Soultrader" />
+    <alt key="Illus. Michal Ivan" sub="415" name="Ashling, Flame Dancer" />
+    <alt key="Illus. Olivier Bernard" sub="416" name="Flare of Duplication" />
+    <alt key="Illus. Zoltan Boros" sub="417" name="Galvanic Discharge" />
+    <alt key="Illus. Leanna Crossan" sub="419" name="Party Thrasher" />
+    <alt key="Illus. Kevin Sidharta" sub="420" name="Skoa, Embermage" />
+    <alt key="Illus. Jose Parodi" sub="421" name="Unstable Amulet" />
+    <alt key="Illus. Drew Baker" sub="422" name="Wheel of Potential" />
+    <alt key="Illus. Zoltan Boros" sub="423" name="Eladamri, Korvecdal" />
+    <alt key="Illus. Marzena Nereida Piwowar" sub="424" name="Evolution Witness" />
+    <alt key="Illus. Billy Christian" sub="425" name="Flare of Cultivation" />
+    <alt key="Illus. Julia Metzger" sub="426" name="Lion Umbra" />
+    <alt key="Illus. Deruchenko Alexander" sub="427" name="Monstrous Vortex" />
+    <alt key="Illus. Rebecca Guay" sub="428" name="Priest of Titania" />
+    <alt key="Illus. Yeong-Hao Han" sub="429" name="Primal Prayers" />
+    <alt key="Illus. Andrew Mar" sub="430" name="Six" />
+    <alt key="Illus. Xavier Ribeiro" sub="431" name="Imskir Iron-Eater" />
+    <alt key="Illus. Ekaterina Burmak" sub="432" name="Kudo, King Among Bears" />
+    <alt key="Illus. Pete Venters" sub="433" name="Psychic Frog" />
+    <alt key="Illus. Fang Xinyu" sub="434" name="Rosheen, Roaring Prophet" />
+    <alt key="Illus. Bruce Brenneise" sub="435" name="Bloodstained Mire" />
+    <alt key="Illus. Alexander Forssberg" sub="436" name="Flooded Strand" />
+    <alt key="Illus. Yeong-Hao Han" sub="437" name="Nesting Grounds" />
+    <alt key="Illus. Chris Ostrowski" sub="438" name="Polluted Delta" />
+    <alt key="Illus. Alexander Forssberg" sub="440" name="Windswept Heath" />
+    <alt key="Illus. Chris Ostrowski" sub="441" name="Wooded Foothills" />-->
+    <!-- H2R -->
+    <!--<alt key="Illus. Ravenna Tran" sub="001" name="Abiding Grace" />
+    <alt key="Illus. Eric Deschamps" sub="002" name="Esper Sentinel" />
+    <alt key="Illus. Evan Shipard" sub="003" name="Solitude" />
+    <alt key="Illus. Iain McCaig" sub="004" name="Dress Down" />
+    <alt key="Illus. Yeong-Hao Han" sub="005" name="Hard Evidence" />
+    <alt key="Illus. Anastasia Ovchinnikova" sub="006" name="Subtlety" />
+    <alt key="Illus. Nicholas Gregory" sub="007" name="Grief" />
+    <alt key="Illus. Craig J Spearing" sub="008" name="Sling-Gang Lieutenant" />
+    <alt key="Illus. Martina Fackova" sub="009" name="Dragon's Rage Channeler" />
+    <alt key="Illus. Raoul Vitale" sub="010" name="Fury" />
+    <alt key="Illus. Simon Dominic" sub="011" name="Ragavan, Nimble Pilferer" />
+    <alt key="Illus. Volkan Baga" sub="012" name="Strike It Rich" />
+    <alt key="Illus. Kari Christensen" sub="013" name="Unholy Heat" />
+    <alt key="Illus. Anastasia Ovchinnikova" sub="014" name="Endurance" />
+    <alt key="Illus. Josu Hernaiz" sub="015" name="Tireless Provisioner" />
+    <alt key="Illus. Jesper Ejsing" sub="016" name="Munitions Expert" />-->
     
     <!-- ★PRMセット扱い -->
     <!-- ZNR variants -->
@@ -7681,6 +7941,9 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0011" sub="LCC" name="Ore-Rich Stalactite" />
     <alt key="0015" sub="LCC" name="Eye of Ojer Taq" />
     <alt key="0016" sub="LCC" name="Paleontologist's Pick-Axe" />
+    <alt key="0237" sub="MH3" name="Ajani, Nacatl Pariah" />
+    <alt key="0242" sub="MH3" name="Tamiyo, Inquisitive Student" />
+    <alt key="0251" sub="MH3" name="Grist, Voracious Larva" />
     <!-- 両面カード (片面だけ) -->
     <alt key="0023" sub="ORI" name="Kytheon, Hero of Akros" />
     <alt key="0060" sub="ORI" name="Jace, Vryn's Prodigy" />
@@ -7733,11 +7996,8 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0256" sub="LCI" name="Matzalantli, the Great Door" />
     <alt key="0267" sub="LCI" name="Treasure Map" />
     <alt key="0013" sub="LCC" name="The Golden-Gear Colossus" /> <!-- 第2面のみ -->
-    <!--<alt key="0237" sub="MH3" name="Ajani, Nacatl Pariah" />
-    <alt key="0242" sub="MH3" name="Tamiyo, Inquisitive Student" />
     <alt key="0245" sub="MH3" name="Sorin of House Markov" />
     <alt key="0247" sub="MH3" name="Ral, Monsoon Mage" />
-    <alt key="0251" sub="MH3" name="Grist, Voracious Larva" />-->
     <!-- 英雄譚 -->
     <alt key="0018" sub="DOM" name="Fall of the Thran" />
     <alt key="0021" sub="DOM" name="History of Benalia" />
@@ -7839,11 +8099,11 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0200" sub="WOE" name="The Apprentice's Folly" />
     <alt key="0272" sub="LCC" name="King Narfi's Betrayal" />
     <alt key="0197" sub="OTC" name="The Mending of Dominaria" />
-    <!--<alt key="0019" sub="MH3" name="Ajani Fells the Godsire" />
+    <alt key="0019" sub="MH3" name="Ajani Fells the Godsire" />
     <alt key="0072" sub="MH3" name="Tamiyo Meets the Story Circle" />
     <alt key="0086" sub="MH3" name="The Creation of Avacyn" />
     <alt key="0132" sub="MH3" name="Ral and the Implicit Maze" />
-    <alt key="0158" sub="MH3" name="The Hunger Tide Rises" />-->
+    <alt key="0158" sub="MH3" name="The Hunger Tide Rises" />
     <!-- 出来事 : SearchAltSubKey method の追記が必要 -->
     <alt key="0005" sub="ELD" name="Ardenvale Tactician" />
     <alt key="0011" sub="ELD" name="Faerie Guidemother" />
@@ -7968,7 +8228,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0231" sub="LCI" name="Kellan, Daring Traveler" />
     <alt key="0084" sub="LCC" name="Promise of Aclazotz" />
     <alt key="0212" sub="MKM" name="Kellan, Inquisitive Prodigy" />
-    <!--<alt key="0196" sub="MH3" name="Ondu Knotmaster" />-->
+    <alt key="0196" sub="MH3" name="Ondu Knotmaster" />
     <!-- 変容 (IKO, C20, DMC, MOC) -->
     <alt key="0003" sub="IKO" name="Mysterious Egg" />
     <alt key="0007" sub="IKO" name="Cubwarden" />
@@ -8082,7 +8342,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0159" sub="STX" name="Torrent Sculptor" />
     <alt key="0160" sub="STX" name="Uvilda, Dean of Perfection" />
     <alt key="0161" sub="STX" name="Valentin, Dean of the Vein" />
-    <!--<alt key="0238" sub="MH3" name="Razorgrass Ambush" />
+    <alt key="0238" sub="MH3" name="Razorgrass Ambush" />
     <alt key="0239" sub="MH3" name="Witch Enchanter" />
     <alt key="0240" sub="MH3" name="Hydroelectric Specimen" />
     <alt key="0241" sub="MH3" name="Sink into Stupor" />
@@ -8101,7 +8361,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0258" sub="MH3" name="Strength of the Harvest" />
     <alt key="0259" sub="MH3" name="Stump Stomp" />
     <alt key="0260" sub="MH3" name="Suppression Ray" />
-    <alt key="0261" sub="MH3" name="Waterlogged Teachings" />-->
+    <alt key="0261" sub="MH3" name="Waterlogged Teachings" />
     <!-- クラス (AFR, CLB) -->
     <alt key="0006" sub="AFR" name="Cleric Class" />
     <alt key="0029" sub="AFR" name="Paladin Class" />
@@ -8118,7 +8378,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0663" sub="CLB" name="Artificer Class" />
     <!-- 完成化 PW (NEO) -->
     <alt key="0238" sub="NEO" name="Tamiyo, Compleated Sage" />
-    <!-- 試作 (BRO) -->
+    <!-- 試作 (BRO, MH3) -->
     <alt key="0034" sub="BRO" name="Autonomous Assembler" />
     <alt key="0035" sub="Victor Harmatiuk" tri="BRO" name="Combat Thresher" />
     <alt key="0038" sub="BRO" name="Steel Seraph" />
@@ -8137,6 +8397,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0203" sub="BRO" name="Rootwire Amalgam" />
     <alt key="0204" sub="BRO" name="Rust Goliath" />
     <alt key="0292" sub="BRO" name="Woodcaller Automaton" />
+    <alt key="0120" sub="MH3" name="Frogmyr Enforcer" />
     <!-- 合体カード裏面 (BRO) -->
     <alt key="0163" sub="BRO" name="Mishra, Lost to Phyrexia" />
     <alt key="238b  /  287 " sub="BRO" name="Urza, Planeswalker" />

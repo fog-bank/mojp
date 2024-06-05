@@ -216,8 +216,12 @@ partial class MainViewModel
             }
 #endif
             // CacheRequest で TreeFilter を設定しても、イベントは発生するらしく、代わりに sender が null になっている模様
-            if (previewWnd is null || sender == null)
+            if (previewWnd is null)
                 return;
+            
+            // TODO: MH3 の旧枠実装変更
+            //if (sender == null)
+            //    return;
 
             // sender が null でなければ、non-empty な文字列が取得できるはずだが、キャッシュがこける場合もあり。
             // 加えて、e.NewValue と一致するとも限らない。
