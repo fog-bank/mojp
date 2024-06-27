@@ -46,6 +46,7 @@ partial class Card
 
                 // Ifh-Bíff Efreet
                 case 'í':
+                case 'ï':
                     sb.Append('i');
                     replaced = true;
                     break;
