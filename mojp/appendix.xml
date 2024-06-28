@@ -5,6 +5,263 @@
 このカードは禁止されている。</card>
     <card name="プロモ版のカード" ja="プロモ版のカード" type="" wiki="">（カード名を判別できないカード枠のため、日本語テキストを表示できません。）</card>
     
+    <!-- ACR -->
+    <card name="The Capitoline Triad" ja="カピトリヌスの三神" type="伝説のクリーチャー ― 神・工匠" pt="7/7">かつて来たりし者 ― この呪文を唱えるためのコストは、あなたの墓地にある歴史的なカード１枚につき(１)少なくなる。（歴史的とは、アーティファクトや伝説や英雄譚のことである。）
+あなたの墓地から望む枚数の歴史的なカードを、マナ総量の合計が３０以上になるように選んで追放する：あなたは「あなたがコントロールしている各クリーチャーの基本のパワーとタフネスは9/9である。」を持つ紋章を得る。</card>
+    
+    <card name="Caduceus, Staff of Hermes" ja="ヘルメスの杖、カドゥケウス" type="伝説のアーティファクト ― 装備品">装備しているクリーチャーは絆魂を持つ。
+あなたのライフ総量が３０点以上であるかぎり、装備しているクリーチャーは+5/+5の修整を受け、破壊不能と「このクリーチャーが受けるすべてのダメージを軽減する。」を持つ。
+装備(白)(白)</card>
+    <card name="Distract the Guards" ja="護衛の陽動" type="ソーサリー">フリーランニング(１)(白)（このターン、あなたが暗殺者や統率者によってプレイヤーに戦闘ダメージを与えていたなら、これをフリーランニング・コストで唱えてもよい。）
+白の1/1の人間・ならず者・クリーチャー・トークン３体を生成する。</card>
+    <card name="Fall of the First Civilization" ja="第一文明の崩壊" type="エンチャント ― 英雄譚">I ― 対戦相手１人を対象とする。あなたとそのプレイヤーはそれぞれカード２枚を引く。
+II ― 対戦相手がコントロールしているアーティファクト１つを対象とする。それを追放する。
+III ― 各プレイヤーはそれぞれ、自分がコントロールしていて土地でないパーマネント３つを選ぶ。土地でもそれらでもないすべてのパーマネントを破壊する。</card>
+    <card name="Haystack" ja="藁山" type="アーティファクト">(２),(Ｔ)：あなたがコントロールしているクリーチャー１体を対象とする。それはフェイズ・アウトする。（あなたの次のターンまで、それやそれについているすべてのものは存在しないかのように扱う。）</card>
+    <card name="Hookblade" ja="フックブレード" type="アーティファクト ― 装備品">フックブレードが戦場に出たとき、あなたがコントロールしているクリーチャー１体を対象とする。これをそれにつける。
+装備しているクリーチャーは+1/+0の修整を受ける。
+あなたのターンであるかぎり、装備しているクリーチャーは飛行を持つ。
+装備(２)</card>
+    <card name="Layla Hassan" ja="レイラ・ハサン" type="伝説のクリーチャー ― 人間・暗殺者" pt="3/4">先制攻撃
+レイラ・ハサンが戦場に出たとき、および、あなたがコントロールしている１体以上の暗殺者がプレイヤー１人に戦闘ダメージを与えるたび、あなたの墓地にある歴史的なカード１枚を対象とする。それをあなたの手札に戻す。</card>
+    <card name="Senu, Keen-Eyed Protector" ja="鋭い目の守護者、セヌ" type="伝説のクリーチャー ― 鳥・スカウト" pt="2/1">飛行、警戒
+(Ｔ),鋭い目の守護者、セヌを追放する：あなたは２点のライフを得て、占術２を行う。
+あなたがコントロールしている伝説のクリーチャー１体が攻撃してブロックされなかったとき、これが追放されている場合、これを攻撃している状態で戦場に出す。</card>
+    <card name="Tax Collector" ja="徴税官" type="クリーチャー ― 人間・アドバイザー" pt="2/2">徴税官が戦場に出たとき、以下から１つを選ぶ。
+・徴税 ― あなたの次のターンまで、対戦相手が呪文を唱えるためのコストは(１)多くなる。
+・逮捕 ― 対戦相手がコントロールしているクリーチャー１体を対象とする。それを留置する。（あなたの次のターンまで、そのクリーチャーでは攻撃もブロックもできず、それの起動型能力は起動できない。）</card>
+    <card name="Templar Knight" ja="テンプル騎士" type="クリーチャー ― 人間・騎士" pt="3/1">警戒
+(白),あなたがコントロールしていて《テンプル騎士》という名前でありアンタップ状態である攻撃クリーチャー５体をタップする：あなたのライブラリーから伝説のアーティファクト・カード１枚を探し、戦場に出す。その後、ライブラリーを切り直す。
+デッキに《テンプル騎士》という名前のカードを何枚入れてもよい。</card>
+    <card name="What Must Be Done" ja="やらねばならないこと" type="ソーサリー">以下から１つを選ぶ。
+・世界を燃やし尽くす ― すべてのアーティファクトとすべてのクリーチャーを破壊する。
+・ジュノーを解放する ― あなたの墓地にある歴史的なパーマネント・カード１枚を対象とする。それを戦場に戻す。それがクリーチャーなら、それは追加で+1/+1カウンター２個が置かれた状態で戦場に出る。（歴史的とは、アーティファクトや伝説や英雄譚のことである。）</card>
+    
+    <card name="Assassin Gauntlet" ja="アサシンの篭手" type="アーティファクト ― 装備品">アサシンの篭手が戦場に出たとき、あなたがコントロールしているクリーチャー最大１体と、対戦相手１人を対象とする。これをそのクリーチャーにつける。そのプレイヤーがコントロールしているすべてのクリーチャーをタップする。
+装備しているクリーチャーは+1/+1の修整を受け「このクリーチャーがプレイヤー１人に戦闘ダメージを与えるたび、あなたはカード１枚を引く。その後、カード１枚を捨てる。」を持つ。
+装備(２)</card>
+    <card name="Ballad of the Black Flag" ja="ブラックフラッグのバラッド" type="エンチャント ― 英雄譚">I,II,III ― カード３枚を切削する。あなたはその中から歴史的なカード１枚をあなたの手札に加えてもよい。（歴史的とは、アーティファクトや伝説や英雄譚のことである。）
+IV ― このターンにあなたが歴史的な呪文を唱えるためのコストは(２)少なくなる。</card>
+    <card name="Become Anonymous" ja="群衆紛れ" type="インスタント">あなたがオーナーでありトークンでないクリーチャー１体を対象とする。それと、あなたのライブラリーの一番上にあるカード２枚を裏向きの束にして追放し、その束を切り直す。その後、それらのカードを偽装する。それらはタップ状態で戦場に出る。（カードを偽装するとは、それを護法(２)を持つ2/2のクリーチャーとして裏向きで戦場に出すことである。それがクリーチャー・カードなら、そのマナ・コストで、いつでも表向きにしてよい。）</card>
+    <card name="Crystal Skull, Isu Spyglass" ja="イスの遠眼鏡、クリスタル・スカル" type="伝説のアーティファクト">あなたはいつでもあなたのライブラリーの一番上のカードを見てよい。
+あなたはあなたのライブラリーの一番上から歴史的な土地をプレイしたり歴史的な呪文を唱えたりしてもよい。（歴史的とは、アーティファクトや伝説や英雄譚のことである。）
+(Ｔ)：(青)を加える。</card>
+    <card name="Desynchronization" ja="シンクロ解除" type="インスタント">歴史的でも土地でもない各パーマネントをそれぞれオーナーの手札に戻す。（歴史的とは、アーティファクトや伝説や英雄譚のことである。）</card>
+    <card name="Eagle Vision" ja="タカの眼" type="ソーサリー">フリーランニング(１)(青)（このターン、あなたが暗殺者や統率者によってプレイヤーに戦闘ダメージを与えていたなら、これをフリーランニング・コストで唱えてもよい。）
+カード３枚を引く。</card>
+    <card name="Escape Detection" ja="隠密行動" type="インスタント">フリーランニング ― あなたがコントロールしている青のクリーチャー１体をオーナーの手札に戻す。（このターン、あなたが暗殺者や統率者によってプレイヤーに戦闘ダメージを与えていたなら、これをフリーランニング・コストで唱えてもよい。）
+クリーチャー１体を対象とする。それをオーナーの手札に戻す。
+カード１枚を引く。</card>
+    <card name="Evie Frye" ja="エヴィー・フライ" type="伝説のクリーチャー ― 人間・暗殺者" pt="2/1">《ジェイコブ・フライ》との共闘（このクリーチャーが戦場に出たとき、プレイヤー１人を対象とする。そのプレイヤーは「自分のライブラリーから《ジェイコブ・フライ》を自分の手札に加える。その後、ライブラリーを切り直す。」を選んでもよい。）
+(１),(Ｔ)：カード１枚を引く。その後、カード１枚を捨てる。これによりあなたがクリーチャー・カード１枚を捨てたとき、あなたがコントロールしているクリーチャー１体を対象とする。このターン、それはブロックされない。</card>
+    <card name="Leonardo da Vinci" ja="レオナルド・ダ・ヴィンチ" type="伝説のクリーチャー ― 人間・工匠" pt="3/3">(３)(青)(青)：ターン終了時まで、あなたがコントロールしている各飛行機械は基本のパワーとタフネスがX/Xになる。Ｘはあなたの手札にあるカードの枚数に等しい。
+(２)(青),(Ｔ)：カード１枚を引く。その後、カード１枚を捨てる。捨てられたカードがアーティファクト・カードなら、あなたの墓地からそれを追放する。そうしたなら、他のタイプに加えて0/2の飛行機械・アーティファクト・クリーチャーであり飛行を持つことを除き、それのコピーであるトークン１つを生成する。</card>
+    <card name="Loyal Inventor" ja="熱心な発明者" type="クリーチャー ― 人間・工匠" pt="2/3">警戒
+熱心な発明者が戦場に出たとき、あなたは「あなたのライブラリーからアーティファクト・カード１枚を探し、公開し、その後、ライブラリーを切り直す。」を選んでもよい。あなたが暗殺者をコントロールしているなら、そのカードをあなたの手札に加える。そうでないなら、そのカードをあなたのライブラリーの一番上に置く。</card>
+    
+    <card name="Assassin Initiate" ja="アサシンの新入り" type="クリーチャー ― 人間・暗殺者" pt="1/1">(１)：ターン終了時まで、アサシンの新入りは飛行や接死や絆魂のうち、あなたが選んだ能力１つを得る。</card>
+    <card name="Chain Assassination" ja="連続暗殺" type="インスタント">フリーランニング(１)(黒)（このターン、あなたが暗殺者や統率者によってプレイヤーに戦闘ダメージを与えていたなら、これをフリーランニング・コストで唱えてもよい。）
+クリーチャー１体を対象とする。それを破壊する。このターンにそれでないクリーチャーが死亡していたなら、カード１枚を引く。</card>
+    <card name="Desmond Miles" ja="デズモンド・マイルズ" type="伝説のクリーチャー ― 人間・暗殺者" pt="1/3">威迫
+デズモンド・マイルズは、あなたがコントロールしていてこれでない暗殺者やあなたの墓地にある暗殺者・カードである１つにつき+1/+0の修整を受ける。
+デズモンド・マイルズがプレイヤー１人に戦闘ダメージを与えるたび、諜報Ｘを行う。Ｘはこれがそのプレイヤーに与えたダメージの点数に等しい。</card>
+    <card name="Ezio Auditore da Firenze" ja="エツィオ・アウディトーレ・ダ・フィレンツェ" type="伝説のクリーチャー ― 人間・暗殺者" pt="3/2">威迫
+あなたが唱える暗殺者・呪文はフリーランニング(黒)(黒)を持つ。（あなたが暗殺者や統率者によってプレイヤーに戦闘ダメージを与えたターンの間、呪文をフリーランニング・コストで唱えてもよい。）
+これがプレイヤー１人に戦闘ダメージを与えるたび、そのプレイヤーのライフ総量が１０点以下なら、あなたは(白)(青)(黒)(赤)(緑)を支払ってもよい。そうしたとき、そのプレイヤーはゲームに敗北する。</card>
+    <card name="Hemlock Vial" ja="毒人参の薬瓶" type="アーティファクト">毒人参の薬瓶が戦場に出たとき、あなたはカード１枚を引き、１点のライフを失う。
+(黒),(Ｔ),毒人参の薬瓶を生け贄に捧げる：ターン終了時まで、あなたがコントロールしていて装備品か装備品がついているクリーチャーであるすべては接死を得る。</card>
+    <card name="Jacob Frye" ja="ジェイコブ・フライ" type="伝説のクリーチャー ― 人間・暗殺者" pt="3/2">《エヴィー・フライ》との共闘（このクリーチャーが戦場に出たとき、プレイヤー１人を対象とする。そのプレイヤーは「自分のライブラリーから《エヴィー・フライ》を自分の手札に加える。その後、ライブラリーを切り直す。」を選んでもよい。）
+あなたがコントロールしている１体以上の暗殺者がプレイヤー１人に戦闘ダメージを与えるたび、あなたの墓地にあり暗殺者・カードかフリーランニングを持つカードである最大１枚を対象とする。それを追放する。そうしたなら、それをコピーする。あなたはそのコピーを唱えてもよい。</card>
+    <card name="Petty Larceny" ja="失敬" type="ソーサリー">フリーランニング(１)(黒)（このターン、あなたが暗殺者や統率者によってプレイヤーに戦闘ダメージを与えていたなら、これをフリーランニング・コストで唱えてもよい。）
+対戦相手１人を対象とする。そのプレイヤーのライブラリーの一番上からカード２枚を見て、それらのカードを裏向きで追放する。それらのカードが追放され続けているかぎり、あなたはそれらをプレイしてもよく、それらを唱えるために任意のタイプのマナを支払ってもよい。宝物・トークン１つを生成する。</card>
+    <card name="Phantom Blade" ja="ファントムブレード" type="アーティファクト ― 装備品">ファントムブレードが戦場に出たとき、あなたがコントロールしているクリーチャー最大１体と、それでないクリーチャー最大１体を対象とする。これをその前者につける。その後者を破壊する。
+装備しているクリーチャーは+1/+1の修整を受け威迫を持つ。（それは２体以上のクリーチャーにしかブロックされない。）
+装備(２)</card>
+    <card name="Restart Sequence" ja="シークエンスのやり直し" type="ソーサリー">フリーランニング(１)(黒)（このターン、あなたが暗殺者や統率者によってプレイヤーに戦闘ダメージを与えていたなら、これをフリーランニング・コストで唱えてもよい。）
+あなたの墓地にあるクリーチャー・カード１枚を対象とする。それを戦場に戻す。</card>
+    <card name="The Revelations of Ezio" ja="エツィオの啓示" type="エンチャント ― 英雄譚">I ― 対戦相手がコントロールしているタップ状態のクリーチャー１体を対象とする。それを破壊する。
+II ― このターン、あなたがコントロールしている暗殺者１体が攻撃するたび、それの上に+1/+1カウンター１個を置く。
+III ― あなたの墓地にある暗殺者・クリーチャー・カード１枚を対象とする。それを追加の+1/+1カウンター１個が置かれた状態で戦場に戻す。</card>
+    <card name="Roshan, Hidden Magister" ja="隠れし者の師、ロシャン" type="伝説のクリーチャー ― 人間・暗殺者" pt="4/4">あなたがコントロールしていてこれでない各クリーチャーは、他のタイプに加えて暗殺者でもある。あなたがコントロールしているクリーチャー・呪文と、あなたがオーナーであり戦場にないクリーチャー・カードについても同様である。
+あなたがコントロールしている裏向きの各クリーチャーは威迫を持つ。
+あなたがコントロールしているパーマネント１つが表向きになるたび、あなたはカード１枚を引き、１点のライフを失う。</card>
+    
+    <card name="Alexios, Deimos of Kosmos" ja="コスモスの門徒、アレクシオス" type="伝説のクリーチャー ― 人間・狂戦士" pt="4/4">トランプル
+コスモスの門徒、アレクシオスは可能なら各戦闘で攻撃する。これは生け贄に捧げられず、これのオーナーを攻撃できない。
+各プレイヤーのアップキープの開始時に、そのプレイヤーはこれのコントロールを得て、これをアンタップし、これの上に+1/+1カウンター１個を置く。ターン終了時まで、これは速攻を得る。</card>
+    <card name="Hidden Footblade" ja="仕込みブレードブーツ" type="アーティファクト ― 装備品">瞬速
+仕込みブレードブーツが戦場に出たとき、あなたがコントロールしているクリーチャー１体を対象とする。これをそれにつける。ターン終了時まで、そのクリーチャーは先制攻撃を得る。
+装備しているクリーチャーは+1/+0の修整を受け速攻を持つ。
+装備(２)</card>
+    <card name="Monastery Raid" ja="修道院の襲撃" type="ソーサリー">フリーランニング(Ｘ)(赤)（このターン、あなたが暗殺者や統率者によってプレイヤーに戦闘ダメージを与えていたなら、これをフリーランニング・コストで唱えてもよい。）
+あなたのライブラリーの一番上からカード２枚を追放する。これのフリーランニング・コストが支払われていたなら、代わりにあなたのライブラリーの一番上からカードＸ枚を追放する。あなたの次のターンの終了時まで、あなたはそれらの追放されているカードをプレイしてもよい。</card>
+    <card name="Origin of the Hidden Ones" ja="隠れし者の起源" type="エンチャント ― 英雄譚">I ― １つを対象とする。隠れし者の起源はそれに４点のダメージを与える。
+II ― 威迫を持つ黒の1/1の暗殺者・クリーチャー・トークン２体を生成する。
+III ― このターン、あなたがコントロールしている暗殺者１体が攻撃するたび、威迫を持つ黒の1/1の暗殺者・クリーチャー・トークン１体をタップ状態かつ攻撃している状態で生成する。</card>
+    <card name="Overpowering Attack" ja="オーバーパワー攻撃" type="ソーサリー">フリーランニング(２)(赤)（このターン、あなたが暗殺者や統率者によってプレイヤーに戦闘ダメージを与えていたなら、これをフリーランニング・コストで唱えてもよい。）
+あなたがコントロールしていてこのターンに攻撃したすべてのクリーチャーをアンタップする。あなたのメイン・フェイズなら、このフェイズの後に追加の戦闘フェイズ１つと、それの後に追加のメイン・フェイズ１つを加える。</card>
+    <card name="The Spear of Leonidas" ja="レオニダスの槍" type="伝説のアーティファクト ― 装備品">装備しているクリーチャーが攻撃するたび、以下から１つを選ぶ。
+・突撃 ― ターン終了時まで、それは二段攻撃を得る。
+・召喚 ― 《フォボス》という名前の赤の3/2の伝説の馬・クリーチャー・トークン１体を生成する。
+・啓示 ― カード２枚を捨て、その後カード２枚を引く。
+装備(２)</card>
+    
+    <card name="The Aesir Escape Valhalla" ja="ヴァルハラ脱出の悪夢" type="エンチャント ― 英雄譚">I ― あなたの墓地からパーマネント・カード１枚を追放する。あなたはそれのマナ総量に等しい点数のライフを得る。
+II ― あなたがコントロールしているクリーチャー１体を対象とする。それの上にその追放されているカードのマナ総量に等しい個数の+1/+1カウンターを置く。
+III ― ヴァルハラ脱出の悪夢とその追放されているカードをオーナーの手札に戻す。</card>
+    <card name="Aveline de Grandpre" ja="アヴリーン・ドゥ・グランプレ" type="伝説のクリーチャー ― 人間・暗殺者" pt="3/3">接死
+あなたがコントロールしていて接死を持つクリーチャー１体がプレイヤー１人に戦闘ダメージを与えるたび、そのクリーチャーの上にその点数に等しい個数の+1/+1カウンターを置く。
+変装(黒)(緑)（このカードを、(３)で護法(２)を持つ2/2のクリーチャーとして裏向きで唱えてもよい。これの変装コストで、いつでもこれを表向きにしてよい。）</card>
+    <card name="Hunter's Bow" ja="狩人の弓" type="アーティファクト ― 装備品">狩人の弓が戦場に出たとき、あなたがコントロールしているクリーチャー１体と、あなたがコントロールしていないクリーチャー最大１体を対象とする。これをその前者につける。その前者はその後者に、その前者のパワーに等しい点数のダメージを与える。
+装備しているクリーチャーは到達と護法(２)を持つ。
+装備(１)</card>
+    <card name="Palazzo Archers" ja="宮殿の射手" type="クリーチャー ― 人間・射手" pt="2/3">到達
+飛行を持つクリーチャー１体があなたかあなたがコントロールしているプレインズウォーカーを攻撃するたび、宮殿の射手はそのクリーチャーにこれのパワーに等しい点数のダメージを与える。</card>
+    <card name="Viewpoint Synchronization" ja="ビューポイントのシンクロ" type="ソーサリー">フリーランニング(２)(緑)（このターン、あなたが暗殺者や統率者によってプレイヤーに戦闘ダメージを与えていたなら、これをフリーランニング・コストで唱えてもよい。）
+あなたのライブラリーから基本土地・カード最大３枚を探し、公開し、そのうち２枚をタップ状態で戦場に、残りをあなたの手札に加える。その後、ライブラリーを切り直す。</card>
+    
+    <card name="Adewale, Breaker of Chains" ja="鎖を断つ者、アドウェール" type="伝説のクリーチャー ― 人間・暗殺者・海賊" pt="4/1">これが戦場に出たとき、あなたのライブラリーの一番上からカード６枚を公開する。その中から暗殺者か海賊か機体であるカード１枚をあなたの手札に、残りをあなたのライブラリーの一番下に無作為の順番で置く。
+あなたがコントロールしている機体１つがプレイヤー１人に戦闘ダメージを与えるたび、あなたはあなたの墓地からこれをあなたの手札に戻してもよい。</card>
+    <card name="Altair Ibn-La'Ahad" ja="アルタイル・イブン・ラ・アハド" type="伝説のクリーチャー ― 人間・暗殺者" pt="3/3">先制攻撃
+アルタイル・イブン・ラ・アハドが攻撃するたび、あなたの墓地にある暗殺者・クリーチャー・カード最大１枚を対象とする。それを記憶カウンター１個が置かれた状態で追放する。その後、あなたがオーナーであり追放領域にあり記憶カウンターが置かれている各クリーチャー・カードにつきそれぞれ、それのコピーであるトークン１体をタップ状態かつ攻撃している状態で生成する。戦闘終了時に、それらのトークンを追放する。</card>
+    <card name="Arbaaz Mir" ja="アルバーズ・ミール" type="伝説のクリーチャー ― 人間・暗殺者" pt="2/2">アルバーズ・ミールか、トークンでもこれでもない歴史的なパーマネント１つがあなたのコントロール下で戦場に出るたび、アルバーズ・ミールは各対戦相手にそれぞれ１点のダメージを与え、あなたは１点のライフを得る。（歴史的とは、アーティファクトや伝説や英雄譚のことである。）</card>
+    <card name="Arno Dorian" ja="アルノ・ドリアン" type="伝説のクリーチャー ― 人間・暗殺者" pt="3/3">接死
+あなたがコントロールしていてこれでない各暗殺者は+2/+0の修整を受ける。
+変装(黒)(赤)（このカードを、(３)で護法(２)を持つ2/2のクリーチャーとして裏向きで唱えてもよい。変装コストで、いつでもこれを表向きにしてよい。）</card>
+    <card name="Aya of Alexandria" ja="アレクサンドリアのアヤ" type="伝説のクリーチャー ― 人間・暗殺者" pt="4/3">威迫、絆魂
+あなたがコントロールしている歴史的なクリーチャー１体がプレイヤー１人に戦闘ダメージを与えるたび、威迫を持つ黒の1/1の暗殺者・クリーチャー・トークン１体を生成する。（歴史的とは、アーティファクトや伝説や英雄譚のことである。）</card>
+    <card name="Basim Ibn Ishaq" ja="バシム・イブン・イスハーク" type="伝説のクリーチャー ― 人間・暗殺者" pt="2/2">あなたが歴史的な呪文を唱えるたび、カード１枚を引く。このターン、バシム・イブン・イスハークはブロックされない。この能力は、毎ターン１回のみ誘発する。（歴史的とは、アーティファクトや伝説や英雄譚のことである。）
+バシム・イブン・イスハークがプレイヤー１人に戦闘ダメージを与えるたび、これの上に+1/+1カウンター１個を置く。</card>
+    <card name="Bayek of Siwa" ja="シワのバエク" type="伝説のクリーチャー ― 人間・暗殺者" pt="3/4">二段攻撃
+あなたのターンであるかぎり、あなたがコントロールしていてこれでない歴史的な各クリーチャーは二段攻撃を持つ。
+変装(１)(赤)(白)（このカードを、(３)で護法(２)を持つ2/2のクリーチャーとして裏向きで唱えてもよい。これの変装コストで、いつでもこれを表向きにしてよい。）</card>
+    <card name="Bleeding Effect" ja="流入現象" type="エンチャント">あなたのターンの戦闘の開始時に、あなたの墓地にあるクリーチャー・カードが飛行を持っているなら、ターン終了時まで、あなたがコントロールしている各クリーチャーは飛行を得る。先制攻撃、二段攻撃、接死、呪禁、破壊不能、絆魂、威迫、到達、トランプル、警戒についても同様である。</card>
+    <card name="Cleopatra, Exiled Pharaoh" ja="追放されしファラオ、クレオパトラ" type="伝説のクリーチャー ― 人間・貴族" pt="2/4">同盟 ― あなたの終了ステップの開始時に、これでない伝説のクリーチャー最大２体を対象とする。それらの上にそれぞれ+1/+1カウンター１個を置く。
+裏切り ― カウンターが置かれている伝説のクリーチャー１体が死亡するたび、それの上にあるカウンター１個につきカード１枚を引く。あなたは２点のライフを失う。</card>
+    <card name="Edward Kenway" ja="エドワード・ケンウェイ" type="伝説のクリーチャー ― 人間・暗殺者・海賊" pt="5/5">あなたの終了ステップの開始時に、暗殺者や海賊や機体のうちあなたがコントロールしていてタップ状態である１つにつき宝物・トークン１つを生成する。
+あなたがコントロールしている機体１つがプレイヤー１人に戦闘ダメージを与えるたび、そのプレイヤーのライブラリーの一番上のカードを見て、裏向きに追放する。そのカードが追放され続けているかぎり、あなたはそれをプレイしてもよい。</card>
+    <card name="Eivor, Wolf-Kissed" ja="狼に祝福されし者、エイヴォル" type="伝説のクリーチャー ― 人間・暗殺者・戦士" pt="7/6">トランプル、速攻
+狼に祝福されし者、エイヴォルがプレイヤー１人に戦闘ダメージを与えるたび、あなたはその点数に等しい枚数のカードを切削する。あなたはその中から英雄譚・カード最大１枚と土地・カード最大１枚を戦場に出してもよい。</card>
+    <card name="Ezio, Brash Novice" ja="無作法の新米、エツィオ" type="伝説のクリーチャー ― 人間" pt="1/1">無作法の新米、エツィオが攻撃するたび、これの上に+1/+1カウンター１個を置く。
+これの上に２個以上のカウンターがあるかぎり、これは先制攻撃を持ち、他のタイプに加えて暗殺者でもある。</card>
+    <card name="Havi, the All-Father" ja="万物の父、ハーヴィ" type="伝説のクリーチャー ― 神・戦士" pt="6/6">あなたの墓地に４枚以上の歴史的なカードがあるかぎり、万物の父、ハーヴィは破壊不能を持つ。（歴史的とは、アーティファクトや伝説や英雄譚のことである。）
+賢者の計画 ― これか、あなたがコントロールしていてこれでない伝説のクリーチャー１体が死亡するたび、あなたの墓地にありマナ総量がそれより小さい伝説のクリーチャー・カード１枚を対象とする。それをタップ状態で戦場に出す。</card>
+    <card name="Haytham Kenway" ja="ヘイザム・ケンウェイ" type="伝説のクリーチャー ― 人間・騎士" pt="3/3">プロテクション（暗殺者）
+あなたがコントロールしていてこれでない各騎士は+2/+2の修整を受けプロテクション（暗殺者）を持つ。
+ヘイザム・ケンウェイが戦場に出たとき、各対戦相手につきそれぞれ、そのプレイヤーがコントロールしているクリーチャー最大１体を対象とする。ヘイザム・ケンウェイが戦場を離れるまで、それを追放する。</card>
+    <card name="Jackdaw" ja="ジャックドー号" type="伝説のアーティファクト ― 機体" pt="4/4">ジャックドー号がプレイヤー１人に戦闘ダメージを与えるたび、あなたはあなたの手札を捨ててもよい。そうしたなら、あなたがコントロールしているアーティファクト１つにつきカード１枚を引く。
+搭乗３</card>
+    <card name="Kassandra, Eagle Bearer" ja="鷹持ち、カサンドラ" type="伝説のクリーチャー ― 人間・暗殺者・戦士" pt="2/2">速攻
+これが戦場に出たとき、あなたの墓地や手札やライブラリーから《レオニダスの槍》という名前のカード１枚を探し、戦場に出す。その後、ライブラリーを切り直す。
+伝説の装備品がついていてあなたがコントロールしているクリーチャー１体がプレイヤー１人に戦闘ダメージを与えるたび、あなたはカード１枚を引く。</card>
+    <card name="Lydia Frye" ja="リディア・フライ" type="伝説のクリーチャー ― 人間・暗殺者" pt="3/2">リディア・フライは、パワーが３以上のクリーチャーにはブロックされない。
+あなたの終了ステップの開始時に、諜報Ｘを行う。Ｘはあなたがコントロールしているタップ状態の暗殺者の数に等しい。（あなたのライブラリーの一番上からカードＸ枚を見て、そのうちの望む枚数をあなたの墓地に、残りをあなたのライブラリーの一番上に望む順番で置く。）</card>
+    <card name="Mary Read and Anne Bonny" ja="メアリ・リードとアン・ボニー" type="伝説のクリーチャー ― 人間・暗殺者・海賊" pt="3/3">速攻
+(Ｔ)：カード１枚を引く。その後、カード１枚を捨てる。
+あなたが島か海賊か機体であるカード１枚を捨てるたび、宝物・トークン１つをタップ状態で生成する。</card>
+    <card name="Ratonhnhake꞉ton" ja="ラドンハゲードン" type="伝説のクリーチャー ― 人間・暗殺者" pt="3/3">ラドンハゲードンがまだダメージを与えたことがないかぎり、これは呪禁を持ちブロックされない。
+ラドンハゲードンがプレイヤー１人に戦闘ダメージを与えるたび、威迫を持つ黒の1/1の暗殺者・クリーチャー・トークン１体を生成する。そうしたとき、あなたの墓地にある装備品・カード１枚を対象とする。それを戦場に戻し、その後、そのトークンにつける。</card>
+    <card name="Shao Jun" ja="シャオ・ユン" type="伝説のクリーチャー ― 人間・暗殺者" pt="3/3">電光石火 ― あなたのターンであるかぎり、シャオ・ユンは飛行と先制攻撃を持つ。
+縄鏢 ― あなたがコントロールしているアンタップ状態のアーティファクト２つをタップする：シャオ・ユンは各対戦相手にそれぞれ１点のダメージを与える。</card>
+    <card name="Shaun &amp; Rebecca, Agents" ja="団員、ショーンとレベッカ" type="伝説のクリーチャー ― 人間・暗殺者・科学者" pt="4/4">警戒
+これが戦場に出たとき、あなたの墓地や手札やライブラリーから《アニムス》という名前のカード１枚を探し、戦場に出す。その後、ライブラリーを切り直す。
+(Ｔ)：(◇)を加える。そうしたとき、カード２枚を切削する。</card>
+    <card name="Shay Cormac" ja="シェイ・コーマック" type="伝説のクリーチャー ― 人間・騎士・ならず者" pt="1/1">(１)：ターン終了時まで、対戦相手がコントロールしている各パーマネントは呪禁と破壊不能とプロテクションと被覆と護法を失う。
+対戦相手がコントロールしているクリーチャー１体が、あなたがコントロールしていて呪文か能力である１つの対象になるたび、そのクリーチャーの上に賞金カウンター１個を置く。
+賞金カウンターが置かれているクリーチャー１体が死亡するたび、シェイ・コーマックの上に+1/+1カウンター２個を置く。</card>
+    <card name="Sigurd, Jarl of Ravensthorpe" ja="レイヴンズソープの伯爵、シグルド" type="伝説のクリーチャー ― 人間・戦士" pt="3/3">警戒、トランプル、絆魂
+誇示 ― (１)：あなたがコントロールしている英雄譚１つを対象とする。それの上に伝承カウンター１個を置くか、それの上から伝承カウンター１個を取り除く。（このターンにこのクリーチャーが攻撃していたときにのみ、毎ターン１回のみ起動できる。）
+あなたが、あなたがコントロールしている英雄譚の上に伝承カウンター１個を置くたび、これでないクリーチャー最大１体を対象とする。それの上に+1/+1カウンター１個を置く。</card>
+    <card name="Sokrates, Athenian Teacher" ja="アテナイの教師、ソクラテス" type="伝説のクリーチャー ― 人間・アドバイザー" pt="0/4">防衛
+アテナイの教師、ソクラテスがアンタップ状態であるかぎり、これは呪禁を持つ。
+ソクラテス的対話 ― (Ｔ)：クリーチャー１体を対象とする。ターン終了時まで、それは「このクリーチャーがプレイヤー１人に戦闘ダメージを与えるなら、そのダメージを軽減する。このクリーチャーのコントローラーとそのプレイヤーはそれぞれ、その点数の端数を切り捨てた半分に等しい枚数のカードを引く。」を得る。</card>
+    
+    <card name="Adrestia" ja="アドレスティア号" type="伝説のアーティファクト ― 機体" pt="4/3">島渡り（防御プレイヤーが島をコントロールしているかぎり、このクリーチャーはブロックされない。）
+アドレスティア号が攻撃するたび、このターンに暗殺者がこれに搭乗していた場合、カード１枚を引く。ターン終了時まで、アドレスティア号は他のタイプに加えて暗殺者になる。
+搭乗１</card>
+    <card name="The Animus" ja="アニムス" type="伝説のアーティファクト">あなたの終了ステップの開始時に、墓地にある伝説のクリーチャー・カード最大１枚を対象とする。それを記憶カウンター１個が置かれた状態で追放する。
+(Ｔ)：あなたがコントロールしている伝説のクリーチャー１体と、追放領域にあり記憶カウンターが置かれているクリーチャー・カード１枚を対象とする。あなたの次のターンまで、その前者はその後者のコピーになる。起動はソーサリーとしてのみ行う。</card>
+    <card name="Apple of Eden, Isu Relic" ja="イスの秘宝、エデンの林檎" type="伝説のアーティファクト">(Ｔ),４点のライフを支払う,これを生け贄に捧げる：対戦相手１人を対象とする。そのプレイヤーの手札を見て、それらのカードを裏向きで追放する。このターン、あなたはそれらのカードをプレイしてもよく、それらを唱えるために任意のタイプのマナを支払ってもよい。ターン終了時まで、これによりあなたが土地１つをプレイしたり呪文１つを唱えたりするたび、それのオーナーはカード１枚を引く。次の終了ステップの開始時に、それらの追放されているカードをオーナーの手札に戻す。起動はソーサリーとしてのみ行う。</card>
+    <card name="Brotherhood Regalia" ja="教団の正装" type="アーティファクト ― 装備品">装備しているクリーチャーは護法(２)を持ち、他のタイプに加えて暗殺者でもあり、ブロックされない。
+伝説のクリーチャーに装備(１)
+装備(３)</card>
+    <card name="Excalibur, Sword of Eden" ja="エデンの剣、エクスカリバー" type="伝説のアーティファクト ― 装備品">この呪文を唱えるためのコストは(Ｘ)少なくなる。Ｘはあなたがコントロールしている歴史的な各パーマネントのマナ総量の合計に等しい。（歴史的とは、アーティファクトや伝説や英雄譚のことである。）
+装備しているクリーチャーは+10/+0の修整を受け警戒を持つ。
+伝説のクリーチャーに装備(２)</card>
+    <card name="Hidden Blade" ja="アサシンブレード" type="アーティファクト ― 装備品">瞬速
+アサシンブレードが戦場に出たとき、あなたがコントロールしているクリーチャー１体を対象とする。これをそれにつける。そのクリーチャーが暗殺者なら、ターン終了時まで、それは接死を得る。
+装備しているクリーチャーは+1/+0の修整を受け先制攻撃を持つ。
+装備(２)</card>
+    <card name="Mjolnir, Storm Hammer" ja="嵐の鎚、ミョルニル" type="伝説のアーティファクト ― 装備品">これが戦場に出たとき、あなたがコントロールしている伝説のクリーチャー１体を対象とする。これをそれにつける。
+装備しているクリーチャーが攻撃するたび、防御プレイヤーがコントロールしているクリーチャー１体を対象とする。それをタップし、それの上に麻痺カウンター１個を置く。その後、これは各対戦相手にそれぞれ、そのプレイヤーがコントロールしているタップ状態のクリーチャーの数に等しい点数のダメージを与える。
+装備(４)</card>
+    <card name="Smoke Bomb" ja="煙玉" type="アーティファクト">瞬速
+すべてのクリーチャーは被覆を持つ。（それらは呪文や能力の対象にならない。）
+あなたのアップキープの開始時に、煙玉を生け贄に捧げる。そうしたとき、あなたがコントロールしているクリーチャー１体を対象とする。このターン、それはブロックされない。</card>
+    <card name="Staff of Eden, Vault's Key" ja="宝物庫の鍵、エデンの杖" type="伝説のアーティファクト">宝物庫の鍵、エデンの杖が戦場に出たとき、墓地にあり《宝物庫の鍵、エデンの杖》という名前でない伝説のパーマネント・カード１枚を対象とする。それをあなたのコントロール下で戦場に出す。
+(Ｔ)：あなたがコントロールしていてあなたがオーナーでないパーマネント１つにつきカード１枚を引く。</card>
+    <card name="Towering Viewpoint" ja="そびえ立つビューポイント" type="アーティファクト・クリーチャー ― 壁" pt="0/4">防衛、到達
+イーグルダイブ ― (３)：クリーチャー１体を対象とする。ターン終了時まで、それは飛行を得る。</card>
+    <card name="Yggdrasil, Rebirth Engine" ja="転生装置、ユグドラシル" type="伝説のアーティファクト">転生装置、ユグドラシルが戦場に出たとき、あなたの墓地からすべてのクリーチャー・カードを追放する。
+(Ｔ)：あなたのライブラリーの一番上からカード３枚を追放する。
+(４),(Ｔ)：これにより追放されているクリーチャー・カード１枚をあなたのコントロール下で戦場に出す。ターン終了時まで、それは速攻を得る。起動はソーサリーとしてのみ行う。</card>
+    
+    <card name="Abstergo Entertainment" ja="アブスターゴ・エンターテイメント社" type="伝説の土地">(Ｔ)：(◇)を加える。
+(１),(Ｔ)：好きな色１色のマナ１点を加える。
+(３),(Ｔ),アブスターゴ・エンターテイメント社を追放する：あなたの墓地にある歴史的なカード最大１枚を対象とする。それをあなたの手札に戻し、その後、すべての墓地を追放する。（歴史的とは、アーティファクトや伝説や英雄譚のことである。）</card>
+    <card name="Brotherhood Headquarters" ja="教団本部" type="土地">(Ｔ)：(◇)を加える。
+(Ｔ)：好きな色１色のマナ１点を加える。このマナは、暗殺者・呪文やフリーランニングを持つ呪文を唱えるため、または暗殺者が発生源である能力を起動するためにのみ使用できる。</card>
+    
+    <!-- ACR Starter Kit -->
+    <card name="Eivor, Battle-Ready" ja="Eivor, Battle-Ready" type="伝説のクリーチャー ― 人間・暗殺者・戦士" pt="5/5">警戒
+速攻
+これが攻撃するたび、これは各対戦相手にそれぞれ、あなたがコントロールしている装備品の数に等しい点数のダメージを与える。</card>
+    <card name="Ezio, Blade of Vengeance" ja="Ezio, Blade of Vengeance" type="伝説のクリーチャー ― 人間・暗殺者" pt="5/5">接死
+あなたがコントロールしている暗殺者１体がプレイヤー１人に戦闘ダメージを与えるたび、カード１枚を引く。</card>
+    <card name="Battlefield Improvisation" ja="戦場での即興" type="インスタント">クリーチャー１体を対象とする。ターン終了時まで、それは+2/+2の修整を受ける。そのクリーチャーが攻撃しているなら、あなたはあなたがコントロールしている望む数の装備品をそれにつけてもよい。</card>
+    <card name="Detained by Legionnaires" ja="Detained by Legionnaires" type="エンチャント ― オーラ">エンチャント（クリーチャー）
+エンチャントしているクリーチャーは攻撃もブロックもできない。</card>
+    <card name="Escarpment Fortress" ja="Escarpment Fortress" type="クリーチャー ― 壁" pt="3/5">防衛
+到達
+あなたがコントロールしているこれでない各クリーチャーは+1/+0の修整を受ける。
+あなたが２体以上のクリーチャーで攻撃するたび、カード１枚を引く。</card>
+    <card name="Keen-Eyed Raven" ja="Keen-Eyed Raven" type="クリーチャー ― 鳥" pt="2/2">飛行
+これが戦場に出たとき、あなたがコントロールしていてこれでないクリーチャー１体を対象とする。それの上に+1/+1カウンター１個を置く。</card>
+    <card name="Settlement Blacksmith" ja="Settlement Blacksmith" type="クリーチャー ― 人間・工匠" pt="3/3">これが戦場に出たとき、あなたが装備品をコントロールしている場合、カード１枚を引く。</card>
+    <card name="Assassin Den" ja="Assassin Den" type="クリーチャー ― 壁" pt="2/4">防衛
+(３)(青)：あなたがコントロールしているクリーチャー１体を対象とする。それの上に+1/+1カウンター１個を置く。このターン、それはブロックされない。起動はソーサリーとしてのみ行う。</card>
+    <card name="Brotherhood Spy" ja="教団のスパイ" type="クリーチャー ― 人間・暗殺者" pt="1/3">あなたのターンの戦闘の開始時に、あなたが伝説の暗殺者をコントロールしている場合、ターン終了時まで、これは+1/+0の修整を受け、このターン、これはブロックされない。</card>
+    <card name="Hookblade Veteran" ja="Hookblade Veteran" type="クリーチャー ― 人間・暗殺者" pt="1/2">あなたのターンであるかぎり、これは飛行を持つ。</card>
+    <card name="Tranquilize" ja="睡眠状態" type="ソーサリー">対戦相手がコントロールしているクリーチャー１体を対象とする。それをタップし、それの上に麻痺カウンター３個を置く。（麻痺カウンターが置かれているパーマネントがアンタップ状態になるなら、代わりにそれの上から麻痺カウンター１個を取り除く。）</card>
+    <card name="Brotherhood Ambushers" ja="Brotherhood Ambushers" type="クリーチャー ― 人間・暗殺者" pt="6/3">フリーランニング(３)(黒)（このターン、あなたが暗殺者や統率者によってプレイヤーに戦闘ダメージを与えていたなら、これをフリーランニング・コストで唱えてもよい。）</card>
+    <card name="Brotherhood Patriarch" ja="Brotherhood Patriarch" type="クリーチャー ― 人間・暗殺者" pt="4/1">これが死亡したとき、各対戦相手はそれぞれ２点のライフを失い、あなたは２点のライフを得る。</card>
+    <card name="Merciless Harlequin" ja="Merciless Harlequin" type="クリーチャー ― 人間・暗殺者" pt="2/1">フリーランニング(１)(黒)（このターン、あなたが暗殺者や統率者によってプレイヤーに戦闘ダメージを与えていたなら、これをフリーランニング・コストで唱えてもよい。）
+これが戦場に出たとき、あなたはカード１枚を引き、１点のライフを失う。</card>
+    <card name="Poison-Blade Mentor" ja="Poison-Blade Mentor" type="クリーチャー ― 人間・暗殺者" pt="2/1">接死
+これが攻撃するたび、あなたがコントロールしていてこれでない暗殺者１体を対象とする。ターン終了時まで、それは接死を得る。</card>
+    <card name="Headsplitter" ja="ヘッドスプリッター" type="アーティファクト ― 装備品">これが戦場に出たとき、威迫を持つ黒の1/1の暗殺者・クリーチャー・トークン１体を生成する。その後、これをそれにつける。
+装備しているクリーチャーは+1/+0の修整を受ける。
+装備(２)</card>
+    <card name="Labyrinth Adversary" ja="迷宮の敵対者" type="クリーチャー ― ミノタウルス" pt="4/3">トランプル
+あなたが攻撃するたび、あなたは(１)(赤)を支払ってもよい。そうしたとき、クリーチャー１体を対象とする。このターン、それではブロックできない。</card>
+    <card name="Misthios's Fury" ja="Misthios's Fury" type="インスタント">クリーチャー１体を対象とする。これはそれに３点のダメージを与える。あなたが装備品をコントロールしているなら、これはそのクリーチャーのコントローラーにも２点のダメージを与える。</card>
+    <card name="Spartan Veteran" ja="Spartan Veteran" type="クリーチャー ― 人間・兵士" pt="1/1">あなたのターンであるかぎり、これは先制攻撃を持つ。
+(２)：ターン終了時まで、これは+1/+0の修整を受ける。</card>
+    <card name="Surtr, Fiery Jotun" ja="Surtr, Fiery Jotun" type="伝説のクリーチャー ― 巨人・神・戦士" pt="5/5">トランプル
+あなたが歴史的な呪文を唱えるたび、１つを対象とする。これはそれに３点のダメージを与える。（歴史的とは、アーティファクトや伝説や英雄譚のことである。）</card>
+    <card name="Achilles Davenport" ja="Achilles Davenport" type="伝説のクリーチャー ― 人間・暗殺者" pt="3/3">フリーランニング(青)(黒)（このターン、あなたが暗殺者や統率者によってプレイヤーに戦闘ダメージを与えていたなら、これをフリーランニング・コストで唱えてもよい。）
+威迫（このクリーチャーは２体以上のクリーチャーにしかブロックされない。）
+あなたがコントロールしていてこれでない各暗殺者は+1/+1の修整を受ける。</card>
+    <card name="Auditore Ambush" ja="Auditore Ambush" type="ソーサリー">以下から１つまたは両方を選ぶ。
+・クリーチャー１体を対象とする。それをオーナーの手札に戻す。
+・プレイヤー１人を対象とする。そのプレイヤーは自分のライブラリーや自分の墓地から《Ezio, Blade of Vengeance》という名前のカード１枚を探し、公開し、自分の手札に加える。これにより自分のライブラリーからカードを探したなら、そのプレイヤーはライブラリーを切り直す。</card>
+    <card name="Bureau Headmaster" ja="教団支部の主席" type="クリーチャー ― 人間・暗殺者" pt="2/2">あなたが装備品・呪文を唱えるためのコストは(１)少なくなる。
+あなたが装備能力を起動するためのコストは(１)少なくなる。</card>
+    <card name="Raven Clan War-Axe" ja="Raven Clan War-Axe" type="アーティファクト ― 装備品">これが戦場に出たとき、あなたは「あなたのライブラリーやあなたの墓地から《Eivor, Battle-Ready》という名前のカード１枚を探し、公開し、あなたの手札に加える。」を選んでもよい。これによりあなたのライブラリーからカードを探したなら、ライブラリーを切り直す。
+装備しているクリーチャーは+2/+0の修整を受けトランプルを持つ。
+装備(２)</card>
+    <card name="Rooftop Bypass" ja="Rooftop Bypass" type="エンチャント">あなたがコントロールしていてトークンでない１体以上のクリーチャーがプレイヤー１人に戦闘ダメージを与えるたび、威迫を持つ黒の1/1の暗殺者・クリーチャー・トークン１体を生成する。（それは２体以上のクリーチャーにしかブロックされない。）</card>
+    
     <!-- 一時消失 -->
     <card name="Petty Theft" ja="些細な盗み" type="インスタント ― 出来事" rel="Brazen Borrower">対戦相手がコントロールしていて土地でないパーマネント１つを対象とし、それをオーナーの手札に戻す。</card>
     <card name="Ulalek, Fused Atrocity" ja="合体した非道、ウラレック" type="伝説のクリーチャー ― エルドラージ" pt="2/5">欠色（このカードは無色である。）
@@ -1197,6 +1454,8 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <pt name="Bespoke Battlewagon" pt="5/6" />
     <pt name="Dreadmobile" pt="3/3" />
     <pt name="Filigree Racer" pt="5/5" />
+    <pt name="Jackdaw" pt="4/4" />
+    <pt name="Adrestia" pt="4/3" />
     <!-- バトル (MOM) -->
     <pt name="Invasion of Ravnica" pt="4" />
     <pt name="Invasion of Belenon" pt="5" />
@@ -6899,7 +7158,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0079" sub="OTP" name="Grindstone" />
     <alt key="0080" sub="OTP" name="Mindslaver" />
     <!-- Modern Horizons 3 Special Guests -->
-    <!--<alt key="0039" sub="MH3 Special Guest" name="Thought-Knot Seer" />
+    <alt key="0039" sub="MH3 Special Guest" name="Thought-Knot Seer" />
     <alt key="0040" sub="MH3 Special Guest" name="Prismatic Ending" />
     <alt key="0041" sub="MH3 Special Guest" name="Dismember" />
     <alt key="0042" sub="MH3 Special Guest" name="Persist" />
@@ -6913,7 +7172,315 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0050" sub="MH3 Special Guest" name="Subtlety" />
     <alt key="0051" sub="MH3 Special Guest" name="Grief" />
     <alt key="0052" sub="MH3 Special Guest" name="Fury" />
-    <alt key="0053" sub="MH3 Special Guest" name="Endurance" />-->
+    <alt key="0053" sub="MH3 Special Guest" name="Endurance" />
+    <!-- ACR -->
+    <alt key="0001" sub="ACR" name="The Capitoline Triad" />
+    <alt key="0002" sub="ACR" name="Caduceus, Staff of Hermes" />
+    <alt key="0003" sub="ACR" name="Distract the Guards" />
+    <alt key="0004" sub="ACR" name="Fall of the First Civilization" />
+    <alt key="0005" sub="ACR" name="Haystack" />
+    <alt key="0006" sub="ACR" name="Hookblade" />
+    <alt key="0007" sub="ACR" name="Layla Hassan" />
+    <alt key="0008" sub="ACR" name="Senu, Keen-Eyed Protector" />
+    <alt key="0009" sub="ACR" name="Tax Collector" />
+    <alt key="0010" sub="ACR" name="Templar Knight" />
+    <alt key="0011" sub="ACR" name="What Must Be Done" />
+    <alt key="0012" sub="ACR" name="Assassin Gauntlet" />
+    <alt key="0013" sub="ACR" name="Ballad of the Black Flag" />
+    <alt key="0014" sub="ACR" name="Become Anonymous" />
+    <alt key="0015" sub="ACR" name="Crystal Skull, Isu Spyglass" />
+    <alt key="0016" sub="ACR" name="Desynchronization" />
+    <alt key="0017" sub="ACR" name="Eagle Vision" />
+    <alt key="0018" sub="ACR" name="Escape Detection" />
+    <alt key="0019" sub="ACR" name="Evie Frye" />
+    <alt key="0020" sub="ACR" name="Leonardo da Vinci" />
+    <alt key="0021" sub="ACR" name="Loyal Inventor" />
+    <alt key="0022" sub="ACR" name="Assassin Initiate" />
+    <alt key="0023" sub="ACR" name="Chain Assassination" />
+    <alt key="0024" sub="ACR" name="Desmond Miles" />
+    <alt key="0025" sub="ACR" name="Ezio Auditore da Firenze" />
+    <alt key="0026" sub="ACR" name="Hemlock Vial" />
+    <alt key="0027" sub="ACR" name="Jacob Frye" />
+    <alt key="0028" sub="ACR" name="Petty Larceny" />
+    <alt key="0029" sub="ACR" name="Phantom Blade" />
+    <alt key="0030" sub="ACR" name="Restart Sequence" />
+    <alt key="0031" sub="ACR" name="The Revelations of Ezio" />
+    <alt key="0032" sub="ACR" name="Roshan, Hidden Magister" />
+    <alt key="0033" sub="ACR" name="Alexios, Deimos of Kosmos" />
+    <alt key="0034" sub="ACR" name="Hidden Footblade" />
+    <alt key="0035" sub="ACR" name="Monastery Raid" />
+    <alt key="0036" sub="ACR" name="Origin of the Hidden Ones" />
+    <alt key="0037" sub="ACR" name="Overpowering Attack" />
+    <alt key="0038" sub="ACR" name="The Spear of Leonidas" />
+    <alt key="0039" sub="ACR" name="The Aesir Escape Valhalla" />
+    <alt key="0040" sub="ACR" name="Aveline de Grandpre" />
+    <alt key="0041" sub="ACR" name="Hunter's Bow" />
+    <alt key="0042" sub="ACR" name="Palazzo Archers" />
+    <alt key="0043" sub="ACR" name="Viewpoint Synchronization" />
+    <alt key="0044" sub="ACR" name="Adewale, Breaker of Chains" />
+    <alt key="0045" sub="ACR" name="Altair Ibn-La'Ahad" />
+    <alt key="0046" sub="ACR" name="Arbaaz Mir" />
+    <alt key="0047" sub="ACR" name="Arno Dorian" />
+    <alt key="0048" sub="ACR" name="Aya of Alexandria" />
+    <alt key="0049" sub="ACR" name="Basim Ibn Ishaq" />
+    <alt key="0050" sub="ACR" name="Bayek of Siwa" />
+    <alt key="0051" sub="ACR" name="Bleeding Effect" />
+    <alt key="0052" sub="ACR" name="Cleopatra, Exiled Pharaoh" />
+    <alt key="0053" sub="ACR" name="Edward Kenway" />
+    <alt key="0054" sub="ACR" name="Eivor, Wolf-Kissed" />
+    <alt key="0055" sub="ACR" name="Ezio, Brash Novice" />
+    <alt key="0056" sub="ACR" name="Havi, the All-Father" />
+    <alt key="0057" sub="ACR" name="Haytham Kenway" />
+    <alt key="0058" sub="ACR" name="Jackdaw" />
+    <alt key="0059" sub="ACR" name="Kassandra, Eagle Bearer" />
+    <alt key="0060" sub="ACR" name="Lydia Frye" />
+    <alt key="0061" sub="ACR" name="Mary Read and Anne Bonny" />
+    <alt key="0062" sub="ACR" name="Ratonhnhake꞉ton" />
+    <alt key="0063" sub="ACR" name="Shao Jun" />
+    <alt key="0064" sub="ACR" name="Shaun &amp; Rebecca, Agents" />
+    <alt key="0065" sub="ACR" name="Shay Cormac" />
+    <alt key="0066" sub="ACR" name="Sigurd, Jarl of Ravensthorpe" />
+    <alt key="0067" sub="ACR" name="Sokrates, Athenian Teacher" />
+    <alt key="0068" sub="ACR" name="Adrestia" />
+    <alt key="0069" sub="ACR" name="The Animus" />
+    <alt key="0070" sub="ACR" name="Apple of Eden, Isu Relic" />
+    <alt key="0071" sub="ACR" name="Brotherhood Regalia" />
+    <alt key="0072" sub="ACR" name="Excalibur, Sword of Eden" />
+    <alt key="0073" sub="ACR" name="Hidden Blade" />
+    <alt key="0074" sub="ACR" name="Mjolnir, Storm Hammer" />
+    <alt key="0075" sub="ACR" name="Smoke Bomb" />
+    <alt key="0076" sub="ACR" name="Staff of Eden, Vault's Key" />
+    <alt key="0077" sub="ACR" name="Towering Viewpoint" />
+    <alt key="0078" sub="ACR" name="Yggdrasil, Rebirth Engine" />
+    <alt key="0079" sub="ACR" name="Abstergo Entertainment" />
+    <alt key="0080" sub="ACR" name="Brotherhood Headquarters" />
+    <alt key="0081" sub="ACR" name="Path to Exile" />
+    <alt key="0082" sub="ACR" name="Reconnaissance" />
+    <alt key="0083" sub="ACR" name="Rest in Peace" />
+    <alt key="0084" sub="ACR" name="Coastal Piracy" />
+    <alt key="0085" sub="ACR" name="Propaganda" />
+    <alt key="0086" sub="ACR" name="Temporal Trespass" />
+    <alt key="0087" sub="ACR" name="Black Market Connections" />
+    <alt key="0088" sub="ACR" name="Conspiracy" />
+    <alt key="0089" sub="ACR" name="Cover of Darkness" />
+    <alt key="0090" sub="ACR" name="Fatal Push" />
+    <alt key="0091" sub="ACR" name="Go for the Throat" />
+    <alt key="0092" sub="ACR" name="Murder" />
+    <alt key="0093" sub="ACR" name="Royal Assassin" />
+    <alt key="0094" sub="ACR" name="Cathartic Reunion" />
+    <alt key="0095" sub="ACR" name="Assassin's Trophy" />
+    <alt key="0096" sub="ACR" name="Mortify" />
+    <alt key="0097" sub="ACR" name="Reconstruct History" />
+    <alt key="0098" sub="ACR" name="Terminate" />
+    <alt key="0099" sub="ACR" name="Sword of Feast and Famine" />
+    <alt key="0100" sub="ACR" name="Sword of Light and Shadow" />
+    <alt key="0101" sub="ACR" name="Plains" />
+    <alt key="0102" sub="ACR" name="Plains" />
+    <alt key="0103" sub="ACR" name="Island" />
+    <alt key="0104" sub="ACR" name="Island" />
+    <alt key="0105" sub="ACR" name="Swamp" />
+    <alt key="0106" sub="ACR" name="Swamp" />
+    <alt key="0107" sub="ACR" name="Mountain" />
+    <alt key="0108" sub="ACR" name="Mountain" />
+    <alt key="0109" sub="ACR" name="Forest" />
+    <alt key="0110" sub="ACR" name="Forest" />
+    <alt key="0111" sub="ACR" name="Sunbaked Canyon" />
+    <alt key="0112" sub="ACR" name="Fiery Islet" />
+    <alt key="0113" sub="ACR" name="Ezio Auditore da Firenze" />
+    <alt key="0114" sub="ACR" name="Nurturing Peatland" />
+    <alt key="0115" sub="ACR" name="Silent Clearing" />
+    <alt key="0116" sub="ACR" name="Waterlogged Grove" />
+    <alt key="0117" sub="ACR" name="The Capitoline Triad" />
+    <alt key="0118" sub="ACR" name="Leonardo da Vinci" />
+    <alt key="0119" sub="ACR" name="Cleopatra, Exiled Pharaoh" />
+    <alt key="0120" sub="ACR" name="Mary Read and Anne Bonny" />
+    <alt key="0121" sub="ACR" name="Sokrates, Athenian Teacher" />
+    <alt key="0122" sub="ACR" name="Apple of Eden, Isu Relic" />
+    <alt key="0123" sub="ACR" name="Staff of Eden, Vault's Key" />
+    <alt key="0124" sub="ACR" name="Sword of Feast and Famine" />
+    <alt key="0125" sub="ACR" name="Sword of Light and Shadow" />
+    <alt key="0126" sub="ACR" name="Yggdrasil, Rebirth Engine" />
+    <alt key="0127" sub="ACR" name="Layla Hassan" />
+    <alt key="0128" sub="ACR" name="Senu, Keen-Eyed Protector" />
+    <alt key="0129" sub="ACR" name="Evie Frye" />
+    <alt key="0130" sub="ACR" name="Desmond Miles" />
+    <alt key="0131" sub="ACR" name="Ezio Auditore da Firenze" />
+    <alt key="0132" sub="ACR" name="Jacob Frye" />
+    <alt key="0133" sub="ACR" name="Roshan, Hidden Magister" />
+    <alt key="0134" sub="ACR" name="Alexios, Deimos of Kosmos" />
+    <alt key="0135" sub="ACR" name="Aveline de Grandpre" />
+    <alt key="0136" sub="ACR" name="Adewale, Breaker of Chains" />
+    <alt key="0137" sub="ACR" name="Altair Ibn-La'Ahad" />
+    <alt key="0138" sub="ACR" name="Arbaaz Mir" />
+    <alt key="0139" sub="ACR" name="Arno Dorian" />
+    <alt key="0140" sub="ACR" name="Aya of Alexandria" />
+    <alt key="0141" sub="ACR" name="Basim Ibn Ishaq" />
+    <alt key="0142" sub="ACR" name="Bayek of Siwa" />
+    <alt key="0143" sub="ACR" name="Edward Kenway" />
+    <alt key="0144" sub="ACR" name="Eivor, Wolf-Kissed" />
+    <alt key="0145" sub="ACR" name="Ezio, Brash Novice" />
+    <alt key="0146" sub="ACR" name="Havi, the All-Father" />
+    <alt key="0147" sub="ACR" name="Haytham Kenway" />
+    <alt key="0148" sub="ACR" name="Kassandra, Eagle Bearer" />
+    <alt key="0149" sub="ACR" name="Lydia Frye" />
+    <alt key="0150" sub="ACR" name="Ratonhnhake꞉ton" />
+    <alt key="0151" sub="ACR" name="Shao Jun" />
+    <alt key="0152" sub="ACR" name="Shaun &amp; Rebecca, Agents" />
+    <alt key="0153" sub="ACR" name="Shay Cormac" />
+    <alt key="0154" sub="ACR" name="Sigurd, Jarl of Ravensthorpe" />
+    <alt key="0155" sub="ACR" name="Caduceus, Staff of Hermes" />
+    <alt key="0156" sub="ACR" name="Rest in Peace" />
+    <alt key="0157" sub="ACR" name="What Must Be Done" />
+    <alt key="0158" sub="ACR" name="Crystal Skull, Isu Spyglass" />
+    <alt key="0159" sub="ACR" name="Desynchronization" />
+    <alt key="0160" sub="ACR" name="Temporal Trespass" />
+    <alt key="0161" sub="ACR" name="Black Market Connections" />
+    <alt key="0162" sub="ACR" name="Conspiracy" />
+    <alt key="0163" sub="ACR" name="Cover of Darkness" />
+    <alt key="0164" sub="ACR" name="Royal Assassin" />
+    <alt key="0165" sub="ACR" name="The Spear of Leonidas" />
+    <alt key="0166" sub="ACR" name="Assassin's Trophy" />
+    <alt key="0167" sub="ACR" name="Jackdaw" />
+    <alt key="0168" sub="ACR" name="The Animus" />
+    <alt key="0169" sub="ACR" name="Excalibur, Sword of Eden" />
+    <alt key="0170" sub="ACR" name="Mjolnir, Storm Hammer" />
+    <alt key="0171" sub="ACR" name="Abstergo Entertainment" />
+    <alt key="0172" sub="ACR" name="The Capitoline Triad" />
+    <alt key="0173" sub="ACR" name="Caduceus, Staff of Hermes" />
+    <alt key="0174" sub="ACR" name="Distract the Guards" />
+    <alt key="0175" sub="ACR" name="Haystack" />
+    <alt key="0176" sub="ACR" name="Hookblade" />
+    <alt key="0177" sub="ACR" name="Layla Hassan" />
+    <alt key="0178" sub="ACR" name="Path to Exile" />
+    <alt key="0179" sub="ACR" name="Reconnaissance" />
+    <alt key="0180" sub="ACR" name="Rest in Peace" />
+    <alt key="0181" sub="ACR" name="Senu, Keen-Eyed Protector" />
+    <alt key="0182" sub="ACR" name="Tax Collector" />
+    <alt key="0183" sub="ACR" name="Templar Knight" />
+    <alt key="0184" sub="ACR" name="What Must Be Done" />
+    <alt key="0185" sub="ACR" name="Assassin Gauntlet" />
+    <alt key="0186" sub="ACR" name="Become Anonymous" />
+    <alt key="0187" sub="ACR" name="Coastal Piracy" />
+    <alt key="0188" sub="ACR" name="Crystal Skull, Isu Spyglass" />
+    <alt key="0189" sub="ACR" name="Desynchronization" />
+    <alt key="0190" sub="ACR" name="Eagle Vision" />
+    <alt key="0191" sub="ACR" name="Escape Detection" />
+    <alt key="0192" sub="ACR" name="Evie Frye" />
+    <alt key="0193" sub="ACR" name="Leonardo da Vinci" />
+    <alt key="0194" sub="ACR" name="Loyal Inventor" />
+    <alt key="0195" sub="ACR" name="Propaganda" />
+    <alt key="0196" sub="ACR" name="Temporal Trespass" />
+    <alt key="0197" sub="ACR" name="Assassin Initiate" />
+    <alt key="0198" sub="ACR" name="Black Market Connections" />
+    <alt key="0199" sub="ACR" name="Chain Assassination" />
+    <alt key="0200" sub="ACR" name="Conspiracy" />
+    <alt key="0201" sub="ACR" name="Cover of Darkness" />
+    <alt key="0202" sub="ACR" name="Desmond Miles" />
+    <alt key="0203" sub="ACR" name="Ezio Auditore da Firenze" />
+    <alt key="0204" sub="ACR" name="Fatal Push" />
+    <alt key="0205" sub="ACR" name="Go for the Throat" />
+    <alt key="0206" sub="ACR" name="Hemlock Vial" />
+    <alt key="0207" sub="ACR" name="Jacob Frye" />
+    <alt key="0208" sub="ACR" name="Murder" />
+    <alt key="0209" sub="ACR" name="Petty Larceny" />
+    <alt key="0210" sub="ACR" name="Phantom Blade" />
+    <alt key="0211" sub="ACR" name="Restart Sequence" />
+    <alt key="0212" sub="ACR" name="Roshan, Hidden Magister" />
+    <alt key="0213" sub="ACR" name="Royal Assassin" />
+    <alt key="0214" sub="ACR" name="Alexios, Deimos of Kosmos" />
+    <alt key="0215" sub="ACR" name="Cathartic Reunion" />
+    <alt key="0216" sub="ACR" name="Hidden Footblade" />
+    <alt key="0217" sub="ACR" name="Monastery Raid" />
+    <alt key="0218" sub="ACR" name="Overpowering Attack" />
+    <alt key="0219" sub="ACR" name="The Spear of Leonidas" />
+    <alt key="0220" sub="ACR" name="Aveline de Grandpre" />
+    <alt key="0221" sub="ACR" name="Hunter's Bow" />
+    <alt key="0222" sub="ACR" name="Palazzo Archers" />
+    <alt key="0223" sub="ACR" name="Viewpoint Synchronization" />
+    <alt key="0224" sub="ACR" name="Adewale, Breaker of Chains" />
+    <alt key="0225" sub="ACR" name="Altair Ibn-La'Ahad" />
+    <alt key="0226" sub="ACR" name="Arbaaz Mir" />
+    <alt key="0227" sub="ACR" name="Arno Dorian" />
+    <alt key="0228" sub="ACR" name="Assassin's Trophy" />
+    <alt key="0229" sub="ACR" name="Aya of Alexandria" />
+    <alt key="0230" sub="ACR" name="Basim Ibn Ishaq" />
+    <alt key="0231" sub="ACR" name="Bayek of Siwa" />
+    <alt key="0232" sub="ACR" name="Bleeding Effect" />
+    <alt key="0233" sub="ACR" name="Cleopatra, Exiled Pharaoh" />
+    <alt key="0234" sub="ACR" name="Edward Kenway" />
+    <alt key="0235" sub="ACR" name="Eivor, Wolf-Kissed" />
+    <alt key="0236" sub="ACR" name="Ezio, Brash Novice" />
+    <alt key="0237" sub="ACR" name="Havi, the All-Father" />
+    <alt key="0238" sub="ACR" name="Haytham Kenway" />
+    <alt key="0239" sub="ACR" name="Jackdaw" />
+    <alt key="0240" sub="ACR" name="Kassandra, Eagle Bearer" />
+    <alt key="0241" sub="ACR" name="Lydia Frye" />
+    <alt key="0242" sub="ACR" name="Mary Read and Anne Bonny" />
+    <alt key="0243" sub="ACR" name="Mortify" />
+    <alt key="0244" sub="ACR" name="Ratonhnhake꞉ton" />
+    <alt key="0245" sub="ACR" name="Reconstruct History" />
+    <alt key="0246" sub="ACR" name="Shao Jun" />
+    <alt key="0247" sub="ACR" name="Shaun &amp; Rebecca, Agents" />
+    <alt key="0248" sub="ACR" name="Shay Cormac" />
+    <alt key="0249" sub="ACR" name="Sigurd, Jarl of Ravensthorpe" />
+    <alt key="0250" sub="ACR" name="Sokrates, Athenian Teacher" />
+    <alt key="0251" sub="ACR" name="Terminate" />
+    <alt key="0252" sub="ACR" name="Adrestia" />
+    <alt key="0253" sub="ACR" name="The Animus" />
+    <alt key="0254" sub="ACR" name="Apple of Eden, Isu Relic" />
+    <alt key="0255" sub="ACR" name="Brotherhood Regalia" />
+    <alt key="0256" sub="ACR" name="Excalibur, Sword of Eden" />
+    <alt key="0257" sub="ACR" name="Hidden Blade" />
+    <alt key="0258" sub="ACR" name="Mjolnir, Storm Hammer" />
+    <alt key="0259" sub="ACR" name="Smoke Bomb" />
+    <alt key="0260" sub="ACR" name="Staff of Eden, Vault's Key" />
+    <alt key="0261" sub="ACR" name="Sword of Feast and Famine" />
+    <alt key="0262" sub="ACR" name="Sword of Light and Shadow" />
+    <alt key="0263" sub="ACR" name="Towering Viewpoint" />
+    <alt key="0264" sub="ACR" name="Yggdrasil, Rebirth Engine" />
+    <alt key="0265" sub="ACR" name="Abstergo Entertainment" />
+    <alt key="0266" sub="ACR" name="Brotherhood Headquarters" />
+    <alt key="0267" sub="ACR" name="Ezio Auditore da Firenze" />
+    <alt key="0268" sub="ACR" name="Altair Ibn-La'Ahad" />
+    <alt key="0269" sub="ACR" name="Edward Kenway" />
+    <alt key="0270" sub="ACR" name="Eivor, Wolf-Kissed" />
+    <alt key="0271" sub="ACR" name="Kassandra, Eagle Bearer" />
+    <alt key="0272" sub="ACR" name="Cleopatra, Exiled Pharaoh" />
+    <alt key="0273" sub="ACR" name="Sokrates, Athenian Teacher" />
+    <alt key="0274" sub="ACR" name="Eivor, Battle-Ready" />
+    <alt key="0275" sub="ACR" name="Ezio, Blade of Vengeance" />
+    <alt key="0276" sub="ACR" name="Battlefield Improvisation" />
+    <alt key="0277" sub="ACR" name="Detained by Legionnaires" />
+    <alt key="0278" sub="ACR" name="Escarpment Fortress" />
+    <alt key="0279" sub="ACR" name="Keen-Eyed Raven" />
+    <alt key="0280" sub="ACR" name="Settlement Blacksmith" />
+    <alt key="0281" sub="ACR" name="Assassin Den" />
+    <alt key="0282" sub="ACR" name="Brotherhood Spy" />
+    <alt key="0283" sub="ACR" name="Hookblade Veteran" />
+    <alt key="0284" sub="ACR" name="Tranquilize" />
+    <alt key="0285" sub="ACR" name="Brotherhood Ambushers" />
+    <alt key="0286" sub="ACR" name="Brotherhood Patriarch" />
+    <alt key="0287" sub="ACR" name="Merciless Harlequin" />
+    <alt key="0288" sub="ACR" name="Poison-Blade Mentor" />
+    <alt key="0289" sub="ACR" name="Headsplitter" />
+    <alt key="0290" sub="ACR" name="Labyrinth Adversary" />
+    <alt key="0291" sub="ACR" name="Misthios's Fury" />
+    <alt key="0292" sub="ACR" name="Spartan Veteran" />
+    <alt key="0293" sub="ACR" name="Surtr, Fiery Jotun" />
+    <alt key="0294" sub="ACR" name="Achilles Davenport" />
+    <alt key="0295" sub="ACR" name="Auditore Ambush" />
+    <alt key="0296" sub="ACR" name="Bureau Headmaster" />
+    <alt key="0297" sub="ACR" name="Raven Clan War-Axe" />
+    <alt key="0298" sub="ACR" name="Rooftop Bypass" />
+    <alt key="0299" sub="ACR" name="Hired Blade" />
+    <alt key="0300" sub="ACR" name="Stone Quarry" />
+    <alt key="0301" sub="ACR" name="Submerged Boneyard" />
+    <alt key="0302" sub="ACR" name="Plains" />
+    <alt key="0303" sub="ACR" name="Island" />
+    <alt key="0304" sub="ACR" name="Swamp" />
+    <alt key="0305" sub="ACR" name="Mountain" />
+    <alt key="0306" sub="ACR" name="Royal Assassin" />
+    <alt key="0307" sub="ACR" name="Hidden Blade" />
     
     <!-- ★カードタイプ依存 -->
     <!-- 両面カード -->
@@ -8166,7 +8733,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="(?m)(?&lt;=^|：)墓地にあるカード１枚を対象とし、それを追放する。" value="墓地からカード１枚を対象とし、それを追放する。" />
     <regex target="text" pattern="手札(?:にある|の)([^か。]*)カード１枚を(?=(?:タップ状態で)?戦場に出|追放|.{2,3}のライブラリー)" value="手札から$1カード１枚を" />
     <regex target="text" pattern="(?:あなたは)?あなたの手札にあるドラゴン・カード１枚を公開してもよい。" value="あなたはあなたの手札からドラゴン・カード１枚を公開してもよい。" />
-    <regex target="text" pattern="(?&lt;!とあなたの)ライブラリーの一番上(?:の|にある)カード(?=[２-９Ｘ]+枚を)" value="ライブラリーの一番上からカード" />
+    <regex target="text" pattern="(?&lt;!と、?あなたの)ライブラリーの一番上(?:の|にある)カード(?=[２-９Ｘ]+枚を)" value="ライブラリーの一番上からカード" />
     <regex target="text" pattern="統率領域にある(?=[^。]+をあなたの手札に加える|[^。]+を戦場に出す)" value="統率領域から" />
     <!-- テンプレート変更：手札/墓地から (AFR and later) -->
     <regex target="text" pattern="あなたの墓地から(?=(?:クリーチャー・|アーティファクト・|エンチャント・|プレインズウォーカー・|オーラ・|海賊・)?カード[０-９Ｘ]+枚を対象)" value="あなたの墓地にある" />
@@ -8409,7 +8976,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="探検する。" value="探検を行う。" />
     <regex target="text" pattern="ウィザード、邪術師、シャーマンへの装備" value="シャーマンか邪術師かウィザードに装備" />
     <regex target="text" pattern="(?&lt;=たとき)、ならびに、?|(?&lt;=たとき|るたび|開始時)と、" value="、および、" />
-    <regex target="text" pattern="(?&lt;!このターン、[^。]+)が攻撃してブロックされなかったとき、" value="が攻撃してブロックされないたび、" />
+    <regex target="text" pattern="(?&lt;!このターン、[^。]+)が攻撃してブロックされなかったとき、(?![^。]+場合、)" value="が攻撃してブロックされないたび、" />
     <regex target="text" pattern="ステップやフェイズの終了に際してあなたはこのマナを失わない。" value="このマナはステップやフェイズの終了に際して無くならない。" />
     <regex target="text" pattern="あなたがオーナーである、統率者であるすべてのクリーチャーは" value="あなたがオーナーであり統率者であるクリーチャーは" />
     <regex target="text" pattern="あなたがコントロールしている、統率者であるすべてのクリーチャーは" value="あなたがコントロールしていて統率者であるクリーチャーは" />
@@ -8442,7 +9009,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="戦場にあるこれをオーナーの手札に戻す。" value="戦場からこれをオーナーの手札に戻す。" />
     <regex target="text" pattern="一番上にある(?=[^。]+を予示する。)" value="一番上から" />
     <regex target="text" pattern="カードの中にある(?=[^。]+カード１枚を戦場に出)" value="カードの中から" />
-    <regex target="text" pattern="(?&lt;!(?:が選んだ|これと|戦場に出ている|墓地に置かれた、|追放されていて)[^。]+)(?&lt;=墓地|追放領域|統率領域|ライブラリーの一番上)にあ[るり](?=[^。（）「」：]+(?:追放[しす]|見[るて]|唱え|プレイ[すし]|戦場に出[すし]|戦場に戻|手札に戻|一番[上下]に置|墓地に置く|ライブラリーに加えて切り直))(?!場合|なら|かぎり|かのように|一番上|カード[がにの]|、これにより|[^。（）「」：]*(?:対象|公開|合計|総数|１枚につき|場合|を持[つた]|コピーとして|一番上から|このターンに|選び、残りを|の中から|のうち|でないなら))" value="から" />
+    <regex target="text" pattern="(?&lt;!(?:が選んだ|[こそ]れと|戦場に出ている|墓地に置かれた、|追放されていて)[^。]+)(?&lt;=墓地|追放領域|統率領域|ライブラリーの一番上)にあ[るり](?=[^。（）「」：]+(?:追放[しす]|見[るて]|唱え|プレイ[すし]|戦場に出[すし]|戦場に戻|手札に戻|一番[上下]に置|墓地に置く|ライブラリーに加えて切り直))(?!場合|なら|かぎり|かのように|一番上|カード[がにの]|、これにより|[^。（）「」：]*(?:対象|公開|合計|総数|１枚につき|場合|を持[つた]|コピーとして|一番上から|このターンに|選び、残りを|の中から|のうち|でないなら))" value="から" />
     <!-- テンプレート対抗：否定形 -->
     <regex target="text" pattern="(?&lt;=毎ターン１回|戦場にある間に)しか誘発しない。" value="のみ誘発する。" />
     <regex target="text" pattern="毎ターン１回しか(起動でき|行え)ない。" value="毎ターン１回のみ$1る。" />
