@@ -7158,7 +7158,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0079" sub="OTP" name="Grindstone" />
     <alt key="0080" sub="OTP" name="Mindslaver" />
     <!-- Modern Horizons 3 Special Guests -->
-    <!--<alt key="0039" sub="MH3 Special Guest" name="Thought-Knot Seer" />
+    <alt key="0039" sub="MH3 Special Guest" name="Thought-Knot Seer" />
     <alt key="0040" sub="MH3 Special Guest" name="Prismatic Ending" />
     <alt key="0041" sub="MH3 Special Guest" name="Dismember" />
     <alt key="0042" sub="MH3 Special Guest" name="Persist" />
@@ -7172,7 +7172,315 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0050" sub="MH3 Special Guest" name="Subtlety" />
     <alt key="0051" sub="MH3 Special Guest" name="Grief" />
     <alt key="0052" sub="MH3 Special Guest" name="Fury" />
-    <alt key="0053" sub="MH3 Special Guest" name="Endurance" />-->
+    <alt key="0053" sub="MH3 Special Guest" name="Endurance" />
+    <!-- ACR -->
+    <alt key="0001" sub="ACR" name="The Capitoline Triad" />
+    <alt key="0002" sub="ACR" name="Caduceus, Staff of Hermes" />
+    <alt key="0003" sub="ACR" name="Distract the Guards" />
+    <alt key="0004" sub="ACR" name="Fall of the First Civilization" />
+    <alt key="0005" sub="ACR" name="Haystack" />
+    <alt key="0006" sub="ACR" name="Hookblade" />
+    <alt key="0007" sub="ACR" name="Layla Hassan" />
+    <alt key="0008" sub="ACR" name="Senu, Keen-Eyed Protector" />
+    <alt key="0009" sub="ACR" name="Tax Collector" />
+    <alt key="0010" sub="ACR" name="Templar Knight" />
+    <alt key="0011" sub="ACR" name="What Must Be Done" />
+    <alt key="0012" sub="ACR" name="Assassin Gauntlet" />
+    <alt key="0013" sub="ACR" name="Ballad of the Black Flag" />
+    <alt key="0014" sub="ACR" name="Become Anonymous" />
+    <alt key="0015" sub="ACR" name="Crystal Skull, Isu Spyglass" />
+    <alt key="0016" sub="ACR" name="Desynchronization" />
+    <alt key="0017" sub="ACR" name="Eagle Vision" />
+    <alt key="0018" sub="ACR" name="Escape Detection" />
+    <alt key="0019" sub="ACR" name="Evie Frye" />
+    <alt key="0020" sub="ACR" name="Leonardo da Vinci" />
+    <alt key="0021" sub="ACR" name="Loyal Inventor" />
+    <alt key="0022" sub="ACR" name="Assassin Initiate" />
+    <alt key="0023" sub="ACR" name="Chain Assassination" />
+    <alt key="0024" sub="ACR" name="Desmond Miles" />
+    <alt key="0025" sub="ACR" name="Ezio Auditore da Firenze" />
+    <alt key="0026" sub="ACR" name="Hemlock Vial" />
+    <alt key="0027" sub="ACR" name="Jacob Frye" />
+    <alt key="0028" sub="ACR" name="Petty Larceny" />
+    <alt key="0029" sub="ACR" name="Phantom Blade" />
+    <alt key="0030" sub="ACR" name="Restart Sequence" />
+    <alt key="0031" sub="ACR" name="The Revelations of Ezio" />
+    <alt key="0032" sub="ACR" name="Roshan, Hidden Magister" />
+    <alt key="0033" sub="ACR" name="Alexios, Deimos of Kosmos" />
+    <alt key="0034" sub="ACR" name="Hidden Footblade" />
+    <alt key="0035" sub="ACR" name="Monastery Raid" />
+    <alt key="0036" sub="ACR" name="Origin of the Hidden Ones" />
+    <alt key="0037" sub="ACR" name="Overpowering Attack" />
+    <alt key="0038" sub="ACR" name="The Spear of Leonidas" />
+    <alt key="0039" sub="ACR" name="The Aesir Escape Valhalla" />
+    <alt key="0040" sub="ACR" name="Aveline de Grandpre" />
+    <alt key="0041" sub="ACR" name="Hunter's Bow" />
+    <alt key="0042" sub="ACR" name="Palazzo Archers" />
+    <alt key="0043" sub="ACR" name="Viewpoint Synchronization" />
+    <alt key="0044" sub="ACR" name="Adewale, Breaker of Chains" />
+    <alt key="0045" sub="ACR" name="Altair Ibn-La'Ahad" />
+    <alt key="0046" sub="ACR" name="Arbaaz Mir" />
+    <alt key="0047" sub="ACR" name="Arno Dorian" />
+    <alt key="0048" sub="ACR" name="Aya of Alexandria" />
+    <alt key="0049" sub="ACR" name="Basim Ibn Ishaq" />
+    <alt key="0050" sub="ACR" name="Bayek of Siwa" />
+    <alt key="0051" sub="ACR" name="Bleeding Effect" />
+    <alt key="0052" sub="ACR" name="Cleopatra, Exiled Pharaoh" />
+    <alt key="0053" sub="ACR" name="Edward Kenway" />
+    <alt key="0054" sub="ACR" name="Eivor, Wolf-Kissed" />
+    <alt key="0055" sub="ACR" name="Ezio, Brash Novice" />
+    <alt key="0056" sub="ACR" name="Havi, the All-Father" />
+    <alt key="0057" sub="ACR" name="Haytham Kenway" />
+    <alt key="0058" sub="ACR" name="Jackdaw" />
+    <alt key="0059" sub="ACR" name="Kassandra, Eagle Bearer" />
+    <alt key="0060" sub="ACR" name="Lydia Frye" />
+    <alt key="0061" sub="ACR" name="Mary Read and Anne Bonny" />
+    <alt key="0062" sub="ACR" name="Ratonhnhake꞉ton" />
+    <alt key="0063" sub="ACR" name="Shao Jun" />
+    <alt key="0064" sub="ACR" name="Shaun &amp; Rebecca, Agents" />
+    <alt key="0065" sub="ACR" name="Shay Cormac" />
+    <alt key="0066" sub="ACR" name="Sigurd, Jarl of Ravensthorpe" />
+    <alt key="0067" sub="ACR" name="Sokrates, Athenian Teacher" />
+    <alt key="0068" sub="ACR" name="Adrestia" />
+    <alt key="0069" sub="ACR" name="The Animus" />
+    <alt key="0070" sub="ACR" name="Apple of Eden, Isu Relic" />
+    <alt key="0071" sub="ACR" name="Brotherhood Regalia" />
+    <alt key="0072" sub="ACR" name="Excalibur, Sword of Eden" />
+    <alt key="0073" sub="ACR" name="Hidden Blade" />
+    <alt key="0074" sub="ACR" name="Mjolnir, Storm Hammer" />
+    <alt key="0075" sub="ACR" name="Smoke Bomb" />
+    <alt key="0076" sub="ACR" name="Staff of Eden, Vault's Key" />
+    <alt key="0077" sub="ACR" name="Towering Viewpoint" />
+    <alt key="0078" sub="ACR" name="Yggdrasil, Rebirth Engine" />
+    <alt key="0079" sub="ACR" name="Abstergo Entertainment" />
+    <alt key="0080" sub="ACR" name="Brotherhood Headquarters" />
+    <alt key="0081" sub="ACR" name="Path to Exile" />
+    <alt key="0082" sub="ACR" name="Reconnaissance" />
+    <alt key="0083" sub="ACR" name="Rest in Peace" />
+    <alt key="0084" sub="ACR" name="Coastal Piracy" />
+    <alt key="0085" sub="ACR" name="Propaganda" />
+    <alt key="0086" sub="ACR" name="Temporal Trespass" />
+    <alt key="0087" sub="ACR" name="Black Market Connections" />
+    <alt key="0088" sub="ACR" name="Conspiracy" />
+    <alt key="0089" sub="ACR" name="Cover of Darkness" />
+    <alt key="0090" sub="ACR" name="Fatal Push" />
+    <alt key="0091" sub="ACR" name="Go for the Throat" />
+    <alt key="0092" sub="ACR" name="Murder" />
+    <alt key="0093" sub="ACR" name="Royal Assassin" />
+    <alt key="0094" sub="ACR" name="Cathartic Reunion" />
+    <alt key="0095" sub="ACR" name="Assassin's Trophy" />
+    <alt key="0096" sub="ACR" name="Mortify" />
+    <alt key="0097" sub="ACR" name="Reconstruct History" />
+    <alt key="0098" sub="ACR" name="Terminate" />
+    <alt key="0099" sub="ACR" name="Sword of Feast and Famine" />
+    <alt key="0100" sub="ACR" name="Sword of Light and Shadow" />
+    <alt key="0101" sub="ACR" name="Plains" />
+    <alt key="0102" sub="ACR" name="Plains" />
+    <alt key="0103" sub="ACR" name="Island" />
+    <alt key="0104" sub="ACR" name="Island" />
+    <alt key="0105" sub="ACR" name="Swamp" />
+    <alt key="0106" sub="ACR" name="Swamp" />
+    <alt key="0107" sub="ACR" name="Mountain" />
+    <alt key="0108" sub="ACR" name="Mountain" />
+    <alt key="0109" sub="ACR" name="Forest" />
+    <alt key="0110" sub="ACR" name="Forest" />
+    <alt key="0111" sub="ACR" name="Sunbaked Canyon" />
+    <alt key="0112" sub="ACR" name="Fiery Islet" />
+    <alt key="0113" sub="ACR" name="Ezio Auditore da Firenze" />
+    <alt key="0114" sub="ACR" name="Nurturing Peatland" />
+    <alt key="0115" sub="ACR" name="Silent Clearing" />
+    <alt key="0116" sub="ACR" name="Waterlogged Grove" />
+    <alt key="0117" sub="ACR" name="The Capitoline Triad" />
+    <alt key="0118" sub="ACR" name="Leonardo da Vinci" />
+    <alt key="0119" sub="ACR" name="Cleopatra, Exiled Pharaoh" />
+    <alt key="0120" sub="ACR" name="Mary Read and Anne Bonny" />
+    <alt key="0121" sub="ACR" name="Sokrates, Athenian Teacher" />
+    <alt key="0122" sub="ACR" name="Apple of Eden, Isu Relic" />
+    <alt key="0123" sub="ACR" name="Staff of Eden, Vault's Key" />
+    <alt key="0124" sub="ACR" name="Sword of Feast and Famine" />
+    <alt key="0125" sub="ACR" name="Sword of Light and Shadow" />
+    <alt key="0126" sub="ACR" name="Yggdrasil, Rebirth Engine" />
+    <alt key="0127" sub="ACR" name="Layla Hassan" />
+    <alt key="0128" sub="ACR" name="Senu, Keen-Eyed Protector" />
+    <alt key="0129" sub="ACR" name="Evie Frye" />
+    <alt key="0130" sub="ACR" name="Desmond Miles" />
+    <alt key="0131" sub="ACR" name="Ezio Auditore da Firenze" />
+    <alt key="0132" sub="ACR" name="Jacob Frye" />
+    <alt key="0133" sub="ACR" name="Roshan, Hidden Magister" />
+    <alt key="0134" sub="ACR" name="Alexios, Deimos of Kosmos" />
+    <alt key="0135" sub="ACR" name="Aveline de Grandpre" />
+    <alt key="0136" sub="ACR" name="Adewale, Breaker of Chains" />
+    <alt key="0137" sub="ACR" name="Altair Ibn-La'Ahad" />
+    <alt key="0138" sub="ACR" name="Arbaaz Mir" />
+    <alt key="0139" sub="ACR" name="Arno Dorian" />
+    <alt key="0140" sub="ACR" name="Aya of Alexandria" />
+    <alt key="0141" sub="ACR" name="Basim Ibn Ishaq" />
+    <alt key="0142" sub="ACR" name="Bayek of Siwa" />
+    <alt key="0143" sub="ACR" name="Edward Kenway" />
+    <alt key="0144" sub="ACR" name="Eivor, Wolf-Kissed" />
+    <alt key="0145" sub="ACR" name="Ezio, Brash Novice" />
+    <alt key="0146" sub="ACR" name="Havi, the All-Father" />
+    <alt key="0147" sub="ACR" name="Haytham Kenway" />
+    <alt key="0148" sub="ACR" name="Kassandra, Eagle Bearer" />
+    <alt key="0149" sub="ACR" name="Lydia Frye" />
+    <alt key="0150" sub="ACR" name="Ratonhnhake꞉ton" />
+    <alt key="0151" sub="ACR" name="Shao Jun" />
+    <alt key="0152" sub="ACR" name="Shaun &amp; Rebecca, Agents" />
+    <alt key="0153" sub="ACR" name="Shay Cormac" />
+    <alt key="0154" sub="ACR" name="Sigurd, Jarl of Ravensthorpe" />
+    <alt key="0155" sub="ACR" name="Caduceus, Staff of Hermes" />
+    <alt key="0156" sub="ACR" name="Rest in Peace" />
+    <alt key="0157" sub="ACR" name="What Must Be Done" />
+    <alt key="0158" sub="ACR" name="Crystal Skull, Isu Spyglass" />
+    <alt key="0159" sub="ACR" name="Desynchronization" />
+    <alt key="0160" sub="ACR" name="Temporal Trespass" />
+    <alt key="0161" sub="ACR" name="Black Market Connections" />
+    <alt key="0162" sub="ACR" name="Conspiracy" />
+    <alt key="0163" sub="ACR" name="Cover of Darkness" />
+    <alt key="0164" sub="ACR" name="Royal Assassin" />
+    <alt key="0165" sub="ACR" name="The Spear of Leonidas" />
+    <alt key="0166" sub="ACR" name="Assassin's Trophy" />
+    <alt key="0167" sub="ACR" name="Jackdaw" />
+    <alt key="0168" sub="ACR" name="The Animus" />
+    <alt key="0169" sub="ACR" name="Excalibur, Sword of Eden" />
+    <alt key="0170" sub="ACR" name="Mjolnir, Storm Hammer" />
+    <alt key="0171" sub="ACR" name="Abstergo Entertainment" />
+    <alt key="0172" sub="ACR" name="The Capitoline Triad" />
+    <alt key="0173" sub="ACR" name="Caduceus, Staff of Hermes" />
+    <alt key="0174" sub="ACR" name="Distract the Guards" />
+    <alt key="0175" sub="ACR" name="Haystack" />
+    <alt key="0176" sub="ACR" name="Hookblade" />
+    <alt key="0177" sub="ACR" name="Layla Hassan" />
+    <alt key="0178" sub="ACR" name="Path to Exile" />
+    <alt key="0179" sub="ACR" name="Reconnaissance" />
+    <alt key="0180" sub="ACR" name="Rest in Peace" />
+    <alt key="0181" sub="ACR" name="Senu, Keen-Eyed Protector" />
+    <alt key="0182" sub="ACR" name="Tax Collector" />
+    <alt key="0183" sub="ACR" name="Templar Knight" />
+    <alt key="0184" sub="ACR" name="What Must Be Done" />
+    <alt key="0185" sub="ACR" name="Assassin Gauntlet" />
+    <alt key="0186" sub="ACR" name="Become Anonymous" />
+    <alt key="0187" sub="ACR" name="Coastal Piracy" />
+    <alt key="0188" sub="ACR" name="Crystal Skull, Isu Spyglass" />
+    <alt key="0189" sub="ACR" name="Desynchronization" />
+    <alt key="0190" sub="ACR" name="Eagle Vision" />
+    <alt key="0191" sub="ACR" name="Escape Detection" />
+    <alt key="0192" sub="ACR" name="Evie Frye" />
+    <alt key="0193" sub="ACR" name="Leonardo da Vinci" />
+    <alt key="0194" sub="ACR" name="Loyal Inventor" />
+    <alt key="0195" sub="ACR" name="Propaganda" />
+    <alt key="0196" sub="ACR" name="Temporal Trespass" />
+    <alt key="0197" sub="ACR" name="Assassin Initiate" />
+    <alt key="0198" sub="ACR" name="Black Market Connections" />
+    <alt key="0199" sub="ACR" name="Chain Assassination" />
+    <alt key="0200" sub="ACR" name="Conspiracy" />
+    <alt key="0201" sub="ACR" name="Cover of Darkness" />
+    <alt key="0202" sub="ACR" name="Desmond Miles" />
+    <alt key="0203" sub="ACR" name="Ezio Auditore da Firenze" />
+    <alt key="0204" sub="ACR" name="Fatal Push" />
+    <alt key="0205" sub="ACR" name="Go for the Throat" />
+    <alt key="0206" sub="ACR" name="Hemlock Vial" />
+    <alt key="0207" sub="ACR" name="Jacob Frye" />
+    <alt key="0208" sub="ACR" name="Murder" />
+    <alt key="0209" sub="ACR" name="Petty Larceny" />
+    <alt key="0210" sub="ACR" name="Phantom Blade" />
+    <alt key="0211" sub="ACR" name="Restart Sequence" />
+    <alt key="0212" sub="ACR" name="Roshan, Hidden Magister" />
+    <alt key="0213" sub="ACR" name="Royal Assassin" />
+    <alt key="0214" sub="ACR" name="Alexios, Deimos of Kosmos" />
+    <alt key="0215" sub="ACR" name="Cathartic Reunion" />
+    <alt key="0216" sub="ACR" name="Hidden Footblade" />
+    <alt key="0217" sub="ACR" name="Monastery Raid" />
+    <alt key="0218" sub="ACR" name="Overpowering Attack" />
+    <alt key="0219" sub="ACR" name="The Spear of Leonidas" />
+    <alt key="0220" sub="ACR" name="Aveline de Grandpre" />
+    <alt key="0221" sub="ACR" name="Hunter's Bow" />
+    <alt key="0222" sub="ACR" name="Palazzo Archers" />
+    <alt key="0223" sub="ACR" name="Viewpoint Synchronization" />
+    <alt key="0224" sub="ACR" name="Adewale, Breaker of Chains" />
+    <alt key="0225" sub="ACR" name="Altair Ibn-La'Ahad" />
+    <alt key="0226" sub="ACR" name="Arbaaz Mir" />
+    <alt key="0227" sub="ACR" name="Arno Dorian" />
+    <alt key="0228" sub="ACR" name="Assassin's Trophy" />
+    <alt key="0229" sub="ACR" name="Aya of Alexandria" />
+    <alt key="0230" sub="ACR" name="Basim Ibn Ishaq" />
+    <alt key="0231" sub="ACR" name="Bayek of Siwa" />
+    <alt key="0232" sub="ACR" name="Bleeding Effect" />
+    <alt key="0233" sub="ACR" name="Cleopatra, Exiled Pharaoh" />
+    <alt key="0234" sub="ACR" name="Edward Kenway" />
+    <alt key="0235" sub="ACR" name="Eivor, Wolf-Kissed" />
+    <alt key="0236" sub="ACR" name="Ezio, Brash Novice" />
+    <alt key="0237" sub="ACR" name="Havi, the All-Father" />
+    <alt key="0238" sub="ACR" name="Haytham Kenway" />
+    <alt key="0239" sub="ACR" name="Jackdaw" />
+    <alt key="0240" sub="ACR" name="Kassandra, Eagle Bearer" />
+    <alt key="0241" sub="ACR" name="Lydia Frye" />
+    <alt key="0242" sub="ACR" name="Mary Read and Anne Bonny" />
+    <alt key="0243" sub="ACR" name="Mortify" />
+    <alt key="0244" sub="ACR" name="Ratonhnhake꞉ton" />
+    <alt key="0245" sub="ACR" name="Reconstruct History" />
+    <alt key="0246" sub="ACR" name="Shao Jun" />
+    <alt key="0247" sub="ACR" name="Shaun &amp; Rebecca, Agents" />
+    <alt key="0248" sub="ACR" name="Shay Cormac" />
+    <alt key="0249" sub="ACR" name="Sigurd, Jarl of Ravensthorpe" />
+    <alt key="0250" sub="ACR" name="Sokrates, Athenian Teacher" />
+    <alt key="0251" sub="ACR" name="Terminate" />
+    <alt key="0252" sub="ACR" name="Adrestia" />
+    <alt key="0253" sub="ACR" name="The Animus" />
+    <alt key="0254" sub="ACR" name="Apple of Eden, Isu Relic" />
+    <alt key="0255" sub="ACR" name="Brotherhood Regalia" />
+    <alt key="0256" sub="ACR" name="Excalibur, Sword of Eden" />
+    <alt key="0257" sub="ACR" name="Hidden Blade" />
+    <alt key="0258" sub="ACR" name="Mjolnir, Storm Hammer" />
+    <alt key="0259" sub="ACR" name="Smoke Bomb" />
+    <alt key="0260" sub="ACR" name="Staff of Eden, Vault's Key" />
+    <alt key="0261" sub="ACR" name="Sword of Feast and Famine" />
+    <alt key="0262" sub="ACR" name="Sword of Light and Shadow" />
+    <alt key="0263" sub="ACR" name="Towering Viewpoint" />
+    <alt key="0264" sub="ACR" name="Yggdrasil, Rebirth Engine" />
+    <alt key="0265" sub="ACR" name="Abstergo Entertainment" />
+    <alt key="0266" sub="ACR" name="Brotherhood Headquarters" />
+    <alt key="0267" sub="ACR" name="Ezio Auditore da Firenze" />
+    <alt key="0268" sub="ACR" name="Altair Ibn-La'Ahad" />
+    <alt key="0269" sub="ACR" name="Edward Kenway" />
+    <alt key="0270" sub="ACR" name="Eivor, Wolf-Kissed" />
+    <alt key="0271" sub="ACR" name="Kassandra, Eagle Bearer" />
+    <alt key="0272" sub="ACR" name="Cleopatra, Exiled Pharaoh" />
+    <alt key="0273" sub="ACR" name="Sokrates, Athenian Teacher" />
+    <alt key="0274" sub="ACR" name="Eivor, Battle-Ready" />
+    <alt key="0275" sub="ACR" name="Ezio, Blade of Vengeance" />
+    <alt key="0276" sub="ACR" name="Battlefield Improvisation" />
+    <alt key="0277" sub="ACR" name="Detained by Legionnaires" />
+    <alt key="0278" sub="ACR" name="Escarpment Fortress" />
+    <alt key="0279" sub="ACR" name="Keen-Eyed Raven" />
+    <alt key="0280" sub="ACR" name="Settlement Blacksmith" />
+    <alt key="0281" sub="ACR" name="Assassin Den" />
+    <alt key="0282" sub="ACR" name="Brotherhood Spy" />
+    <alt key="0283" sub="ACR" name="Hookblade Veteran" />
+    <alt key="0284" sub="ACR" name="Tranquilize" />
+    <alt key="0285" sub="ACR" name="Brotherhood Ambushers" />
+    <alt key="0286" sub="ACR" name="Brotherhood Patriarch" />
+    <alt key="0287" sub="ACR" name="Merciless Harlequin" />
+    <alt key="0288" sub="ACR" name="Poison-Blade Mentor" />
+    <alt key="0289" sub="ACR" name="Headsplitter" />
+    <alt key="0290" sub="ACR" name="Labyrinth Adversary" />
+    <alt key="0291" sub="ACR" name="Misthios's Fury" />
+    <alt key="0292" sub="ACR" name="Spartan Veteran" />
+    <alt key="0293" sub="ACR" name="Surtr, Fiery Jotun" />
+    <alt key="0294" sub="ACR" name="Achilles Davenport" />
+    <alt key="0295" sub="ACR" name="Auditore Ambush" />
+    <alt key="0296" sub="ACR" name="Bureau Headmaster" />
+    <alt key="0297" sub="ACR" name="Raven Clan War-Axe" />
+    <alt key="0298" sub="ACR" name="Rooftop Bypass" />
+    <alt key="0299" sub="ACR" name="Hired Blade" />
+    <alt key="0300" sub="ACR" name="Stone Quarry" />
+    <alt key="0301" sub="ACR" name="Submerged Boneyard" />
+    <alt key="0302" sub="ACR" name="Plains" />
+    <alt key="0303" sub="ACR" name="Island" />
+    <alt key="0304" sub="ACR" name="Swamp" />
+    <alt key="0305" sub="ACR" name="Mountain" />
+    <alt key="0306" sub="ACR" name="Royal Assassin" />
+    <alt key="0307" sub="ACR" name="Hidden Blade" />
     
     <!-- ★カードタイプ依存 -->
     <!-- 両面カード -->
