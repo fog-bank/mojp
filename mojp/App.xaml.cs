@@ -38,7 +38,7 @@ public partial class App : Application
     /// <summary>
     /// 代替テキストによるカード検索を行います。
     /// </summary>
-    public static Dictionary<string, AltCard> AltCards { get; } = new(6357);
+    public static Dictionary<string, AltCard> AltCards { get; } = new(6350);
 
     /// <summary>
     /// このアプリの設定を取得します。
