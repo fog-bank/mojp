@@ -986,8 +986,14 @@ III ― ヴァルハラ脱出の悪夢とその追放されているカードを
     <card name="Virtuous Token" ja="聖者・トークン" type="トークン・エンチャント ― オーラ・役割" wiki="役割">エンチャント（クリーチャー）
 エンチャントしているクリーチャーは、あなたがコントロールしているエンチャント１つにつき+1/+1の修整を受ける。</card>
     <!-- クリーチャーでないトークン -->
+    <card name="Banana" ja="バナナ" type="トークン・アーティファクト" wiki="ウークタビーの王子、キーボ/Kibo, Uktabi Prince">(Ｔ),このアーティファクトを生け贄に捧げる：(赤)か(緑)を加える。あなたは２点のライフを得る。</card>
+    <card name="Cragflame" ja="岩山炎" type="トークン・伝説のアーティファクト ― 装備品" wiki="岩山炎の後継者、メイブル/Mabel, Heir to Cragflame">装備しているクリーチャーは+1/+1の修整を受け警戒とトランプルと速攻を持つ。
+装備(２)</card>
     <card name="Etherium Cell" ja="エーテリウム電池" type="トークン・アーティファクト" wiki="策謀家テゼレット/Tezzeret the Schemer">(Ｔ),このアーティファクトを生け贄に捧げる：好きな色１色のマナ１点を加える。</card>
     <card name="Feather" ja="羽根" type="トークン・アーティファクト" wiki="永遠羽のフェニックス/Everquill Phoenix">(１),羽根を生け贄に捧げる：あなたの墓地からフェニックス・カード１枚を対象とし、それをタップ状態で戦場に戻す。</card>
+    <card name="Icingdeath, Frost Tongue" ja="霜の舌、アイシングデス" type="トークン・伝説のアーティファクト ― 装備品" wiki="霜の暴君、アイシングデス/Icingdeath, Frost Tyrant">装備しているクリーチャーは+2/+0の修整を受ける。
+装備しているクリーチャーが攻撃するたび、防御プレイヤーがコントロールしているクリーチャー１体を対象とする。それをタップする。
+装備(２)</card>
     <card name="Icy Manalith" ja="氷のマナリス" type="トークン・氷雪アーティファクト" wiki="氷刻み、スヴェラ/Svella, Ice Shaper">(Ｔ)：好きな色１色のマナ１点を加える。</card>
     <card name="Land Mine" ja="地雷" type="トークン・アーティファクト" wiki="ゴブリンのドカーン物取扱者/Goblin Kaboomist">(赤),このアーティファクトを生け贄に捧げる：飛行を持たない攻撃クリーチャー１体を対象とする。このアーティファクトはそれに２点のダメージを与える。</card>
     <card name="Mark of the Rani" ja="ラニの印" type="トークン・エンチャント ― オーラ" wiki="ラニ/The Rani">エンチャント（クリーチャー）
@@ -1002,14 +1008,19 @@ III ― ヴァルハラ脱出の悪夢とその追放されているカードを
     <card name="Stoneforged Blade" ja="石鍛冶製の剣" type="トークン・アーティファクト ― 装備品" wiki="石術師、ナヒリ/Nahiri, the Lithomancer">破壊不能
 装備しているクリーチャーは+5/+5の修整を受け二段攻撃を持つ。
 装備(０)</card>
+    <card name="Sword" ja="剣" type="トークン・アーティファクト ― 装備品" wiki="鍛冶の才能/Blacksmith's Talent">装備しているクリーチャーは+1/+1の修整を受ける。
+装備(２)</card>
     <card name="Tamiyo's Notebook" ja="タミヨウのノートブック" type="トークン・伝説のアーティファクト" wiki="完成化した賢者、タミヨウ/Tamiyo, Compleated Sage">あなたが呪文を唱えるためのコストは(２)少なくなる。
 (Ｔ)：カード１枚を引く。</card>
     <card name="Volo's Journal" ja="ヴォーロの日誌" type="トークン・伝説のアーティファクト" wiki="巡歴の学者、ヴォーロ/Volo, Itinerant Scholar">呪禁
 あなたがクリーチャー・呪文を唱えるたび、それのクリーチャー・タイプのうちこのアーティファクトに記録されていない１つを記録する。</card>
+    <!-- PIP --><!--<card name="Settlement" ja="居住地" type="トークン・エンチャント ― オーラ" wiki="ミニットマン、プレストン・ガービー/Preston Garvey, Minuteman">エンチャント（土地）
+エンチャントしている土地は「(Ｔ)：好きな色１色のマナ１点を加える。」を持つ。</card>
+    <card name="Wasteland Survival Guide" ja="ウェイストランド・サバイバルガイド" type="トークン・アーティファクト ― 装備品" wiki="ガイドの著者、モイラ・ブラウン/Moira Brown, Guide Author">装備しているクリーチャーは、あなたがコントロールしているパーマネントの上にある探索カウンター１個につき+1/+1の修整を受ける。
+装備(１)</card>-->
     <!-- 専用の名前を持つトークン -->
     <card name="Ashaya, the Awoken World" ja="目覚めし世界、アシャヤ" type="トークン・伝説のクリーチャー ― エレメンタル" pt="4/4" wiki="精霊信者の賢人、ニッサ/Nissa, Sage Animist"></card>
     <card name="The Atropal" ja="アトロパル" type="トークン・伝説のクリーチャー ― 神・ホラー" pt="4/4" wiki="魂を喰らう墓/Tomb of Annihilation">接死</card>
-    <card name="Banana" ja="バナナ" type="トークン・アーティファクト" wiki="ウークタビーの王子、キーボ/Kibo, Uktabi Prince">(Ｔ),このアーティファクトを生け贄に捧げる：(赤)か(緑)を加える。あなたは２点のライフを得る。</card>
     <card name="Beau" ja="ボー" type="トークン・伝説のクリーチャー ― 雄牛" pt="*/*" wiki="乱伐者、ボニー・ポール/Bonny Pall, Clearcutter">このクリーチャーのパワーとタフネスはそれぞれ、あなたがコントロールしている土地の数に等しい。</card>
     <card name="Blue Horror" ja="青のホラー" type="トークン・クリーチャー ― デーモン・ホラー" pt="2/2" wiki="ピンクのホラー/Pink Horror">あなたがインスタントかソーサリーである呪文を唱えるたび、１つを対象とする。このクリーチャーはそれに１点のダメージを与える。</card>
     <card name="Boo" ja="ブー" type="トークン・伝説のクリーチャー ― ハムスター" pt="1/1" wiki="敬愛されるレンジャー、ミンスク/Minsc, Beloved Ranger">トランプル、速攻</card>
@@ -1019,9 +1030,6 @@ III ― ヴァルハラ脱出の悪夢とその追放されているカードを
     <card name="First Mate Ragavan" ja="航海士ラガバン" type="トークン・伝説のクリーチャー ― 猿・海賊" pt="2/1" wiki="バラルとカーリ・ゼヴ/Baral and Kari Zev"></card>
     <card name="The Hollow Sentinel" ja="虚ろな歩哨" type="トークン・伝説のアーティファクト・クリーチャー ― ファイレクシアン・ゴーレム" pt="3/3" wiki="死体傀儡、ヴェンセール/Venser, Corpse Puppet"></card>
     <card name="Hornet" ja="スズメバチ" type="トークン・アーティファクト・クリーチャー ― 昆虫" pt="1/1" wiki="スズメバチ砲/Hornet Cannon">飛行、速攻</card>
-    <card name="Icingdeath, Frost Tongue" ja="霜の舌、アイシングデス" type="トークン・伝説のアーティファクト ― 装備品" wiki="霜の暴君、アイシングデス/Icingdeath, Frost Tyrant">装備しているクリーチャーは+2/+0の修整を受ける。
-装備しているクリーチャーが攻撃するたび、防御プレイヤーがコントロールしているクリーチャー１体を対象とする。それをタップする。
-装備(２)</card>
     <card name="Kaldra" ja="カルドラ" type="トークン・伝説のクリーチャー ― アバター" pt="4/4" wiki="カルドラの兜/Helm of Kaldra"></card>
     <card name="Karox Bladewing" ja="刃の翼カロックス" type="トークン・伝説のクリーチャー ― ドラゴン" pt="4/4" wiki="刃の翼ヴェリックス/Verix Bladewing">飛行</card>
     <card name="Keimi" ja="哇魅" type="トークン・伝説のクリーチャー ― カエル" pt="3/3" wiki="カエル乗り、達成/Tatsunari, Toad Rider">あなたがエンチャント・呪文を唱えるたび、各対戦相手はそれぞれ１点のライフを失い、あなたは１点のライフを得る。</card>
@@ -1034,11 +1042,10 @@ III ― ヴァルハラ脱出の悪夢とその追放されているカードを
     <card name="Mechtitan" ja="メカ巨神" type="トークン・伝説のアーティファクト・クリーチャー ― 構築物" pt="10/10" wiki="メカ巨神のコア/Mechtitan Core">メカ巨神はすべての色である。
 飛行、警戒、トランプル、絆魂、速攻</card>
     <card name="Minor Demon" ja="マイナー・デーモン" type="トークン・クリーチャー ― デーモン" pt="1/1" wiki="Boris Devilboon"></card>
+    <card name="Phobos" ja="フォボス" type="トークン・伝説のクリーチャー ― 馬" pt="3/2" wiki="レオニダスの槍/The Spear of Leonidas"></card>
     <card name="Plaguebearer of Nurgle" ja="プレーグベアラー・オヴ・ナーグル" type="トークン・クリーチャー ― デーモン" pt="1/3" wiki=""></card>
     <card name="Ragavan" ja="ラガバン" type="トークン・伝説のクリーチャー ― 猿" pt="2/1" wiki="航空船を強襲する者、カーリ・ゼヴ/Kari Zev, Skyship Raider"></card>
     <card name="Ravage" ja="ラヴィッジ" type="トークン・伝説のアーティファクト・クリーチャー ― ロボット" pt="3/3" wiki="上級隊長、サウンドウェーブ/Soundwave, Superior Captain">威迫、接死</card>
-    <!-- PIP --><!--<card name="Settlement" ja="居住地" type="トークン・エンチャント ― オーラ" wiki="ミニットマン、プレストン・ガービー/Preston Garvey, Minuteman">エンチャント（土地）
-エンチャントしている土地は「(Ｔ)：好きな色１色のマナ１点を加える。」を持つ。</card>-->
     <card name="Smaug" ja="スマウグ" type="トークン・伝説のクリーチャー ― ドラゴン" pt="6/6" wiki="行きて帰りし物語/There and Back Again">飛行、速攻
 このクリーチャーが死亡したとき、宝物・トークン１４個を生成する。</card>
     <card name="Stangg Twin" ja="スタングの双子" type="トークン・伝説のクリーチャー ― 人間・戦士" pt="3/4" wiki="スタング/Stangg"></card>
@@ -1056,8 +1063,6 @@ III ― ヴァルハラ脱出の悪夢とその追放されているカードを
     <card name="Voja, Friend to Elves" ja="エルフの友、ヴォジャ" type="トークン・伝説のクリーチャー ― 狼" pt="3/3" wiki="狼の友、トルシミール/Tolsimir, Friend to Wolves"></card>
     <card name="Voja Fenstalker" ja="ヴォジャ・フェンストーカー" type="トークン・伝説のクリーチャー ― 狼" pt="5/5" wiki="真夜中の光、トルシミール/Tolsimir, Midnight's Light"></card>
     <card name="Wasp" ja="ワスプ" type="トークン・アーティファクト・クリーチャー ― 昆虫" pt="1/1" wiki="蜂の巣/The Hive">飛行</card>
-    <!-- PIP --><!--<card name="Wasteland Survival Guide" ja="ウェイストランド・サバイバルガイド" type="トークン・アーティファクト ― 装備品" wiki="ガイドの著者、モイラ・ブラウン/Moira Brown, Guide Author">装備しているクリーチャーは、あなたがコントロールしているパーマネントの上にある探索カウンター１個につき+1/+1の修整を受ける。
-装備(１)</card>-->
     <card name="Wirefly" ja="針金バエ" type="トークン・アーティファクト・クリーチャー ― 昆虫" pt="2/2" wiki="針金バエの巣/Wirefly Hive">飛行</card>
     <!--<card name="Wolves of the Hunt" ja="狩人狼" type="トークン・クリーチャー ― 狼" pt="1/1" wiki="Master of the Hunt">他の《狩人狼》という名前のクリーチャーとのバンド</card>-->
     <card name="Wood" ja="木材" type="トークン・クリーチャー ― 壁" pt="0/1" wiki="ジャングル巡視部隊/Jungle Patrol">防衛</card>
