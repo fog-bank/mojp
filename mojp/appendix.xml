@@ -673,7 +673,7 @@
 ・対戦相手１人を対象とする。そのプレイヤーはトークンでないアーティファクト１つを生け贄に捧げる。</card>
     <card name="Scurry of Squirrels" ja="リスの小走り" type="クリーチャー ― リス・スカウト" pt="2/2">無尽、無尽（このクリーチャーが攻撃するたび、防御プレイヤー以外の各対戦相手につきそれぞれ、このクリーチャーのコピーであるトークン１体をタップ状態かつ、そのプレイヤーかそのプレイヤーがコントロールしているプレインズウォーカー１体を攻撃している状態で生成してもよい。その後、それをもう一度行う。戦闘終了時に、それらのトークンを追放する。）
 リスの小走りがプレイヤー１人に戦闘ダメージを与えるたび、あなたがコントロールしているクリーチャー１体を対象とする。それの上に+1/+1カウンター１個を置く。</card>
-    <card name="Thickest in the Thicke" ja="茂みの最奥" type="エンチャント">茂みの最奥が戦場に出たとき、クリーチャー１体を対象とする。それの上に+1/+1カウンターＸ個を置く。Ｘはそのクリーチャーのパワーに等しい。
+    <card name="Thickest in the Thicket" ja="茂みの最奥" type="エンチャント">茂みの最奥が戦場に出たとき、クリーチャー１体を対象とする。それの上に+1/+1カウンターＸ個を置く。Ｘはそのクリーチャーのパワーに等しい。
 あなたの終了ステップの開始時に、最大のパワーを持つクリーチャーをあなたがコントロールしているなら、カード２枚を引く。</card>
     <card name="Trailtracker Scout" ja="痕跡追いの斥侯" type="クリーチャー ― アライグマ・スカウト" pt="1/3">(Ｔ)：好きな色１色のマナ１点を加える。
 あなたが積算８を達成するたび、あなたの墓地にあるパーマネント・カード最大１枚を対象とする。それをあなたの手札に戻す。（１ターンの間に呪文を唱えるために８点目のマナを支払うと、積算８を達成する。）</card>
@@ -2283,6 +2283,26 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0307" sub="MH3" name="Mountain" />
     <alt key="0308" sub="MH3" name="Forest" />
     <alt key="0309" sub="MH3" name="Snow-Covered Wastes" />
+    <alt key="0262" sub="BLB" name="Plains" />
+    <alt key="0263" sub="BLB" name="Plains" />
+    <alt key="0264" sub="BLB" name="Plains" />
+    <alt key="0265" sub="BLB" name="Plains" />
+    <alt key="0266" sub="BLB" name="Island" />
+    <alt key="0267" sub="BLB" name="Island" />
+    <alt key="0268" sub="BLB" name="Island" />
+    <alt key="0269" sub="BLB" name="Island" />
+    <alt key="0270" sub="BLB" name="Swamp" />
+    <alt key="0271" sub="BLB" name="Swamp" />
+    <alt key="0272" sub="BLB" name="Swamp" />
+    <alt key="0273" sub="BLB" name="Swamp" />
+    <alt key="0274" sub="BLB" name="Mountain" />
+    <alt key="0275" sub="BLB" name="Mountain" />
+    <alt key="0276" sub="BLB" name="Mountain" />
+    <alt key="0277" sub="BLB" name="Mountain" />
+    <alt key="0278" sub="BLB" name="Forest" />
+    <alt key="0279" sub="BLB" name="Forest" />
+    <alt key="0280" sub="BLB" name="Forest" />
+    <alt key="0281" sub="BLB" name="Forest" />
     <!-- SL2 -->
     <alt key="0138" sub="SLD" name="Anguished Unmaking" />
     <alt key="0139" sub="SLD" name="Assassin's Trophy" />
@@ -4080,6 +4100,158 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0141" sub="M3C" name="Omo, Queen of Vesuva" />
     <alt key="0142" sub="M3C" name="Satya, Aetherflux Genius" />
     <alt key="0143" sub="M3C" name="Ulalek, Fused Atrocity" />
+    <!-- BLB -->
+    <alt key="0282" sub="BLB" name="Season of the Burrow" />
+    <alt key="0283" sub="BLB" name="Season of Weaving" />
+    <alt key="0284" sub="BLB" name="Season of Loss" />
+    <alt key="0285" sub="BLB" name="Season of the Bold" />
+    <alt key="0286" sub="BLB" name="Season of Gathering" />
+    <alt key="0287" sub="BLB" name="Beza, the Bounding Spring" />
+    <alt key="0288" sub="BLB" name="Eluge, the Shoreless Sea" />
+    <alt key="0289" sub="BLB" name="Maha, Its Feathers Night" />
+    <alt key="0290" sub="BLB" name="Rottenmouth Viper" />
+    <alt key="0291" sub="BLB" name="Dragonhawk, Fate's Tempest" />
+    <alt key="0292" sub="BLB" name="Sunspine Lynx" />
+    <alt key="0293" sub="BLB" name="Lumra, Bellow of the Woods" />
+    <alt key="0294" sub="BLB" name="Ygra, Eater of All" />
+    <alt key="0295" sub="BLB" name="Dawn's Truce" />
+    <alt key="0296" sub="BLB" name="Jackdaw Savior" />
+    <alt key="0297" sub="BLB" name="Salvation Swan" />
+    <alt key="0298" sub="BLB" name="Starfall Invocation" />
+    <alt key="0299" sub="BLB" name="Valley Questcaller" />
+    <alt key="0300" sub="BLB" name="Warren Warleader" />
+    <alt key="0301" sub="BLB" name="Whiskervale Forerunner" />
+    <alt key="0302" sub="BLB" name="Azure Beastbinder" />
+    <alt key="0303" sub="BLB" name="Dour Port-Mage" />
+    <alt key="0304" sub="BLB" name="Kitsa, Otterball Elite" />
+    <alt key="0305" sub="BLB" name="Mockingbird" />
+    <alt key="0306" sub="BLB" name="Portent of Calamity" />
+    <alt key="0307" sub="BLB" name="Thundertrap Trainer" />
+    <alt key="0308" sub="BLB" name="Valley Floodcaller" />
+    <alt key="0309" sub="BLB" name="Coiling Rebirth" />
+    <alt key="0310" sub="BLB" name="Cruelclaw's Heist" />
+    <alt key="0311" sub="BLB" name="Darkstar Augur" />
+    <alt key="0312" sub="BLB" name="Osteomancer Adept" />
+    <alt key="0313" sub="BLB" name="Valley Rotcaller" />
+    <alt key="0314" sub="BLB" name="Wick, the Whorled Mind" />
+    <alt key="0315" sub="BLB" name="Emberheart Challenger" />
+    <alt key="0316" sub="BLB" name="Festival of Embers" />
+    <alt key="0317" sub="BLB" name="Hired Claw" />
+    <alt key="0318" sub="BLB" name="Manifold Mouse" />
+    <alt key="0319" sub="BLB" name="Stormsplitter" />
+    <alt key="0320" sub="BLB" name="Valley Flamecaller" />
+    <alt key="0321" sub="BLB" name="For the Common Good" />
+    <alt key="0322" sub="BLB" name="Keen-Eyed Curator" />
+    <alt key="0323" sub="BLB" name="Mistbreath Elder" />
+    <alt key="0324" sub="BLB" name="Scrapshooter" />
+    <alt key="0325" sub="BLB" name="Tender Wildguide" />
+    <alt key="0326" sub="BLB" name="Valley Mightcaller" />
+    <alt key="0327" sub="BLB" name="Alania, Divergent Storm" />
+    <alt key="0328" sub="BLB" name="Camellia, the Seedmiser" />
+    <alt key="0329" sub="BLB" name="Clement, the Worrywort" />
+    <alt key="0330" sub="BLB" name="Finneas, Ace Archer" />
+    <alt key="0331" sub="BLB" name="Glarb, Calamity's Augur" />
+    <alt key="0332" sub="BLB" name="Helga, Skittish Seer" />
+    <alt key="0333" sub="BLB" name="Hugs, Grisly Guardian" />
+    <alt key="0334" sub="BLB" name="The Infamous Cruelclaw" />
+    <alt key="0335" sub="BLB" name="Kastral, the Windcrested" />
+    <alt key="0336" sub="BLB" name="Mabel, Heir to Cragflame" />
+    <alt key="0337" sub="BLB" name="Three Tree City" />
+    <alt key="0338" sub="BLB" name="Three Tree City" />
+    <alt key="0339" sub="BLB" name="Three Tree City" />
+    <alt key="0340" sub="BLB" name="Three Tree City" />
+    <alt key="0342" sub="BLB" name="Lumra, Bellow of the Woods" />
+    <alt key="0343" sub="BLB" name="Lumra, Bellow of the Woods" />
+    <alt key="0344" sub="BLB" name="Alania, Divergent Storm" />
+    <alt key="0345" sub="BLB" name="Baylen, the Haymaker" />
+    <alt key="0346" sub="BLB" name="Camellia, the Seedmiser" />
+    <alt key="0347" sub="BLB" name="Clement, the Worrywort" />
+    <alt key="0348" sub="BLB" name="Finneas, Ace Archer" />
+    <alt key="0349" sub="BLB" name="Gev, Scaled Scorch" />
+    <alt key="0350" sub="BLB" name="Kastral, the Windcrested" />
+    <alt key="0351" sub="BLB" name="Mabel, Heir to Cragflame" />
+    <alt key="0352" sub="BLB" name="Muerra, Trash Tactician" />
+    <alt key="0353" sub="BLB" name="Ral, Crackling Wit" />
+    <alt key="0354" sub="BLB" name="Vren, the Relentless" />
+    <alt key="0355" sub="BLB" name="Zoraline, Cosmos Caller" />
+    <alt key="0356" sub="BLB" name="Essence Channeler" />
+    <alt key="0357" sub="BLB" name="Kitnap" />
+    <alt key="0358" sub="BLB" name="Wishing Well" />
+    <alt key="0359" sub="BLB" name="Iridescent Vinelasher" />
+    <alt key="0360" sub="BLB" name="Byway Barterer" />
+    <alt key="0361" sub="BLB" name="Hearthborn Battler" />
+    <alt key="0362" sub="BLB" name="Fecund Greenshell" />
+    <alt key="0363" sub="BLB" name="Pawpatch Recruit" />
+    <alt key="0364" sub="BLB" name="Thornvault Forager" />
+    <alt key="0365" sub="BLB" name="Dreamdew Entrancer" />
+    <alt key="0366" sub="BLB" name="Lunar Convocation" />
+    <alt key="0367" sub="BLB" name="Fabled Passage" />
+    <alt key="0368" sub="BLB" name="Fountainport" />
+    <alt key="0381" sub="BLB" name="Hop to It" />
+    <alt key="0382" sub="BLB" name="Shoreline Looter" />
+    <alt key="0383" sub="BLB" name="Fell" />
+    <alt key="0384" sub="BLB" name="Wear Down" />
+    <alt key="0385" sub="BLB" name="Stormcatch Mentor" />
+    <!-- BLC -->
+    <alt key="0001" sub="BLC" name="Bello, Bard of the Brambles" />
+    <alt key="0002" sub="BLC" name="Hazel of the Rootbloom" />
+    <alt key="0003" sub="BLC" name="Ms. Bumbleflower" />
+    <alt key="0004" sub="BLC" name="Zinnia, Valley's Voice" />
+    <alt key="0041" sub="BLC" name="Arthur, Marigold Knight" />
+    <alt key="0042" sub="BLC" name="Mr. Foxglove" />
+    <alt key="0043" sub="BLC" name="The Odd Acorn Gang" />
+    <alt key="0044" sub="BLC" name="Wildsear, Scouring Maw" />
+    <alt key="0045" sub="BLC" name="Jacked Rabbit" />
+    <alt key="0046" sub="BLC" name="Murmuration" />
+    <alt key="0047" sub="BLC" name="Perch Protection" />
+    <alt key="0048" sub="BLC" name="Steelburr Champion" />
+    <alt key="0049" sub="BLC" name="Tempt with Bunnies" />
+    <alt key="0050" sub="BLC" name="Pollywog Prodigy" />
+    <alt key="0051" sub="BLC" name="Twenty-Toed Toad" />
+    <alt key="0052" sub="BLC" name="Hazel's Brewmaster" />
+    <alt key="0053" sub="BLC" name="Insatiable Frugivore" />
+    <alt key="0054" sub="BLC" name="Moonstone Eulogist" />
+    <alt key="0055" sub="BLC" name="Swarmyard Massacre" />
+    <alt key="0056" sub="BLC" name="Agate Instigator" />
+    <alt key="0057" sub="BLC" name="Calamity of Cinders" />
+    <alt key="0058" sub="BLC" name="Echoing Assault" />
+    <alt key="0059" sub="BLC" name="Prosperous Bandit" />
+    <alt key="0060" sub="BLC" name="Pyreswipe Hawk" />
+    <alt key="0061" sub="BLC" name="Bloodroot Apothecary" />
+    <alt key="0062" sub="BLC" name="Brightcap Badger" />
+    <alt key="0063" sub="BLC" name="Communal Brewing" />
+    <alt key="0064" sub="BLC" name="Evercoat Ursine" />
+    <alt key="0065" sub="BLC" name="Rootcast Apprenticeship" />
+    <alt key="0066" sub="BLC" name="Scurry of Squirrels" />
+    <alt key="0067" sub="BLC" name="Thickest in the Thicket" />
+    <alt key="0068" sub="BLC" name="Trailtracker Scout" />
+    <alt key="0069" sub="BLC" name="Octomancer" />
+    <alt key="0070" sub="BLC" name="Rapid Augmenter" />
+    <alt key="0071" sub="BLC" name="Rolling Hamsphere" />
+    <alt key="0072" sub="BLC" name="Sword of the Squeak" />
+    <alt key="0074" sub="BLC" name="Luminous Broodmoth" />
+    <alt key="0077" sub="BLC" name="Ink-Eyes, Servant of Oni" />
+    <alt key="0079" sub="BLC" name="Marrow-Gnawer" />
+    <alt key="0080" sub="BLC" name="Ant Queen" />
+    <alt key="0081" sub="BLC" name="Birds of Paradise" />
+    <alt key="0082" sub="BLC" name="Chatterfang, Squirrel General" />
+    <alt key="0083" sub="BLC" name="Gilded Goose" />
+    <alt key="0085" sub="BLC" name="Squirrel Mob" />
+    <alt key="0086" sub="BLC" name="Baleful Strix" />
+    <alt key="0087" sub="BLC" name="Derevi, Empyrial Tactician" />
+    <alt key="0088" sub="BLC" name="The Gitrog Monster" />
+    <alt key="0089" sub="BLC" name="Ishai, Ojutai Dragonspeaker" />
+    <alt key="0090" sub="BLC" name="Kwain, Itinerant Meddler" />
+    <alt key="0091" sub="BLC" name="Kykar, Wind's Fury" />
+    <alt key="0093" sub="BLC" name="Jace, the Mind Sculptor" />
+    <alt key="0094" sub="BLC" name="Liliana of the Dark Realms" />
+    <alt key="0095" sub="BLC" name="Chatterfang, Squirrel General" />
+    <alt key="0096" sub="BLC" name="Nissa, Who Shakes the World" />
+    <alt key="0101" sub="BLC" name="Bello, Bard of the Brambles" />
+    <alt key="0102" sub="BLC" name="Hazel of the Rootbloom" />
+    <alt key="0103" sub="BLC" name="Ms. Bumbleflower" />
+    <alt key="0104" sub="BLC" name="Zinnia, Valley's Voice" />
+    <alt key="0356" sub="BLC" name="Flubs, the Fool" />
     
     <!-- ★旧枠 -->
     <!-- MH3 -->
@@ -7915,6 +8087,17 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0305" sub="ACR" name="Mountain" />
     <alt key="0306" sub="ACR" name="Royal Assassin" />
     <alt key="0307" sub="ACR" name="Hidden Blade" />
+    <!-- BLB Special Guest -->
+    <alt key="0054" sub="BLB Special Guest" name="Swords to Plowshares" />
+    <alt key="0055" sub="BLB Special Guest" name="Ledger Shredder" />
+    <alt key="0056" sub="BLB Special Guest" name="Rat Colony" />
+    <alt key="0057" sub="BLB Special Guest" name="Relentless Rats" />
+    <alt key="0058" sub="BLB Special Guest" name="Kindred Charge" />
+    <alt key="0059" sub="BLB Special Guest" name="Sylvan Tutor" />
+    <alt key="0060" sub="BLB Special Guest" name="Toski, Bearer of Secrets" />
+    <alt key="0061" sub="BLB Special Guest" name="Frogmite" />
+    <alt key="0062" sub="BLB Special Guest" name="Sword of Fire and Ice" />
+    <alt key="0063" sub="BLB Special Guest" name="Secluded Courtyard" />
     
     <!-- ★カードタイプ依存 -->
     <!-- 両面カード -->
