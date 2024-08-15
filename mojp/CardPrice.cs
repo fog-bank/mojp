@@ -234,6 +234,10 @@ public static class CardPrice
                 if (cardName.EndsWith(" - Sketch"))
                     continue;
 
+                // HACK: PD S34 (BLB) にバグ
+                if (cardName.Equals("Sol'Kanar the Tainted", StringComparison.OrdinalIgnoreCase))
+                    cardName = "Sol'kanar the Tainted";
+
                 if (!App.TryGetCard(cardName, out _))
                 {
                     Debug.WriteLine("PD カードリスト：" + cardName);

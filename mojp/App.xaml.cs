@@ -11,6 +11,7 @@ using System.Windows.Threading;
 using System.Xml.Linq;
 #if !OFFLINE
 using System.Net.Http;
+using System.Net.Http.Headers;
 #endif
 
 namespace Mojp;
@@ -49,7 +50,13 @@ public partial class App : Application
     /// <summary>
     /// このアプリで共有する <see cref="System.Net.Http.HttpClient"/> を取得します。
     /// </summary>
-    public static Lazy<HttpClient> HttpClient { get; } = new Lazy<HttpClient>();
+    public static Lazy<HttpClient> HttpClient { get; } = new(() =>
+    {
+        var http = new HttpClient();
+        http.DefaultRequestHeaders.UserAgent.Add(new("mojp", "2.0"));
+        http.DefaultRequestHeaders.Accept.Add(new("application/json"));
+        return http;
+    });
 #endif
 
     /// <summary>
