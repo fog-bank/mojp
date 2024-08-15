@@ -657,7 +657,7 @@ Michonne, Ruthless Survivorと２体以上のゾンビが攻撃するたび、�
     <card name="Vengeant Vampire" ja="Vengeant Vampire" type="クリーチャー ― 吸血鬼" pt="4/4">絆魂
 Vengeant Vampireが死亡したとき、対戦相手がコントロールしているクリーチャー１体を対象とする。それを破壊し、あなたは４点のライフを得る。</card>
     <!-- Game Night Free-For-All (GN3) -->
-    <card name="Zamriel, Seraph of Steel" ja="鋼の熾天使、ザムリエル" type="伝説のクリーチャー ― 天使" pt="3/4">飛行
+    <!--<card name="Zamriel, Seraph of Steel" ja="鋼の熾天使、ザムリエル" type="伝説のクリーチャー ― 天使" pt="3/4">飛行
 あなたのターンの間、あなたがコントロールしていて装備品がついているクリーチャーは破壊不能を持つ。</card>
     <card name="Maeve, Insidious Singer" ja="腹黒い歌い手、メイヴ" type="伝説のクリーチャー ― セイレーン" pt="3/4">(２)(青)：クリーチャー１体を対象とする。それを使嗾する。このターン、そのクリーチャーがあなたの対戦相手１人を攻撃するたび、あなたはカード１枚を引く。（あなたの次のターンまで、使嗾されたクリーチャーは、可能なら各戦闘で攻撃し、可能ならあなたでないプレイヤーを攻撃する。）</card>
     <card name="Vogar, Necropolis Tyrant" ja="死滅都市の暴君、ヴォーガー" type="伝説のクリーチャー ― ゾンビ・巨人" pt="4/4">威迫
@@ -666,7 +666,7 @@ Vengeant Vampireが死亡したとき、対戦相手がコントロールして�
     <card name="Nogi, Draco-Zealot" ja="ドラゴン狂、ノギー" type="伝説のクリーチャー ― コボルド・シャーマン" pt="3/3">あなたがドラゴン・呪文を唱えるためのコストは(１)少なくなる。
 ドラゴン狂、ノギーが攻撃するたび、あなたが３体以上のドラゴンをコントロールしている場合、ターン終了時まで、ドラゴン狂、ノギーは基本のパワーとタフネスが5/5のドラゴンになり、飛行を得る。</card>
     <card name="Imaryll, Elfhame Elite" ja="エルフェイムの精鋭、イマリール" type="伝説のクリーチャー ― エルフ・戦士" pt="3/3">エルフェイムの精鋭、イマリールが攻撃するたび、ターン終了時まで、これは+X/+Xの修整を受ける。Ｘはあなたがコントロールしていてこれでないエルフの数に等しい。
-あなたは「エルフェイムの精鋭、イマリールは、ブロックされなかったかのように戦闘ダメージを割り振る。」を選んでもよい。</card>
+あなたは「エルフェイムの精鋭、イマリールは、ブロックされなかったかのように戦闘ダメージを割り振る。」を選んでもよい。</card>-->
     <!-- Game Night 2019 (GN2) -->
     <card name="Highcliff Felidar" ja="Highcliff Felidar" type="クリーチャー ― 猫・ビースト" pt="5/5">警戒
 Highcliff Felidarが戦場に出たとき、対戦相手１人につき、そのプレイヤーがコントロールしているクリーチャーの中で最大のパワーを持つクリーチャー１体を選ぶ。それらのクリーチャーを破壊する。</card>
@@ -1424,10 +1424,10 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <wiki name="Ruin" wiki="路傍+瓦解/Road+Ruin" />
     <wiki name="Indulge" wiki="放蕩+三昧/Indulge+Excess" />
     <wiki name="Excess" wiki="放蕩+三昧/Indulge+Excess" />
-    <wiki name="Coward" wiki="臆病者+殺人鬼/Coward+Killer" />
+    <!-- WHO --><!--<wiki name="Coward" wiki="臆病者+殺人鬼/Coward+Killer" />
     <wiki name="Killer" wiki="臆病者+殺人鬼/Coward+Killer" />
     <wiki name="Gallifrey Falls" wiki="ギャリフレイの陥落+終止符を/Gallifrey Falls+No More" />
-    <wiki name="No More" wiki="ギャリフレイの陥落+終止符を/Gallifrey Falls+No More" />
+    <wiki name="No More" wiki="ギャリフレイの陥落+終止符を/Gallifrey Falls+No More" />-->
     <!-- 分割カード (MKM) -->
     <wiki name="Cease" wiki="中止+停止/Cease+Desist" />
     <wiki name="Desist" wiki="中止+停止/Cease+Desist" />
@@ -8180,9 +8180,9 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="２倍する" value="２倍にする" />
     <regex target="text" pattern="ためコスト" value="ためのコスト" />
     <regex target="text" pattern="修整を得る。" value="修整を受ける。" />
-    <regex target="text" pattern="選ばれてない" value="選ばれていない" />
     <regex target="text" pattern="コン[トロ]ール" value="コントロール" />
     <regex target="text" pattern="(?&lt;!に)よって" value="によって" />
+    <regex target="text" pattern="マナ・コスト支払う" value="マナ・コストを支払う" />
     <regex target="text" pattern="カウンター１個置く" value="カウンター１個を置く" />
     <regex target="text" pattern="ときのみ唱えられる" value="ときにのみ唱えられる" />
     <regex target="text" pattern="(?&lt;=（[^）\n]+)$" value="）" />
@@ -8191,7 +8191,6 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="」$" value="" />
     <regex target="text" pattern="。。" value="。" />
     <regex target="text" pattern="\n(?=。|そうしたなら)" value="" />
-    <regex target="text" pattern="待機\((.)\)" value="待機$1" />
     <regex target="text" pattern="は各対戦相手は" value="は各対戦相手に" />
     <regex target="text" pattern="望む枚数の呪文" value="望む数の呪文" />
     <regex target="text" pattern="カードを１枚を対象" value="カード１枚を対象" />
@@ -8247,20 +8246,18 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="。を持つ" value="。」を持つ" />
     <regex target="text" pattern="護法１を" value="護法(１)を" />
     <regex target="text" pattern="切り直す」" value="切り直す。」" />
-    <regex target="text" pattern="使嗾する（" value="使嗾する。（" />
     <regex target="text" pattern="行ってる間" value="行っている間" />
     <regex target="text" pattern="攻撃してる" value="攻撃している" />
     <regex target="text" pattern="混沌の魔将" value="渾沌の魔将" />
     <regex target="text" pattern="手札に加る。" value="手札に加える。" />
+    <regex target="text" pattern="選ばれてない" value="選ばれていない" />
     <regex target="text" pattern="を置く軽業の" value="を置く。軽業の" />
-    <regex target="text" pattern="時間的な何か" value="時間的ななにか" />
     <regex target="text" pattern="支払に加えて" value="支払いに加えて" />
     <regex target="text" pattern="支払ってもよい）" value="支払ってもよい。）" />
     <regex target="text" pattern="一番下望む順番で" value="一番下に望む順番で" />
     <regex target="text" pattern="クリーチャー死亡" value="クリーチャーが死亡" />
     <regex target="text" pattern="クリーチャ(?!ー)" value="クリーチャー" />
     <regex target="text" pattern="アヴァシンAvacyn" value="アヴァシン/Avacyn" />
-    <regex target="text" pattern="マナ・コスト支払う" value="マナ・コストを支払う" />
     <regex target="text" pattern="１枚のカード捨てる" value="１枚のカードを捨てる" />
     <regex target="text" pattern="唱えるため追加コスト" value="唱えるための追加コスト" />
     <regex target="text" pattern="コントローラーカード" value="コントローラーはカード" />
@@ -8291,6 +8288,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="以下にに" value="以下に" />
     <regex target="text" pattern="点マナ総量" value="マナ総量" />
     <regex target="text" pattern="なあなたの" value="あなたの" />
+    <regex target="text" pattern="待機\((.)\)" value="待機$1" />
     <regex target="text" pattern="一番上にから" value="一番上から" />
     <regex target="text" pattern="歴史的なとは" value="歴史的とは" />
     <regex target="text" pattern="１体ににつき" value="１体につき" />
@@ -8352,12 +8350,13 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="(?&lt;!カウンター[^。]+)を追加する" value="を追放する" />
     <regex target="text" pattern="(?&lt;=呪文|クリーチャー)化(?!した)" value="か" />
     <regex target="text" pattern="(?&lt;=ターン[^。]+)(?&lt;!から)始めて" value="初めて" />
+    <regex target="text" pattern="使嗾する（" value="使嗾する。（" />
+    <regex target="text" pattern="時間的な何か" value="時間的ななにか" />
     <regex target="text" pattern="コントロールしてて" value="コントロールしていて" />
     <regex target="text" pattern="がが" value="が" />
     <!-- タイプの誤り -->
     <regex target="type" pattern="(?&lt;!ウルザの)\(Urza’s\)" value="ウルザの(Urza's)" />
     <regex target="type" pattern="(?&lt;!ク＝タン)\(C’tan\)" value="ク＝タン(C'tan)" />
-    <regex target="type" pattern="タイム\(Time\)・ロード\(Lord\)" value="タイムロード(Time Lord)" />
     <regex target="text" pattern="\(Advanture\)" value="出来事(Adventure)" />
     <regex target="text" pattern="\(Vechile\)" value="機体(Vehicle)" />
     <regex target="text" pattern="\(Farie\)" value="フェアリー(Faerie)" />
@@ -8491,7 +8490,6 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="(?m)^あなたは(.+)をいつでも見てもよい。$" value="あなたはいつでも$1を見てもよい。" />
     <regex target="text" pattern="追加でカードを(?=.枚引く)" value="カードを追加で" />
     <regex target="text" pattern="(?&lt;!は、?|使嗾.+)可能なら各戦闘で" value="各戦闘で、可能なら" />
-    <regex target="text" pattern="^いつでも、あなたは" value="あなたはいつでも" />
     <regex target="text" pattern="無作為に対戦相手１人を選ぶ" value="対戦相手１人を無作為に選ぶ" />
     <regex target="text" pattern="(?&lt;=なら|場合)、([^。]+)は代わりに(?=[１-９Ｘ]点のダメージ)" value="、代わりに$1は" />
     <regex target="text" pattern="あなたの墓地にいずれの領域からでもカードが置かれるなら" value="カードがいずこかからあなたの墓地に置かれるなら" />
@@ -8671,7 +8669,6 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="がコントロールしていて((?:パワー|タフネス)が.(?:以上|以下))である(?=各?クリーチャー|すべてのクリーチャー)" value="がコントロールしている$1の" />
     <regex target="text" pattern="(?m)(?&lt;=(?:^|：)(?:パワー|マナ総量)が.以下)である(?=クリーチャー)" value="の" />
     <regex target="text" pattern="(?&lt;=パワーが.以下)である(?=クリーチャーにはブロックされない)" value="の" />
-    <regex target="text" pattern="がオーナーであり待機状態であるカード" value="がオーナーである待機状態のカード" />
     <regex target="text" pattern="を持つ紋章" value="の紋章" />
     <!-- テンプレート変更：手札/墓地から -->
     <regex target="text" pattern="(?m)(?&lt;=^|・|：|とき、|時に、|場合、)いずれかの墓地にある(?=[^。]*カード１枚を対象)" value="墓地から" />
@@ -8744,7 +8741,6 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="カード１枚を公開し、それをあなたの手札に加え(?=てもよい|る。」)" value="カード１枚を公開し、あなたの手札に加え" />
     <regex target="text" pattern="代わりに、これはそのプレイヤーかパーマネントに(?=.点のダメージを与える。)" value="代わりに、これは" />
     <regex target="text" pattern="(?:そのトークンは|それは|(?&lt;=ことと、?)それが)伝説で(?=は?ないことを除き、)" value="伝説で" />
-    <regex target="text" pattern="(?&lt;=脱出を得る.+（.+)このカード" value="そのカード" />
     <!-- テンプレート変更：ライブラリーを探す -->
     <regex target="text" pattern="を探(?:し、|して|す。)(?:それら?|そのカード|それらのカード)をあなたの手札に加え" value="を探し、あなたの手札に加え" />
     <regex target="text" pattern="(?&lt;!探す。.+)を探(?:し、|して|す。)(?:それら?|そのカード|それらのカード)を公開し(?:、|て|た上で|、それを)(?=(?:あなた|自分)の手札に加え)" value="を探し、公開し、" />
@@ -8921,7 +8917,6 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="探検する。" value="探検を行う。" />
     <regex target="text" pattern="ウィザード、邪術師、シャーマンへの装備" value="シャーマンか邪術師かウィザードに装備" />
     <regex target="text" pattern="(?&lt;=たとき)、ならびに、?|(?&lt;=たとき|るたび|開始時)と、" value="、および、" />
-    <regex target="text" pattern="(?&lt;!このターン、[^。]+)が攻撃してブロックされなかったとき、(?![^。]+場合、)" value="が攻撃してブロックされないたび、" />
     <regex target="text" pattern="ステップやフェイズの終了に際してあなたはこのマナを失わない。" value="このマナはステップやフェイズの終了に際して無くならない。" />
     <regex target="text" pattern="あなたがオーナーである、統率者であるすべてのクリーチャーは" value="あなたがオーナーであり統率者であるクリーチャーは" />
     <regex target="text" pattern="あなたがコントロールしている、統率者であるすべてのクリーチャーは" value="あなたがコントロールしていて統率者であるクリーチャーは" />
@@ -8929,7 +8924,6 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="実演（あなたがこの呪文を唱えたとき、あなたは「これをコピーし、(?:その後、)?対戦相手１人にもこれをコピーさせる。(両プレイヤーは自分のコピーの新しい対象を選んでもよい。)」を選んでもよい。）" value="実演（あなたがこの呪文を唱えたとき、あなたはこれをコピーしてもよい。そうしたなら、対戦相手１人にもこれをコピーさせる。$1）" />
     <!-- テンプレート対抗：助数詞 -->
     <regex target="text" pattern="(?&lt;=(?&lt;!か|や|カード・タイプを失うことを除き、その)クリーチャー(?:の|１体を対象とする。(?:[^。]+を除き、)?それの)コピーである)トークン１つ" value="トークン１体" />
-    <regex target="text" pattern="のうちあなたが選んだカウンター１つを置く。" value="のうちあなたが選んだカウンター１個を置く。" />
     <!-- テンプレート対抗：ライブラリーの一番上 -->
     <regex target="text" pattern="あなたのライブラリーの一番上にあるカード１枚" value="あなたのライブラリーの一番上のカード" />
     <regex target="text" pattern="いつでもあなたのライブラリーの一番上のカードを見てもよ|あなたのライブラリーの一番上のカードをいつ見てもよ(?!く、(?!あなたは))" value="いつでもあなたのライブラリーの一番上のカードを見てよ" />
@@ -8990,7 +8984,6 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="すべての無色の呪文" value="無色の各呪文" />
     <regex target="text" pattern="すべてのスリヴァー・呪文" value="各スリヴァー・呪文" />
     <regex target="text" pattern="すべての対戦相手はライフを得られない。" value="対戦相手はライフを得られない。" />
-    <regex target="text" pattern="ターン終了時まで、すべてのプレイヤーは" value="ターン終了時まで、各プレイヤーは" />
     <regex target="text" pattern="あなたがコントロールしていて((?:末裔|乗騎|スケルトン)[^。]+)であるすべては" value="あなたがコントロールしているすべての$1は" />
     <regex target="text" pattern="(?&lt;=ゴブリンやオークのうち[^。]+)すべては" value="各クリーチャーは" />
     <regex target="text" pattern="(?&lt;=クリーチャーやプレインズウォーカーのうち[^。]+)すべてを(?=追放する)" value="各パーマネントを" />
@@ -9028,7 +9021,6 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="出来事・呪文やドラゴン・呪文を唱えるたび" value="出来事かドラゴンである呪文を唱えるたび" />
     <!-- テンプレート対抗：this card or B (や) -->
     <regex target="text" pattern="や(?=装備しているクリーチャーが[^。（]+たび)" value="か" />
-    <regex target="text" pattern="や(?=これと組になっているクリーチャー１体が[^。（]+たび)" value="か" />
     <regex target="text" pattern="、または(?=[^。]+たび、)" value="か、" />
     <regex target="text" pattern="(?:や|または)(?=、?(?:あなたがコントロールしていて)?(?:パワーが.以.であり)?(?:これでない|トークンでもこれでもない|オーラがついている)(?!１体以上の)[^。、]+[がを][^。、]+たび)" value="か" />
     <!-- テンプレート対抗：among 扱いする A or B -->
@@ -9126,8 +9118,6 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="「黙秘」か「密告」" value="「黙秘(Silence)」か「密告(Snitch)」" />
     <regex target="text" pattern="「証拠」か「賄賂」" value="「証拠(Evidence)」か「賄賂(Bribery)」" />
     <regex target="text" pattern="「支配」か「導き」" value="「支配(Dominion)」か「導き(Guidance)」" />
-    <!-- PIP --><!--<regex target="text" pattern="「ＮＣＲ」か「リージョン」" value="「ＮＣＲ」か「リージョン(Legion)」" />
-    <regex target="text" pattern="「ブラザーフッド」か「エンクレイヴ」" value="「ブラザーフッド(Brotherhood)」か「エンクレイヴ(Enclave)」" />-->
     <regex target="text" pattern="「時」または「金」" value="「時(Time)」または「金(Money)」" />
     <regex target="text" pattern="「死」または「税」" value="「死(Death)」または「税(Taxes)」" />
     <regex target="text" pattern="「質」または「量」" value="「質(Strength)」または「量(Numbers)」" />
@@ -9140,13 +9130,25 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <regex target="text" pattern="「時間」または「知識」" value="「時間(Time)」または「知識(Knowledge)」" />
     <regex target="text" pattern="「仲間」または「救援」" value="「仲間(Fellowship)」または「救援(Aid)」" />
     <regex target="text" pattern="「新芽」または「収穫」" value="「新芽(Sprout)」または「収穫(Harvest)」" />
-    <regex target="text" pattern="「無罪」または「有罪」" value="「無罪(Innocent)」または「有罪(Guilty)」" />
     <regex target="text" pattern="「恩寵」または「糾弾」" value="「恩寵(Grace)」または「糾弾(Condemnation)」" />
-    <regex target="text" pattern="「真実」または「報い」" value="「真実(Truth)」または「報い(Consequences)」" />
     <regex target="text" pattern="「身体疾患」または「精神疾患」" value="「身体疾患(Sickness)」または「精神疾患(Psychosis)」" />
     <regex target="text" pattern="「赤角山道」または「モリアの坑道」" value="「赤角山道(Redhorn Pass)」または「モリアの坑道(Mines of Moria)」" />
     <regex target="text" pattern="「プレインズウォーク」または「カオス」" value="「プレインズウォーク(Planeswalk)」または「カオス(Chaos)」" />
     <regex target="text" pattern="「金銭」「友人」「秘密」" value="「金銭(Money)」「友人(Friends)」「秘密(Secrets)」" />
+    <!-- WHO -->
+    <!--<regex target="type" pattern="タイム\(Time\)・ロード\(Lord\)" value="タイムロード(Time Lord)" />
+    <regex target="text" pattern="^いつでも、あなたは" value="あなたはいつでも" />
+    <regex target="text" pattern="がオーナーであり待機状態であるカード" value="がオーナーである待機状態のカード" />
+    <regex target="text" pattern="(?&lt;=脱出を得る.+（.+)このカード" value="そのカード" />
+    <regex target="text" pattern="(?&lt;!このターン、[^。]+)が攻撃してブロックされなかったとき、(?![^。]+場合、)" value="が攻撃してブロックされないたび、" />
+    <regex target="text" pattern="のうちあなたが選んだカウンター１つを置く。" value="のうちあなたが選んだカウンター１個を置く。" />
+    <regex target="text" pattern="ターン終了時まで、すべてのプレイヤーは" value="ターン終了時まで、各プレイヤーは" />
+    <regex target="text" pattern="や(?=これと組になっているクリーチャー１体が[^。（]+たび)" value="か" />
+    <regex target="text" pattern="「無罪」または「有罪」" value="「無罪(Innocent)」または「有罪(Guilty)」" />
+    <regex target="text" pattern="「真実」または「報い」" value="「真実(Truth)」または「報い(Consequences)」" />-->
+    <!-- PIP -->
+    <!--<regex target="text" pattern="「ＮＣＲ」か「リージョン」" value="「ＮＣＲ」か「リージョン(Legion)」" />
+    <regex target="text" pattern="「ブラザーフッド」か「エンクレイヴ」" value="「ブラザーフッド(Brotherhood)」か「エンクレイヴ(Enclave)」" />-->
     <!-- テキスト未入力 -->
     <card name="Fiendish Duo" ja="極悪な二人組" type="クリーチャー ― デビル" pt="5/5">発生源１つが対戦相手１人にダメージを与えるなら、代わりに、それはそのプレイヤーにその２倍の点数のダメージを与える。</card>
     <card name="Flubs, the Fool" ja="愚者、フラブス" type="伝説のクリーチャー ― カエル・スカウト" pt="0/5">あなたの各ターンに、あなたは追加の土地１つをプレイしてもよい。
@@ -9468,16 +9470,6 @@ Lv8+：
     <card name="Warehouse Tabby" ja="倉庫の虎猫" type="クリーチャー ― 猫" pt="1/1">あなたがコントロールしているエンチャント１つが戦場から墓地に置かれるたび、「このクリーチャーではブロックできない。」を持つ黒の1/1のネズミ・クリーチャー・トークン１体を生成する。
 (１)(黒)：ターン終了時まで、倉庫の虎猫は接死を得る。</card>
     <card name="Yenna, Redtooth Regent" ja="赤歯の執政、イェナ" type="伝説のクリーチャー ― エルフ・貴族" pt="4/4">(２),(Ｔ)：あなたがコントロールしていて、あなたがコントロールしている他のパーマネントと同じ名前を持たないエンチャント１つを対象とする。伝説でないことを除き、それのコピーであるトークン１つを生成する。そのトークンがオーラであるなら、赤歯の執政、イェナをアンタップし、その後、占術２を行う。起動はソーサリーとしてのみ行う。</card>
-    <!-- テキストが正常でないカード (WHO) -->
-    <card name="Gallifrey Falls" ja="ギャリフレイの陥落" type="インスタント" rel="No More" wiki="ギャリフレイの陥落+終止符を/Gallifrey Falls+No More">ギャリフレイの陥落は各クリーチャーにそれぞれ４点のダメージを与える。このターン、これによりダメージを受けたクリーチャーが死亡するなら、代わりにそれを追放する。
-融合（あなたはあなたの手札からこのカードの半分か両方合わせたものを唱えてもよい。）</card>
-    <card name="Ian Chesterton" ja="イアン・チェスタトン" type="伝説のクリーチャー ― 人間・科学者" pt="2/3">理科の先生 ― あなたが唱える各英雄譚・呪文はそれぞれ複製を持つ。その複製コストは、それのマナ・コストに等しい。（あなたがその英雄譚を唱えたとき、あなたが複製コストを支払った回数１回につき、それを１回コピーする。パーマネントのコピーはトークンとして戦場に出る。）
-ドクターのコンパニオン（もう一方がドクターであるなら、あなたは統率者２体を使用できる。）</card>
-    <card name="No More" ja="終止符を" type="インスタント" rel="Gallifrey Falls" wiki="ギャリフレイの陥落+終止符を/Gallifrey Falls+No More">あなたがコントロールしている望む数のクリーチャーを対象とする。それらはフェイズ・アウトする。
-融合（あなたはあなたの手札からこのカードの半分か両方合わせたものを唱えてもよい。）</card>
-    <card name="The Curse of Fenric" ja="フェンリックの呪い" type="エンチャント ― 英雄譚">I ― 各プレイヤーにつきそれぞれ、そのプレイヤーがコントロールしているクリーチャー最大１体を対象とする。それを破壊する。これにより破壊された各クリーチャーにつきそれぞれ、それのコントローラーは接死を持つ緑の3/3のミュータント・クリーチャー・トークン１体を生成する。
-II ― トークンでないクリーチャー１体を対象とする。それは《フェンリック》という名前を持つ6/6の伝説のホラー・クリーチャーになり、すべての能力を失う。
-III ― ミュータント１体と、《フェンリック》という名前を持ちそれでないクリーチャー１体を対象とする。前者は後者と格闘を行う。</card>
     <!-- テキストが正常でないカード (LCI,LCC) -->
     <card name="Arm-Mounted Anchor" ja="小手仕込みの錨" type="アーティファクト ― 装備品">装備しているクリーチャーは+2/+2の修整を受け威迫を持つ。
 装備しているクリーチャーがプレイヤー１人に戦闘ダメージを与えるたび、カード２枚を引く。その後、あなたが海賊・カード１枚を捨てないかぎり、カード２枚を捨てる。
@@ -12340,7 +12332,7 @@ III ― 対戦相手１人を対象とする。そのプレイヤーがコント
 (１),(Ｔ),魂標ランタンを生け贄に捧げる：カード１枚を引く。</card>
     
     <!-- WHO -->
-    <card name="Missy" ja="ミッシー" type="伝説のクリーチャー ― タイムロード・ならず者" pt="4/5">アーティファクトでもこれでもないクリーチャー１体が死亡するたび、それをあなたのコントロール下で裏向きかつタップ状態で戦場に戻す。それは2/2のサイバーマン・アーティファクト・クリーチャーである。
+    <!--<card name="Missy" ja="ミッシー" type="伝説のクリーチャー ― タイムロード・ならず者" pt="4/5">アーティファクトでもこれでもないクリーチャー１体が死亡するたび、それをあなたのコントロール下で裏向きかつタップ状態で戦場に戻す。それは2/2のサイバーマン・アーティファクト・クリーチャーである。
 あなたの終了ステップの開始時に、各対戦相手はそれぞれ「あなたがコントロールしている各アーティファクト・クリーチャーはそれぞれ、その対戦相手に１点のダメージを与える。」か、「あなたはカード１枚を引き、カオスが起こる。」かの最悪の二択を行う。</card>
     <card name="The Night of the Doctor" ja="ドクター前夜" type="エンチャント ― 英雄譚">I ― すべてのクリーチャーを破壊する。
 II ― あなたの墓地にある伝説のクリーチャー・カード１枚を対象とする。それを戦場に戻す。それの上に、先制攻撃カウンターや警戒カウンターや絆魂カウンターのうちあなたが選んだカウンター１個を置く。</card>
@@ -12378,17 +12370,28 @@ II ― あなたの墓地にある伝説のクリーチャー・カード１枚�
 見上げた文明人 ― あなたの終了ステップの開始時に、各プレイヤーはそれぞれカード１枚を引いてもよい。それを行った各対戦相手はそれぞれ、自分の次のターンの間、あなたやあなたがコントロールしているパーマネントを攻撃できない。</card>
     <card name="Osgood, Operation Double" ja="オペレーション・ダブル、オスグッド" type="伝説のクリーチャー ― 人間・エイリアン・多相の戦士" pt="2/2">あなたがこの呪文を唱えたとき、伝説でないことを除き、これのコピーであるトークン１体を生成する。
 (Ｔ)：(◇)を加える。このマナは、アーティファクト・呪文を唱えるためか、アーティファクトの能力を起動するためにのみ使用できる。
-パラドックス ― あなたがあなたの手札以外から呪文を唱えるたび、調査を行う。（手掛かり・トークン１つを生成する。）</card>
+パラドックス ― あなたがあなたの手札以外から呪文を唱えるたび、調査を行う。（手掛かり・トークン１つを生成する。）</card>-->
     
     <!-- 指示語 (WHO) -->
-    <card name="Ashad, the Lone Cyberman" ja="孤高のサイバーマン、アシャド" type="伝説のアーティファクト・クリーチャー ― サイバーマン" pt="3/3">各ターン内であなたが唱える１つ目の、伝説でないアーティファクト・呪文は犠牲２を持つ。（あなたがその呪文を唱えるに際して、あなたはパワーが２以上のクリーチャー１体を生け贄に捧げてもよい。そうしたとき、それをコピーする。アーティファクト・呪文のコピーはトークンになる。）
+    <!--<card name="Ashad, the Lone Cyberman" ja="孤高のサイバーマン、アシャド" type="伝説のアーティファクト・クリーチャー ― サイバーマン" pt="3/3">各ターン内であなたが唱える１つ目の、伝説でないアーティファクト・呪文は犠牲２を持つ。（あなたがその呪文を唱えるに際して、あなたはパワーが２以上のクリーチャー１体を生け贄に捧げてもよい。そうしたとき、それをコピーする。アーティファクト・呪文のコピーはトークンになる。）
 あなたがこれでないクリーチャー１体を生け贄に捧げるたび、これの上に+1/+1カウンター１個を置く。</card>
     <card name="Nanogene Conversion" ja="ナノジーンの変換" type="ソーサリー">あなたがコントロールしているクリーチャー１体を対象とする。ターン終了時まで、それでない各クリーチャーはそれぞれ、伝説でないことを除きそのクリーチャーのコピーになる。</card>
     <card name="This Is How It Ends" ja="こうして終わりを迎える" type="インスタント">クリーチャー１体を対象とする。それのオーナーはそれを自分のライブラリーに加えて切り直し、その後「そのプレイヤーは５点のライフを失う。」か、「そのプレイヤーがオーナーでありそれでないクリーチャー１体を自分のライブラリーに加えて切り直す。」かの最悪の二択を行う。</card>
     <card name="The Sea Devils" ja="シー・デビル" type="エンチャント ― 英雄譚">I,II ― 島渡りを持つ緑の2/2のエイリアン・サラマンダー・クリーチャー・トークン１体を生成する。（防御プレイヤーが島をコントロールしているかぎり、それはブロックされない。）
 III ― ターン終了時まで、サラマンダー１体がプレイヤー１人に戦闘ダメージを与えるたび、そのプレイヤーがコントロールしているクリーチャー１体を対象とする。そのサラマンダーはそれにそのダメージに等しい点数のダメージを与える。</card>
     <card name="The Twelfth Doctor" ja="12代目ドクター" type="伝説のクリーチャー ― タイムロード・ドクター" pt="4/4">各ターン内であなたがあなたの手札以外から唱える１つ目の呪文は実演を持つ。（あなたがその呪文を唱えたとき、あなたはそれをコピーしてもよい。そうしたなら、対戦相手１人を選び、それをコピーさせる。パーマネント・呪文のコピーはトークンになる。）
-あなたが呪文１つをコピーするたび、12代目ドクターの上に+1/+1カウンター１個を置く。</card>
+あなたが呪文１つをコピーするたび、12代目ドクターの上に+1/+1カウンター１個を置く。</card>-->
+    
+    <!-- テキストが正常でないカード (WHO) -->
+    <!--<card name="Gallifrey Falls" ja="ギャリフレイの陥落" type="インスタント" rel="No More" wiki="ギャリフレイの陥落+終止符を/Gallifrey Falls+No More">ギャリフレイの陥落は各クリーチャーにそれぞれ４点のダメージを与える。このターン、これによりダメージを受けたクリーチャーが死亡するなら、代わりにそれを追放する。
+融合（あなたはあなたの手札からこのカードの半分か両方合わせたものを唱えてもよい。）</card>
+    <card name="Ian Chesterton" ja="イアン・チェスタトン" type="伝説のクリーチャー ― 人間・科学者" pt="2/3">理科の先生 ― あなたが唱える各英雄譚・呪文はそれぞれ複製を持つ。その複製コストは、それのマナ・コストに等しい。（あなたがその英雄譚を唱えたとき、あなたが複製コストを支払った回数１回につき、それを１回コピーする。パーマネントのコピーはトークンとして戦場に出る。）
+ドクターのコンパニオン（もう一方がドクターであるなら、あなたは統率者２体を使用できる。）</card>
+    <card name="No More" ja="終止符を" type="インスタント" rel="Gallifrey Falls" wiki="ギャリフレイの陥落+終止符を/Gallifrey Falls+No More">あなたがコントロールしている望む数のクリーチャーを対象とする。それらはフェイズ・アウトする。
+融合（あなたはあなたの手札からこのカードの半分か両方合わせたものを唱えてもよい。）</card>
+    <card name="The Curse of Fenric" ja="フェンリックの呪い" type="エンチャント ― 英雄譚">I ― 各プレイヤーにつきそれぞれ、そのプレイヤーがコントロールしているクリーチャー最大１体を対象とする。それを破壊する。これにより破壊された各クリーチャーにつきそれぞれ、それのコントローラーは接死を持つ緑の3/3のミュータント・クリーチャー・トークン１体を生成する。
+II ― トークンでないクリーチャー１体を対象とする。それは《フェンリック》という名前を持つ6/6の伝説のホラー・クリーチャーになり、すべての能力を失う。
+III ― ミュータント１体と、《フェンリック》という名前を持ちそれでないクリーチャー１体を対象とする。前者は後者と格闘を行う。</card>-->
     
     <!-- LCI / LCC / REX -->
     <card name="Abuelo's Awakening" ja="アブエロの覚醒" type="ソーサリー">あなたの墓地にあり、アーティファクトか、オーラでないエンチャントであるカード１枚を対象とする。それを+1/+1カウンターＸ個が追加で置かれた状態で戦場に戻す。それは、他のタイプに加えて飛行を持つ1/1のスピリット・クリーチャーである。</card>
@@ -13381,6 +13384,200 @@ Eivor, Battle-Readyが攻撃するたび、これは各対戦相手にそれぞ�
     <card name="Where" />
     <!-- Unfinity -->
     <card name="Omniclown Colossus" />
+    <!-- WHO -->
+    <card name="Davros, Dalek Creator" />
+    <card name="The Fourth Doctor" />
+    <card name="The Tenth Doctor" />
+    <card name="The Thirteenth Doctor" />
+    <card name="Rose Tyler" />
+    <card name="Sarah Jane Smith" />
+    <card name="Yasmin Khan" />
+    <card name="Missy" />
+    <card name="Clara Oswald" />
+    <card name="Adipose Offspring" />
+    <card name="Astrid Peth" />
+    <card name="Atraxi Warden" />
+    <card name="Banish to Another Universe" />
+    <card name="Barbara Wright" />
+    <card name="The Caves of Androzani" />
+    <card name="Crack in Time" />
+    <card name="Crisis of Conscience" />
+    <card name="Everybody Lives!" />
+    <card name="Everything Comes to Dust" />
+    <card name="Four Knocks" />
+    <card name="The Girl in the Fireplace" />
+    <card name="Ian Chesterton" />
+    <card name="Jo Grant" />
+    <card name="The Night of the Doctor" />
+    <card name="The Pandorica" />
+    <card name="Peri Brown" />
+    <card name="Romana II" />
+    <card name="Tegan Jovanka" />
+    <card name="Trial of a Time Lord" />
+    <card name="The War Games" />
+    <card name="The Wedding of River Song" />
+    <card name="Wilfred Mott" />
+    <card name="Adric, Mathematical Genius" />
+    <card name="All of History, All at Once" />
+    <card name="An Unearthly Child" />
+    <card name="Auton Soldier" />
+    <card name="Become the Pilot" />
+    <card name="Cyber Conversion" />
+    <card name="Danny Pink" />
+    <card name="Don't Blink" />
+    <card name="The Eleventh Hour" />
+    <card name="Five Hundred Year Diary" />
+    <card name="Flatline" />
+    <card name="Flesh Duplicate" />
+    <card name="The Flood of Mars" />
+    <card name="Hunted by The Family" />
+    <card name="K-9, Mark I" />
+    <card name="Martha Jones" />
+    <card name="Nanogene Conversion" />
+    <card name="Nardole, Resourceful Cyborg" />
+    <card name="Nyssa of Traken" />
+    <card name="Quantum Misalignment" />
+    <card name="Renegade Silent" />
+    <card name="Reverse the Polarity" />
+    <card name="Star Whale" />
+    <card name="Start the TARDIS" />
+    <card name="Surge of Brilliance" />
+    <card name="Time Beetle" />
+    <card name="Time Lord Regeneration" />
+    <card name="Traverse Eternity" />
+    <card name="Twice Upon a Time" />
+    <card name="Unlikely Meeting" />
+    <card name="Wibbly-wobbly, Timey-wimey" />
+    <card name="Zygon Infiltrator" />
+    <card name="Dalek Drone" />
+    <card name="Dalek Squadron" />
+    <card name="Death in Heaven" />
+    <card name="Doomsday Confluence" />
+    <card name="Exterminate!" />
+    <card name="Genesis of the Daleks" />
+    <card name="This Is How It Ends" />
+    <card name="Time Reaper" />
+    <card name="The Toymaker's Trap" />
+    <card name="Vashta Nerada" />
+    <card name="Vislor Turlough" />
+    <card name="Amy Pond" />
+    <card name="Bill Potts" />
+    <card name="Coward" />
+    <card name="Killer" />
+    <card name="Dan Lewis" />
+    <card name="Day of the Moon" />
+    <card name="Decaying Time Loop" />
+    <card name="Delete" />
+    <card name="Donna Noble" />
+    <card name="Ecstatic Beauty" />
+    <card name="Ensnared by the Mara" />
+    <card name="Flaming Tyrannosaurus" />
+    <card name="The Flux" />
+    <card name="Impending Flux" />
+    <card name="Into the Time Vortex" />
+    <card name="Iraxxa, Empress of Mars" />
+    <card name="Memory Worm" />
+    <card name="The Parting of the Ways" />
+    <card name="Return the Past" />
+    <card name="RMS Titanic" />
+    <card name="Ryan Sinclair" />
+    <card name="Sibylline Soothsayer" />
+    <card name="Sontaran General" />
+    <card name="The Sound of Drums" />
+    <card name="Ace, Fearless Rebel" />
+    <card name="City of Death" />
+    <card name="Displaced Dinosaurs" />
+    <card name="The Five Doctors" />
+    <card name="The Foretold Soldier" />
+    <card name="Fugitive of the Judoon" />
+    <card name="Graham O'Brien" />
+    <card name="Jamie McCrimmon" />
+    <card name="Karvanista, Loyal Lupari" />
+    <card name="Lupari Shield" />
+    <card name="Leela, Sevateem Warrior" />
+    <card name="The Sea Devils" />
+    <card name="Sisterhood of Karn" />
+    <card name="Susan Foreman" />
+    <card name="Thijarian Witness" />
+    <card name="Alistair, the Brigadier" />
+    <card name="Ashad, the Lone Cyberman" />
+    <card name="The Beast, Deathless Prince" />
+    <card name="Bigger on the Inside" />
+    <card name="Blink" />
+    <card name="Cult of Skaro" />
+    <card name="The Curse of Fenric" />
+    <card name="The Cyber-Controller" />
+    <card name="The Dalek Emperor" />
+    <card name="The Day of the Doctor" />
+    <card name="Dinosaurs on a Spaceship" />
+    <card name="Duggan, Private Detective" />
+    <card name="The Eighth Doctor" />
+    <card name="The Eleventh Doctor" />
+    <card name="The Face of Boe" />
+    <card name="The Fifth Doctor" />
+    <card name="The First Doctor" />
+    <card name="Frost Fair Lure Fish" />
+    <card name="The Fugitive Doctor" />
+    <card name="Gallifrey Falls" />
+    <card name="No More" />
+    <card name="Gallifrey Stands" />
+    <card name="Great Intelligence's Plan" />
+    <card name="Heaven Sent" />
+    <card name="Idris, Soul of the TARDIS" />
+    <card name="Jenny Flint" />
+    <card name="Jenny, Generated Anomaly" />
+    <card name="Judoon Enforcers" />
+    <card name="Kate Stewart" />
+    <card name="Last Night Together" />
+    <card name="Lunar Hatchling" />
+    <card name="Madame Vastra" />
+    <card name="The Master, Formed Anew" />
+    <card name="The Master, Gallifrey's End" />
+    <card name="The Master, Mesmerist" />
+    <card name="The Master, Multiplied" />
+    <card name="Me, the Immortal" />
+    <card name="The Ninth Doctor" />
+    <card name="The Rani" />
+    <card name="Rassilon, the War President" />
+    <card name="Regenerations Restored" />
+    <card name="River Song" />
+    <card name="Rory Williams" />
+    <card name="Run for Your Life" />
+    <card name="Sally Sparrow" />
+    <card name="The Second Doctor" />
+    <card name="Sergeant John Benton" />
+    <card name="The Seventh Doctor" />
+    <card name="The Sixth Doctor" />
+    <card name="Strax, Sontaran Nurse" />
+    <card name="Sycorax Commander" />
+    <card name="The Third Doctor" />
+    <card name="Truth or Consequences" />
+    <card name="The Twelfth Doctor" />
+    <card name="The Valeyard" />
+    <card name="Vrestin, Menoptra Leader" />
+    <card name="The War Doctor" />
+    <card name="Weeping Angel" />
+    <!--<card name="Wreck and Rebuild" />--><!-- OTC で再録済み -->
+    <card name="Ace's Baseball Bat" />
+    <card name="Bessie, the Doctor's Roadster" />
+    <card name="Clockwork Droid" />
+    <card name="Confession Dial" />
+    <card name="Cyberman Patrol" />
+    <card name="Cybermat" />
+    <card name="Cybermen Squadron" />
+    <card name="Cybership" />
+    <card name="Laser Screwdriver" />
+    <card name="Midnight Crusader Shuttle" />
+    <card name="The Moment" />
+    <card name="Psychic Paper" />
+    <card name="River Song's Diary" />
+    <card name="Rotating Fireplace" />
+    <card name="Sonic Screwdriver" />
+    <card name="TARDIS" />
+    <card name="Gallifrey Council Chamber" />
+    <card name="Ominous Cemetery" />
+    <card name="Trenzalore Clocktower" />
+    <card name="Osgood, Operation Double" />
     <!-- PIP (Fallout) -->
     <card name="Caesar, Legion's Emperor" />
     <card name="Dogmeat, Ever Loyal" />
