@@ -1,4 +1,8 @@
-﻿using System;
+﻿
+using System.Windows;
+using System.Windows.Controls;
+#if !OFFLINE
+using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -6,9 +10,6 @@ using System.Globalization;
 using System.IO;
 using System.Net;
 using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-#if !OFFLINE
 using System.Net.Http;
 #endif
 

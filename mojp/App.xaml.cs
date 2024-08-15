@@ -11,7 +11,6 @@ using System.Windows.Threading;
 using System.Xml.Linq;
 #if !OFFLINE
 using System.Net.Http;
-using System.Net.Http.Headers;
 #endif
 
 namespace Mojp;
