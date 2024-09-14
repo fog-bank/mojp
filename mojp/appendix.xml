@@ -8044,6 +8044,17 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0061" sub="BLB Special Guest" name="Frogmite" />
     <alt key="0062" sub="BLB Special Guest" name="Sword of Fire and Ice" />
     <alt key="0063" sub="BLB Special Guest" name="Secluded Courtyard" />
+    <!-- DSK Special Guest -->
+    <alt key="0064" sub="DSK Special Guest" name="Hallowed Haunting" />
+    <alt key="0065" sub="DSK Special Guest" name="Soul Warden" />
+    <alt key="0066" sub="DSK Special Guest" name="Expropriate" />
+    <alt key="0067" sub="DSK Special Guest" name="Phantasmal Image" />
+    <alt key="0068" sub="DSK Special Guest" name="Damnation" />
+    <alt key="0069" sub="DSK Special Guest" name="Sacrifice" />
+    <alt key="0070" sub="DSK Special Guest" name="Maddening Hex" />
+    <alt key="0071" sub="DSK Special Guest" name="Unholy Heat" />
+    <alt key="0072" sub="DSK Special Guest" name="Collected Company" />
+    <alt key="0073" sub="DSK Special Guest" name="Noxious Revival" />
     
     <!-- ★カードタイプ依存 -->
     <!-- 両面カード -->
