@@ -70,17 +70,19 @@ public sealed partial class Card : IEquatable<Card>, INotifyPropertyChanged
     {
         get
         {
-            int start = 0;
-
-            for (int i = 0; i < RelatedCardName.Length; i++)
+            if (RelatedCardName != null)
             {
-                if (RelatedCardName[i] == '|')
+                int start = 0;
+                int split = RelatedCardName.IndexOf('|');
+
+                while (split != -1)
                 {
-                    yield return RelatedCardName.Substring(start, i - start);
-                    start = i + 1;
+                    yield return RelatedCardName.Substring(start, split - start);
+                    start = split + 1;
+                    split = RelatedCardName.IndexOf('|', start);
                 }
+                yield return RelatedCardName.Substring(start);
             }
-            yield return RelatedCardName.Substring(start);
         }
     }
 

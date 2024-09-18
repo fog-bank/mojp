@@ -341,19 +341,16 @@ public sealed partial class MainViewModel : INotifyPropertyChanged
         SelectedIndex = 0;
         int count = 1;
 
-        if (card.RelatedCardName != null)
+        foreach (string relatedName in card.RelatedCardNames)
         {
-            foreach (string relatedName in card.RelatedCardNames)
+            if (App.TryGetCard(relatedName, out var card2))
             {
-                if (App.TryGetCard(relatedName, out var card2))
-                {
-                    if (count < Cards.Count)
-                        Cards[count] = card2;
-                    else
-                        Cards.Add(card2);
+                if (count < Cards.Count)
+                    Cards[count] = card2;
+                else
+                    Cards.Add(card2);
 
-                    count++;
-                }
+                count++;
             }
         }
 
