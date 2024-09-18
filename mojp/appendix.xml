@@ -1233,8 +1233,8 @@ The Howling Abominationが呪文の対象になるたび、ターン終了時ま
 Zethi, Arcane Blademasterが戦場に出たとき、あなたの墓地にあるインスタント・カード最大Ｘ枚を対象とする。それらを追放する。ＸはZethi, Arcane Blademasterがキッカーされた回数に等しい。それらの上にそれぞれキック・カウンター１個を置く。
 Zethi, Arcane Blademasterが攻撃するたび、あなたがオーナーであり追放されていてキック・カウンターが置かれている各カードをコピーする。あなたはそれらのコピーを唱えてもよい。</card>-->
     <!-- SLX -->
-    <card name="Arvinox, the Mind Flail" ja="Arvinox, the Mind Flail" type="伝説のクリーチャー・エンチャント ― ホラー" pt="9/9">あなたが、あなたがオーナーでないパーマネントを３つ以上コントロールしていないかぎり、Arvinox, the Mind Flailはクリーチャーではない。
-あなたの終了ステップの開始時に、各対戦相手のライブラリーの一番下のカードをそれぞれ裏向きに追放する。それらのカードが追放され続けているかぎり、あなたはそれらを見てもよく、あなたはそれらの中からパーマネント・呪文を唱えてもよく、あなたはそれらの呪文を唱えるためにマナを望む色のマナであるかのように支払ってもよい。</card>
+    <card name="Arvinox, the Mind Flail" ja="精神のフレイル、アルヴィノクス" type="伝説のクリーチャー・エンチャント ― ホラー" pt="9/9">あなたが、あなたがオーナーでない３つ以上のパーマネントをコントロールしていないかぎり、精神のフレイル、アルヴィノクスはクリーチャーではない。
+あなたの終了ステップの開始時に、各対戦相手のライブラリーの一番下のカードをそれぞれ裏向きで追放する。それらのカードが追放され続けているかぎり、あなたはそれらを見てもよく、あなたはそれらの中からパーマネント・呪文を唱えてもよく、あなたはそれらの呪文を唱えるためにマナを望む色のマナであるかのように支払ってもよい。</card>
     <card name="Bjorna, Nightfall Alchemist" ja="Bjorna, Nightfall Alchemist" type="伝説のクリーチャー ― 人間" pt="1/3">(Ｔ),アーティファクト１つを生け贄に捧げる：クリーチャー１体を対象とする。Bjorna, Nightfall Alchemistはそれに１点のダメージを与える。そのクリーチャーを使嗾する。（あなたの次のターンまで、そのクリーチャーは、可能なら各戦闘で攻撃し、可能ならあなたでないプレイヤーを攻撃する。）
 永遠の友（両方が永遠の友を持つなら、あなたは２体の統率者を使用できる。）</card>
     <card name="Cecily, Haunted Mage" ja="Cecily, Haunted Mage" type="伝説のクリーチャー ― 人間・ウィザード" pt="3/5">あなたの手札の上限は１１である。
@@ -2249,6 +2249,11 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0279" sub="BLB" name="Forest" />
     <alt key="0280" sub="BLB" name="Forest" />
     <alt key="0281" sub="BLB" name="Forest" />
+    <alt key="0272" sub="DSK" name="Plains" />
+    <alt key="0273" sub="DSK" name="Island" />
+    <alt key="0274" sub="DSK" name="Swamp" />
+    <alt key="0275" sub="DSK" name="Mountain" />
+    <alt key="0276" sub="DSK" name="Forest" />
     <!-- SL2 -->
     <alt key="0138" sub="SLD" name="Anguished Unmaking" />
     <alt key="0139" sub="SLD" name="Assassin's Trophy" />
@@ -4198,6 +4203,154 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0103" sub="BLC" name="Ms. Bumbleflower" />
     <alt key="0104" sub="BLC" name="Zinnia, Valley's Voice" />
     <alt key="0356" sub="BLC" name="Flubs, the Fool" />
+    <!-- DSK -->
+    <alt key="0302" sub="DSK" name="Ghostly Dancers" />
+    <alt key="0303" sub="DSK" name="Reluctant Role Model" />
+    <alt key="0304" sub="DSK" name="Split Up" />
+    <alt key="0305" sub="DSK" name="Unidentified Hovership" />
+    <alt key="0306" sub="DSK" name="Unwanted Remake" />
+    <alt key="0307" sub="DSK" name="Entity Tracker" />
+    <alt key="0308" sub="DSK" name="Marina Vendrell's Grimoire" />
+    <alt key="0309" sub="DSK" name="Come Back Wrong" />
+    <alt key="0310" sub="DSK" name="Demonic Counsel" />
+    <alt key="0311" sub="DSK" name="Meathook Massacre II" />
+    <alt key="0312" sub="DSK" name="Unstoppable Slasher" />
+    <alt key="0313" sub="DSK" name="Withering Torment" />
+    <alt key="0314" sub="DSK" name="Chainsaw" />
+    <alt key="0315" sub="DSK" name="Cursed Recording" />
+    <alt key="0316" sub="DSK" name="Fear of Missing Out" />
+    <alt key="0317" sub="DSK" name="The Rollercrusher Ride" />
+    <alt key="0318" sub="DSK" name="Waltz of Rage" />
+    <alt key="0319" sub="DSK" name="Balustrade Wurm" />
+    <alt key="0320" sub="DSK" name="Hedge Shredder" />
+    <alt key="0321" sub="DSK" name="Insidious Fungus" />
+    <alt key="0322" sub="DSK" name="Omnivorous Flytrap" />
+    <alt key="0323" sub="DSK" name="Under the Skin" />
+    <alt key="0324" sub="DSK" name="Valgavoth's Onslaught" />
+    <alt key="0325" sub="DSK" name="Peer Past the Veil" />
+    <alt key="0326" sub="DSK" name="Ghost Vacuum" />
+    <alt key="0327" sub="DSK" name="Valgavoth's Lair" />
+    <alt key="0329" sub="DSK" name="Blazemire Verge" />
+    <alt key="0330" sub="DSK" name="Floodfarm Verge" />
+    <alt key="0331" sub="DSK" name="Gloomlake Verge" />
+    <alt key="0332" sub="DSK" name="Hushwood Verge" />
+    <alt key="0333" sub="DSK" name="Thornspire Verge" />
+    <alt key="0334" sub="DSK" name="Dazzling Theater" />
+    <alt key="0335" sub="DSK" name="Dollmaker's Shop" />
+    <alt key="0336" sub="DSK" name="Central Elevator" />
+    <alt key="0337" sub="DSK" name="Mirror Room" />
+    <alt key="0338" sub="DSK" name="Funeral Room" />
+    <alt key="0339" sub="DSK" name="Unholy Annex" />
+    <alt key="0340" sub="DSK" name="Charred Foyer" />
+    <alt key="0341" sub="DSK" name="Walk-In Closet" />
+    <alt key="0342" sub="DSK" name="Restricted Office" />
+    <alt key="0343" sub="DSK" name="Roaring Furnace" />
+    <alt key="0344" sub="DSK" name="Abhorrent Oculus" />
+    <alt key="0345" sub="DSK" name="Silent Hallcreeper" />
+    <alt key="0346" sub="DSK" name="Doomsday Excruciator" />
+    <alt key="0347" sub="DSK" name="Razorkin Needlehead" />
+    <alt key="0348" sub="DSK" name="Screaming Nemesis" />
+    <alt key="0349" sub="DSK" name="Hauntwoods Shrieker" />
+    <alt key="0350" sub="DSK" name="Undead Sprinter" />
+    <alt key="0351" sub="DSK" name="The Wandering Rescuer" />
+    <alt key="0352" sub="DSK" name="Valgavoth, Terror Eater" />
+    <alt key="0353" sub="DSK" name="Tyvar, the Pummeler" />
+    <alt key="0354" sub="DSK" name="Kaito, Bane of Nightmares" />
+    <alt key="0355" sub="DSK" name="Niko, Light of Hope" />
+    <alt key="0356" sub="DSK" name="Toby, Beastie Befriender" />
+    <alt key="0357" sub="DSK" name="The Mindskinner" />
+    <alt key="0358" sub="DSK" name="Kona, Rescue Beastie" />
+    <alt key="0359" sub="DSK" name="The Jolly Balloon Man" />
+    <alt key="0360" sub="DSK" name="Marina Vendrell" />
+    <alt key="0361" sub="DSK" name="Nashi, Searcher in the Dark" />
+    <alt key="0362" sub="DSK" name="Rip, Spawn Hunter" />
+    <alt key="0363" sub="DSK" name="The Swarmweaver" />
+    <alt key="0364" sub="DSK" name="Victor, Valgavoth's Seneschal" />
+    <alt key="0365" sub="DSK" name="Winter, Misanthropic Guide" />
+    <alt key="0366" sub="DSK" name="Zimone, All-Questioning" />
+    <alt key="0367" sub="DSK" name="Marvin, Murderous Mimic" />
+    <alt key="0368" sub="DSK" name="Enduring Innocence" />
+    <alt key="0369" sub="DSK" name="Leyline of Hope" />
+    <alt key="0370" sub="DSK" name="Overlord of the Mistmoors" />
+    <alt key="0371" sub="DSK" name="Enduring Curiosity" />
+    <alt key="0372" sub="DSK" name="Leyline of Transformation" />
+    <alt key="0373" sub="DSK" name="Overlord of the Floodpits" />
+    <alt key="0374" sub="DSK" name="Enduring Tenacity" />
+    <alt key="0375" sub="DSK" name="Grievous Wound" />
+    <alt key="0376" sub="DSK" name="Leyline of the Void" />
+    <alt key="0377" sub="DSK" name="Overlord of the Balemurk" />
+    <alt key="0378" sub="DSK" name="Enduring Courage" />
+    <alt key="0379" sub="DSK" name="Leyline of Resonance" />
+    <alt key="0380" sub="DSK" name="Overlord of the Boilerbilges" />
+    <alt key="0381" sub="DSK" name="Enduring Vitality" />
+    <alt key="0382" sub="DSK" name="Leyline of Mutation" />
+    <alt key="0383" sub="DSK" name="Overlord of the Hauntwoods" />
+    <alt key="0384" sub="DSK" name="Twitching Doll" />
+    <alt key="0385" sub="DSK" name="Dissection Tools" />
+    <alt key="0386" sub="DSK" name="Enduring Innocence" />
+    <alt key="0387" sub="DSK" name="Overlord of the Mistmoors" />
+    <alt key="0388" sub="DSK" name="Enduring Curiosity" />
+    <alt key="0389" sub="DSK" name="Overlord of the Floodpits" />
+    <alt key="0390" sub="DSK" name="Enduring Tenacity" />
+    <alt key="0391" sub="DSK" name="Overlord of the Balemurk" />
+    <alt key="0392" sub="DSK" name="Enduring Courage" />
+    <alt key="0393" sub="DSK" name="Overlord of the Boilerbilges" />
+    <alt key="0394" sub="DSK" name="Enduring Vitality" />
+    <alt key="0395" sub="DSK" name="Overlord of the Hauntwoods" />
+    <alt key="0406" sub="DSK" name="The Wandering Rescuer" />
+    <alt key="0407" sub="DSK" name="Valgavoth, Terror Eater" />
+    <alt key="0408" sub="DSK" name="Tyvar, the Pummeler" />
+    <alt key="0409" sub="DSK" name="Kaito, Bane of Nightmares" />
+    <alt key="0410" sub="DSK" name="Niko, Light of Hope" />
+    <alt key="0411" sub="DSK" name="Shardmage's Rescue" />
+    <alt key="0412" sub="DSK" name="Valgavoth's Faithful" />
+    <alt key="0413" sub="DSK" name="Pyroclasm" />
+    <alt key="0414" sub="DSK" name="Drag to the Roots" />
+    <alt key="0415" sub="DSK" name="Inquisitive Glimmer" />
+    <alt key="0417" sub="DSK" name="Twitching Doll" />
+    <!-- DSC -->
+    <alt key="0001" sub="DSC" name="Aminatou, Veil Piercer" />
+    <alt key="0002" sub="DSC" name="Kianne, Corrupted Memory" />
+    <alt key="0003" sub="DSC" name="The Lord of Pain" />
+    <alt key="0004" sub="DSC" name="The Master of Keys" />
+    <alt key="0005" sub="DSC" name="Rendmaw, Creaking Nest" />
+    <alt key="0006" sub="DSC" name="Valgavoth, Harrower of Souls" />
+    <alt key="0007" sub="DSC" name="Winter, Cynical Opportunist" />
+    <alt key="0008" sub="DSC" name="Zimone, Mystery Unraveler" />
+    <alt key="0041" sub="DSC" name="Redress Fate" />
+    <alt key="0042" sub="DSC" name="Soaring Lightbringer" />
+    <alt key="0043" sub="DSC" name="Fear of Sleep Paralysis" />
+    <alt key="0044" sub="DSC" name="Glitch Interpreter" />
+    <alt key="0045" sub="DSC" name="They Came from the Pipes" />
+    <alt key="0046" sub="DSC" name="Zimone's Hypothesis" />
+    <alt key="0047" sub="DSC" name="Ancient Cellarspawn" />
+    <alt key="0048" sub="DSC" name="Deluge of Doom" />
+    <alt key="0049" sub="DSC" name="Demonic Covenant" />
+    <alt key="0050" sub="DSC" name="Into the Pit" />
+    <alt key="0051" sub="DSC" name="Metamorphosis Fanatic" />
+    <alt key="0052" sub="DSC" name="Persistent Constrictor" />
+    <alt key="0053" sub="DSC" name="Sadistic Shell Game" />
+    <alt key="0054" sub="DSC" name="Suspended Sentence" />
+    <alt key="0055" sub="DSC" name="Barbflare Gremlin" />
+    <alt key="0056" sub="DSC" name="Gleeful Arsonist" />
+    <alt key="0057" sub="DSC" name="Star Athlete" />
+    <alt key="0058" sub="DSC" name="Curator Beastie" />
+    <alt key="0059" sub="DSC" name="Demolisher Spawn" />
+    <alt key="0060" sub="DSC" name="Disorienting Choice" />
+    <alt key="0061" sub="DSC" name="Formless Genesis" />
+    <alt key="0062" sub="DSC" name="Shriekwood Devourer" />
+    <alt key="0063" sub="DSC" name="Ursine Monstrosity" />
+    <alt key="0064" sub="DSC" name="Convert to Slime" />
+    <alt key="0065" sub="DSC" name="Phenomenon Investigators" />
+    <alt key="0066" sub="DSC" name="Giggling Skitterspike" />
+    <alt key="0067" sub="DSC" name="Seance Board" />
+    <alt key="0368" sub="DSC" name="Crypt Ghast" />
+    <alt key="0369" sub="DSC" name="Damn" />
+    <alt key="0370" sub="DSC" name="Exhume" />
+    <alt key="0371" sub="DSC" name="Archon of Cruelty" />
+    <alt key="0372" sub="DSC" name="Goryo's Vengeance" />
+    <alt key="0373" sub="DSC" name="Living Death" />
+    <!-- 特殊カード枠ここまで -->
     
     <!-- ★旧枠 -->
     <!-- MH3 -->
@@ -8406,6 +8559,7 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0248" sub="BLC" name="Binding the Old Gods" />
     <alt key="0075" sub="DSK" name="The Tale of Tamiyo" />
     <alt key="0139" sub="DSC" name="The Eldest Reborn" />
+    <alt key="0213" sub="DSC" name="Binding the Old Gods" />
     <!-- 出来事 : SearchAltSubKey method の追記が必要 -->
     <alt key="0005" sub="ELD" name="Ardenvale Tactician" />
     <alt key="0011" sub="ELD" name="Faerie Guidemother" />
@@ -8796,6 +8950,36 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0160" sub="OTJ" name="Dance of the Tumbleweeds" />
     <alt key="0180" sub="OTJ" name="Smuggler's Surprise" />
     <alt key="0186" sub="OTJ" name="Trash the Town" />
+    <!-- 部屋 (DSK) -->
+    <alt key="0003" sub="DSK" name="Dazzling Theater" />
+    <alt key="0004" sub="DSK" name="Dollmaker's Shop" />
+    <alt key="0015" sub="DSK" name="Grand Entryway" />
+    <alt key="0034" sub="DSK" name="Surgical Suite" />
+    <alt key="0043" sub="DSK" name="Bottomless Pool" />
+    <alt key="0044" sub="DSK" name="Central Elevator" />
+    <alt key="0065" sub="DSK" name="Meat Locker" />
+    <alt key="0067" sub="DSK" name="Mirror Room" />
+    <alt key="0079" sub="DSK" name="Underwater Tunnel" />
+    <alt key="0091" sub="DSK" name="Defiled Crypt" />
+    <alt key="0093" sub="DSK" name="Derelict Attic" />
+    <alt key="0100" sub="DSK" name="Funeral Room" />
+    <alt key="0118" sub="DSK" name="Unholy Annex" />
+    <alt key="0129" sub="DSK" name="Charred Foyer" />
+    <alt key="0137" sub="DSK" name="Glassworks" />
+    <alt key="0147" sub="DSK" name="Painter's Studio" />
+    <alt key="0158" sub="DSK" name="Ticket Booth" />
+    <alt key="0181" sub="DSK" name="Greenhouse" />
+    <alt key="0190" sub="DSK" name="Moldering Gym" />
+    <alt key="0205" sub="DSK" name="Walk-In Closet" />
+    <alt key="0227" sub="DSK" name="Restricted Office" />
+    <alt key="0230" sub="DSK" name="Roaring Furnace" />
+    <alt key="0235" sub="DSK" name="Smoky Lounge" />
+    <alt key="0287" sub="DSK" name="Grand Entryway" />
+    <alt key="0010" sub="DSC" name="Secret Arcade" />
+    <alt key="0017" sub="DSC" name="Cramped Vents" />
+    <alt key="0023" sub="DSC" name="Polluted Cistern" />
+    <alt key="0028" sub="DSC" name="Spiked Corridor" />
+    <alt key="0033" sub="DSC" name="Experimental Lab" />
     <!-- ダンジョン (AFR) -->
     <alt key="Yawning Portal" sub="Dungeon Level" name="Dungeon of the Mad Mage" />
     <alt key="Cave Entrance" sub="Goblin Lair" name="Lost Mine of Phandelver" />
@@ -14548,7 +14732,6 @@ Eivor, Battle-Readyが攻撃するたび、これは各対戦相手にそれぞ�
     <ja name="Despotic Scepter" />
     <ja name="Devouring Deep" />
     <ja name="Devout Monk" />
-    <ja name="Diabolic Vision" />
     <ja name="Diamond Valley" />
     <ja name="Didgeridoo" />
     <ja name="Dire Wolves" />
@@ -14981,7 +15164,6 @@ Eivor, Battle-Readyが攻撃するたび、これは各対戦相手にそれぞ�
     <ja name="Runed Arch" />
     <ja name="Rust" />
     <ja name="Rysorian Badger" />
-    <ja name="Sacrifice" />
     <ja name="Samite Alchemist" />
     <ja name="Sandals of Abdallah" />
     <ja name="Savaen Elves" />
