@@ -38,7 +38,7 @@ Windows 7 SP1 以降
 
 ## 開発環境
 Windows 10 2022 Update (Version 22H2)  
-Visual Studio 2022 v17.10  
+Visual Studio 2022 v17.11  
 C# 12.0
 
 ### 仕組み
