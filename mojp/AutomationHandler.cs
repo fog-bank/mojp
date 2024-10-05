@@ -307,7 +307,15 @@ partial class MainViewModel
             {
                 value = value.Substring(triggerPrefix.Length);
                 Debug.WriteLine("Triggered ability => " + value);
+                return ViewCardDirectly(value);
+            }
 
+            // 部屋カードの誘発型能力
+            int slashIndex = value.IndexOf('/');
+            if (slashIndex != -1)
+            {
+                value = value.Substring(0, slashIndex);
+                Debug.WriteLine("Triggered room ability => " + value);
                 return ViewCardDirectly(value);
             }
 
