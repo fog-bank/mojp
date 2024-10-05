@@ -84,6 +84,12 @@ partial class Card
                     replaced = true;
                     break;
 
+                // Ratonhnhaké꞉ton (for PD)
+                case '꞉':
+                    sb.Append(':');
+                    replaced = true;
+                    break;
+
                 default:
                     sb.Append(c);
                     break;
