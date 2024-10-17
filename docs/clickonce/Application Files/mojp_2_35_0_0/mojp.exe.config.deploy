@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+    <configSections>
+        <sectionGroup name="userSettings" type="System.Configuration.UserSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" >
+            <section name="Mojp.Settings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" allowExeDefinition="MachineToLocalUser" requirePermission="false" />
+        </sectionGroup>
+        <sectionGroup name="applicationSettings" type="System.Configuration.ApplicationSettingsGroup, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" >
+            <section name="Mojp.Settings" type="System.Configuration.ClientSettingsSection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+        </sectionGroup>
+    </configSections>
+    <startup> 
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.6" />
+    </startup>
+    <userSettings>
+        <Mojp.Settings>
+            <setting name="WindowWidth" serializeAs="String">
+                <value>330</value>
+            </setting>
+            <setting name="WindowHeight" serializeAs="String">
+                <value>260</value>
+            </setting>
+            <setting name="CardTextFontFamily" serializeAs="String">
+                <value>メイリオ</value>
+            </setting>
+            <setting name="CardTextFontSize" serializeAs="String">
+                <value>12</value>
+            </setting>
+            <setting name="WindowLeft" serializeAs="String">
+                <value>100</value>
+            </setting>
+            <setting name="WindowTop" serializeAs="String">
+                <value>100</value>
+            </setting>
+            <setting name="AutoRefresh" serializeAs="String">
+                <value>True</value>
+            </setting>
+            <setting name="RefreshInterval" serializeAs="String">
+                <value>00:00:04</value>
+            </setting>
+            <setting name="TopMost" serializeAs="String">
+                <value>True</value>
+            </setting>
+            <setting name="UpgradeRequired" serializeAs="String">
+                <value>True</value>
+            </setting>
+            <setting name="ShowBasicLands" serializeAs="String">
+                <value>True</value>
+            </setting>
+            <setting name="AutoVersionCheck" serializeAs="String">
+                <value>True</value>
+            </setting>
+            <setting name="AcceptsPrerelease" serializeAs="String">
+                <value>False</value>
+            </setting>
+            <setting name="GetCardPrice" serializeAs="String">
+                <value>True</value>
+            </setting>
+            <setting name="GetPDList" serializeAs="String">
+                <value>True</value>
+            </setting>
+            <setting name="PDListLastTimeUtc" serializeAs="String">
+                <value />
+            </setting>
+            <setting name="CardDisplayNameType" serializeAs="String">
+                <value>-1</value>
+            </setting>
+            <setting name="EnableToolbar" serializeAs="String">
+                <value>True</value>
+            </setting>
+            <setting name="ToolbarCommands" serializeAs="String">
+                <value>Capture,0,CopyCardName,0,CopyEnglishName,0,GoToWiki,1,Option,1</value>
+            </setting>
+            <setting name="PDServerLastTimeUtc" serializeAs="String">
+                <value />
+            </setting>
+        </Mojp.Settings>
+    </userSettings>
+    <applicationSettings>
+        <Mojp.Settings>
+            <setting name="PromoCodeNumber" serializeAs="String">
+                <value>0000</value>
+            </setting>
+        </Mojp.Settings>
+    </applicationSettings>
+</configuration>
