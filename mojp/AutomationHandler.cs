@@ -274,8 +274,11 @@ partial class MainViewModel
                 if (name == null)
                     yield break;
 
-                //Debug.WriteLine("[FindAll] " + name.Replace(Environment.NewLine, "\\n"));
-                yield return name;
+                if (name.Length != 0)
+                {
+                    //Debug.WriteLine("[FindAll] " + name.Replace(Environment.NewLine, "\\n"));
+                    yield return name;
+                }
             }
         }
 
@@ -314,9 +317,12 @@ partial class MainViewModel
             int slashIndex = value.IndexOf('/');
             if (slashIndex > 0)
             {
+                // "/" があるので、index が 0 のときは除く
                 value = value.Substring(0, slashIndex);
                 Debug.WriteLine("Triggered room ability => " + value);
-                return ViewCardDirectly(value);
+
+                if (ViewCardDirectly(value))
+                    return true;
             }
 
             // 紋章
