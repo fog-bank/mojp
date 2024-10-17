@@ -312,7 +312,7 @@ partial class MainViewModel
 
             // 部屋カードの誘発型能力
             int slashIndex = value.IndexOf('/');
-            if (slashIndex != -1)
+            if (slashIndex > 0)
             {
                 value = value.Substring(0, slashIndex);
                 Debug.WriteLine("Triggered room ability => " + value);
@@ -487,7 +487,7 @@ partial class MainViewModel
                 "Chaos" => ContainsText("40K"),
                 "Flash" => ContainsText("IKO"),
                 "Lifelink" => ContainsText("Transcendent Master", "Sorin, Vengeful Bloodlord", "IKO"),
-                "Release" => IsUginFatePromo(),
+                "Release" => IsReleasePromo(),
                 "Oubliette" => ContainsText("Trapped Entry"),
                 "Vigilance" => ContainsText("Ikiral Outrider", "IKO"),
                 //"Plains" or "Island" or "Swamp" or "Mountain" or "Forest" => ContainsText("MH1"),
@@ -512,7 +512,7 @@ partial class MainViewModel
             }
 
             // 現在のカードがウギンの運命プロモカードであるかどうかを調べます。
-            bool IsUginFatePromo()
+            bool IsReleasePromo()
             {
                 bool isPromo = false;
                 bool containsCatch = false;
@@ -523,6 +523,7 @@ partial class MainViewModel
                     {
                         case "PRM":
                         case "CMM":
+                        case "PIP":
                             isPromo = true;
                             break;
 

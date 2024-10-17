@@ -1443,6 +1443,8 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <wiki name="Pull" wiki="押し出し+引き抜き/Push+Pull" />
     <!-- その他のリンク修正 -->
     <wiki name="Captivating Vampire" wiki="蟲惑的な吸血鬼/Captivating Vampire" />
+    <wiki name="C.A.M.P." wiki="C.A.M.P./C.A.M.P." />
+    <wiki name="V.A.T.S." wiki="V.A.T.S./V.A.T.S." />
     
     <!-- ★特殊カード枠 -->
     <!-- 基本土地 -->
@@ -7568,6 +7570,531 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0071" sub="DSK Special Guest" name="Unholy Heat" />
     <alt key="0072" sub="DSK Special Guest" name="Collected Company" />
     <alt key="0073" sub="DSK Special Guest" name="Noxious Revival" />
+    <!-- PIP -->
+    <alt key="0001" sub="PIP" name="Caesar, Legion's Emperor" />
+    <alt key="0002" sub="PIP" name="Dogmeat, Ever Loyal" />
+    <alt key="0003" sub="PIP" name="Dr. Madison Li" />
+    <alt key="0004" sub="PIP" name="The Wise Mothman" />
+    <alt key="0005" sub="PIP" name="Liberty Prime, Recharged" />
+    <alt key="0006" sub="PIP" name="The Master, Transcendent" />
+    <alt key="0007" sub="PIP" name="Mr. House, President and CEO" />
+    <alt key="0008" sub="PIP" name="Preston Garvey, Minuteman" />
+    <alt key="0009" sub="PIP" name="Aradesh, the Founder" />
+    <alt key="0010" sub="PIP" name="Automated Assembly Line" />
+    <alt key="0011" sub="PIP" name="Battle of Hoover Dam" />
+    <alt key="0012" sub="PIP" name="Brotherhood Outcast" />
+    <alt key="0013" sub="PIP" name="Brotherhood Scribe" />
+    <alt key="0014" sub="PIP" name="Codsworth, Handy Helper" />
+    <alt key="0015" sub="PIP" name="Commander Sofia Daguerre" />
+    <alt key="0016" sub="PIP" name="Gary Clone" />
+    <alt key="0017" sub="PIP" name="Idolized" />
+    <alt key="0018" sub="PIP" name="Overencumbered" />
+    <alt key="0019" sub="PIP" name="Overseer of Vault 76" />
+    <alt key="0020" sub="PIP" name="Paladin Danse, Steel Maverick" />
+    <alt key="0021" sub="PIP" name="Pre-War Formalwear" />
+    <alt key="0022" sub="PIP" name="The Prydwen, Steel Flagship" />
+    <alt key="0023" sub="PIP" name="Securitron Squadron" />
+    <alt key="0024" sub="PIP" name="Sentry Bot" />
+    <alt key="0025" sub="PIP" name="Sierra, Nuka's Biggest Fan" />
+    <alt key="0026" sub="PIP" name="Vault 13: Dweller's Journey" />
+    <alt key="0027" sub="PIP" name="Vault 75: Middle School" />
+    <alt key="0028" sub="PIP" name="Vault 101: Birthday Party" />
+    <alt key="0029" sub="PIP" name="Yes Man, Personal Securitron" />
+    <alt key="0030" sub="PIP" name="Curie, Emergent Intelligence" />
+    <alt key="0031" sub="PIP" name="James, Wandering Dad" />
+    <alt key="0032" sub="PIP" name="Jason Bright, Glowing Prophet" />
+    <alt key="0033" sub="PIP" name="Mirelurk Queen" />
+    <alt key="0034" sub="PIP" name="Nerd Rage" />
+    <alt key="0035" sub="PIP" name="Nick Valentine, Private Eye" />
+    <alt key="0036" sub="PIP" name="Piper Wright, Publick Reporter" />
+    <alt key="0037" sub="PIP" name="Radstorm" />
+    <alt key="0038" sub="PIP" name="Robobrain War Mind" />
+    <alt key="0039" sub="PIP" name="Struggle for Project Purity" />
+    <alt key="0040" sub="PIP" name="Synth Infiltrator" />
+    <alt key="0041" sub="PIP" name="Vexing Radgull" />
+    <alt key="0042" sub="PIP" name="Bloatfly Swarm" />
+    <alt key="0043" sub="PIP" name="Butch DeLoria, Tunnel Snake" />
+    <alt key="0044" sub="PIP" name="Feral Ghoul" />
+    <alt key="0045" sub="PIP" name="Hancock, Ghoulish Mayor" />
+    <alt key="0046" sub="PIP" name="Infesting Radroach" />
+    <alt key="0047" sub="PIP" name="Nuclear Fallout" />
+    <alt key="0048" sub="PIP" name="Ruthless Radrat" />
+    <alt key="0049" sub="PIP" name="Screeching Scorchbeast" />
+    <alt key="0050" sub="PIP" name="V.A.T.S." />
+    <alt key="0051" sub="PIP" name="Vault 12: The Necropolis" />
+    <alt key="0052" sub="PIP" name="Wasteland Raider" />
+    <alt key="0053" sub="PIP" name="Acquired Mutation" />
+    <alt key="0054" sub="PIP" name="Assaultron Dominator" />
+    <alt key="0055" sub="PIP" name="Bottle-Cap Blast" />
+    <alt key="0056" sub="PIP" name="Crimson Caravaneer" />
+    <alt key="0057" sub="PIP" name="Duchess, Wayward Tavernkeep" />
+    <alt key="0058" sub="PIP" name="Grim Reaper's Sprint" />
+    <alt key="0059" sub="PIP" name="Ian the Reckless" />
+    <alt key="0060" sub="PIP" name="Junk Jet" />
+    <alt key="0061" sub="PIP" name="Megaton's Fate" />
+    <alt key="0062" sub="PIP" name="The Motherlode, Excavator" />
+    <alt key="0063" sub="PIP" name="Mysterious Stranger" />
+    <alt key="0064" sub="PIP" name="Plasma Caster" />
+    <alt key="0065" sub="PIP" name="Powder Ganger" />
+    <alt key="0066" sub="PIP" name="Rose, Cutthroat Raider" />
+    <alt key="0067" sub="PIP" name="Synth Eradicator" />
+    <alt key="0068" sub="PIP" name="Thrill-Kill Disciple" />
+    <alt key="0069" sub="PIP" name="Vault 21: House Gambit" />
+    <alt key="0070" sub="PIP" name="Veronica, Dissident Scribe" />
+    <alt key="0071" sub="PIP" name="Wild Wasteland" />
+    <alt key="0072" sub="PIP" name="Animal Friend" />
+    <alt key="0073" sub="PIP" name="Bighorner Rancher" />
+    <alt key="0074" sub="PIP" name="Break Down" />
+    <alt key="0075" sub="PIP" name="Cathedral Acolyte" />
+    <alt key="0076" sub="PIP" name="Glowing One" />
+    <alt key="0077" sub="PIP" name="Gunner Conscript" />
+    <alt key="0078" sub="PIP" name="Harold and Bob, First Numens" />
+    <alt key="0079" sub="PIP" name="Lily Bowen, Raging Grandma" />
+    <alt key="0080" sub="PIP" name="Lumbering Megasloth" />
+    <alt key="0081" sub="PIP" name="Power Fist" />
+    <alt key="0082" sub="PIP" name="Rampaging Yao Guai" />
+    <alt key="0083" sub="PIP" name="Strong Back" />
+    <alt key="0084" sub="PIP" name="Strong, the Brutish Thespian" />
+    <alt key="0085" sub="PIP" name="Super Mutant Scavenger" />
+    <alt key="0086" sub="PIP" name="Tato Farmer" />
+    <alt key="0087" sub="PIP" name="Watchful Radstag" />
+    <alt key="0088" sub="PIP" name="Well Rested" />
+    <alt key="0089" sub="PIP" name="Agent Frank Horrigan" />
+    <alt key="0090" sub="PIP" name="Almost Perfect" />
+    <alt key="0091" sub="PIP" name="Alpha Deathclaw" />
+    <alt key="0092" sub="PIP" name="Arcade Gannon" />
+    <alt key="0093" sub="PIP" name="Armory Paladin" />
+    <alt key="0094" sub="PIP" name="Atomize" />
+    <alt key="0095" sub="PIP" name="Boomer Scrapper" />
+    <alt key="0096" sub="PIP" name="Cait, Cage Brawler" />
+    <alt key="0097" sub="PIP" name="Cass, Hand of Vengeance" />
+    <alt key="0098" sub="PIP" name="Colonel Autumn" />
+    <alt key="0099" sub="PIP" name="Contaminated Drink" />
+    <alt key="0100" sub="PIP" name="Craig Boone, Novac Guard" />
+    <alt key="0101" sub="PIP" name="Desdemona, Freedom's Edge" />
+    <alt key="0102" sub="PIP" name="Elder Arthur Maxson" />
+    <alt key="0103" sub="PIP" name="Elder Owyn Lyons" />
+    <alt key="0104" sub="PIP" name="Electrosiphon" />
+    <alt key="0105" sub="PIP" name="Inventory Management" />
+    <alt key="0106" sub="PIP" name="Kellogg, Dangerous Mind" />
+    <alt key="0107" sub="PIP" name="Legate Lanius, Caesar's Ace" />
+    <alt key="0108" sub="PIP" name="MacCready, Lamplight Mayor" />
+    <alt key="0109" sub="PIP" name="Marcus, Mutant Mayor" />
+    <alt key="0110" sub="PIP" name="Moira Brown, Guide Author" />
+    <alt key="0111" sub="PIP" name="Mutational Advantage" />
+    <alt key="0112" sub="PIP" name="Nightkin Ambusher" />
+    <alt key="0113" sub="PIP" name="The Nipton Lottery" />
+    <alt key="0114" sub="PIP" name="Paladin Elizabeth Taggerdy" />
+    <alt key="0115" sub="PIP" name="Raul, Trouble Shooter" />
+    <alt key="0116" sub="PIP" name="Red Death, Shipwrecker" />
+    <alt key="0117" sub="PIP" name="Rex, Cyber-Hound" />
+    <alt key="0118" sub="PIP" name="Sentinel Sarah Lyons" />
+    <alt key="0119" sub="PIP" name="Shaun, Father of Synths" />
+    <alt key="0120" sub="PIP" name="Three Dog, Galaxy News DJ" />
+    <alt key="0121" sub="PIP" name="Vault 11: Voter's Dilemma" />
+    <alt key="0122" sub="PIP" name="Vault 87: Forced Evolution" />
+    <alt key="0123" sub="PIP" name="Vault 112: Sadistic Simulation" />
+    <alt key="0124" sub="PIP" name="White Glove Gourmand" />
+    <alt key="0125" sub="PIP" name="Young Deathclaws" />
+    <alt key="0126" sub="PIP" name="Agility Bobblehead" />
+    <alt key="0127" sub="PIP" name="Behemoth of Vault 0" />
+    <alt key="0128" sub="PIP" name="Brotherhood Vertibird" />
+    <alt key="0129" sub="PIP" name="C.A.M.P." />
+    <alt key="0130" sub="PIP" name="Charisma Bobblehead" />
+    <alt key="0131" sub="PIP" name="ED-E, Lonesome Eyebot" />
+    <alt key="0132" sub="PIP" name="Endurance Bobblehead" />
+    <alt key="0133" sub="PIP" name="Expert-Level Safe" />
+    <alt key="0134" sub="PIP" name="Intelligence Bobblehead" />
+    <alt key="0135" sub="PIP" name="Luck Bobblehead" />
+    <alt key="0136" sub="PIP" name="Mister Gutsy" />
+    <alt key="0137" sub="PIP" name="Nuka-Cola Vending Machine" />
+    <alt key="0138" sub="PIP" name="Nuka-Nuke Launcher" />
+    <alt key="0139" sub="PIP" name="Perception Bobblehead" />
+    <alt key="0140" sub="PIP" name="Pip-Boy 3000" />
+    <alt key="0141" sub="PIP" name="Recon Craft Theta" />
+    <alt key="0142" sub="PIP" name="Silver Shroud Costume" />
+    <alt key="0143" sub="PIP" name="Strength Bobblehead" />
+    <alt key="0144" sub="PIP" name="Survivor's Med Kit" />
+    <alt key="0145" sub="PIP" name="T-45 Power Armor" />
+    <alt key="0146" sub="PIP" name="Desolate Mire" />
+    <alt key="0147" sub="PIP" name="Diamond City" />
+    <alt key="0148" sub="PIP" name="Ferrous Lake" />
+    <alt key="0149" sub="PIP" name="HELIOS One" />
+    <alt key="0150" sub="PIP" name="Junktown" />
+    <alt key="0151" sub="PIP" name="Mariposa Military Base" />
+    <alt key="0152" sub="PIP" name="Overflowing Basin" />
+    <alt key="0153" sub="PIP" name="Sunscorched Divide" />
+    <alt key="0154" sub="PIP" name="Viridescent Bog" />
+    <alt key="0155" sub="PIP" name="All That Glitters" />
+    <alt key="0156" sub="PIP" name="Austere Command" />
+    <alt key="0157" sub="PIP" name="Captain of the Watch" />
+    <alt key="0158" sub="PIP" name="Crush Contraband" />
+    <alt key="0159" sub="PIP" name="Dispatch" />
+    <alt key="0160" sub="PIP" name="Entrapment Maneuver" />
+    <alt key="0161" sub="PIP" name="Hour of Reckoning" />
+    <alt key="0162" sub="PIP" name="Impassioned Orator" />
+    <alt key="0163" sub="PIP" name="Intangible Virtue" />
+    <alt key="0164" sub="PIP" name="Keeper of the Accord" />
+    <alt key="0165" sub="PIP" name="Mantle of the Ancients" />
+    <alt key="0166" sub="PIP" name="Marshal's Anthem" />
+    <alt key="0167" sub="PIP" name="Martial Coup" />
+    <alt key="0168" sub="PIP" name="Open the Vaults" />
+    <alt key="0169" sub="PIP" name="Path to Exile" />
+    <alt key="0170" sub="PIP" name="Puresteel Paladin" />
+    <alt key="0171" sub="PIP" name="Secure the Wastes" />
+    <alt key="0172" sub="PIP" name="Single Combat" />
+    <alt key="0173" sub="PIP" name="Swords to Plowshares" />
+    <alt key="0174" sub="PIP" name="Valorous Stance" />
+    <alt key="0175" sub="PIP" name="Fraying Sanity" />
+    <alt key="0176" sub="PIP" name="Glimmer of Genius" />
+    <alt key="0177" sub="PIP" name="Inexorable Tide" />
+    <alt key="0178" sub="PIP" name="Mechanized Production" />
+    <alt key="0179" sub="PIP" name="One with the Machine" />
+    <alt key="0180" sub="PIP" name="Thirst for Knowledge" />
+    <alt key="0181" sub="PIP" name="Whirler Rogue" />
+    <alt key="0182" sub="PIP" name="Bastion of Remembrance" />
+    <alt key="0183" sub="PIP" name="Black Market" />
+    <alt key="0184" sub="PIP" name="Deadly Dispute" />
+    <alt key="0185" sub="PIP" name="Lethal Scheme" />
+    <alt key="0186" sub="PIP" name="Morbid Opportunist" />
+    <alt key="0187" sub="PIP" name="Pitiless Plunderer" />
+    <alt key="0188" sub="PIP" name="Blasphemous Act" />
+    <alt key="0189" sub="PIP" name="Chaos Warp" />
+    <alt key="0190" sub="PIP" name="Loyal Apprentice" />
+    <alt key="0191" sub="PIP" name="Sticky Fingers" />
+    <alt key="0192" sub="PIP" name="Stolen Strategy" />
+    <alt key="0193" sub="PIP" name="Unexpected Windfall" />
+    <alt key="0194" sub="PIP" name="Abundant Growth" />
+    <alt key="0195" sub="PIP" name="Branching Evolution" />
+    <alt key="0196" sub="PIP" name="Cultivate" />
+    <alt key="0197" sub="PIP" name="Farseek" />
+    <alt key="0198" sub="PIP" name="Fertile Ground" />
+    <alt key="0199" sub="PIP" name="Guardian Project" />
+    <alt key="0200" sub="PIP" name="Hardened Scales" />
+    <alt key="0201" sub="PIP" name="Harmonize" />
+    <alt key="0202" sub="PIP" name="Heroic Intervention" />
+    <alt key="0203" sub="PIP" name="Inspiring Call" />
+    <alt key="0204" sub="PIP" name="Rampant Growth" />
+    <alt key="0205" sub="PIP" name="Rancor" />
+    <alt key="0206" sub="PIP" name="Squirrel Nest" />
+    <alt key="0207" sub="PIP" name="Tireless Tracker" />
+    <alt key="0208" sub="PIP" name="Wild Growth" />
+    <alt key="0209" sub="PIP" name="Anguished Unmaking" />
+    <alt key="0210" sub="PIP" name="Assemble the Legion" />
+    <alt key="0211" sub="PIP" name="Behemoth Sledge" />
+    <alt key="0212" sub="PIP" name="Biomass Mutation" />
+    <alt key="0213" sub="PIP" name="Casualties of War" />
+    <alt key="0214" sub="PIP" name="Corpsejack Menace" />
+    <alt key="0215" sub="PIP" name="Fervent Charge" />
+    <alt key="0216" sub="PIP" name="Find" />
+    <alt key="0217" sub="PIP" name="General's Enforcer" />
+    <alt key="0218" sub="PIP" name="Heroic Reinforcements" />
+    <alt key="0219" sub="PIP" name="Putrefy" />
+    <alt key="0220" sub="PIP" name="Ruinous Ultimatum" />
+    <alt key="0221" sub="PIP" name="Wake the Past" />
+    <alt key="0222" sub="PIP" name="Wear" />
+    <alt key="0223" sub="PIP" name="Winding Constrictor" />
+    <alt key="0224" sub="PIP" name="Arcane Signet" />
+    <alt key="0225" sub="PIP" name="Basilisk Collar" />
+    <alt key="0226" sub="PIP" name="Bloodforged Battle-Axe" />
+    <alt key="0227" sub="PIP" name="Brass Knuckles" />
+    <alt key="0228" sub="PIP" name="Champion's Helm" />
+    <alt key="0229" sub="PIP" name="Contagion Clasp" />
+    <alt key="0230" sub="PIP" name="Everflowing Chalice" />
+    <alt key="0231" sub="PIP" name="Explorer's Scope" />
+    <alt key="0232" sub="PIP" name="Fireshrieker" />
+    <alt key="0233" sub="PIP" name="Lightning Greaves" />
+    <alt key="0234" sub="PIP" name="Masterwork of Ingenuity" />
+    <alt key="0235" sub="PIP" name="Mind Stone" />
+    <alt key="0236" sub="PIP" name="Mystic Forge" />
+    <alt key="0237" sub="PIP" name="Panharmonicon" />
+    <alt key="0238" sub="PIP" name="Skullclamp" />
+    <alt key="0239" sub="PIP" name="Sol Ring" />
+    <alt key="0240" sub="PIP" name="Solemn Simulacrum" />
+    <alt key="0241" sub="PIP" name="Steel Overseer" />
+    <alt key="0242" sub="PIP" name="Swiftfoot Boots" />
+    <alt key="0243" sub="PIP" name="Talisman of Conviction" />
+    <alt key="0244" sub="PIP" name="Talisman of Creativity" />
+    <alt key="0245" sub="PIP" name="Talisman of Curiosity" />
+    <alt key="0246" sub="PIP" name="Talisman of Dominance" />
+    <alt key="0247" sub="PIP" name="Talisman of Hierarchy" />
+    <alt key="0248" sub="PIP" name="Talisman of Indulgence" />
+    <alt key="0249" sub="PIP" name="Talisman of Progress" />
+    <alt key="0250" sub="PIP" name="Talisman of Resilience" />
+    <alt key="0251" sub="PIP" name="Thought Vessel" />
+    <alt key="0252" sub="PIP" name="Wayfarer's Bauble" />
+    <alt key="0253" sub="PIP" name="Ash Barrens" />
+    <alt key="0254" sub="PIP" name="Buried Ruin" />
+    <alt key="0255" sub="PIP" name="Canopy Vista" />
+    <alt key="0256" sub="PIP" name="Canyon Slough" />
+    <alt key="0257" sub="PIP" name="Cinder Glade" />
+    <alt key="0258" sub="PIP" name="Clifftop Retreat" />
+    <alt key="0259" sub="PIP" name="Command Tower" />
+    <alt key="0260" sub="PIP" name="Darkwater Catacombs" />
+    <alt key="0261" sub="PIP" name="Dragonskull Summit" />
+    <alt key="0262" sub="PIP" name="Drowned Catacomb" />
+    <alt key="0263" sub="PIP" name="Evolving Wilds" />
+    <alt key="0264" sub="PIP" name="Exotic Orchard" />
+    <alt key="0265" sub="PIP" name="Fetid Pools" />
+    <alt key="0266" sub="PIP" name="Glacial Fortress" />
+    <alt key="0267" sub="PIP" name="Hinterland Harbor" />
+    <alt key="0268" sub="PIP" name="Irrigated Farmland" />
+    <alt key="0269" sub="PIP" name="Isolated Chapel" />
+    <alt key="0270" sub="PIP" name="Jungle Shrine" />
+    <alt key="0271" sub="PIP" name="Memorial to Glory" />
+    <alt key="0272" sub="PIP" name="Mortuary Mire" />
+    <alt key="0273" sub="PIP" name="Mossfire Valley" />
+    <alt key="0274" sub="PIP" name="Myriad Landscape" />
+    <alt key="0275" sub="PIP" name="Mystic Monastery" />
+    <alt key="0276" sub="PIP" name="Nesting Grounds" />
+    <alt key="0277" sub="PIP" name="Nomad Outpost" />
+    <alt key="0278" sub="PIP" name="Opulent Palace" />
+    <alt key="0279" sub="PIP" name="Path of Ancestry" />
+    <alt key="0280" sub="PIP" name="Prairie Stream" />
+    <alt key="0281" sub="PIP" name="Razortide Bridge" />
+    <alt key="0282" sub="PIP" name="Roadside Reliquary" />
+    <alt key="0283" sub="PIP" name="Rogue's Passage" />
+    <alt key="0284" sub="PIP" name="Rootbound Crag" />
+    <alt key="0285" sub="PIP" name="Rustvale Bridge" />
+    <alt key="0286" sub="PIP" name="Scattered Groves" />
+    <alt key="0287" sub="PIP" name="Scavenger Grounds" />
+    <alt key="0288" sub="PIP" name="Shadowblood Ridge" />
+    <alt key="0289" sub="PIP" name="Sheltered Thicket" />
+    <alt key="0290" sub="PIP" name="Silverbluff Bridge" />
+    <alt key="0291" sub="PIP" name="Skycloud Expanse" />
+    <alt key="0292" sub="PIP" name="Smoldering Marsh" />
+    <alt key="0293" sub="PIP" name="Spire of Industry" />
+    <alt key="0294" sub="PIP" name="Sulfur Falls" />
+    <alt key="0295" sub="PIP" name="Sungrass Prairie" />
+    <alt key="0296" sub="PIP" name="Sunken Hollow" />
+    <alt key="0297" sub="PIP" name="Sunpetal Grove" />
+    <alt key="0298" sub="PIP" name="Tainted Field" />
+    <alt key="0299" sub="PIP" name="Tainted Isle" />
+    <alt key="0300" sub="PIP" name="Tainted Peak" />
+    <alt key="0301" sub="PIP" name="Tainted Wood" />
+    <alt key="0302" sub="PIP" name="Temple of Abandon" />
+    <alt key="0303" sub="PIP" name="Temple of Deceit" />
+    <alt key="0304" sub="PIP" name="Temple of Enlightenment" />
+    <alt key="0305" sub="PIP" name="Temple of Epiphany" />
+    <alt key="0306" sub="PIP" name="Temple of Malady" />
+    <alt key="0307" sub="PIP" name="Temple of Malice" />
+    <alt key="0308" sub="PIP" name="Temple of Mystery" />
+    <alt key="0309" sub="PIP" name="Temple of Plenty" />
+    <alt key="0310" sub="PIP" name="Temple of Silence" />
+    <alt key="0311" sub="PIP" name="Temple of the False God" />
+    <alt key="0312" sub="PIP" name="Temple of Triumph" />
+    <alt key="0313" sub="PIP" name="Terramorphic Expanse" />
+    <alt key="0314" sub="PIP" name="Treasure Vault" />
+    <alt key="0315" sub="PIP" name="Windbrisk Heights" />
+    <alt key="0316" sub="PIP" name="Woodland Cemetery" />
+    <alt key="0317" sub="PIP" name="Plains" />
+    <alt key="0318" sub="PIP" name="Plains" />
+    <alt key="0319" sub="PIP" name="Island" />
+    <alt key="0320" sub="PIP" name="Island" />
+    <alt key="0321" sub="PIP" name="Swamp" />
+    <alt key="0322" sub="PIP" name="Swamp" />
+    <alt key="0323" sub="PIP" name="Mountain" />
+    <alt key="0324" sub="PIP" name="Mountain" />
+    <alt key="0325" sub="PIP" name="Forest" />
+    <alt key="0326" sub="PIP" name="Forest" />
+    <alt key="0327" sub="PIP" name="Idolized" />
+    <alt key="0328" sub="PIP" name="Securitron Squadron" />
+    <alt key="0329" sub="PIP" name="Radstorm" />
+    <alt key="0330" sub="PIP" name="Synth Infiltrator" />
+    <alt key="0331" sub="PIP" name="Nuclear Fallout" />
+    <alt key="0332" sub="PIP" name="Screeching Scorchbeast" />
+    <alt key="0333" sub="PIP" name="V.A.T.S." />
+    <alt key="0334" sub="PIP" name="Mysterious Stranger" />
+    <alt key="0335" sub="PIP" name="Watchful Radstag" />
+    <alt key="0336" sub="PIP" name="Alpha Deathclaw" />
+    <alt key="0337" sub="PIP" name="Armory Paladin" />
+    <alt key="0338" sub="PIP" name="Atomize" />
+    <alt key="0339" sub="PIP" name="Caesar, Legion's Emperor" />
+    <alt key="0340" sub="PIP" name="Dogmeat, Ever Loyal" />
+    <alt key="0341" sub="PIP" name="Dr. Madison Li" />
+    <alt key="0342" sub="PIP" name="Inventory Management" />
+    <alt key="0343" sub="PIP" name="The Wise Mothman" />
+    <alt key="0362" sub="PIP" name="Aradesh, the Founder" />
+    <alt key="0363" sub="PIP" name="Automated Assembly Line" />
+    <alt key="0364" sub="PIP" name="Battle of Hoover Dam" />
+    <alt key="0365" sub="PIP" name="Brotherhood Scribe" />
+    <alt key="0366" sub="PIP" name="Codsworth, Handy Helper" />
+    <alt key="0367" sub="PIP" name="Overencumbered" />
+    <alt key="0368" sub="PIP" name="Overseer of Vault 76" />
+    <alt key="0369" sub="PIP" name="Pre-War Formalwear" />
+    <alt key="0370" sub="PIP" name="The Prydwen, Steel Flagship" />
+    <alt key="0371" sub="PIP" name="Sentry Bot" />
+    <alt key="0372" sub="PIP" name="Sierra, Nuka's Biggest Fan" />
+    <alt key="0373" sub="PIP" name="Yes Man, Personal Securitron" />
+    <alt key="0374" sub="PIP" name="Curie, Emergent Intelligence" />
+    <alt key="0375" sub="PIP" name="James, Wandering Dad" />
+    <alt key="0376" sub="PIP" name="Jason Bright, Glowing Prophet" />
+    <alt key="0377" sub="PIP" name="Mirelurk Queen" />
+    <alt key="0378" sub="PIP" name="Nick Valentine, Private Eye" />
+    <alt key="0379" sub="PIP" name="Piper Wright, Publick Reporter" />
+    <alt key="0380" sub="PIP" name="Struggle for Project Purity" />
+    <alt key="0381" sub="PIP" name="Feral Ghoul" />
+    <alt key="0382" sub="PIP" name="Hancock, Ghoulish Mayor" />
+    <alt key="0383" sub="PIP" name="Wasteland Raider" />
+    <alt key="0384" sub="PIP" name="Assaultron Dominator" />
+    <alt key="0385" sub="PIP" name="Duchess, Wayward Tavernkeep" />
+    <alt key="0386" sub="PIP" name="Grim Reaper's Sprint" />
+    <alt key="0387" sub="PIP" name="Junk Jet" />
+    <alt key="0388" sub="PIP" name="Megaton's Fate" />
+    <alt key="0389" sub="PIP" name="The Motherlode, Excavator" />
+    <alt key="0390" sub="PIP" name="Plasma Caster" />
+    <alt key="0391" sub="PIP" name="Powder Ganger" />
+    <alt key="0392" sub="PIP" name="Rose, Cutthroat Raider" />
+    <alt key="0393" sub="PIP" name="Synth Eradicator" />
+    <alt key="0394" sub="PIP" name="Thrill-Kill Disciple" />
+    <alt key="0395" sub="PIP" name="Veronica, Dissident Scribe" />
+    <alt key="0396" sub="PIP" name="Wild Wasteland" />
+    <alt key="0397" sub="PIP" name="Animal Friend" />
+    <alt key="0398" sub="PIP" name="Harold and Bob, First Numens" />
+    <alt key="0399" sub="PIP" name="Lily Bowen, Raging Grandma" />
+    <alt key="0400" sub="PIP" name="Power Fist" />
+    <alt key="0401" sub="PIP" name="Rampaging Yao Guai" />
+    <alt key="0402" sub="PIP" name="Strong Back" />
+    <alt key="0403" sub="PIP" name="Strong, the Brutish Thespian" />
+    <alt key="0404" sub="PIP" name="Tato Farmer" />
+    <alt key="0405" sub="PIP" name="Agent Frank Horrigan" />
+    <alt key="0406" sub="PIP" name="Almost Perfect" />
+    <alt key="0407" sub="PIP" name="Arcade Gannon" />
+    <alt key="0408" sub="PIP" name="Boomer Scrapper" />
+    <alt key="0409" sub="PIP" name="Cait, Cage Brawler" />
+    <alt key="0410" sub="PIP" name="Cass, Hand of Vengeance" />
+    <alt key="0411" sub="PIP" name="Colonel Autumn" />
+    <alt key="0412" sub="PIP" name="Desdemona, Freedom's Edge" />
+    <alt key="0413" sub="PIP" name="Elder Arthur Maxson" />
+    <alt key="0414" sub="PIP" name="Electrosiphon" />
+    <alt key="0415" sub="PIP" name="Kellogg, Dangerous Mind" />
+    <alt key="0416" sub="PIP" name="Liberty Prime, Recharged" />
+    <alt key="0417" sub="PIP" name="MacCready, Lamplight Mayor" />
+    <alt key="0418" sub="PIP" name="Marcus, Mutant Mayor" />
+    <alt key="0419" sub="PIP" name="The Master, Transcendent" />
+    <alt key="0420" sub="PIP" name="Moira Brown, Guide Author" />
+    <alt key="0421" sub="PIP" name="Mr. House, President and CEO" />
+    <alt key="0422" sub="PIP" name="Mutational Advantage" />
+    <alt key="0423" sub="PIP" name="The Nipton Lottery" />
+    <alt key="0424" sub="PIP" name="Paladin Elizabeth Taggerdy" />
+    <alt key="0425" sub="PIP" name="Preston Garvey, Minuteman" />
+    <alt key="0426" sub="PIP" name="Red Death, Shipwrecker" />
+    <alt key="0427" sub="PIP" name="Rex, Cyber-Hound" />
+    <alt key="0428" sub="PIP" name="Sentinel Sarah Lyons" />
+    <alt key="0429" sub="PIP" name="Shaun, Father of Synths" />
+    <alt key="0430" sub="PIP" name="Three Dog, Galaxy News DJ" />
+    <alt key="0431" sub="PIP" name="Brotherhood Vertibird" />
+    <alt key="0432" sub="PIP" name="ED-E, Lonesome Eyebot" />
+    <alt key="0433" sub="PIP" name="Mister Gutsy" />
+    <alt key="0434" sub="PIP" name="Nuka-Nuke Launcher" />
+    <alt key="0435" sub="PIP" name="Pip-Boy 3000" />
+    <alt key="0436" sub="PIP" name="Recon Craft Theta" />
+    <alt key="0437" sub="PIP" name="T-45 Power Armor" />
+    <alt key="0438" sub="PIP" name="Desolate Mire" />
+    <alt key="0439" sub="PIP" name="Diamond City" />
+    <alt key="0440" sub="PIP" name="Ferrous Lake" />
+    <alt key="0441" sub="PIP" name="HELIOS One" />
+    <alt key="0442" sub="PIP" name="Junktown" />
+    <alt key="0443" sub="PIP" name="Mariposa Military Base" />
+    <alt key="0444" sub="PIP" name="Overflowing Basin" />
+    <alt key="0445" sub="PIP" name="Sunscorched Divide" />
+    <alt key="0446" sub="PIP" name="Viridescent Bog" />
+    <alt key="0447" sub="PIP" name="Austere Command" />
+    <alt key="0448" sub="PIP" name="Captain of the Watch" />
+    <alt key="0449" sub="PIP" name="Entrapment Maneuver" />
+    <alt key="0450" sub="PIP" name="Hour of Reckoning" />
+    <alt key="0451" sub="PIP" name="Keeper of the Accord" />
+    <alt key="0452" sub="PIP" name="Mantle of the Ancients" />
+    <alt key="0453" sub="PIP" name="Marshal's Anthem" />
+    <alt key="0454" sub="PIP" name="Martial Coup" />
+    <alt key="0455" sub="PIP" name="Open the Vaults" />
+    <alt key="0456" sub="PIP" name="Puresteel Paladin" />
+    <alt key="0457" sub="PIP" name="Secure the Wastes" />
+    <alt key="0458" sub="PIP" name="Single Combat" />
+    <alt key="0459" sub="PIP" name="Fraying Sanity" />
+    <alt key="0460" sub="PIP" name="Inexorable Tide" />
+    <alt key="0461" sub="PIP" name="Mechanized Production" />
+    <alt key="0462" sub="PIP" name="One with the Machine" />
+    <alt key="0463" sub="PIP" name="Black Market" />
+    <alt key="0464" sub="PIP" name="Lethal Scheme" />
+    <alt key="0465" sub="PIP" name="Blasphemous Act" />
+    <alt key="0466" sub="PIP" name="Chaos Warp" />
+    <alt key="0467" sub="PIP" name="Stolen Strategy" />
+    <alt key="0468" sub="PIP" name="Branching Evolution" />
+    <alt key="0469" sub="PIP" name="Guardian Project" />
+    <alt key="0470" sub="PIP" name="Hardened Scales" />
+    <alt key="0471" sub="PIP" name="Heroic Intervention" />
+    <alt key="0472" sub="PIP" name="Tireless Tracker" />
+    <alt key="0473" sub="PIP" name="Anguished Unmaking" />
+    <alt key="0474" sub="PIP" name="Assemble the Legion" />
+    <alt key="0475" sub="PIP" name="Biomass Mutation" />
+    <alt key="0476" sub="PIP" name="Casualties of War" />
+    <alt key="0477" sub="PIP" name="Fervent Charge" />
+    <alt key="0478" sub="PIP" name="Ruinous Ultimatum" />
+    <alt key="0479" sub="PIP" name="Wake the Past" />
+    <alt key="0480" sub="PIP" name="Basilisk Collar" />
+    <alt key="0481" sub="PIP" name="Bloodforged Battle-Axe" />
+    <alt key="0482" sub="PIP" name="Champion's Helm" />
+    <alt key="0483" sub="PIP" name="Masterwork of Ingenuity" />
+    <alt key="0484" sub="PIP" name="Mystic Forge" />
+    <alt key="0485" sub="PIP" name="Panharmonicon" />
+    <alt key="0486" sub="PIP" name="Solemn Simulacrum" />
+    <alt key="0487" sub="PIP" name="Steel Overseer" />
+    <alt key="0488" sub="PIP" name="Canopy Vista" />
+    <alt key="0489" sub="PIP" name="Canyon Slough" />
+    <alt key="0490" sub="PIP" name="Cinder Glade" />
+    <alt key="0491" sub="PIP" name="Clifftop Retreat" />
+    <alt key="0492" sub="PIP" name="Darkwater Catacombs" />
+    <alt key="0493" sub="PIP" name="Dragonskull Summit" />
+    <alt key="0494" sub="PIP" name="Drowned Catacomb" />
+    <alt key="0495" sub="PIP" name="Exotic Orchard" />
+    <alt key="0496" sub="PIP" name="Fetid Pools" />
+    <alt key="0497" sub="PIP" name="Glacial Fortress" />
+    <alt key="0498" sub="PIP" name="Hinterland Harbor" />
+    <alt key="0499" sub="PIP" name="Irrigated Farmland" />
+    <alt key="0500" sub="PIP" name="Isolated Chapel" />
+    <alt key="0501" sub="PIP" name="Mossfire Valley" />
+    <alt key="0502" sub="PIP" name="Nesting Grounds" />
+    <alt key="0503" sub="PIP" name="Prairie Stream" />
+    <alt key="0504" sub="PIP" name="Rootbound Crag" />
+    <alt key="0505" sub="PIP" name="Scattered Groves" />
+    <alt key="0506" sub="PIP" name="Scavenger Grounds" />
+    <alt key="0507" sub="PIP" name="Shadowblood Ridge" />
+    <alt key="0508" sub="PIP" name="Sheltered Thicket" />
+    <alt key="0509" sub="PIP" name="Skycloud Expanse" />
+    <alt key="0510" sub="PIP" name="Smoldering Marsh" />
+    <alt key="0511" sub="PIP" name="Spire of Industry" />
+    <alt key="0512" sub="PIP" name="Sulfur Falls" />
+    <alt key="0513" sub="PIP" name="Sungrass Prairie" />
+    <alt key="0514" sub="PIP" name="Sunken Hollow" />
+    <alt key="0515" sub="PIP" name="Sunpetal Grove" />
+    <alt key="0516" sub="PIP" name="Temple of Abandon" />
+    <alt key="0517" sub="PIP" name="Temple of Deceit" />
+    <alt key="0518" sub="PIP" name="Temple of Enlightenment" />
+    <alt key="0519" sub="PIP" name="Temple of Epiphany" />
+    <alt key="0520" sub="PIP" name="Temple of Malady" />
+    <alt key="0521" sub="PIP" name="Temple of Malice" />
+    <alt key="0522" sub="PIP" name="Temple of Mystery" />
+    <alt key="0523" sub="PIP" name="Temple of Plenty" />
+    <alt key="0524" sub="PIP" name="Temple of Silence" />
+    <alt key="0525" sub="PIP" name="Temple of Triumph" />
+    <alt key="0526" sub="PIP" name="Treasure Vault" />
+    <alt key="0527" sub="PIP" name="Windbrisk Heights" />
+    <alt key="0528" sub="PIP" name="Woodland Cemetery" />
+    <alt key="0881" sub="PIP" name="Farewell" />
+    <alt key="0882" sub="PIP" name="Ravages of War" />
+    <alt key="0883" sub="PIP" name="Vandalblast" />
+    <alt key="0884" sub="PIP" name="Arcane Signet" />
+    <alt key="0885" sub="PIP" name="Crucible of Worlds" />
+    <alt key="0886" sub="PIP" name="Nuka-Cola Vending Machine" />
+    <alt key="0887" sub="PIP" name="Sol Ring" />
+    <alt key="0888" sub="PIP" name="Command Tower" />
+    <alt key="0889" sub="PIP" name="Wasteland" />
+    <alt key="1064" sub="PIP" name="Caesar, Legion's Emperor" />
+    <alt key="1065" sub="PIP" name="Dogmeat, Ever Loyal" />
+    <alt key="1066" sub="PIP" name="Dr. Madison Li" />
+    <alt key="1067" sub="PIP" name="The Wise Mothman" />
+    <alt key="1068" sub="PIP" name="War Room" />
     
     <!-- ★カードタイプ依存 -->
     <!-- 両面カード -->
