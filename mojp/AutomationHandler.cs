@@ -315,7 +315,7 @@ partial class MainViewModel
 
             // 部屋カードの誘発型能力
             int slashIndex = value.IndexOf('/');
-            if (slashIndex > 0)
+            if (slashIndex > 0 && char.IsLetter(value[slashIndex - 1]))
             {
                 // "/" があるので、index が 0 のときは除く
                 value = value.Substring(0, slashIndex);

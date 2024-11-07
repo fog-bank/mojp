@@ -2018,6 +2018,16 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0274" sub="DSK" name="Swamp" />
     <alt key="0275" sub="DSK" name="Mountain" />
     <alt key="0276" sub="DSK" name="Forest" />
+    <alt key="0282" sub="FDN" name="Plains" />
+    <alt key="0283" sub="FDN" name="Plains" />
+    <alt key="0284" sub="FDN" name="Island" />
+    <alt key="0285" sub="FDN" name="Island" />
+    <alt key="0286" sub="FDN" name="Swamp" />
+    <alt key="0287" sub="FDN" name="Swamp" />
+    <alt key="0288" sub="FDN" name="Mountain" />
+    <alt key="0289" sub="FDN" name="Mountain" />
+    <alt key="0290" sub="FDN" name="Forest" />
+    <alt key="0291" sub="FDN" name="Forest" />
     <!-- SL2 -->
     <alt key="0138" sub="SLD" name="Anguished Unmaking" />
     <alt key="0139" sub="SLD" name="Assassin's Trophy" />
@@ -4114,6 +4124,193 @@ Fire-Omen Craneが攻撃するたび、対戦相手がコントロールして�
     <alt key="0371" sub="DSC" name="Archon of Cruelty" />
     <alt key="0372" sub="DSC" name="Goryo's Vengeance" />
     <alt key="0373" sub="DSC" name="Living Death" />
+    <!-- FDN -->
+    <alt key="0292" sub="FDN" name="Sire of Seven Deaths" />
+    <alt key="0293" sub="FDN" name="Ajani's Pridemate" />
+    <alt key="0294" sub="FDN" name="Arahbo, the First Fang" />
+    <alt key="0295" sub="FDN" name="Celestial Armor" />
+    <alt key="0296" sub="FDN" name="Crystal Barricade" />
+    <alt key="0297" sub="FDN" name="Exemplar of Light" />
+    <alt key="0298" sub="FDN" name="Giada, Font of Hope" />
+    <alt key="0299" sub="FDN" name="Herald of Eternal Dawn" />
+    <alt key="0300" sub="FDN" name="Raise the Past" />
+    <alt key="0301" sub="FDN" name="Skyknight Squire" />
+    <alt key="0302" sub="FDN" name="Valkyrie's Call" />
+    <alt key="0303" sub="FDN" name="Youthful Valkyrie" />
+    <alt key="0304" sub="FDN" name="Archmage of Runes" />
+    <alt key="0305" sub="FDN" name="Curator of Destinies" />
+    <alt key="0306" sub="FDN" name="Drake Hatcher" />
+    <alt key="0307" sub="FDN" name="High Fae Trickster" />
+    <alt key="0308" sub="FDN" name="Homunculus Horde" />
+    <alt key="0309" sub="FDN" name="Kiora, the Rising Tide" />
+    <alt key="0310" sub="FDN" name="Lunar Insight" />
+    <alt key="0311" sub="FDN" name="An Offer You Can't Refuse" />
+    <alt key="0312" sub="FDN" name="Omniscience" />
+    <alt key="0313" sub="FDN" name="Refute" />
+    <alt key="0314" sub="FDN" name="Sphinx of Forgotten Lore" />
+    <alt key="0315" sub="FDN" name="Think Twice" />
+    <alt key="0316" sub="FDN" name="Abyssal Harvester" />
+    <alt key="0317" sub="FDN" name="Blasphemous Edict" />
+    <alt key="0318" sub="FDN" name="Bloodthirsty Conqueror" />
+    <alt key="0320" sub="FDN" name="High-Society Hunter" />
+    <alt key="0321" sub="FDN" name="Nine-Lives Familiar" />
+    <alt key="0322" sub="FDN" name="Phyrexian Arena" />
+    <alt key="0323" sub="FDN" name="Rise of the Dark Realms" />
+    <alt key="0324" sub="FDN" name="Tinybones, Bauble Burglar" />
+    <alt key="0325" sub="FDN" name="Vengeful Bloodwitch" />
+    <alt key="0326" sub="FDN" name="Zul Ashur, Lich Lord" />
+    <alt key="0327" sub="FDN" name="Abrade" />
+    <alt key="0328" sub="FDN" name="Electroduplicate" />
+    <alt key="0329" sub="FDN" name="Etali, Primal Storm" />
+    <alt key="0330" sub="FDN" name="Kellan, Planar Trailblazer" />
+    <alt key="0331" sub="FDN" name="Rite of the Dragoncaller" />
+    <alt key="0332" sub="FDN" name="Searslicer Goblin" />
+    <alt key="0333" sub="FDN" name="Twinflame Tyrant" />
+    <alt key="0334" sub="FDN" name="Genesis Wave" />
+    <alt key="0335" sub="FDN" name="Ghalta, Primal Hunger" />
+    <alt key="0336" sub="FDN" name="Loot, Exuberant Explorer" />
+    <alt key="0337" sub="FDN" name="Mossborn Hydra" />
+    <alt key="0338" sub="FDN" name="Preposterous Proportions" />
+    <alt key="0339" sub="FDN" name="Quilled Greatwurm" />
+    <alt key="0340" sub="FDN" name="Reclamation Sage" />
+    <alt key="0341" sub="FDN" name="Spinner of Souls" />
+    <alt key="0342" sub="FDN" name="Sylvan Scavenging" />
+    <alt key="0343" sub="FDN" name="Alesha, Who Laughs at Fate" />
+    <alt key="0344" sub="FDN" name="Anthem of Champions" />
+    <alt key="0345" sub="FDN" name="Ashroot Animist" />
+    <alt key="0346" sub="FDN" name="Elenda, Saint of Dusk" />
+    <alt key="0347" sub="FDN" name="Koma, World-Eater" />
+    <alt key="0348" sub="FDN" name="Kykar, Zephyr Awakener" />
+    <alt key="0349" sub="FDN" name="Lathril, Blade of the Elves" />
+    <alt key="0350" sub="FDN" name="Niv-Mizzet, Visionary" />
+    <alt key="0351" sub="FDN" name="Zimone, Paradox Sculptor" />
+    <alt key="0352" sub="FDN" name="Banner of Kinship" />
+    <alt key="0353" sub="FDN" name="Leyline Axe" />
+    <alt key="0354" sub="FDN" name="Scrawling Crawler" />
+    <alt key="0355" sub="FDN" name="Swiftfoot Boots" />
+    <alt key="0356" sub="FDN" name="Soulstone Sanctuary" />
+    <alt key="0362" sub="FDN" name="Sire of Seven Deaths" />
+    <alt key="0363" sub="FDN" name="Arahbo, the First Fang" />
+    <alt key="0364" sub="FDN" name="Celestial Armor" />
+    <alt key="0365" sub="FDN" name="Crystal Barricade" />
+    <alt key="0366" sub="FDN" name="Exemplar of Light" />
+    <alt key="0367" sub="FDN" name="Giada, Font of Hope" />
+    <alt key="0368" sub="FDN" name="Herald of Eternal Dawn" />
+    <alt key="0369" sub="FDN" name="Raise the Past" />
+    <alt key="0370" sub="FDN" name="Skyknight Squire" />
+    <alt key="0371" sub="FDN" name="Valkyrie's Call" />
+    <alt key="0372" sub="FDN" name="Archmage of Runes" />
+    <alt key="0373" sub="FDN" name="Curator of Destinies" />
+    <alt key="0374" sub="FDN" name="Drake Hatcher" />
+    <alt key="0375" sub="FDN" name="High Fae Trickster" />
+    <alt key="0376" sub="FDN" name="Homunculus Horde" />
+    <alt key="0377" sub="FDN" name="Kiora, the Rising Tide" />
+    <alt key="0378" sub="FDN" name="Lunar Insight" />
+    <alt key="0379" sub="FDN" name="Omniscience" />
+    <alt key="0380" sub="FDN" name="Sphinx of Forgotten Lore" />
+    <alt key="0381" sub="FDN" name="Abyssal Harvester" />
+    <alt key="0382" sub="FDN" name="Blasphemous Edict" />
+    <alt key="0383" sub="FDN" name="Bloodthirsty Conqueror" />
+    <alt key="0384" sub="FDN" name="High-Society Hunter" />
+    <alt key="0385" sub="FDN" name="Nine-Lives Familiar" />
+    <alt key="0386" sub="FDN" name="Phyrexian Arena" />
+    <alt key="0387" sub="FDN" name="Rise of the Dark Realms" />
+    <alt key="0388" sub="FDN" name="Tinybones, Bauble Burglar" />
+    <alt key="0389" sub="FDN" name="Zul Ashur, Lich Lord" />
+    <alt key="0390" sub="FDN" name="Electroduplicate" />
+    <alt key="0391" sub="FDN" name="Etali, Primal Storm" />
+    <alt key="0392" sub="FDN" name="Kellan, Planar Trailblazer" />
+    <alt key="0393" sub="FDN" name="Rite of the Dragoncaller" />
+    <alt key="0394" sub="FDN" name="Searslicer Goblin" />
+    <alt key="0395" sub="FDN" name="Twinflame Tyrant" />
+    <alt key="0396" sub="FDN" name="Genesis Wave" />
+    <alt key="0397" sub="FDN" name="Ghalta, Primal Hunger" />
+    <alt key="0398" sub="FDN" name="Loot, Exuberant Explorer" />
+    <alt key="0399" sub="FDN" name="Mossborn Hydra" />
+    <alt key="0400" sub="FDN" name="Preposterous Proportions" />
+    <alt key="0401" sub="FDN" name="Quilled Greatwurm" />
+    <alt key="0402" sub="FDN" name="Spinner of Souls" />
+    <alt key="0403" sub="FDN" name="Sylvan Scavenging" />
+    <alt key="0404" sub="FDN" name="Alesha, Who Laughs at Fate" />
+    <alt key="0405" sub="FDN" name="Anthem of Champions" />
+    <alt key="0406" sub="FDN" name="Ashroot Animist" />
+    <alt key="0407" sub="FDN" name="Elenda, Saint of Dusk" />
+    <alt key="0408" sub="FDN" name="Koma, World-Eater" />
+    <alt key="0409" sub="FDN" name="Kykar, Zephyr Awakener" />
+    <alt key="0410" sub="FDN" name="Lathril, Blade of the Elves" />
+    <alt key="0411" sub="FDN" name="Niv-Mizzet, Visionary" />
+    <alt key="0412" sub="FDN" name="Zimone, Paradox Sculptor" />
+    <alt key="0413" sub="FDN" name="Banner of Kinship" />
+    <alt key="0414" sub="FDN" name="Leyline Axe" />
+    <alt key="0415" sub="FDN" name="Scrawling Crawler" />
+    <alt key="0416" sub="FDN" name="Soulstone Sanctuary" />
+    <alt key="0422" sub="FDN" name="Day of Judgment" />
+    <alt key="0423" sub="FDN" name="Herald of Eternal Dawn" />
+    <alt key="0424" sub="FDN" name="Kaito, Cunning Infiltrator" />
+    <alt key="0425" sub="FDN" name="Think Twice" />
+    <alt key="0426" sub="FDN" name="Bloodthirsty Conqueror" />
+    <alt key="0427" sub="FDN" name="Twinflame Tyrant" />
+    <alt key="0428" sub="FDN" name="Doubling Season" />
+    <alt key="0429" sub="FDN" name="Llanowar Elves" />
+    <alt key="0430" sub="FDN" name="Muldrotha, the Gravetide" />
+    <alt key="0431" sub="FDN" name="Progenitus" />
+    <alt key="0432" sub="FDN" name="Day of Judgment" />
+    <alt key="0433" sub="FDN" name="Herald of Eternal Dawn" />
+    <alt key="0434" sub="FDN" name="Kaito, Cunning Infiltrator" />
+    <alt key="0435" sub="FDN" name="Think Twice" />
+    <alt key="0436" sub="FDN" name="Bloodthirsty Conqueror" />
+    <alt key="0437" sub="FDN" name="Twinflame Tyrant" />
+    <alt key="0438" sub="FDN" name="Doubling Season" />
+    <alt key="0439" sub="FDN" name="Llanowar Elves" />
+    <alt key="0440" sub="FDN" name="Muldrotha, the Gravetide" />
+    <alt key="0441" sub="FDN" name="Progenitus" />
+    <alt key="0442" sub="FDN" name="Arahbo, the First Fang" />
+    <alt key="0443" sub="FDN" name="Celestial Armor" />
+    <alt key="0444" sub="FDN" name="Crystal Barricade" />
+    <alt key="0445" sub="FDN" name="Exemplar of Light" />
+    <alt key="0446" sub="FDN" name="Herald of Eternal Dawn" />
+    <alt key="0447" sub="FDN" name="Raise the Past" />
+    <alt key="0448" sub="FDN" name="Skyknight Squire" />
+    <alt key="0449" sub="FDN" name="Valkyrie's Call" />
+    <alt key="0450" sub="FDN" name="Archmage of Runes" />
+    <alt key="0451" sub="FDN" name="Curator of Destinies" />
+    <alt key="0452" sub="FDN" name="Drake Hatcher" />
+    <alt key="0453" sub="FDN" name="High Fae Trickster" />
+    <alt key="0454" sub="FDN" name="Homunculus Horde" />
+    <alt key="0455" sub="FDN" name="Kiora, the Rising Tide" />
+    <alt key="0456" sub="FDN" name="Lunar Insight" />
+    <alt key="0457" sub="FDN" name="Sphinx of Forgotten Lore" />
+    <alt key="0458" sub="FDN" name="Abyssal Harvester" />
+    <alt key="0459" sub="FDN" name="Blasphemous Edict" />
+    <alt key="0460" sub="FDN" name="Bloodthirsty Conqueror" />
+    <alt key="0461" sub="FDN" name="High-Society Hunter" />
+    <alt key="0462" sub="FDN" name="Nine-Lives Familiar" />
+    <alt key="0463" sub="FDN" name="Tinybones, Bauble Burglar" />
+    <alt key="0464" sub="FDN" name="Zul Ashur, Lich Lord" />
+    <alt key="0465" sub="FDN" name="Electroduplicate" />
+    <alt key="0466" sub="FDN" name="Kellan, Planar Trailblazer" />
+    <alt key="0467" sub="FDN" name="Rite of the Dragoncaller" />
+    <alt key="0468" sub="FDN" name="Searslicer Goblin" />
+    <alt key="0469" sub="FDN" name="Twinflame Tyrant" />
+    <alt key="0470" sub="FDN" name="Loot, Exuberant Explorer" />
+    <alt key="0471" sub="FDN" name="Mossborn Hydra" />
+    <alt key="0472" sub="FDN" name="Preposterous Proportions" />
+    <alt key="0473" sub="FDN" name="Quilled Greatwurm" />
+    <alt key="0474" sub="FDN" name="Spinner of Souls" />
+    <alt key="0475" sub="FDN" name="Sylvan Scavenging" />
+    <alt key="0476" sub="FDN" name="Alesha, Who Laughs at Fate" />
+    <alt key="0477" sub="FDN" name="Anthem of Champions" />
+    <alt key="0478" sub="FDN" name="Ashroot Animist" />
+    <alt key="0479" sub="FDN" name="Elenda, Saint of Dusk" />
+    <alt key="0480" sub="FDN" name="Koma, World-Eater" />
+    <alt key="0481" sub="FDN" name="Kykar, Zephyr Awakener" />
+    <alt key="0482" sub="FDN" name="Niv-Mizzet, Visionary" />
+    <alt key="0483" sub="FDN" name="Zimone, Paradox Sculptor" />
+    <alt key="0484" sub="FDN" name="Banner of Kinship" />
+    <alt key="0485" sub="FDN" name="Leyline Axe" />
+    <alt key="0486" sub="FDN" name="Scrawling Crawler" />
+    <alt key="0487" sub="FDN" name="Soulstone Sanctuary" />
+    <alt key="0729" sub="FDN" name="Solemn Simulacrum" />
     <!-- 特殊カード枠ここまで -->
     
     <!-- ★旧枠 -->
