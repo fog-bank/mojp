@@ -274,11 +274,6 @@
     </Grid>
     <Window.ContextMenu>
         <ContextMenu>
-            <MenuItem Command="{Binding CaptureCommand}" Header="{Binding CaptureCommand.Header}">
-                <MenuItem.Icon>
-                    <Image Source="{Binding CaptureCommand.Image}" Height="16" Style="{StaticResource btnImageStyle}" />
-                </MenuItem.Icon>
-            </MenuItem>
             <MenuItem Command="{Binding CopyCardNameCommand}" Header="{Binding CopyCardNameCommand.Header}">
                 <MenuItem.Icon>
                     <Image Source="{Binding CopyCardNameCommand.Image}" Height="16" Style="{StaticResource btnImageStyle}" />

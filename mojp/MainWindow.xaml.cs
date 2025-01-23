@@ -82,6 +82,16 @@ public partial class MainWindow : Window
 #endif
         });
 
+        await vm.CaptureMagicOnline();
+
+        if (App.Cards.Count == 0)
+        {
+            vm.InvokeSetMessage(
+                "同梱のカードテキストデータ (cards.xml) を取得できません。" +
+                "セキュリティ対策ソフトによってブロックされている可能性があります。" + Environment.NewLine +
+                "[場所] " + Path.Combine(Path.GetDirectoryName(typeof(App).Assembly.Location), "cards.xml"));
+        }
+
 #if !OFFLINE
         if (vm.GetPDList)
         {

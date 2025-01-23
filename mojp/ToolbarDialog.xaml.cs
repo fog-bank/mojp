@@ -67,25 +67,22 @@ public partial class ToolbarDialog : Window
         var commands = vm?.ToolbarCommands;
 
         // Capture,0,CopyCardName,0,CopyEnglishName,0,GoToWiki,1,Option,1
-        if (commands != null && commands.Count == 5)
+        if (commands != null && commands.Count <= 5)
         {
-            commands[0] = vm.CaptureCommand;
+            commands[0] = vm.CopyCardNameCommand;
             commands[0].IsVisible = false;
 
-            commands[1] = vm.CopyCardNameCommand;
+            commands[1] = vm.CopyEnglishNameCommand;
             commands[1].IsVisible = false;
 
-            commands[2] = vm.CopyEnglishNameCommand;
-            commands[2].IsVisible = false;
-
-            commands[3] = vm.GoToWikiCommand;
+            commands[2] = vm.GoToWikiCommand;
 #if !OFFLINE
-            commands[3].IsVisible = true;
+            commands[2].IsVisible = true;
 #else
-            commands[3].IsVisible = false;
+            commands[2].IsVisible = false;
 #endif
-            commands[4] = vm.OptionCommand;
-            commands[4].IsVisible = true;
+            commands[3] = vm.OptionCommand;
+            commands[3].IsVisible = true;
         }
     }
 }

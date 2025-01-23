@@ -61,7 +61,7 @@ public sealed class SettingsCache
     // 動作
     public bool ShowBasicLands { get; set; }
 
-    public bool AutoRefresh { get; set; }
+    //public bool AutoRefresh { get; set; }
 
     public int RefreshIntervalMilliseconds
     {
@@ -105,11 +105,11 @@ public sealed class SettingsCache
         }
 
         EnableToolbar = opt.EnableToolbar;
-        ToolbarCommands = opt.ToolbarCommands?.Split(',') ?? new string[0];
+        ToolbarCommands = opt.ToolbarCommands?.Split(',') ?? [];
         TopMost = opt.TopMost;
 
         ShowBasicLands = opt.ShowBasicLands;
-        AutoRefresh = opt.AutoRefresh;
+        //AutoRefresh = opt.AutoRefresh;
         RefreshIntervalMilliseconds = (int)opt.RefreshInterval.TotalMilliseconds;
 #if !OFFLINE
         GetPDList = opt.GetPDList;
@@ -141,7 +141,7 @@ public sealed class SettingsCache
         opt.TopMost = TopMost;
 
         opt.ShowBasicLands = ShowBasicLands;
-        opt.AutoRefresh = AutoRefresh;
+        //opt.AutoRefresh = AutoRefresh;
         opt.RefreshInterval = TimeSpan.FromMilliseconds(RefreshIntervalMilliseconds);
         opt.GetPDList = GetPDList;
         opt.GetCardPrice = GetCardPrice;

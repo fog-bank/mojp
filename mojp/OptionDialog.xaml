@@ -48,7 +48,7 @@
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
                 <TextBlock>リリース バージョン</TextBlock>
-                <TextBlock Grid.Column="2">2.36.0</TextBlock>
+                <TextBlock Grid.Column="2">3.0.0 Alpha</TextBlock>
                 <TextBlock Name="grpGoGitHub" Grid.Column="3">
                     <Hyperlink ToolTip="https://github.com/fog-bank/mojp/releases" Click="OnClickHyperlink">GitHub に移動</Hyperlink>
                 </TextBlock>
@@ -163,9 +163,18 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
-                    <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
-                <CheckBox IsChecked="{Binding ShowBasicLands}" ToolTipService.ShowDuration="60000">
+                <Grid Margin="0,0,0,2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock>MO を探す時間間隔</TextBlock>
+                    <TextBox Grid.Column="1" MinWidth="100" VerticalContentAlignment="Center" Text="{Binding RefreshIntervalMilliseconds}" />
+                    <TextBlock Grid.Column="2">ミリ秒</TextBlock>
+                </Grid>
+                <CheckBox Grid.Row="1" IsChecked="{Binding ShowBasicLands}" ToolTipService.ShowDuration="60000">
                     <CheckBox.ToolTip>
                         <TextBlock Margin="0">
                             チェックを外すと、氷雪でない基本の平地、島、沼、山、森には反応しなくなります。<LineBreak />
@@ -177,30 +186,7 @@
                         <Image Source="Resources/Information.png" Height="16" Margin="5,0,0,0" />
                     </StackPanel>
                 </CheckBox>
-                <CheckBox Grid.Row="1" IsChecked="{Binding AutoRefresh}" ToolTipService.ShowDuration="60000">
-                    <CheckBox.ToolTip>
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Margin="0">チェックを外した場合は「MO を探す」</TextBlock>
-                            <Image Source="Resources\Camera.png" Height="16" Margin="4,0" />
-                            <TextBlock Margin="0">を適時クリックしてください。</TextBlock>
-                        </StackPanel>
-                    </CheckBox.ToolTip>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock>MO の Preview Pane を自動的に探す</TextBlock>
-                        <Image Source="Resources/Information.png" Height="16" Margin="5,0,0,0" />
-                    </StackPanel>
-                </CheckBox>
-                <Grid Grid.Row="2" Margin="10,5,0,5" IsEnabled="{Binding AutoRefresh}">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition />
-                    </Grid.ColumnDefinitions>
-                    <TextBlock Margin="0,0,10,0">Preview Pane を探す時間間隔</TextBlock>
-                    <TextBox Grid.Column="1" MinWidth="100" VerticalContentAlignment="Center" Text="{Binding RefreshIntervalMilliseconds}" />
-                    <TextBlock Grid.Column="2">ミリ秒</TextBlock>
-                </Grid>
-                <CheckBox Name="grpGetPDList" Grid.Row="3" IsChecked="{Binding GetPDList}" ToolTipService.ShowDuration="60000">
+                <CheckBox Name="grpGetPDList" Grid.Row="2" IsChecked="{Binding GetPDList}" ToolTipService.ShowDuration="60000">
                     <CheckBox.ToolTip>
                         <TextBlock Margin="0">
                             新セット発売時の相場が 0.02 チケット (tix) 以下のカードだけが使えるフォーマットです。<LineBreak />
@@ -215,7 +201,7 @@
                         <Image Source="Resources/Information.png" Height="16" Margin="5,0,0,0" Style="{StaticResource btnImageStyle}" />
                     </StackPanel>
                 </CheckBox>
-                <Grid Name="grpPDRotationTime" Grid.Row="4" Margin="8,4,4,4" IsEnabled="{Binding GetPDList}">
+                <Grid Name="grpPDRotationTime" Grid.Row="3" Margin="8,4,4,4" IsEnabled="{Binding GetPDList}">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto" />
                         <ColumnDefinition Width="Auto" />
@@ -229,7 +215,7 @@
                         <Image Source="Resources/Information.png" Height="16" Margin="5,0,0,0" Style="{StaticResource btnImageStyle}" />
                     </StackPanel>
                 </Grid>
-                <CheckBox Name="grpGetCardPrice" Grid.Row="5" IsChecked="{Binding GetCardPrice}"
+                <CheckBox Name="grpGetCardPrice" Grid.Row="4" IsChecked="{Binding GetCardPrice}"
                           ToolTip="カード検索サイト Scryfall からカードの日毎の平均価格を 1 日 1 回取得します。" ToolTipService.ShowDuration="60000">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock>

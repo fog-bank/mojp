@@ -52,7 +52,7 @@ public partial class App : Application
     public static Lazy<HttpClient> HttpClient { get; } = new(() =>
     {
         var http = new HttpClient();
-        http.DefaultRequestHeaders.UserAgent.Add(new("mojp", "2.0"));
+        http.DefaultRequestHeaders.UserAgent.Add(new("mojp", "3.0"));
         http.DefaultRequestHeaders.Accept.Add(new("application/json"));
         return http;
     });

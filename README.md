@@ -38,8 +38,8 @@ Windows 7 SP1 以降
 
 ## 開発環境
 Windows 10 2022 Update (Version 22H2)  
-Visual Studio 2022 v17.11  
-C# 12.0
+Visual Studio 2022 v17.12  
+C# 13
 
 ### 仕組み
 [Microsoft UI Automation](https://learn.microsoft.com/ja-jp/dotnet/framework/ui-automation/) API を利用して、Preview Pane 内の UI テキストを検索しています。メインロジックは [AutomationHandler.cs](https://github.com/fog-bank/mojp/blob/master/mojp/AutomationHandler.cs#L62) 内の CapturePreviewPane メソッド以下です。

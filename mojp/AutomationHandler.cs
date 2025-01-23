@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.IO;
-using System.Linq;
 using System.Reflection;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Automation;
 
 namespace Mojp;
@@ -14,272 +12,111 @@ partial class MainViewModel
     /// <summary>
     /// オートメーション関連の操作を行います。
     /// </summary>
-    private class AutomationHandler
+    private class AutomationHandler : IDisposable
     {
-        private readonly string PromoCollectorNumber = Settings.Default.PromoCodeNumber;
         private Process mtgoProc;
-        private AutomationElement previewWnd;
-        private CacheRequest eventCacheReq = new();
         private CacheRequest cacheReq = new();
-
-        // Preview Window を探す
-        private Condition prevWndCondition = new AndCondition(
-            new PropertyCondition(AutomationElement.ClassNameProperty, "Window"),
-            new PropertyCondition(AutomationElement.AutomationIdProperty, string.Empty),
-            new OrCondition(
-                new PropertyCondition(AutomationElement.NameProperty, "Preview"),
-                new PropertyCondition(AutomationElement.NameProperty, string.Empty)));
 
         // テキストが空でなく、特定の UI 要素でない TextBlock をすべて拾う
         private Condition textBlockCondition = new AndCondition(
-            Automation.ContentViewCondition,
             new PropertyCondition(AutomationElement.ClassNameProperty, "TextBlock"),
             new PropertyCondition(AutomationElement.AutomationIdProperty, string.Empty),
             new NotCondition(new PropertyCondition(AutomationElement.NameProperty, string.Empty)));
-
-        // 英雄譚のカードタイプを表す要素だけ拾う
-        private Condition cardTypeCondition = new PropertyCondition(AutomationElement.AutomationIdProperty, "CardType");
 
         public AutomationHandler(MainViewModel viewModel)
         {
             ViewModel = viewModel;
 
             // UI 要素の名前だけキャッシュする
-            eventCacheReq.Add(AutomationElement.NameProperty);
-            eventCacheReq.AutomationElementMode = AutomationElementMode.None;
-            eventCacheReq.TreeFilter = textBlockCondition;
-
             // FindAll や FindFirst のときに TreeFilter を設定すると、なぜかうまくいかない (カード名をもつ要素が取得できない)
             cacheReq.Add(AutomationElement.NameProperty);
             cacheReq.AutomationElementMode = AutomationElementMode.None;
+
+            Automation.AddAutomationEventHandler(
+                AutomationElement.MenuOpenedEvent, AutomationElement.RootElement, TreeScope.Descendants, OnMenuOpened);
+
+            Debug.WriteLine("Automation event handlers (after add) = " +
+                GetListenersCount() + " @ T" + Thread.CurrentThread.ManagedThreadId);
         }
 
         private MainViewModel ViewModel { get; }
 
         /// <summary>
-        /// MO の Preview Pane を表すオートメーション要素を検索し、プロパティ変更イベントをサブスクライブします。
+        /// 実行中の MO を検索します。
         /// </summary>
-        public void CapturePreviewPane()
+        public async Task CaptureMagicOnline()
         {
-            if (App.Cards.Count == 0)
-            {
-                ViewModel.InvokeSetMessage(
-                    "同梱のカードテキストデータ (cards.xml) を取得できません。" +
-                    "セキュリティ対策ソフトによってブロックされている可能性があります。" +
-                    Environment.NewLine + "[場所] " +
-                    Path.Combine(Path.GetDirectoryName(typeof(App).Assembly.Location), "cards.xml"));
-                return;
-            }
-
-            var currentPreviewWnd = previewWnd;
-
             // MO のプロセス ID を取得する
             if (mtgoProc == null || mtgoProc.HasExited)
             {
+                Debug.WriteLine("MO 検索開始 @ T" + Thread.CurrentThread.ManagedThreadId);
+
                 mtgoProc?.Dispose();
-                mtgoProc = App.GetProcessByName("mtgo");
+                mtgoProc = await Task.Run(() => App.GetProcessByName("mtgo")).ConfigureAwait(false);
+
+                Debug.WriteLine("MO 検索完了 @ T" + Thread.CurrentThread.ManagedThreadId);
 
                 if (mtgoProc == null)
                 {
-                    ReleaseAutomationElement();
                     ViewModel.InvokeSetMessage("起動中のプロセスの中に MO が見つかりません。");
                     return;
                 }
+                ViewModel.InvokeSetMessage("カードを右クリックするとカードテキストを表示します。");
             }
-
-            // "Preview" という名前のウィンドウを探す (なぜかルートの子で見つかる)
-            AutomationElement newPreviewWnd = null;
-            try
-            {
-                // Name が "" のときがある？ため、AutomationID で保険をかける
-                newPreviewWnd = AutomationElement.RootElement.FindFirst(TreeScope.Children,
-                    new AndCondition(
-                        new PropertyCondition(AutomationElement.ProcessIdProperty, mtgoProc.Id),
-                        prevWndCondition));
-            }
-            catch { Debug.WriteLine("Preview Pane の取得に失敗しました。"); }
-
-            // 他のスレッドで処理が先行した?
-            if (previewWnd != currentPreviewWnd)
-                return;
-
-            if (newPreviewWnd is null)
-            {
-                ReleaseAutomationElement();
-                ViewModel.InvokeSetMessage("MO の Preview Pane が見つかりません。");
-                return;
-            }
-
-            if (newPreviewWnd == currentPreviewWnd)
-                return;
-
-            // 新しい Preview Pane が見つかった
-            ReleaseAutomationElement();
-            previewWnd = newPreviewWnd;
-
-            // とりあえずカード名を探す
-            SearchCardName();
-
-            // UI テキストの変化を追う
-            // 対戦中、カード情報は Preview Pane の直接の子ではなく、
-            // ZoomCard_View というカスタムコントロールの下にくるので、スコープは子孫にしないとダメ
-            using (eventCacheReq.Activate())
-            {
-                Automation.AddAutomationPropertyChangedEventHandler(newPreviewWnd,
-                    TreeScope.Descendants, OnAutomaionNamePropertyChanged, AutomationElement.NameProperty);
-            }
-
-            if (ViewModel.SelectedCard == null)
-                ViewModel.InvokeSetMessage("準備完了");
 #if DEBUG
-            Debug.WriteLine("Automation event handlers (after add) = " +
-                (GetListeners()?.Count).GetValueOrDefault() + " @ T" + Thread.CurrentThread.ManagedThreadId);
-#endif          
-        }
-
-        /// <summary>
-        /// 現在の Preview Pane に含まれる全テキストからカード名を取得し、表示します。
-        /// </summary>
-        public void SearchCardName()
-        {
-            bool isToken = false;
-            bool isPromo = false;
-
-            foreach (string value in IterateTextBlocks())
-            {
-                if (TryFetchCard(value))
-                    return;
-
-                // PRM は "0***  /  1158 " のような形式なので、5文字目以降が一致するかどうかで判定
-                //if (!isPromo && value.Length == PromoCollectorNumber.Length)
-                //{
-                //    isPromo = true;
-
-                //    for (int i = 0; i < value.Length; i++)
-                //    {
-                //        if (value[i] != PromoCollectorNumber[i])
-                //        {
-                //            isPromo = false;
-                //            break;
-                //        }
-                //    }
-                //}
-
-                // だったが、WOE 実装時にこの手のカードはすべて 0000 になった。
-                if (!isPromo && value == PromoCollectorNumber)
-                    isPromo = true;
-
-                if (!isToken && value.StartsWith("Token"))
-                    isToken = true;
-            }
-
-            // 一通り探して、カード名が見つからず、プロモやトークンであることが分かった場合
-            if (isPromo && App.TryGetCard("プロモ版のカード", out var prm))
-            {
-                ViewModel.InvokeSetCard(prm);
-            }
-            else if (isToken)
-            {
-                ViewModel.InvokeSetMessage("トークン");
-            }
-            else
-                ViewModel.InvokeSetMessage(string.Empty);
+            int handlers = GetListenersCount();
+            Debug.WriteLineIf(handlers > 1, "Automation event handlers = " + handlers);
+#endif
         }
 
         /// <summary>
         /// 各種リソースを解放します。
         /// </summary>
-        public void Release()
+        public void Dispose()
         {
+            ReleaseAutomationElement();
+
             mtgoProc?.Dispose();
             mtgoProc = null;
-            eventCacheReq = null;
             cacheReq = null;
-            prevWndCondition = null;
             textBlockCondition = null;
-            cardTypeCondition = null;
-            ReleaseAutomationElement();
         }
 
-        /// <summary>
-        /// 変更された要素名がカード名かどうかを調べます。
-        /// </summary>
-        /// <remarks>AutomationPropertyChangedEventHandler は UI スレッドとは別スレッドで動いている。</remarks>
-        private void OnAutomaionNamePropertyChanged(object sender, AutomationPropertyChangedEventArgs e)
+        private void OnMenuOpened(object sender, AutomationEventArgs e)
         {
-#if DEBUG
-            int listenerCount = (GetListeners()?.Count).GetValueOrDefault();
-            if (listenerCount != 1)
-            {
-                Debug.WriteLine("Automation event handlers (NameChanged) = " +
-                    listenerCount + " @ T" + Thread.CurrentThread.ManagedThreadId);
-            }
-#endif
-            // CacheRequest で TreeFilter を設定しても、イベントは発生するらしく、代わりに sender が null になっている模様
-            if (previewWnd is null)
-                return;
-            
-            // TODO: MH3 の旧枠実装変更
-            //if (sender == null)
-            //    return;
-
-            // sender が null でなければ、non-empty な文字列が取得できるはずだが、キャッシュがこける場合もあり。
-            // 加えて、e.NewValue と一致するとも限らない。
-            //string name = GetNamePropertyValue(sender as AutomationElement);
-            //Debug.Assert(!string.IsNullOrEmpty(GetNamePropertyValue(sender as AutomationElement)));
-
-            string name = e.NewValue as string;
-            //name = Card.NormalizeName(e.NewValue as string);
-
-            if (string.IsNullOrEmpty(name))
+            if (sender is not AutomationElement menu || mtgoProc == null)
                 return;
 
-            //Debug.WriteLine("[NameChanged] " + name.Replace(Environment.NewLine, "\\n"));
-
-            //if (TryFetchCard(name))
-            //    return;
-
-            // コピートークンでない普通のトークンである可能性があるので、全体走査する
-            // プロモ版を示唆するテキストの場合も全体走査
-            // （KHM以降、プロモにもコレクター番号が振られるようになったが、STXと被り捲りなので、廃止）
-            //if (name.StartsWith("Token") || name == "PRM" || name == PromoCollectorNumber)
-            //    SearchCardName();
-
-            // 拡張アート枠のコレクター番号問題のため、常時全体走査に変更 (since VOW)
-            SearchCardName();
-        }
-
-        /// <summary>
-        /// Preview Pane に含まれる TextBlock 要素の値を列挙します。
-        /// </summary>
-        private IEnumerable<string> IterateTextBlocks()
-        {
-            AutomationElementCollection elements = null;
+            // 右クリックメニューの最初の TextBlock 要素を取得する
+            AutomationElement element = null;
             try
             {
+                Debug.WriteLine(
+                    "[MenuOpendEvent] Proc = " + menu.Current.ProcessId + " @ T" + Thread.CurrentThread.ManagedThreadId);
+
+                if (menu.Current.ProcessId != mtgoProc.Id)
+                    return;
+
                 using (cacheReq.Activate())
-                    elements = previewWnd?.FindAll(TreeScope.Descendants, textBlockCondition);
+                    element = menu?.FindFirst(TreeScope.Descendants, textBlockCondition);
             }
-            catch { Debug.WriteLine("TextBlock 要素の全取得に失敗しました。"); }
+            catch { Debug.WriteLine("TextBlock 要素の全取得中にエラーが起きました。"); }
 
-            if (elements == null)
-                yield break;
-
-            // 一連のテキストからカード名を探す
-            for (int i = 0; i < elements.Count; i++)
+            if (element == null)
             {
-                string name = GetNamePropertyValue(elements[i]);
-
-                // キャッシュ無効化時
-                if (name == null)
-                    yield break;
-
-                if (name.Length != 0)
-                {
-                    //Debug.WriteLine("[FindAll] " + name.Replace(Environment.NewLine, "\\n"));
-                    yield return name;
-                }
+                Debug.WriteLine("TextBlock 要素の全取得に失敗しました。");
+                return;
             }
+
+            string name = GetNamePropertyValue(element);
+
+            if (name == null)
+                return;
+
+            Debug.WriteLine("[Menu] " + name.Replace(Environment.NewLine, "\\n"));
+
+            if (TryFetchCard(name))
+                return;
         }
 
         /// <summary>
@@ -291,18 +128,10 @@ partial class MainViewModel
         {
             if (App.TryGetCard(value, out var card))
             {
-                if (!IsKeywordText(value))
-                {
-                    ViewCard(card);
-                    return true;
-                }
-                else
-                    return false;
-            }
-
-            // 代替テキストによる検索
-            if (App.AltCardKeys.Contains(value) && SearchAltSubKey(value))
+                Debug.WriteLine(card.Name);
+                ViewModel.InvokeSetCard(card);
                 return true;
+            }
 
             // 英雄譚の誘発型能力 (これだけカードではなく、スタック上にあるのと同じ誘発能力が Preview に表示される)
             const string triggerPrefix = "Triggered ability from ";
@@ -340,55 +169,14 @@ partial class MainViewModel
                 Debug.WriteLine(value);
                 return true;
             }
-            return false;
 
-            bool SearchAltSubKey(string altKey)
+            if (value.EndsWith(" Token"))
             {
-                foreach (string text in IterateTextBlocks())
-                {
-                    // コレクター番号かぶり対策 (基本氷雪土地は MH1 対策)
-                    if (App.TryGetCard(text, out var card) && !IsKeywordText(text) && altKey != "Basic Snow Land")
-                    {
-                        ViewCard(card);
-                        return true;
-                    }
-
-                    // 両面カード対策
-                    if (App.AltCardKeys.Contains(text))
-                    {
-                        Debug.WriteLineIf(altKey != text, altKey + " -> " + text);
-                        altKey = text;
-                    }
-
-                    // 第 2 段階
-                    if (App.AltCardSubKeys.Contains(text) && App.TryGetAltCard(altKey + text, out var alt))
-                    {
-                        Debug.WriteLine(altKey + " " + alt.SubKey + " => " + alt.CardName);
-
-                        if (App.TryGetCard(alt.CardName, out card))
-                        {
-                            // 特定のセットのカードで、カードタイプが出来事の場合、呪文側を手前に表示する
-                            if (alt.SubKey is "ELD" or "AFC" or "CLB" or "MOC" or "CMM" or "WOE" or "WOC" or "LCI" or "LCC" or "MKM" or "MH3" or "BLC" or "DSC" && IsAdventure())
-                            {
-                                Debug.WriteLine(altKey + " " + alt.SubKey + " => " + alt.CardName + " => " + card.RelatedCardName);
-
-                                return ViewCardDirectly(card.RelatedCardName);
-                            }
-
-                            if (!string.IsNullOrEmpty(alt.TriKey))
-                            {
-                                if (IterateTextBlocks().Contains(alt.TriKey))
-                                    Debug.WriteLine(altKey + " " + alt.SubKey + " (" + alt.TriKey + ") => " + alt.CardName);
-                                else
-                                    return false;
-                            }
-                            ViewModel.InvokeSetCard(card);
-                            return true;
-                        }
-                    }
-                }
-                return false;
+                ViewModel.InvokeSetMessage("トークン");
+                Debug.WriteLine(value);
+                return true;
             }
+            return false;
 
             bool ViewCardDirectly(string name)
             {
@@ -398,148 +186,6 @@ partial class MainViewModel
                     return true;
                 }
                 return false;
-            }
-
-            /// <summary>
-            /// Automation ID が CardType の値を調べて、出来事かどうかをチェックする
-            /// </summary>
-            bool IsAdventure()
-            {
-                AutomationElement element = null;
-                try
-                {
-                    using (cacheReq.Activate())
-                    {
-                        element = previewWnd?.FindFirst(TreeScope.Descendants, cardTypeCondition);
-                    }
-                }
-                catch { Debug.WriteLine("CardType 要素の取得に失敗しました。"); }
-
-                string cardType = GetNamePropertyValue(element);
-
-                return cardType != null && (cardType.EndsWith("Adventure") || cardType.Contains("Adventure"));
-            }
-        }
-
-        /// <summary>
-        /// 見つかったカードに基づき、いくつかの例外をチェックしたのち、<see cref="Cards"/> コレクションを更新するようにします。
-        /// </summary>
-        private void ViewCard(Card card)
-        {
-            Debug.WriteLine(card.Name);
-
-            // 設定によっては基本土地 5 種の場合に表示を変えないようにする
-            // ViewModel.InvokeSetCard 側に移動し、altkey の場合でもオプション適用するように変更
-            //if (!ViewModel.ShowBasicLands)
-            //{
-            //    switch (card.Name)
-            //    {
-            //        case "Plains":
-            //        case "Island":
-            //        case "Swamp":
-            //        case "Mountain":
-            //        case "Forest":
-            //            return;
-            //    }
-            //}
-
-            // 見つかったカードが現在表示されているカードコレクションに含まれているかどうかを調べる
-            // 全体走査中のため、不要 (since VOW)
-            //var currentCards = ViewModel.Cards;
-            //if (currentCards != null)
-            //{
-            //    // 現在表示されているカードコレクションに含まれている場合、どれをマウスオーバーしているかをはっきりさせるため、
-            //    // Preview Pane 内で最初に出現するカード名を取得する
-            //    if (currentCards.Contains(card))
-            //    {
-            //        SearchForeground(currentCards[0]);
-            //        return;
-            //    }
-            //}
-
-            // このメソッドの呼び出し前にチェックするようにしたため、コメントアウト
-            //if (IsKeywordText(card.Name))
-            //    return;
-
-            // ふつうのカード
-            ViewModel.InvokeSetCard(card);
-
-            //void SearchForeground(Card currentForeground)
-            //{
-            //    foreach (string value in IterateTextBlocks())
-            //    {
-            //        if (App.Cards.TryGetValue(value, out var card) && !IsKeywordText(card.Name))
-            //        {
-            //            if (card != currentForeground)
-            //                ViewModel.InvokeSetCard(card);
-
-            //            return;
-            //        }
-            //    }
-            //}
-        }
-
-        /// <summary>
-        /// このテキストがカード名ではなく、キーワード能力（あるいはウギンの運命プロモコード）であるかどうかを調べます。
-        /// </summary>
-        /// <remarks>
-        /// 一部の Lv カードや変容カードで、キーワード能力と同名のカードの名前が検出される問題や、
-        /// ウギンの運命プロモカードで Catch+Release が表示されてしまう問題を回避
-        /// </remarks>
-        private bool IsKeywordText(string cardName)
-        {
-            return cardName switch
-            {
-                "Chaos" => ContainsText("40K"),
-                "Flash" => ContainsText("IKO"),
-                "Lifelink" => ContainsText("Transcendent Master", "Sorin, Vengeful Bloodlord", "IKO"),
-                "Release" => IsReleasePromo(),
-                "Oubliette" => ContainsText("Trapped Entry"),
-                "Vigilance" => ContainsText("Ikiral Outrider", "IKO"),
-                //"Plains" or "Island" or "Swamp" or "Mountain" or "Forest" => ContainsText("MH1"),
-                _ => false,
-            };
-
-            // 指定したテキストが Preview Pane に含まれているどうかを調べます。
-            bool ContainsText(string text, string text2 = null, string text3 = null)
-            {
-                foreach (string value in IterateTextBlocks())
-                {
-                    if (value == text)
-                        return true;
-
-                    if (text2 != null && value == text2)
-                        return true;
-
-                    if (text3 != null && value == text3)
-                        return true;
-                }
-                return false;
-            }
-
-            // 現在のカードがウギンの運命プロモカードであるかどうかを調べます。
-            bool IsReleasePromo()
-            {
-                bool isPromo = false;
-                bool containsCatch = false;
-
-                foreach (string value in IterateTextBlocks())
-                {
-                    switch (value)
-                    {
-                        case "PRM":
-                        case "CMM":
-                        case "PIP":
-                            isPromo = true;
-                            break;
-
-                        // Catch があれば、"Release" はプロモを指すテキストではなく、分割カード Catch+Release である
-                        case "Catch":
-                            containsCatch = true;
-                            break;
-                    }
-                }
-                return isPromo && !containsCatch;
             }
         }
 
@@ -571,14 +217,10 @@ partial class MainViewModel
         /// </summary>
         private void ReleaseAutomationElement()
         {
-            if (previewWnd is null)
-                return;
-
-            previewWnd = null;
             Automation.RemoveAllEventHandlers();
 #if DEBUG
             Debug.WriteLine("Automation event handlers (after remove) = " +
-                (GetListeners()?.Count).GetValueOrDefault() + " @ T" + Thread.CurrentThread.ManagedThreadId);
+                GetListenersCount() + " @ T" + Thread.CurrentThread.ManagedThreadId);
 #endif
         }
 
@@ -591,6 +233,8 @@ partial class MainViewModel
             var listeners = field.GetValue(null) as System.Collections.ArrayList;
             return listeners;
         }
+
+        private int GetListenersCount() => (GetListeners()?.Count).GetValueOrDefault();
 #endif
     }
 }
