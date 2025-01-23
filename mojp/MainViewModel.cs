@@ -22,11 +22,6 @@ public sealed partial class MainViewModel : INotifyPropertyChanged
 
     public MainViewModel()
     {
-        SetMessage(AutoRefresh ?
-            "MO の Preview Pane を探しています" :
-            "MO の Preview Pane を表示させた状態で、右クリックから「MO を探す」を選択してください。");
-
-        CaptureCommand = new CaptureCommand(this);
         CopyCardNameCommand = new CopyCardNameCommand(this);
         CopyEnglishNameCommand = new CopyEnglishNameCommand(this);
         GoToWikiCommand = new GoToWikiCommand(this);
@@ -36,11 +31,14 @@ public sealed partial class MainViewModel : INotifyPropertyChanged
         automation = new AutomationHandler(this);
     }
 
-    public CaptureCommand CaptureCommand { get; }
+    #region Commands
+
     public CopyCardNameCommand CopyCardNameCommand { get; }
     public CopyEnglishNameCommand CopyEnglishNameCommand { get; }
     public GoToWikiCommand GoToWikiCommand { get; }
     public OptionCommand OptionCommand { get; }
+
+    #endregion
 
     #region Settings property
 
@@ -171,20 +169,6 @@ public sealed partial class MainViewModel : INotifyPropertyChanged
         {
             settings.ShowBasicLands = value;
             OnPropertyChanged();
-        }
-    }
-
-    /// <summary>
-    /// Preview Page の探索を自動化するかどうかの値を取得または設定します。
-    /// </summary>
-    public bool AutoRefresh
-    {
-        get => settings.AutoRefresh;
-        set
-        {
-            settings.AutoRefresh = value;
-            OnPropertyChanged();
-            CaptureCommand.OnAutoRefreshChanged();
         }
     }
 
@@ -383,35 +367,34 @@ public sealed partial class MainViewModel : INotifyPropertyChanged
         }
     }
 
+    public async Task CaptureMagicOnline() => await automation.CaptureMagicOnline();
+
     /// <summary>
-    /// Preview Pane を自動的に探索するためのタイマーを必要なら設定します。
+    /// MO を定期的に探索するためのタイマーを設定します。
     /// </summary>
     public void SetRefreshTimer(Dispatcher dispatcher)
     {
         if (timer == null)
         {
-            if (AutoRefresh)
-            {
-                CapturePreviewPane();
-                timer = new DispatcherTimer(RefreshInterval, DispatcherPriority.Normal, OnCapture, dispatcher);
-            }
+            timer = new DispatcherTimer(RefreshInterval, DispatcherPriority.Normal, OnCapture, dispatcher);
         }
         else
-        {
-            timer.IsEnabled = AutoRefresh;
             timer.Interval = RefreshInterval;
-        }
     }
-
-    /// <summary>
-    /// MO のプレビューウィンドウを探し、UI テキストの変化イベントが発生するようにします。
-    /// </summary>
-    public void CapturePreviewPane() => Task.Run(automation.CapturePreviewPane);
 
     /// <summary>
     /// 画面を更新するように要求します。
     /// </summary>
-    public void RefreshTab() => Task.Run(automation.SearchCardName);
+    public void RefreshTab()
+    {
+        var card = SelectedCard;
+
+        if (card != null)
+        {
+            SetCard(null);
+            SetCard(card);
+        }
+    }
 
     /// <summary>
     /// 各リソースを解放します。
@@ -435,10 +418,10 @@ public sealed partial class MainViewModel : INotifyPropertyChanged
         }
         Cards.Clear();
 
-        Task.Run(automation.Release);
+        automation.Dispose();
     }
 
-    private void OnCapture(object sender, EventArgs e) => CapturePreviewPane();
+    private async void OnCapture(object sender, EventArgs e) => await automation.CaptureMagicOnline();
 
     private void OnPropertyChanged([CallerMemberName] string propertyName = null)
         => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

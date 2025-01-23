@@ -11,7 +11,7 @@ using System.Windows;
 [assembly: AssemblyTitle("MTGO Japanese Card Text Preview")]
 [assembly: AssemblyCompany("co3366353")]
 [assembly: AssemblyProduct("mojp")]
-[assembly: AssemblyCopyright("Copyright © 2024 fog-bank. Some rights reserved.")]
+[assembly: AssemblyCopyright("Copyright © 2025 fog-bank. Some rights reserved.")]
 [assembly: NeutralResourcesLanguage("ja-JP")]
 
 // Icon 1: https://www.iconfinder.com/icons/6000/book_dictionary_learn_school_translate_icon#size=128
@@ -53,5 +53,5 @@ using System.Windows;
 // すべての値を指定するか、下のように '*' を使ってビルドおよびリビジョン番号を 
 // 既定値にすることができます:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("2.36.0.0")]
-[assembly: AssemblyFileVersion("2.36.41111.1")]
+[assembly: AssemblyVersion("3.0.0.0")]
+[assembly: AssemblyFileVersion("3.0.50123.0")]

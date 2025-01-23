@@ -23,22 +23,7 @@ public partial class App : Application
     /// <summary>
     /// カードの英語名から、英語カード名・日本語カード名・日本語カードテキストを検索します。
     /// </summary>
-    public static Dictionary<string, Card> Cards { get; } = new(28912);
-
-    /// <summary>
-    /// 代替テキスト検索の主キーです。
-    /// </summary>
-    public static HashSet<string> AltCardKeys { get; } = [];
-
-    /// <summary>
-    /// 代替テキスト検索のサブキーです。
-    /// </summary>
-    public static HashSet<string> AltCardSubKeys { get; } = [];
-
-    /// <summary>
-    /// 代替テキストによるカード検索を行います。
-    /// </summary>
-    public static Dictionary<string, AltCard> AltCards { get; } = new(7471);
+    public static Dictionary<string, Card> Cards { get; } = new(28910);
 
     /// <summary>
     /// このアプリの設定を取得します。
@@ -52,7 +37,7 @@ public partial class App : Application
     public static Lazy<HttpClient> HttpClient { get; } = new(() =>
     {
         var http = new HttpClient();
-        http.DefaultRequestHeaders.UserAgent.Add(new("mojp", "2.0"));
+        http.DefaultRequestHeaders.UserAgent.Add(new("mojp", "3.0"));
         http.DefaultRequestHeaders.Accept.Add(new("application/json"));
         return http;
     });
@@ -128,9 +113,6 @@ public partial class App : Application
         foreach (var card in Cards.Values.Where(CardPrice.IsSpecialCard))
             cardsElem.Add(card.ToXml());
 
-        foreach (var alt in AltCards.Values)
-            cardsElem.Add(alt.ToXml());
-
         var doc = new XDocument(new XDeclaration("1.0", "utf-8", "yes"), cardsElem);
         doc.Save(path);
     }
@@ -167,9 +149,6 @@ public partial class App : Application
     public static void SetCardInfosFromXml(XDocument doc)
     {
         Cards.Clear();
-        AltCardKeys.Clear();
-        AltCardSubKeys.Clear();
-        AltCards.Clear();
 
         var node = doc.Element("cards");
 
@@ -182,13 +161,6 @@ public partial class App : Application
                     case "card":
                         var card = Card.FromXml(element);
                         Cards.Add(card.Name, card);
-                        break;
-
-                    case "alt":
-                        var alt = AltCard.FromXml(element);
-                        AltCardKeys.Add(alt.Key);
-                        AltCardSubKeys.Add(alt.SubKey);
-                        AltCards.Add(alt.CompositeKey, alt);
                         break;
                 }
             }
@@ -222,8 +194,6 @@ public partial class App : Application
 #endif
 
     public static bool TryGetCard(string name, out Card card) => Cards.TryGetValue(name, out card);
-
-    public static bool TryGetAltCard(string name, out AltCard altCard) => AltCards.TryGetValue(name, out altCard);
 
 #if !OFFLINE
     /// <summary>

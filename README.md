@@ -1,13 +1,13 @@
 # MO 日本語カードテキスト表示ツール
-[Magic: The Gathering Online](http://www.mtgo.com/) で表示されているカードに対応して、日本語テキストを自動で表示するアプリです。
+[Magic: The Gathering Online](http://www.mtgo.com/) で表示されているカードに対応して、日本語テキストを表示するアプリです。
 
-**現在、MO の実装変更により、旧枠のカードに対してテキストを表示できない仕様上の問題が発生しています。ご不便をおかけします。**
+**MO の実装変更により、v3.0.0 よりカードテキストの表示方法が以前から変更されました。現在動作テスト中です。**
 
 ![Screenshot latest](https://github.com/fog-bank/mojp/blob/master/docs/images/screenshot.png)
 ![Screenshot v2.0.0](https://github.com/fog-bank/mojp/blob/master/images/screenshot.png)
 
 ## 主な機能
-* MO の Preview Pane に表示されているカードの日本語テキストを表示する
+* 右クリックしたカードの日本語テキストを表示する
 * カード名（日本語または英語）をコピーする
 * [MTG Wiki](http://mtgwiki.com/) でカードを調べる
 * カードが [Penny Dreadful](http://pdmtgo.com/) (PD) で使用可能かどうかを表示する
@@ -18,14 +18,13 @@ Windows 7 SP1 以降
 .NET Framework 4.6 以上（Windows 10 なら標準でインストール済みです）
 
 ## 使い方
-1. MO を起動し、COLLECTION 画面や対戦・トレード中に Preview Pane を表示するようにします（最小化しても OK）。
-2. MO 上で調べたいカードにマウスカーソルを移動させます。Preview Pane にそのカードが表示されます。
-3. Preview Pane に対応してこのアプリの表示が変わり、そのカードの日本語テキストが表示されます。
+1. MO と本アプリを起動します。
+2. MO 上で調べたいカードに対して右クリックすることで、MO のメニューを表示させます。
+3. それに対応してこのアプリの表示が変わり、そのカードの日本語テキストが表示されます。
 
 ### 補足
-* Preview Pane を表示するには、ACCOUNT 画面の「Display & Sound Settings」内の右下にある「Display Card Preview Window」にチェックを入れます。詳細は[こちら](https://github.com/fog-bank/mojp/wiki/Preview-Pane-%E3%82%92%E8%A1%A8%E7%A4%BA%E3%81%95%E3%81%9B%E3%82%8B%E6%96%B9%E6%B3%95)。
-* カードをズームしたままマウスカーソルを移動した場合や、素早くマウスカーソルを移動した場合に、表示が変わらないことがあります。
-* 拡張アート枠のプロモカードやトークン、紋章などには対応しておらず、正確なテキストが表示されません。詳細は[こちら](https://github.com/fog-bank/mojp/wiki/%E4%B8%8D%E5%85%B7%E5%90%88)。
+* 起動直後や、呪文や能力の解決中など、正常にカードテキストが表示されないことがあります。
+* 一部のトークン、紋章などには対応しておらず、正確なテキストが表示されません。詳細は[こちら](https://github.com/fog-bank/mojp/wiki/%E4%B8%8D%E5%85%B7%E5%90%88)。
 * あくまで参考程度のご利用でお願い致します。このアプリを原因とする損害には責任を負いかねます。
 
 ### その他の機能
@@ -38,11 +37,11 @@ Windows 7 SP1 以降
 
 ## 開発環境
 Windows 10 2022 Update (Version 22H2)  
-Visual Studio 2022 v17.11  
-C# 12.0
+Visual Studio 2022 v17.12  
+C# 13
 
 ### 仕組み
-[Microsoft UI Automation](https://learn.microsoft.com/ja-jp/dotnet/framework/ui-automation/) API を利用して、Preview Pane 内の UI テキストを検索しています。メインロジックは [AutomationHandler.cs](https://github.com/fog-bank/mojp/blob/master/mojp/AutomationHandler.cs#L62) 内の CapturePreviewPane メソッド以下です。
+[Microsoft UI Automation](https://learn.microsoft.com/ja-jp/dotnet/framework/ui-automation/) API を利用して、メニューを開いたときに発生するイベントをサブスクライブし、メニュー内の UI テキストを検索しています。メインロジックは [AutomationHandler.cs](https://github.com/fog-bank/mojp/blob/master/mojp/AutomationHandler.cs) です。
 
 ## リファレンス
 * MO で日本語テキストを表示する試みとして、[Magic Online 日本語化計画](https://k5.hatenablog.com/archive/category/MTGO_SUPPORT)の影響を受けています。

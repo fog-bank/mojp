@@ -77,20 +77,6 @@ public abstract class Command : ICommand, INotifyPropertyChanged
     public event PropertyChangedEventHandler PropertyChanged;
 }
 
-public sealed class CaptureCommand(MainViewModel viewModel) : Command(viewModel, "Capture")
-{
-    public sealed override string Header => App.SettingsCache.AutoRefresh ? "MO を探す (自動化中)" : "MO を探す";
-
-    public sealed override string Image => @"Resources\Camera.png";
-
-    public sealed override void Execute(object parameter) => ViewModel.CapturePreviewPane();
-
-    /// <summary>
-    /// <see cref="Settings.AutoRefresh"/> の値が変更されたときに呼び出します。
-    /// </summary>
-    public void OnAutoRefreshChanged() => OnPropertyChanged(nameof(Header));
-}
-
 public sealed class CopyCardNameCommand(MainViewModel viewModel) : Command(viewModel, "CopyCardName")
 {
     public sealed override string Header => "カード名をコピー";
