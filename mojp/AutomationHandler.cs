@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Diagnostics;
-using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Automation;
@@ -26,6 +25,7 @@ partial class MainViewModel
 
         public AutomationHandler(MainViewModel viewModel)
         {
+            Debug.WriteLine("AutomationHandler .ctor @ T" + Thread.CurrentThread.ManagedThreadId);
             ViewModel = viewModel;
 
             eventCacheReq.Add(AutomationElement.ProcessIdProperty);
@@ -33,20 +33,8 @@ partial class MainViewModel
             // FindAll や FindFirst のときに TreeFilter を設定すると、なぜかうまくいかない (カード名をもつ要素が取得できない)
             cacheReq.Add(AutomationElement.NameProperty);
             cacheReq.AutomationElementMode = AutomationElementMode.None;
-            Debug.WriteLine("AutomationHandler .ctor @ T" + Thread.CurrentThread.ManagedThreadId);
 
-            Task.Run(() =>
-            {
-                using (eventCacheReq.Activate())
-                {
-                    Automation.AddAutomationEventHandler(
-                        AutomationElement.MenuOpenedEvent, AutomationElement.RootElement, TreeScope.Descendants, OnMenuOpened);
-                }
-#if DEBUG
-                Debug.WriteLine("Automation event handlers (after add) = " +
-                    GetListenersCount() + " @ T" + Thread.CurrentThread.ManagedThreadId);
-#endif
-            }).Wait();
+            RegisterEventHandler();
         }
 
         private MainViewModel ViewModel { get; }
@@ -59,12 +47,12 @@ partial class MainViewModel
             // MO のプロセス ID を取得する
             if (mtgoProc == null || mtgoProc.HasExited)
             {
-                //Debug.WriteLine("MO 検索開始 @ T" + Thread.CurrentThread.ManagedThreadId);
+                Debug.WriteLine("MO 検索開始 @ T" + Thread.CurrentThread.ManagedThreadId);
 
                 mtgoProc?.Dispose();
                 mtgoProc = await Task.Run(() => App.GetProcessByName("mtgo")).ConfigureAwait(false);
 
-                //Debug.WriteLine("MO 検索完了 @ T" + Thread.CurrentThread.ManagedThreadId);
+                Debug.WriteLine("MO 検索完了 @ T" + Thread.CurrentThread.ManagedThreadId);
 
                 if (mtgoProc == null)
                 {
@@ -84,7 +72,7 @@ partial class MainViewModel
         /// </summary>
         public void Dispose()
         {
-            ReleaseAutomationElement();
+            UnregisterEventHandler();
 
             mtgoProc?.Dispose();
             mtgoProc = null;
@@ -146,7 +134,7 @@ partial class MainViewModel
                 return true;
             }
 
-            // 英雄譚の誘発型能力 (これだけカードではなく、スタック上にあるのと同じ誘発能力が Preview に表示される)
+            // 誘発型能力
             const string triggerPrefix = "Triggered ability from ";
             if (value.StartsWith(triggerPrefix))
             {
@@ -155,13 +143,13 @@ partial class MainViewModel
                 return ViewCardDirectly(value);
             }
 
-            // 部屋カードの誘発型能力
+            // 分割カード系
             int slashIndex = value.IndexOf('/');
             if (slashIndex > 0 && char.IsLetter(value[slashIndex - 1]))
             {
                 // "/" があるので、index が 0 のときは除く
                 value = value.Substring(0, slashIndex);
-                Debug.WriteLine("Triggered room ability => " + value);
+                Debug.WriteLine("Split card => " + value);
 
                 if (ViewCardDirectly(value))
                     return true;
@@ -183,6 +171,7 @@ partial class MainViewModel
                 return true;
             }
 
+            // 汎用トークン
             if (value.EndsWith(" Token"))
             {
                 ViewModel.InvokeSetMessage("トークン");
@@ -200,6 +189,37 @@ partial class MainViewModel
                 }
                 return false;
             }
+        }
+
+        private void RegisterEventHandler()
+        {
+            Task.Run(() =>
+            {
+                using (eventCacheReq.Activate())
+                {
+                    Automation.AddAutomationEventHandler(
+                        AutomationElement.MenuOpenedEvent, AutomationElement.RootElement, TreeScope.Descendants, OnMenuOpened);
+                }
+#if DEBUG
+                Debug.WriteLine("Automation event handlers (after add) = " +
+                    GetListenersCount() + " @ T" + Thread.CurrentThread.ManagedThreadId);
+#endif
+            }).Wait();
+        }
+
+        /// <summary>
+        /// UI Automation イベントハンドラーを削除します。
+        /// </summary>
+        private void UnregisterEventHandler()
+        {
+            Task.Run(() =>
+            {
+                Automation.RemoveAllEventHandlers();
+#if DEBUG
+                Debug.WriteLine("Automation event handlers (after remove) = " +
+                    GetListenersCount() + " @ T" + Thread.CurrentThread.ManagedThreadId);
+#endif
+            }).Wait();
         }
 
         /// <summary>
@@ -225,27 +245,12 @@ partial class MainViewModel
             return Card.NormalizeName(name);
         }
 
-        /// <summary>
-        /// UI Automation イベントハンドラーを削除し、<see cref="AutomationElement"/> への参照を解放します。
-        /// </summary>
-        private void ReleaseAutomationElement()
-        {
-            Task.Run(() =>
-            {
-                Automation.RemoveAllEventHandlers();
-#if DEBUG
-                Debug.WriteLine("Automation event handlers (after remove) = " +
-                    GetListenersCount() + " @ T" + Thread.CurrentThread.ManagedThreadId);
-#endif
-            }).Wait();
-        }
-
 #if DEBUG
         private System.Collections.ArrayList GetListeners()
         {
-            var assembly = Assembly.GetAssembly(typeof(Automation));
+            var assembly = System.Reflection.Assembly.GetAssembly(typeof(Automation));
             var type = assembly.GetType("MS.Internal.Automation.ClientEventManager");
-            var field = type.GetField("_listeners", BindingFlags.Static | BindingFlags.NonPublic);
+            var field = type.GetField("_listeners", System.Reflection.BindingFlags.Static | System.Reflection.BindingFlags.NonPublic);
             var listeners = field.GetValue(null) as System.Collections.ArrayList;
             return listeners;
         }

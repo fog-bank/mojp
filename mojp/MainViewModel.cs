@@ -388,8 +388,12 @@ public sealed partial class MainViewModel : INotifyPropertyChanged
     public void RefreshTab()
     {
         var card = SelectedCard;
-        SetCard(null);
-        SetCard(card);
+
+        if (card != null)
+        {
+            SetCard(null);
+            SetCard(card);
+        }
     }
 
     /// <summary>
