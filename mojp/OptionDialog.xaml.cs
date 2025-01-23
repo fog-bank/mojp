@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
@@ -137,7 +138,7 @@ public partial class OptionDialog : Window
     /// <summary>
     /// WHISPER の検索結果を格納したテキストファイルからカードテキストデータを構築します。必要なら永続化します。
     /// </summary>
-    private void OnBrowseSearchTxt(object sender, RoutedEventArgs e)
+    private async void OnBrowseSearchTxt(object sender, RoutedEventArgs e)
     {
 #if !OFFLINE
         imgLoading.Visibility = Visibility.Visible;
@@ -163,11 +164,15 @@ public partial class OptionDialog : Window
                 append = true;
             }
 
-            string appendixPath = App.GetPath("appendix.xml");
-            if (File.Exists(appendixPath))
-                Card.FixCardInfo(appendixPath);
+            await Task.Run(() =>
+            {
+                string appendixPath = App.GetPath("appendix.xml");
 
-            App.SaveAsXml(App.GetPath("cards.xml"));
+                if (File.Exists(appendixPath))
+                    Card.FixCardInfo(appendixPath);
+
+                App.SaveAsXml(App.GetPath("cards.xml"));
+            });
 
             imgLoaded.Visibility = Visibility.Visible;
         }

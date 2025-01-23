@@ -119,7 +119,7 @@ public partial class MainWindow : Window
 
         Topmost = vm.TopMost;
 
-        // Preview Pane の自動探索の設定を反映
+        // MO の定期検索の設定を反映
         vm.SetRefreshTimer(Dispatcher);
 
 #if !OFFLINE

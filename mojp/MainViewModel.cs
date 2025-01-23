@@ -414,7 +414,7 @@ public sealed partial class MainViewModel : INotifyPropertyChanged
         }
         Cards.Clear();
 
-        Task.Run(automation.Dispose);
+        automation.Dispose();
     }
 
     private async void OnCapture(object sender, EventArgs e) => await automation.CaptureMagicOnline();

@@ -15,6 +15,7 @@ partial class MainViewModel
     private class AutomationHandler : IDisposable
     {
         private Process mtgoProc;
+        private CacheRequest eventCacheReq = new();
         private CacheRequest cacheReq = new();
 
         // テキストが空でなく、特定の UI 要素でない TextBlock をすべて拾う
@@ -27,16 +28,25 @@ partial class MainViewModel
         {
             ViewModel = viewModel;
 
-            // UI 要素の名前だけキャッシュする
+            eventCacheReq.Add(AutomationElement.ProcessIdProperty);
+
             // FindAll や FindFirst のときに TreeFilter を設定すると、なぜかうまくいかない (カード名をもつ要素が取得できない)
             cacheReq.Add(AutomationElement.NameProperty);
             cacheReq.AutomationElementMode = AutomationElementMode.None;
+            Debug.WriteLine("AutomationHandler .ctor @ T" + Thread.CurrentThread.ManagedThreadId);
 
-            Automation.AddAutomationEventHandler(
-                AutomationElement.MenuOpenedEvent, AutomationElement.RootElement, TreeScope.Descendants, OnMenuOpened);
-
-            Debug.WriteLine("Automation event handlers (after add) = " +
-                GetListenersCount() + " @ T" + Thread.CurrentThread.ManagedThreadId);
+            Task.Run(() =>
+            {
+                using (eventCacheReq.Activate())
+                {
+                    Automation.AddAutomationEventHandler(
+                        AutomationElement.MenuOpenedEvent, AutomationElement.RootElement, TreeScope.Descendants, OnMenuOpened);
+                }
+#if DEBUG
+                Debug.WriteLine("Automation event handlers (after add) = " +
+                    GetListenersCount() + " @ T" + Thread.CurrentThread.ManagedThreadId);
+#endif
+            }).Wait();
         }
 
         private MainViewModel ViewModel { get; }
@@ -49,12 +59,12 @@ partial class MainViewModel
             // MO のプロセス ID を取得する
             if (mtgoProc == null || mtgoProc.HasExited)
             {
-                Debug.WriteLine("MO 検索開始 @ T" + Thread.CurrentThread.ManagedThreadId);
+                //Debug.WriteLine("MO 検索開始 @ T" + Thread.CurrentThread.ManagedThreadId);
 
                 mtgoProc?.Dispose();
                 mtgoProc = await Task.Run(() => App.GetProcessByName("mtgo")).ConfigureAwait(false);
 
-                Debug.WriteLine("MO 検索完了 @ T" + Thread.CurrentThread.ManagedThreadId);
+                //Debug.WriteLine("MO 検索完了 @ T" + Thread.CurrentThread.ManagedThreadId);
 
                 if (mtgoProc == null)
                 {
@@ -78,6 +88,7 @@ partial class MainViewModel
 
             mtgoProc?.Dispose();
             mtgoProc = null;
+            eventCacheReq = null;
             cacheReq = null;
             textBlockCondition = null;
         }
@@ -92,9 +103,9 @@ partial class MainViewModel
             try
             {
                 Debug.WriteLine(
-                    "[MenuOpendEvent] Proc = " + menu.Current.ProcessId + " @ T" + Thread.CurrentThread.ManagedThreadId);
+                    "[MenuOpendEvent] Proc = " + menu.Cached.ProcessId + " @ T" + Thread.CurrentThread.ManagedThreadId);
 
-                if (menu.Current.ProcessId != mtgoProc.Id)
+                if (menu.Cached.ProcessId != mtgoProc.Id)
                     return;
 
                 using (cacheReq.Activate())
@@ -117,6 +128,8 @@ partial class MainViewModel
 
             if (TryFetchCard(name))
                 return;
+            else
+                ViewModel.InvokeSetCard(null);
         }
 
         /// <summary>
@@ -217,11 +230,14 @@ partial class MainViewModel
         /// </summary>
         private void ReleaseAutomationElement()
         {
-            Automation.RemoveAllEventHandlers();
+            Task.Run(() =>
+            {
+                Automation.RemoveAllEventHandlers();
 #if DEBUG
-            Debug.WriteLine("Automation event handlers (after remove) = " +
-                GetListenersCount() + " @ T" + Thread.CurrentThread.ManagedThreadId);
+                Debug.WriteLine("Automation event handlers (after remove) = " +
+                    GetListenersCount() + " @ T" + Thread.CurrentThread.ManagedThreadId);
 #endif
+            }).Wait();
         }
 
 #if DEBUG
