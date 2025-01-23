@@ -99,14 +99,13 @@ partial class MainViewModel
                 using (cacheReq.Activate())
                     element = menu?.FindFirst(TreeScope.Descendants, textBlockCondition);
             }
-            catch { Debug.WriteLine("TextBlock 要素の全取得中にエラーが起きました。"); }
+            catch { Debug.WriteLine("TextBlock 要素の取得中にエラーが起きました。"); }
 
             if (element == null)
             {
-                Debug.WriteLine("TextBlock 要素の全取得に失敗しました。");
+                Debug.WriteLine("TextBlock 要素の取得に失敗しました。");
                 return;
             }
-
             string name = GetNamePropertyValue(element);
 
             if (name == null)
@@ -115,16 +114,57 @@ partial class MainViewModel
             Debug.WriteLine("[Menu] " + name.Replace(Environment.NewLine, "\\n"));
 
             if (TryFetchCard(name))
+            {
                 return;
+            }
+            else if (name == "Face-down card.")
+            {
+                // 裏向き
+                SearchAll();
+            }
             else
+            {
+                // カード名ではなかったときに強制的に空表示にする
                 ViewModel.InvokeSetCard(null);
+            }
+
+            void SearchAll()
+            {
+                AutomationElementCollection elements = null;
+                try
+                {
+                    using (cacheReq.Activate())
+                        elements = menu?.FindAll(TreeScope.Descendants, textBlockCondition);
+                }
+                catch { Debug.WriteLine("TextBlock 要素の全取得中にエラーが起きました。"); }
+
+                if (elements == null)
+                    return;
+
+                for (int i = 0; i < elements.Count; i++)
+                {
+                    string name = GetNamePropertyValue(elements[i]);
+
+                    // キャッシュ無効化時
+                    if (name == null)
+                        return;
+
+                    Debug.WriteLineIf(i > 0, "[Menu] " + name.Replace(Environment.NewLine, "\\n"));
+
+                    if (App.TryGetCard(name, out var card))
+                    {
+                        Debug.WriteLine(card.Name);
+                        ViewModel.InvokeSetCard(card);
+                        return;
+                    }
+                }
+            }
         }
 
         /// <summary>
         /// 指定した文字列がカード名を意味しているかどうかを調べ、そうならばカードを表示します。
         /// </summary>
         /// <returns>指定した文字列がカード名を指すものだった場合は true 。</returns>
-        /// <remarks>無限ループになる可能性があるので、<see cref="SearchCardName"/> メソッドは呼ばないこと。</remarks>
         private bool TryFetchCard(string value)
         {
             if (App.TryGetCard(value, out var card))
@@ -154,6 +194,10 @@ partial class MainViewModel
                 if (ViewCardDirectly(value))
                     return true;
             }
+
+            // できるだけ左クリックメニューによる表示変化を避ける
+            if (value.EndsWith("Cast") || value.EndsWith(".") || value.StartsWith(" "))
+                return !value.StartsWith("Face-down card.");
 
             // 紋章
             if (value.StartsWith("Emblem") && value != "Emblem - ")
