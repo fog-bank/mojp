@@ -1,7 +1,7 @@
 # MO 日本語カードテキスト表示ツール
 [Magic: The Gathering Online](http://www.mtgo.com/) で表示されているカードに対応して、日本語テキストを表示するアプリです。
 
-**MO の実装変更により、v3.0.0 よりカードテキストの表示方法が以前から変更されました。現在動作テスト中です。**
+**MO のカード枠実装の変更に対応するため、v3.0.0 よりカードテキストの表示方法が以前から変更されました。現在動作テスト中です。**
 
 ![Screenshot latest](https://github.com/fog-bank/mojp/blob/master/docs/images/screenshot.png)
 ![Screenshot v2.0.0](https://github.com/fog-bank/mojp/blob/master/images/screenshot.png)

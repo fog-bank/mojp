@@ -101,7 +101,7 @@ partial class MainViewModel
             }
             catch { Debug.WriteLine("TextBlock 要素の取得中にエラーが起きました。"); }
 
-            if (element == null)
+            if (element is null)
             {
                 Debug.WriteLine("TextBlock 要素の取得に失敗しました。");
                 return;
@@ -114,10 +114,9 @@ partial class MainViewModel
             Debug.WriteLine("[Menu] " + name.Replace(Environment.NewLine, "\\n"));
 
             if (TryFetchCard(name))
-            {
                 return;
-            }
-            else if (name == "Face-down card.")
+
+            if (name == "Face-down card.")
             {
                 // 裏向き
                 SearchAll();
