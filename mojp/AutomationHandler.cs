@@ -169,6 +169,8 @@ partial class MainViewModel
                         return;
                     }
                 }
+                // 対戦相手の裏向きクリーチャー
+                ViewModel.InvokeSetMessage("裏向きのカード");
             }
         }
 
