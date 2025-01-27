@@ -39,7 +39,7 @@
     <div>
       <p>ダウンロード時や実行時に、ブラウザやセキュリティソフトからセキュリティ警告が出る場合があります。</p>
       <h4><span class="underline">テスト版 v3.0.0 Alpha</span></h4>
-      <p><b>現在、本アプリの仕様を大幅に変更するテストをしています。カードテキストを表示させるには、カードを右クリックしてください。</b></p>
+      <p><b>MO のカード枠実装の変更に対応するため、カードテキストの表示方法が以前から変更されました。カードテキストを表示させるには、カードを右クリックしてください。</b></p>
       <p>
         <img src="images/download_file.png" width="16" height="16" />
         <a href="https://fog-bank.github.io/mojp/downloads/v3.0.0-alpha/mojp.zip">ZIP 版</a> ｜
@@ -57,7 +57,7 @@
         <a href="https://github.com/fog-bank/mojp/releases/tag/v2.36.0">リリースノート</a>
       </p>
       <h4><span class="underline">更新履歴</span></h4>
-      <p>v3.0.0（霊気走破）より、カードテキストの表示方法が「Preview Pane を表示させる」から「カードを右クリック」に変更されました。</p>
+      <p>v3.0.0（霊気走破）より、カードテキストの表示方法が「Preview Pane を表示させ、カードをマウスオーバー」から「カードを右クリック」に変更されました。</p>
       <p>v2.0.0（基本セット 2019）より、ツールバーをカスタマイズできるようになりました。</p>
       <p>v1.7.0（イクサランの相克）より、カードの追加情報をインターネットから取得するようになりました。不要な場合や処理を軽くしたい場合は、設定から無効にしてください。</p>
     </div>
@@ -68,12 +68,13 @@
       <p>.NET Framework 4.6 以上（Windows 10 の場合は標準でインストール済みです）</p>
       <h4><span class="underline">手順</span></h4>
       <ol>
-        <li>MO と本ツールを起動します。</li>
+        <li>MO と本アプリを起動します。</li>
         <li>MO 上で調べたいカードに対して右クリックすることで、MO のメニューを表示させます。</li>
-        <li>それに対応してこのアプリの表示が変わり、そのカードの日本語テキストが表示されます。</li>
+        <li>それに反応してこのアプリの表示が変わり、そのカードの日本語テキストが表示されます。</li>
       </ol>
       <h4><span class="underline">補足</span></h4>
       <ul>
+        <li>MO のメニュー表示に反応するため、カードの右クリック以外でも表示が変わることがあります。</li>
         <li>起動直後や、呪文や能力の解決中など、正常にカードテキストが表示されないことがあります。</li>
         <li>一部のトークン、紋章などには対応しておらず、正確なテキストが表示されません。詳細は<a href="https://github.com/fog-bank/mojp/wiki/%E4%B8%8D%E5%85%B7%E5%90%88">こちら</a>。</li>
         <li>あくまで参考程度のご利用でお願い致します。このアプリを原因とする損害には責任を負いかねます。</li>
@@ -102,7 +103,8 @@
     <h3 id="mechanism">仕組み</h3>
     <div>
       <p>
-        <a href="https://learn.microsoft.com/ja-jp/dotnet/framework/ui-automation/">Microsoft UI Automation</a> API を利用して、メニューを開いたときに発生するイベントをサブスクライブし、メニュー内の UI テキストを検索しています。
+        <a href="https://learn.microsoft.com/ja-jp/dotnet/framework/ui-automation/">Microsoft UI Automation</a> API
+        を利用して、メニューを開いたときに発生するイベントをサブスクライブし、MO のプロセスに限り、メニュー内の UI テキストを検索しています。
       </p>
     </div>
     <h3 id="reference">リファレンス</h3>

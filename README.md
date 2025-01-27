@@ -20,9 +20,10 @@ Windows 7 SP1 以降
 ## 使い方
 1. MO と本アプリを起動します。
 2. MO 上で調べたいカードに対して右クリックすることで、MO のメニューを表示させます。
-3. それに対応してこのアプリの表示が変わり、そのカードの日本語テキストが表示されます。
+3. それに反応してこのアプリの表示が変わり、そのカードの日本語テキストが表示されます。
 
 ### 補足
+* MO のメニュー表示に反応するため、カードの右クリック以外でも表示が変わることがあります。
 * 起動直後や、呪文や能力の解決中など、正常にカードテキストが表示されないことがあります。
 * 一部のトークン、紋章などには対応しておらず、正確なテキストが表示されません。詳細は[こちら](https://github.com/fog-bank/mojp/wiki/%E4%B8%8D%E5%85%B7%E5%90%88)。
 * あくまで参考程度のご利用でお願い致します。このアプリを原因とする損害には責任を負いかねます。
@@ -41,7 +42,7 @@ Visual Studio 2022 v17.12
 C# 13
 
 ### 仕組み
-[Microsoft UI Automation](https://learn.microsoft.com/ja-jp/dotnet/framework/ui-automation/) API を利用して、メニューを開いたときに発生するイベントをサブスクライブし、メニュー内の UI テキストを検索しています。メインロジックは [AutomationHandler.cs](https://github.com/fog-bank/mojp/blob/master/mojp/AutomationHandler.cs) です。
+[Microsoft UI Automation](https://learn.microsoft.com/ja-jp/dotnet/framework/ui-automation/) API を利用して、メニューを開いたときに発生するイベントをサブスクライブし、MO のプロセスに限り、メニュー内の UI テキストを検索しています。メインロジックは [AutomationHandler.cs](https://github.com/fog-bank/mojp/blob/master/mojp/AutomationHandler.cs) です。
 
 ## リファレンス
 * MO で日本語テキストを表示する試みとして、[Magic Online 日本語化計画](https://k5.hatenablog.com/archive/category/MTGO_SUPPORT)の影響を受けています。
