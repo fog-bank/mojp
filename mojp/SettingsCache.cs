@@ -59,7 +59,7 @@ public sealed class SettingsCache
     public bool TopMost { get; set; }
 
     // 動作
-    public bool ShowBasicLands { get; set; }
+    //public bool ShowBasicLands { get; set; }
 
     //public bool AutoRefresh { get; set; }
 
@@ -108,7 +108,7 @@ public sealed class SettingsCache
         ToolbarCommands = opt.ToolbarCommands?.Split(',') ?? [];
         TopMost = opt.TopMost;
 
-        ShowBasicLands = opt.ShowBasicLands;
+        //ShowBasicLands = opt.ShowBasicLands;
         //AutoRefresh = opt.AutoRefresh;
         RefreshIntervalMilliseconds = (int)opt.RefreshInterval.TotalMilliseconds;
 #if !OFFLINE
@@ -140,7 +140,7 @@ public sealed class SettingsCache
         opt.ToolbarCommands = string.Join(",", ToolbarCommands);
         opt.TopMost = TopMost;
 
-        opt.ShowBasicLands = ShowBasicLands;
+        //opt.ShowBasicLands = ShowBasicLands;
         //opt.AutoRefresh = AutoRefresh;
         opt.RefreshInterval = TimeSpan.FromMilliseconds(RefreshIntervalMilliseconds);
         opt.GetPDList = GetPDList;

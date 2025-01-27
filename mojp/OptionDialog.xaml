@@ -1,8 +1,12 @@
 ﻿<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:Mojp"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         x:Class="Mojp.OptionDialog" xml:lang="ja-jp"
         Title="設定" SizeToContent="WidthAndHeight" ResizeMode="NoResize" ShowInTaskbar="False"
-        Icon="Resources/dictionary.ico" SnapsToDevicePixels="True">
+        Icon="Resources/dictionary.ico" SnapsToDevicePixels="True"
+        d:DataContext="{d:DesignInstance local:MainViewModel}" mc:Ignorable="d">
     <Window.Resources>
         <Style TargetType="TextBlock">
             <Setter Property="Margin" Value="2,4" />
@@ -125,13 +129,15 @@
                     <TextBlock Grid.Column="1" Text="{Binding FontSize}" />
                 </Grid>
                 <StackPanel Grid.Row="2" Orientation="Horizontal"
-                            ToolTip="タブに表示されるカード名の書式を指定します。ただしテキスト本文中は《日本語》で固定です。" ToolTipService.ShowDuration="60000">
+                            ToolTip="タブに表示されるカード名の書式を指定します。ただしテキスト本文中は《日本語》で固定です。"
+                            ToolTipService.ShowDuration="60000">
                     <TextBlock>カード名の表示言語</TextBlock>
                     <Image Grid.Column="1" Source="Resources/Information.png" Height="16" Margin="5,0" />
                 </StackPanel>
                 <ComboBox Name="cmbCardDisplayName" Grid.Row="2" Grid.Column="2" Margin="2" Padding="4"
                           SelectionChanged="OnCardDisplayNameChanged"
-                          ToolTip="タブに表示されるカード名の書式を指定します。ただしテキスト本文中は《日本語》で固定です。" ToolTipService.ShowDuration="60000">
+                          ToolTip="タブに表示されるカード名の書式を指定します。ただしテキスト本文中は《日本語》で固定です。"
+                          ToolTipService.ShowDuration="60000">
                     <ComboBoxItem Padding="2">日本語</ComboBoxItem>
                     <ComboBoxItem Padding="2">日本語 / English</ComboBoxItem>
                     <ComboBoxItem Padding="2">English / 日本語</ComboBoxItem>
@@ -164,28 +170,25 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
-                <Grid Margin="0,0,0,2">
+                <Grid Margin="0,0,0,2" ToolTipService.ShowDuration="60000">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition />
                         <ColumnDefinition Width="Auto" />
                         <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
-                    <TextBlock>MO を探す時間間隔</TextBlock>
+                    <Grid.ToolTip>
+                        <TextBlock Margin="0">
+                            起動中のプロセスの中に MO (mtgo.exe) を探す頻度を指定します。<LineBreak />
+                            MO がクラッシュすると、ゾンビプロセスとして残ってしまうため、このアプリの表示が変わらなくなる場合があります。
+                        </TextBlock>
+                    </Grid.ToolTip>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock>MO を探す時間間隔</TextBlock>
+                        <Image Source="Resources/Information.png" Height="16" Margin="5,0,0,0" />
+                    </StackPanel>
                     <TextBox Grid.Column="1" MinWidth="100" VerticalContentAlignment="Center" Text="{Binding RefreshIntervalMilliseconds}" />
                     <TextBlock Grid.Column="2">ミリ秒</TextBlock>
                 </Grid>
-                <CheckBox Grid.Row="1" IsChecked="{Binding ShowBasicLands}" ToolTipService.ShowDuration="60000">
-                    <CheckBox.ToolTip>
-                        <TextBlock Margin="0">
-                            チェックを外すと、氷雪でない基本の平地、島、沼、山、森には反応しなくなります。<LineBreak />
-                            前のカードの表示のままになるか、タイミングによっては、空表示になります。
-                        </TextBlock>
-                    </CheckBox.ToolTip>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock>基本土地 5 種のカードテキストを表示する</TextBlock>
-                        <Image Source="Resources/Information.png" Height="16" Margin="5,0,0,0" />
-                    </StackPanel>
-                </CheckBox>
                 <CheckBox Name="grpGetPDList" Grid.Row="2" IsChecked="{Binding GetPDList}" ToolTipService.ShowDuration="60000">
                     <CheckBox.ToolTip>
                         <TextBlock Margin="0">
@@ -210,13 +213,15 @@
                     <TextBlock>カードリストの更新日時 :</TextBlock>
                     <TextBlock Name="txbPDRotationTime" Grid.Column="1" Margin="2,4,8,4" />
                     <StackPanel Grid.Column="2" Orientation="Horizontal" 
-                                ToolTip="ローテーション後のカードリストの取得に失敗した場合などに、手動で再取得を試みます。" ToolTipService.ShowDuration="60000">
+                                ToolTip="ローテーション後のカードリストの取得に失敗した場合などに、手動で再取得を試みます。"
+                                ToolTipService.ShowDuration="60000">
                         <Button IsEnabled="{Binding GetPDList}" Click="OnRetryPDList">再確認</Button>
                         <Image Source="Resources/Information.png" Height="16" Margin="5,0,0,0" Style="{StaticResource btnImageStyle}" />
                     </StackPanel>
                 </Grid>
                 <CheckBox Name="grpGetCardPrice" Grid.Row="4" IsChecked="{Binding GetCardPrice}"
-                          ToolTip="カード検索サイト Scryfall からカードの日毎の平均価格を 1 日 1 回取得します。" ToolTipService.ShowDuration="60000">
+                          ToolTip="カード検索サイト Scryfall からカードの日毎の平均価格を 1 日 1 回取得します。"
+                          ToolTipService.ShowDuration="60000">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock>
                             <Hyperlink ToolTip="https://scryfall.com/" Click="OnClickHyperlink">Scryfall</Hyperlink>

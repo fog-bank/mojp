@@ -160,19 +160,6 @@ public sealed partial class MainViewModel : INotifyPropertyChanged
     }
 
     /// <summary>
-    /// 基本土地に反応するかどうかを示す値を取得または設定します。
-    /// </summary>
-    public bool ShowBasicLands
-    {
-        get => settings.ShowBasicLands;
-        set
-        {
-            settings.ShowBasicLands = value;
-            OnPropertyChanged();
-        }
-    }
-
-    /// <summary>
     /// Preview Page の探索を行う間隔をミリ秒単位で取得または設定します。
     /// </summary>
     public int RefreshIntervalMilliseconds
@@ -302,20 +289,6 @@ public sealed partial class MainViewModel : INotifyPropertyChanged
 
         if (Cards != null && Cards.Count >= 1 && Cards[0] == card)
             return;
-
-        // 設定によっては基本土地 5 種の場合に表示を変えないようにする
-        if (!ShowBasicLands)
-        {
-            switch (card.Name)
-            {
-                case "Plains":
-                case "Island":
-                case "Swamp":
-                case "Mountain":
-                case "Forest":
-                    return;
-            }
-        }
 
         if (Cards.Count > 0)
             Cards[0] = card;
