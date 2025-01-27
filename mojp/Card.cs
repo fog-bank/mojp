@@ -148,7 +148,7 @@ public sealed partial class Card : IEquatable<Card>, INotifyPropertyChanged
     /// <summary>
     /// カードの英語名が一致しているかどうかを調べます。
     /// </summary>
-    public bool Equals(Card other) => !string.IsNullOrWhiteSpace(Name) && string.Equals(Name, other?.Name);
+    public bool Equals(Card other) => !string.IsNullOrWhiteSpace(Name) && Name == other?.Name;
 
     /// <summary>
     /// <see cref="Card"/> オブジェクトの各メンバの値が一致しているかどうかを調べます。

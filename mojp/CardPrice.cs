@@ -232,7 +232,7 @@ public static class CardPrice
                 string cardName = Card.NormalizeName(name);
 
                 // HACK: PD S28 (ONE) にバグ
-                if (cardName.EndsWith(" - Sketch"))
+                if (cardName.EndsWith(" - Sketch", StringComparison.Ordinal))
                     continue;
 
                 // HACK: PD S34 (BLB) にバグ
@@ -287,7 +287,7 @@ public static class CardPrice
             "Everflame, Heroes' Legacy" or "Legitimate Businessperson" or "Mileva, the Stalwart" or "Mishra's Warform" or "Vitu-Ghazi")
             return true;
 
-        if (card.Type.StartsWith("トークン") || card.Type.StartsWith("次元"))
+        if (card.Type.StartsWith("トークン", StringComparison.Ordinal) || card.Type.StartsWith("次元", StringComparison.Ordinal))
             return true;
 
         if (card.Type is "ヴァンガード" or "現象" or "ダンジョン")

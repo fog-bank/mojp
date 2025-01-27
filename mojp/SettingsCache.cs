@@ -66,7 +66,7 @@ public sealed class SettingsCache
     public int RefreshIntervalMilliseconds
     {
         get => refreshInterval;
-        set => refreshInterval = value >= 100 ? value : 100;
+        set => refreshInterval = Math.Max(value, 1000);
     }
 
     public bool GetPDList { get; set; }

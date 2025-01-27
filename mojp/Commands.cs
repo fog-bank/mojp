@@ -142,7 +142,7 @@ public sealed class GoToWikiCommand(MainViewModel viewModel) : Command(viewModel
             return true;
 
         // トークンで該当するページとなると、クリーチャータイプの解説ページがあるが、ややこしいパターンもあるのでリンクを無効にする
-        if (card.Type.StartsWith("トークン"))
+        if (card.Type.StartsWith("トークン", StringComparison.Ordinal))
             return false;
 
         return true;

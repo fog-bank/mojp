@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
 using System.Text;
@@ -18,6 +19,8 @@ namespace Mojp;
 /// </summary>
 public partial class OptionDialog : Window
 {
+    private bool isFixingCard;
+
     public OptionDialog(object viewModel)
     {
         InitializeComponent();
@@ -85,6 +88,14 @@ public partial class OptionDialog : Window
 #endif
     }
 
+    protected override void OnClosing(CancelEventArgs e)
+    {
+        if (isFixingCard)
+            e.Cancel = true;
+
+        base.OnClosing(e);
+    }
+
     private void OnCardDisplayNameChanged(object sender, SelectionChangedEventArgs e)
     {
         var vm = ViewModel;
@@ -141,7 +152,6 @@ public partial class OptionDialog : Window
     private async void OnBrowseSearchTxt(object sender, RoutedEventArgs e)
     {
 #if !OFFLINE
-        imgLoading.Visibility = Visibility.Visible;
         imgLoaded.Visibility = Visibility.Collapsed;
 
         var dlg = new OpenFileDialog
@@ -154,6 +164,9 @@ public partial class OptionDialog : Window
 
         if (dlg.ShowDialog(this) == true)
         {
+            isFixingCard = true;
+            imgLoading.Visibility = Visibility.Visible;
+
             var streams = dlg.OpenFiles();
             bool append = false;
 
@@ -174,9 +187,10 @@ public partial class OptionDialog : Window
                 App.SaveAsXml(App.GetPath("cards.xml"));
             });
 
+            imgLoading.Visibility = Visibility.Collapsed;
             imgLoaded.Visibility = Visibility.Visible;
+            isFixingCard = false;
         }
-        imgLoading.Visibility = Visibility.Collapsed;
 #endif
     }
 

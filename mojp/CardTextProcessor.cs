@@ -134,7 +134,7 @@ partial class Card
                 continue;
 
             // Lv 系カードかどうかチェック
-            if (line.StartsWith("Ｌｖアップ"))
+            if (line.StartsWith("Ｌｖアップ", StringComparison.Ordinal))
                 lvCard = true;
 
             // 各行をコロンで区切り、各項目を探す
@@ -236,7 +236,7 @@ partial class Card
         //}
 
         // 次元 (次元カードのページ URL には接尾辞で " (次元カード)" がつく)
-        if (card.Type.StartsWith("次元"))
+        if (card.Type.StartsWith("次元", StringComparison.Ordinal))
         {
             if (card.WikiLink == null)
                 card.WikiLink = wikilink + " (次元カード)";

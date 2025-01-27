@@ -40,31 +40,42 @@ partial class MainViewModel
         private MainViewModel ViewModel { get; }
 
         /// <summary>
-        /// 実行中の MO を検索します。
+        /// 実行中の MO を検索し、その後はプロセスが終了したかを調べます。
         /// </summary>
         public async Task CaptureMagicOnline()
         {
-            // MO のプロセス ID を取得する
-            if (mtgoProc == null || mtgoProc.HasExited)
+            var proc = mtgoProc;
+
+            if (proc != null && proc.HasExited)
             {
-                Debug.WriteLine("MO 検索開始 @ T" + Thread.CurrentThread.ManagedThreadId);
+                // mtgoProc = null;
+                if (Interlocked.CompareExchange(ref mtgoProc, null, proc) == proc)
+                {
+                    proc.Dispose();
+                    Debug.WriteLine("MO プロセス終了 @ T" + Thread.CurrentThread.ManagedThreadId);
+                }
+            }
 
-                mtgoProc?.Dispose();
-                mtgoProc = await Task.Run(() => App.GetProcessByName("mtgo")).ConfigureAwait(false);
+            if (mtgoProc == null)
+            {
+                // MO のプロセスを取得する
+                proc = await Task.Run(() => App.GetProcessByName("mtgo")).ConfigureAwait(false);
 
-                Debug.WriteLine("MO 検索完了 @ T" + Thread.CurrentThread.ManagedThreadId);
-
-                if (mtgoProc == null)
+                if (proc == null)
                 {
                     ViewModel.InvokeSetMessage("起動中のプロセスの中に MO が見つかりません。");
                     return;
                 }
-                ViewModel.InvokeSetMessage("カードを右クリックするとカードテキストを表示します。");
+                Debug.WriteLine("MO プロセス検出 @ T" + Thread.CurrentThread.ManagedThreadId);
+
+                // mtgoProc = proc;
+                var oldProc = Interlocked.CompareExchange(ref mtgoProc, proc, null);
+
+                if (oldProc != null)
+                    proc.Dispose();
+                else
+                    ViewModel.InvokeSetMessage("カードを右クリックするとカードテキストを表示します。");
             }
-#if DEBUG
-            int handlers = GetListenersCount();
-            Debug.WriteLineIf(handlers > 1, "Automation event handlers = " + handlers);
-#endif
         }
 
         /// <summary>
@@ -81,6 +92,7 @@ partial class MainViewModel
             textBlockCondition = null;
         }
 
+        // Automation イベント ハンドラーは非 UI スレッドで呼び出される
         private void OnMenuOpened(object sender, AutomationEventArgs e)
         {
             if (sender is not AutomationElement menu || mtgoProc == null)
@@ -97,7 +109,7 @@ partial class MainViewModel
                     return;
 
                 using (cacheReq.Activate())
-                    element = menu?.FindFirst(TreeScope.Descendants, textBlockCondition);
+                    element = menu.FindFirst(TreeScope.Descendants, textBlockCondition);
             }
             catch { Debug.WriteLine("TextBlock 要素の取得中にエラーが起きました。"); }
 
@@ -108,6 +120,7 @@ partial class MainViewModel
             }
             string name = GetNamePropertyValue(element);
 
+            // キャッシュ無効化時
             if (name == null)
                 return;
 
@@ -118,7 +131,7 @@ partial class MainViewModel
 
             if (name == "Face-down card.")
             {
-                // 裏向き
+                // 裏向きのカードの正体探し
                 SearchAll();
             }
             else
@@ -133,7 +146,7 @@ partial class MainViewModel
                 try
                 {
                     using (cacheReq.Activate())
-                        elements = menu?.FindAll(TreeScope.Descendants, textBlockCondition);
+                        elements = menu.FindAll(TreeScope.Descendants, textBlockCondition);
                 }
                 catch { Debug.WriteLine("TextBlock 要素の全取得中にエラーが起きました。"); }
 
@@ -144,7 +157,6 @@ partial class MainViewModel
                 {
                     string name = GetNamePropertyValue(elements[i]);
 
-                    // キャッシュ無効化時
                     if (name == null)
                         return;
 
@@ -163,7 +175,7 @@ partial class MainViewModel
         /// <summary>
         /// 指定した文字列がカード名を意味しているかどうかを調べ、そうならばカードを表示します。
         /// </summary>
-        /// <returns>指定した文字列がカード名を指すものだった場合は true 。</returns>
+        /// <returns>処理が完了した場合は true 。Automation を使って再検索すべきか、空表示にすべき場合は false 。</returns>
         private bool TryFetchCard(string value)
         {
             if (App.TryGetCard(value, out var card))
@@ -175,50 +187,55 @@ partial class MainViewModel
 
             // 誘発型能力
             const string triggerPrefix = "Triggered ability from ";
-            if (value.StartsWith(triggerPrefix))
+            if (value.StartsWith(triggerPrefix, StringComparison.Ordinal))
             {
                 value = value.Substring(triggerPrefix.Length);
-                Debug.WriteLine("Triggered ability => " + value);
-                return ViewCardDirectly(value);
-            }
-
-            // 分割カード系
-            int slashIndex = value.IndexOf('/');
-            if (slashIndex > 0 && char.IsLetter(value[slashIndex - 1]))
-            {
-                // "/" があるので、index が 0 のときは除く
-                value = value.Substring(0, slashIndex);
-                Debug.WriteLine("Split card => " + value);
+                Debug.WriteLine("誘発型能力 => " + value);
 
                 if (ViewCardDirectly(value))
                     return true;
             }
 
+            // 分割カード系（P/T のスラッシュの場合ははじく）
+            int slashIndex = value.IndexOf('/');
+            if (slashIndex > 0 && char.IsLetter(value[slashIndex - 1]))
+            {
+                string splitValue = value.Substring(0, slashIndex);
+                Debug.WriteLine("分割カード => " + splitValue);
+
+                if (ViewCardDirectly(splitValue))
+                    return true;
+            }
+
             // できるだけ左クリックメニューによる表示変化を避ける
-            if (value.EndsWith("Cast") || value.EndsWith(".") || value.StartsWith(" "))
-                return !value.StartsWith("Face-down card.");
+            if (value.EndsWith(".", StringComparison.Ordinal))
+                return value != "Face-down card.";
+
+            if (value.EndsWith("Cast", StringComparison.Ordinal) || value.EndsWith("Play", StringComparison.Ordinal) ||
+                value.StartsWith("Put ", StringComparison.Ordinal) || value.StartsWith("Attack ", StringComparison.Ordinal))
+                return true;
+
+            // 汎用トークン
+            if (value.EndsWith(" Token", StringComparison.Ordinal))
+            {
+                ViewModel.InvokeSetMessage("トークン");
+                Debug.WriteLine("トークン => " + value);
+                return true;
+            }
 
             // 紋章
-            if (value.StartsWith("Emblem") && value != "Emblem - ")
+            if (value.StartsWith("Emblem", StringComparison.Ordinal))
             {
                 ViewModel.InvokeSetMessage("紋章");
-                Debug.WriteLine(value);
+                Debug.WriteLine("紋章 => " + value);
                 return true;
             }
 
             // ヴァンガード
-            if (value.StartsWith("Avatar - "))
+            if (value.StartsWith("Avatar - ", StringComparison.Ordinal))
             {
                 ViewModel.InvokeSetMessage("ヴァンガード");
-                Debug.WriteLine(value);
-                return true;
-            }
-
-            // 汎用トークン
-            if (value.EndsWith(" Token"))
-            {
-                ViewModel.InvokeSetMessage("トークン");
-                Debug.WriteLine(value);
+                Debug.WriteLine("ヴァンガード => " + value);
                 return true;
             }
             return false;
@@ -251,12 +268,13 @@ partial class MainViewModel
         }
 
         /// <summary>
-        /// UI Automation イベントハンドラーを削除します。
+        /// UI Automation イベントハンドラーを別スレッドで削除します。
         /// </summary>
         private void UnregisterEventHandler()
         {
             Task.Run(() =>
             {
+                // OpenFileDialog を開いた後だと、別スレッドにしないとすごく遅くなる現象あり
                 Automation.RemoveAllEventHandlers();
 #if DEBUG
                 Debug.WriteLine("Automation event handlers (after remove) = " +
