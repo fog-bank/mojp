@@ -66,10 +66,12 @@ public partial class MainWindow : Window
     private async void OnInitialized(object sender, EventArgs e)
     {
         var vm = ViewModel;
+        var pdResult = GetPDListResult.NoCheck;
+        bool isOutdated = false;
 
         imgLoading.Visibility = Visibility.Visible;
 
-        await Task.Run(() =>
+        await Task.Run(async () =>
         {
 #if !OFFLINE
             if (File.Exists(App.GetPath("cards.xml")))
@@ -80,30 +82,33 @@ public partial class MainWindow : Window
 #else
             App.SetCardInfosFromResource();
 #endif
+            await vm.CaptureMagicOnline();
+
+#if !OFFLINE
+            if (vm.GetPDList)
+                pdResult = await CardPrice.GetOrOpenPDLegalFile();
+
+            if (vm.AutoVersionCheck)
+                isOutdated = await App.IsOutdatedRelease(vm.AcceptsPrerelease);
+#endif
         });
 
-        await vm.CaptureMagicOnline();
+        imgLoading.Visibility = Visibility.Hidden;
 
         if (App.Cards.Count == 0)
         {
-            vm.InvokeSetMessage(
+            vm.SetMessage(
                 "同梱のカードテキストデータ (cards.xml) を取得できません。" +
                 "セキュリティ対策ソフトによってブロックされている可能性があります。" + Environment.NewLine +
                 "[場所] " + Path.Combine(Path.GetDirectoryName(typeof(App).Assembly.Location), "cards.xml"));
         }
-
-#if !OFFLINE
-        if (vm.GetPDList)
-        {
-            var successPd = await CardPrice.GetOrOpenPDLegalFile(false);
-            ShowPDMessage(successPd);
-        }
-#endif
-        imgLoading.Visibility = Visibility.Hidden;
         vm.SetRefreshTimer(Dispatcher);
 
 #if !OFFLINE
-        if (vm.AutoVersionCheck && await App.IsOutdatedRelease(vm.AcceptsPrerelease))
+        if (vm.GetPDList)
+            ShowPDMessage(pdResult);
+
+        if (isOutdated)
             notifier.Visibility = Visibility.Visible;
 #endif
     }
@@ -141,7 +146,7 @@ public partial class MainWindow : Window
         {
             if (vm.GetPDList)
             {
-                var successPd = await CardPrice.GetOrOpenPDLegalFile(false);
+                var successPd = await CardPrice.GetOrOpenPDLegalFile();
                 ShowPDMessage(successPd);
             }
             else

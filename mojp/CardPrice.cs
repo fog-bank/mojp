@@ -156,9 +156,10 @@ public static class CardPrice
     /// Penny Dreadful のカードリストを取得するか、取得済みのファイルを開き、カードリストを準備します。
     /// </summary>
     /// <param name="forceCheck"><see langword="true"/> の場合、最終確認日時に関わらず HTTP アクセスを行います。</param>
-    public static async Task<GetPDListResult> GetOrOpenPDLegalFile(bool forceCheck)
+    public static async Task<GetPDListResult> GetOrOpenPDLegalFile(bool forceCheck = false)
     {
-        bool exists = File.Exists(App.GetPath(PDLegalFileName));
+        string path = App.GetPath(PDLegalFileName);
+        bool exists = File.Exists(path);
         var culture = CultureInfo.InvariantCulture;
         DateTime lastCheckTime = default;
         DateTime lastModifiedTime = default;
@@ -171,7 +172,7 @@ public static class CardPrice
                 App.SettingsCache.PDListLastTimeUtc, "o", culture, DateTimeStyles.RoundtripKind, out lastCheckTime))
             {
                 // 設定ファイルに最終確認日時を保存する前のバージョンとの互換性を維持するための代替措置
-                lastCheckTime = File.GetLastWriteTime(App.GetPath(PDLegalFileName)).ToUniversalTime();
+                lastCheckTime = File.GetLastWriteTime(path).ToUniversalTime();
             }
 
             // 最終更新日時の取得
@@ -202,7 +203,7 @@ public static class CardPrice
                 {
                     if (resp.IsSuccessStatusCode)
                     {
-                        using (var file = File.Create(App.GetPath(PDLegalFileName)))
+                        using (var file = File.Create(path))
                             await resp.Content.CopyToAsync(file);
 
                         result = exists ? GetPDListResult.Update : GetPDListResult.New;
@@ -224,7 +225,7 @@ public static class CardPrice
         var legalCards = new HashSet<string>();
         var separator = new[] { " // " };
 
-        foreach (string line in File.ReadLines(App.GetPath(PDLegalFileName)))
+        foreach (string line in File.ReadLines(path))
         {
             // 分割カードは名前を分ける
             foreach (string name in line.Split(separator, StringSplitOptions.RemoveEmptyEntries))
