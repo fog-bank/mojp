@@ -34,7 +34,7 @@ public partial class App : Application
     /// <summary>
     /// このアプリで共有する <see cref="System.Net.Http.HttpClient"/> を取得します。
     /// </summary>
-    public static Lazy<HttpClient> HttpClient { get; } = new(() =>
+    public static Lazy<HttpClient> HttpClient { get; } = new(static () =>
     {
         var http = new HttpClient();
         http.DefaultRequestHeaders.UserAgent.Add(new("mojp", "3.0"));
@@ -237,7 +237,7 @@ public partial class App : Application
     /// 指定した名前のプロセスを探し、最初に見つかった <see cref="Process"/> オブジェクトを返します。
     /// </summary>
     /// <param name="processName">プロセスの名前。</param>
-    public static Process GetProcessByName(string processName)
+    public static Process GetProcessByName(string processName = "mtgo")
     {
         var procs = Process.GetProcessesByName(processName);
         return procs?.FirstOrDefault();

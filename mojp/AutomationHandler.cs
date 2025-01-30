@@ -34,7 +34,7 @@ partial class MainViewModel
             cacheReq.Add(AutomationElement.NameProperty);
             cacheReq.AutomationElementMode = AutomationElementMode.None;
 
-            RegisterEventHandler();
+            RegisterEventHandler().Wait();
         }
 
         private MainViewModel ViewModel { get; }
@@ -59,7 +59,7 @@ partial class MainViewModel
             if (mtgoProc == null)
             {
                 // MO のプロセスを取得する
-                proc = await Task.Run(() => App.GetProcessByName("mtgo")).ConfigureAwait(false);
+                proc = await Task.Run(static () => App.GetProcessByName()).ConfigureAwait(false);
 
                 if (proc == null)
                 {
@@ -83,7 +83,7 @@ partial class MainViewModel
         /// </summary>
         public void Dispose()
         {
-            UnregisterEventHandler();
+            UnregisterEventHandler().Wait();
 
             mtgoProc?.Dispose();
             mtgoProc = null;
@@ -253,9 +253,9 @@ partial class MainViewModel
             }
         }
 
-        private void RegisterEventHandler()
+        private async Task RegisterEventHandler()
         {
-            Task.Run(() =>
+            await Task.Run(() =>
             {
                 using (eventCacheReq.Activate())
                 {
@@ -266,15 +266,15 @@ partial class MainViewModel
                 Debug.WriteLine("Automation event handlers (after add) = " +
                     GetListenersCount() + " @ T" + Thread.CurrentThread.ManagedThreadId);
 #endif
-            }).Wait();
+            }).ConfigureAwait(false);
         }
 
         /// <summary>
         /// UI Automation イベントハンドラーを別スレッドで削除します。
         /// </summary>
-        private void UnregisterEventHandler()
+        private async Task UnregisterEventHandler()
         {
-            Task.Run(() =>
+            await Task.Run(() =>
             {
                 // OpenFileDialog を開いた後だと、別スレッドにしないとすごく遅くなる現象あり
                 Automation.RemoveAllEventHandlers();
@@ -282,7 +282,7 @@ partial class MainViewModel
                 Debug.WriteLine("Automation event handlers (after remove) = " +
                     GetListenersCount() + " @ T" + Thread.CurrentThread.ManagedThreadId);
 #endif
-            }).Wait();
+            }).ConfigureAwait(false);
         }
 
         /// <summary>

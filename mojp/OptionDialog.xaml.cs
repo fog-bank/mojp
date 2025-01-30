@@ -177,7 +177,7 @@ public partial class OptionDialog : Window
                 append = true;
             }
 
-            await Task.Run(() =>
+            await Task.Run(static () =>
             {
                 string appendixPath = App.GetPath("appendix.xml");
 

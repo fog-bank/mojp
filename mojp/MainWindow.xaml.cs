@@ -74,23 +74,23 @@ public partial class MainWindow : Window
         await Task.Run(async () =>
         {
 #if !OFFLINE
-            if (File.Exists(App.GetPath("cards.xml")))
-                App.SetCardInfosFromXml(App.GetPath("cards.xml"));
+            string path = App.GetPath("cards.xml");
+
+            if (File.Exists(path))
+                App.SetCardInfosFromXml(path);
 
             if (CardPrice.EnableCardPrice)
                 CardPrice.OpenCacheData();
-#else
-            App.SetCardInfosFromResource();
-#endif
-            await vm.CaptureMagicOnline();
 
-#if !OFFLINE
             if (vm.GetPDList)
                 pdResult = await CardPrice.GetOrOpenPDLegalFile();
 
             if (vm.AutoVersionCheck)
                 isOutdated = await App.IsOutdatedRelease(vm.AcceptsPrerelease);
+#else
+            App.SetCardInfosFromResource();
 #endif
+            await vm.CaptureMagicOnline();
         });
 
         imgLoading.Visibility = Visibility.Hidden;

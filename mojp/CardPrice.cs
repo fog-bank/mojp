@@ -89,13 +89,15 @@ public static class CardPrice
     /// </summary>
     public static void OpenCacheData()
     {
-        if (!File.Exists(App.GetPath(CacheFileName)))
+        string path = App.GetPath(CacheFileName);
+
+        if (!File.Exists(path))
             return;
 
         var now = DateTime.UtcNow;
         var culture = CultureInfo.InvariantCulture;
 
-        using var sr = File.OpenText(App.GetPath(CacheFileName));
+        using var sr = File.OpenText(path);
 
         while (!sr.EndOfStream)
         {
