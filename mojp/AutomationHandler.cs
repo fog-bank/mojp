@@ -47,12 +47,12 @@ partial class MainViewModel
             // MO のプロセス ID を取得する
             if (mtgoProc == null || mtgoProc.HasExited)
             {
-                //Debug.WriteLine("MO 検索開始 @ T" + Thread.CurrentThread.ManagedThreadId);
+                Debug.WriteLine("MO 検索開始 @ T" + Thread.CurrentThread.ManagedThreadId);
 
                 mtgoProc?.Dispose();
                 mtgoProc = await Task.Run(() => App.GetProcessByName("mtgo")).ConfigureAwait(false);
 
-                //Debug.WriteLine("MO 検索完了 @ T" + Thread.CurrentThread.ManagedThreadId);
+                Debug.WriteLine("MO 検索完了 @ T" + Thread.CurrentThread.ManagedThreadId);
 
                 if (mtgoProc == null)
                 {
