@@ -359,6 +359,10 @@ public sealed partial class MainViewModel : INotifyPropertyChanged, IDisposable
             timer.Interval = RefreshInterval;
     }
 
+    //public void RestartRefreshTimer() => timer?.Start();
+
+    //public void StopRefreshTimer() => timer?.Stop();
+
     /// <summary>
     /// 画面を更新するように要求します。
     /// </summary>

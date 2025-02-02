@@ -88,10 +88,23 @@ partial class MainViewModel
                 // mtgoProc = proc;
                 var oldProc = Interlocked.CompareExchange(ref mtgoProc, proc, null);
 
-                if (oldProc != null)
-                    proc.Dispose();
-                else
+                if (oldProc == null)
+                {
+                    //proc.EnableRaisingEvents = true;
+                    //proc.Exited += (_, _) =>
+                    //{
+                    //    mtgoProc?.Dispose();
+                    //    mtgoProc = null;
+                    //    Debug.WriteLine("MO プロセス終了 @ T" + Thread.CurrentThread.ManagedThreadId);
+
+                    //    ViewModel.RestartRefreshTimer();
+                    //};
+                    //ViewModel.StopRefreshTimer();
+
                     ViewModel.InvokeSetMessage("カードを右クリックするとカードテキストを表示します。");
+                }
+                else
+                    proc.Dispose();
             }
         }
 
