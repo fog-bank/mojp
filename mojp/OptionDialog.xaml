@@ -170,7 +170,7 @@
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
-                <Grid Margin="0,0,0,2" ToolTipService.ShowDuration="60000">
+                <Grid Margin="0,0,0,4" ToolTipService.ShowDuration="60000">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition />
                         <ColumnDefinition Width="Auto" />
@@ -186,7 +186,7 @@
                         <TextBlock>MO を探す時間間隔</TextBlock>
                         <Image Source="Resources/Information.png" Height="16" Margin="5,0,0,0" />
                     </StackPanel>
-                    <TextBox Grid.Column="1" MinWidth="100" VerticalContentAlignment="Center" Text="{Binding RefreshIntervalMilliseconds}" />
+                    <TextBox Grid.Column="1" MinWidth="108" VerticalContentAlignment="Center" Text="{Binding RefreshIntervalMilliseconds}" />
                     <TextBlock Grid.Column="2">ミリ秒</TextBlock>
                 </Grid>
                 <CheckBox Name="grpGetPDList" Grid.Row="2" IsChecked="{Binding GetPDList}" ToolTipService.ShowDuration="60000">
