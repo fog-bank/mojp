@@ -18,7 +18,7 @@ public partial class MainWindow : Window
 
     protected override void OnClosing(CancelEventArgs e)
     {
-        ViewModel?.Release();
+        ViewModel?.Dispose();
 
         base.OnClosing(e);
     }
@@ -70,6 +70,7 @@ public partial class MainWindow : Window
         bool isOutdated = false;
 
         imgLoading.Visibility = Visibility.Visible;
+        vm.SetMessage("準備中");
 
         await Task.Run(async () =>
         {
@@ -90,7 +91,7 @@ public partial class MainWindow : Window
 #else
             App.SetCardInfosFromResource();
 #endif
-            await vm.CaptureMagicOnline();
+            await vm.InitAutomation();
         });
 
         imgLoading.Visibility = Visibility.Hidden;

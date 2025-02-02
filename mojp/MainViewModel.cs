@@ -12,7 +12,7 @@ namespace Mojp;
 /// <summary>
 /// <see cref="MainWindow"/> のビュー モデルを提供します。
 /// </summary>
-public sealed partial class MainViewModel : INotifyPropertyChanged
+public sealed partial class MainViewModel : INotifyPropertyChanged, IDisposable
 {
     private readonly SettingsCache settings = App.SettingsCache;
     private readonly AutomationHandler automation;
@@ -340,7 +340,11 @@ public sealed partial class MainViewModel : INotifyPropertyChanged
         }
     }
 
-    public async Task CaptureMagicOnline() => await automation.CaptureMagicOnline();
+    public async Task InitAutomation()
+    {
+        await automation.RegisterEventHandler();
+        await automation.FindMagicOnline();
+    }
 
     /// <summary>
     /// MO を定期的に探索するためのタイマーを設定します。
@@ -372,16 +376,16 @@ public sealed partial class MainViewModel : INotifyPropertyChanged
     /// <summary>
     /// 各リソースを解放します。
     /// </summary>
-    public void Release()
+    public void Dispose()
     {
         var commandNames = new List<string>(ToolbarCommands.Count);
-        settings.ToolbarCommands = commandNames;
 
         foreach (var command in ToolbarCommands)
         {
             commandNames.Add(command.Name);
             commandNames.Add(command.IsVisible ? "1" : "0");
         }
+        settings.ToolbarCommands = commandNames;
 
         if (timer != null)
         {
@@ -394,7 +398,7 @@ public sealed partial class MainViewModel : INotifyPropertyChanged
         automation.Dispose();
     }
 
-    private async void OnCapture(object sender, EventArgs e) => await automation.CaptureMagicOnline();
+    private async void OnCapture(object sender, EventArgs e) => await automation.FindMagicOnline();
 
     private void OnPropertyChanged([CallerMemberName] string propertyName = null)
         => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

@@ -33,20 +33,37 @@ partial class MainViewModel
             // FindAll や FindFirst のときに TreeFilter を設定すると、なぜかうまくいかない (カード名をもつ要素が取得できない)
             cacheReq.Add(AutomationElement.NameProperty);
             cacheReq.AutomationElementMode = AutomationElementMode.None;
-
-            RegisterEventHandler().Wait();
         }
 
         private MainViewModel ViewModel { get; }
 
         /// <summary>
+        /// メニューが開いたイベントをサブスクライブします。
+        /// </summary>
+        public async Task RegisterEventHandler()
+        {
+            await Task.Run(() =>
+            {
+                using (eventCacheReq.Activate())
+                {
+                    Automation.AddAutomationEventHandler(
+                        AutomationElement.MenuOpenedEvent, AutomationElement.RootElement, TreeScope.Descendants, OnMenuOpened);
+                }
+#if DEBUG
+                Debug.WriteLine("Automation event handlers (after add) = " +
+                    GetListenersCount() + " @ T" + Thread.CurrentThread.ManagedThreadId);
+#endif
+            }).ConfigureAwait(false);
+        }
+
+        /// <summary>
         /// 実行中の MO を検索し、その後はプロセスが終了したかを調べます。
         /// </summary>
-        public async Task CaptureMagicOnline()
+        public async Task FindMagicOnline()
         {
             var proc = mtgoProc;
 
-            if (proc != null && proc.HasExited)
+            if (proc != null && await Task.Run(() => proc.HasExited).ConfigureAwait(false))
             {
                 // mtgoProc = null;
                 if (Interlocked.CompareExchange(ref mtgoProc, null, proc) == proc)
@@ -251,22 +268,6 @@ partial class MainViewModel
                 }
                 return false;
             }
-        }
-
-        private async Task RegisterEventHandler()
-        {
-            await Task.Run(() =>
-            {
-                using (eventCacheReq.Activate())
-                {
-                    Automation.AddAutomationEventHandler(
-                        AutomationElement.MenuOpenedEvent, AutomationElement.RootElement, TreeScope.Descendants, OnMenuOpened);
-                }
-#if DEBUG
-                Debug.WriteLine("Automation event handlers (after add) = " +
-                    GetListenersCount() + " @ T" + Thread.CurrentThread.ManagedThreadId);
-#endif
-            }).ConfigureAwait(false);
         }
 
         /// <summary>
