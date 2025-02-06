@@ -36,7 +36,7 @@
     <TargetCulture>ja-JP</TargetCulture>
     <ProductName>MO 日本語カードテキスト表示ツール</ProductName>
     <PublisherName>MO 日本語カードテキスト表示ツール</PublisherName>
-    <MinimumRequiredVersion>2.36.0.0</MinimumRequiredVersion>
+    <MinimumRequiredVersion>3.0.0.0</MinimumRequiredVersion>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>index.html</WebPage>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>

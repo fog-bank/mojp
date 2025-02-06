@@ -10,6 +10,10 @@ using System.Windows.Input;
 
 namespace Mojp;
 
+#if OFFLINE
+#pragma warning disable CS1998 // Async method lacks 'await' operators and will run synchronously
+#endif
+
 public partial class MainWindow : Window
 {
     public MainWindow() => InitializeComponent();
@@ -66,9 +70,10 @@ public partial class MainWindow : Window
     private async void OnInitialized(object sender, EventArgs e)
     {
         var vm = ViewModel;
+#if !OFFLINE
         var pdResult = GetPDListResult.NoCheck;
         bool isOutdated = false;
-
+#endif
         imgLoading.Visibility = Visibility.Visible;
         vm.SetMessage("準備中");
 
