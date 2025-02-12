@@ -286,7 +286,7 @@ public static class CardPrice
         if (string.IsNullOrEmpty(card.Type))
             return true;
 
-        if (card.Name is "Gleemox" or "Morph" or "Manifest" or "A Mysterious Creature" or
+        if (card.Name is "Gleemox" or
             "Everflame, Heroes' Legacy" or "Legitimate Businessperson" or "Mileva, the Stalwart" or "Mishra's Warform" or "Vitu-Ghazi")
             return true;
 

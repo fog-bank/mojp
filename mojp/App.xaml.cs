@@ -23,7 +23,7 @@ public partial class App : Application
     /// <summary>
     /// カードの英語名から、英語カード名・日本語カード名・日本語カードテキストを検索します。
     /// </summary>
-    public static Dictionary<string, Card> Cards { get; } = new(29189);
+    public static Dictionary<string, Card> Cards { get; } = new(29188);
 
     /// <summary>
     /// このアプリの設定を取得します。
@@ -220,7 +220,8 @@ public partial class App : Application
         var current = new Version(attr.Version);
 
         // 行ごとにバージョン番号を記載し、第一行は安定版の番号にしておく
-        var versions = response.Split(Environment.NewLine.ToCharArray(), 3, StringSplitOptions.RemoveEmptyEntries);
+        var crlf = new[] { '\r', '\n' };
+        var versions = response.Split(crlf, 3, StringSplitOptions.RemoveEmptyEntries);
         string version = null;
 
         if (versions.Length >= 1)

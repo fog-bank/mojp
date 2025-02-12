@@ -125,52 +125,94 @@ partial class MainViewModel
         // Automation イベント ハンドラーは非 UI スレッドで呼び出される
         private void OnMenuOpened(object sender, AutomationEventArgs e)
         {
-            if (sender is not AutomationElement menu || mtgoProc == null)
+            if (mtgoProc == null || sender is not AutomationElement menu)
                 return;
 
-            // 右クリックメニューの最初の TextBlock 要素を取得する
-            AutomationElement element = null;
-            try
-            {
-                Debug.WriteLine(
-                    "[MenuOpendEvent] Proc = " + menu.Cached.ProcessId + " @ T" + Thread.CurrentThread.ManagedThreadId);
+            string name = SearchFirstText(menu);
 
-                if (menu.Cached.ProcessId != mtgoProc.Id)
-                    return;
-
-                using (cacheReq.Activate())
-                    element = menu.FindFirst(TreeScope.Descendants, textBlockCondition);
-            }
-            catch { Debug.WriteLine("TextBlock 要素の取得中にエラーが起きました。"); }
-
-            if (element is null)
-            {
-                Debug.WriteLine("TextBlock 要素の取得に失敗しました。");
-                return;
-            }
-            string name = GetNamePropertyValue(element);
-
-            // キャッシュ無効化時
             if (name == null)
                 return;
 
             Debug.WriteLine("[Menu] " + name.Replace(Environment.NewLine, "\\n"));
 
+            // 事前特殊処理
+            switch (name)
+            {
+                case "Undo":
+                    if (SearchSecondText(menu) == "Concede Game")
+                        return;
+                    break;
+
+                case "Day":
+                case "Night":
+                    if (SearchSecondText(menu) == "The Token Set")
+                    {
+                        TryFetchCard("昼／夜");
+                        return;
+                    }
+                    break;
+            }
+
             if (TryFetchCard(name))
                 return;
 
-            if (name == "Face-down card.")
+            // 事後特殊処理
+            switch (name)
             {
-                // 裏向きのカードの正体探し
-                SearchAll();
-            }
-            else
-            {
-                // カード名ではなかったときに強制的に空表示にする
-                ViewModel.InvokeSetCard(null);
+                case "Face-down card.":
+                    SearchAsFaceDownCard();
+                    break;
+
+                default:
+                    // カード名ではなかったときに強制的に空表示にする
+                    ViewModel.InvokeSetCard(null);
+                    break;
             }
 
-            void SearchAll()
+            // 右クリックメニューの最初の UI テキストを取得する
+            string SearchFirstText(AutomationElement menu)
+            {
+                AutomationElement element = null;
+                try
+                {
+                    Debug.WriteLine(
+                        "[MenuOpendEvent] Proc = " + menu.Cached.ProcessId + " @ T" + Thread.CurrentThread.ManagedThreadId);
+
+                    if (menu.Cached.ProcessId != mtgoProc.Id)
+                        return null;
+
+                    //long time = Stopwatch.GetTimestamp();
+
+                    using (cacheReq.Activate())
+                        element = menu.FindFirst(TreeScope.Descendants, textBlockCondition);
+
+                    //Debug.WriteLine(new TimeSpan((long)((Stopwatch.GetTimestamp() - time) * 10000000.0 / Stopwatch.Frequency)));
+                    Debug.WriteLineIf(element is null, "TextBlock 要素の取得に失敗しました。");
+                }
+                catch { Debug.WriteLine("TextBlock 要素の取得中にエラーが起きました。"); }
+
+                return GetNamePropertyValue(element);
+            }
+
+            // メニュー内を全検索しなおし、2 番目の UI テキストを取得する
+            string SearchSecondText(AutomationElement menu)
+            {
+                AutomationElementCollection elements = null;
+                try
+                {
+                    using (cacheReq.Activate())
+                        elements = menu.FindAll(TreeScope.Descendants, textBlockCondition);
+                }
+                catch { Debug.WriteLine("TextBlock 要素の全取得中にエラーが起きました。"); }
+
+                if (elements == null || elements.Count < 2)
+                    return null;
+
+                return GetNamePropertyValue(elements[1]);
+            }
+
+            // 裏向きのカードの正体探し
+            void SearchAsFaceDownCard()
             {
                 AutomationElementCollection elements = null;
                 try
@@ -183,14 +225,14 @@ partial class MainViewModel
                 if (elements == null)
                     return;
 
-                for (int i = 0; i < elements.Count; i++)
+                for (int i = 1; i < elements.Count; i++)
                 {
                     string name = GetNamePropertyValue(elements[i]);
 
                     if (name == null)
                         return;
 
-                    Debug.WriteLineIf(i > 0, "[Menu] " + name.Replace(Environment.NewLine, "\\n"));
+                    Debug.WriteLine("[Menu] " + name.Replace(Environment.NewLine, "\\n"));
 
                     if (App.TryGetCard(name, out var card))
                     {
@@ -314,9 +356,6 @@ partial class MainViewModel
                 Debug.WriteLine("キャッシュされた Name プロパティ値の取得に失敗しました。");
                 return null;
             }
-
-            if (name == null)
-                return string.Empty;
 
             // 特殊文字を置き換える (アキュート・アクセントつきの文字など)
             return Card.NormalizeName(name);
