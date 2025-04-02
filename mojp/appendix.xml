@@ -653,6 +653,11 @@ II,III ― このターン、あなたがコントロールしているクリー
 このクリーチャーが戦場に出るか攻撃するたび、カード３枚を切削する。
 あなたのライブラリーから１枚以上のクリーチャー・カードがあなたの墓地に置かれるたび、それらのうち１枚を戦場に出す。</card>
 
+    <card name="Baldin, Century Herdmaster" ja="世紀の群れ使い、バルディン" type="伝説のクリーチャー ― 人間・戦士" pt="0/7">あなたのターンの間、各クリーチャーは、パワーではなくタフネスに等しい点数の戦闘ダメージを割り振る。
+これが攻撃するたび、クリーチャー最大１００体を対象とする。ターン終了時まで、それらはそれぞれ+0/+Xの修整を受ける。Ｘはあなたの手札にあるカードの枚数に等しい。</card>
+    <card name="Nogi, Draco-Zealot" ja="ドラゴン狂、ノギー" type="伝説のクリーチャー ― コボルド・シャーマン" pt="3/3">あなたがドラゴン・呪文を唱えるためのコストは(１)少なくなる。
+これが攻撃するたび、あなたが３体以上のドラゴンをコントロールしている場合、ターン終了時まで、これは基本のパワーとタフネスが5/5のドラゴンになり、飛行を得る。</card>
+
     <!-- 一時消失 -->
     <card name="Petty Theft" ja="些細な盗み" type="インスタント ― 出来事" rel="Brazen Borrower">対戦相手がコントロールしていて土地でないパーマネント１つを対象とし、それをオーナーの手札に戻す。</card>
     <card name="Ulalek, Fused Atrocity" ja="合体した非道、ウラレック" type="伝説のクリーチャー ― エルドラージ" pt="2/5">欠色（このカードは無色である。）
@@ -1233,12 +1238,15 @@ Unruly Krasisが攻撃するたび、あなたがコントロールしていて�
 (３)(緑)(青)：順応３を行う。（このクリーチャーの上に+1/+1カウンターがないなら、これの上に+1/+1カウンター３個を置く。）</card>
     <card name="Vernal Sovereign" ja="Vernal Sovereign" type="クリーチャー ― エレメンタル・大鹿" pt="4/4">Vernal Sovereignが戦場に出るか攻撃するたび、「このクリーチャーのパワーとタフネスはそれぞれ、あなたがコントロールしているクリーチャーの数に等しい。」を持つ緑白のエレメンタル・クリーチャー・トークン１体を生成する。</card>
     
-    <!-- SLD (Street Fighter) -->
-    <!--<card name="Aisha of Sparks and Smoke" ja="Aisha of Sparks and Smoke" type="伝説のクリーチャー ― 人間・戦士" pt="4/2">果敢（あなたがクリーチャーでない呪文を唱えるたび、ターン終了時まで、このクリーチャーは+1/+1の修整を受ける。）
+    <!-- SLX (Street Fighter) -->
+    <!--<card name="Vikya, Scorching Stalwart" ja="Vikya, Scorching Stalwart" type="伝説のクリーチャー ― 人間・戦士" pt="2/4">訓練（このクリーチャーが、これより大きなパワーを持つ１体以上のクリーチャーと攻撃するたび、このクリーチャーの上に+1/+1カウンター１個を置く。）
+(４)(赤),(Ｑ),カード１枚を捨てる：１つを対象とする。Vikya, Scorching Stalwartはそれに自身のパワーに等しい点数のダメージを与える。これによりクリーチャーが余剰のダメージを受けたなら、カード１枚を引く。（(Ｑ)はアンタップ・シンボルである。）</card>
+    <card name="Aisha of Sparks and Smoke" ja="Aisha of Sparks and Smoke" type="伝説のクリーチャー ― 人間・戦士" pt="4/2">果敢（あなたがクリーチャーでない呪文を唱えるたび、ターン終了時まで、このクリーチャーは+1/+1の修整を受ける。）
 (赤/白)：ターン終了時まで、Aisha of Sparks and Smokeは先制攻撃を得る。
 Aisha of Sparks and Smokeが戦闘ダメージを与えるたび、あなたはあなたの手札からマナ総量がそのダメージの点数以下であるソーサリー・呪文１つをマナ・コストを支払うことなく唱えてもよい。</card>
-    <card name="Baldin, Century Herdmaster" ja="Baldin, Century Herdmastern" type="伝説のクリーチャー ― 人間・戦士" pt="0/7">あなたのターンの間、各クリーチャーはそれぞれ、パワーではなくタフネスに等しい点数の戦闘ダメージを割り振る。
-Baldin, Century Herdmasterが攻撃するたび、クリーチャー最大１００体を対象とする。ターン終了時まで、それらはそれぞれ+0/+Xの修整を受ける。Ｘはあなたの手札にあるカードの枚数に等しい。</card>
+    <card name="The Howling Abomination" ja="The Howling Abomination" type="伝説のクリーチャー ― 人間・ビースト・戦士" pt="5/5">速攻
+このターンにあなたが３つ以上の呪文を唱えているかぎり、The Howling Abominationはトランプルを持つ。
+The Howling Abominationが呪文の対象になるたび、ターン終了時まで、これは+2/+2の修整を受け、各対戦相手にそれぞれ２点のダメージを与える。</card>
     <card name="Immard, the Stormcleaver" ja="Immard, the Stormcleaver" type="伝説のクリーチャー ― 人間・兵士" pt="4/4">Immard, the Stormcleaverが戦場に出るか攻撃するたび、これの上に蓄積カウンター１個を置くか、これの上から蓄積カウンター１個を取り除く。これによりあなたがカウンター１個を取り除いたとき、以下から１つを選ぶ。
 ・１つを対象とする。Immard, the Stormcleaverはそれに４点のダメージを与える。
 ・ターン終了時まで、Immard, the Stormcleaverは絆魂と破壊不能を得る。</card>
@@ -1249,11 +1257,6 @@ Maarika, Brutal Gladiatorがクリーチャー１体にダメージを与える�
 Tadeas, Juniper Ascendantが攻撃していないかぎり、これは呪禁を持つ。
 あなたがコントロールしていて到達を持つクリーチャー１体が攻撃するたび、それをアンタップする。この戦闘で、それは自身よりもパワーが大きいクリーチャーにはブロックされない。
 あなたがコントロールしている１体以上のクリーチャーがプレイヤー１人に戦闘ダメージを与えるたび、カード１枚を引く。</card>
-    <card name="The Howling Abomination" ja="The Howling Abomination" type="伝説のクリーチャー ― 人間・ビースト・戦士" pt="5/5">速攻
-このターンにあなたが３つ以上の呪文を唱えているかぎり、The Howling Abominationはトランプルを持つ。
-The Howling Abominationが呪文の対象になるたび、ターン終了時まで、これは+2/+2の修整を受け、各対戦相手にそれぞれ２点のダメージを与える。</card>
-    <card name="Vikya, Scorching Stalwart" ja="Vikya, Scorching Stalwart" type="伝説のクリーチャー ― 人間・戦士" pt="2/4">訓練（このクリーチャーが、これより大きなパワーを持つ１体以上のクリーチャーと攻撃するたび、このクリーチャーの上に+1/+1カウンター１個を置く。）
-(４)(赤),(Ｑ),カード１枚を捨てる：１つを対象とする。Vikya, Scorching Stalwartはそれに自身のパワーに等しい点数のダメージを与える。これによりクリーチャーが余剰のダメージを受けたなら、カード１枚を引く。（(Ｑ)はアンタップ・シンボルである。）</card>
     <card name="Zethi, Arcane Blademaster" ja="Zethi, Arcane Blademaster" type="伝説のクリーチャー ― 人間・兵士" pt="3/3">多重キッカー(白/青)
 Zethi, Arcane Blademasterが戦場に出たとき、あなたの墓地にあるインスタント・カード最大Ｘ枚を対象とする。それらを追放する。ＸはZethi, Arcane Blademasterがキッカーされた回数に等しい。それらの上にそれぞれキック・カウンター１個を置く。
 Zethi, Arcane Blademasterが攻撃するたび、あなたがオーナーであり追放されていてキック・カウンターが置かれている各カードをコピーする。あなたはそれらのコピーを唱えてもよい。</card>-->
@@ -1266,30 +1269,8 @@ Cecily, Haunted Mageが攻撃するたび、あなたはカード１枚を引き
     <card name="Elmar, Ulvenwald Informant" ja="Elmar, Ulvenwald Informant" type="伝説のクリーチャー ― 人間" pt="3/2">速攻
 あなたが各ターン内のあなたの２つ目の呪文を唱えるたび、クリーチャー１体を対象とする。それをアンタップし、その後調査を行う。（手掛かり・トークン１つを生成する。）
 永遠の友（両方が永遠の友を持つなら、あなたは２体の統率者を使用できる。）</card>
-    <card name="Enkira, Hostile Scavenger" ja="Enkira, Hostile Scavenger" type="伝説のクリーチャー ― 人間・戦士" pt="3/3">Enkira, Hostile Scavengerが戦場に出たとき、ウォーカー・トークン２体を生成する。（それらは黒の2/2のゾンビ・クリーチャーである。）
-Enkira, Hostile Scavengerに装備品がついているかぎり、これは可能ならブロックされなければならない。
-Enkira, Hostile Scavengerと２体以上のゾンビが攻撃するたび、ターン終了時まで、Enkira, Hostile Scavengerは破壊不能を得る。</card>
-    <card name="Gisa's Favorite Shovel" ja="Gisa's Favorite Shovel" type="伝説のアーティファクト ― 装備品">装備しているクリーチャーは+2/+0の修整を受け威迫を持つ。
-装備しているクリーチャーが攻撃するたび、防御プレイヤーはクリーチャー１体を生け贄に捧げる。そうしたなら、あなたはウォーカー・トークン１体を生成する。（それは黒の2/2のゾンビ・クリーチャーである。）
-装備(４)</card>
-    <card name="Gregor, Shrewd Magistrate" ja="Gregor, Shrewd Magistrate" type="伝説のクリーチャー ― 人間・アドバイザー" pt="1/3">潜伏（このクリーチャーは、これより大きなパワーを持つクリーチャーによってはブロックされない。）
-Gregor, Shrewd Magistrateがプレイヤー１人に戦闘ダメージを与えるたび、これのパワーに等しい枚数のカードを引く。</card>
-    <card name="Greymond, Avacyn's Stalwart" ja="Greymond, Avacyn's Stalwart" type="伝説のクリーチャー ― 人間・兵士" pt="3/4">Greymond, Avacyn's Stalwartが戦場に出るに際し、先制攻撃や警戒や絆魂のうち能力２つを選ぶ。
-あなたがコントロールしている人間は選ばれた各能力を持つ。
-あなたが４体以上の人間をコントロールしているかぎり、あなたがコントロールしている人間は+2/+2の修整を受ける。</card>
-    <card name="Hansk, Slayer Zealot" ja="Hansk, Slayer Zealot" type="伝説のクリーチャー ― 人間・射手" pt="4/4">あなたのアップキープの開始時に、対戦相手１人を対象とする。そのプレイヤーはウォーカー・トークン３体を生成する。（それらは黒の2/2のゾンビ・クリーチャーである。）
-(Ｔ)：クリーチャー１体を対象とする。Hansk, Slayer Zealotはそれに２点のダメージを与える。
-対戦相手がコントロールしているゾンビ１体が死亡するたび、カード１枚を引く。</card>
     <card name="Hargilde, Kindly Runechanter" ja="Hargilde, Kindly Runechanter" type="伝説のクリーチャー ― 人間" pt="2/3">(Ｔ)：(◇)(◇)を加える。このマナは、アーティファクト・呪文を唱えるためか、アーティファクトの能力を起動するためにのみ使用できる。
 永遠の友（両方が永遠の友を持つなら、あなたは２体の統率者を使用できる。）</card>
-    <card name="Havengul Laboratory" ja="Havengul Laboratory" type="伝説の土地" rel="Havengul Mystery">(Ｔ)：(◇)を加える。
-(４),(Ｔ)：調査を行う。
-あなたの終了ステップの開始時に、このターンにあなたが３つ以上の手掛かりを生け贄に捧げていた場合、Havengul Laboratoryを変身させる。</card>
-    <card name="Havengul Mystery" ja="Havengul Mystery" type="伝説の土地" rel="Havengul Laboratory">この土地がHavengul Mysteryに変身したとき、あなたの墓地にあるクリーチャー・カード１枚を対象とする。それを戦場に戻す。
-Havengul Mysteryによって戦場に出たクリーチャーが戦場を離れたとき、Havengul Mysteryを変身させる。
-(Ｔ),１点のライフを支払う：(黒)を加える。</card>
-    <card name="Malik, Grim Manipulator" ja="Malik, Grim Manipulator" type="伝説のクリーチャー ― 人間・ならず者" pt="4/3">Malik, Grim Manipulatorが戦場に出たとき、対戦相手１人を対象とする。あなたとそのプレイヤーはそれぞれ、そのプレイヤーがコントロールしているクリーチャー１体を秘密裏に選ぶ。その後、それらの選択を公開し、そのプレイヤーはそれらのクリーチャーを生け贄に捧げる。
-対戦相手がクリーチャー１体を生け贄に捧げるたび、あなたは宝物・トークン１つを生成する。</card>
     <card name="Othelm, Sigardian Outcast" ja="Othelm, Sigardian Outcast" type="伝説のクリーチャー ― 人間" pt="2/2">(２),(Ｔ)：あなたの墓地にありこのターンに戦場からあなたの墓地に置かれたクリーチャー・カード１枚を対象とする。それをタップ状態で戦場に戻す。
 永遠の友（両方が永遠の友を持つなら、あなたは２体の統率者を使用できる。）</card>
     <card name="Sophina, Spearsage Deserter" ja="Sophina, Spearsage Deserter" type="伝説のクリーチャー ― 人間・兵士" pt="4/4">威迫
@@ -1297,6 +1278,52 @@ Sophina, Spearsage Deserterが攻撃するたび、トークンでない攻撃�
 永遠の友（両方が永遠の友を持つなら、あなたは２体の統率者を使用できる。）</card>
     <card name="Wernog, Rider's Chaplain" ja="Wernog, Rider's Chaplain" type="伝説のクリーチャー ― 人間" pt="1/2">Wernog, Rider's Chaplainが戦場に出たか戦場を離れたとき、各対戦相手はそれぞれ調査を行ってもよい。そうしなかった各対戦相手はそれぞれ１点のライフを失う。あなたは調査をＸ回行う。Ｘはこれにより調査を行った対戦相手の人数に１を足した値に等しい。
 永遠の友（両方が永遠の友を持つなら、あなたは２体の統率者を使用できる。）</card>
+    <card name="Havengul Laboratory" ja="Havengul Laboratory" type="伝説の土地" rel="Havengul Mystery">(Ｔ)：(◇)を加える。
+(４),(Ｔ)：調査を行う。
+あなたの終了ステップの開始時に、このターンにあなたが３つ以上の手掛かりを生け贄に捧げていた場合、Havengul Laboratoryを変身させる。</card>
+    <card name="Havengul Mystery" ja="Havengul Mystery" type="伝説の土地" rel="Havengul Laboratory">この土地がHavengul Mysteryに変身したとき、あなたの墓地にあるクリーチャー・カード１枚を対象とする。それを戦場に戻す。
+Havengul Mysteryによって戦場に出たクリーチャーが戦場を離れたとき、Havengul Mysteryを変身させる。
+(Ｔ),１点のライフを支払う：(黒)を加える。</card>
+    <card name="Greymond, Avacyn's Stalwart" ja="Greymond, Avacyn's Stalwart" type="伝説のクリーチャー ― 人間・兵士" pt="3/4">Greymond, Avacyn's Stalwartが戦場に出るに際し、先制攻撃や警戒や絆魂のうち能力２つを選ぶ。
+あなたがコントロールしている人間は選ばれた各能力を持つ。
+あなたが４体以上の人間をコントロールしているかぎり、あなたがコントロールしている人間は+2/+2の修整を受ける。</card>
+    <card name="Gisa's Favorite Shovel" ja="Gisa's Favorite Shovel" type="伝説のアーティファクト ― 装備品">装備しているクリーチャーは+2/+0の修整を受け威迫を持つ。
+装備しているクリーチャーが攻撃するたび、防御プレイヤーはクリーチャー１体を生け贄に捧げる。そうしたなら、あなたはウォーカー・トークン１体を生成する。（それは黒の2/2のゾンビ・クリーチャーである。）
+装備(４)</card>
+    <card name="Enkira, Hostile Scavenger" ja="Enkira, Hostile Scavenger" type="伝説のクリーチャー ― 人間・戦士" pt="3/3">Enkira, Hostile Scavengerが戦場に出たとき、ウォーカー・トークン２体を生成する。（それらは黒の2/2のゾンビ・クリーチャーである。）
+Enkira, Hostile Scavengerに装備品がついているかぎり、これは可能ならブロックされなければならない。
+Enkira, Hostile Scavengerと２体以上のゾンビが攻撃するたび、ターン終了時まで、Enkira, Hostile Scavengerは破壊不能を得る。</card>
+    <card name="Gregor, Shrewd Magistrate" ja="Gregor, Shrewd Magistrate" type="伝説のクリーチャー ― 人間・アドバイザー" pt="1/3">潜伏（このクリーチャーは、これより大きなパワーを持つクリーチャーによってはブロックされない。）
+Gregor, Shrewd Magistrateがプレイヤー１人に戦闘ダメージを与えるたび、これのパワーに等しい枚数のカードを引く。</card>
+    <card name="Hansk, Slayer Zealot" ja="Hansk, Slayer Zealot" type="伝説のクリーチャー ― 人間・射手" pt="4/4">あなたのアップキープの開始時に、対戦相手１人を対象とする。そのプレイヤーはウォーカー・トークン３体を生成する。（それらは黒の2/2のゾンビ・クリーチャーである。）
+(Ｔ)：クリーチャー１体を対象とする。Hansk, Slayer Zealotはそれに２点のダメージを与える。
+対戦相手がコントロールしているゾンビ１体が死亡するたび、カード１枚を引く。</card>
+    <card name="Malik, Grim Manipulator" ja="Malik, Grim Manipulator" type="伝説のクリーチャー ― 人間・ならず者" pt="4/3">Malik, Grim Manipulatorが戦場に出たとき、対戦相手１人を対象とする。あなたとそのプレイヤーはそれぞれ、そのプレイヤーがコントロールしているクリーチャー１体を秘密裏に選ぶ。その後、それらの選択を公開し、そのプレイヤーはそれらのクリーチャーを生け贄に捧げる。
+対戦相手がクリーチャー１体を生け贄に捧げるたび、あなたは宝物・トークン１つを生成する。</card>
+    <card name="Rashel, Fist of Torm" ja="Rashel, Fist of Torm" type="伝説のクリーチャー ― 人間・騎士" pt="2/4">二段攻撃
+あなたがコントロールしているオーラは賛美を持つ。（あなたがコントロールしているクリーチャーが単独で攻撃するたび、ターン終了時まで、それはあなたがコントロールしているパーマネントの中にある賛美１つにつき+1/+1の修整を受ける。）</card>
+    <card name="Mathise, Surge Channeler" ja="Mathise, Surge Channeler" type="伝説のクリーチャー ― 人間・エルフ・シャーマン" pt="1/1">あなたがマナ総量が３以上でありインスタントかソーサリーである呪文を唱えるたび、１個のd20を振る。
+1-9｜各プレイヤーはそれぞれカード１枚を引く。
+10-19｜あなたはカード１枚を引く。
+20｜その呪文をコピーする。あなたはそのコピーの新しい対象を選んでもよい。</card>
+    <card name="Evin, Waterdeep Opportunist" ja="Evin, Waterdeep Opportunist" type="伝説のクリーチャー ― 人間・ならず者" pt="2/4">威迫
+護法 ― クリーチャー１体を生け贄に捧げる。
+これはあなたがコントロールしている宝物１つにつき+2/+0の修整を受ける。
+１人以上のプレイヤーが１体以上のクリーチャーを生け贄に捧げるたび、あなたは宝物・トークン１つをタップ状態で生成する。この能力は、毎ターン１回のみ誘発する。</card>
+    <card name="Jurin, Leading the Charge" ja="Jurin, Leading the Charge" type="伝説のクリーチャー ― 人間・バーバリアン" pt="4/6">速攻
+これは、可能ならブロックされなければならない。
+これが攻撃するたび、ターン終了時まで、あなたがコントロールしていてプレイヤー１人を攻撃している各クリーチャーはそれぞれ、そのプレイヤーがコントロールしているクリーチャー１体につき+1/+0の修整を受ける。</card>
+    <card name="Themberchaud" ja="Themberchaud" type="伝説のクリーチャー ― ドラゴン" pt="5/5">トランプル
+これが戦場に出たとき、これは飛行を持たずこれでない各クリーチャーと各プレイヤーにそれぞれＸ点のダメージを与える。Ｘはあなたがコントロールしている山の数に等しい。
+これが攻撃するに際し、あなたはこれを督励してもよい。そうしたとき、ターン終了時まで、これは飛行を得る。（督励されたクリーチャーは、あなたの次のアンタップ・ステップにアンタップしない。）</card>
+    <card name="Casal, Lurkwood Pathfinder" ja="Casal, Lurkwood Pathfinder" type="伝説のクリーチャー ― ティーフリング・ドルイド" pt="3/3" rel="Casal, Pathbreaker Owlbear">警戒
+これが戦場に出たとき、あなたのライブラリーから森・カード１枚を探し、タップ状態で戦場に出す。その後、ライブラリーを切り直す。
+これが攻撃するたび、あなたは(１)(緑)を支払ってもよい。そうしたなら、これを変身させる。</card>
+    <card name="Casal, Pathbreaker Owlbear" ja="Casal, Pathbreaker Owlbear" type="伝説のクリーチャー ― 鳥・熊" pt="6/6" rel="Casal, Lurkwood Pathfinder">警戒、トランプル
+このクリーチャーがCasal, Lurkwood Pathfinderに変身したとき、ターン終了時まで、あなたがコントロールしていてこれでない伝説の各クリーチャーは+2/+2の修整を受けトランプルを得る。
+あなたのアップキープの開始時に、これを変身させる。</card>
+    <card name="Bohn, Beguiling Balladeer" ja="Bohn, Beguiling Balladeer" type="伝説のクリーチャー ― 人間・バード" pt="3/3">あなたの手札にあり予顕を持たず土地でない各カードは予顕を持つ。それらの予顕コストはそれぞれ、それのマナ・コストから(２)減らしたものに等しい。（あなたのターンの間、(２)を支払って、あなたの手札からそれを裏向きに追放してもよい。後のターンに、それの予顕コストでそれを唱えてもよい。）
+あなたが各ターン内のあなたの２つ目の呪文を唱えるたび、対戦相手がコントロールしているクリーチャー１体を対象とする。それを使嗾する。</card>
     <!-- SL2 -->
     <card name="Rick, Steadfast Leader" ja="Rick, Steadfast Leader" type="伝説のクリーチャー ― 人間・兵士" pt="3/4">Rick, Steadfast Leaderが戦場に出るに際し、先制攻撃や警戒や絆魂のうち能力２つを選ぶ。
 あなたがコントロールしている人間は選ばれた各能力を持つ。
@@ -1326,8 +1353,6 @@ Michonne, Ruthless Survivorと２体以上のゾンビが攻撃するたび、�
     <card name="Vogar, Necropolis Tyrant" ja="死滅都市の暴君、ヴォーガー" type="伝説のクリーチャー ― ゾンビ・巨人" pt="4/4">威迫
 あなたのターン中にこれでないクリーチャー１体が死亡するたび、死滅都市の暴君、ヴォーガーの上に+1/+1カウンター１個を置く。
 死滅都市の暴君、ヴォーガーが死亡したとき、これの上に置かれている+1/+1カウンター１個につきカード１枚を引く。</card>
-    <card name="Nogi, Draco-Zealot" ja="ドラゴン狂、ノギー" type="伝説のクリーチャー ― コボルド・シャーマン" pt="3/3">あなたがドラゴン・呪文を唱えるためのコストは(１)少なくなる。
-ドラゴン狂、ノギーが攻撃するたび、あなたが３体以上のドラゴンをコントロールしている場合、ターン終了時まで、ドラゴン狂、ノギーは基本のパワーとタフネスが5/5のドラゴンになり、飛行を得る。</card>
     <card name="Imaryll, Elfhame Elite" ja="エルフェイムの精鋭、イマリール" type="伝説のクリーチャー ― エルフ・戦士" pt="3/3">エルフェイムの精鋭、イマリールが攻撃するたび、ターン終了時まで、これは+X/+Xの修整を受ける。Ｘはあなたがコントロールしていてこれでないエルフの数に等しい。
 あなたは「エルフェイムの精鋭、イマリールは、ブロックされなかったかのように戦闘ダメージを割り振る。」を選んでもよい。</card>-->
     <!-- Game Night 2019 (GN2) -->
