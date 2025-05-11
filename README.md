@@ -37,8 +37,8 @@ Windows 7 SP1 以降
   * カードを表示するたび [Scryfall の検索 API](https://scryfall.com/docs/api/cards/search) にアクセスします (1 秒に 5 枚まで、各カード 1 日 1 回まで) 。
 
 ## 開発環境
-Windows 10 2022 Update (Version 22H2)  
-Visual Studio 2022 v17.12  
+Windows 11 (Version 24H2)  
+Visual Studio 2022 v17.13  
 C# 13
 
 ### 仕組み
