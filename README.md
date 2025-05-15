@@ -38,7 +38,7 @@ Windows 7 SP1 以降
 
 ## 開発環境
 Windows 11 (Version 24H2)  
-Visual Studio 2022 v17.13  
+Visual Studio 2022 v17.14  
 C# 13
 
 ### 仕組み
