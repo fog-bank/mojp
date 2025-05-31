@@ -3456,6 +3456,7 @@ Michonne, Ruthless Survivorと２体以上のゾンビが攻撃するたび、�
     <regex target="text" pattern="（包囲戦１つが戦場に出るに際し、それを守る対戦相手１人を選ぶ。あなたや他のプレイヤーはそれを攻撃できる。それが倒されたとき、それを追放する。その後、それを変身させた状態で唱える。）\n" value="" />
     <regex target="text" pattern="\n（どちらの半分でも唱えることができる。そのドアは戦場で開放される。閉鎖されているドアのマナ・コストを支払って、それを開放してもよい。これはソーサリーとして[行扱]う。）" value="" />
     <regex target="text" pattern="（《.+》から変身する。）\n" value="" />
+    <regex target="text" pattern="\n（《.+》と合体する。）" value="" />
     <regex target="text" pattern="\(◇\)は無色マナを表す。" value="" />
     <regex target="text" pattern="\(./.\)は\(.\)でも(?:\(.\)|２点のライフ)でも支払うことができる。" value="" />
     <!-- 常盤木注釈文 -->
@@ -4256,8 +4257,7 @@ Venarian Goldが戦場に出たとき、エンチャントしているクリー�
     <card name="Aven Warhawk" ja="エイヴンの戦鷹" type="クリーチャー ― 鳥・兵士" pt="2/2">増幅１（このクリーチャーが戦場に出るに際し、あなたの手札から公開した鳥か兵士であるカード１枚につき+1/+1カウンター１個を置く。）
 飛行</card>
     <card name="Bruna, the Fading Light" ja="消えゆく光、ブルーナ" type="伝説のクリーチャー ― 天使・ホラー" pt="5/7" rel="Brisela, Voice of Nightmares">あなたがこの呪文を唱えたとき、あなたの墓地から天使か人間であるクリーチャー・カード１枚を対象とする。あなたはそれを戦場に戻してもよい。
-飛行、警戒
-（《折れた刃、ギセラ》と合体する。）</card>
+飛行、警戒</card>
     <card name="Deepfire Elemental" ja="深火の精霊" type="クリーチャー ― エレメンタル" pt="4/4">(Ｘ)(Ｘ)(１)：アーティファクトかクリーチャーでありマナ総量がＸである１つを対象とする。それを破壊する。</card>
     <card name="Farseek" ja="遥か見" type="ソーサリー">あなたのライブラリーから平地か島か沼か山であるカード１枚を探し、タップ状態で戦場に出す。その後、ライブラリーを切り直す。</card>
     <card name="Haven of the Spirit Dragon" ja="精霊龍の安息地" type="土地">(Ｔ)：(◇)を加える。
