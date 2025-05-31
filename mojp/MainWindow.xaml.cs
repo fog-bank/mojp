@@ -20,11 +20,11 @@ public partial class MainWindow : Window
 
     public MainViewModel ViewModel => DataContext as MainViewModel;
 
-    protected override void OnClosing(CancelEventArgs e)
+    protected override async void OnClosing(CancelEventArgs e)
     {
-        ViewModel?.Dispose();
-
         base.OnClosing(e);
+
+        await ViewModel?.Dispose();
     }
 
     // ウィンドウ全体でドラッグ可能にする

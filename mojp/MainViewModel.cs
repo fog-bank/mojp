@@ -12,11 +12,10 @@ namespace Mojp;
 /// <summary>
 /// <see cref="MainWindow"/> のビュー モデルを提供します。
 /// </summary>
-public sealed partial class MainViewModel : INotifyPropertyChanged, IDisposable
+public sealed partial class MainViewModel : INotifyPropertyChanged
 {
     private readonly SettingsCache settings = App.SettingsCache;
     private readonly AutomationHandler automation;
-    private readonly ObservableCollection<Card> displayCards = [];
     private DispatcherTimer timer;
     private int selectedIndex = -1;
 
@@ -239,7 +238,7 @@ public sealed partial class MainViewModel : INotifyPropertyChanged, IDisposable
     /// <summary>
     /// 表示中のカードのコレクションを取得します。
     /// </summary>
-    public ObservableCollection<Card> Cards => displayCards;
+    public ObservableCollection<Card> Cards { get; } = [];
 
     /// <summary>
     /// <see cref="System.Windows.Controls.TabControl"/> で手前に表示しているカードのインデックス番号を取得または設定します。
@@ -380,7 +379,7 @@ public sealed partial class MainViewModel : INotifyPropertyChanged, IDisposable
     /// <summary>
     /// 各リソースを解放します。
     /// </summary>
-    public void Dispose()
+    public async Task Dispose()
     {
         var commandNames = new List<string>(ToolbarCommands.Count);
 
@@ -399,7 +398,7 @@ public sealed partial class MainViewModel : INotifyPropertyChanged, IDisposable
         }
         Cards.Clear();
 
-        automation.Dispose();
+        await automation.Dispose();
     }
 
     private async void OnCapture(object sender, EventArgs e) => await automation.FindMagicOnline();

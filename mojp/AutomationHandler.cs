@@ -11,7 +11,7 @@ partial class MainViewModel
     /// <summary>
     /// オートメーション関連の操作を行います。
     /// </summary>
-    private class AutomationHandler : IDisposable
+    private class AutomationHandler
     {
         private Process mtgoProc;
         private CacheRequest eventCacheReq = new();
@@ -111,15 +111,15 @@ partial class MainViewModel
         /// <summary>
         /// 各種リソースを解放します。
         /// </summary>
-        public void Dispose()
+        public async Task Dispose()
         {
-            UnregisterEventHandler().Wait();
-
             mtgoProc?.Dispose();
             mtgoProc = null;
             eventCacheReq = null;
             cacheReq = null;
             textBlockCondition = null;
+
+            await UnregisterEventHandler();
         }
 
         // Automation イベント ハンドラーは非 UI スレッドで呼び出される
@@ -332,6 +332,10 @@ partial class MainViewModel
         {
             await Task.Run(() =>
             {
+#if DEBUG
+                Debug.WriteLine("Automation event handlers (before remove) = " +
+                    GetListenersCount() + " @ T" + Thread.CurrentThread.ManagedThreadId);
+#endif
                 // OpenFileDialog を開いた後だと、別スレッドにしないとすごく遅くなる現象あり
                 Automation.RemoveAllEventHandlers();
 #if DEBUG
