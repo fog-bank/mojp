@@ -198,7 +198,7 @@
                     </CheckBox.ToolTip>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock>
-                            <Hyperlink ToolTip="http://pdmtgo.com/" Click="OnClickHyperlink">Penny Dreadful</Hyperlink>
+                            <Hyperlink ToolTip="https://pennydreadfulmagic.com/" Click="OnClickHyperlink">Penny Dreadful</Hyperlink>
                             <Run> (PD) で使用可能かどうかを調べる</Run>
                         </TextBlock>
                         <Image Source="Resources/Information.png" Height="16" Margin="5,0,0,0" Style="{StaticResource btnImageStyle}" />
