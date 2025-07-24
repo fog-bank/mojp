@@ -11,6 +11,7 @@ using System.Windows.Threading;
 using System.Xml.Linq;
 #if !OFFLINE
 using System.Net.Http;
+using System.Net.Mime;
 #endif
 
 namespace Mojp;
@@ -39,6 +40,7 @@ public partial class App : Application
         var http = new HttpClient();
         http.DefaultRequestHeaders.UserAgent.Add(new("mojp", "3.0"));
         http.DefaultRequestHeaders.Accept.Add(new("application/json"));
+        http.DefaultRequestHeaders.Accept.Add(new(MediaTypeNames.Text.Plain));
         return http;
     });
 #endif

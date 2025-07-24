@@ -272,13 +272,27 @@ partial class MainViewModel
 
             // 分割カード系（P/T のスラッシュの場合ははじく）
             int slashIndex = value.IndexOf('/');
-            if (slashIndex > 0 && char.IsLetter(value[slashIndex - 1]))
+            if (slashIndex > 0)
             {
-                string splitValue = value.Substring(0, slashIndex);
-                Debug.WriteLine("分割カード => " + splitValue);
+                string split = null;
+                char prevSlash = value[slashIndex - 1];
 
-                if (ViewCardDirectly(splitValue))
-                    return true;
+                if (char.IsLetter(prevSlash))
+                {
+                    split = value.Substring(0, slashIndex);
+                }
+                else if (prevSlash == ' ' && value.Length > slashIndex + 1 && value[slashIndex + 1] == '/')
+                {
+                    split = value.Substring(0, slashIndex - 1);
+                }
+
+                if (split != null)
+                {
+                    Debug.WriteLine("分割カード => " + split);
+
+                    if (ViewCardDirectly(split))
+                        return true;
+                }
             }
 
             // できるだけ左クリックメニューによる表示変化を避ける

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using System.Text;
 using System.Windows;
 using System.Windows.Input;
 
@@ -159,20 +160,19 @@ public sealed class GoToWikiCommand(MainViewModel viewModel) : Command(viewModel
         if (card == null)
             return;
 
-        string link = card.WikiLink;
+        var sb = new StringBuilder("http://mtgwiki.com/wiki/", 254);
 
-        if (link == null)
+        if (card.WikiLink == null)
         {
             if (card.HasJapaneseName)
-            {
-                link = card.JapaneseName + "/" + card.Name.Replace(' ', '_');
-            }
-            else
-                link = card.Name.Replace(' ', '_');
-        }
-        link = Uri.EscapeUriString(link);
+                sb.Append(Uri.EscapeDataString(card.JapaneseName)).Append('/');
 
-        Process.Start("http://mtgwiki.com/wiki/" + link);
+            sb.Append(Uri.EscapeDataString(card.Name.Replace(' ', '_')));
+        }
+        else
+            sb.Append(Uri.EscapeUriString(card.WikiLink));
+
+        Process.Start(sb.ToString());
 #endif
     }
 }

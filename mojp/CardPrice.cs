@@ -331,8 +331,9 @@ public static class CardPrice
         {
             int slashIndex = card.WikiLink.IndexOf('/');
 
+            // + は EscapeDataString を通すと、ヒットしなくなるので、_ で置換
             if (slashIndex > 0)
-                query = card.WikiLink.Substring(slashIndex + 1);
+                query = card.WikiLink.Substring(slashIndex + 1).Replace('+', '_');
         }
         string tix = await GetCardPrice(query);
 
@@ -387,13 +388,15 @@ public static class CardPrice
         }
         usingScryfall = true;
 
-        string uri = "https://api.scryfall.com/cards/search?order=tix&q=" + Uri.EscapeUriString(cardName);
+        // tix 順を指定するために named ではなく search を使用。そうしないと、tix 情報は最新の印刷カードのもの?になる
+        string uri = "https://api.scryfall.com/cards/search?order=tix&q=" + Uri.EscapeDataString(cardName);
         Debug.WriteLine(uri + " (" + DateTime.Now.TimeOfDay + ")");
 
         string json = null;
         try
         {
             using var response = await App.HttpClient.Value.GetAsync(uri, HttpCompletionOption.ResponseHeadersRead);
+            //Debug.WriteLine(response.StatusCode + " (" + DateTime.Now.TimeOfDay + ")");
 
             if (response.IsSuccessStatusCode)
                 json = await response.Content.ReadAsStringAsync();
@@ -417,7 +420,7 @@ public static class CardPrice
         {
             // exact サーチじゃないので、複数ヒットする可能性がある
             const string CardTag = "\"name\":";
-            startIndex = json.IndexOf(CardTag + "\"" + cardName.Replace("+", " // ") + "\"");
+            startIndex = json.IndexOf(CardTag + "\"" + cardName.Replace("_", " // ") + "\"");
 
             if (startIndex == -1)
                 return NoPrice;
@@ -429,12 +432,6 @@ public static class CardPrice
 
         if (endIndex == -1)
             endIndex = json.Length;
-
-        // PD リーガル情報
-        //const string PDLegalityTag = "\"penny\":";
-        //const string LegalValue = "\"legal\"";
-        //int regalityIndex = response.IndexOf(PDLegalityTag, startIndex, endIndex - startIndex);
-        //string isPDRegal = response.IndexOf(LegalValue, regalityIndex, PDLegalityTag.Length + LegalValue.Length) != -1 ? "[PD] " : string.Empty;
 
         const string TixTag = "\"tix\":";
         startIndex = json.IndexOf(TixTag, startIndex, endIndex - startIndex);
