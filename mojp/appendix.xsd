@@ -27,6 +27,7 @@
                 <xs:complexType>
                   <xs:attribute name="name" type="xs:string" use="required" />
                   <xs:attribute name="pt" type="xs:string" use="required" />
+                  <xs:attribute name="append" type="xs:boolean" />
                 </xs:complexType>
               </xs:element>
               <xs:element name="rel" minOccurs="0" maxOccurs="unbounded">
@@ -39,14 +40,6 @@
                 <xs:complexType>
                   <xs:attribute name="name" type="xs:string" use="required" />
                   <xs:attribute name="wiki" type="xs:string" use="required" />
-                </xs:complexType>
-              </xs:element>
-              <xs:element name="alt" minOccurs="0" maxOccurs="unbounded">
-                <xs:complexType>
-                  <xs:attribute name="key" type="xs:string" use="required" />
-                  <xs:attribute name="sub" type="xs:string" use="required" />
-                  <xs:attribute name="tri" type="xs:string" />
-                  <xs:attribute name="name" type="xs:string" use="required" />
                 </xs:complexType>
               </xs:element>
             </xs:sequence>

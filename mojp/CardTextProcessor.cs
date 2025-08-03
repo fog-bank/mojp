@@ -316,11 +316,21 @@ partial class Card
         foreach (var node in doc.Root.Element("add").Elements("pt"))
         {
             string name = (string)node.Attribute("name");
+            string pt = (string)node.Attribute("pt");
+            bool? append = (bool?)node.Attribute("append");
 
             if (cards.TryGetValue(name, out var card))
             {
-                Debug.WriteLineIf(card.PT != null, card.Name + " には既に P/T の情報があります。");
-                card.PT = (string)node.Attribute("pt");
+                if (append.GetValueOrDefault())
+                {
+                    Debug.WriteLineIf(card.Text.Contains(pt), card.Name + "（宇宙船）には既に P/T の情報があります。");
+                    card.Text = card.Text + "\n" + pt;
+                }
+                else
+                {
+                    Debug.WriteLineIf(card.PT != null, card.Name + " には既に P/T の情報があります。");
+                    card.PT = pt;
+                }
             }
             else
                 Debug.WriteLine("P/T 情報の追加先となる " + name + " のカード情報がありません。");
