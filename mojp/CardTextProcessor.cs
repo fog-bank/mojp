@@ -260,7 +260,7 @@ partial class Card
         // 正規表現の構築
         var regexes = new List<Tuple<string[], Regex, string, bool>>();
 
-        foreach (var node in doc.Root.Element("replace").Elements("regex"))
+        foreach (var node in doc.Root.Elements("replace").Elements("regex"))
         {
             string targets = (string)node.Attribute("target");
 
@@ -280,7 +280,7 @@ partial class Card
         }
 
         // カードの追加
-        foreach (var node in doc.Root.Element("add").Elements("card"))
+        foreach (var node in doc.Root.Elements("add").Elements("card"))
         {
             var card = FromXml(node);
 
@@ -313,7 +313,7 @@ partial class Card
         }
 
         // P/T だけ追加
-        foreach (var node in doc.Root.Element("add").Elements("pt"))
+        foreach (var node in doc.Root.Elements("add").Elements("pt"))
         {
             string name = (string)node.Attribute("name");
             string pt = (string)node.Attribute("pt");
@@ -337,7 +337,7 @@ partial class Card
         }
 
         // 関連カードだけ追加
-        foreach (var node in doc.Root.Element("add").Elements("rel"))
+        foreach (var node in doc.Root.Elements("add").Elements("rel"))
         {
             string name = (string)node.Attribute("name");
 
@@ -354,7 +354,7 @@ partial class Card
         }
 
         // Wiki へのリンクだけ追加
-        foreach (var node in doc.Root.Element("add").Elements("wiki"))
+        foreach (var node in doc.Root.Elements("add").Elements("wiki"))
         {
             string name = (string)node.Attribute("name");
 
@@ -387,6 +387,29 @@ partial class Card
             }
             else
                 Debug.WriteLine(name + " は既にカードリストに含まれていません。");
+        }
+
+        // Universe beyond セットから Universe within セット化
+        foreach (var node in doc.Root.Elements("universe").Elements("card"))
+        {
+            string beyond = (string)node.Attribute("beyond");
+            string within = (string)node.Attribute("within");
+            string ja = (string)node.Attribute("ja");
+
+            if (cards.TryGetValue(beyond, out var card))
+            {
+                string beyondJaName = card.JapaneseName;
+
+                card.Name = within;
+                card.JapaneseName = ja ?? within;
+                card.WikiLink ??= card.HasJapaneseName ? beyondJaName + "/" + beyond : beyond;
+                card.Text = card.Text.Replace(beyondJaName, card.JapaneseName);
+
+                cards.Remove(beyond);
+                cards.Add(card.Name, card);
+            }
+            else
+                Debug.WriteLine(beyond + " はカードリストに含まれていません。");
         }
 
         // カードデータの差し替え
@@ -436,7 +459,7 @@ partial class Card
         // 個々のカードの書き換え
         var cardNamesToReplace = new HashSet<string>();
 
-        foreach (var node in doc.Root.Element("replace").Elements("card"))
+        foreach (var node in doc.Root.Elements("replace").Elements("card"))
         {
             // 変更理由を記したコメントを挿入
             if (node.PreviousNode.NodeType == XmlNodeType.Comment)
@@ -478,7 +501,7 @@ partial class Card
         }
 
         // カードタイプだけ書き換え
-        foreach (var node in doc.Root.Element("replace").Elements("type"))
+        foreach (var node in doc.Root.Elements("replace").Elements("type"))
         {
             string name = (string)node.Attribute("name");
 
@@ -503,7 +526,7 @@ partial class Card
         }
 
         // 関連カードだけ書き換え
-        foreach (var node in doc.Root.Element("replace").Elements("rel"))
+        foreach (var node in doc.Root.Elements("replace").Elements("rel"))
         {
             string name = (string)node.Attribute("name");
 

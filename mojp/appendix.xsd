@@ -80,6 +80,19 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="universe" minOccurs="0" maxOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="card" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:attribute name="beyond" type="xs:string" use="required" />
+                  <xs:attribute name="within" type="xs:string" use="required" />
+                  <xs:attribute name="ja" type="xs:string" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
         <xs:element name="remove" minOccurs="0" maxOccurs="1">
           <xs:complexType>
             <xs:sequence>
