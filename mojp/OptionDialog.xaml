@@ -58,7 +58,7 @@
                 </TextBlock>
                 <TextBlock Grid.Row="1" VerticalAlignment="Top">対応最新セット</TextBlock>
                 <StackPanel Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2">
-                    <TextBlock>領界路の彼方</TextBlock>
+                    <TextBlock>領界路の彼方（スパイダーマン）</TextBlock>
                     <!--<TextBlock Margin="2,0,2,4">イニストラード・リマスター</TextBlock>-->
                 </StackPanel>
                 <CheckBox Name="grpAutoCheck" Grid.Row="2" Grid.ColumnSpan="4" Margin="0,4,0,0"

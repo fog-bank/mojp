@@ -1997,7 +1997,6 @@ Michonne, Ruthless Survivorと２体以上のゾンビが攻撃するたび、�
     <wiki name="Captivating Vampire" wiki="蟲惑的な吸血鬼/Captivating Vampire" />
     <wiki name="C.A.M.P." wiki="C.A.M.P./C.A.M.P." />
     <wiki name="V.A.T.S." wiki="V.A.T.S./V.A.T.S." />
-    <wiki name="SP//dr, Piloted by Peni" wiki="ペニーが操縦するSP%2F%2Fdr/SP%2F%2Fdr, Piloted by Peni" />
   </add>
   <replace>
     <!-- 誤字脱字 -->
@@ -7742,7 +7741,7 @@ III ― あなたの墓地にあるクリーチャー・カード１枚を対象
 ダメージは軽減できない。</card>
     <card name="Kroble, Envoy of the Bog" ja="沼地からの使者、クロブル" type="伝説のクリーチャー ― 蜘蛛・人間・英雄" pt="4/4" wiki="スパイダーマン・ノワール/Spider-Man Noir">威迫
 あなたがコントロールしているクリーチャーが単独で攻撃するたび、それの上に+1/+1カウンター１個を置く。その後、諜報Ｘを行う。Ｘはそれの上にあるカウンターの個数に等しい。</card>
-    <card name="Kumonosu, the Watchful" ja="警戒機、クモノス" type="伝説のアーティファクト・クリーチャー ― 蜘蛛・英雄" pt="4/4" wiki="ペニーが操縦するSP%2F%2Fdr/SP%2F%2Fdr, Piloted by Peni">警戒
+    <card name="Kumonosu, the Watchful" ja="警戒機、クモノス" type="伝説のアーティファクト・クリーチャー ― 蜘蛛・英雄" pt="4/4" wiki="ペニーが操縦するSP//dr/SP//dr, Piloted by Peni">警戒
 これが戦場に出たとき、クリーチャー１体を対象とする。それの上に+1/+1カウンター１個を置く。
 あなたがコントロールしていて改善されているクリーチャー１体がプレイヤー１人に戦闘ダメージを与えるたび、カード１枚を引く。（装備品やあなたがコントロールしているオーラがついているかカウンターが置かれているクリーチャーは改善されている。）</card>
     <card name="Lavaborn Goblins" ja="溶岩生まれのゴブリン" type="クリーチャー ― ゴブリン・狂戦士・悪人" pt="5/4" wiki="怒り狂うゴブリノイド/Raging Goblinoids">速攻
