@@ -88,6 +88,8 @@
                   <xs:attribute name="beyond" type="xs:string" use="required" />
                   <xs:attribute name="within" type="xs:string" use="required" />
                   <xs:attribute name="ja" type="xs:string" />
+                  <xs:attribute name="rel" type="xs:string" />
+                  <xs:attribute name="flavor" type="xs:string" />
                 </xs:complexType>
               </xs:element>
             </xs:sequence>

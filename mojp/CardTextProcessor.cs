@@ -390,11 +390,15 @@ partial class Card
         }
 
         // Universe beyond セットから Universe within セット化
+        Debug.WriteLine("UB セットのカード変更");
+
         foreach (var node in doc.Root.Elements("universe").Elements("card"))
         {
             string beyond = (string)node.Attribute("beyond");
             string within = (string)node.Attribute("within");
             string ja = (string)node.Attribute("ja");
+            string rel = (string)node.Attribute("rel");
+            string flavor = (string)node.Attribute("flavor");
 
             if (cards.TryGetValue(beyond, out var card))
             {
@@ -404,7 +408,13 @@ partial class Card
                 card.JapaneseName = ja ?? within;
                 card.WikiLink ??= card.HasJapaneseName ? beyondJaName + "/" + beyond : beyond;
                 card.Text = card.Text.Replace(beyondJaName, card.JapaneseName);
+                card.RelatedCardName = rel;
 
+                if (flavor != null)
+                {
+                    foreach (string flavorWord in flavor.Split('|'))
+                        card.Text = card.Text.Replace(flavorWord + " ― ", null);
+                }
                 cards.Remove(beyond);
                 cards.Add(card.Name, card);
             }
