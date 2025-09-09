@@ -14,8 +14,8 @@
 * [Scryfall](https://scryfall.com/) から日毎の平均価格を取得する
 
 ## 必要条件
-Windows 7 SP1 以降  
-.NET Framework 4.6 以上（Windows 10 なら標準でインストール済みです）
+Windows 10 以降  
+.NET Framework 4.7.2 以上（MO と同じ条件です）
 
 ## 使い方
 1. MO と本アプリを起動します。
