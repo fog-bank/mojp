@@ -262,14 +262,5 @@ namespace Mojp {
                 this["PDServerLastTimeUtc"] = value;
             }
         }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0000")]
-        public string PromoCodeNumber {
-            get {
-                return ((string)(this["PromoCodeNumber"]));
-            }
-        }
     }
 }
