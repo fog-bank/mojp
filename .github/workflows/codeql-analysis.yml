@@ -31,7 +31,11 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: [ 'csharp', 'actions' ]
+        include:
+        - language: actions
+          build-mode: none
+        - language: csharp
+          build-mode: none
         # Learn more about CodeQL language support at https://git.io/codeql-language-support
         # To learn more about changing the languages that are analyzed or customizing the build mode for your analysis,
         # see https://docs.github.com/en/code-security/code-scanning/creating-an-advanced-setup-for-code-scanning/customizing-your-advanced-setup-for-code-scanning.
