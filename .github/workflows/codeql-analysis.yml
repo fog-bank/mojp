@@ -35,7 +35,7 @@ jobs:
         - language: actions
           build-mode: none
         - language: csharp
-          build-mode: manual
+          build-mode: autobuild
           dotnet-version: 9
         # Learn more about CodeQL language support at https://git.io/codeql-language-support
         # To learn more about changing the languages that are analyzed or customizing the build mode for your analysis,
@@ -53,7 +53,7 @@ jobs:
 
     - name: Setup .NET
       if: matrix.language == 'csharp'
-      uses: actions/setup-dotnet@v4
+      uses: actions/setup-dotnet@v5
       with:
         dotnet-version: ${{ matrix.dotnet-version }}
 
@@ -73,7 +73,6 @@ jobs:
         # queries: security-extended,security-and-quality
 
     - name: Autobuild
-      if: matrix.language == 'csharp'
       uses: github/codeql-action/autobuild@v3
 
     - name: Perform CodeQL Analysis
