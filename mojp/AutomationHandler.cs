@@ -135,7 +135,7 @@ partial class MainViewModel
 
             Debug.WriteLine("[Menu] " + name.Replace(Environment.NewLine, "\\n"));
 
-            // 事前特殊処理
+            // 事前特殊処理（同名カード回避）
             switch (name)
             {
                 case "Undo":
@@ -157,17 +157,7 @@ partial class MainViewModel
                 return;
 
             // 事後特殊処理
-            switch (name)
-            {
-                case "Face-down card.":
-                    SearchAsFaceDownCard();
-                    break;
-
-                default:
-                    // カード名ではなかったときに強制的に空表示にする
-                    ViewModel.InvokeSetCard(null);
-                    break;
-            }
+            OnMenuOpendAfter(menu, name);
 
             // 右クリックメニューの最初の UI テキストを取得する
             string SearchFirstText(AutomationElement menu)
@@ -209,40 +199,6 @@ partial class MainViewModel
                     return null;
 
                 return GetNamePropertyValue(elements[1]);
-            }
-
-            // 裏向きのカードの正体探し
-            void SearchAsFaceDownCard()
-            {
-                AutomationElementCollection elements = null;
-                try
-                {
-                    using (cacheReq.Activate())
-                        elements = menu.FindAll(TreeScope.Descendants, textBlockCondition);
-                }
-                catch { Debug.WriteLine("TextBlock 要素の全取得中にエラーが起きました。"); }
-
-                if (elements == null)
-                    return;
-
-                for (int i = 1; i < elements.Count; i++)
-                {
-                    string name = GetNamePropertyValue(elements[i]);
-
-                    if (name == null)
-                        return;
-
-                    Debug.WriteLine("[Menu] " + name.Replace(Environment.NewLine, "\\n"));
-
-                    if (App.TryGetCard(name, out var card))
-                    {
-                        Debug.WriteLine(card.Name);
-                        ViewModel.InvokeSetCard(card);
-                        return;
-                    }
-                }
-                // 対戦相手の裏向きクリーチャー
-                ViewModel.InvokeSetMessage("裏向きのカード");
             }
         }
 
@@ -295,14 +251,6 @@ partial class MainViewModel
                 }
             }
 
-            // できるだけ左クリックメニューによる表示変化を避ける
-            if (value.EndsWith(".", StringComparison.Ordinal))
-                return value != "Face-down card.";
-
-            if (value.EndsWith("Cast", StringComparison.Ordinal) || value.EndsWith("Play", StringComparison.Ordinal) ||
-                value.StartsWith("Put ", StringComparison.Ordinal) || value.StartsWith("Attack ", StringComparison.Ordinal))
-                return true;
-
             // 汎用トークン
             if (value.EndsWith(" Token", StringComparison.Ordinal))
             {
@@ -336,6 +284,82 @@ partial class MainViewModel
                     return true;
                 }
                 return false;
+            }
+        }
+
+        // できるだけ左クリックメニューによる表示変化を避ける
+        private void OnMenuOpendAfter(AutomationElement menu, string value)
+        {
+            switch (value)
+            {
+                case "Face-down card.":
+                    SearchAsFaceDownCard(menu);
+                    break;
+
+                case "Open a new copy of this deck":
+                case "Select All":
+                case "Sort":
+                case "Start a New Deck":
+                    // 通常の右クリックメニューは分かる範囲でスルー
+                    return;
+            }
+
+            if (value.EndsWith(".", StringComparison.Ordinal))
+                return;
+
+            if (value.EndsWith("Cast", StringComparison.Ordinal) ||
+                value.EndsWith("Play", StringComparison.Ordinal) ||
+                value.StartsWith("Put ", StringComparison.Ordinal) ||
+                value.StartsWith("Attack ", StringComparison.Ordinal))
+                return;
+
+            // 部屋
+            if (value.StartsWith("Unlock ", StringComparison.Ordinal))
+                return;
+
+            // 機体
+            if (value.StartsWith("Crew ", StringComparison.Ordinal))
+                return;
+
+            // 宇宙船
+            if (value.StartsWith("Station (", StringComparison.Ordinal))
+                return;
+
+            // カード名を判別できなかったときに強制的に空表示にする
+            ViewModel.InvokeSetCard(null);
+
+            // 裏向きのカードの正体探し
+            void SearchAsFaceDownCard(AutomationElement menu)
+            {
+                AutomationElementCollection elements = null;
+                try
+                {
+                    using (cacheReq.Activate())
+                        elements = menu.FindAll(TreeScope.Descendants, textBlockCondition);
+                }
+                catch { Debug.WriteLine("TextBlock 要素の全取得中にエラーが起きました。"); }
+
+                if (elements == null)
+                    return;
+
+                for (int i = 1; i < elements.Count; i++)
+                {
+                    string name = GetNamePropertyValue(elements[i]);
+
+                    if (name == null)
+                        return;
+
+                    Debug.WriteLine("[Menu] " + name.Replace(Environment.NewLine, "\\n"));
+
+                    if (App.TryGetCard(name, out var card))
+                    {
+                        Debug.WriteLine(card.Name);
+                        ViewModel.InvokeSetCard(card);
+                        return;
+                    }
+                }
+                // 対戦相手の裏向きクリーチャー
+                ViewModel.InvokeSetMessage("裏向きのカード");
             }
         }
 

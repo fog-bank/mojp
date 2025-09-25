@@ -24,7 +24,7 @@ public partial class App : Application
     /// <summary>
     /// カードの英語名から、英語カード名・日本語カード名・日本語カードテキストを検索します。
     /// </summary>
-    public static Dictionary<string, Card> Cards { get; } = new(30431);
+    public static Dictionary<string, Card> Cards { get; } = new(30433);
 
     /// <summary>
     /// このアプリの設定を取得します。
