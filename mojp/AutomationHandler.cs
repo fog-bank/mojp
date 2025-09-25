@@ -294,7 +294,12 @@ partial class MainViewModel
             {
                 case "Face-down card.":
                     SearchAsFaceDownCard(menu);
-                    break;
+                    return;
+
+                case "Event Ticket":
+                case "Play Point":
+                case "Treasure Chest Booster":
+                    return;
 
                 case "Open a new copy of this deck":
                 case "Select All":

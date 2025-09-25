@@ -3,8 +3,6 @@
   <add>
     <card name="Gleemox" ja="Gleemox" type="アーティファクト">(Ｔ)：好きな色１色のマナ１点を加える。
 このカードは禁止されている。</card>
-    <card name="Event Ticket" ja="Event Ticket" type="" wiki="">イベントのエントリーには１枚以上のEvent Ticketが必要です。Event TicketはMagic Onlineのストアで購入できます。イベントのエントリーには他にパックも必要な場合があります。</card>
-    <card name="Play Point" ja="Play Point" type="" wiki="">Play PointはMagic Onlineのイベントにエントリーする際に使用できます。Play Pointはトレードできません。</card>
 
     <!-- SPM -->
     <card name="Anti-Venom, Horrifying Healer" ja="恐ろしき癒し手、アンチヴェノム" type="伝説のクリーチャー ― シンビオート・英雄" pt="5/5">これが戦場に出たとき、これが唱えられていた場合、あなたの墓地にあるクリーチャー・カード１枚を対象とする。それを戦場に戻す。
