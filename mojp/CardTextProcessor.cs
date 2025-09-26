@@ -199,7 +199,7 @@ partial class Card
                         break;
 
                     case "　セット":
-                        if (tokens[1] is "Special" or "Astral Set" or "Dreamcast's Original" or "Mystery Booster" or "Unglued" or "Unhinged" or "Unstable" or "Unsanctioned" or "Unfinity")
+                        if (tokens[1] is "Special" or "Astral Set" or "Dreamcast's Original" or "Mystery Booster" or "Unglued" or "Unhinged" or "Unstable" or "Unsanctioned" or "Unfinity" or "Magic The Gathering?Marvel's Spider-Man SPE")
                             card = null;
                         break;
 
@@ -394,11 +394,14 @@ partial class Card
 
         foreach (var node in doc.Root.Elements("universe").Elements("card"))
         {
-            string beyond = (string)node.Attribute("beyond");
-            string within = (string)node.Attribute("within");
+            string beyond = (string)node.Attribute("beyond"); // required
+            string within = (string)node.Attribute("within"); // required
             string ja = (string)node.Attribute("ja");
             string rel = (string)node.Attribute("rel");
             string flavor = (string)node.Attribute("flavor");
+
+            Debug.WriteLineIf(!cards.ContainsKey(within), beyond + " => " + within + " のカードが WHISPER に未登録です。");
+            Debug.WriteLineIf(cards[within].JapaneseName == ja, beyond + " => " + within + " の日本語カード名が一致しません。");
 
             if (cards.TryGetValue(beyond, out var card))
             {
@@ -416,7 +419,7 @@ partial class Card
                         card.Text = card.Text.Replace(flavorWord + " ― ", null);
                 }
                 cards.Remove(beyond);
-                cards.Add(card.Name, card);
+                cards[within] = card;
             }
             else
                 Debug.WriteLine(beyond + " はカードリストに含まれていません。");
