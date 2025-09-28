@@ -400,8 +400,10 @@ partial class Card
             string rel = (string)node.Attribute("rel");
             string flavor = (string)node.Attribute("flavor");
 
-            Debug.WriteLineIf(!cards.ContainsKey(within), beyond + " => " + within + " のカードが WHISPER に未登録です。");
-            Debug.WriteLineIf(cards[within].JapaneseName == ja, beyond + " => " + within + " の日本語カード名が一致しません。");
+            if (cards.ContainsKey(within))
+                Debug.WriteLineIf(cards[within].JapaneseName != ja, beyond + " => " + within + " の日本語カード名が一致しません。");
+            else
+                Debug.WriteLine(beyond + " => " + within + " のカードが WHISPER に未登録です。");
 
             if (cards.TryGetValue(beyond, out var card))
             {
