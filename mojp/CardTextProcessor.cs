@@ -353,20 +353,6 @@ partial class Card
                 Debug.WriteLine("関連カード情報の追加先となる " + name + " のカード情報がありません。");
         }
 
-        // 代替カード名を追加
-        foreach (var node in doc.Root.Elements("add").Elements("alt"))
-        {
-            string alt = (string)node.Attribute("alt");
-            string name = (string)node.Attribute("name");
-
-            if (cards.TryGetValue(name, out var card))
-            {
-                cards[alt] = card;
-            }
-            else
-                Debug.WriteLine("代替カード名の追加先となる " + name + " のカード情報がありません。");
-        }
-
         // Wiki へのリンクだけ追加
         foreach (var node in doc.Root.Elements("add").Elements("wiki"))
         {
@@ -379,6 +365,20 @@ partial class Card
             }
             else
                 Debug.WriteLine("リンク情報の追加先となる " + name + " のカード情報がありません。");
+        }
+
+        // 代替カード名を追加
+        foreach (var node in doc.Root.Elements("add").Elements("alt"))
+        {
+            string alt = (string)node.Attribute("alt");
+            string name = (string)node.Attribute("name");
+
+            if (cards.TryGetValue(name, out var card))
+            {
+                cards[alt] = card;
+            }
+            else
+                Debug.WriteLine("代替カード名の追加先となる " + name + " のカード情報がありません。");
         }
 
         // カードの削除
@@ -573,6 +573,30 @@ partial class Card
                 Debug.WriteLine("関連カード情報の追加先となる " + name + " のカード情報がありません。");
         }
 
+        // 出力
+        var beforeRoot = new XElement("mojp", beforeNodes);
+        var beforeResult = new XDocument(new XDeclaration("1.0", "utf-8", "yes"), beforeRoot);
+        beforeResult.Save(App.GetPath("appendix_before.xml"));
+
+        var root = new XElement("mojp", replacedNodes, identicalNodes);
+        var result = new XDocument(new XDeclaration("1.0", "utf-8", "yes"), root);
+        result.Save(App.GetPath("appendix_result.xml"));
+        Debug.WriteLine("保存完了");
+
+        // 関連カードの存在チェック
+        foreach (var card in relNotFound)
+        {
+            Debug.WriteLineIf(card.RelatedCardName != null && !card.RelatedCardNames.All(cards.ContainsKey),
+                "追加された " + card.Name + " の関連カード (" + card.RelatedCardName + ") が見つかりません。");
+        }
+
+        // 代替カード名の関連付けチェック
+        foreach (var kv in cards)
+        {
+            Debug.WriteLineIf(kv.Key != kv.Value.Name && !cards.Values.Contains(kv.Value),
+                "代替カード名の" + kv.Key + " に関連付けられたカードがメモリーリークしています。");
+        }
+
         // 日本語カード名の重複チェック
         var jaNames = new Dictionary<string, Card>();
         foreach (var card in cards.Values)
@@ -586,21 +610,6 @@ partial class Card
             else
                 jaNames.Add(card.JapaneseName, card);
         }
-
-        // 関連カードの存在チェック
-        foreach (var card in relNotFound)
-        {
-            Debug.WriteLineIf(card.RelatedCardName != null && !card.RelatedCardNames.All(cards.ContainsKey),
-                "追加された " + card.Name + " の関連カード (" + card.RelatedCardName + ") が見つかりません。");
-        }
-
-        var beforeRoot = new XElement("mojp", beforeNodes);
-        var beforeResult = new XDocument(new XDeclaration("1.0", "utf-8", "yes"), beforeRoot);
-        beforeResult.Save(App.GetPath("appendix_before.xml"));
-
-        var root = new XElement("mojp", replacedNodes, identicalNodes);
-        var result = new XDocument(new XDeclaration("1.0", "utf-8", "yes"), root);
-        result.Save(App.GetPath("appendix_result.xml"));
     }
 #endif
 

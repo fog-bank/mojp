@@ -156,28 +156,24 @@ public partial class App : Application
         Cards.Clear();
 
         var node = doc.Element("cards");
+        if (node == null)
+            return;
 
-        if (node != null)
+        foreach (var element in node.Elements("card"))
         {
-            foreach (var element in node.Elements())
-            {
-                switch (element.Name.LocalName)
-                {
-                    case "card":
-                        var card = Card.FromXml(element);
-                        Cards[card.Name] = card;
+            var card = Card.FromXml(element);
+            Cards[card.Name] = card;
 
-                        string altCardNames = (string)element.Attribute("alt");
-                        if (altCardNames != null)
-                        {
-                            foreach (string altName in altCardNames.Split('"'))
-                            {
-                                if (!Cards.ContainsKey(altName))
-                                    Cards[altName] = card;
-                            }
-                        }
-                        break;
+            string altCardNames = (string)element.Attribute("alt");
+            if (altCardNames != null)
+            {
+                if (altCardNames.Contains('|'))
+                {
+                    foreach (string altName in altCardNames.Split('|'))
+                        Cards[altName] = card;
                 }
+                else
+                    Cards[altCardNames] = card;
             }
         }
     }
