@@ -14,7 +14,7 @@
 * [Scryfall](https://scryfall.com/) から日毎の平均価格を取得する
 
 ## 必要条件
-Windows 10 以降  
+Windows 11  
 .NET Framework 4.7.2 以上（MO と同じ条件です）
 
 ## 使い方
@@ -37,7 +37,7 @@ Windows 10 以降
   * カードを表示するたび [Scryfall の検索 API](https://scryfall.com/docs/api/cards/search) にアクセスします (1 秒に 5 枚まで、各カード 1 日 1 回まで) 。
 
 ## 開発環境
-Windows 11 (Version 24H2)  
+Windows 11 (Version 25H2)  
 Visual Studio 2022 v17.14  
 C# 13
 
