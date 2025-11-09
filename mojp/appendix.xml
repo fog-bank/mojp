@@ -683,7 +683,7 @@ III ― この英雄譚を追放する。その後、これを変身させた状
 これが攻撃するたび、あなたはあなたが持つ経験カウンター１個につきカード１枚を引いてもよい。そうしたなら、カード１枚を捨てる。</card>
     <card name="Nightmares and Daydreams" ja="悪夢と白昼夢" type="エンチャント ― 英雄譚">I,II,III ― あなたの次のターンまで、あなたがインスタントかソーサリーである呪文を唱えるたび、プレイヤー１人を対象とする。そのプレイヤーはその呪文のマナ総量に等しい枚数のカードを切削する。
 IV ― カード１枚を引く。単一の墓地にカードが２０枚以上あるなら、代わりにカード３枚を引く。</card>
-    <card name="Princess Yue" ja="ユエ姫" type="伝説のクリーチャー ― 人間・貴族・同盟者" pt="3/2">ユエ姫が死亡したとき、これが土地でないクリーチャーであった場合、このカードをあなたのコントロール下でタップ状態で戦場に戻す。これは《月》という名前の土地である。これは「(Ｔ)：(◇)を加える。」を得る。（これは伝説でもある。）
+    <card name="Princess Yue" ja="ユエ姫" type="伝説のクリーチャー ― 人間・貴族・同盟者" pt="3/2" alt="Moon">ユエ姫が死亡したとき、これが土地でないクリーチャーであった場合、このカードをあなたのコントロール下でタップ状態で戦場に戻す。これは《月》という名前の土地である。これは「(Ｔ)：(◇)を加える。」を得る。（これは伝説でもある。）
 (Ｔ)：占術２を行う。</card>
     <card name="Tui and La, Moon and Ocean" ja="月と海のトゥイーとラー" type="伝説のクリーチャー ― 魚・スピリット" pt="3/3">これがタップ状態になるたび、カード１枚を引く。
 これがアンタップ状態になるたび、これの上に+1/+1カウンター１個を置く。</card>
@@ -1093,19 +1093,11 @@ III ― ターン終了時まで、あなたがコントロールしている各
 地下墓地/Catacombs ― 威迫を持つ黒の4/1のスケルトン・クリーチャー・トークン１体を生成する。
 死せる三者の玉座/Throne of the Dead Three ― あなたのライブラリーの一番上からカード１０枚を公開する。その中からクリーチャー・カード１枚を+1/+1カウンター３個が置かれた状態で戦場に出す。あなたの次のターンまで、それは呪禁を得る。その後、ライブラリーを切り直す。</card>
     
-    <!-- 名前を変更するカード (CardPrice.IsSpecialCard の追記を推奨) -->
-    <card name="Everflame, Heroes' Legacy" ja="英雄の遺産、エヴァーフレイム" type="伝説のアーティファクト ― 装備品" wiki="アイレンクラッグ/The Irencrag">装備しているクリーチャーは+3/+3の修整を受ける。
-装備(３)</card>
+    <!-- 他のカードの名前を変更するカード (CardPrice.IsSpecialCard の追記を推奨) -->
     <card name="Humble Merchant" ja="謙虚な商人" type="クリーチャー ― 市民" pt="1/1" wiki="実直な仕事/Honest Work">(Ｔ)：(◇)を加える。
 （このクリーチャーは他の能力やクリーチャー・タイプや名前を失う。）</card>
     <card name="Legitimate Businessperson" ja="れっきとした実業家" type="クリーチャー ― 市民" pt="1/1" wiki="証人保護/Witness Protection">（このクリーチャーは他の色やカード・タイプやサブタイプや名前を失う。）</card>
-    <card name="Mileva, the Stalwart" ja="重鎮、ミレヴァ" type="伝説のクリーチャー ― 人間・探偵" pt="5/5" wiki="第10管区の英雄/Tenth District Hero">警戒
-あなたがコントロールしていてこれでない各クリーチャーは破壊不能を持つ。
-(１)(白),証拠収集２を行う：第10管区の英雄は基本のパワーとタフネスが4/4の人間・探偵になり、警戒を得る。
-(２)(白),証拠収集４を行う：第10管区の英雄が探偵なら、これは《重鎮、ミレヴァ》という名前で基本のパワーとタフネスが5/5の伝説のクリーチャーになり、「あなたがコントロールしていてこれでない各クリーチャーは破壊不能を持つ。」を得る。</card>
     <card name="Mishra's Warform" ja="ミシュラの戦機" type="トークン・アーティファクト・クリーチャー ― 構築物" pt="4/4" wiki="高名な者、ミシュラ/Mishra, Eminent One">（このトークンはコピーしたアーティファクトの能力や他のタイプを持つ。）</card>
-    <card name="Moon" ja="月" type="伝説の土地">(Ｔ)：(◇)を加える。
-(Ｔ)：占術２を行う。</card>
     <card name="Vitu-Ghazi" ja="ヴィトゥ＝ガジー" type="伝説の土地・クリーチャー ― エレメンタル" pt="0/0" wiki="ヴィトゥ＝ガジーの目覚め/Awakening of Vitu-Ghazi">速攻
 （この土地が持っていた名前を失い、《ヴィトゥ＝ガジー》になる。持っていたタイプや能力は残る。）</card>
     <!-- WHO --><!--<card name="Fenric" ja="フェンリック" type="伝説のクリーチャー ― ホラー" pt="6/6" wiki="フェンリックの呪い/The Curse of Fenric">（このクリーチャーはすべての能力を失う。）</card>
@@ -1772,8 +1764,7 @@ Michonne, Ruthless Survivorと２体以上のゾンビが攻撃するたび、�
     <card name="Avatar - Mayael the Anima" ja="Mayael the Anima Avatar" type="ヴァンガード" pt="手札 +1/ライフ +5" wiki="Mayael the Anima Avatar">あなたのアップキープの開始時に、あなたのライブラリーの一番上のカードを公開する。それがパワーが５以上のクリーチャー・カードであるなら、それをあなたの手札に加える。そうでないなら、あなたはそれをあなたのライブラリーの一番下に置いてもよい。</card>
     <card name="Avatar - Mirri the Cursed" ja="Mirri the Cursed Avatar" type="ヴァンガード" pt="手札 -2/ライフ -3" wiki="Mirri the Cursed Avatar">あなたがコントロールしているクリーチャーは「(Ｔ)：他のクリーチャー１体を対象とする。ターン終了時まで、それは-1/-1の修整を受ける。このクリーチャーの上に+1/+1カウンター１個を置く。」を持つ。</card>
     <card name="Avatar - Mirror Entity" ja="Mirror Entity Avatar" type="ヴァンガード" pt="手札 +1/ライフ -2" wiki="Mirror Entity Avatar">(Ｘ)：クリーチャー・タイプ１つを選ぶ。ターン終了時まで、あなたがコントロールしていてその選ばれたタイプを持つクリーチャーは、基本のパワーとタフネスがX/Xになるとともにすべてのクリーチャー・タイプを得る。</card>
-    <card name="Avatar - Momir Vig, Simic Visionary" ja="Momir Vig, Simic Visionary Avatar" type="ヴァンガード" pt="手札 +0/ライフ +4" wiki="Momir Vig, Simic Visionary Avatar">(Ｘ),カード１枚を捨てる：マナ総量がＸのクリーチャー・カード１枚を無作為に選び、それのコピーであるトークン１体を生成する。ソーサリーとしてのみ、毎ターン１回のみ起動できる。</card>
-    <card name="Avatar - Momir Vig, Simic Visionary (Alt.)" ja="Momir Vig, Simic Visionary Avatar" type="ヴァンガード" pt="手札 +0/ライフ +4" wiki="Momir Vig, Simic Visionary Avatar">(Ｘ),カード１枚を捨てる：マナ総量がＸのクリーチャー・カード１枚を無作為に選び、それのコピーであるトークン１体を生成する。ソーサリーとしてのみ、毎ターン１回のみ起動できる。</card>
+    <card name="Avatar - Momir Vig, Simic Visionary" ja="Momir Vig, Simic Visionary Avatar" type="ヴァンガード" pt="手札 +0/ライフ +4" alt="Avatar - Momir Vig, Simic Visionary (Alt.)" wiki="Momir Vig, Simic Visionary Avatar">(Ｘ),カード１枚を捨てる：マナ総量がＸのクリーチャー・カード１枚を無作為に選び、それのコピーであるトークン１体を生成する。ソーサリーとしてのみ、毎ターン１回のみ起動できる。</card>
     <card name="Avatar - Morinfen" ja="Morinfen Avatar" type="ヴァンガード" pt="手札 +0/ライフ +30" wiki="Morinfen Avatar">あなたのアップキープの開始時に、あなたは、あなたがコントロールしているパーマネント１つにつき１点のライフを失う。</card>
     <card name="Avatar - Murderous Redcap" ja="Murderous Redcap Avatar" type="ヴァンガード" pt="手札 +0/ライフ -2" wiki="Murderous Redcap Avatar">クリーチャー１体があなたのコントロール下でカウンターが置かれた状態で戦場に出るたび、１つを対象とする。あなたは「その戦場に出たクリーチャーはそのパーマネントかプレイヤーに、自身のパワーに等しい点数のダメージを与える。」を選んでもよい。</card>
     <card name="Avatar - Necropotence" ja="Necropotence Avatar" type="ヴァンガード" pt="手札 +0/ライフ +4" wiki="Necropotence Avatar">あなたのドロー・ステップを飛ばす。
@@ -1794,8 +1785,7 @@ Michonne, Ruthless Survivorと２体以上のゾンビが攻撃するたび、�
     <card name="Avatar - Royal Assassin" ja="Royal Assassin Avatar" type="ヴァンガード" pt="手札 -2/ライフ +0" wiki="Royal Assassin Avatar">あなたのアップキープの開始時に、あなたはカード１枚を引き、１点のライフを失う。</card>
     <card name="Avatar - Rumbling Slum" ja="Rumbling Slum Avatar" type="ヴァンガード" pt="手札 +1/ライフ +1" wiki="Rumbling Slum Avatar">あなたのアップキープの開始時に、Rumbling Slum Avatarは各対戦相手にそれぞれ１点のダメージを与える。</card>
     <card name="Avatar - Sakashima the Impostor" ja="Sakashima the Impostor Avatar" type="ヴァンガード" pt="手札 +0/ライフ +1" wiki="Sakashima the Impostor Avatar">(２)：クリーチャー１体を対象とする。あなたがコントロールしているクリーチャーを１体選ぶ。後者はそれの名前を除き、前者のコピーになる。</card>
-    <card name="Avatar - Serra Angel" ja="Serra Angel Avatar" type="ヴァンガード" pt="手札 +0/ライフ -1" wiki="Serra Angel Avatar">あなたが呪文を唱えるたび、あなたは２点のライフを得る。</card>
-    <card name="Avatar - Serra Angel (Alt.)" ja="Serra Angel Avatar" type="ヴァンガード" pt="手札 +0/ライフ -1" wiki="Serra Angel Avatar">あなたが呪文を唱えるたび、あなたは２点のライフを得る。</card>
+    <card name="Avatar - Serra Angel" ja="Serra Angel Avatar" type="ヴァンガード" pt="手札 +0/ライフ -1" alt="Avatar - Serra Angel (Alt.)" wiki="Serra Angel Avatar">あなたが呪文を唱えるたび、あなたは２点のライフを得る。</card>
     <card name="Avatar - Seshiro the Anointed" ja="Seshiro the Anointed Avatar" type="ヴァンガード" pt="手札 +0/ライフ -1" wiki="Seshiro the Anointed Avatar">ゲームの開始時に、クリーチャー・タイプ１つを選ぶ。あなたがコントロールしているクリーチャーは、それらの他のタイプに加えてその選ばれたタイプでもある。あなたがコントロールしているクリーチャー・呪文と、あなたがオーナーであり戦場やスタック以外のあらゆる領域にあるクリーチャー・カードについても同様である。</card>
     <card name="Avatar - Sisters of Stone Death" ja="Sisters of Stone Death Avatar" type="ヴァンガード" pt="手札 +1/ライフ -5" wiki="Sisters of Stone Death Avatar">あなたがコントロールしている各クリーチャーはそれぞれ、可能ならブロックされなければならない。
 (４)：あなたがコントロールしているクリーチャーをブロックしているクリーチャー１体を対象とし、それを追放する。</card>
@@ -2519,6 +2509,14 @@ Michonne, Ruthless Survivorと２体以上のゾンビが攻撃するたび、�
     <wiki name="Captivating Vampire" wiki="蟲惑的な吸血鬼/Captivating Vampire" />
     <wiki name="C.A.M.P." wiki="C.A.M.P./C.A.M.P." />
     <wiki name="V.A.T.S." wiki="V.A.T.S./V.A.T.S." />
+
+    <!-- 代替カード名 -->
+    <alt alt="Avatar - Serra Angel (Alt.)" name="Avatar - Serra Angel" />
+    <alt alt="Avatar - Momir Vig, Simic Visionary (Alt.)" name="Avatar - Momir Vig, Simic Visionary" />
+    <alt alt="Everflame, Heroes' Legacy" name="The Irencrag" />
+    <alt alt="Mileva, the Stalwart" name="Tenth District Hero" />
+    <alt alt="Moon" name="Princess Yue" />
+    <alt alt="Sol'Kanar the Tainted" name="Sol'kanar the Tainted" />
   </add>
   <replace>
     <!-- 誤字脱字 -->
@@ -8065,34 +8063,34 @@ II,III ― ターン終了時まで、クラーケンかリバイアサンかマ
 ワープ ― (黒),２点のライフを支払う。（あなたの手札や墓地からこのカードをワープ・コストで唱えてもよい。そうしたなら、次の終了ステップの開始時に、このクリーチャーを追放し、その後、後のターンに、これを追放領域から唱えてもよい。）</card>
 
     <!-- OM1 -->
-    <card name="Hex of Undeath" ja="不死の呪詛" type="ソーサリー" wiki="シニスター・シックスにご用心！/Behold the Sinister Six!">あなたの墓地にあり、互いに名前の異なるクリーチャー・カード最大６枚を対象とする。それらを戦場に戻す。</card>
-    <card name="Uharis, the Stormspinner" ja="嵐紡ぎ、ウハリス" type="伝説のクリーチャー ― 蜘蛛・人間・英雄" pt="2/3" wiki="スパイダーマン2099/Spider-Man 2099">あなたの第１第２第３ターンには、あなたは嵐紡ぎ、ウハリスを唱えられない。
+    <card name="Hex of Undeath" ja="不死の呪詛" type="ソーサリー" alt="Behold the Sinister Six!" wiki="シニスター・シックスにご用心！/Behold the Sinister Six!">あなたの墓地にあり、互いに名前の異なるクリーチャー・カード最大６枚を対象とする。それらを戦場に戻す。</card>
+    <card name="Uharis, the Stormspinner" ja="嵐紡ぎ、ウハリス" type="伝説のクリーチャー ― 蜘蛛・人間・英雄" pt="2/3" alt="Spider-Man 2099" wiki="スパイダーマン2099/Spider-Man 2099">あなたの第１第２第３ターンには、あなたは嵐紡ぎ、ウハリスを唱えられない。
 二段攻撃、警戒
 あなたの終了ステップの開始時に、このターンにあなたがあなたの手札以外から、土地をプレイするか呪文を唱えていた場合、１つを対象とする。嵐紡ぎ、ウハリスはそれに、自身のパワーに等しい点数のダメージを与える。</card>
-    <card name="Wrench, Speedway Saboteur" ja="競争路の妨害者、レンチ" type="伝説のクリーチャー ― 人間・ならず者・悪人" pt="2/3" wiki="狡猾な怪盗、ブラックキャット/Black Cat, Cunning Thief">これが戦場に出たとき、対戦相手１人を対象とする。そのプレイヤーのライブラリーの一番上からカード９枚を見て、そのうち２枚を裏向きで追放する。その後、残りをそのライブラリーの一番下に無作為の順番で置く。それらのカードが追放され続けているかぎり、あなたはそれらのカードをプレイしてもよい。これにより呪文を唱えるために任意のタイプのマナを支払ってもよい。</card>
+    <card name="Wrench, Speedway Saboteur" ja="競争路の妨害者、レンチ" type="伝説のクリーチャー ― 人間・ならず者・悪人" pt="2/3" alt="Black Cat, Cunning Thief" wiki="狡猾な怪盗、ブラックキャット/Black Cat, Cunning Thief">これが戦場に出たとき、対戦相手１人を対象とする。そのプレイヤーのライブラリーの一番上からカード９枚を見て、そのうち２枚を裏向きで追放する。その後、残りをそのライブラリーの一番下に無作為の順番で置く。それらのカードが追放され続けているかぎり、あなたはそれらのカードをプレイしてもよい。これにより呪文を唱えるために任意のタイプのマナを支払ってもよい。</card>
 
     <!-- あなたは (OM1) -->
-    <card name="Remorseless Coup" ja="無慈悲なクーデター" type="インスタント" wiki="スポットのポータル/The Spot's Portal">クリーチャー１体を対象とする。それをオーナーのライブラリーの一番下に置く。あなたが悪人をコントロールしていないかぎり、あなたは２点のライフを失う。</card>
-    <card name="Rouse the Swarm" ja="大群目覚める" type="エンチャント" wiki="壁登り/Wall Crawl">このエンチャントが戦場に出たとき、到達を持つ緑の2/1の蜘蛛・クリーチャー・トークン１体を生成する。その後、あなたはあなたがコントロールしている蜘蛛１体につき１点のライフを得る。
+    <card name="Remorseless Coup" ja="無慈悲なクーデター" type="インスタント" alt="The Spot's Portal" wiki="スポットのポータル/The Spot's Portal">クリーチャー１体を対象とする。それをオーナーのライブラリーの一番下に置く。あなたが悪人をコントロールしていないかぎり、あなたは２点のライフを失う。</card>
+    <card name="Rouse the Swarm" ja="大群目覚める" type="エンチャント" alt="Wall Crawl" wiki="壁登り/Wall Crawl">このエンチャントが戦場に出たとき、到達を持つ緑の2/1の蜘蛛・クリーチャー・トークン１体を生成する。その後、あなたはあなたがコントロールしている蜘蛛１体につき１点のライフを得る。
 あなたがコントロールしている各蜘蛛は+1/+1の修整を受け、防衛を持つクリーチャーにはブロックされない。</card>
     
     <!-- すべての (OM1) -->
-    <card name="Arachnomania" ja="蜘蛛妄想" type="エンチャント" wiki="スパイダー・バース/Spider-Verse">あなたがコントロールしている各蜘蛛には「レジェンド・ルール」は適用されない。
+    <card name="Arachnomania" ja="蜘蛛妄想" type="エンチャント" alt="Spider-Verse" wiki="スパイダー・バース/Spider-Verse">あなたがコントロールしている各蜘蛛には「レジェンド・ルール」は適用されない。
 あなたがあなたの手札以外から呪文を唱えるたび、あなたはそれをコピーしてもよい。そうしたなら、あなたはそのコピーの新しい対象を選んでもよい。そのコピーがパーマネント・呪文なら、それは速攻を得る。これは毎ターン１回のみ行える。</card>
-    <card name="Cren of the Spider Brood" ja="蜘蛛群のクレン" type="伝説のクリーチャー ― 蜘蛛・人間・英雄" pt="4/3" rel="Cren, Undercity Dreamer" wiki="アルティメット・スパイダーマン/Ultimate Spider-Man">先制攻撃、速攻
+    <card name="Cren of the Spider Brood" ja="蜘蛛群のクレン" type="伝説のクリーチャー ― 蜘蛛・人間・英雄" pt="4/3" rel="Cren, Undercity Dreamer" alt="Ultimate Spider-Man" wiki="アルティメット・スパイダーマン/Ultimate Spider-Man">先制攻撃、速攻
 (２)：これの上に+1/+1カウンター１個を置く。ターン終了時まで、これは呪禁を得て、無色になる。
 あなたが攻撃するたび、あなたがコントロールしていて蜘蛛や伝説である各クリーチャーの上にある各種類のカウンターの個数をそれぞれ２倍にする。</card>
-    <card name="Tarantusk, Unwisely Awoken" ja="起こされた獣、タランタスク" type="伝説のクリーチャー ― 蜘蛛・猪・英雄" pt="2/2" wiki="スパイダーハム、ピーター・ポーカー/Spider-Ham, Peter Porker">これが戦場に出たとき、食物・トークン１つを生成する。
+    <card name="Tarantusk, Unwisely Awoken" ja="起こされた獣、タランタスク" type="伝説のクリーチャー ― 蜘蛛・猪・英雄" pt="2/2" alt="Spider-Ham, Peter Porker" wiki="スパイダーハム、ピーター・ポーカー/Spider-Ham, Peter Porker">これが戦場に出たとき、食物・トークン１つを生成する。
 あなたがコントロールしていてこれでないすべての、蜘蛛や猪やコウモリや熊や鳥や猫や犬やカエルやジャッカルやトカゲやハツカネズミやカワウソや兎やアライグマやネズミやリスや海亀や狼は+1/+1の修整を受ける。</card>
 
     <!-- 誤訳疑い (OM1) -->
-    <card name="Egrix the Bile Bulwark" ja="胆汁の防塁、エグリックス" type="伝説のクリーチャー ― シンビオート・蜘蛛・英雄" pt="4/4" wiki="情け容赦無き者、グウェノム/Gwenom, Remorseless">接死、絆魂
+    <card name="Egrix the Bile Bulwark" ja="胆汁の防塁、エグリックス" type="伝説のクリーチャー ― シンビオート・蜘蛛・英雄" pt="4/4" alt="Gwenom, Remorseless" wiki="情け容赦無き者、グウェノム/Gwenom, Remorseless">接死、絆魂
 これが攻撃するたび、ターン終了時まで、あなたはいつでもあなたのライブラリーの一番上のカードを見てよく、あなたはあなたのライブラリーの一番上からカードをプレイしてもよい。あなたがこれにより呪文を唱えるなら、マナ・コストを支払うのではなく、それのマナ総量に等しい点数のライフを支払う。</card>
-    <card name="Withar, Cocoon Keeper" ja="繭の世話人、ウィザール" type="伝説のクリーチャー ― 人間・悪人" pt="5/5" wiki="ミスターネガティブ/Mister Negative">警戒、絆魂
+    <card name="Withar, Cocoon Keeper" ja="繭の世話人、ウィザール" type="伝説のクリーチャー ― 人間・悪人" pt="5/5" alt="Mister Negative" wiki="ミスターネガティブ/Mister Negative">警戒、絆魂
 これが戦場に出たとき、対戦相手１人を対象とする。あなたはそのプレイヤーとライフ総量を交換してもよい。これによりあなたがライフを失ったなら、その点数に等しい枚数のカードを引く。</card>
 
     <!-- テキストが正常でないカード (OM1) -->
-    <card name="Janai and Hoppy, Roofskippers" ja="屋根跳びの二人、ジャナイとホッピー" type="伝説のクリーチャー ― 蜘蛛・人間・英雄" pt="2/2" wiki="力受け継ぎしヒーロー、スパイダーガール/Spider-Girl, Legacy Hero">あなたのターンの間、これは飛行を持つ。
+    <card name="Janai and Hoppy, Roofskippers" ja="屋根跳びの二人、ジャナイとホッピー" type="伝説のクリーチャー ― 蜘蛛・人間・英雄" pt="2/2" alt="Spider-Girl, Legacy Hero" wiki="力受け継ぎしヒーロー、スパイダーガール/Spider-Girl, Legacy Hero">あなたのターンの間、これは飛行を持つ。
 これが戦場を離れたとき、緑白の1/1の人間・市民・クリーチャー・トークン１体を生成する。</card>
 
     <!-- 再録 (TLA) -->

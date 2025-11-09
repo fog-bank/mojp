@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Linq;
 using System.Xml.Linq;
 
 namespace Mojp;
@@ -199,6 +200,11 @@ public sealed partial class Card : IEquatable<Card>, INotifyPropertyChanged
 
         if (RelatedCardName != null)
             xml.Add(new XAttribute("rel", RelatedCardName));
+
+        string altCardNames = string.Join("|",
+            App.Cards.Where(kv => kv.Value == this && kv.Key != Name).Select(kv => kv.Key));
+        if (!string.IsNullOrEmpty(altCardNames))
+            xml.Add(new XAttribute("alt", altCardNames));
 
         if (WikiLink != null)
             xml.Add(new XAttribute("wiki", WikiLink));

@@ -24,7 +24,7 @@ public partial class App : Application
     /// <summary>
     /// カードの英語名から、英語カード名・日本語カード名・日本語カードテキストを検索します。
     /// </summary>
-    public static Dictionary<string, Card> Cards { get; } = new(30853);
+    public static Dictionary<string, Card> Cards { get; } = new(30848 + 164);
 
     /// <summary>
     /// このアプリの設定を取得します。
@@ -109,11 +109,14 @@ public partial class App : Application
     {
         var cardsElem = new XElement("cards");
 
-        foreach (var card in Cards.Values.Where(c => !CardPrice.IsSpecialCard(c)).OrderBy(c => c.Name))
-            cardsElem.Add(card.ToXml());
+        foreach (var kv in Cards.Where(
+            kv => !CardPrice.IsSpecialCard(kv.Value) && kv.Key == kv.Value.Name).OrderBy(kv => kv.Key))
+        {
+            cardsElem.Add(kv.Value.ToXml());
+        }
 
-        foreach (var card in Cards.Values.Where(CardPrice.IsSpecialCard))
-            cardsElem.Add(card.ToXml());
+        foreach (var kv in Cards.Where(kv => CardPrice.IsSpecialCard(kv.Value) && kv.Key == kv.Value.Name))
+            cardsElem.Add(kv.Value.ToXml());
 
         var doc = new XDocument(new XDeclaration("1.0", "utf-8", "yes"), cardsElem);
         doc.Save(path);
@@ -162,7 +165,17 @@ public partial class App : Application
                 {
                     case "card":
                         var card = Card.FromXml(element);
-                        Cards.Add(card.Name, card);
+                        Cards[card.Name] = card;
+
+                        string altCardNames = (string)element.Attribute("alt");
+                        if (altCardNames != null)
+                        {
+                            foreach (string altName in altCardNames.Split('"'))
+                            {
+                                if (!Cards.ContainsKey(altName))
+                                    Cards[altName] = card;
+                            }
+                        }
                         break;
                 }
             }
@@ -186,9 +199,7 @@ public partial class App : Application
             }
         }
     }
-#endif
-
-#if !OFFLINE
+#else
     /// <summary>
     /// XML ファイルからカードテキストデータを構築します。
     /// </summary>

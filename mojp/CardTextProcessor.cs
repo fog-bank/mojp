@@ -353,6 +353,20 @@ partial class Card
                 Debug.WriteLine("関連カード情報の追加先となる " + name + " のカード情報がありません。");
         }
 
+        // 代替カード名を追加
+        foreach (var node in doc.Root.Elements("add").Elements("alt"))
+        {
+            string alt = (string)node.Attribute("alt");
+            string name = (string)node.Attribute("name");
+
+            if (cards.TryGetValue(name, out var card))
+            {
+                cards[alt] = card;
+            }
+            else
+                Debug.WriteLine("代替カード名の追加先となる " + name + " のカード情報がありません。");
+        }
+
         // Wiki へのリンクだけ追加
         foreach (var node in doc.Root.Elements("add").Elements("wiki"))
         {
@@ -422,6 +436,7 @@ partial class Card
                 }
                 cards.Remove(beyond);
                 cards[within] = card;
+                cards[beyond] = card;
             }
             else
                 Debug.WriteLine(beyond + " はカードリストに含まれていません。");
@@ -503,6 +518,9 @@ partial class Card
                     replacedNodes.Add(node);
                     cards[newCard.Name] = newCard;
 
+                    foreach (var kv in cards.Where(kv => kv.Value == oldCard && kv.Key != kv.Value.Name).ToArray())
+                        cards[kv.Key] = newCard;
+
                     var cloneCard = newCard.Clone();
                     foreach (var tup in regexes)
                     {
@@ -561,7 +579,8 @@ partial class Card
         {
             if (jaNames.TryGetValue(card.JapaneseName, out var otherCard))
             {
-                Debug.WriteLineIf(!card.Name.EndsWith("(Alt.)"),
+                // 代替カード名による登録の場合を除く
+                Debug.WriteLineIf(otherCard != card,
                     "日本語カード名の重複：≪" + card.FullName + "≫ ≪" + otherCard.FullName + "≫");
             }
             else

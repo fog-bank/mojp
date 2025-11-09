@@ -237,10 +237,6 @@ public static class CardPrice
                 if (cardName.EndsWith(" - Sketch", StringComparison.Ordinal))
                     continue;
 
-                // HACK: PD S34 (BLB) にバグ
-                if (cardName.Equals("Sol'Kanar the Tainted", StringComparison.OrdinalIgnoreCase))
-                    cardName = "Sol'kanar the Tainted";
-
                 if (!App.TryGetCard(cardName, out _))
                 {
                     Debug.WriteLine("PD カードリスト：" + cardName);
@@ -286,7 +282,7 @@ public static class CardPrice
             return true;
 
         if (card.Name is "Gleemox" or
-            "Everflame, Heroes' Legacy" or "Humble Merchant" or "Legitimate Businessperson" or "Mileva, the Stalwart" or "Mishra's Warform" or "Vitu-Ghazi")
+            "Humble Merchant" or "Legitimate Businessperson" or "Mishra's Warform" or "Vitu-Ghazi")
             return true;
 
         if (card.Type.StartsWith("トークン", StringComparison.Ordinal) || card.Type.StartsWith("次元", StringComparison.Ordinal))
