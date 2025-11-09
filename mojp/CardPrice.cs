@@ -286,7 +286,7 @@ public static class CardPrice
             return true;
 
         if (card.Name is "Gleemox" or
-            "Everflame, Heroes' Legacy" or "Legitimate Businessperson" or "Mileva, the Stalwart" or "Mishra's Warform" or "Vitu-Ghazi")
+            "Everflame, Heroes' Legacy" or "Humble Merchant" or "Legitimate Businessperson" or "Mileva, the Stalwart" or "Mishra's Warform" or "Vitu-Ghazi")
             return true;
 
         if (card.Type.StartsWith("トークン", StringComparison.Ordinal) || card.Type.StartsWith("次元", StringComparison.Ordinal))
