@@ -1102,6 +1102,12 @@ III ― ターン終了時まで、あなたがコントロールしている各
 （この土地が持っていた名前を失い、《ヴィトゥ＝ガジー》になる。持っていたタイプや能力は残る。）</card>
     <!-- WHO --><!--<card name="Fenric" ja="フェンリック" type="伝説のクリーチャー ― ホラー" pt="6/6" wiki="フェンリックの呪い/The Curse of Fenric">（このクリーチャーはすべての能力を失う。）</card>
     <card name="Prisoner Zero" ja="プリズナー・ゼロ" type="トークン・伝説のクリーチャー ― エイリアン" wiki="11番目の時間/The Eleventh Hour"></card>-->
+
+    <!-- Mystery Booster 2 -->
+    <card name="Goblin Gang Leader" ja="ゴブリンの班長" type="クリーチャー ― ゴブリン・戦士" pt="2/2">このクリーチャーが戦場に出たとき、赤の1/1のゴブリン・クリーチャー・トークン２体を生成する。</card>
+    <card name="Velukan Dragon" ja="Velukan Dragon" type="クリーチャー ― ドラゴン" pt="5/5">飛行
+このクリーチャーが攻撃するかブロックするたび、１個の６面ダイスを振る。ターン終了時まで、このクリーチャーは+X/+0の修整を受ける。Ｘはその出目から１を引いた値に等しい。</card>
+    <card name="Mardu Outrider" ja="マルドゥの先導" type="クリーチャー ― オーク・戦士" pt="5/5">この呪文を唱えるための追加コストとして、カード１枚を捨てる。</card>
     
     <!-- LTR Jumpstart Booster Vol.2 -->
     <card name="Eagle of Deliverance" ja="Eagle of Deliverance" type="クリーチャー ― 鳥・兵士" pt="5/5">飛行
