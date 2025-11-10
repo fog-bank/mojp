@@ -224,25 +224,31 @@ public static class CardPrice
         }
 
         var legalCards = new HashSet<string>();
-        var separator = new[] { " // " };
 
         foreach (string line in File.ReadLines(path))
         {
             // 分割カードは名前を分ける
-            foreach (string name in line.Split(separator, StringSplitOptions.RemoveEmptyEntries))
+            var split = new StringSplitter(line, " // ");
+
+            while (split.TrySplit())
             {
-                string cardName = Card.NormalizeName(name);
+                if (split.CurrentLength == 0)
+                    continue;
+
+                string cardName = split.NeedToSplit ?
+                    Card.NormalizeName(line, split.CurrentStart, split.CurrentLength) : Card.NormalizeName(line);
 
                 // HACK: PD S28 (ONE) にバグ
                 if (cardName.EndsWith(" - Sketch", StringComparison.Ordinal))
                     continue;
 
-                if (!App.TryGetCard(cardName, out _))
+                if (!App.TryGetCard(cardName, out var card))
                 {
                     Debug.WriteLine("PD カードリスト：" + cardName);
                     return GetPDListResult.Conflict;
                 }
-                legalCards.Add(cardName);
+                // cardName が UB のカード名の場合があるので、card.Name で登録する
+                legalCards.Add(card.Name);
             }
         }
 
@@ -281,8 +287,7 @@ public static class CardPrice
         if (string.IsNullOrEmpty(card.Type))
             return true;
 
-        if (card.Name is "Gleemox" or
-            "Humble Merchant" or "Legitimate Businessperson" or "Mishra's Warform" or "Vitu-Ghazi")
+        if (card.Name is "Gleemox" or "Humble Merchant" or "Legitimate Businessperson" or "Mishra's Warform" or "Vitu-Ghazi")
             return true;
 
         if (card.Type.StartsWith("トークン", StringComparison.Ordinal) || card.Type.StartsWith("次元", StringComparison.Ordinal))

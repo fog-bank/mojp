@@ -167,13 +167,10 @@ public partial class App : Application
             string altCardNames = (string)element.Attribute("alt");
             if (altCardNames != null)
             {
-                if (altCardNames.Contains('|'))
-                {
-                    foreach (string altName in altCardNames.Split('|'))
-                        Cards[altName] = card;
-                }
-                else
-                    Cards[altCardNames] = card;
+                var split = new StringSplitter(altCardNames, '|');
+
+                while (split.TrySplit())
+                    Cards[split.Current] = card;
             }
         }
     }

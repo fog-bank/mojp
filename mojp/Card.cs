@@ -73,16 +73,10 @@ public sealed partial class Card : IEquatable<Card>, INotifyPropertyChanged
         {
             if (RelatedCardName != null)
             {
-                int start = 0;
-                int split = RelatedCardName.IndexOf('|');
+                var split = new StringSplitter(RelatedCardName, '|');
 
-                while (split != -1)
-                {
-                    yield return RelatedCardName.Substring(start, split - start);
-                    start = split + 1;
-                    split = RelatedCardName.IndexOf('|', start);
-                }
-                yield return RelatedCardName.Substring(start);
+                while (split.TrySplit())
+                    yield return split.Current;
             }
         }
     }

@@ -126,6 +126,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Compile Include="StringSplitter.cs" />
     <Compile Include="ToolbarDialog.xaml.cs">
       <DependentUpon>ToolbarDialog.xaml</DependentUpon>
     </Compile>

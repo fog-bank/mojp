@@ -23,79 +23,94 @@ partial class Card
         var sb = new StringBuilder(name.Length);
         bool replaced = false;
 
-        foreach (char c in name)
+        for (int i = 0; i < name.Length; i++)
         {
-            switch (c)
-            {
-                // Æther Vial など
-                // カラデシュ発売時のオラクル更新でほとんどの Æ は Ae に置換された。ただし WHISPER や wiki では AE のまま
-                //case 'Æ':
-                //  sb.Append("AE");
-                //  replaced = true;
-                //  break;
-                // 検索用：á|â|à|ä|í|ú|û|ü|é|É|ó|ö|ñ
-
-                // Márton Stromgald や Dandân や Déjà Vu や Song of Eärendil など
-                case 'á':
-                case 'â':
-                case 'à':
-                case 'ä':
-                    sb.Append('a');
-                    replaced = true;
-                    break;
-
-                // Ifh-Bíff Efreet
-                case 'í':
-                case 'ï':
-                    sb.Append('i');
-                    replaced = true;
-                    break;
-
-                // Junún Efreet や Lim-Dûl the Necromancer など
-                case 'ú':
-                case 'û':
-                case 'ü':
-                    sb.Append('u');
-                    replaced = true;
-                    break;
-
-                // Séance など
-                case 'é':
-                    sb.Append('e');
-                    replaced = true;
-                    break;
-
-                // Éowyn, Lady of Rohan など
-                case 'É':
-                    sb.Append('E');
-                    replaced = true;
-                    break;
-
-                // Jötun Owl Keeper など (PD カードリスト用。MO では o になっている)
-                case 'ó':
-                case 'ö':
-                    sb.Append('o');
-                    replaced = true;
-                    break;
-
-                // Robo-Piñata
-                case 'ñ':
-                    sb.Append('n');
-                    replaced = true;
-                    break;
-
-                // Ratonhnhaké꞉ton (for PD)
-                case '꞉':
-                    sb.Append(':');
-                    replaced = true;
-                    break;
-
-                default:
-                    sb.Append(c);
-                    break;
-            }
+            char c = name[i];
+            replaced |= AppendNormalizedChar(sb, c);
         }
         return replaced ? sb.ToString() : name;
+    }
+
+    public static string NormalizeName(string value, int start, int length)
+    {
+        if (value == null || start < 0 || start + length > value.Length)
+            return null;
+
+        var sb = new StringBuilder(length);
+        bool replaced = false;
+
+        for (int i = 0; i < length; i++)
+        {
+            char c = value[i + start];
+            replaced |= AppendNormalizedChar(sb, c);
+        }
+        return replaced ? sb.ToString() : value.Substring(start, length);
+    }
+
+    /// <returns>置換した場合は <see langword="true"/> 。</returns>
+    private static bool AppendNormalizedChar(StringBuilder sb, char c)
+    {
+        switch (c)
+        {
+            // Æther Vial など
+            // カラデシュ発売時のオラクル更新でほとんどの Æ は Ae に置換された。ただし WHISPER や wiki では AE のまま
+            //case 'Æ':
+            //  sb.Append("AE");
+            //  replaced = true;
+            //  break;
+            // 検索用：á|â|à|ä|í|ú|û|ü|é|É|ó|ö|ñ
+
+            // Márton Stromgald や Dandân や Déjà Vu や Song of Eärendil など
+            case 'á':
+            case 'â':
+            case 'à':
+            case 'ä':
+                sb.Append('a');
+                return true;
+
+            // Ifh-Bíff Efreet
+            case 'í':
+            case 'ï':
+                sb.Append('i');
+                return true;
+
+            // Junún Efreet や Lim-Dûl the Necromancer など
+            case 'ú':
+            case 'û':
+            case 'ü':
+                sb.Append('u');
+                return true;
+
+            // Séance など
+            case 'é':
+                sb.Append('e');
+                return true;
+
+            // Éowyn, Lady of Rohan など
+            case 'É':
+                sb.Append('E');
+                return true;
+
+            // Jötun Owl Keeper など (PD カードリスト用。MO では o になっている)
+            case 'ó':
+            case 'ö':
+                sb.Append('o');
+                return true;
+
+            // Robo-Piñata
+            case 'ñ':
+                sb.Append('n');
+                return true;
+
+            // Ratonhnhaké꞉ton (for PD)
+            case '꞉':
+                sb.Append(':');
+                return true;
+
+            default:
+                sb.Append(c);
+                return false;
+        }
     }
 
 #if !OFFLINE
@@ -265,7 +280,7 @@ partial class Card
             string targets = (string)node.Attribute("target");
 
             if (targets.Contains("all"))
-                targets = "name|ja|type|pt|rel|wiki|text";
+                targets = "value|ja|type|pt|rel|wiki|text";
 
             string pattern = (string)node.Attribute("pattern");
             try
@@ -315,7 +330,7 @@ partial class Card
         // P/T だけ追加
         foreach (var node in doc.Root.Elements("add").Elements("pt"))
         {
-            string name = (string)node.Attribute("name");
+            string name = (string)node.Attribute("value");
             string pt = (string)node.Attribute("pt");
             bool? append = (bool?)node.Attribute("append");
 
@@ -339,7 +354,7 @@ partial class Card
         // 関連カードだけ追加
         foreach (var node in doc.Root.Elements("add").Elements("rel"))
         {
-            string name = (string)node.Attribute("name");
+            string name = (string)node.Attribute("value");
 
             if (cards.TryGetValue(name, out var card))
             {
@@ -356,7 +371,7 @@ partial class Card
         // Wiki へのリンクだけ追加
         foreach (var node in doc.Root.Elements("add").Elements("wiki"))
         {
-            string name = (string)node.Attribute("name");
+            string name = (string)node.Attribute("value");
 
             if (cards.TryGetValue(name, out var card))
             {
@@ -371,7 +386,7 @@ partial class Card
         foreach (var node in doc.Root.Elements("add").Elements("alt"))
         {
             string alt = (string)node.Attribute("alt");
-            string name = (string)node.Attribute("name");
+            string name = (string)node.Attribute("value");
 
             if (cards.TryGetValue(name, out var card))
             {
@@ -384,7 +399,7 @@ partial class Card
         // カードの削除
         foreach (var node in doc.Root.Elements("remove").Elements("card"))
         {
-            string name = (string)node.Attribute("name");
+            string name = (string)node.Attribute("value");
             Debug.WriteLineIf(!cards.ContainsKey(name), name + " は既にカードリストに含まれていません。");
             cards.Remove(name);
         }
@@ -392,7 +407,7 @@ partial class Card
         // 暫定日本語カード名の削除
         foreach (var node in doc.Root.Elements("remove").Elements("ja"))
         {
-            string name = (string)node.Attribute("name");
+            string name = (string)node.Attribute("value");
 
             if (cards.TryGetValue(name, out var card))
             {
@@ -508,7 +523,7 @@ partial class Card
                 if (newCard.EqualsStrict(oldCard))
                 {
                     // WHISPER が対応した場合に appendix.xml から外したい
-                    identicalNodes.Add(new XElement("card", new XAttribute("name", newCard.Name)));
+                    identicalNodes.Add(new XElement("card", new XAttribute("value", newCard.Name)));
                     Debug.WriteLine(newCard.Name + " は置換する必要がありません。");
                 }
                 else
@@ -536,7 +551,7 @@ partial class Card
         // カードタイプだけ書き換え
         foreach (var node in doc.Root.Elements("replace").Elements("type"))
         {
-            string name = (string)node.Attribute("name");
+            string name = (string)node.Attribute("value");
 
             if (cards.TryGetValue(name, out var card))
             {
@@ -544,12 +559,12 @@ partial class Card
 
                 if (card.Type == type)
                 {
-                    identicalNodes.Add(new XElement("type", new XAttribute("name", card.Name)));
+                    identicalNodes.Add(new XElement("type", new XAttribute("value", card.Name)));
                     Debug.WriteLine(card.Name + " のカードタイプは置換する必要がありません。");
                 }
                 else
                 {
-                    beforeNodes.Add(new XElement("type", new XAttribute("name", name), new XAttribute("type", card.Type)));
+                    beforeNodes.Add(new XElement("type", new XAttribute("value", name), new XAttribute("type", card.Type)));
                     replacedNodes.Add(node);
                     card.Type = type;
                 }
@@ -561,7 +576,7 @@ partial class Card
         // 関連カードだけ書き換え
         foreach (var node in doc.Root.Elements("replace").Elements("rel"))
         {
-            string name = (string)node.Attribute("name");
+            string name = (string)node.Attribute("value");
 
             if (cards.TryGetValue(name, out var card))
             {
@@ -626,7 +641,7 @@ partial class Card
         {
             switch (target)
             {
-                case "name":
+                case "value":
                     string name = regex.Replace(card.Name, value);
 
                     if (card.Name != name)
