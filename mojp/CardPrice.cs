@@ -72,10 +72,12 @@ public static class CardPrice
         if (!EnableCardPrice || IsSpecialCard(card))
             return string.Empty;
 
-        if (prices.TryGetValue(card.Name, out var value) && value?.Item1 != null)
-            return value.Item1;
-        else
-            return "価格取得中";
+        if (prices.TryGetValue(card.Name, out var value) || prices.TryGetValue(card.RelatedCardName, out value))
+        {
+            if (value?.Item1 != null)
+                return value.Item1;
+        }
+        return "価格取得中";
     }
 
     /// <summary>
@@ -312,7 +314,7 @@ public static class CardPrice
         if (!EnableCardPrice || IsSpecialCard(card))
             return;
 
-        if (prices.TryGetValue(card.Name, out var value))
+        if (prices.TryGetValue(card.Name, out var value) || prices.TryGetValue(card.RelatedCardName, out value))
         {
             // 既に取得要請が出ている or まだキャッシュが有効かどうか
             if (value == null || value.Item2 > DateTime.UtcNow)
