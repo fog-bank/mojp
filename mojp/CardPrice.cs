@@ -223,7 +223,7 @@ public static class CardPrice
             }
         }
 
-        var legalCards = new HashSet<string>();
+        var legalCards = new HashSet<string>(16000); // 17519
 
         foreach (string line in File.ReadLines(path))
         {
@@ -249,6 +249,9 @@ public static class CardPrice
                 }
                 // cardName が UB のカード名の場合があるので、card.Name で登録する
                 legalCards.Add(card.Name);
+
+                if (card.RelatedCardName != null)
+                    legalCards.UnionWith(card.RelatedCardNames);
             }
         }
 
@@ -416,7 +419,7 @@ public static class CardPrice
         if (startIndex == -1)
             return NoPrice;
 
-        if (TrySubstring(json, startIndex + TotalCardsTag.Length, 2) != "1,")
+        if (!TrySubstringEquals(json, startIndex + TotalCardsTag.Length, "1,"))
         {
             // exact サーチじゃないので、複数ヒットする可能性がある
             const string CardTag = "\"name\":";
@@ -436,7 +439,7 @@ public static class CardPrice
         const string TixTag = "\"tix\":";
         startIndex = json.IndexOf(TixTag, startIndex, endIndex - startIndex);
 
-        if (startIndex == -1 || TrySubstring(json, startIndex + TixTag.Length, 4) == "null")
+        if (startIndex == -1 || TrySubstringEquals(json, startIndex + TixTag.Length, "null"))
             return NoPrice;
 
         startIndex += TixTag.Length;
@@ -464,6 +467,14 @@ public static class CardPrice
             return null;
 
         return target.Substring(startIndex, length);
+    }
+
+    private static bool TrySubstringEquals(string target, int startIndex, string other)
+    {
+        if (startIndex < 0 || startIndex + other.Length > target.Length)
+            return false;
+
+        return string.CompareOrdinal(target, startIndex, other, 0, other.Length) == 0;
     }
 #endif
 }
