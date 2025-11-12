@@ -206,7 +206,7 @@ public partial class App : Application
     /// </summary>
     /// <param name="acceptsPrerelease">開発版も含めて確認する場合は true 。</param>
     /// <returns>これより上のバージョンがあった場合は true 。</returns>
-    public static async Task<bool> IsOutdatedRelease(bool acceptsPrerelease)
+    public static async Task<bool> IsOutdatedReleaseAsync(bool acceptsPrerelease)
     {
         if (IsClickOnce)
             return false;
@@ -258,6 +258,19 @@ public partial class App : Application
         //        proc.Dispose();
         //}
         //return targetProc;
+    }
+
+    /// <summary>
+    /// 指定した URL を既定のブラウザで開きます。
+    /// </summary>
+    public static void LaunchUrl(string url)
+    {
+        var psi = new ProcessStartInfo(url)
+        {
+            // default is true on .NET Framework apps and false on .NET Core apps
+            UseShellExecute = true
+        };
+        Process.Start(psi);
     }
 
     protected override void OnStartup(StartupEventArgs e)

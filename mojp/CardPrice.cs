@@ -159,7 +159,7 @@ public static class CardPrice
     /// Penny Dreadful のカードリストを取得するか、取得済みのファイルを開き、カードリストを準備します。
     /// </summary>
     /// <param name="forceCheck"><see langword="true"/> の場合、最終確認日時に関わらず HTTP アクセスを行います。</param>
-    public static async Task<GetPDListResult> GetOrOpenPDLegalFile(bool forceCheck = false)
+    public static async Task<GetPDListResult> GetOrOpenPDLegalFileAsync(bool forceCheck = false)
     {
         string path = App.GetPath(PDLegalFileName);
         bool exists = File.Exists(path);
@@ -348,7 +348,7 @@ public static class CardPrice
             if (slashIndex > 0)
                 query = card.WikiLink.Substring(slashIndex + 1).Replace('+', '_');
         }
-        string tix = await GetCardPrice(query);
+        string tix = await GetCardPriceAsync(query);
 
         if (tix == null)
         {
@@ -362,7 +362,7 @@ public static class CardPrice
                 return;
             }
 
-            tix = await GetCardPrice(query);
+            tix = await GetCardPriceAsync(query);
 
             if (tix == null)
             {
@@ -389,7 +389,7 @@ public static class CardPrice
     /// <summary>
     /// scryfall.com からカード価格を取得します。
     /// </summary>
-    private static async Task<string> GetCardPrice(string cardName)
+    private static async Task<string> GetCardPriceAsync(string cardName)
     {
         const string NoPrice = "― tix";
 

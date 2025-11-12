@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Windows;
@@ -178,7 +177,7 @@ public sealed class GoToWikiCommand(MainViewModel viewModel) : Command(viewModel
 
             sb.Length--;
         }
-        Process.Start(sb.ToString());
+        App.LaunchUrl(sb.ToString());
 #endif
     }
 }

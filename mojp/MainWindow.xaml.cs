@@ -1,6 +1,5 @@
 ﻿using System;
 using System.ComponentModel;
-using System.Diagnostics;
 using System.IO;
 using System.Threading.Tasks;
 using System.Windows;
@@ -89,10 +88,10 @@ public partial class MainWindow : Window
                 CardPrice.OpenCacheData();
 
             if (vm.GetPDList)
-                pdResult = await CardPrice.GetOrOpenPDLegalFile();
+                pdResult = await CardPrice.GetOrOpenPDLegalFileAsync();
 
             if (vm.AutoVersionCheck)
-                isOutdated = await App.IsOutdatedRelease(vm.AcceptsPrerelease);
+                isOutdated = await App.IsOutdatedReleaseAsync(vm.AcceptsPrerelease);
 #else
             App.SetCardInfosFromResource();
 #endif
@@ -135,7 +134,7 @@ public partial class MainWindow : Window
 
 #if !OFFLINE
         notifier.Visibility = vm.AutoVersionCheck &&
-            await App.IsOutdatedRelease(vm.AcceptsPrerelease) ? Visibility.Visible : Visibility.Collapsed;
+            await App.IsOutdatedReleaseAsync(vm.AcceptsPrerelease) ? Visibility.Visible : Visibility.Collapsed;
 
         // カード価格関連の変更を反映するために await
         imgLoading.Visibility = Visibility.Visible;
@@ -152,7 +151,7 @@ public partial class MainWindow : Window
         {
             if (vm.GetPDList)
             {
-                var successPd = await CardPrice.GetOrOpenPDLegalFile();
+                var successPd = await CardPrice.GetOrOpenPDLegalFileAsync();
                 ShowPDMessage(successPd);
             }
             else
@@ -174,7 +173,8 @@ public partial class MainWindow : Window
     {
 #if !OFFLINE
         notifier.Visibility = Visibility.Collapsed;
-        Process.Start((sender as Hyperlink).ToolTip.ToString());
+
+        App.LaunchUrl((sender as Hyperlink).ToolTip.ToString());
 #endif
     }
 

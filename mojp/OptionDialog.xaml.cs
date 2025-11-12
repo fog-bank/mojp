@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Text;
@@ -145,7 +144,7 @@ public partial class OptionDialog : Window
 #if !OFFLINE
         imgLoading.Visibility = Visibility.Visible;
 
-        var successPd = await CardPrice.GetOrOpenPDLegalFile(true);
+        var successPd = await CardPrice.GetOrOpenPDLegalFileAsync(true);
         App.CurrentMainWindow?.ShowPDMessage(successPd);
         ViewModel.RefreshTab();
         UpdatePDRotationTime();
@@ -202,7 +201,7 @@ public partial class OptionDialog : Window
             isFixingCard = false;
         }
 #endif
-        }
+    }
 
     private void OnTestBoxKeyDown(object sender, KeyEventArgs e)
     {
@@ -235,7 +234,7 @@ public partial class OptionDialog : Window
     private void OnClickHyperlink(object sender, RoutedEventArgs e)
     {
 #if !OFFLINE
-        Process.Start((sender as Hyperlink).ToolTip.ToString());
+        App.LaunchUrl((sender as Hyperlink).ToolTip.ToString());
 #endif
     }
 }
