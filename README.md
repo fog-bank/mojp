@@ -38,8 +38,8 @@ Windows 11
 
 ## 開発環境
 Windows 11 (Version 25H2)  
-Visual Studio 2022 v17.14  
-C# 13
+Visual Studio 2026 v18.0  
+C# 14
 
 ### 仕組み
 [Microsoft UI Automation](https://learn.microsoft.com/ja-jp/dotnet/framework/ui-automation/) API を利用して、メニューを開いたときに発生するイベントをサブスクライブし、MO のプロセスに限り、メニュー内の UI テキストを検索しています。メインロジックは [AutomationHandler.cs](https://github.com/fog-bank/mojp/blob/master/mojp/AutomationHandler.cs) です。

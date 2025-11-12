@@ -12,11 +12,6 @@ namespace Mojp;
 /// </remarks>
 public sealed class SettingsCache
 {
-    private double width = 330;
-    private double height = 260;
-    private int fontSize = 12;
-    private int refreshInterval = 4000;
-
     public SettingsCache()
     { }
 
@@ -28,15 +23,15 @@ public sealed class SettingsCache
     // 表示
     public double WindowWidth
     {
-        get => width;
-        set => width = value >= 1 ? value : 1;
-    }
+        get;
+        set => field = value >= 1 ? value : 1;
+    } = 330;
 
     public double WindowHeight
     {
-        get => height;
-        set => height = value >= 1 ? value : 1;
-    }
+        get;
+        set => field = value >= 1 ? value : 1;
+    } = 260;
 
     public double WindowLeft { get; set; }
 
@@ -46,9 +41,9 @@ public sealed class SettingsCache
 
     public int CardTextFontSize
     {
-        get => fontSize;
-        set => fontSize = value >= 1 ? value : 1;
-    }
+        get;
+        set => field = value >= 1 ? value : 1;
+    } = 12;
 
     public CardDisplayNameType CardDisplayNameType { get; set; }
 
@@ -65,9 +60,9 @@ public sealed class SettingsCache
 
     public int RefreshIntervalMilliseconds
     {
-        get => refreshInterval;
-        set => refreshInterval = Math.Max(value, 1000);
-    }
+        get;
+        set => field = Math.Max(value, 1000);
+    } = 4000;
 
     public bool GetPDList { get; set; }
 

@@ -11,15 +11,13 @@ namespace Mojp;
 /// </summary>
 public sealed partial class Card : IEquatable<Card>, INotifyPropertyChanged
 {
-    private string[] lines;
-
     public Card()
     { }
 
     public Card(string message)
     {
         Text = message;
-        lines = [message];
+        TextLines = [message];
     }
 
     /// <summary>
@@ -49,9 +47,10 @@ public sealed partial class Card : IEquatable<Card>, INotifyPropertyChanged
     {
         get
         {
-            lines ??= Text?.Split('\n');
-            return lines;
+            field ??= Text?.Split('\n');
+            return field;
         }
+        private set;
     }
 
     /// <summary>

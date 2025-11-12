@@ -17,7 +17,6 @@ public sealed partial class MainViewModel : INotifyPropertyChanged
     private readonly SettingsCache settings = App.SettingsCache;
     private readonly AutomationHandler automation;
     private DispatcherTimer timer;
-    private int selectedIndex = -1;
 
     public MainViewModel()
     {
@@ -245,17 +244,17 @@ public sealed partial class MainViewModel : INotifyPropertyChanged
     /// </summary>
     public int SelectedIndex
     {
-        get => selectedIndex;
+        get;
         set
         {
-            selectedIndex = value;
+            field = value;
             OnPropertyChanged();
 
             CopyCardNameCommand?.OnCanExecuteChanged();
             CopyEnglishNameCommand?.OnCanExecuteChanged();
             GoToWikiCommand?.OnCanExecuteChanged();
         }
-    }
+    } = -1;
 
     /// <summary>
     /// <see cref="System.Windows.Controls.TabControl"/> で手前に表示しているカードを取得します。

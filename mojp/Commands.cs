@@ -170,8 +170,14 @@ public sealed class GoToWikiCommand(MainViewModel viewModel) : Command(viewModel
             sb.Append(Uri.EscapeDataString(card.Name.Replace(' ', '_')));
         }
         else
-            sb.Append(Uri.EscapeUriString(card.WikiLink));
+        {
+            var split = new StringSplitter(card.WikiLink, '/');
 
+            while (split.TrySplit())
+                sb.Append(Uri.EscapeDataString(split.Current)).Append('/');
+
+            sb.Length--;
+        }
         Process.Start(sb.ToString());
 #endif
     }

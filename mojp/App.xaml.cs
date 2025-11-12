@@ -87,7 +87,6 @@ public partial class App : Application
             if (IsClickOnce)
                 DataDirectory = domain.GetData("DataDirectory") as string;
 #endif
-
             var app = new App();
             app.InitializeComponent();
             app.Run();

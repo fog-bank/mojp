@@ -31,8 +31,8 @@
     <UpdateRequired>true</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>http://mojp.azurewebsites.net/docs/clickonce/</InstallUrl>
-    <SupportUrl>https://github.com/fog-bank/mojp/wiki/mojp-%25E8%25AA%25AC%25E6%2598%258E%25E6%259B%25B8</SupportUrl>
-    <ErrorReportUrl>https://github.com/fog-bank/mojp/wiki/%25E4%25B8%258D%25E5%2585%25B7%25E5%2590%2588</ErrorReportUrl>
+    <SupportUrl>https://github.com/fog-bank/mojp/wiki</SupportUrl>
+    <ErrorReportUrl>https://github.com/fog-bank/mojp/issues</ErrorReportUrl>
     <TargetCulture>ja-JP</TargetCulture>
     <ProductName>MO 日本語カードテキスト表示ツール</ProductName>
     <PublisherName>MO 日本語カードテキスト表示ツール</PublisherName>

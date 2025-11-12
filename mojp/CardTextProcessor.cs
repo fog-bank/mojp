@@ -703,7 +703,7 @@ partial class Card
                     if (card.Text != text)
                     {
                         card.Text = text;
-                        card.lines = null;
+                        card.TextLines = null;
                         applied = true;
                     }
                     break;

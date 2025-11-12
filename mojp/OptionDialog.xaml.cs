@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
+using System.Globalization;
 using System.IO;
 using System.Text;
 using System.Threading.Tasks;
@@ -86,7 +87,7 @@ public partial class OptionDialog : Window
     {
 #if !OFFLINE
         if (DateTime.TryParse(App.SettingsCache.PDServerLastTimeUtc, out var time))
-            txbPDRotationTime.Text = time.ToString("g");
+            txbPDRotationTime.Text = time.ToString("g", CultureInfo.CurrentCulture);
         else
             txbPDRotationTime.Text = "不明";
 #else

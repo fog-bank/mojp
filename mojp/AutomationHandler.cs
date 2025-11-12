@@ -11,7 +11,7 @@ partial class MainViewModel
     /// <summary>
     /// オートメーション関連の操作を行います。
     /// </summary>
-    private class AutomationHandler
+    private sealed class AutomationHandler
     {
         private Process mtgoProc;
         private CacheRequest eventCacheReq = new();
@@ -309,8 +309,11 @@ partial class MainViewModel
                     return;
             }
 
+#pragma warning disable IDE0079 // Remove unnecessary suppression
+#pragma warning disable CA1865 // Use char overload
             if (value.EndsWith(".", StringComparison.Ordinal))
                 return;
+#pragma warning restore IDE0079,CA1865
 
             if (value.EndsWith("Cast", StringComparison.Ordinal) ||
                 value.EndsWith("Play", StringComparison.Ordinal) ||
