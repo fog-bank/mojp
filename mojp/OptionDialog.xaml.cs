@@ -176,7 +176,9 @@ public partial class OptionDialog : Window
 
             var streams = dlg.OpenFiles();
             bool append = false;
-
+#if NET
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+#endif
             foreach (var stream in streams)
             {
                 using var sr = new StreamReader(stream, Encoding.GetEncoding("shift-jis"));
@@ -199,7 +201,7 @@ public partial class OptionDialog : Window
             isFixingCard = false;
         }
 #endif
-    }
+        }
 
     private void OnTestBoxKeyDown(object sender, KeyEventArgs e)
     {

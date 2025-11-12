@@ -40,7 +40,7 @@ partial class MainViewModel
         /// <summary>
         /// メニューが開いたイベントをサブスクライブします。
         /// </summary>
-        public async Task RegisterEventHandler()
+        public async Task RegisterEventHandlerAsync()
         {
             await Task.Run(() =>
             {
@@ -59,7 +59,7 @@ partial class MainViewModel
         /// <summary>
         /// 実行中の MO を検索し、その後はプロセスが終了したかを調べます。
         /// </summary>
-        public async Task FindMagicOnline()
+        public async Task FindMagicOnlineAsync()
         {
             var proc = mtgoProc;
 
@@ -111,7 +111,7 @@ partial class MainViewModel
         /// <summary>
         /// 各種リソースを解放します。
         /// </summary>
-        public async Task Dispose()
+        public async Task DisposeAsync()
         {
             mtgoProc?.Dispose();
             mtgoProc = null;
@@ -119,7 +119,7 @@ partial class MainViewModel
             cacheReq = null;
             textBlockCondition = null;
 
-            await UnregisterEventHandler();
+            await UnregisterEventHandlerAsync();
         }
 
         // Automation イベント ハンドラーは非 UI スレッドで呼び出される
@@ -371,7 +371,7 @@ partial class MainViewModel
         /// <summary>
         /// UI Automation イベントハンドラーを別スレッドで削除します。
         /// </summary>
-        private async Task UnregisterEventHandler()
+        private static async Task UnregisterEventHandlerAsync()
         {
             await Task.Run(() =>
             {
@@ -409,7 +409,7 @@ partial class MainViewModel
         }
 
 #if DEBUG
-        private System.Collections.ArrayList GetListeners()
+        private static System.Collections.ArrayList GetListeners()
         {
             var assembly = System.Reflection.Assembly.GetAssembly(typeof(Automation));
             var type = assembly.GetType("MS.Internal.Automation.ClientEventManager");
@@ -418,7 +418,7 @@ partial class MainViewModel
             return listeners;
         }
 
-        private int GetListenersCount() => (GetListeners()?.Count).GetValueOrDefault();
+        private static int GetListenersCount() => (GetListeners()?.Count).GetValueOrDefault();
 #endif
     }
 }

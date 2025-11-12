@@ -24,7 +24,7 @@ public partial class MainWindow : Window
     {
         base.OnClosing(e);
 
-        await ViewModel?.Dispose();
+        await ViewModel?.DisposeAsync();
     }
 
     // ウィンドウ全体でドラッグ可能にする
@@ -96,7 +96,7 @@ public partial class MainWindow : Window
 #else
             App.SetCardInfosFromResource();
 #endif
-            await vm.InitAutomation();
+            await vm.InitAutomationAsync();
         });
 
         imgLoading.Visibility = Visibility.Hidden;

@@ -339,10 +339,10 @@ public sealed partial class MainViewModel : INotifyPropertyChanged
         }
     }
 
-    public async Task InitAutomation()
+    public async Task InitAutomationAsync()
     {
-        await automation.RegisterEventHandler();
-        await automation.FindMagicOnline();
+        await automation.RegisterEventHandlerAsync();
+        await automation.FindMagicOnlineAsync();
     }
 
     /// <summary>
@@ -379,7 +379,7 @@ public sealed partial class MainViewModel : INotifyPropertyChanged
     /// <summary>
     /// 各リソースを解放します。
     /// </summary>
-    public async Task Dispose()
+    public async Task DisposeAsync()
     {
         var commandNames = new List<string>(ToolbarCommands.Count);
 
@@ -398,10 +398,10 @@ public sealed partial class MainViewModel : INotifyPropertyChanged
         }
         Cards.Clear();
 
-        await automation.Dispose();
+        await automation.DisposeAsync();
     }
 
-    private async void OnCapture(object sender, EventArgs e) => await automation.FindMagicOnline();
+    private async void OnCapture(object sender, EventArgs e) => await automation.FindMagicOnlineAsync();
 
     private void OnPropertyChanged([CallerMemberName] string propertyName = null)
         => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));

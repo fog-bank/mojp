@@ -21,6 +21,7 @@
     <Configurations>Debug;Release;Offline</Configurations>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <Nullable>disable</Nullable>
+    <NoWarn>$(NoWarn);IDE0057;IDE0180</NoWarn>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Offline'">
