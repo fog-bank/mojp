@@ -80,7 +80,7 @@ public partial class App : Application
 
         if (createdNew)
         {
-#if !OFFLINE
+#if (!NET && !OFFLINE)
             var domain = AppDomain.CurrentDomain;
             IsClickOnce = domain.ActivationContext?.Identity.FullName != null;
 

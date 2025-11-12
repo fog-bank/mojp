@@ -25,7 +25,7 @@ partial class MainViewModel
 
         public AutomationHandler(MainViewModel viewModel)
         {
-            Debug.WriteLine("AutomationHandler .ctor @ T" + Thread.CurrentThread.ManagedThreadId);
+            Debug.WriteLine("AutomationHandler .ctor @ T" + Environment.CurrentManagedThreadId);
             ViewModel = viewModel;
 
             eventCacheReq.Add(AutomationElement.ProcessIdProperty);
@@ -51,7 +51,7 @@ partial class MainViewModel
                 }
 #if DEBUG
                 Debug.WriteLine("Automation event handlers (after add) = " +
-                    GetListenersCount() + " @ T" + Thread.CurrentThread.ManagedThreadId);
+                    GetListenersCount() + " @ T" + Environment.CurrentManagedThreadId);
 #endif
             }).ConfigureAwait(false);
         }
@@ -69,7 +69,7 @@ partial class MainViewModel
                 if (Interlocked.CompareExchange(ref mtgoProc, null, proc) == proc)
                 {
                     proc.Dispose();
-                    Debug.WriteLine("MO プロセス終了 @ T" + Thread.CurrentThread.ManagedThreadId);
+                    Debug.WriteLine("MO プロセス終了 @ T" + Environment.CurrentManagedThreadId);
                 }
             }
 
@@ -83,7 +83,7 @@ partial class MainViewModel
                     ViewModel.InvokeSetMessage("起動中のプロセスの中に MO が見つかりません。");
                     return;
                 }
-                Debug.WriteLine("MO プロセス検出 @ T" + Thread.CurrentThread.ManagedThreadId);
+                Debug.WriteLine("MO プロセス検出 @ T" + Environment.CurrentManagedThreadId);
 
                 // mtgoProc = proc;
                 var oldProc = Interlocked.CompareExchange(ref mtgoProc, proc, null);
@@ -95,7 +95,7 @@ partial class MainViewModel
                     //{
                     //    mtgoProc?.Dispose();
                     //    mtgoProc = null;
-                    //    Debug.WriteLine("MO プロセス終了 @ T" + Thread.CurrentThread.ManagedThreadId);
+                    //    Debug.WriteLine("MO プロセス終了 @ T" + Environment.CurrentManagedThreadId);
 
                     //    ViewModel.RestartRefreshTimer();
                     //};
@@ -166,7 +166,7 @@ partial class MainViewModel
                 try
                 {
                     Debug.WriteLine(
-                        "[MenuOpendEvent] Proc = " + menu.Cached.ProcessId + " @ T" + Thread.CurrentThread.ManagedThreadId);
+                        "[MenuOpendEvent] Proc = " + menu.Cached.ProcessId + " @ T" + Environment.CurrentManagedThreadId);
 
                     if (menu.Cached.ProcessId != mtgoProc.Id)
                         return null;
@@ -377,13 +377,13 @@ partial class MainViewModel
             {
 #if DEBUG
                 Debug.WriteLine("Automation event handlers (before remove) = " +
-                    GetListenersCount() + " @ T" + Thread.CurrentThread.ManagedThreadId);
+                    GetListenersCount() + " @ T" + Environment.CurrentManagedThreadId);
 #endif
                 // OpenFileDialog を開いた後だと、別スレッドにしないとすごく遅くなる現象あり
                 Automation.RemoveAllEventHandlers();
 #if DEBUG
                 Debug.WriteLine("Automation event handlers (after remove) = " +
-                    GetListenersCount() + " @ T" + Thread.CurrentThread.ManagedThreadId);
+                    GetListenersCount() + " @ T" + Environment.CurrentManagedThreadId);
 #endif
             }).ConfigureAwait(false);
         }

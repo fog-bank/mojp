@@ -36,9 +36,9 @@ public static class CardPrice
     // card_name -> (tix_info, expire_time)
     private static readonly ConcurrentDictionary<string, Tuple<string, DateTime>> prices = new();
 
-    private static volatile bool usingScryfall = false;
+    private static volatile bool usingScryfall;
     private static DateTime requestTime = DateTime.UtcNow - TimeSpan.FromMilliseconds(200);
-    private static HashSet<string> pdLegalCards = null;
+    private static HashSet<string> pdLegalCards;
 
     private const string CacheFileName = "price_list.txt";
     private const string PDLegalFileName = "pd_legal_cards.txt";
@@ -72,7 +72,7 @@ public static class CardPrice
         if (!EnableCardPrice || IsSpecialCard(card))
             return string.Empty;
 
-        if (prices.TryGetValue(card.Name, out var value) || prices.TryGetValue(card.RelatedCardName, out value))
+        if (TryGetPriceFromCache(card, out var value))
         {
             if (value?.Item1 != null)
                 return value.Item1;
@@ -305,6 +305,14 @@ public static class CardPrice
     }
 
     /// <summary>
+    /// 指定したカードの価格情報がキャッシュに存在するかどうかを調べます。
+    /// </summary>
+    private static bool TryGetPriceFromCache(Card card, out Tuple<string, DateTime> value)
+    {
+        return prices.TryGetValue(card.Name, out value) || (card.RelatedCardName != null && prices.TryGetValue(card.RelatedCardName, out value));
+    }
+
+    /// <summary>
     /// <see cref="PriceTargetProperty"/> 添付プロパティの値が変更されたときに、カード価格情報の取得を行います。
     /// </summary>
     private static async void OnPriceTargetChanged(DependencyObject sender, DependencyPropertyChangedEventArgs e)
@@ -314,7 +322,7 @@ public static class CardPrice
         if (!EnableCardPrice || IsSpecialCard(card))
             return;
 
-        if (prices.TryGetValue(card.Name, out var value) || prices.TryGetValue(card.RelatedCardName, out value))
+        if (TryGetPriceFromCache(card, out var value))
         {
             // 既に取得要請が出ている or まだキャッシュが有効かどうか
             if (value == null || value.Item2 > DateTime.UtcNow)
@@ -416,7 +424,7 @@ public static class CardPrice
 
         // ヒット件数の確認
         const string TotalCardsTag = "\"total_cards\":";
-        int startIndex = json.IndexOf(TotalCardsTag);
+        int startIndex = json.IndexOf(TotalCardsTag, StringComparison.Ordinal);
 
         if (startIndex == -1)
             return NoPrice;
@@ -425,7 +433,7 @@ public static class CardPrice
         {
             // exact サーチじゃないので、複数ヒットする可能性がある
             const string CardTag = "\"name\":";
-            startIndex = json.IndexOf(CardTag + "\"" + cardName.Replace("_", " // ") + "\"");
+            startIndex = json.IndexOf(CardTag + "\"" + cardName.Replace("_", " // ") + "\"", StringComparison.Ordinal);
 
             if (startIndex == -1)
                 return NoPrice;
@@ -433,13 +441,13 @@ public static class CardPrice
 
         // tix 情報を探す範囲をカード 1 種類分に絞る
         const string RelatedTag = "\"related_uris\":";
-        int endIndex = json.IndexOf(RelatedTag, startIndex);
+        int endIndex = json.IndexOf(RelatedTag, startIndex, StringComparison.Ordinal);
 
         if (endIndex == -1)
             endIndex = json.Length;
 
         const string TixTag = "\"tix\":";
-        startIndex = json.IndexOf(TixTag, startIndex, endIndex - startIndex);
+        startIndex = json.IndexOf(TixTag, startIndex, endIndex - startIndex, StringComparison.Ordinal);
 
         if (startIndex == -1 || TrySubstringEquals(json, startIndex + TixTag.Length, "null"))
             return NoPrice;
