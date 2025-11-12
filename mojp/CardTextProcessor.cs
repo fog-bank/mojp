@@ -280,7 +280,7 @@ partial class Card
             string targets = (string)node.Attribute("target");
 
             if (targets.Contains("all"))
-                targets = "value|ja|type|pt|rel|wiki|text";
+                targets = "name|ja|type|pt|rel|wiki|text";
 
             string pattern = (string)node.Attribute("pattern");
             try
@@ -330,7 +330,7 @@ partial class Card
         // P/T だけ追加
         foreach (var node in doc.Root.Elements("add").Elements("pt"))
         {
-            string name = (string)node.Attribute("value");
+            string name = (string)node.Attribute("name");
             string pt = (string)node.Attribute("pt");
             bool? append = (bool?)node.Attribute("append");
 
@@ -354,7 +354,7 @@ partial class Card
         // 関連カードだけ追加
         foreach (var node in doc.Root.Elements("add").Elements("rel"))
         {
-            string name = (string)node.Attribute("value");
+            string name = (string)node.Attribute("name");
 
             if (cards.TryGetValue(name, out var card))
             {
@@ -371,7 +371,7 @@ partial class Card
         // Wiki へのリンクだけ追加
         foreach (var node in doc.Root.Elements("add").Elements("wiki"))
         {
-            string name = (string)node.Attribute("value");
+            string name = (string)node.Attribute("name");
 
             if (cards.TryGetValue(name, out var card))
             {
@@ -386,7 +386,7 @@ partial class Card
         foreach (var node in doc.Root.Elements("add").Elements("alt"))
         {
             string alt = (string)node.Attribute("alt");
-            string name = (string)node.Attribute("value");
+            string name = (string)node.Attribute("name");
 
             if (cards.TryGetValue(name, out var card))
             {
@@ -399,7 +399,7 @@ partial class Card
         // カードの削除
         foreach (var node in doc.Root.Elements("remove").Elements("card"))
         {
-            string name = (string)node.Attribute("value");
+            string name = (string)node.Attribute("name");
             Debug.WriteLineIf(!cards.ContainsKey(name), name + " は既にカードリストに含まれていません。");
             cards.Remove(name);
         }
@@ -407,7 +407,7 @@ partial class Card
         // 暫定日本語カード名の削除
         foreach (var node in doc.Root.Elements("remove").Elements("ja"))
         {
-            string name = (string)node.Attribute("value");
+            string name = (string)node.Attribute("name");
 
             if (cards.TryGetValue(name, out var card))
             {
@@ -523,7 +523,7 @@ partial class Card
                 if (newCard.EqualsStrict(oldCard))
                 {
                     // WHISPER が対応した場合に appendix.xml から外したい
-                    identicalNodes.Add(new XElement("card", new XAttribute("value", newCard.Name)));
+                    identicalNodes.Add(new XElement("card", new XAttribute("name", newCard.Name)));
                     Debug.WriteLine(newCard.Name + " は置換する必要がありません。");
                 }
                 else
@@ -551,7 +551,7 @@ partial class Card
         // カードタイプだけ書き換え
         foreach (var node in doc.Root.Elements("replace").Elements("type"))
         {
-            string name = (string)node.Attribute("value");
+            string name = (string)node.Attribute("name");
 
             if (cards.TryGetValue(name, out var card))
             {
@@ -559,12 +559,12 @@ partial class Card
 
                 if (card.Type == type)
                 {
-                    identicalNodes.Add(new XElement("type", new XAttribute("value", card.Name)));
+                    identicalNodes.Add(new XElement("type", new XAttribute("name", card.Name)));
                     Debug.WriteLine(card.Name + " のカードタイプは置換する必要がありません。");
                 }
                 else
                 {
-                    beforeNodes.Add(new XElement("type", new XAttribute("value", name), new XAttribute("type", card.Type)));
+                    beforeNodes.Add(new XElement("type", new XAttribute("name", name), new XAttribute("type", card.Type)));
                     replacedNodes.Add(node);
                     card.Type = type;
                 }
@@ -576,7 +576,7 @@ partial class Card
         // 関連カードだけ書き換え
         foreach (var node in doc.Root.Elements("replace").Elements("rel"))
         {
-            string name = (string)node.Attribute("value");
+            string name = (string)node.Attribute("name");
 
             if (cards.TryGetValue(name, out var card))
             {
@@ -608,7 +608,7 @@ partial class Card
         // 代替カード名の関連付けチェック
         foreach (var kv in cards)
         {
-            Debug.WriteLineIf(kv.Key != kv.Value.Name && !cards.Values.Contains(kv.Value),
+            Debug.WriteLineIf(kv.Key != kv.Value.Name && (!cards.TryGetValue(kv.Value.Name, out var card) || card != kv.Value),
                 "代替カード名の" + kv.Key + " に関連付けられたカードがメモリーリークしています。");
         }
 
@@ -641,7 +641,7 @@ partial class Card
         {
             switch (target)
             {
-                case "value":
+                case "name":
                     string name = regex.Replace(card.Name, value);
 
                     if (card.Name != name)

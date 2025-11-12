@@ -72,7 +72,7 @@ public static class CardPrice
         if (!EnableCardPrice || IsSpecialCard(card))
             return string.Empty;
 
-        if (prices.TryGetValue(card.Name, out var value) || prices.TryGetValue(card.RelatedCardName, out value))
+        if (GetPriceFromCache(card, out var value))
         {
             if (value?.Item1 != null)
                 return value.Item1;
@@ -305,6 +305,14 @@ public static class CardPrice
     }
 
     /// <summary>
+    /// 指定したカードの価格情報がキャッシュに存在するかどうかを調べます。
+    /// </summary>
+    private static bool GetPriceFromCache(Card card, out Tuple<string, DateTime> value)
+    {
+        return prices.TryGetValue(card.Name, out value) || (card.RelatedCardName != null && prices.TryGetValue(card.RelatedCardName, out value));
+    }
+
+    /// <summary>
     /// <see cref="PriceTargetProperty"/> 添付プロパティの値が変更されたときに、カード価格情報の取得を行います。
     /// </summary>
     private static async void OnPriceTargetChanged(DependencyObject sender, DependencyPropertyChangedEventArgs e)
@@ -314,7 +322,7 @@ public static class CardPrice
         if (!EnableCardPrice || IsSpecialCard(card))
             return;
 
-        if (prices.TryGetValue(card.Name, out var value) || prices.TryGetValue(card.RelatedCardName, out value))
+        if (GetPriceFromCache(card, out var value))
         {
             // 既に取得要請が出ている or まだキャッシュが有効かどうか
             if (value == null || value.Item2 > DateTime.UtcNow)
