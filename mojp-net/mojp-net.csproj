@@ -34,7 +34,7 @@
     <Authors>fog-bank</Authors>
     <Company>co3366353</Company>
     <Description>MO 日本語カードテキスト表示ツール</Description>
-    <Copyright>Copyright © 2025 fog-bank. Some rights reserved.</Copyright>
+    <Copyright>Copyright © $([System.DateTime]::Now.ToString(yyyy)) fog-bank. Some rights reserved.</Copyright>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageProjectUrl>https://fog-bank.github.io/mojp/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/fog-bank/mojp</RepositoryUrl>
