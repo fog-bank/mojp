@@ -11,4 +11,5 @@
     <File Path="../README.md" />
   </Folder>
   <Project Path="mojp.csproj" Id="52da943c-0989-48e7-a145-e41febc23d24" />
+  <Project Path="../mojp-net/mojp-net.csproj" />
 </Solution>
