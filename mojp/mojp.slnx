@@ -5,11 +5,12 @@
     <BuildType Name="Release" />
   </Configurations>
   <Folder Name="/Solution Items/">
+    <File Path="../.github/workflows/codeql-analysis.yml" />
     <File Path="../docs/index.html" />
     <File Path="../docs/version.txt" />
     <File Path="../docs/version_v1.txt" />
     <File Path="../README.md" />
   </Folder>
-  <Project Path="mojp.csproj" Id="52da943c-0989-48e7-a145-e41febc23d24" />
   <Project Path="../mojp-net/mojp-net.csproj" />
+  <Project Path="mojp.csproj" Id="52da943c-0989-48e7-a145-e41febc23d24" />
 </Solution>

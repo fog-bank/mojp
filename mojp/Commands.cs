@@ -13,8 +13,6 @@ namespace Mojp;
 /// </summary>
 public abstract class Command : ICommand, INotifyPropertyChanged
 {
-    private bool isVisible = true;
-
     public Command(MainViewModel viewModel, string name)
     {
         ViewModel = viewModel;
@@ -50,13 +48,13 @@ public abstract class Command : ICommand, INotifyPropertyChanged
     /// </summary>
     public bool IsVisible
     {
-        get => isVisible;
+        get;
         set
         {
-            isVisible = value;
+            field = value;
             OnPropertyChanged();
         }
-    }
+    } = true;
 
     public virtual bool IsEnabled => true;
 
