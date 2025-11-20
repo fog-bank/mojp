@@ -321,6 +321,11 @@ partial class MainViewModel
                 value.StartsWith("Attack ", StringComparison.Ordinal))
                 return;
 
+            // 待機
+            if (value.StartsWith("Suspend ", StringComparison.Ordinal) ||
+                value.StartsWith("Cast without ", StringComparison.Ordinal))
+                return;
+
             // 部屋
             if (value.StartsWith("Unlock ", StringComparison.Ordinal))
                 return;
