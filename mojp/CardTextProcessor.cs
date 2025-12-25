@@ -212,7 +212,9 @@ partial class Card
                         break;
 
                     case "　セット":
-                        if (tokens[1] is "Special" or "Astral Set" or "Dreamcast's Original" or "Mystery Booster" or "Unglued" or "Unhinged" or "Unstable" or "Unsanctioned" or "Unfinity" or "Magic The Gathering?Marvel's Spider-Man SPE")
+                        if (tokens[1] is "Special" or "Astral Set" or "Dreamcast's Original" or "Mystery Booster"
+                            or "Unglued" or "Unhinged" or "Unstable" or "Unsanctioned" or "Unfinity"
+                            or "Magic The Gathering?Marvel's Spider-Man SPE")
                             card = null;
                         break;
 
@@ -325,6 +327,65 @@ partial class Card
             }
         }
 
+        // カードの削除
+        foreach (var node in doc.Root.Elements("remove").Elements("card"))
+        {
+            string name = (string)node.Attribute("name");
+            Debug.WriteLineIf(!cards.ContainsKey(name), name + " は既にカードリストに含まれていません。");
+            cards.Remove(name);
+        }
+
+        // 暫定日本語カード名の削除
+        foreach (var node in doc.Root.Elements("remove").Elements("ja"))
+        {
+            string name = (string)node.Attribute("name");
+
+            if (cards.TryGetValue(name, out var card))
+            {
+                Debug.WriteLineIf(card.Name == card.JapaneseName, name + " には既に日本語名がありません。");
+                card.JapaneseName = card.Name;
+            }
+            else
+                Debug.WriteLine(name + " は既にカードリストに含まれていません。");
+        }
+
+        // Universe beyond セットから Universe within セット化
+        Debug.WriteLine("UB セットのカード変更");
+
+        foreach (var node in doc.Root.Elements("universe").Elements("card"))
+        {
+            string beyond = (string)node.Attribute("beyond"); // required
+            string within = (string)node.Attribute("within"); // required
+            string ja = (string)node.Attribute("ja");
+            string rel = (string)node.Attribute("rel");
+            string flavor = (string)node.Attribute("flavor");
+
+            Debug.WriteLineIf(!cards.TryGetValue(within, out var card), beyond + " => " + within + " のカードが WHISPER に未登録です。");
+            Debug.WriteLineIf(card.JapaneseName != ja, beyond + " => " + within + " の日本語カード名が一致しません。");
+
+            if (cards.TryGetValue(beyond, out card))
+            {
+                string beyondJaName = card.JapaneseName;
+
+                card.Name = within;
+                card.JapaneseName = ja ?? within;
+                card.WikiLink ??= card.HasJapaneseName ? beyondJaName + "/" + beyond : beyond;
+                card.Text = card.Text.Replace(beyondJaName, card.JapaneseName);
+                card.RelatedCardName = rel;
+
+                if (flavor != null)
+                {
+                    foreach (string flavorWord in flavor.Split('|'))
+                        card.Text = card.Text.Replace(flavorWord + " ― ", null);
+                }
+                cards.Remove(beyond);
+                cards[within] = card;
+                cards[beyond] = card;
+            }
+            else
+                Debug.WriteLine(beyond + " はカードリストに含まれていません。");
+        }
+
         // P/T だけ追加
         foreach (var node in doc.Root.Elements("add").Elements("pt"))
         {
@@ -392,65 +453,6 @@ partial class Card
             }
             else
                 Debug.WriteLine("代替カード名の追加先となる " + name + " のカード情報がありません。");
-        }
-
-        // カードの削除
-        foreach (var node in doc.Root.Elements("remove").Elements("card"))
-        {
-            string name = (string)node.Attribute("name");
-            Debug.WriteLineIf(!cards.ContainsKey(name), name + " は既にカードリストに含まれていません。");
-            cards.Remove(name);
-        }
-
-        // 暫定日本語カード名の削除
-        foreach (var node in doc.Root.Elements("remove").Elements("ja"))
-        {
-            string name = (string)node.Attribute("name");
-
-            if (cards.TryGetValue(name, out var card))
-            {
-                Debug.WriteLineIf(card.Name == card.JapaneseName, name + " には既に日本語名がありません。");
-                card.JapaneseName = card.Name;
-            }
-            else
-                Debug.WriteLine(name + " は既にカードリストに含まれていません。");
-        }
-
-        // Universe beyond セットから Universe within セット化
-        Debug.WriteLine("UB セットのカード変更");
-
-        foreach (var node in doc.Root.Elements("universe").Elements("card"))
-        {
-            string beyond = (string)node.Attribute("beyond"); // required
-            string within = (string)node.Attribute("within"); // required
-            string ja = (string)node.Attribute("ja");
-            string rel = (string)node.Attribute("rel");
-            string flavor = (string)node.Attribute("flavor");
-
-            Debug.WriteLineIf(!cards.TryGetValue(within, out var card), beyond + " => " + within + " のカードが WHISPER に未登録です。");
-            Debug.WriteLineIf(card.JapaneseName != ja, beyond + " => " + within + " の日本語カード名が一致しません。");
-
-            if (cards.TryGetValue(beyond, out card))
-            {
-                string beyondJaName = card.JapaneseName;
-
-                card.Name = within;
-                card.JapaneseName = ja ?? within;
-                card.WikiLink ??= card.HasJapaneseName ? beyondJaName + "/" + beyond : beyond;
-                card.Text = card.Text.Replace(beyondJaName, card.JapaneseName);
-                card.RelatedCardName = rel;
-
-                if (flavor != null)
-                {
-                    foreach (string flavorWord in flavor.Split('|'))
-                        card.Text = card.Text.Replace(flavorWord + " ― ", null);
-                }
-                cards.Remove(beyond);
-                cards[within] = card;
-                cards[beyond] = card;
-            }
-            else
-                Debug.WriteLine(beyond + " はカードリストに含まれていません。");
         }
 
         // カードデータの差し替え
@@ -668,32 +670,41 @@ partial class Card
                     break;
 
                 case "pt":
-                    string pt = regex.Replace(card.PT, value);
-
-                    if (card.PT != pt)
+                    if (card.PT != null)
                     {
-                        card.PT = pt;
-                        applied = true;
+                        string pt = regex.Replace(card.PT, value);
+
+                        if (card.PT != pt)
+                        {
+                            card.PT = pt;
+                            applied = true;
+                        }
                     }
                     break;
 
                 case "rel":
-                    string related = regex.Replace(card.RelatedCardName, value);
-
-                    if (card.RelatedCardName != related)
+                    if (card.RelatedCardName != null)
                     {
-                        card.RelatedCardName = related;
-                        applied = true;
+                        string related = regex.Replace(card.RelatedCardName, value);
+
+                        if (card.RelatedCardName != related)
+                        {
+                            card.RelatedCardName = related;
+                            applied = true;
+                        }
                     }
                     break;
 
                 case "wiki":
-                    string wikilink = regex.Replace(card.WikiLink, value);
-
-                    if (card.WikiLink != wikilink)
+                    if (card.WikiLink != null)
                     {
-                        card.WikiLink = wikilink;
-                        applied = true;
+                        string wikilink = regex.Replace(card.WikiLink, value);
+
+                        if (card.WikiLink != wikilink)
+                        {
+                            card.WikiLink = wikilink;
+                            applied = true;
+                        }
                     }
                     break;
 

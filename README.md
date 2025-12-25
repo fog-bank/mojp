@@ -33,7 +33,7 @@ Windows 11
 * 右クリックメニューから、カード名をコピーしたり、このアプリの設定を変更したりできます。
 * 以下の機能はインターネットにバックグラウンドで接続します。不要な場合は設定から無効にしてください。
   * 起動時に https://fog-bank.github.io/mojp/ にアクセスして、新しいバージョンがリリースされているかどうかを自動で確認します。ZIP 版の場合はダウンロードまではしません。インストーラー版の場合は自動確認を無効にできません。
-  * 起動時に [Penny Dreadful のカードリスト](http://pdmtgo.com/legal_cards.txt)をダウンロードします (1 日 1 回まで) 。
+  * 起動時に [Penny Dreadful のカードリスト](https://pennydreadfulmtg.github.io/legal_cards.txt)をダウンロードします (1 日 1 回まで) 。
   * カードを表示するたび [Scryfall の検索 API](https://scryfall.com/docs/api/cards/search) にアクセスします (1 秒に 5 枚まで、各カード 1 日 1 回まで) 。
 
 ## 開発環境

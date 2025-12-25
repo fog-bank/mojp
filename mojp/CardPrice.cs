@@ -182,15 +182,15 @@ public static class CardPrice
             if (!DateTime.TryParseExact(
                 App.SettingsCache.PDServerLastTimeUtc, "o", culture, DateTimeStyles.RoundtripKind, out lastModifiedTime))
             {
-                // PD S9 更新前時刻
-                lastModifiedTime = new DateTime(2018, 7, 13, 7, 0, 0, DateTimeKind.Utc);
+                // PD S39 更新前時刻
+                lastModifiedTime = new DateTime(2025, 11, 13, 7, 0, 0, DateTimeKind.Utc);
             }
         }
 
         // 初回であるか、少なくとも前回から 1 日は経過している
         if (forceCheck || !exists || DateTime.UtcNow - lastCheckTime > TimeSpan.FromDays(1))
         {
-            using var req = new HttpRequestMessage(HttpMethod.Get, "http://pdmtgo.com/legal_cards.txt");
+            using var req = new HttpRequestMessage(HttpMethod.Get, "https://pennydreadfulmtg.github.io/legal_cards.txt");
 
             // 最終更新日をチェックして通信量を減らす
             if (!forceCheck && exists)
@@ -225,7 +225,7 @@ public static class CardPrice
             }
         }
 
-        var legalCards = new HashSet<string>(16000); // 17519
+        var legalCards = new HashSet<string>(16000); // prime: 17519
 
         foreach (string line in File.ReadLines(path))
         {

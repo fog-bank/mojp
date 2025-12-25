@@ -3,7 +3,7 @@ using System.Text.Json;
 using System.Xml.Linq;
 using Mojp;
 
-bool redownload = false;
+bool redownload = true;
 
 var cts = new CancellationTokenSource();
 
