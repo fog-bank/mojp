@@ -1,5 +1,5 @@
 # MO 日本語カードテキスト表示ツール
-[Magic: The Gathering Online](http://www.mtgo.com/) で表示されているカードに対応して、日本語テキストを表示するアプリです。
+[Magic: The Gathering Online](https://www.mtgo.com/) で表示されているカードに対応して、日本語テキストを表示するアプリです。
 
 **MO のカード枠実装の変更に対応するため、v3.0.0 よりカードテキストの表示方法が以前から変更されました。**
 
@@ -10,7 +10,7 @@
 * 右クリックしたカードの日本語テキストを表示する
 * カード名（日本語または英語）をコピーする
 * [MTG Wiki](http://mtgwiki.com/) でカードを調べる
-* カードが [Penny Dreadful](http://pdmtgo.com/) (PD) で使用可能かどうかを表示する
+* カードが [Penny Dreadful](https://pennydreadfulmagic.com/) (PD) で使用可能かどうかを表示する
 * [Scryfall](https://scryfall.com/) から日毎の平均価格を取得する
 
 ## 必要条件
@@ -46,12 +46,12 @@ C# 14
 
 ## リファレンス
 * MO で日本語テキストを表示する試みとして、[Magic Online 日本語化計画](https://k5.hatenablog.com/archive/category/MTGO_SUPPORT)の影響を受けています。
-* このアプリで表示する日本語テキストは、[WHISPER](http://whisper.wisdom-guild.net/) の検索結果をテキストファイルに保存したものに基づいています。
+* このアプリで表示する日本語テキストは、[WHISPER](https://whisper.wisdom-guild.net/) の検索結果をテキストファイルに保存したものに基づいています。
 * アイコンの一部は Iconfinder \[[1](https://www.iconfinder.com/icons/6000/book_dictionary_learn_school_translate_icon#size=128), [2](https://www.iconfinder.com/icons/285680/camera_icon#size=16)\] を利用しています。
 
 ### 手動でカードデータを更新する方法
 1. リポジトリから [appendix.xml](https://github.com/fog-bank/mojp/blob/master/mojp/appendix.xml) をダウンロードして、アプリケーションフォルダに保存しておく。
-2. [WHISPER](http://whisper.wisdom-guild.net/) で、次元・現象・計略・策略以外のカードタイプにチェックを入れ、さらに一番下の出力形式をテキストにして検索する。
+2. [WHISPER](https://whisper.wisdom-guild.net/) で、次元・現象・計略・策略以外のカードタイプにチェックを入れ、さらに一番下の出力形式をテキストにして検索する。
 注）検索結果が多すぎてタイムアウトするため、条件を絞って複数の出力に分割する必要がある場合があります。
 3. 表示されたテキストを、エンコード形式を Shift-JIS にして保存する。
 4. 本アプリの設定画面を開き、一番下の開発用メニューから「検索結果テキストの読み込み」ボタンで保存したテキストを読み込む。
