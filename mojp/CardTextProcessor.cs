@@ -537,7 +537,7 @@ partial class Card
                     var cloneCard = newCard.Clone();
                     foreach (var tup in regexes)
                     {
-                        Debug.WriteLineIf(ReplaceByRegex(cloneCard, tup.Item1, tup.Item2, tup.Item3), 
+                        Debug.WriteLineIf(ReplaceByRegex(cloneCard, tup.Item1, tup.Item2, tup.Item3),
                             newCard.Name + " には正規表現による検索（" + tup.Item2 + "）に一致する箇所があります。");
                     }
                 }
