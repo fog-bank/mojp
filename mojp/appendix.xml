@@ -4,12 +4,6 @@
     <card name="Gleemox" ja="Gleemox" type="アーティファクト">(Ｔ)：好きな色１色のマナ１点を加える。
 このカードは禁止されている。</card>
 
-    <!-- TMC -->
-    <!-- 099 -->
-    <!-- 112 -->
-    <!-- 116 -->
-    <!-- 123 -->
-
     <!-- 一時消失 -->
     <card name="Petty Theft" ja="些細な盗み" type="インスタント ― 出来事" rel="Brazen Borrower">対戦相手がコントロールしていて土地でないパーマネント１つを対象とし、それをオーナーの手札に戻す。</card>
     <card name="Ulalek, Fused Atrocity" ja="合体した非道、ウラレック" type="伝説のクリーチャー ― エルドラージ" pt="2/5">欠色（このカードは無色である。）
@@ -1670,6 +1664,8 @@ Michonne, Ruthless Survivorと２体以上のゾンビが攻撃するたび、�
     <wiki name="Captivating Vampire" wiki="蟲惑的な吸血鬼/Captivating Vampire" />
     <wiki name="C.A.M.P." wiki="C.A.M.P./C.A.M.P." />
     <wiki name="V.A.T.S." wiki="V.A.T.S./V.A.T.S." />
+    <wiki name="Bespoke B?" wiki="特製の六尺棒/Bespoke Bō" />
+    <wiki name="Hamato Ninp?" wiki="Hamato Ninpō" />
 
     <!-- 代替カード名 -->
     <alt alt="Arana, Heart of the Spider" name="Gloria, the Great Armorer" />
@@ -7442,7 +7438,7 @@ III ― あなたの墓地にクリーチャーか講義であるカードがあ
 (Ｔ)：宝物・トークン１つを生成する。</card>
     
     <!-- TMC Turtle Team-Up -->
-    <card name="Hamato Ninpo" ja="Hamato Ninpo" type="インスタント">攻撃かブロックしているクリーチャー１体を対象とする。Hamato Ninpōはそれに４点のダメージを与える。</card>
+    <card name="Hamato Ninpo" ja="Hamato Ninpo" type="インスタント" wiki="Hamato Ninpō">攻撃かブロックしているクリーチャー１体を対象とする。Hamato Ninpōはそれに４点のダメージを与える。</card>
     <card name="Leonardo, Worldly Warrior" ja="無敵の戦士、レオナルド" type="伝説のクリーチャー ― ミュータント・忍者・海亀" pt="5/5">親和（クリーチャー）（この呪文を唱えるためのコストは、あなたがコントロールしているクリーチャー１体につき(１)少なくなる。）
 二段攻撃</card>
     <card name="Leo's Guidance" ja="Leo's Guidance" type="インスタント">クリーチャー最大３体を対象とする。それらの上にそれぞれ+1/+1カウンター１個を置く。それらをアンタップする。</card>

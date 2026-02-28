@@ -94,6 +94,7 @@ partial class Card
             // Jötun Owl Keeper など (PD カードリスト用。MO では o になっている)
             case 'ó':
             case 'ö':
+            case 'ō':
                 sb.Append('o');
                 return true;
 
