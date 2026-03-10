@@ -1678,7 +1678,7 @@ Michonne, Ruthless Survivorと２体以上のゾンビが攻撃するたび、�
     <alt alt="With Great Power..." name="Chosen by Valgavoth" />
   </add>
   <replace>
-    <!-- 誤字脱字 -->
+    <!-- 誤字 -->
     <regex target="text" pattern="10(?=点|体|個)" value="１０" />
     <regex target="text" pattern="13点" value="１３点" />
     <regex target="text" pattern="\)\:" value=")：" />
@@ -1686,16 +1686,8 @@ Michonne, Ruthless Survivorと２体以上のゾンビが攻撃するたび、�
     <regex target="text" pattern="\(Ｔ\)：(?=[^。「『]+：)" value="(Ｔ)," />
     <regex target="text" pattern="タップする。ターン終了時まで、この機体" value="タップする：ターン終了時まで、この機体" />
     <regex target="text" pattern="(?&lt;=パワー|点数|の数|の値)の等しい" value="に等しい" />
-    <regex target="text" pattern="していている" value="している" />
-    <regex target="text" pattern="加える）" value="加える。）" />
     <regex target="text" pattern="は各対戦相手は" value="は各対戦相手に" />
-    <regex target="text" pattern="(?&lt;=あなたの次の|次のあなたの)ターン終了時まで" value="ターンの終了時まで" />
     <regex target="text" pattern="(?&lt;=(?:待機|動員|毒性)([１-６]).*（[^。]+)カウンター(?!\1).個" value="カウンター$1個" />
-    <regex target="text" pattern="ためコスト" value="ためのコスト" />
-    <regex target="text" pattern="選ばれてない" value="選ばれていない" />
-    <regex target="text" pattern="受けるともに" value="受けるとともに" />
-    <regex target="text" pattern="(?&lt;=を.)回を行う" value="回行う" />
-    <regex target="text" pattern="ライラブラリー|ラブラリー|ライブラリ(?!ー|アン)" value="ライブラリー" />
     <regex target="text" pattern="の修正" value="の修整" />
     <regex target="text" pattern="\(20\)" value="(２０)" />
     <regex target="text" pattern="においてもよい" value="に置いてもよい" />
@@ -1703,33 +1695,15 @@ Michonne, Ruthless Survivorと２体以上のゾンビが攻撃するたび、�
     <regex target="text" pattern="表向きのパーマネント" value="裏向きのパーマネント" />
     <regex target="text" pattern="をフェイズ・アウトする" value="はフェイズ・アウトする" />
     <regex target="text" pattern="プレインズウォーカー１人" value="プレインズウォーカー１体" />
+    <regex target="text" pattern="エンチャント\(クリーチャー\)" value="エンチャント（クリーチャー）" />
     <regex target="text" pattern="が装備しているクリーチャーが" value="か装備しているクリーチャーが" />
-    <regex target="text" pattern="２倍する" value="２倍にする" />
-    <regex target="text" pattern="修整を得る。" value="修整を受ける。" />
-    <regex target="text" pattern="コン[トロ]ール" value="コントロール" />
-    <regex target="text" pattern="クリーチャ(?!ー)" value="クリーチャー" />
-    <regex target="text" pattern="(?&lt;!に)よって" value="によって" />
-    <regex target="text" pattern="マナ・コスト支払う" value="マナ・コストを支払う" />
-    <regex target="text" pattern="カウンター１個置く" value="カウンター１個を置く" />
-    <regex target="text" pattern="ときのみ唱えられる" value="ときにのみ唱えられる" />
-    <regex target="text" pattern="(?&lt;=（[^）\n]+)$" value="）" />
-    <regex target="text" pattern="(?&lt;=生成する|に等しい)$" value="。" />
-    <regex target="text" pattern="ライブラリーの一番にあるカード" value="ライブラリーの一番上にあるカード" />
-    <regex target="text" pattern="(?&lt;=カウンター.個)取り除く" value="を取り除く" />
-    <regex target="text" pattern="」$" value="" />
-    <regex target="text" pattern="。。" value="。" />
-    <regex target="text" pattern="対象ととする" value="対象とする" />
-    <regex target="text" pattern="\n(?=。|そうしたなら)" value="" />
-    <regex target="text" pattern="望む枚数の呪文" value="望む数の呪文" />
-    <regex target="text" pattern="カードを１枚を対象" value="カード１枚を対象" />
-    <regex target="text" pattern="対戦相手が(?=１人が|や対戦相手)" value="対戦相手" />
     <regex target="ja|text" pattern="噛み砕き" value="嚙み砕き" />
     <regex target="text" pattern="]:" value="]：" />
     <regex target="text" pattern="1枚" value="１枚" />
     <regex target="text" pattern="{R]" value="(赤)" />
-    <regex target="text" pattern="\[T}" value="(Ｔ)" />
     <regex target="text" pattern="魂絆" value="絆魂" />
     <regex target="text" pattern="20点" value="２０点" />
+    <regex target="text" pattern="\[T}" value="(Ｔ)" />
     <regex target="text" pattern="すr。" value="する。" />
     <regex target="text" pattern="二度目" value="２度目" />
     <regex target="text" pattern="する．" value="する。" />
@@ -1762,6 +1736,7 @@ Michonne, Ruthless Survivorと２体以上のゾンビが攻撃するたび、�
     <regex target="text" pattern="なるように望んで" value="なるように選んで" />
     <regex target="text" pattern="体以上のカードを" value="枚以上のカードを" />
     <regex target="text" pattern="ビリヤン兵団長 ― " value="ピリヤン兵団長 ― " />
+    <regex target="text" pattern="パワーに中の最大値" value="パワーの中の最大値" />
     <regex target="text" pattern="ガラス製の心臓を血" value="ガラス製の心臓と血" />
     <regex target="text" pattern="パワーがタフネスが" value="パワーかタフネスが" />
     <regex target="text" pattern="あなたはテフェリー" value="あなたがテフェリー" />
@@ -1772,7 +1747,6 @@ Michonne, Ruthless Survivorと２体以上のゾンビが攻撃するたび、�
     <regex target="text" pattern="はその対象としてプレイヤー" value="はその対象としたプレイヤー" />
     <regex target="text" pattern="この呪文に連繋されたカード" value="その呪文に連繋されたカード" />
     <regex target="text" pattern="フェイズ・アウトしている際は" value="フェイズ・アウトしている間は" />
-    <regex target="text" pattern="エンチャント\(クリーチャー\)" value="エンチャント（クリーチャー）" />
     <regex target="text" pattern="開錠(?:\(unlock\))?カウンター" value="解錠カウンター" />
     <regex target="text" pattern="クリーチャー・トークンを１個生成" value="クリーチャー・トークンを１体生成" />
     <regex target="text" pattern="表向きの状態で2/2クリーチャーとして" value="裏向きの状態で2/2クリーチャーとして" />
@@ -1780,8 +1754,27 @@ Michonne, Ruthless Survivorと２体以上のゾンビが攻撃するたび、�
     <regex target="text" pattern="エンミティック・エクスターミネーター ― " value="エンミティック・エクスターミネイター ― " />
     <regex target="text" pattern="あなたがオーナーであるかコントロールしていない" value="あなたがオーナーであるがコントロールしていない" />
     <regex target="text" pattern="クリーチャー１体かプレイヤー１人に戦闘ダメージを与えるたび" value="クリーチャー１体がプレイヤー１人に戦闘ダメージを与えるたび" />
-    <regex target="text" pattern="パーティ(?!ー)" value="パーティー" />
-    <regex target="text" pattern="カウンタ(?!ー)" value="カウンター" />
+    <!-- 脱字 -->
+    <regex target="text" pattern="(?&lt;=ミュータンジェン.+)（それは、\(" value="（それは、「(" />
+    <regex target="text" pattern="加える）" value="加える。）" />
+    <regex target="text" pattern="(?&lt;=あなたの次の|次のあなたの)ターン終了時まで" value="ターンの終了時まで" />
+    <regex target="text" pattern="ためコスト" value="ためのコスト" />
+    <regex target="text" pattern="受けるともに" value="受けるとともに" />
+    <regex target="text" pattern="選ばれてない" value="選ばれていない" />
+    <regex target="text" pattern="(?&lt;=（[^）\n]+)$" value="）" />
+    <regex target="text" pattern="ライラブラリー|ラブラリー|ライブラリ(?!ー|アン)" value="ライブラリー" />
+    <regex target="text" pattern="２倍する" value="２倍にする" />
+    <regex target="text" pattern="修整を得る。" value="修整を受ける。" />
+    <regex target="text" pattern="コン[トロ]ール" value="コントロール" />
+    <regex target="text" pattern="がプレイヤー人に" value="がプレイヤー１人に" />
+    <regex target="text" pattern="クリーチャ(?!ー)" value="クリーチャー" />
+    <regex target="text" pattern="(?&lt;!に)よって" value="によって" />
+    <regex target="text" pattern="マナ・コスト支払う" value="マナ・コストを支払う" />
+    <regex target="text" pattern="カウンター１個置く" value="カウンター１個を置く" />
+    <regex target="text" pattern="ときのみ唱えられる" value="ときにのみ唱えられる" />
+    <regex target="text" pattern="(?&lt;=生成する|に等しい)$" value="。" />
+    <regex target="text" pattern="ライブラリーの一番にあるカード" value="ライブラリーの一番上にあるカード" />
+    <regex target="text" pattern="(?&lt;=カウンター.個)取り除く" value="を取り除く" />
     <regex target="text" pattern="引く）" value="引く。）" />
     <regex target="text" pattern="再演Ｘ" value="再演(Ｘ)" />
     <regex target="text" pattern="振る旅" value="振るたび" />
@@ -1808,11 +1801,12 @@ Michonne, Ruthless Survivorと２体以上のゾンビが攻撃するたび、�
     <regex target="text" pattern="支払わていた" value="支払われていた" />
     <regex target="text" pattern="コスモメモリ " value="コスモメモリー " />
     <regex target="text" pattern="対象とする王族" value="対象とする。王族" />
+    <regex target="text" pattern="パーティ(?!ー)" value="パーティー" />
+    <regex target="text" pattern="カウンタ(?!ー)" value="カウンター" />
     <regex target="text" pattern="支払ってもよい）" value="支払ってもよい。）" />
     <regex target="text" pattern="一番下望む順番で" value="一番下に望む順番で" />
     <regex target="text" pattern="真ジェクトビーム" value="真ジェクトシュート" />
     <regex target="text" pattern="クリーチャー死亡" value="クリーチャーが死亡" />
-    <regex target="text" pattern="がプレイヤー人に" value="がプレイヤー１人に" />
     <regex target="text" pattern="アヴァシンAvacyn" value="アヴァシン/Avacyn" />
     <regex target="text" pattern="１枚のカード捨てる" value="１枚のカードを捨てる" />
     <regex target="text" pattern="唱えるため追加コスト" value="唱えるための追加コスト" />
@@ -1835,13 +1829,22 @@ Michonne, Ruthless Survivorと２体以上のゾンビが攻撃するたび、�
     <regex target="text" pattern="という名前のアーティファクト・トークン" value="という名前の無色のアーティファクト・トークン" />
     <regex target="text" pattern="の上に(?=\+1/\+1カウンターが.個未満であった)" value="の上にある" />
     <regex target="text" pattern="であるカード１枚を探し、あなたの手札に加える。" value="であるカード１枚を探し、公開し、あなたの手札に加える。" />
-    <regex target="text" pattern="(?&lt;=ミュータンジェン.+)（それは、\(" value="（それは、「(" />
     <regex target="text" pattern="落魄 ― (?=.*あなたの墓地に４枚以上のパーマネント・カードが)" value="落魄４ ― " />
     <regex target="text" pattern="クリーチャー１体かプレインズウォーカー１体かプレイヤーを対象とする。" value="クリーチャー１体かプレインズウォーカー１体かプレイヤー１人を対象とする。" />
     <regex target="text" pattern="(?&lt;=サイクリング([^。]+)（)(?=このカードを捨てる)" value="$1," />
     <regex target="text" pattern="(?&lt;=新生([^。]+)（[^。]+追加で)[^。]+(?&lt;!\1)を支払" value="$1を支払" />
     <regex target="text" pattern="(?&lt;=待機.+ ― ([^。]+)（[^。]+、)[^。]+(?&lt;!(?:あなたは)?\1)を支払" value="$1を支払" />
     <regex target="text" pattern="(?&lt;=食物は、?|それらは、?)「\(Ｔ\),このアーティファクトを生け贄に捧げる：あなたは３点のライフを得る。」" value="「(２),(Ｔ),このアーティファクトを生け贄に捧げる：あなたは３点のライフを得る。」" />
+    <!-- 衍字 -->
+    <regex target="text" pattern="していている" value="している" />
+    <regex target="text" pattern="(?&lt;=を.)回を行う" value="回行う" />
+    <regex target="text" pattern="。。" value="。" />
+    <regex target="text" pattern="」$" value="" />
+    <regex target="text" pattern="対象ととする" value="対象とする" />
+    <regex target="text" pattern="望む枚数の呪文" value="望む数の呪文" />
+    <regex target="text" pattern="カードを１枚を対象" value="カード１枚を対象" />
+    <regex target="text" pattern="\n(?=。|そうしたなら)" value="" />
+    <regex target="text" pattern="対戦相手が(?=１人が|や対戦相手)" value="対戦相手" />
     <regex target="text" pattern="\(\(" value="(" />
     <regex target="text" pattern="・・" value="・" />
     <regex target="text" pattern="をを" value="を" />
@@ -1874,6 +1877,7 @@ Michonne, Ruthless Survivorと２体以上のゾンビが攻撃するたび、�
     <regex target="text" pattern="トークンを１体を" value="トークン１体を" />
     <regex target="text" pattern="soそのプレイヤー" value="そのプレイヤー" />
     <regex target="text" pattern="プレイヤー１人をか" value="プレイヤー１人か" />
+    <regex target="text" pattern="プレイヤーが１人が" value="プレイヤー１人が" />
     <regex target="text" pattern="を１つをタップする" value="１つをタップする" />
     <regex target="text" pattern="あなたがの墓地にある" value="あなたの墓地にある" />
     <regex target="text" pattern="クリーチャーを２体を" value="クリーチャー２体を" />
@@ -1888,6 +1892,7 @@ Michonne, Ruthless Survivorと２体以上のゾンビが攻撃するたび、�
     <regex target="text" pattern="この事件\(Case\)が戦場に出るか攻撃するたび、" value="この事件(Case)が戦場に出たとき、" />
     <regex target="text" pattern="\nあなたはそれらのコピーの新しい対象を選んでもよい。" value="あなたはそれらのコピーの新しい対象を選んでもよい。" />
     <regex target="text" pattern="それは火の技４を得る。（このクリーチャーが攻撃するたび、" value="それは火の技４を得る。（それが攻撃するたび、" />
+    <!-- 誤字脱字 (履歴) -->
     <regex target="name" pattern="’" value="'" />
     <regex target="type" pattern=" - " value=" ― " />
     <regex target="type|text" pattern="ミノタウロス" value="ミノタウルス" />
@@ -1910,7 +1915,6 @@ Michonne, Ruthless Survivorと２体以上のゾンビが攻撃するたび、�
     <regex target="text" pattern="そうでないなあ" value="そうでないなら" />
     <regex target="text" pattern="と書かれた硬貨" value="と書かれた効果" />
     <regex target="text" pattern="クリーチャー１枚" value="クリーチャー１体" />
-    <regex target="text" pattern="パワーに中の最大値" value="パワーの中の最大値" />
     <regex target="text" pattern="(?&lt;=[０-９Ｘ]+)舞" value="枚" />
     <regex target="text" pattern="(?&lt;=[０-９Ｘ]+)店" value="点" />
     <regex target="text" pattern="(?:戦闘|先頭)(?=に出|を離)" value="戦場" />
@@ -1977,6 +1981,8 @@ Michonne, Ruthless Survivorと２体以上のゾンビが攻撃するたび、�
     <regex target="type" pattern="伝説のアーティファクト ― インフィニティ・ストーン" value="伝説のアーティファクト ― ターミナス・ストーン" />
     <regex target="text" pattern="∞(?=能力| ― )" value="始原" />
     <regex target="text" pattern="シルシュートのアデミ|無情なる狩人、ブラコ|蜘蛛群のクレン|地底街の夢想家、クレン|遺伝子接合学者、ゴベン|心咬まれし者、カヴァエロ(?!》)|寓話の空登り、ニア|スカイセイルの語り部、ニア|蜘蛛糸の発明家、サーリス|イグの交差路の用心棒、ヴィッゴ|繭の世話人、ウィザール|警戒機、クモノス|境界の接合者、クォネウス|競争路の妨害者、レンチ|屋根跳びの二人、ジャナイとホッピー" value="これ" />
+    <!-- タートルズ -->
+    <regex target="text" pattern="Casey &amp; Raph, Hotheads|Casey Jones, Asphalt Hooligan|Donatello, Rad Scientist|Michelangelo, On the Scene|Donnie &amp; April, Adorkable Duo|Mikey &amp; Mona, Mutant Sitters|Raphael, Tag Team Tough|Splinter &amp; Leo, Father &amp; Son|Splinter, Aging Champion" value="これ" />
     <!-- オラクル更新 -->
     <regex target="name|ja|text" pattern="AE" value="Ae" />
     <regex target="text" pattern="部族がカード" value="同族がカード" />
@@ -7320,8 +7326,6 @@ III ― あなたの墓地にクリーチャーか講義であるカードがあ
 あなたが土地・クリーチャーをコントロールしているか、このターンに土地があなたのコントロール下で戦場に出ているかぎり、このクリーチャーは+1/+0の修整を受けトランプルを持つ。</card>
     
     <!-- テキストが正常でないカード (TLA,TLE) -->
-    <card name="Giant Koi" ja="巨大鯉" type="クリーチャー ― 魚" pt="5/7">水の技(３)を行う：このターン、このクリーチャーはブロックされない。（あなたのアーティファクトやクリーチャーをタップすると、水の技コストを支払う助けとなる。１つにつきそれぞれ(１)を支払う。）
-島サイクリング(２)（(２),このカードを捨てる：あなたのライブラリーから島・カード１枚を探し、公開し、あなたの手札に加える。その後、ライブラリーを切り直す。）</card>
     <card name="Invasion Submersible" ja="侵略の潜水艇" type="アーティファクト ― 機体" pt="0/0">この機体が戦場に出たとき、土地でもこれでもないパーマネント最大１つを対象とする。それをオーナーの手札に戻す。
 消尽 ― 水の技(３)を行う：この機体はアーティファクト・クリーチャーになる。これの上に+1/+1カウンター３個を置く。（あなたのアーティファクトやクリーチャーをタップすると、水の技コストを支払う助けとなる。１つにつきそれぞれ(１)を支払う。消尽能力はそれぞれ１回のみ起動できる。）</card>
     <card name="Nyla, Shirshu Sleuth" ja="シューシューの追跡者、ナイラ" type="伝説のクリーチャー ― モグラ・ビースト" pt="4/5">これが戦場に出たとき、あなたの墓地にあるクリーチャー・カード最大１枚を対象とする。それを追放する。そうしたなら、あなたはＸ点のライフを失い、手掛かり・トークンＸ個を生成する。Ｘはそのカードのマナ総量に等しい。
@@ -7428,6 +7432,8 @@ III ― あなたの墓地にクリーチャーか講義であるカードがあ
     <card name="North Wind Avatar" ja="北風の守護者" type="クリーチャー ― ドラゴン・スピリット・アバター" pt="5/5">飛行
 このクリーチャーが戦場に出たとき、あなたがこれを唱えていた場合、あなたはゲームの外部からあなたがオーナーであるカード１枚をあなたの手札に加えてもよい。</card>
     <card name="Ragamuffin Raptor" ja="わんぱくラプター" type="クリーチャー ― 恐竜" pt="4/3">このクリーチャーが戦場に出たとき、あなたの墓地にありクリーチャーか食物であるカード最大１枚を対象とする。それをあなたの手札に戻す。</card>
+    <card name="The Ooze" ja="始まりの液体" type="伝説のアーティファクト">あなたがコントロールしていて+1/+1カウンターが置かれているクリーチャー１体が戦場を離れるたび、それの上にある+1/+1カウンター１個につきミュータンジェン・トークン１つを生成する。（ミュータンジェン・トークンは、「(１),(Ｔ),このトークンを生け贄に捧げる：クリーチャー１体を対象とする。それの上に+1/+1カウンター１個を置く。起動はソーサリーとしてのみ行う。」を持つアーティファクトである。）
+(Ｔ)：墓地にあるカード１枚を対象とする。それを追放する。ミュータンジェン・トークン１つを生成する。</card>
     
     <!-- TMC -->
     <card name="Here Comes a New Hero!" ja="新たなヒーロー参上！" type="ソーサリー">プレイヤー１人と、マナ総量がＸ以下のクリーチャー最大１体を対象とする。そのプレイヤーはカードＸ枚を引く。そのクリーチャーのコピーであるトークン１体を生成する。</card>
@@ -7438,44 +7444,9 @@ III ― あなたの墓地にクリーチャーか講義であるカードがあ
 (Ｔ)：宝物・トークン１つを生成する。</card>
     
     <!-- TMC Turtle Team-Up -->
-    <card name="Hamato Ninpo" ja="Hamato Ninpo" type="インスタント" wiki="Hamato Ninpō">攻撃かブロックしているクリーチャー１体を対象とする。Hamato Ninpōはそれに４点のダメージを与える。</card>
-    <card name="Leonardo, Worldly Warrior" ja="無敵の戦士、レオナルド" type="伝説のクリーチャー ― ミュータント・忍者・海亀" pt="5/5">親和（クリーチャー）（この呪文を唱えるためのコストは、あなたがコントロールしているクリーチャー１体につき(１)少なくなる。）
-二段攻撃</card>
-    <card name="Leo's Guidance" ja="Leo's Guidance" type="インスタント">クリーチャー最大３体を対象とする。それらの上にそれぞれ+1/+1カウンター１個を置く。それらをアンタップする。</card>
-    <card name="Splinter &amp; Leo, Father &amp; Son" ja="Splinter &amp; Leo, Father &amp; Son" type="伝説のクリーチャー ― ミュータント・忍者・ネズミ・海亀" pt="2/2">これが戦場に出たとき、以下から１つまたは両方を選ぶ。各モードはそれぞれ異なるプレイヤーを対象としなければならない。
-・プレイヤー１人を対象とする。そのプレイヤーは赤の2/2のミュータント・クリーチャー・トークン１体を生成する。
-・プレイヤー１人を対象とする。そのプレイヤーがコントロールしていてこれでない各クリーチャーの上にそれぞれ+1/+1カウンター１個を置く。</card>
-    <card name="Splinter, Aging Champion" ja="老練の覇者、スプリンター" type="伝説のクリーチャー ― ミュータント・忍者・ネズミ" pt="2/2">これが戦場に出たとき、タップ状態のクリーチャー最大１体を対象とする。それを破壊する。
-これが戦場を離れたとき、あなたでないプレイヤー１人を対象とする。あなたとそのプレイヤーはそれぞれカード１枚を引く。</card>
-    <card name="Triceraton Regenta" ja="Triceraton Regenta" type="クリーチャー ― 恐竜・貴族" pt="2/3">警戒
-このクリーチャーが攻撃するたび、これでないクリーチャー最大１体を対象とする。それをアンタップする。</card>
-    <card name="Wooden Cane" ja="Wooden Cane" type="アーティファクト ― 装備品">この装備品が戦場に出たとき、赤の2/2のミュータント・クリーチャー・トークン１体を生成する。その後、この装備品をそれにつける。
-装備しているクリーチャーは+2/+1の修整を受ける。
-装備(３)</card>
-    <card name="April O'Neil, Human Element" ja="人間の底力、エイプリル・オニール" type="伝説のクリーチャー ― 人間・探偵" pt="2/5">プレイヤーがアーティファクトかインスタントかソーサリーである呪文を唱えるたび、あなたはミュータンジェン・トークン１つを生成する。（それは、「(１),(Ｔ),このトークンを生け贄に捧げる：クリーチャー１体を対象とする。それの上に+1/+1カウンター１個を置く。起動はソーサリーとしてのみ行う。」を持つアーティファクトである。）</card>
-    <card name="Containment Protocol" ja="Containment Protocol" type="エンチャント ― オーラ">エンチャント（クリーチャー）
-このオーラが戦場に出たとき、エンチャントしているクリーチャーをタップする。
-エンチャントしているクリーチャーは、それのコントローラーのアンタップ・ステップにアンタップしない。</card>
     <card name="Donatello, Rad Scientist" ja="Donatello, Rad Scientist" type="伝説のクリーチャー ― ミュータント・忍者・海亀" pt="5/6">警戒
 これが戦場に出たとき、対戦相手がコントロールしているクリーチャー最大３体を対象とする。それらをタップする。それらの上にそれぞれ麻痺カウンター１個を置く。（麻痺カウンターが置かれているパーマネントがアンタップ状態になるなら、代わりにそれの上から麻痺カウンター１個を取り除く。）</card>
     <card name="Donatello's Science Lesson" ja="Donatello's Science Lesson" type="インスタント">クリーチャー最大２体と、プレイヤー最大２人を対象とする。それらのクリーチャーをタップする。それらのプレイヤーはそれぞれカード１枚を引く。</card>
-    <card name="Donnie &amp; April, Adorkable Duo" ja="Donnie &amp; April, Adorkable Duo" type="伝説のクリーチャー ― ミュータント・忍者・人間・海亀" pt="3/3">これが戦場に出たとき、以下から１つまたは両方を選ぶ。各モードはそれぞれ異なるプレイヤーを対象としなければならない。
-・プレイヤー１人を対象とする。そのプレイヤーはカード２枚を引く。
-・プレイヤー１人を対象とする。そのプレイヤーは自分の墓地からアーティファクトかインスタントかソーサリーであるカード１枚を自分の手札に戻す。</card>
-    <card name="Utrom Monitor" ja="ユートロムの監視装置" type="アーティファクト・クリーチャー ― ユートロム・科学者" pt="3/3">親和（アーティファクト）（この呪文を唱えるためのコストは、あなたがコントロールしているアーティファクト１つにつき(１)少なくなる。）
-飛行</card>
-    <card name="Casey &amp; Raph, Hotheads" ja="短気な二人組、ケイシーとラフ" type="伝説のクリーチャー ― ミュータント・忍者・人間・海亀" pt="4/4">これが戦場に出たとき、以下から１つまたは両方を選ぶ。各モードはそれぞれ異なるプレイヤーを対象としなければならない。
-・プレイヤー１人を対象とする。そのプレイヤーは自分のライブラリーの一番上のカードを追放する。そのプレイヤーの次の終了ステップまで、そのプレイヤーはそのカードをマナ・コストを支払うことなくプレイしてもよい。
-・プレイヤー１人を対象とする。そのプレイヤーは宝物・トークン２つを生成する。</card>
-    <card name="Casey Jones, Asphalt Hooligan" ja="ストリートの暴れん坊、ケイシー・ジョーンズ" type="伝説のクリーチャー ― 人間・狂戦士" pt="2/2">二段攻撃
-(４)：ターン終了時まで、これのパワーを２倍にする。この能力はどのプレイヤーも起動できる。</card>
-    <card name="Monster Mashup" ja="Monster Mashup" type="クリーチャー ― 狼男・魚・ゾンビ・吸血鬼" pt="4/3">到達
-威迫</card>
-    <card name="Raphael, Tag Team Tough" ja="Raphael, Tag Team Tough" type="伝説のクリーチャー ― ミュータント・忍者・海亀" pt="5/6">威迫
-これが各ターン内で初めてプレイヤー１人に戦闘ダメージを与えるたび、すべての攻撃クリーチャーをアンタップする。この戦闘フェイズの後に、追加の戦闘フェイズ１つを加える。</card>
-    <card name="Raph's Bravado" ja="Raph's Bravado" type="エンチャント">あなたのターンの間、各攻撃クリーチャーは+1/+0の修整を受ける。</card>
-    <card name="Storm of Steel" ja="Storm of Steel" type="ソーサリー">１つか２つを対象とする。Storm of Steelはそれらにそれぞれ２点のダメージを与える。</card>
-    <card name="Ticked Off" ja="Ticked Off" type="ソーサリー">クリーチャー１体を対象とする。ターン終了時まで、それは二段攻撃を得る。</card>
     <card name="Foe-liage" ja="Foe-liage" type="クリーチャー ― 植物・ミュータント" pt="3/3">あなたのターン中に土地１つが戦場に出るたび、このクリーチャーの上に+1/+1カウンター１個を置く。</card>
     <card name="Michelangelo, On the Scene" ja="Michelangelo, On the Scene" type="伝説のクリーチャー ― ミュータント・忍者・海亀" pt="2/2">トランプル
 これは、あなたがコントロールしている土地１つにつき+1/+1カウンター１個が置かれた状態で戦場に出る。
@@ -7483,14 +7454,12 @@ III ― あなたの墓地にクリーチャーか講義であるカードがあ
     <card name="Mikey &amp; Mona, Mutant Sitters" ja="Mikey &amp; Mona, Mutant Sitters" type="伝説のクリーチャー ― ミュータント・忍者・海亀・トカゲ" pt="2/2">これが戦場に出たとき、以下から１つまたは両方を選ぶ。各モードはそれぞれ異なるプレイヤーを対象としなければならない。
 ・プレイヤー１人を対象とする。そのプレイヤーは自分がコントロールしているクリーチャー１体を選び、それの上に+1/+1カウンター２個を置く。
 ・プレイヤー１人を対象とする。そのプレイヤーは自分の墓地からクリーチャーか土地であるカード１枚を自分の手札に戻す。</card>
-    <card name="Mona Lisa, Ever Adaptable" ja="抜群の適応力、モナリザ" type="伝説のクリーチャー ― トカゲ・ミュータント" pt="4/4">プレイヤーがクリーチャー・呪文を唱えるたび、あなたはミュータンジェン・トークン１つを生成する。（それは、「(１),(Ｔ),このトークンを生け贄に捧げる：クリーチャー１体を対象とする。それの上に+1/+1カウンター１個を置く。起動はソーサリーとしてのみ行う。」を持つアーティファクトである。）</card>
-    <card name="Prehistoric Turtlesaurus" ja="太古のカメサウルス" type="クリーチャー ― ミュータント・忍者・海亀・恐竜" pt="4/5">あなたが+1/+1カウンターが置かれているクリーチャーをコントロールしているなら、この呪文を唱えるためのコストは(１)少なくなる。
-警戒</card>
-    <card name="Study the Classics" ja="不朽の名作" type="ソーサリー">クリーチャー１体を対象とする。それの上に+1/+1カウンター１個を置き、その後、それの上にある+1/+1カウンターの個数を２倍にする。あなたはそのクリーチャーの上にある+1/+1カウンターの個数に等しい点数のライフを得る。</card>
-    <card name="Turtle Tracks" ja="Turtle Tracks" type="ソーサリー">望む人数のプレイヤーを対象とする。それらのプレイヤーはそれぞれ「自分のライブラリーから基本土地・カード１枚を探し、自分のコントロール下で戦場に出す。その後、ライブラリーを切り直す。」を選んでもよい。</card>
-    <card name="Manhole Cover" ja="Manhole Cover" type="アーティファクト">瞬速
-このアーティファクトが戦場に出たとき、クリーチャー１体を対象とする。ターン終了時まで、それは破壊不能を得る。
-(２),このアーティファクトを生け贄に捧げる：プレイヤー１人を対象とする。そのプレイヤーはカード１枚を引く。</card>
+    <card name="Raphael, Tag Team Tough" ja="Raphael, Tag Team Tough" type="伝説のクリーチャー ― ミュータント・忍者・海亀" pt="5/6">威迫
+これが各ターン内で初めてプレイヤー１人に戦闘ダメージを与えるたび、すべての攻撃クリーチャーをアンタップする。この戦闘フェイズの後に、追加の戦闘フェイズ１つを加える。</card>
+    <card name="Study the Classics" ja="Study the Classics" type="ソーサリー">クリーチャー１体を対象とする。それの上に+1/+1カウンター１個を置き、その後、それの上にある+1/+1カウンターの個数を２倍にする。あなたはそのクリーチャーの上にある+1/+1カウンターの個数に等しい点数のライフを得る。</card>
+    <card name="Wooden Cane" ja="Wooden Cane" type="アーティファクト ― 装備品">この装備品が戦場に出たとき、赤の2/2のミュータント・クリーチャー・トークン１体を生成する。その後、この装備品をそれにつける。
+装備しているクリーチャーは+2/+1の修整を受ける。
+装備(３)</card>
     
     <!-- あなたは (TMT) -->
     <card name="April, Reporter of the Weird" ja="怪奇事件担当記者、エイプリル" type="伝説のクリーチャー ― 人間・探偵" pt="2/2">これがプレイヤー１人に戦闘ダメージを与えるたび、その点数に等しい枚数のカードを引き、その後、カード１枚を捨てる。</card>
@@ -7533,9 +7502,6 @@ III ― あなたの墓地にクリーチャーか講義であるカードがあ
 あなたが呪文を唱えるたび、あなたがコントロールしている各クリーチャーの上にそれぞれ+1/+1カウンター１個を置く。</card>
     
     <!-- テキストが正常でないカード (TMT,TMC) -->
-    <card name="Bebop, Warthog Warrior" ja="イボイノシシの猛者、ビーバップ" type="伝説のクリーチャー ― 猪・ミュータント・戦士" pt="5/4">威迫
-あなたがコントロールしている各サイは威迫を持つ。
-沼サイクリング(２)（(２),このカードを捨てる：あなたのライブラリーから沼・カード１枚を探し、公開し、あなたの手札に加える。その後、ライブラリーを切り直す。）</card>
     <card name="Broadcast Takeover" ja="電波ジャック" type="ソーサリー">ターン終了時まで、対戦相手がコントロールしているすべてのアーティファクトのコントロールを得る。それらをアンタップする。ターン終了時まで、それらは速攻を得る。</card>
     <card name="Double Jump" ja="二段ジャンプ" type="インスタント" rel="Flying Kick" wiki="二段ジャンプ+飛び蹴り/Double Jump+Flying Kick">あなたがコントロールしているクリーチャー１体を対象とする。それの上に飛行カウンター１個を置く。ターン終了時まで、それの基本のパワーとタフネスは5/5である。
 融合（あなたはこのカードの半分か両方合わせたものをあなたの手札から唱えてもよい。）</card>
@@ -7546,10 +7512,15 @@ III ― あなたの墓地にクリーチャーか講義であるカードがあ
     <card name="Leonardo, the Balance" ja="まとめ役、レオナルド" type="伝説のクリーチャー ― ミュータント・忍者・海亀" pt="3/3">あなたがコントロールしているトークン１つが戦場に出るたび、あなたはあなたがコントロールしている各クリーチャーの上にそれぞれ+1/+1カウンター１個を置いてもよい。これは毎ターン１回のみ行える。
 (白)(青)(黒)(赤)(緑)：ターン終了時まで、あなたがコントロールしている各クリーチャーは威迫とトランプルと絆魂を得る。
 共闘 ― キャラ選択（両方がこの能力を持つなら、あなたは統率者２体を使用できる。）</card>
-    <card name="The Ooze" ja="始まりの液体" type="伝説のアーティファクト">あなたがコントロールしていて+1/+1カウンターが置かれているクリーチャー１体が戦場を離れるたび、それの上にある+1/+1カウンター１個につきミュータンジェン・トークン１つを生成する。（ミュータンジェン・トークンは、「(１),(Ｔ),このトークンを生け贄に捧げる：クリーチャー１体を対象とする。それの上に+1/+1カウンター１個を置く。起動はソーサリーとしてのみ行う。」を持つアーティファクトである。）
-(Ｔ)：墓地にあるカード１枚を対象とする。それを追放する。ミュータンジェン・トークン１つを生成する。</card>
+    <card name="Mona Lisa, Ever Adaptable" ja="Mona Lisa, Ever Adaptable" type="伝説のクリーチャー ― トカゲ・ミュータント" pt="4/4">プレイヤーがクリーチャー・呪文を唱えるたび、あなたはミュータンジェン・トークン１つを生成する。（それは、「(１),(Ｔ),このトークンを生け贄に捧げる：クリーチャー１体を対象とする。それの上に+1/+1カウンター１個を置く。起動はソーサリーとしてのみ行う。」を持つアーティファクトである。）</card>
+    <card name="Splinter &amp; Leo, Father &amp; Son" ja="Splinter &amp; Leo, Father &amp; Son" type="伝説のクリーチャー ― ミュータント・忍者・ネズミ・海亀" pt="2/2">これが戦場に出たとき、以下から１つまたは両方を選ぶ。各モードはそれぞれ異なるプレイヤーを対象としなければならない。
+・プレイヤー１人を対象とする。そのプレイヤーは赤の2/2のミュータント・クリーチャー・トークン１体を生成する。
+・プレイヤー１人を対象とする。そのプレイヤーがコントロールしていてこれでない各クリーチャーの上にそれぞれ+1/+1カウンター１個を置く。</card>
+    <card name="Splinter, Aging Champion" ja="Splinter, Aging Champion" type="伝説のクリーチャー ― ミュータント・忍者・ネズミ" pt="2/2">これが戦場に出たとき、タップ状態のクリーチャー最大１体を対象とする。それを破壊する。
+これが戦場を離れたとき、あなたでないプレイヤー１人を対象とする。あなたとそのプレイヤーはそれぞれカード１枚を引く。</card>
     <card name="Turncoat Kunoichi" ja="裏切りのくノ一" type="クリーチャー ― ミュータント・忍者・狐" pt="3/2">隠密(２)(白)(黒)（ブロック・クリーチャー指定ステップ中にあなたがコントロールしていてブロックされていない攻撃クリーチャー１体を手札に戻すなら、この呪文を(２)(白)(黒)で唱えてもよい。これはタップ状態かつ攻撃している状態で戦場に出る。）
 このクリーチャーが戦場に出たとき、対戦相手がコントロールしているクリーチャー１体を対象とする。このクリーチャーが戦場を離れるまで、そのクリーチャーを追放する。このクリーチャーの隠密コストが支払われていたなら、代わりに、そのクリーチャーを追放する。</card>
+    <card name="Turtle Tracks" ja="Turtle Tracks" type="ソーサリー">望む人数のプレイヤーを対象とする。それらのプレイヤーはそれぞれ「自分のライブラリーから基本土地・カード１枚を探し、自分のコントロール下で戦場に出す。その後、ライブラリーを切り直す。」を選んでもよい。</card>
     <card name="Turtle Van" ja="タートルワゴン" type="アーティファクト ― 機体" pt="4/4">この機体が攻撃するたび、このターンにこれに搭乗したクリーチャー１体を対象とする。それの上に+1/+1カウンター１個を置く。その後、そのクリーチャーがミュータントか忍者か海亀であるなら、それの上にある+1/+1カウンターの個数を２倍にする。
 搭乗１（あなたがコントロールしている望む数のクリーチャーを、パワーの合計が１以上になるように選んでタップする：ターン終了時まで、この機体はアーティファクト・クリーチャーになる。）</card>
     <card name="Utrom Scientists" ja="ユートロム星の科学者たち" type="アーティファクト・クリーチャー ― ユートロム・ロボット・科学者" pt="2/2">このクリーチャーが戦場に出たとき、クリーチャー最大１体を対象とする。それをタップし、それの上に麻痺カウンター１個を置く。（麻痺カウンターが置かれているパーマネントがアンタップ状態になるなら、代わりにそれの上から麻痺カウンター１個を取り除く。）</card>
