@@ -301,6 +301,8 @@ partial class MainViewModel
                 case "Treasure Chest Booster":
                     return;
 
+                case "Hide Chat":
+                case "Show Chat":
                 case "Open a new copy of this deck":
                 case "Select All":
                 case "Sort":
