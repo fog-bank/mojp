@@ -25,7 +25,7 @@ public partial class App : Application
     /// カードの英語名から、英語カード名・日本語カード名・日本語カードテキストを検索します。
     /// </summary>
     /// <remarks>#card + #(card beyond) + #alt</remarks>
-    public static Dictionary<string, Card> Cards { get; } = new(31397 + 158 + 8);
+    public static Dictionary<string, Card> Cards { get; } = new(31739 + 158 + 8);
 
     /// <summary>
     /// このアプリの設定を取得します。
@@ -139,7 +139,7 @@ public partial class App : Application
                 card.RelatedCardName = card2.RelatedCardName;
 
                 if (!card.EqualsStrict(card2))
-                    Debug.WriteLine(card.Name + " を違うテキストで二重登録しようとしています。");
+                    Debug.WriteLine($"{card.Name} を違うテキストで二重登録しようとしています。");
 
                 continue;
             }
@@ -173,6 +173,7 @@ public partial class App : Application
                     Cards[split.Current] = card;
             }
         }
+        Debug.WriteLine($"{Cards.Count} cards were loaded.");
     }
 
 #if OFFLINE
@@ -300,7 +301,7 @@ public partial class App : Application
         if (SettingsCache.GetCardPrice)
             CardPrice.SaveCacheData();
 #endif
-        Debug.WriteLine("Card.PropertyChanged = { " + string.Join(", ", Cards.Values.Where(card => card.IsObserved)) + " }");
+        Debug.WriteLine($"Card.PropertyChanged = {{ {string.Join(", ", Cards.Values.Where(card => card.IsObserved))} }}");
 
         base.OnExit(e);
     }

@@ -38,7 +38,7 @@ Windows 11
 
 ## 開発環境
 Windows 11 (Version 25H2)  
-Visual Studio 2026 v18.3  
+Visual Studio 2026 v18.4  
 C# 14
 
 ### 仕組み
@@ -61,4 +61,4 @@ C# 14
 
 ## 連絡先
 Website: https://fog-bank.github.io/mojp/  
-Twitter: [@bank_fog](https://twitter.com/bank_fog)
+Twitter: [@bank_fog](https://x.com/bank_fog)
