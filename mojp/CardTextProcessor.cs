@@ -158,76 +158,100 @@ partial class Card
 
             if (tokens.Length == 1)
             {
-                //texts.Add(RemoveParenthesis(line));
-                texts.Add(line.TrimEnd());
-            }
-            else
-            {
-                switch (tokens[0])
+                if (line.Equals("//準備//", StringComparison.Ordinal))
                 {
-                    case "　英語名":
-                        // 新しいカードの行に入った
-                        if (card?.Name != null)
-                            yield return ProcessCard(card, texts);
+                    // 準備カード特殊処理
+                    var prepareSpell = new Card();
 
-                        card = new Card
-                        {
-                            Name = tokens[1].Trim()
-                        };
-                        texts.Clear();
-                        lvCard = false;
+                    line = sr.ReadLine(); // 日本語カード名/英語カード名
+                    tokens = line.Split('/');
+                    prepareSpell.JapaneseName = tokens[0];
+                    prepareSpell.Name = tokens[1];
 
-                        if (prevCard != null)
-                        {
-                            // 直前に空白行が無く、関連カードである
-                            card.RelatedCardName = prevCard.Name;
-                            prevCard.RelatedCardName = card.Name;
-                        }
-                        prevCard = card;
-                        break;
+                    sr.ReadLine(); // コスト
+                    prepareSpell.Type = sr.ReadLine(); // カードタイプ
+                    var prepareTexts = new List<string>(1);
 
-                    case "日本語名":
-                        card?.JapaneseName = tokens[1];
-                        break;
+                    // テキストか本体のP/T
+                    while (!(line = sr.ReadLine()).StartsWith("　Ｐ／Ｔ：", StringComparison.Ordinal))
+                        prepareTexts.Add(line);
 
-                    case "　Ｐ／Ｔ":
-                    case "　忠誠度":
-                        // 両面 PW カードの裏の忠誠度が空白の場合があるので、そのときは設定しない
-                        if (card != null && !string.IsNullOrWhiteSpace(tokens[1]))
-                        {
-                            // Lv アップクリーチャーは P/T 行が複数あるので、各 P/T は通常テキストに加える
-                            if (card.PT == null && !lvCard)
-                                card.PT = tokens[1];
-                            else
-                                texts.Add(tokens[1]);
-                        }
-                        break;
+                    yield return ProcessCard(prepareSpell, prepareTexts);
+                    card.RelatedCardName = prepareSpell.Name;
 
-                    case "　タイプ":
-                        card?.Type = tokens[1];
-                        break;
-
-                    case "　コスト":
-                    case "　色指標":
-                    case "イラスト":
-                        break;
-
-                    case "　セット":
-                        if (tokens[1] is "Special" or "Astral Set" or "Dreamcast's Original" or "Mystery Booster"
-                            or "Unglued" or "Unhinged" or "Unstable" or "Unsanctioned" or "Unfinity"
-                            or "Magic The Gathering?Marvel's Spider-Man SPE")
-                            card = null;
-                        break;
-
-                    case "　稀少度":
-                        // 稀少度が各カードの最後の情報
-                        prevCard = null;
-                        break;
-
-                    default:
-                        texts.Add(line.TrimEnd());
-                        break;
+                    tokens = line.Split(colon, 2);
+                    card.PT = tokens[1];
                 }
+                else
+                    texts.Add(line.TrimEnd());
+
+                continue;
+            }
+
+            switch (tokens[0])
+            {
+                case "　英語名":
+                    // 新しいカードの行に入った
+                    if (card?.Name != null)
+                        yield return ProcessCard(card, texts);
+
+                    card = new Card
+                    {
+                        Name = tokens[1].Trim()
+                    };
+                    texts.Clear();
+                    lvCard = false;
+
+                    if (prevCard != null)
+                    {
+                        // 直前に空白行が無く、関連カードである
+                        card.RelatedCardName = prevCard.Name;
+                        prevCard.RelatedCardName = card.Name;
+                    }
+                    prevCard = card;
+                    break;
+
+                case "日本語名":
+                    card?.JapaneseName = tokens[1];
+                    break;
+
+                case "　Ｐ／Ｔ":
+                case "　忠誠度":
+                    // 両面 PW カードの裏の忠誠度が空白の場合があるので、そのときは設定しない
+                    if (card != null && !string.IsNullOrWhiteSpace(tokens[1]))
+                    {
+                        // Lv アップクリーチャーは P/T 行が複数あるので、各 P/T は通常テキストに加える
+                        if (card.PT == null && !lvCard)
+                            card.PT = tokens[1];
+                        else
+                            texts.Add(tokens[1]);
+                    }
+                    break;
+
+                case "　タイプ":
+                    card?.Type = tokens[1];
+                    break;
+
+                case "　コスト":
+                case "　色指標":
+                case "イラスト":
+                    break;
+
+                case "　セット":
+                    if (tokens[1] is "Special" or "Astral Set" or "Dreamcast's Original" or "Mystery Booster"
+                        or "Unglued" or "Unhinged" or "Unstable" or "Unsanctioned" or "Unfinity"
+                        or "Magic The Gathering?Marvel's Spider-Man SPE")
+                        card = null;
+                    break;
+
+                case "　稀少度":
+                    // 稀少度が各カードの最後の情報
+                    prevCard = null;
+                    break;
+
+                default:
+                    texts.Add(line.TrimEnd());
+                    break;
             }
         }
 
@@ -241,21 +265,14 @@ partial class Card
     {
         card.Text = string.Join("\n", texts);
 
-        string wikilink = card.HasJapaneseName ? card.JapaneseName + "/" + card.Name : card.Name;
-
-        // AE 合字処理
-        //string processed = card.Name.Replace("AE", "Ae");
-        //if (card.Name != processed)
-        //{
-        //    card.Name = processed;
-        //    //card.WikiLink = wikilink;     // Wiki も Ae に統一された
-        //}
-
         // 次元 (次元カードのページ URL には接尾辞で " (次元カード)" がつく)
         if (card.Type.StartsWith("次元", StringComparison.Ordinal))
         {
             if (card.WikiLink == null)
+            {
+                string wikilink = card.HasJapaneseName ? card.JapaneseName + "/" + card.Name : card.Name;
                 card.WikiLink = wikilink + " (次元カード)";
+            }
             else
                 card.WikiLink += " (次元カード)";
         }
