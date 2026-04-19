@@ -158,7 +158,7 @@ partial class Card
 
             if (tokens.Length == 1)
             {
-                if (line.Equals("//準備//", StringComparison.Ordinal))
+                if (line == "//準備//")
                 {
                     // 準備カード特殊処理
                     var prepareSpell = new Card();
@@ -171,6 +171,13 @@ partial class Card
                     sr.ReadLine(); // コスト
                     prepareSpell.Type = sr.ReadLine(); // カードタイプ
                     var prepareTexts = new List<string>(1);
+
+                    // タイプ行が抜けている場合
+                    if (prepareSpell.Type is not "インスタント" and not "ソーサリー")
+                    {
+                        prepareTexts.Add(prepareSpell.Type);
+                        prepareSpell.Type = string.Empty;
+                    }
 
                     // テキストか本体のP/T
                     while (!(line = sr.ReadLine()).StartsWith("　Ｐ／Ｔ：", StringComparison.Ordinal))
