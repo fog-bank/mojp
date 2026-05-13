@@ -34,12 +34,14 @@ internal struct StringSplitter
     /// <summary>
     /// 分割対象の文字列を取得します。
     /// </summary>
-    public string Target { get; }
+    public readonly string Target { get; }
 
     /// <summary>
     /// 現在の分割後の部分文字列を取得します。
     /// </summary>
-    /// <remarks><see cref="NeedToSplit"/> が <see langword="true"/> の場合、<see cref="Target"/> そのものが返ります。</remarks>
+    /// <remarks>
+    /// <see cref="NeedToSplit"/> が <see langword="false"/> の場合、<see cref="Target"/> そのものが返ります。
+    /// </remarks>
     public readonly string Current => Target.Substring(CurrentStart, CurrentLength);
 
     /// <summary>
@@ -67,7 +69,8 @@ internal struct StringSplitter
 
         CurrentStart = nextStart;
         int findIndex = sepIsString ?
-            Target.IndexOf(sepString, CurrentStart, StringComparison.Ordinal) : Target.IndexOf(sepChar, CurrentStart);
+            Target.IndexOf(sepString, CurrentStart, StringComparison.Ordinal) :
+            Target.IndexOf(sepChar, CurrentStart);
 
         if (findIndex == -1)
         {

@@ -32,7 +32,8 @@ public partial class MainWindow : Window
         base.OnMouseMove(e);
 
         // スクロールバーやリンクがある所はドラッグを開始しない（ボタンは処理済みと思われる）
-        if (!e.Handled && e.LeftButton == MouseButtonState.Pressed && !(e.OriginalSource is Thumb || e.OriginalSource is Hyperlink))
+        if (!e.Handled && e.LeftButton == MouseButtonState.Pressed &&
+            !(e.OriginalSource is Thumb || e.OriginalSource is Hyperlink))
             DragMove();
     }
 

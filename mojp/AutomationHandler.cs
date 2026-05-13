@@ -46,8 +46,8 @@ partial class MainViewModel
             {
                 using (eventCacheReq.Activate())
                 {
-                    Automation.AddAutomationEventHandler(
-                        AutomationElement.MenuOpenedEvent, AutomationElement.RootElement, TreeScope.Descendants, OnMenuOpened);
+                    Automation.AddAutomationEventHandler(AutomationElement.MenuOpenedEvent,
+                        AutomationElement.RootElement, TreeScope.Descendants, OnMenuOpened);
                 }
 #if DEBUG
                 Debug.WriteLine("Automation event handlers (after add) = " +
@@ -165,8 +165,8 @@ partial class MainViewModel
                 AutomationElement element = null;
                 try
                 {
-                    Debug.WriteLine(
-                        "[MenuOpendEvent] Proc = " + menu.Cached.ProcessId + " @ T" + Environment.CurrentManagedThreadId);
+                    Debug.WriteLine("[MenuOpendEvent] Proc = " +
+                        menu.Cached.ProcessId + " @ T" + Environment.CurrentManagedThreadId);
 
                     if (menu.Cached.ProcessId != mtgoProc.Id)
                         return null;
@@ -176,7 +176,8 @@ partial class MainViewModel
                     using (cacheReq.Activate())
                         element = menu.FindFirst(TreeScope.Descendants, textBlockCondition);
 
-                    //Debug.WriteLine(new TimeSpan((long)((Stopwatch.GetTimestamp() - time) * 10000000.0 / Stopwatch.Frequency)));
+                    //Debug.WriteLine(new TimeSpan(
+                    //    (long)((Stopwatch.GetTimestamp() - time) * 10000000.0 / Stopwatch.Frequency)));
                     Debug.WriteLineIf(element is null, "TextBlock 要素の取得に失敗しました。");
                 }
                 catch { Debug.WriteLine("TextBlock 要素の取得中にエラーが起きました。"); }
@@ -423,7 +424,8 @@ partial class MainViewModel
         {
             var assembly = System.Reflection.Assembly.GetAssembly(typeof(Automation));
             var type = assembly.GetType("MS.Internal.Automation.ClientEventManager");
-            var field = type.GetField("_listeners", System.Reflection.BindingFlags.Static | System.Reflection.BindingFlags.NonPublic);
+            var field = type.GetField("_listeners",
+                System.Reflection.BindingFlags.Static | System.Reflection.BindingFlags.NonPublic);
             var listeners = field.GetValue(null) as System.Collections.ArrayList;
             return listeners;
         }

@@ -24,9 +24,10 @@ public abstract class Command : ICommand, INotifyPropertyChanged
     public MainViewModel ViewModel { get; }
 
     /// <summary>
-    /// シリアライズ化されたコマンド名とインスタンス化されたコマンドを関連付ける <see cref="Dictionary{string,Command}"/> です。
+    /// シリアライズ化されたコマンド名とインスタンス化されたコマンドを関連付ける
+    /// <see cref="Dictionary{string,Command}"/> です。
     /// </summary>
-    public static Dictionary<string, Command> CommandMap { get; } = new Dictionary<string, Command>(5);
+    public static Dictionary<string, Command> CommandMap { get; } = new(5);
 
     /// <summary>
     /// シリアライズに使うコマンド名を取得します。

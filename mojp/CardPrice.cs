@@ -54,13 +54,15 @@ public static class CardPrice
     public static Card GetPriceTarget(TextBlock element) => element.GetValue(PriceTargetProperty) as Card;
 
     [AttachedPropertyBrowsableForType(typeof(TextBlock))]
-    public static void SetPriceTarget(TextBlock element, Card value) => element.SetValue(PriceTargetProperty, value);
+    public static void SetPriceTarget(TextBlock element, Card value) =>
+        element.SetValue(PriceTargetProperty, value);
 
     [AttachedPropertyBrowsableForType(typeof(UIElement))]
     public static Card GetLegalTarget(UIElement element) => element.GetValue(LegalTargetProperty) as Card;
 
     [AttachedPropertyBrowsableForType(typeof(UIElement))]
-    public static void SetLegalTarget(UIElement element, Card value) => element.SetValue(LegalTargetProperty, value);
+    public static void SetLegalTarget(UIElement element, Card value) =>
+        element.SetValue(LegalTargetProperty, value);
 
 #if !OFFLINE
     /// <summary>
@@ -179,8 +181,8 @@ public static class CardPrice
             }
 
             // 最終更新日時の取得
-            if (!DateTime.TryParseExact(
-                App.SettingsCache.PDServerLastTimeUtc, "o", culture, DateTimeStyles.RoundtripKind, out lastModifiedTime))
+            if (!DateTime.TryParseExact(App.SettingsCache.PDServerLastTimeUtc, "o", culture,
+                DateTimeStyles.RoundtripKind, out lastModifiedTime))
             {
                 // PD S39 更新前時刻
                 lastModifiedTime = new DateTime(2025, 11, 13, 7, 0, 0, DateTimeKind.Utc);
@@ -190,7 +192,8 @@ public static class CardPrice
         // 初回であるか、少なくとも前回から 1 日は経過している
         if (forceCheck || !exists || DateTime.UtcNow - lastCheckTime > TimeSpan.FromDays(1))
         {
-            using var req = new HttpRequestMessage(HttpMethod.Get, "https://pennydreadfulmtg.github.io/legal_cards.txt");
+            using var req = new HttpRequestMessage(HttpMethod.Get,
+                "https://pennydreadfulmtg.github.io/legal_cards.txt");
 
             // 最終更新日をチェックして通信量を減らす
             if (!forceCheck && exists)
@@ -198,7 +201,8 @@ public static class CardPrice
 
             try
             {
-                using var resp = await App.HttpClient.Value.SendAsync(req, HttpCompletionOption.ResponseHeadersRead);
+                using var resp = await App.HttpClient.Value.SendAsync(req,
+                    HttpCompletionOption.ResponseHeadersRead);
 
                 Debug.WriteLine("PD カードリストの取得結果：HttpStatusCode." + resp.StatusCode);
 
@@ -292,10 +296,12 @@ public static class CardPrice
         if (string.IsNullOrEmpty(card.Type))
             return true;
 
-        if (card.Name is "Gleemox" or "Humble Merchant" or "Legitimate Businessperson" or "Mishra's Warform" or "Vitu-Ghazi")
+        if (card.Name is "Gleemox" or "Humble Merchant" or "Legitimate Businessperson" or "Mishra's Warform" or
+            "Vitu-Ghazi")
             return true;
 
-        if (card.Type.StartsWith("トークン", StringComparison.Ordinal) || card.Type.StartsWith("次元", StringComparison.Ordinal))
+        if (card.Type.StartsWith("トークン", StringComparison.Ordinal) ||
+            card.Type.StartsWith("次元", StringComparison.Ordinal))
             return true;
 
         if (card.Type is "ヴァンガード" or "現象" or "ダンジョン")
@@ -309,7 +315,8 @@ public static class CardPrice
     /// </summary>
     private static bool TryGetPriceFromCache(Card card, out Tuple<string, DateTime> value)
     {
-        return prices.TryGetValue(card.Name, out value) || (card.RelatedCardName != null && prices.TryGetValue(card.RelatedCardName, out value));
+        return prices.TryGetValue(card.Name, out value) ||
+            (card.RelatedCardName != null && prices.TryGetValue(card.RelatedCardName, out value));
     }
 
     /// <summary>
@@ -378,7 +385,8 @@ public static class CardPrice
     }
 
     /// <summary>
-    /// <see cref="LegalTargetProperty"/> 添付プロパティの値が変更されたときに、対象の <see cref="UIElement"/> の表示を切り替えます。
+    /// <see cref="LegalTargetProperty"/> 添付プロパティの値が変更されたときに、対象の <see cref="UIElement"/>
+    /// の表示を切り替えます。
     /// </summary>
     private static void OnLegalTargetChanged(DependencyObject sender, DependencyPropertyChangedEventArgs e)
     {
@@ -433,7 +441,8 @@ public static class CardPrice
         {
             // exact サーチじゃないので、複数ヒットする可能性がある
             const string CardTag = "\"name\":";
-            startIndex = json.IndexOf(CardTag + "\"" + cardName.Replace("_", " // ") + "\"", StringComparison.Ordinal);
+            startIndex = json.IndexOf(CardTag + "\"" + cardName.Replace("_", " // ") + "\"",
+                StringComparison.Ordinal);
 
             if (startIndex == -1)
                 return NoPrice;

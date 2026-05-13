@@ -8,7 +8,8 @@ namespace Mojp;
 /// 設定の値をローカル変数に保持します。
 /// </summary>
 /// <remarks>
-/// <see cref="PDListLastTimeUtc"/> を除き、プロパティ値の直接の Read/Write は ViewModel 越しに行う。Read のみなら他の場所でも可
+/// <see cref="PDListLastTimeUtc"/> を除き、プロパティ値の直接の Read/Write は ViewModel 越しに行う。
+/// Read のみなら他の場所でも可
 /// </remarks>
 public sealed class SettingsCache
 {

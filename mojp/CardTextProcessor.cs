@@ -385,7 +385,8 @@ partial class Card
             string rel = (string)node.Attribute("rel");
             string flavor = (string)node.Attribute("flavor");
 
-            Debug.WriteLineIf(!cards.TryGetValue(within, out var card), beyond + " => " + within + " のカードが WHISPER に未登録です。");
+            Debug.WriteLineIf(!cards.TryGetValue(within, out var card),
+                beyond + " => " + within + " のカードが WHISPER に未登録です。");
             Debug.WriteLineIf(card.JapaneseName != ja, beyond + " => " + within + " の日本語カード名が一致しません。");
 
             if (cards.TryGetValue(beyond, out card))
@@ -539,7 +540,8 @@ partial class Card
             var newCard = FromXml(node);
             Debug.WriteLineIf(newCard.RelatedCardName != null && !newCard.RelatedCardNames.All(cards.ContainsKey),
                 newCard.Name + " の関連カードが見つかりません。");
-            Debug.WriteLineIf(!cardNamesToReplace.Add(newCard.Name), newCard.Name + " のテキスト置換を複数回行おうとしています。");
+            Debug.WriteLineIf(!cardNamesToReplace.Add(newCard.Name),
+                newCard.Name + " のテキスト置換を複数回行おうとしています。");
 
             if (cards.TryGetValue(newCard.Name, out var oldCard))
             {
@@ -587,7 +589,8 @@ partial class Card
                 }
                 else
                 {
-                    beforeNodes.Add(new XElement("type", new XAttribute("name", name), new XAttribute("type", card.Type)));
+                    beforeNodes.Add(new XElement("type",
+                        new XAttribute("name", name), new XAttribute("type", card.Type)));
                     replacedNodes.Add(node);
                     card.Type = type;
                 }
@@ -631,7 +634,8 @@ partial class Card
         // 代替カード名の関連付けチェック
         foreach (var kv in cards)
         {
-            Debug.WriteLineIf(kv.Key != kv.Value.Name && (!cards.TryGetValue(kv.Value.Name, out var card) || card != kv.Value),
+            Debug.WriteLineIf(kv.Key != kv.Value.Name &&
+                (!cards.TryGetValue(kv.Value.Name, out var card) || card != kv.Value),
                 "代替カード名の" + kv.Key + " に関連付けられたカードがメモリーリークしています。");
         }
 

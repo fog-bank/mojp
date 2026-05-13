@@ -215,7 +215,8 @@ public sealed partial class Card : IEquatable<Card>, INotifyPropertyChanged
     public void OnUpdatePrice() => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Price)));
 #endif
 
-    public void OnUpdateDisplayName() => PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(DisplayName)));
+    public void OnUpdateDisplayName() =>
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(DisplayName)));
 
     /// <summary>
     /// XML ノードからカード情報を復元します。

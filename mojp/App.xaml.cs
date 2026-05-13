@@ -254,7 +254,8 @@ public partial class App : Application
 
         //foreach (var proc in Process.GetProcesses())
         //{
-        //    if (targetProc == null && string.Equals(proc.ProcessName, processName, StringComparison.OrdinalIgnoreCase))
+        //    if (targetProc == null &&
+        //        string.Equals(proc.ProcessName, processName, StringComparison.OrdinalIgnoreCase))
         //        targetProc = proc;
         //    else
         //        proc.Dispose();
