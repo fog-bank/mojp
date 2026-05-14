@@ -73,8 +73,9 @@ foreach (var def in json.RootElement.EnumerateObject())
         {
             if (!cards.Contains(splitName))
             {
+                passed--;
                 Console.WriteLine(name);
-                continue;
+                break;
             }
         }
         passed++;
