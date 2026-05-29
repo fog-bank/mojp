@@ -36,7 +36,7 @@
     <h3 id="download" class="rounded my-2 p-2">ダウンロード</h3>
     <div class="px-3 mb-4">
       <p>ダウンロード時や実行時に、ブラウザやセキュリティソフトからセキュリティ警告が出る場合があります。</p>
-      <div class="card">
+      <div class="card mb-4">
         <h4 class="card-header">最新版 v3.8.0（ストリクスヘイヴンの秘密 対応）</h4>
         <div class="card-body p-0">
           <div class="card-group">
@@ -61,7 +61,7 @@
             <div class="card border-0 border-end">
               <div class="card-body">
                 <h5 class="card-title">オフライン版</h5>
-                <p class="card-text text-body-secondary">インターネットを必要とする機能をすべて取り除いたものです。セキュリティ警告の回避を期待しています。</p>
+                <p class="card-text text-body-secondary">インターネットを必要とする機能をすべて取り除いたものです。</p>
               </div>
               <div class="card-footer bg-transparent border-0 text-center">
                 <a href="https://fog-bank.github.io/mojp/downloads/v3.8.0/mojp.zip" class="btn btn-primary">ダウンロード</a>
@@ -70,8 +70,7 @@
             <div class="card border-0">
               <div class="card-body">
                 <h5 class="card-title">リリースノート</h5>
-                <p class="card-text"></p>
-                <a href="https://github.com/fog-bank/mojp/releases/tag/v3.8.0" class="card-link">確認</a>
+                <a href="https://github.com/fog-bank/mojp/releases/tag/v3.8.0" class="card-link">GitHub で確認</a>
               </div>
             </div>
           </div>
@@ -168,18 +167,19 @@
         <noscript><a href="https://disqus.com/?ref_noscript">Disqus を利用したコメント</a>を見るには、JavaScript を有効にしてください。</noscript>
       </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
-    <script>
-      var disqus_config = function () {
-        this.page.url = 'https://fog-bank.github.io/mojp/';
-        this.page.identifier = 'index';
-      };
-      (function () {
-        var d = document, s = d.createElement('script');
-        s.src = 'https://mojp.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-      })();
-    </script>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'https://fog-bank.github.io/mojp/';
+      this.page.identifier = 'index';
+    };
+    (function () {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://mojp.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
 </body>
 </html>
