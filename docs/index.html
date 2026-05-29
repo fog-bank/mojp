@@ -2,56 +2,81 @@
 <html lang="ja">
 <head>
   <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>mojp - MO 日本語カードテキスト表示ツール</title>
   <meta name="description" content="MO で表示されているカードに対応して、日本語テキストを表示するアプリを公開しています。">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 <body>
-  <h1 id="top">mojp</h1>
-  <ul id="menu">
-    <li><a href="#top">TOP</a></li>
-    <li><a href="#download">ダウンロード</a></li>
-    <li><a href="#howtouse">使い方</a></li>
-    <li><a href="#contact">連絡先</a></li>
-    <li><a href="https://github.com/fog-bank/mojp">View on GitHub</a></li>
-  </ul>
-  <div id="content">
+  <h1 id="top" class="m-0 p-2 fs-5 lh-base">mojp</h1>
+  <nav id="menu" class="nav sticky-top justify-content-center mb-3 p-1">
+    <a class="nav-link rounded-1" href="#top">TOP</a>
+    <a class="nav-link rounded-1" href="#download">ダウンロード</a>
+    <a class="nav-link rounded-1" href="#howtouse">使い方</a>
+    <a class="nav-link rounded-1" href="#contact">連絡先</a>
+    <a class="nav-link rounded-1" href="https://github.com/fog-bank/mojp">View on GitHub</a>
+  </nav>
+  <div id="content" class="container-lg mx-auto lh-lg" data-bs-spy="scroll" data-bs-target="#menu">
     <h2>MO 日本語カードテキスト表示ツール</h2>
-    <div>
-      <p><a href="https://www.mtgo.com/">Magic: The Gathering Online</a> (MO, MTGO) で表示されているカードに対応して、日本語テキストを表示するアプリです。</p>
-      <div id="grid">
-        <div><img id="screenshot" src="images/screenshot.png" width="316" height="253" /></div>
-        <div>
-          <h4><span class="underline">主な機能</span></h4>
-          <ul>
-            <li>右クリックしたカードの日本語テキストを表示する</li>
-            <li>カード名（日本語または英語）をコピーする</li>
-            <li><a href="http://mtgwiki.com/">MTG Wiki</a> でカードを調べる</li>
-            <li>カードが <a href="https://pennydreadfulmagic.com/">Penny Dreadful</a> (PD) で使用可能かどうかを表示する</li>
-            <li><a href="https://scryfall.com/">Scryfall</a> から日毎の平均価格を取得する</li>
-          </ul>
-        </div>
+    <p class="lead"><a href="https://www.mtgo.com/">Magic: The Gathering Online</a> (MO, MTGO) で表示されているカードに対応して、日本語テキストを表示するアプリです。</p>
+    <div class="hstack gap-3 mb-4">
+      <img id="screenshot" class="my-2" src="images/screenshot.png" width="316" height="253" />
+      <div class="card">
+        <div class="card-header">主な機能</div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">右クリックしたカードの日本語テキストを表示する</li>
+          <li class="list-group-item">カード名（日本語または英語）をコピーする</li>
+          <li class="list-group-item"><a href="http://mtgwiki.com/">MTG Wiki</a> でカードを調べる</li>
+          <li class="list-group-item">カードが <a href="https://pennydreadfulmagic.com/">Penny Dreadful</a> (PD) で使用可能かどうかを表示する</li>
+          <li class="list-group-item"><a href="https://scryfall.com/">Scryfall</a> から日毎の平均価格を取得する</li>
+        </ul>
       </div>
     </div>
-    <h3 id="download">ダウンロード</h3>
-    <div>
+    <h3 id="download" class="rounded my-2 p-2">ダウンロード</h3>
+    <div class="px-3 mb-4">
       <p>ダウンロード時や実行時に、ブラウザやセキュリティソフトからセキュリティ警告が出る場合があります。</p>
-      <h4><span class="underline">最新版 v3.8.0（ストリクスヘイヴンの秘密 対応）</span></h4>
-      <p>
-        <img src="images/download_file.png" width="16" height="16" />
-        <a href="https://fog-bank.github.io/mojp/downloads/v3.8.0/mojp.zip">ZIP 版</a> ｜
-        <img src="images/clickonce.png" width="16" height="16" />
-        <a href="https://github.com/fog-bank/mojp/releases/download/v3.8.0/setup.exe">インストーラー版</a> ｜
-        <a href="https://fog-bank.github.io/mojp/downloads/v3.8.0/mojp_offline.zip">オフライン版</a> ｜
-        <img src="images/note.png" width="16" height="16" />
-        <a href="https://github.com/fog-bank/mojp/releases/tag/v3.8.0">リリースノート</a>
-      </p>
-      <p>
-        インストーラー版 … MO と同じ形式の自動更新機能がついています。<br />
-      　オフライン版 … インターネットを必要とする機能をすべて取り除いたものです。セキュリティ警告の回避を期待しています。
-      </p>
+      <div class="card">
+        <h4 class="card-header">最新版 v3.8.0（ストリクスヘイヴンの秘密 対応）</h4>
+        <div class="card-body p-0">
+          <div class="card-group">
+            <div class="card border-0 border-end">
+              <div class="card-body">
+                <h5 class="card-title">ZIP 版</h5>
+                <p class="card-text"></p>
+              </div>
+              <div class="card-footer bg-transparent border-0 text-center">
+                <a href="https://fog-bank.github.io/mojp/downloads/v3.8.0/mojp.zip" class="btn btn-primary">ダウンロード</a>
+              </div>
+            </div>
+            <div class="card border-0 border-end">
+              <div class="card-body">
+                <h5 class="card-title">インストーラー版</h5>
+                <p class="card-text text-body-secondary">MO と同じ形式の自動更新機能がついています。</p>
+              </div>
+              <div class="card-footer bg-transparent border-0 text-center">
+                <a href="https://fog-bank.github.io/mojp/downloads/v3.8.0/mojp.zip" class="btn btn-primary">ダウンロード</a>
+              </div>
+            </div>
+            <div class="card border-0 border-end">
+              <div class="card-body">
+                <h5 class="card-title">オフライン版</h5>
+                <p class="card-text text-body-secondary">インターネットを必要とする機能をすべて取り除いたものです。セキュリティ警告の回避を期待しています。</p>
+              </div>
+              <div class="card-footer bg-transparent border-0 text-center">
+                <a href="https://fog-bank.github.io/mojp/downloads/v3.8.0/mojp.zip" class="btn btn-primary">ダウンロード</a>
+              </div>
+            </div>
+            <div class="card border-0">
+              <div class="card-body">
+                <h5 class="card-title">リリースノート</h5>
+                <p class="card-text"></p>
+                <a href="https://github.com/fog-bank/mojp/releases/tag/v3.8.0" class="card-link">確認</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <h4><span class="underline">v3.7.0（ミュータント タートルズ 対応）</span></h4>
       <p>
         <img src="images/note.png" width="16" height="16" />
@@ -62,8 +87,8 @@
       <p><a href="https://github.com/fog-bank/mojp/releases/tag/v2.0.0">v2.0.0</a>（基本セット 2019）より、ツールバーをカスタマイズできるようになりました。</p>
       <p><a href="https://github.com/fog-bank/mojp/releases/tag/v1.7.0">v1.7.0</a>（イクサランの相克）より、カードの追加情報をインターネットから取得するようになりました。不要な場合や処理を軽くしたい場合は、設定から無効にしてください。</p>
     </div>
-    <h3 id="howtouse">使い方</h3>
-    <div>
+    <h3 id="howtouse" class="rounded my-2 p-2">使い方</h3>
+    <div class="px-3 mb-4">
       <h4><span class="underline">必要条件</span></h4>
       <p>Windows 11</p>
       <p>.NET Framework 4.7.2 以上（MO と同じ条件です）</p>
@@ -101,15 +126,15 @@
       </ul>
       <p>詳しい説明や既知の不具合については <a href="https://github.com/fog-bank/mojp/wiki">GitHub 内の Wiki</a> をご確認ください。</p>
     </div>
-    <h3 id="mechanism">仕組み</h3>
-    <div>
+    <h3 id="mechanism" class="rounded my-2 p-2">仕組み</h3>
+    <div class="px-3 mb-4">
       <p>
         <a href="https://learn.microsoft.com/ja-jp/dotnet/framework/ui-automation/">Microsoft UI Automation</a> API
         を利用して、メニューを開いたときに発生するイベントをサブスクライブし、MO のプロセスに限り、メニュー内の UI テキストを検索しています。
       </p>
     </div>
-    <h3 id="reference">リファレンス</h3>
-    <div>
+    <h3 id="reference" class="rounded my-2 p-2">リファレンス</h3>
+    <div class="px-3 mb-4">
       <p>MO で日本語テキストを表示する試みとして、<a href="https://k5.hatenablog.com/archive/category/MTGO_SUPPORT">Magic Online 日本語化計画</a>の影響を受けています。</p>
       <p>このアプリで表示する日本語テキストは、<a href="https://whisper.wisdom-guild.net/">WHISPER</a> の検索結果をテキストファイルに保存したものに基づいています。</p>
       <p>
@@ -123,8 +148,8 @@
           （ファイル名固定）をダウンロードして、アプリケーションフォルダ（mojp.exe があるフォルダ）に保存しておく。
         </li>
         <li>
-            <a href="https://whisper.wisdom-guild.net/">WHISPER</a>で、次元・現象・計略・策略以外のカードタイプにチェックを入れ、さらに一番下の出力形式をテキストにして検索する。<br />
-            注）検索結果が多すぎてタイムアウトするため、条件を絞って複数の出力に分割する必要がある場合があります。
+          <a href="https://whisper.wisdom-guild.net/">WHISPER</a>で、次元・現象・計略・策略以外のカードタイプにチェックを入れ、さらに一番下の出力形式をテキストにして検索する。<br />
+          注）検索結果が多すぎてタイムアウトするため、条件を絞って複数の出力に分割する必要がある場合があります。
         </li>
         <li>表示されたテキストを、エンコード形式を Shift-JIS にして保存する。</li>
         <li>本アプリの設定画面を開き、一番下の開発用メニューから「検索結果テキストの読み込み」ボタンで保存したテキストを読み込む。</li>
@@ -132,30 +157,29 @@
       </ol>
       <p>カードセットを絞らない場合、2 万件以上のカードがヒットし、テキストのサイズは 8 MB を超えますので、この方法で頻繁に検索しないでください。</p>
     </div>
-    <h3 id="contact">連絡先</h3>
-    <div>
-      <p>Twitter：<a href="https://x.com/bank_fog">@bank_fog</a></p>
+    <h3 id="contact" class="rounded my-2 p-2">連絡先</h3>
+    <div class="px-3 mb-4">
+      <p>X (Twitter)：<a href="https://x.com/bank_fog">@bank_fog</a></p>
       <p>ニコ動：<a href="https://www.nicovideo.jp/watch/sm29837666">sm29837666</a></p>
       <p>または、以下のフォームで匿名のコメントが可能です（コメントと名前、仮のメールアドレスを記入後、ゲストとして投稿するにチェック）。なおコメントの承認まで時間がかかる場合があります。</p>
-      <div id="comment_body">
-        <div id="disqus_thread"></div>
+    </div>
+    <div id="comment_body">
+      <div id="disqus_thread">
         <noscript><a href="https://disqus.com/?ref_noscript">Disqus を利用したコメント</a>を見るには、JavaScript を有効にしてください。</noscript>
       </div>
     </div>
-  </div>
-  <script type="application/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-  <script type="application/javascript" src="script.js"></script>
-  <script>
-    var disqus_config = function () {
-      this.page.url = 'https://fog-bank.github.io/mojp/';
-      this.page.identifier = 'index';
-    };
-    (function () {
-      var d = document, s = d.createElement('script');
-      s.src = 'https://mojp.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-    })();
-  </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+    <script>
+      var disqus_config = function () {
+        this.page.url = 'https://fog-bank.github.io/mojp/';
+        this.page.identifier = 'index';
+      };
+      (function () {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://mojp.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    </script>
 </body>
 </html>
