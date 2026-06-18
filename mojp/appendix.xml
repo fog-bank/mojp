@@ -9152,6 +9152,47 @@ III ― あなたの墓地にクリーチャーか講義であるカードがあ
     <type name="Hungry Graffalon" type="クリーチャー ― キリン" />
     <type name="Aqueous Aria" type="ソーサリー" />
     <type name="Restore Relic" type="ソーサリー" />
+    <!-- 本 -->
+    <type name="Arcane Encyclopedia" type="アーティファクト ― 本" />
+    <type name="Barrin's Codex" type="アーティファクト ― 本" />
+    <type name="Book of Rass" type="アーティファクト ― 本" />
+    <type name="Codie, Vociferous Codex" type="伝説のアーティファクト・クリーチャー ― 本・構築物" />
+    <type name="Emmessi Tome" type="アーティファクト ― 本" />
+    <type name="Folio of Fancies" type="アーティファクト ― 本" />
+    <type name="Fool's Tome" type="アーティファクト ― 本" />
+    <type name="Geth's Grimoire" type="アーティファクト ― 本" />
+    <type name="Grimoire of the Dead" type="伝説のアーティファクト ― 本" />
+    <type name="Heirloom Epic" type="アーティファクト ― 本" />
+    <type name="Illuminated Folio" type="アーティファクト ― 本" />
+    <type name="Investigator's Journal" type="アーティファクト ― 本・手掛かり" />
+    <type name="Jalum Tome" type="アーティファクト ― 本" />
+    <type name="Jayemdae Tome" type="アーティファクト ― 本" />
+    <type name="Jodah's Codex" type="アーティファクト ― 本" />
+    <type name="Kyren Archive" type="アーティファクト ― 本" />
+    <type name="Mangara's Tome" type="アーティファクト ― 本" />
+    <type name="Marina Vendrell's Grimoire" type="伝説のアーティファクト ― 本" />
+    <type name="Mazemind Tome" type="アーティファクト ― 本" />
+    <type name="Mercadian Atlas" type="アーティファクト ― 本" />
+    <type name="Monster Manual" type="アーティファクト ― 本" />
+    <type name="Mysterious Tome" type="アーティファクト ― 本" />
+    <type name="Otherworld Atlas" type="アーティファクト ― 本" />
+    <type name="Phyrexian Grimoire" type="アーティファクト ― 本" />
+    <type name="Sarevok's Tome" type="アーティファクト ― 本" />
+    <type name="Sarpadian Empires, Vol. VII" type="アーティファクト ― 本" />
+    <type name="Spellbook" type="アーティファクト ― 本" />
+    <type name="Summoner's Grimoire" type="アーティファクト ― 本・装備品" />
+    <type name="Tamiyo's Journal" type="伝説のアーティファクト ― 本" />
+    <type name="Tamiyo's Logbook" type="アーティファクト ― 本" />
+    <type name="Tarrian's Journal" type="伝説のアーティファクト ― 本" />
+    <type name="The Book of Exalted Deeds" type="伝説のアーティファクト ― 本" />
+    <type name="The Book of Vile Darkness" type="伝説のアーティファクト ― 本" />
+    <type name="The Underworld Cookbook" type="アーティファクト ― 本" />
+    <type name="Thran Tome" type="アーティファクト ― 本" />
+    <type name="Tome of Legends" type="アーティファクト ― 本" />
+    <type name="Tome of the Guildpact" type="アーティファクト ― 本" />
+    <type name="Urza's Tome" type="アーティファクト ― 本" />
+    <type name="Venser's Journal" type="アーティファクト ― 本" />
+    <type name="Wizard's Spellbook" type="アーティファクト ― 本" />
 
     <!-- 合体カード -->
     <rel name="Gisela, the Broken Blade" rel="Bruna, the Fading Light|Brisela, Voice of Nightmares" />
