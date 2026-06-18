@@ -25,7 +25,7 @@ public partial class App : Application
     /// カードの英語名から、英語カード名・日本語カード名・日本語カードテキストを検索します。
     /// </summary>
     /// <remarks>#card + #(card beyond) + #alt</remarks>
-    public static Dictionary<string, Card> Cards { get; } = new(31746 + 158 + 8);
+    public static Dictionary<string, Card> Cards { get; } = new(32609);
 
     /// <summary>
     /// このアプリの設定を取得します。
