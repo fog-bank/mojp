@@ -9,13 +9,23 @@ var cts = new CancellationTokenSource();
 
 // My definitions
 var cards = new HashSet<string>(40000);
+var alts = new HashSet<string>();
+var notImpls = new HashSet<string>(40000);
 await using (var xmlStream = File.OpenRead("cards.xml"))
 {
     var xml = await XDocument.LoadAsync(xmlStream, LoadOptions.None, cts.Token);
     foreach (var card in xml.Descendants("card"))
     {
         if ((string?)card.Attribute("name") is string name)
+        {
             cards.Add(name);
+
+            if ((string?)card.Attribute("rel") is not string _)
+                notImpls.Add(name);
+        }
+
+        if ((string?)card.Attribute("alt") is string alt)
+            alts.UnionWith(alt.Split('|'));
     }
 }
 
@@ -61,9 +71,10 @@ foreach (var def in json.RootElement.EnumerateObject())
         continue;
 
     ncard++;
-    if (cards.Contains(name))
+    if (cards.Contains(name) || alts.Contains(name))
     {
         passed++;
+        notImpls.Remove(name);
         continue;
     }
 
@@ -84,3 +95,4 @@ foreach (var def in json.RootElement.EnumerateObject())
         Console.WriteLine(name);
 }
 Console.WriteLine($"Entry: {nentry}, Card: {passed} / {ncard}");
+Console.WriteLine($"Not referenced card: {notImpls.Count}");

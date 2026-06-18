@@ -374,44 +374,6 @@ partial class Card
                 Debug.WriteLine(name + " は既にカードリストに含まれていません。");
         }
 
-        // Universe beyond セットから Universe within セット化
-        Debug.WriteLine("UB セットのカード変更");
-
-        foreach (var node in doc.Root.Elements("universe").Elements("card"))
-        {
-            string beyond = (string)node.Attribute("beyond"); // required
-            string within = (string)node.Attribute("within"); // required
-            string ja = (string)node.Attribute("ja");
-            string rel = (string)node.Attribute("rel");
-            string flavor = (string)node.Attribute("flavor");
-
-            Debug.WriteLineIf(!cards.TryGetValue(within, out var card),
-                beyond + " => " + within + " のカードが WHISPER に未登録です。");
-            Debug.WriteLineIf(card.JapaneseName != ja, beyond + " => " + within + " の日本語カード名が一致しません。");
-
-            if (cards.TryGetValue(beyond, out card))
-            {
-                string beyondJaName = card.JapaneseName;
-
-                card.Name = within;
-                card.JapaneseName = ja ?? within;
-                card.WikiLink ??= card.HasJapaneseName ? beyondJaName + "/" + beyond : beyond;
-                card.Text = card.Text.Replace(beyondJaName, card.JapaneseName);
-                card.RelatedCardName = rel;
-
-                if (flavor != null)
-                {
-                    foreach (string flavorWord in flavor.Split('|'))
-                        card.Text = card.Text.Replace(flavorWord + " ― ", null);
-                }
-                cards.Remove(beyond);
-                cards[within] = card;
-                cards[beyond] = card;
-            }
-            else
-                Debug.WriteLine(beyond + " はカードリストに含まれていません。");
-        }
-
         // P/T だけ追加
         foreach (var node in doc.Root.Elements("add").Elements("pt"))
         {
@@ -612,6 +574,51 @@ partial class Card
             }
             else
                 Debug.WriteLine("関連カード情報の追加先となる " + name + " のカード情報がありません。");
+        }
+
+        // Universe beyond カードテキストを Universe within カードにコピー
+        Debug.WriteLine("UW カードに UB カード情報を追加");
+
+        foreach (var node in doc.Root.Elements("universe").Elements("card"))
+        {
+            string beyond = (string)node.Attribute("beyond"); // required
+            string within = (string)node.Attribute("within"); // required
+            string ja = (string)node.Attribute("ja");
+            //string rel = (string)node.Attribute("rel");
+            string flavor = (string)node.Attribute("flavor");
+
+            if (!cards.TryGetValue(beyond, out var beyondCard))
+            {
+                Debug.WriteLine(beyond + " はカードリストに含まれていません。");
+                continue;
+            }
+
+            if (!cards.TryGetValue(within, out var withinCard))
+            {
+                Debug.WriteLine(beyond + " => " + within + " のカードが WHISPER に未登録です。");
+                continue;
+            }
+            Debug.WriteLineIf(withinCard.JapaneseName != ja,
+                beyond + " => " + within + " の日本語カード名が一致しません。");
+
+            // UB 対象に UW のカード名が表示されるのが紛らわしいので、別カードテキストとして保存することにする
+            //cards[within] = beyondCard;
+
+            // MO では UB カードでもフレーバー語が削除されている
+            if (flavor != null)
+            {
+                foreach (string flavorWord in flavor.Split('|'))
+                    beyondCard.Text = beyondCard.Text.Replace(flavorWord + " ― ", null);
+            }
+            // カード名と専用能力名の置換
+            withinCard.Text = beyondCard.Text.Replace(beyondCard.JapaneseName, ja)
+                .Replace("ウェブスリング・", "糸投げ").Replace("ウェブスリング", "糸投げ")
+                .Replace("∞", "始原");
+            // 機体
+            withinCard.PT ??= beyondCard.PT;
+            // wiki に UW → UB のリダイレクトはない
+            withinCard.WikiLink ??= beyondCard.WikiLink ??
+                (beyondCard.HasJapaneseName ? beyondCard.JapaneseName + "/" + beyond : beyond);
         }
 
         // 出力

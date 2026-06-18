@@ -3198,16 +3198,16 @@ Michonne, Ruthless Survivorと２体以上のゾンビが攻撃するたび、�
     <wiki name="V.A.T.S." wiki="V.A.T.S./V.A.T.S." />
     <wiki name="Bespoke B?" wiki="特製の六尺棒/Bespoke Bō" />
     <wiki name="Hamato Ninp?" wiki="Hamato Ninpō" />
+    <wiki name="SP//dr, Piloted by Peni" wiki="ペニーが操縦するSP//dr/SP//dr,_Piloted_by_Peni" />
 
     <!-- 代替カード名 -->
-    <alt alt="Arana, Heart of the Spider" name="Gloria, the Great Armorer" />
     <alt alt="Avatar - Serra Angel (Alt.)" name="Avatar - Serra Angel" />
     <alt alt="Avatar - Momir Vig, Simic Visionary (Alt.)" name="Avatar - Momir Vig, Simic Visionary" />
     <alt alt="Everflame, Heroes' Legacy" name="The Irencrag" />
     <alt alt="Mileva, the Stalwart" name="Tenth District Hero" />
     <alt alt="Moon" name="Princess Yue" />
     <alt alt="Sol'Kanar the Tainted" name="Sol'kanar the Tainted" />
-    <alt alt="With Great Power..." name="Chosen by Valgavoth" />
+    <alt alt="With Great Power..." name="With Great Power . . ." />
   </add>
   <replace>
     <!-- 誤字 -->
@@ -3466,9 +3466,10 @@ Michonne, Ruthless Survivorと２体以上のゾンビが攻撃するたび、�
     <regex target="text" pattern="時間的な何か" value="時間的ななにか" />
     <regex target="text" pattern="コントロールしてて" value="コントロールしていて" />
     <regex target="text" pattern="がが" value="が" />
-    <!-- タイプの誤り -->
+    <!-- タイプの誤り・未登録 -->
     <regex target="type" pattern="(?&lt;!ウルザの)\(Urza’s\)" value="ウルザの(Urza's)" />
     <regex target="type" pattern="(?&lt;!ク＝タン)\(C’tan\)" value="ク＝タン(C'tan)" />
+    <regex target="type" pattern="(?&lt;!ターミナス)\(Terminus\)" value="ターミナス(Terminus)" />
     <regex target="text" pattern="\(Advanture\)" value="出来事(Adventure)" />
     <regex target="text" pattern="\(Vechile\)" value="機体(Vehicle)" />
     <regex target="text" pattern="\(Farie\)" value="フェアリー(Faerie)" />
@@ -3513,14 +3514,9 @@ Michonne, Ruthless Survivorと２体以上のゾンビが攻撃するたび、�
     <regex target="name" pattern="Mj\?lnir" value="Mjolnir" />
     <regex target="name" pattern="Und\?miel" value="Undomiel" />
     <regex target="name" pattern="Clavile\?o" value="Clavileno" />
-    <regex target="wiki" pattern="Ara\?a" value="Arana" />
+    <regex target="name" pattern="Ara\?a" value="Arana" />
     <regex target="ja|text" pattern="(?&lt;=ウドゥーン|西方)の\?、" value="の焰、" />
     <regex target="text" pattern="縄\?" value="縄鏢" />
-    <!-- スパイダーマン -->
-    <regex target="text" pattern="ウェブスリング・?" value="糸投げ" />
-    <regex target="type" pattern="伝説のアーティファクト ― インフィニティ・ストーン" value="伝説のアーティファクト ― ターミナス・ストーン" />
-    <regex target="text" pattern="∞(?=能力| ― )" value="始原" />
-    <regex target="text" pattern="シルシュートのアデミ|無情なる狩人、ブラコ|蜘蛛群のクレン|地底街の夢想家、クレン|遺伝子接合学者、ゴベン|心咬まれし者、カヴァエロ(?!》)|寓話の空登り、ニア|スカイセイルの語り部、ニア|蜘蛛糸の発明家、サーリス|イグの交差路の用心棒、ヴィッゴ|繭の世話人、ウィザール|警戒機、クモノス|境界の接合者、クォネウス|競争路の妨害者、レンチ|屋根跳びの二人、ジャナイとホッピー" value="これ" />
     <!-- タートルズ -->
     <regex target="text" pattern="Casey &amp; Raph, Hotheads|Casey Jones, Asphalt Hooligan|Donatello, Rad Scientist|Michelangelo, On the Scene|Donnie &amp; April, Adorkable Duo|Mikey &amp; Mona, Mutant Sitters|Raphael, Tag Team Tough|Splinter &amp; Leo, Father &amp; Son|Splinter, Aging Champion" value="これ" />
     <!-- オラクル更新 -->
@@ -4154,7 +4150,7 @@ Michonne, Ruthless Survivorと２体以上のゾンビが攻撃するたび、�
     <regex target="text" pattern="(?&lt;!（[^\n]*)(?&lt;=。|そうしたなら、)(?=(?:その|それらの)コピーの新しい対象を選んでもよい。|プレインズウォークしてもよい。)" value="あなたは" />
     <regex target="text" pattern="(?&lt;!（[^）\n]*|あなたは[^。]+|対戦相手は[^。]+|そのプレイヤーは、[^。]+)(?&lt;=なら|場合|たび|とき|時に|際し|まで|かぎり|その後|代わりに|につきそれぞれ|ターン|ターンの間|各ターンに|１回|として)、(?!あなたは|[^。]*対戦相手|[^。]*プレイヤー|[^。]*コントローラー|[^。]*オーナーは|代わりに|それを唱えるために)(?=[^、。「]*(?:公開し|引い|捨て|出し|置い|加え|戻し|切削し|生成し|コピーし|表向きにし|偽装し|変身させ|割り振っ|取り除い|動かし|行っ|追放し|タップし|生け贄に捧げ|つけ|給餌し|督励し|容疑をかけ|支払っ|唱え|プレイし|得|受け|見|開始し)てもよ)" value="、あなたは" />
     <regex target="text" pattern="(?&lt;!（[^\n]*)(?&lt;=^|。|：| ― |なら、|場合、|たび、|時に、|時まで、|その後、|１回、)(?!あなたは|そのプレイヤーは)(?=[^、：。（」\n]*(?:の中から|その中から|手札から|それを|カードを|カード１枚を|のうち１枚を|コピーを|呪文１つを|望む数の呪文を|公開し|を支払うのではなく|の上に|暴君|幽霊火の修練者)、[^。]+(?:公開し|唱え|プレイし|加え|出し|捧げ|置い|させ|たりし)てもよい)" value="あなたは" />
-    <regex target="text" pattern="(?&lt;=^|。|：|なら、|場合、|たび、|とき、|時に、|際し、|として、|その後、)「(?=[^」]+」(?:を選んでもよい|を持つ紋章|の紋章))" value="あなたは「" />
+    <regex target="text" pattern="(?&lt;=^|。|：| ― |なら、|場合、|たび、|とき、|時に、|際し、|として、|その後、)「(?=[^」]+」(?:を選んでもよい|を持つ紋章|の紋章))" value="あなたは「" />
     <regex target="text" pattern="(?m)^(?![^\n]*あなたは)(?=[^。\n]+を、[^。]+のコピーとして(?:タップ状態で)?戦場に出してもよい。)" value="あなたは" />
     <regex target="text" pattern="(?m)^あなたのアンタップ・ステップに、(?=[^。]+を選んでもよい。)" value="あなたは、あなたのアンタップ・ステップに" />
     <regex target="text" pattern="(?m)(?&lt;=^|。|・| ― |：|たび、|とき、|時に、|なら、|場合、|置き、)(?=[０-９Ｘ]+点のライフを[得失])" value="あなたは" />
@@ -8748,36 +8744,36 @@ III ― 対戦相手がコントロールしているすべてのクリーチャ
 あなたはあなたの墓地からこのカードをこれのワープ能力で唱えてもよい。
 ワープ ― (黒),２点のライフを支払う。（あなたの手札や墓地からこのカードをワープ・コストで唱えてもよい。そうしたなら、次の終了ステップの開始時に、このクリーチャーを追放し、その後、後のターンに、これを追放領域から唱えてもよい。）</card>
 
-    <!-- OM1 -->
-    <card name="Hex of Undeath" ja="不死の呪詛" type="ソーサリー" alt="Behold the Sinister Six!" wiki="シニスター・シックスにご用心！/Behold the Sinister Six!">あなたの墓地にあり、互いに名前の異なるクリーチャー・カード最大６枚を対象とする。それらを戦場に戻す。</card>
-    <card name="Uharis, the Stormspinner" ja="嵐紡ぎ、ウハリス" type="伝説のクリーチャー ― 蜘蛛・人間・英雄" pt="2/3" alt="Spider-Man 2099" wiki="スパイダーマン2099/Spider-Man 2099">あなたの第１第２第３ターンには、あなたは嵐紡ぎ、ウハリスを唱えられない。
+    <!-- SPM -->
+    <card name="Behold the Sinister Six!" ja="シニスター・シックスにご用心！" type="ソーサリー">あなたの墓地にあり、互いに名前の異なるクリーチャー・カード最大６枚を対象とする。それらを戦場に戻す。</card>
+    <card name="Spider-Man 2099" ja="スパイダーマン2099" type="伝説のクリーチャー ― 蜘蛛・人間・英雄" pt="2/3">未来より ― あなたの第１第２第３ターンには、あなたはスパイダーマン2099を唱えられない。
 二段攻撃、警戒
-あなたの終了ステップの開始時に、このターンにあなたがあなたの手札以外から、土地をプレイするか呪文を唱えていた場合、１つを対象とする。嵐紡ぎ、ウハリスはそれに、自身のパワーに等しい点数のダメージを与える。</card>
-    <card name="Wrench, Speedway Saboteur" ja="競争路の妨害者、レンチ" type="伝説のクリーチャー ― 人間・ならず者・悪人" pt="2/3" alt="Black Cat, Cunning Thief" wiki="狡猾な怪盗、ブラックキャット/Black Cat, Cunning Thief">これが戦場に出たとき、対戦相手１人を対象とする。そのプレイヤーのライブラリーの一番上からカード９枚を見て、そのうち２枚を裏向きで追放する。その後、残りをそのライブラリーの一番下に無作為の順番で置く。それらのカードが追放され続けているかぎり、あなたはそれらのカードをプレイしてもよい。これにより呪文を唱えるために任意のタイプのマナを支払ってもよい。</card>
+あなたの終了ステップの開始時に、このターンにあなたがあなたの手札以外から、土地をプレイするか呪文を唱えていた場合、１つを対象とする。スパイダーマン2099はそれに、自身のパワーに等しい点数のダメージを与える。</card>
+    <card name="Black Cat, Cunning Thief" ja="狡猾な怪盗、ブラックキャット" type="伝説のクリーチャー ― 人間・ならず者・悪人" pt="2/3">狡猾な怪盗、ブラックキャットが戦場に出たとき、対戦相手１人を対象とする。そのプレイヤーのライブラリーの一番上からカード９枚を見て、そのうち２枚を裏向きで追放する。その後、残りをそのライブラリーの一番下に無作為の順番で置く。それらのカードが追放され続けているかぎり、あなたはそれらのカードをプレイしてもよい。これにより呪文を唱えるために任意のタイプのマナを支払ってもよい。</card>
 
-    <!-- あなたは (OM1) -->
-    <card name="Remorseless Coup" ja="無慈悲なクーデター" type="インスタント" alt="The Spot's Portal" wiki="スポットのポータル/The Spot's Portal">クリーチャー１体を対象とする。それをオーナーのライブラリーの一番下に置く。あなたが悪人をコントロールしていないかぎり、あなたは２点のライフを失う。</card>
-    <card name="Rouse the Swarm" ja="大群目覚める" type="エンチャント" alt="Wall Crawl" wiki="壁登り/Wall Crawl">このエンチャントが戦場に出たとき、到達を持つ緑の2/1の蜘蛛・クリーチャー・トークン１体を生成する。その後、あなたはあなたがコントロールしている蜘蛛１体につき１点のライフを得る。
+    <!-- あなたは (SPM) -->
+    <card name="The Spot's Portal" ja="スポットのポータル" type="インスタント">クリーチャー１体を対象とする。それをオーナーのライブラリーの一番下に置く。あなたが悪人をコントロールしていないかぎり、あなたは２点のライフを失う。</card>
+    <card name="Wall Crawl" ja="壁登り" type="エンチャント">このエンチャントが戦場に出たとき、到達を持つ緑の2/1の蜘蛛・クリーチャー・トークン１体を生成する。その後、あなたはあなたがコントロールしている蜘蛛１体につき１点のライフを得る。
 あなたがコントロールしている各蜘蛛は+1/+1の修整を受け、防衛を持つクリーチャーにはブロックされない。</card>
     
-    <!-- すべての (OM1) -->
-    <card name="Arachnomania" ja="蜘蛛妄想" type="エンチャント" alt="Spider-Verse" wiki="スパイダー・バース/Spider-Verse">あなたがコントロールしている各蜘蛛には「レジェンド・ルール」は適用されない。
+    <!-- すべての (SPM) -->
+    <card name="Spider-Verse" ja="スパイダー・バース" type="エンチャント">あなたがコントロールしている各蜘蛛には「レジェンド・ルール」は適用されない。
 あなたがあなたの手札以外から呪文を唱えるたび、あなたはそれをコピーしてもよい。そうしたなら、あなたはそのコピーの新しい対象を選んでもよい。そのコピーがパーマネント・呪文なら、それは速攻を得る。これは毎ターン１回のみ行える。</card>
-    <card name="Cren of the Spider Brood" ja="蜘蛛群のクレン" type="伝説のクリーチャー ― 蜘蛛・人間・英雄" pt="4/3" rel="Cren, Undercity Dreamer" alt="Ultimate Spider-Man" wiki="アルティメット・スパイダーマン/Ultimate Spider-Man">先制攻撃、速攻
-(２)：これの上に+1/+1カウンター１個を置く。ターン終了時まで、これは呪禁を得て、無色になる。
+    <card name="Ultimate Spider-Man" ja="アルティメット・スパイダーマン" type="伝説のクリーチャー ― 蜘蛛・人間・英雄" pt="4/3" rel="Miles Morales">先制攻撃、速攻
+擬態 ― (２)：アルティメット・スパイダーマンの上に+1/+1カウンター１個を置く。ターン終了時まで、これは呪禁を得て、無色になる。
 あなたが攻撃するたび、あなたがコントロールしていて蜘蛛や伝説である各クリーチャーの上にある各種類のカウンターの個数をそれぞれ２倍にする。</card>
-    <card name="Tarantusk, Unwisely Awoken" ja="起こされた獣、タランタスク" type="伝説のクリーチャー ― 蜘蛛・猪・英雄" pt="2/2" alt="Spider-Ham, Peter Porker" wiki="スパイダーハム、ピーター・ポーカー/Spider-Ham, Peter Porker">これが戦場に出たとき、食物・トークン１つを生成する。
-あなたがコントロールしていてこれでないすべての、蜘蛛や猪やコウモリや熊や鳥や猫や犬やカエルやジャッカルやトカゲやハツカネズミやカワウソや兎やアライグマやネズミやリスや海亀や狼は+1/+1の修整を受ける。</card>
+    <card name="Spider-Ham, Peter Porker" ja="スパイダーハム、ピーター・ポーカー" type="伝説のクリーチャー ― 蜘蛛・猪・英雄" pt="2/2">これが戦場に出たとき、食物・トークン１つを生成する。
+動物たちの大トン乱 ― あなたがコントロールしていてこれでないすべての、蜘蛛や猪やコウモリや熊や鳥や猫や犬やカエルやジャッカルやトカゲやハツカネズミやカワウソや兎やアライグマやネズミやリスや海亀や狼は+1/+1の修整を受ける。</card>
 
-    <!-- 誤訳疑い (OM1) -->
-    <card name="Egrix the Bile Bulwark" ja="胆汁の防塁、エグリックス" type="伝説のクリーチャー ― シンビオート・蜘蛛・英雄" pt="4/4" alt="Gwenom, Remorseless" wiki="情け容赦無き者、グウェノム/Gwenom, Remorseless">接死、絆魂
+    <!-- 誤訳疑い (SPM) -->
+    <card name="Gwenom, Remorseless" ja="情け容赦無き者、グウェノム" type="伝説のクリーチャー ― シンビオート・蜘蛛・英雄" pt="4/4">接死、絆魂
 これが攻撃するたび、ターン終了時まで、あなたはいつでもあなたのライブラリーの一番上のカードを見てよく、あなたはあなたのライブラリーの一番上からカードをプレイしてもよい。あなたがこれにより呪文を唱えるなら、マナ・コストを支払うのではなく、それのマナ総量に等しい点数のライフを支払う。</card>
-    <card name="Withar, Cocoon Keeper" ja="繭の世話人、ウィザール" type="伝説のクリーチャー ― 人間・悪人" pt="5/5" alt="Mister Negative" wiki="ミスターネガティブ/Mister Negative">警戒、絆魂
-これが戦場に出たとき、対戦相手１人を対象とする。あなたはそのプレイヤーとライフ総量を交換してもよい。これによりあなたがライフを失ったなら、その点数に等しい枚数のカードを引く。</card>
+    <card name="Mister Negative" ja="ミスターネガティブ" type="伝説のクリーチャー ― 人間・悪人" pt="5/5">警戒、絆魂
+ダークフォースの反転 ― ミスターネガティブが戦場に出たとき、対戦相手１人を対象とする。あなたはそのプレイヤーとライフ総量を交換してもよい。これによりあなたがライフを失ったなら、その点数に等しい枚数のカードを引く。</card>
 
-    <!-- テキストが正常でないカード (OM1) -->
-    <card name="Janai and Hoppy, Roofskippers" ja="屋根跳びの二人、ジャナイとホッピー" type="伝説のクリーチャー ― 蜘蛛・人間・英雄" pt="2/2" alt="Spider-Girl, Legacy Hero" wiki="力受け継ぎしヒーロー、スパイダーガール/Spider-Girl, Legacy Hero">あなたのターンの間、これは飛行を持つ。
-これが戦場を離れたとき、緑白の1/1の人間・市民・クリーチャー・トークン１体を生成する。</card>
+    <!-- テキストが正常でないカード (SPM) -->
+    <card name="Spider-Girl, Legacy Hero" ja="力受け継ぎしヒーロー、スパイダーガール" type="伝説のクリーチャー ― 蜘蛛・人間・英雄" pt="2/2">あなたのターンの間、これは飛行を持つ。
+力受け継ぎしヒーロー、スパイダーガールが戦場を離れたとき、緑白の1/1の人間・市民・クリーチャー・トークン１体を生成する。</card>
 
     <!-- TLA -->
     <card name="Accumulate Wisdom" ja="積み重ねられた叡智" type="インスタント ― 講義">あなたのライブラリーの一番上からカード３枚を見る。そのうち１枚をあなたの手札に、残りをあなたのライブラリーの一番下に望む順番で置く。あなたの墓地に３枚以上の講義・カードがあるなら、代わりに、それらすべてのカードをあなたの手札に加える。</card>
@@ -9147,22 +9143,10 @@ III ― あなたの墓地にクリーチャーか講義であるカードがあ
 ・あなたがコントロールしていてインスタントかソーサリーである呪文１つを対象とする。それをコピーする。あなたはそのコピーの新しい対象を選んでもよい。
 ・あなたがコントロールしているクリーチャー・呪文１つを対象とする。それをコピーする。そのコピーは速攻と「終了ステップの開始時に、このトークンを生け贄に捧げる。」を得る。</card>
     <card name="Slumbering Trudge" ja="まどろみのトラッジ" type="クリーチャー ― 植物・ビースト" pt="6/6">このクリーチャーは、３からＸを引いた値に等しい個数の麻痺カウンターが置かれた状態で戦場に出る。Ｘが２以下なら、これはタップ状態で戦場に出る。（麻痺カウンターが置かれているパーマネントがアンタップ状態になるなら、代わりにそれの上から麻痺カウンター１個を取り除く。）</card>
-
-    <!-- MSH -->
-    <card name="The Mind Stone" ja="マインド・ストーン" type="伝説のアーティファクト ― インフィニティ・ストーン">破壊不能
-(Ｔ)：(白)を加える。
-(５)(白),(Ｔ)：マインド・ストーンを装着する。（一度装着すると∞能力が有効になる。）
-∞ ― あなたの終了ステップの開始時に、あなたがコントロールしていて土地でもこれでもないパーマネント最大１つを対象とする。それを追放する。その後、そのカードをオーナーのコントロール下で戦場に戻す。</card>
-
-    <!-- MSC -->
-    <card name="Amazing Spider-Girl" ja="アメイジング・スパイダーガール" type="伝説のクリーチャー ― 蜘蛛・人間・英雄" pt="5/4">ウェブスリング(２)(白)（あなたがコントロールしているタップ状態のクリーチャー１体をオーナーの手札に戻すなら、この呪文を(２)(白)で唱えてもよい。）
-飛行、警戒</card>
     
     <!-- 再録 (MSH,MSC) -->
     <card name="Blazing Crescendo" ja="猛火の最高潮" type="インスタント">クリーチャー１体を対象とする。ターン終了時まで、それは+3/+1の修整を受ける。あなたのライブラリーの一番上のカードを追放する。あなたの次のターンの終了時まで、あなたはそのカードをプレイしてもよい。</card>
     <card name="Mist-Cloaked Herald" ja="霧まといの川守り" type="クリーチャー ― マーフォーク・戦士" pt="1/1">このクリーチャーはブロックされない。</card>
-
-    <!--<card name="Web Up" ja="糸巻き" type="エンチャント">このエンチャントが戦場に出たとき、対戦相手がコントロールしていて土地でないパーマネント１つを対象とする。このエンチャントが戦場を離れるまで、それを追放する。</card>-->
 
     <!-- SOS,SOC -->
     <type name="Hungry Graffalon" type="クリーチャー ― キリン" />
@@ -9299,7 +9283,7 @@ III ― あなたの墓地にクリーチャーか講義であるカードがあ
     <card beyond="Spiders-Man, Heroic Horde" within="The Clutter Cluster" ja="カサカサ走りの蜘蛛群" />
     <card beyond="Wall Crawl" within="Rouse the Swarm" ja="大群目覚める" />
     <card beyond="Web of Life and Destiny" within="Through the Omenpath" ja="領界路を抜けて" />
-    <card beyond="Ara?a, Heart of the Spider" within="Gloria, the Great Armorer" ja="偉大なる甲冑師、グロリア" />
+    <card beyond="Arana, Heart of the Spider" within="Gloria, the Great Armorer" ja="偉大なる甲冑師、グロリア" />
     <card beyond="Biorganic Carapace" within="Angler's Shield" ja="釣り人の盾" />
     <card beyond="Carnage, Crimson Chaos" within="Desecrex, Gift of Servitude" ja="隷属の贈り物、デセクレックス" />
     <card beyond="Cosmic Spider-Man" within="Scions of the Ur-Spider" ja="原初の蜘蛛の末裔たち" />

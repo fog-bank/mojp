@@ -30,7 +30,7 @@ public partial class App : Application
     /// <summary>
     /// このアプリの設定を取得します。
     /// </summary>
-    public static SettingsCache SettingsCache { get; } = new SettingsCache();
+    public static SettingsCache SettingsCache { get; } = new();
 
 #if !OFFLINE
     /// <summary>
