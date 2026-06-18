@@ -50,26 +50,26 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>xo8/luEeXzEP8uiN5zFjNrmQYmu8ZnJaC/IgADGDaIk=</dsig:DigestValue>
+        <dsig:DigestValue>fosFWTmmZLCAo7zDRxN5hHI7wvOrB7dQ+MIHT0r3p30=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="appendix.xml" size="1899385" writeableType="applicationData">
+  <file name="appendix.xml" size="1902662" writeableType="applicationData">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>SA3W2W3FA7HTkjks8veBsl/FH5BTZNtEMfvmrS8azAQ=</dsig:DigestValue>
+      <dsig:DigestValue>I6TpsB5TgcyfuADx/N5oRdcOyIBFz0O7TqecM8viujY=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="cards.xml" size="12811966" writeableType="applicationData">
+  <file name="cards.xml" size="12812280" writeableType="applicationData">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>REwnnGgYlGvaJR8d62cu9NOSCPEy8vKuRFhIarT3350=</dsig:DigestValue>
+      <dsig:DigestValue>whUu9Z8VhkEJG/U3XkUiqYGwzhCb5c1lkxu5Q9TS1CQ=</dsig:DigestValue>
     </hash>
   </file>
   <file name="mojp.exe.config" size="3328">
