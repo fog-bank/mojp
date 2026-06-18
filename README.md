@@ -38,7 +38,7 @@ Windows 11
 
 ## 開発環境
 Windows 11 (Version 25H2)  
-Visual Studio 2026 v18.4  
+Visual Studio 2026 v18.7  
 C# 14
 
 ### 仕組み
