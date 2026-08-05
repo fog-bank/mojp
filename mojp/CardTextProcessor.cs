@@ -98,6 +98,10 @@ partial class Card
                 sb.Append('o');
                 return true;
 
+            case 'Ó':
+                sb.Append('O');
+                return true;
+
             // Robo-Piñata
             case 'ñ':
                 sb.Append('n');
