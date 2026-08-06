@@ -38,6 +38,7 @@ if (redownload || !File.Exists(ZipFilename))
         using var http = new HttpClient();
         using var response = await http.GetAsync("https://www.goatbots.com/download/prices/card-definitions.zip", cts.Token);
         await response.Content.CopyToAsync(local, cts.Token);
+        Console.WriteLine("Downloaded card-definitions.zip");
     }
 }
 await using var zip = await ZipFile.OpenReadAsync(ZipFilename, cts.Token);
