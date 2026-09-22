@@ -95,5 +95,6 @@ foreach (var def in json.RootElement.EnumerateObject())
     else
         Console.WriteLine(name);
 }
-Console.WriteLine($"Entry: {nentry}, Card: {passed} / {ncard}");
+Console.WriteLine($"Entry: {nentry}");
+Console.WriteLine($"Card: {passed} / {ncard} ({Math.Ceiling((double)passed / ncard * 100)}%)");
 Console.WriteLine($"Not referenced card: {notImpls.Count}");
