@@ -169,8 +169,8 @@ partial class Card
 
                     line = sr.ReadLine(); // 日本語カード名/英語カード名
                     tokens = line.Split('/');
-                    prepareSpell.JapaneseName = tokens[0];
-                    prepareSpell.Name = tokens[1];
+                    prepareSpell.JapaneseName = tokens[0].Trim();
+                    prepareSpell.Name = tokens[1].Trim();
 
                     sr.ReadLine(); // コスト
                     prepareSpell.Type = sr.ReadLine(); // カードタイプ
