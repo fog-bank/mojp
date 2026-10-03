@@ -8066,19 +8066,6 @@ III ― 対戦相手１人を対象とする。この英雄譚はそれにＸ点
     <card name="Tom, Bert, and William" ja="トム、バート、ウイリアム" type="伝説のクリーチャー ― トロール" pt="5/5">(１),これでないクリーチャー１体を生け贄に捧げる：その生け贄に捧げたクリーチャーのパワーに等しい枚数のカードを引く。その後、カード１枚を捨てる。
 これが死亡したとき、これがクリーチャーであった場合、これを戦場に戻す。これはアーティファクトである。（これはクリーチャーではなくなる。）</card>
 
-    <!-- FRA (prepared spell) -->
-    <card name="Seed Suture" ja="種子縫合" type="ソーサリー">クリーチャー１体を対象とする。それの上に+1/+1カウンター１個を置く。あなたは１点のライフを得る。</card>
-    <card name="Unwind History" ja="歴史の巻き戻し" type="ソーサリー">対戦相手がコントロールしているマナ総量が３以下のクリーチャー１体を対象とする。それをオーナーの手札に戻す。諜報１を行う。</card>
-    <card name="Peer Review" ja="一瞥査読" type="ソーサリー">《実習生》という名前で無色の2/2のウィザード・兵士・クリーチャー・トークン１体を生成する。諜報１を行う。</card>
-    <card name="Arc of Fortune" ja="運命の弧" type="ソーサリー">各プレイヤーはそれぞれ「自分の手札を捨て、カード７枚を引く。」を選んでもよい。</card>
-    <card name="Ancestral Craving" ja="祖先の渇望" type="インスタント">プレイヤー１人を対象とする。そのプレイヤーはカード３枚を引き、３点のライフを失う。</card>
-    <card name="Omit Variables" ja="変数の削除" type="ソーサリー">カード３枚を切削する。</card>
-    <card name="Vicious Verse" ja="敵意ある一節" type="ソーサリー">対戦相手１人を対象とする。敵意ある一節はそのプレイヤーに１点のダメージを与える。</card>
-    <card name="Improvised Act" ja="即興演技" type="ソーサリー">あなたはカード１枚を捨ててもよい。そうしたなら、カード１枚を引く。</card>
-    <card name="Molten Tide" ja="融潮" type="インスタント">ターン終了時まで、あなたがマナを引き出す目的で山１つをタップするたび、追加で(赤)を加える。</card>
-    <card name="Enroot" ja="埋根" type="ソーサリー">あなたのライブラリーから土地・カード１枚を探し、あなたの墓地に置く。その後、ライブラリーを切り直す。</card>
-    <card name="Soul Tether" ja="魂魄繋操術" type="ソーサリー">魂木・トークン１つを生成する。（それは「(Ｔ)：(赤)か(緑)を加える。」を持つ赤緑のアーティファクトである。）</card>
-
     <!-- FRA -->
     <card name="Fateshaper Aspirant" ja="運命造形師の野心家" type="クリーチャー ― サイ・クレリック" pt="3/4">このクリーチャーが戦場に出たとき、以下から１つを選ぶ。
 ・あなたの墓地にある伝説のカード１枚を対象とする。それをあなたの手札に戻す。
@@ -9424,5 +9411,18 @@ III ― 対戦相手１人を対象とする。この英雄譚はそれにＸ点
     <ja name="Hardened-Scale Armor" />
     <ja name="Confidence from Strength" />
     <ja name="Journey for the Elixir" />-->
+
+    <!-- 準備呪文 -->
+    <rel name="Seed Suture" />
+    <rel name="Unwind History" />
+    <rel name="Peer Review" />
+    <rel name="Arc of Fortune" />
+    <rel name="Ancestral Craving" />
+    <rel name="Omit Variables" />
+    <rel name="Vicious Verse" />
+    <rel name="Improvised Act" />
+    <rel name="Molten Tide" />
+    <rel name="Enroot" />
+    <rel name="Soul Tether" />
   </remove>
 </mojp>

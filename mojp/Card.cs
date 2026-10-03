@@ -64,7 +64,7 @@ public sealed partial class Card : IEquatable<Card>, INotifyPropertyChanged
     public string RelatedCardName { get; set; }
 
     /// <summary>
-    /// 関連するカードの名前のリストを取得します。
+    /// <see cref="RelatedCardName"/> をリスト化して取得します。
     /// </summary>
     public IEnumerable<string> RelatedCardNames
     {

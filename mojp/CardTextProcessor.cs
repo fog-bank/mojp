@@ -378,6 +378,17 @@ partial class Card
                 Debug.WriteLine(name + " は既にカードリストに含まれていません。");
         }
 
+        // 準備呪文の関連付けを解除
+        foreach (var node in doc.Root.Elements("remove").Elements("rel"))
+        {
+            string name = (string)node.Attribute("name");
+
+            if (cards.TryGetValue(name, out var card) && card.RelatedCardName != null)
+                card.RelatedCardName = null;
+            else
+                Debug.WriteLine(name + " に関連付けられたカードはありません。");
+        }
+
         // P/T だけ追加
         foreach (var node in doc.Root.Elements("add").Elements("pt"))
         {
