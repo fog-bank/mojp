@@ -95,6 +95,7 @@ partial class Card
             case 'ó':
             case 'ö':
             case 'ō':
+            case 'õ':
                 sb.Append('o');
                 return true;
 
