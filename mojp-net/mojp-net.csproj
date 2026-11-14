@@ -3,7 +3,7 @@
   <!-- Application -->
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFrameworks>net10.0-windows;net472</TargetFrameworks>
+    <TargetFrameworks>net11.0-windows;net472</TargetFrameworks>
     <UseWPF>true</UseWPF>
     <AssemblyName>mojp</AssemblyName>
     <AssemblyTitle>$(Title)</AssemblyTitle>
